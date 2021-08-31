@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!--Acccount Layout form view -->
+        <record id="account_layout_form" model="ir.ui.view">
+            <field name="name">Account Layout</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="account Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Account__c" />
+                                <field name="ParentId" />
+                                <field name="financial_group__c" />
+                                <field name="CNPJ__c"/>
+                                <field name="Social_Reason__c"/>
+                                <field name="Name"/>
+                                <field name="State_Registration__c"/>
+                                <field name="Municipal_Registration__c"/>
+                                <field name="CNAE__c"/>
+                                <field name="Risk_Level__c"/>
+                                <field name="Foundation_Date__c"/>
+                                <field name="Broker__c"/>
+                                <field name="Company_Classification__c"/>
+                                <field name="Company_Origin__c"/>
+                                <field name="create_uid" string='Created By'/>
+                                <field name="Description"/>
+                            </group>
+                            </group>
+                                <field name="Start_in_Broker__c"/>
+                                <field name="Type"/>
+                                <field name="NumberOfEmployees"/>
+                                <field name="AnnualRevenue"/>
+                                <field name="Website"/>
+                                <field name="Email__c"/>
+                                <field name="Phone"/>
+                                <field name="Ownership"/>
+                                <field name="Score__c"/>
+                                <field name="write_uid"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- model.name tree view -->
+        <record id="account_layout_tree" model="ir.ui.view">
+            <field name="name">Account Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="Account__c"/>
+                    <field name="ParentId"/>
+                    <field name="create_uid" />
+                    <field name="write_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- account_layout action window -->
+        <record id="account_layout_action" model="ir.actions.act_window">
+            <field name="name">account Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('account_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('account_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Account Layout Old View start -->
+
+        <record id="account_layout_old_form" model="ir.ui.view">
+            <field name="name">Account Layout Old</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="account Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name" />
+                                <field name="Type" />
+                                <field name="Website" />
+                                <field name="Description"/>
+                                <field name="AnnualRevenue"/>
+                            </group>
+                            </group>
+                                <field name="OwnerId"/>
+                                <field name="ParentId"/>
+                                <field name="phone"/>
+                                <field name="Industry"/>
+                                <field name="NumberOfEmployees"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--account layout old tree view -->
+        <record id="account_layout_old_tree" model="ir.ui.view">
+            <field name="name">Account Layout Old Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="Type"/>
+                    <field name="Website"/>
+                    <field name="AnnualRevenue" />
+                    <field name="OwnerId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- account_layout old action window -->
+        <record id="account_layout_old_action" model="ir.actions.act_window">
+            <field name="name">account Layout Old</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('account_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('account_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Account Layout Old View End -->
+
+        <!-- Administrator Account Layout start -->
+
+        <record id="administrator_account_layout_form" model="ir.ui.view">
+            <field name="name">Administrator Account Layout</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="administrator account Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="CNPJ__c" />
+                                <field name="Social_Reason__c" />
+                                <field name="Name" />
+                                <field name="comercial_name__c"/>
+                                <field name="State_Registration__c"/>
+                                <field name="Municipal_Registration__c"/>
+                                <field name="Website"/>
+                                <field name="benefits__c"/>
+                                <field name="ParentId"/>
+                            </group>
+                            </group>
+                                <field name="carrier_type__c"/>
+                                <field name="ans_code__c"/>
+                                <field name="ans_start__c"/>
+                                <field name="app_address__c"/>
+                                <field name="has_reimbursement_app__c"/>
+                                <field name="customer_service_center__c"/>
+                                <field name="broker_call_center__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--account layout old tree view -->
+        <record id="administrator_account_layout_tree" model="ir.ui.view">
+            <field name="name">Administrator Account Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="CNPJ__c"/>
+                    <field name="Social_Reason__c"/>
+                    <field name="Name"/>
+                    <field name="comercial_name__c" />
+                    <field name="State_Registration__c"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- administrator account layout action window -->
+        <record id="administrator_account_layout_action" model="ir.actions.act_window">
+            <field name="name">Administrator account Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('administrator_account_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('administrator_account_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Administrator Account Layout End -->
+
+        <!-- Broker Legal Entity Layout start -->
+
+        <record id="broker_legal_entity_layout_form" model="ir.ui.view">
+            <field name="name">Broker Legal Entity Layout</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="Broker Legal Entity Layout Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="CNPJ__c" />
+                                <field name="Name" />
+                                <field name="Social_Reason__c"/>
+                                <field name="CNAE__c"/>
+                                <field name="Risk_Level__c"/>
+                                <field name="Foundation_Date__c"/>
+                                <field name="Company_Segmentation__c"/>
+                                <field name="NumberOfEmployees"/>
+                                <field name="NumberofLocations__c"/>
+                                <field name="Locations__c"/>
+                                <field name="BillingAddress"/>
+                                <field name="Description"/>
+                            </group>
+                            </group>
+                                <field name="State_Registration__c"/>
+                                <field name="Municipal_Registration__c"/>
+                                <field name="Website"/>
+                                <field name="Industry"/>
+                                <field name="Email__c"/>
+                                <field name="Phone"/>
+                                <field name="financial_group__c"/>
+                                <field name="ParentId"/>
+                                <field name="Start_in_Broker__c"/>
+                                <field name="Image__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--Broker Legal Entity tree view -->
+        <record id="broker_legal_entity_layout_tree" model="ir.ui.view">
+            <field name="name">Administrator Account Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="CNPJ__c"/>
+                    <field name="Name"/>
+                    <field name="Social_Reason__c"/>
+                    <field name="CNAE__c" />
+                    <field name="Risk_Level__c"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Broker Legal Entity layout action window -->
+        <record id="administrator_account_layout_action" model="ir.actions.act_window">
+            <field name="name">Administrator account Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('broker_legal_entity_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('broker_legal_entity_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Broker Legal Entity Layout End -->
+
+        <!-- Carrier Account Layout start -->
+
+        <record id="carrer_account_layout_form" model="ir.ui.view">
+            <field name="name">Carrier Account Layout</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="Carrier Account Layout Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="CNPJ__c" />
+                                <field name="Social_Reason__c" />
+                                <field name="Name" />
+                                <field name="comercial_name__c"/>
+                                <field name="State_Registration__c"/>
+                                <field name="Municipal_Registration__c"/>
+                                <field name="Website"/>
+                                <field name="benefits__c"/>
+                                <field name="customer_service_center__c"/>
+                                <field name="ParentId"/>
+                                <field name="card_image__c"/>
+                                <field name="card_template__c"/>
+                            </group>
+                            </group>
+                                <field name="carrier_type__c"/>
+                                <field name="ans_code__c"/>
+                                <field name="ans_start__c"/>
+                                <field name="app_address__c"/>
+                                <field name="has_reimbursement_app__c"/>
+                                <field name="allow_create_reimbursement_case__c"/>
+                                <field name="has_telemedicine_app__c"/>
+                                <field name="allow_create_accredited_net_case__c"/>
+                                <field name="broker_call_center__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--Carrier Account Layout tree view -->
+        <record id="carrer_account_layout_tree" model="ir.ui.view">
+            <field name="name">Carrier Account Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="CNPJ__c"/>
+                    <field name="Name"/>
+                    <field name="Social_Reason__c"/>
+                    <field name="CNAE__c" />
+                    <field name="Risk_Level__c"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Carrier Account Layout action window -->
+        <record id="carrer_account_layout_action" model="ir.actions.act_window">
+            <field name="name">Carrier Account Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('carrer_account_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('carrer_account_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Carrier Account Layout End -->
+
+    </data>
+</odoo>

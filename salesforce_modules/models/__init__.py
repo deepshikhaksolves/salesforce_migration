@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import models
+from . import users, account, Geographic_Scope__c

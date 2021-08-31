@@ -27,6 +27,10 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/account_views.xml',
+        'views/geographic_scope_views.xml',
+        'views/users_views.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [
