@@ -6,21 +6,6 @@ var rpc = require('web.rpc');
 
 ListRenderer.include({
 
-    willStart: function () {
-        var self = this;
-        var defs = [this._super.apply(this, arguments)];
-        var modelName = self.getParent().modelName;
-
-        defs.push(rpc.query({
-                model: 'config.open.view',
-                method: "get_record_according_to_domain",
-                args: ['', modelName],
-            }).then(function (result) {
-                self.business_rule_action = result;
-            }))
-        return Promise.all(defs);
-    },
-
     _onRowClicked: function (ev) {
         // The special_click property explicitely allow events to bubble all
         // the way up to bootstrap's level rather than being stopped earlier.

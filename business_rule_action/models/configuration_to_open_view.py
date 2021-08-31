@@ -16,21 +16,21 @@ class salesforce_open_view(models.Model):
                           help="Context dictionary as Python expression, empty by default (Default: {})")
     domain = fields.Char('Domain')
 
-    def get_record_according_to_domain(self, model_name):
+    def get_record_according_to_domain(self, model_name,res_ids):
         rec_set = self.env['config.open.view'].search([('ir_model.model', '=', model_name)])
 
         data = []
         for rec in rec_set:
             data_dict = {
                 'id': rec.id,
-                'model':rec.ir_model.model,
+                'model': rec.ir_model.model,
                 'view_id': rec.ir_view.id,
                 'domain': safe_eval(rec.domain),
-                'context':safe_eval(rec.context),
+                'context': safe_eval(rec.context),
                 'res_ids': []
             }
             if rec.domain:
-                domain_data = rec.env[model_name].search(safe_eval(rec.domain))
+                domain_data = rec.env[model_name].search(safe_eval(rec.domain)+[['id','in',res_ids]])
                 if domain_data:
                     data_dict['res_ids'] = domain_data.ids
             data.append(data_dict)

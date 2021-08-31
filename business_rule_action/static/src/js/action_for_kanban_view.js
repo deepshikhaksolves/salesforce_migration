@@ -7,21 +7,6 @@ var rpc = require('web.rpc');
 
 kanban.include({
 
-    willStart: function () {
-        var self = this;
-        var defs = [this._super.apply(this, arguments)];
-        var modelName = self.modelName;
-
-        defs.push(rpc.query({
-                model: 'config.open.view',
-                method: "get_record_according_to_domain",
-                args: ['', modelName],
-            }).then(function (result) {
-                self.business_rule_action = result;
-            }))
-        return Promise.all(defs);
-    },
-
     _openRecord: function () {
         if (this.$el.hasClass('o_currently_dragged')) {
             // this record is currently being dragged and dropped, so we do not
@@ -30,10 +15,10 @@ kanban.include({
         }
         var editMode = this.$el.hasClass('oe_kanban_global_click_edit');
 
-        if (this.business_rule_action) {
+        if (this.getParent() && this.getParent().business_rule_action) {
             if(this.getParent() && this.getParent().getParent() && this.getParent().getParent().model && typeof(this.getParent().getParent().model)!=="string") {
                 var record = this.getParent().getParent().model.get(this.db_id, {raw: true});
-                var match = this.business_rule_action.filter((x) => { return x['res_ids'].includes(record.res_id)});
+                var match = this.getParent().business_rule_action.filter((x) => { return x['res_ids'].includes(record.res_id)});
                 if(match && match.length){
                     return this.do_action({
                         type: "ir.actions.act_window",
