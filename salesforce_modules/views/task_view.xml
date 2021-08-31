@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- Broker Task Layout Start -->
+        <record id="broker_task_layout_form" model="ir.ui.view">
+            <field name="name">Broker Task Layout</field>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+                <form string="Broker Task Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Type" />
+                                <field name="Subject" />
+                                <field name="TaskSubtype" />
+                                <field name="ActivityDate"/>
+                                <field name="priority"/>
+                                <field name="create_uid" string='Created By'/>
+                                <field name="write_uid" string='Last Modified By'/>
+                                <field name="description"/>
+                            </group>
+                            <group>
+                                <field name="stage_id" string="Status"/>
+                                <field name="tag_ids" string="Related To"/>
+                                <field name="user_id" />
+                                <field name="Phone"/>
+                                <field name="WhoId"/>
+                                <field name="Email"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Broker Task Layout tree view -->
+        <record id="broker_task_layout_tree" model="ir.ui.view">
+            <field name="name">Broker Task Layout Tree</field>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Type"/>
+                    <field name="Subject"/>
+                    <field name="TaskSubtype" />
+                    <field name="ActivityDate"/>
+                    <field name="priority"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Broker Task Layout action window -->
+        <record id="broker_task_layout_action" model="ir.actions.act_window">
+            <field name="name">Broker Task Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">project.task</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('broker_task_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('broker_task_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Broker Task Layout End -->
+
+        <!-- Deployment Talk Layout Start -->
+        <record id="deployement_talk_layout_form" model="ir.ui.view">
+            <field name="name">Deployment Talk Layout</field>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+                <form string="Deployment Talk Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="WhoId" />
+                                <field name="tag_ids" string="Related To"/>
+                                <field name="Subject" />
+                                <field name="description"/>
+                            </group>
+                            <group>
+                                <field name="user_id" />
+                                <field name="stage_id" string="Status"/>
+                                <field name="priority"/>
+                                <field name="ActivityDate"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Reminder">
+                                <group>
+                                    <field name="IsReminderSet" />
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Deployment Talk Layout tree view -->
+        <record id="deployement_talk_layout_tree" model="ir.ui.view">
+            <field name="name">Deployment Talk Layout Tree</field>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="WhoId"/>
+                    <field name="tag_ids"/>
+                    <field name="Subject" />
+                    <field name="user_id"/>
+                    <field name="priority"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Deployment Talk Layout action window -->
+        <record id="deployement_talk_layout_action" model="ir.actions.act_window">
+            <field name="name">Deployment Talk Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">project.task</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('deployement_talk_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('deployement_talk_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Deployment Talk Layout End -->
+
+
+        <!-- Task Layout Start -->
+        <record id="task_layout_form" model="ir.ui.view">
+            <field name="name">Task Layout</field>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+                <form string="Task Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Subject" />
+                                <field name="user_id" />
+                                <field name="WhoId" />
+                                <field name="description"/>
+                            </group>
+                            <group>
+                                <field name="ActivityDate"/>
+                                <field name="tag_ids" string="Related To"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Additional Information">
+                                <group>
+                                    <field name="priority"/>
+                                    <field name="stage_id" string="Status"/>
+                                </group>
+                            </page>
+
+                            <page string="System Information">
+                                <group>
+                                    <field name="create_uid" string='Created By'/>
+                                    <field name="write_uid" string="Last Modified By"/>
+                                </group>
+                            </page>
+
+                            <page string="Reminder">
+                                <group>
+                                    <field name="IsReminderSet" />
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Task Layout tree view -->
+        <record id="task_layout_tree" model="ir.ui.view">
+            <field name="name">Task Layout Tree</field>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Subject"/>
+                    <field name="user_id"/>
+                    <field name="WhoId" />
+                    <field name="description"/>
+                    <field name="ActivityDate"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Task Layout action window -->
+        <record id="task_layout_action" model="ir.actions.act_window">
+            <field name="name">Task Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">project.task</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('task_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('task_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Deployment Talk Layout End -->
+
+    </data>
+</odoo>

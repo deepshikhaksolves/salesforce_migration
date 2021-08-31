@@ -30,6 +30,9 @@
         'views/account_views.xml',
         'views/geographic_scope_views.xml',
         'views/users_views.xml',
+        'views/task_view.xml',
+        'views/user_contract_views.xml',
+        'views/revenue_view.xml',
 
     ],
     # only loaded in demonstration mode

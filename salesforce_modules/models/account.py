@@ -8,13 +8,6 @@ class RecordType(models.Model):
 
     name  = fields.Char('Name')
 
-class CNAE(models.Model):
-    _name = 'model_cnae'
-    _description = "Salesforce CNAE"
-    _rec_name = 'name'
-
-    name  = fields.Char('Name')
-
 
 class MarketReserve(models.Model):
     _name = 'market_reserve'
@@ -203,3 +196,12 @@ class Account(models.Model):
     Website                     = fields.Char('Website')
     wedding_date__pc            = fields.Date('Wedding Date')
     issuing_body_rg__pc         = fields.Text('Issuing Agency RG',size=10)
+
+    # ============== Fields For Revenue start ===========================
+    # CreatedById  already in odoo
+    # LastModifiedById already in odoo
+    OwnerId          = fields.Many2one('res.users',string='Owner')
+    Prefix__c        = fields.Text('Prefix',size=3)
+    Name             = fields.Text('Revenue',size=80)
+    Income_Type__c   = fields.Selection([('direct','Direct'),('indirect','indirect')],'Type of Revenue')
+    # ============== Fields For Revenue end ===========================

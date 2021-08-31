@@ -27,14 +27,14 @@
                                 <field name="create_uid" string='Created By'/>
                                 <field name="Description"/>
                             </group>
-                            </group>
+                            <group>
                                 <field name="Start_in_Broker__c"/>
                                 <field name="Type"/>
                                 <field name="NumberOfEmployees"/>
                                 <field name="AnnualRevenue"/>
                                 <field name="Website"/>
                                 <field name="Email__c"/>
-                                <field name="Phone"/>
+                                <field name="phone"/>
                                 <field name="Ownership"/>
                                 <field name="Score__c"/>
                                 <field name="write_uid"/>
@@ -92,7 +92,7 @@
                                 <field name="Description"/>
                                 <field name="AnnualRevenue"/>
                             </group>
-                            </group>
+                            <group>
                                 <field name="OwnerId"/>
                                 <field name="ParentId"/>
                                 <field name="phone"/>
@@ -157,7 +157,7 @@
                                 <field name="benefits__c"/>
                                 <field name="ParentId"/>
                             </group>
-                            </group>
+                            <group>
                                 <field name="carrier_type__c"/>
                                 <field name="ans_code__c"/>
                                 <field name="ans_start__c"/>
@@ -227,13 +227,13 @@
                                 <field name="BillingAddress"/>
                                 <field name="Description"/>
                             </group>
-                            </group>
+                            <group>
                                 <field name="State_Registration__c"/>
                                 <field name="Municipal_Registration__c"/>
                                 <field name="Website"/>
                                 <field name="Industry"/>
                                 <field name="Email__c"/>
-                                <field name="Phone"/>
+                                <field name="phone"/>
                                 <field name="financial_group__c"/>
                                 <field name="ParentId"/>
                                 <field name="Start_in_Broker__c"/>
@@ -300,7 +300,7 @@
                                 <field name="card_image__c"/>
                                 <field name="card_template__c"/>
                             </group>
-                            </group>
+                            <group>
                                 <field name="carrier_type__c"/>
                                 <field name="ans_code__c"/>
                                 <field name="ans_start__c"/>
@@ -348,6 +348,317 @@
             </field>
         </record>
         <!-- Carrier Account Layout End -->
+
+
+        <!-- Legal Entity Customer Layout start -->
+
+        <record id="legal_entity_layout_form" model="ir.ui.view">
+            <field name="name">Legal Entity Customer Layout</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="Legal Entity Customer Layout Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="CNPJ__c" />
+                                <field name="Name" />
+                                <field name="Social_Reason__c"/>
+                                <field name="CNAE__c"/>
+                                <field name="Risk_Level__c"/>
+                                <field name="Foundation_Date__c"/>
+                                <field name="Company_Segmentation__c"/>
+                                <field name="NumberOfEmployees"/>
+                                <field name="NumberofLocations__c"/>
+                                <field name="Locations__c"/>
+                                <field name="BillingAddress"/>
+                                <field name="Description"/>
+                            </group>
+                            <group>
+                                <field name="State_Registration__c"/>
+                                <field name="Municipal_Registration__c"/>
+                                <field name="Website"/>
+                                <field name="Industry"/>
+                                <field name="Email__c"/>
+                                <field name="phone"/>
+                                <field name="financial_group__c"/>
+                                <field name="ParentId"/>
+                                <field name="Start_in_Broker__c"/>
+                                <field name="Image__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--Legal Entity Customer tree view -->
+        <record id="legal_entity_layout_tree" model="ir.ui.view">
+            <field name="name">Legal Entity Customer Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="CNPJ__c"/>
+                    <field name="Name"/>
+                    <field name="Social_Reason__c"/>
+                    <field name="CNAE__c" />
+                    <field name="Risk_Level__c"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Legal Entity Customer action window -->
+        <record id="legal_entity_layout_action" model="ir.actions.act_window">
+            <field name="name">Legal Entity Customer Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('legal_entity_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('legal_entity_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Legal Entity Customer Layout End -->
+
+
+        <!-- Hospital Layout start -->
+
+        <record id="hospital_layout_form" model="ir.ui.view">
+            <field name="name">Hospital Layout Form</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="Hospital Layout Form View">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name" />
+                                <field name="ParentId"/>
+                            </group>
+                            <group>
+                                <field name="CNPJ"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--Hospital Layout tree view -->
+        <record id="hospital_layout_tree" model="ir.ui.view">
+            <field name="name">Hospital Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="ParentId"/>
+                    <field name="CNPJ"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Hospital Layout action window -->
+        <record id="hospital_layout_action" model="ir.actions.act_window">
+            <field name="name">Hospital Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('hospital_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('hospital_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Hospital Layout End -->
+
+        <!-- Laboratory Layout start -->
+
+        <record id="laboratory_layout_form" model="ir.ui.view">
+            <field name="name">Laboratory Layout Form</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="Laboratory Layout Form View">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name" />
+                                <field name="ParentId"/>
+                            </group>
+                            <group>
+                                <field name="CNPJ"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--Laboratory Layout tree view -->
+        <record id="laboratory_layout_tree" model="ir.ui.view">
+            <field name="name">Laboratory Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="ParentId"/>
+                    <field name="CNPJ"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Laboratory Layout action window -->
+        <record id="laboratory_layout_action" model="ir.actions.act_window">
+            <field name="name">Laboratory Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('laboratory_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('laboratory_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Laboratory Layout End -->
+
+        <!-- Partner Layout start -->
+
+        <record id="partner_layout_form" model="ir.ui.view">
+            <field name="name">Partner Layout</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="Partner Layout Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="CNPJ__c" />
+                                <field name="Name" />
+                                <field name="Social_Reason__c"/>
+                                <field name="comercial_name__c"/>
+                                <!-- <field name="NINE"/> -->
+                                <field name="Risk_Level__c"/>
+                                <field name="Foundation_Date__c"/>
+                                <field name="Locations__c"/>
+                                <field name="role__c"/>
+                                <field name="BillingAddress"/>
+                                <field name="Description"/>
+                                
+                            </group>
+                            <group>
+                                <field name="service_type__c"/>
+                                <field name="State_Registration__c"/>
+                                <field name="Municipal_Registration__c"/>
+                                <field name="Website"/>
+                                <field name="Industry"/>
+                                <field name="Email__c"/>
+                                <field name="phone"/>
+                                <field name="ParentId"/>
+                                <field name="Start_in_Broker__c"/>
+                                <field name="Image__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--Partner layout tree view -->
+        <record id="partner_layout_tree" model="ir.ui.view">
+            <field name="name">Partner Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="CNPJ__c"/>
+                    <field name="Name"/>
+                    <field name="Social_Reason__c"/>
+                    <field name="comercial_name__c" />
+                    <field name="Risk_Level__c"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Partner layout action window -->
+        <record id="partner_layout_action" model="ir.actions.act_window">
+            <field name="name">Partner Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('partner_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('partner_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Partner Layout End -->
+
+
+        <!-- Physical person Layout start -->
+
+        <record id="physical_person_layout_form" model="ir.ui.view">
+            <field name="name">Physical person Layout Form</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="Physical person Layout Form View">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="CPF__c" />
+                                <field name="Email__c"/>
+                                <field name="phone"/>
+                                <field name="CNS__c"/>
+                                <field name="ParentId"/>
+                            </group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Gender__c"/>
+                                <field name="Marital_Status__c"/>
+                                <field name="Start_in_Broker__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--Physical person Layout tree view -->
+        <record id="physical_person_layout_tree" model="ir.ui.view">
+            <field name="name">Physical person Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="CPF__c"/>
+                    <field name="Email__c"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Physical person Layout action window -->
+        <record id="physical_person_layout_action" model="ir.actions.act_window">
+            <field name="name">Physical person Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('physical_person_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('physical_person_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Physical person Layout End -->
 
     </data>
 </odoo>

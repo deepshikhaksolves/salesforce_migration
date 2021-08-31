@@ -16,34 +16,34 @@
                                 <field name="customer__c" />
                                 <field name="heads__c"/>
                             </group>
-                            </group>
+                            <group>
                                 <field name="Title"/>
                                 <field name="company_id"/>
                             </group>
-                            <notebook>
-                              <page string="Contact">
-                                  <group>
-                                      <field name="SenderEmail" />
-                                      <field name="MobilePhone"/>
-                                      <field name="Phone"/>
-                                  </group>
-                                  <group>
-                                      <field name="street"/>
-                                      <field name="street2"/>
-                                      <field name="zip"/>
-                                      <field name="city"/>
-                                      <field name="state_id"/>
-                                      <field name="country_id"/>
-                                  </group>
-                              </page>
-                              <page string="Background">
-                                  <group>
-                                      <field name="about_me" />
-                                      <field name="reservations_to_vencer__c"/>
-                                  </group>
-                              </page>
-                            </notebook>
                         </group>
+                        <notebook>
+                            <page string="Contact">
+                                <group>
+                                    <field name="SenderEmail" />
+                                    <field name="MobilePhone"/>
+                                    <field name="Phone"/>
+                                </group>
+                                <group>
+                                    <field name="street"/>
+                                    <field name="street2"/>
+                                    <field name="zip"/>
+                                    <field name="city"/>
+                                    <field name="state_id"/>
+                                    <field name="country_id"/>
+                                </group>
+                            </page>
+                            <page string="Background">
+                                <group>
+                                    <field name="about_me" />
+                                    <field name="reservations_to_vencer__c"/>
+                                </group>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
