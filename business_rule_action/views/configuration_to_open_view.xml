@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="form_business_rule" model="ir.ui.view">
+        <field name="name">Business Rule</field>
+        <field name="model">config.open.view</field>
+        <field name="arch" type="xml">
+            <form string="Bussiness Rule">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="rule_name"/>
+                            <field name="ir_model" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="model_name" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="ir_view" options="{'no_create': True, 'no_open': True}" domain="[('type', '=', 'form'), ('model', '=', model_name)]"/>
+                            <field name="context"/>
+                            <field name="domain" widget="domain" options="{'model': 'model_name'}"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="tree_business_rule" model="ir.ui.view">
+        <field name="name">Business Rule</field>
+        <field name="model">config.open.view</field>
+        <field name="arch" type="xml">
+            <tree string="Business Rule">
+                <field name="rule_name"/>
+                <field name="ir_model"/>
+                <field name="ir_view"/>
+                <field name="context"/>
+                <field name="domain"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_business_rules" model="ir.actions.act_window">
+        <field name="name">Business Rules</field>
+        <field name="res_model">config.open.view</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_business_rules" name="Business Rules" action="action_business_rules" sequence="1"/>
+</odoo>
