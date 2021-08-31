@@ -9,15 +9,36 @@
                     <group>
                         <group>
                             <field name="rule_name"/>
-                            <field name="ir_model" options="{'no_create': True, 'no_open': True}"/>
                             <field name="model_name" invisible="1"/>
                         </group>
                         <group>
-                            <field name="ir_view" options="{'no_create': True, 'no_open': True}" domain="[('type', '=', 'form'), ('model', '=', model_name)]"/>
-                            <field name="context"/>
-                            <field name="domain" widget="domain" options="{'model': 'model_name'}"/>
+                            <field name="ir_model" options="{'no_create': True, 'no_open': True}"/>
                         </group>
                     </group>
+                    <notebook>
+                        <page name="business_rule_config">
+                            <field name="configuration_ids">
+                                <tree>
+                                    <field name="model_name" invisible="1"/>
+                                    <field name="ir_view" options="{'no_create': True, 'no_open': True}"
+                                           domain="[('type', '=', 'form'), ('model', '=', model_name)]"/>
+                                    <field name="context"/>
+                                    <field name="domain"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="model_name" invisible="1"/>
+                                            <field name="ir_view" options="{'no_create': True, 'no_open': True}"
+                                                   domain="[('type', '=', 'form'), ('model', '=', model_name)]"/>
+                                            <field name="context"/>
+                                        </group>
+                                        <field name="domain" widget="domain" options="{'model': 'model_name'}"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -30,9 +51,9 @@
             <tree string="Business Rule">
                 <field name="rule_name"/>
                 <field name="ir_model"/>
-                <field name="ir_view"/>
-                <field name="context"/>
-                <field name="domain"/>
+                <!--                <field name="ir_view"/>-->
+                <!--                <field name="context"/>-->
+                <!--                <field name="domain"/>-->
             </tree>
         </field>
     </record>

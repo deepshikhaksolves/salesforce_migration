@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_config_open_view,config.open.view,model_config_open_view,base.group_user,1,1,1,1
+access_config_open_view_configurations,config.open.view.configurations,model_config_open_view_configurations,base.group_user,1,1,1,1
