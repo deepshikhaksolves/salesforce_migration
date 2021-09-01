@@ -102,7 +102,7 @@
 
         <!-- user_agreement action window -->
         <record id="user_agreement_layout_action" model="ir.actions.act_window">
-            <field name="name">User Agreement Layout</field>
+            <field name="name">User Agreement Jurisdiction</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">user_company_contract_permissions__c</field>
             <field name="view_mode">tree,form</field>
@@ -161,7 +161,7 @@
 
         <!-- subcontract_user action window -->
         <record id="subcontract_user_layout_action" model="ir.actions.act_window">
-            <field name="name">subcontract_user Layout</field>
+            <field name="name">subcontract user Layout</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">user_company_contract_permissions__c</field>
             <field name="view_mode">tree,form</field>
@@ -189,6 +189,7 @@
                                 <field name="financial_group__c" />
                                 <field name="contract__c"/>
                                 <field name="create_uid" />
+                            </group>
                             <group>
                                 <field name="status__c"/>
                                 <field name="RecordTypeId"/>

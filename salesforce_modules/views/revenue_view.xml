@@ -10,7 +10,9 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="Name" />
+                                <field name="name" string="Revenue"/>
+                                <field name="code"/>
+                                <field name="user_type_id"/>
                                 <field name="Prefix__c" />
                                 <field name="Income_Type__c"/>
                                 <field name="create_uid" />
@@ -31,7 +33,7 @@
             <field name="model">account.account</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="Name"/>
+                    <field name="name" />
                     <field name="Prefix__c"/>
                     <field name="Income_Type__c"/>
                     <field name="OwnerId"/>
@@ -43,7 +45,7 @@
 
         <!-- recipe_type_layout action window -->
         <record id="recipe_type_layout_action" model="ir.actions.act_window">
-            <field name="name">recipe_type Layout</field>
+            <field name="name">Recipe Type Layout</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">account.account</field>
             <field name="view_mode">tree,form</field>

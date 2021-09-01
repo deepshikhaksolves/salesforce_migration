@@ -22,7 +22,7 @@ class Indivisual(models.Model):
     name = fields.Char('Name')
 
 class salesforce_user(models.Model):
-    _inherit = 'res.user'
+    _inherit = 'res.users'
     _description = 'salesforce users'
 
     about_me = fields.Text(string = "About Me", limit=1000)

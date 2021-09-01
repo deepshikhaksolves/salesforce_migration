@@ -1,6 +1,21 @@
 from odoo import models, fields, api
 
 
+class WorkflowConfig(models.Model):
+    _name = 'workflow_configuration'
+    _description = "Salesforce Workflow configuration"
+    _rec_name = 'name'
+
+    name        = fields.Char('Name')
+
+class ChannelSegmentation(models.Model):
+    _name = 'channel_segmentation'
+    _description = "Salesforce Channel Segmentation"
+    _rec_name = 'name'
+
+    name        = fields.Char('Name')
+    
+
 class SalesforceLead(models.Model):
     _inherit = 'crm.lead'
     _description = "Salesforce Lead"
@@ -8,7 +23,9 @@ class SalesforceLead(models.Model):
     actual_birth_policy__c  = fields.Selection([('January','January'),('February','February'),('March','March'),('April','April'),('May','May'),('June','June'),('July','July'),('August','August'),('September','September'),('October','October'),('November','November'),('December','December')],'Actual Birth Policy')
 
     actual_carrier__c       = fields.Many2one('account.account', string='Actual Carrier')
-    actual_invoice__c       = fields.Many2one('res.currency', string='Actual Invoice', default=lambda self: self.env.user.company_id.currency_id.id)
+    # actual_invoice__c       = fields.Many2one('res.currency', string='Actual Invoice', default=lambda self: self.env.user.company_id.currency_id.id)
+
+    actual_invoice__c       = fields.Float('Actual Invoice', digits=(16, 5))
     actual_lifes__c         = fields.Integer('Actual Lifes')
 
     street                  = fields.Char()
@@ -19,7 +36,8 @@ class SalesforceLead(models.Model):
     country_id              = fields.Many2one('res.country', string='Country', ondelete='restrict')
 
     actual_birth_policy_order__c    = fields.Text('Current Order Policy Anniversary')
-    AnnualRevenue           = fields.Many2one('res.currency', string='Annual Revenue', default=lambda self: self.env.user.company_id.currency_id.id)
+    # AnnualRevenue           = fields.Many2one('res.currency', string='Annual Revenue', default=lambda self: self.env.user.company_id.currency_id.id)
+    AnnualRevenue       = fields.Float('Actual Invoice', digits=(18, 0))
 
     Business_Name__c        = fields.Text('Business Name',size=255)
     CNAE__c                 = fields.Many2one('model_cnae',string='NINE')
@@ -39,7 +57,7 @@ class SalesforceLead(models.Model):
     Jigsaw                  = fields.Text('Data.com Key',size=20)
     Description             = fields.Text('Description',size=32000)
     DoNotCall               = fields.Boolean('Do Not Call')
-    Email                   = fields.Char('Email')
+    # Email                   already in odoo i.e. (email_from)
     HasOptedOutOfEmail      = fields.Boolean('HasOptedOutOfEmail')
     extension_number__c     = fields.Integer('Extension Number')
     Fax                     = fields.Char('Fax')
@@ -54,8 +72,6 @@ class SalesforceLead(models.Model):
     Lead__c                 = fields.Char('Lead')
     OwnerId                 = fields.Many2one('res.users',string='Lead Owner')
     # RecordTypeId already in odoo i.e(type)
-
-    LeadSource              = fields.Selection([('Quotator', 'Quotator'),('Customer Event', 'Customer Event'),('Exposure', 'Exposure'),('Google AdWords', 'Google AdWords'),('Employee Indication', 'Employee Indication'),('Mailing', 'Mailing'),('Partner', 'Partner'),('Advertising', 'Advertising'),('Site', 'Site'),('Webinar', 'Webinar'),('Others', 'Others')],'Lead Source')
 
     LeadSource              = fields.Selection([('Quotator', 'Quotator'),('Customer Event', 'Customer Event'),('Exposure', 'Exposure'),('Google AdWords', 'Google AdWords'),('Employee Indication', 'Employee Indication'),('Mailing', 'Mailing'),('Partner', 'Partner'),('Advertising', 'Advertising'),('Site', 'Site'),('Webinar', 'Webinar'),('Others', 'Others')],'Lead Source')
 
@@ -81,14 +97,14 @@ class SalesforceLead(models.Model):
 
     rescue_date__c          = fields.Date('Rescue Date')
     secondary_mobile_phone__c = fields.Char('Secondary Mobile Phone')
-    # Sales_Channel__c          = fields.
+    Sales_Channel__c          = fields.Many2one('channel_segmentation',string='Channel Segmentation')
     secondary_phone__c      = fields.Char('Secondary phone')
 
     telemarketing__c        = fields.Selection([('Active', 'Active'),('Receptive', 'Receptive'),('Not applicable', 'Not applicable')],'Telemarketing')
 
     Title                   = fields.Text('Title',size=128)
     Website                 = fields.Char('Website')
-    # Workflow_Configuration__c = 
+    Workflow_Configuration__c = fields.Many2one('workflow_configuration',string='Workflow Configuration')
     
    
     

@@ -5,7 +5,7 @@ from odoo import models, fields, api
 class CNAE(models.Model):
     _name = 'model_cnae'
     _description = "Salesforce CNAE"
-    _rec_name = 'code'
+    _rec_name = 'Code'
 
     Code        = fields.Text('Name',size=80)
     # CreatedById  already in odoo

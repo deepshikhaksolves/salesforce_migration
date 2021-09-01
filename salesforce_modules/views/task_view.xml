@@ -10,6 +10,7 @@
                     <sheet>
                         <group>
                             <group>
+                                <field name="name"/>
                                 <field name="Type" />
                                 <field name="Subject" />
                                 <field name="TaskSubtype" />
@@ -17,10 +18,9 @@
                                 <field name="priority"/>
                                 <field name="create_uid" string='Created By'/>
                                 <field name="write_uid" string='Last Modified By'/>
-                                <field name="description"/>
                             </group>
                             <group>
-                                <field name="stage_id" string="Status"/>
+                                <field name="Status" string="Status"/>
                                 <field name="tag_ids" string="Related To"/>
                                 <field name="user_id" />
                                 <field name="Phone"/>
@@ -28,6 +28,9 @@
                                 <field name="Email"/>
                             </group>
                         </group>
+                            <group>
+                                <field name="description"/>
+                            </group>
                     </sheet>
                 </form>
             </field>
@@ -74,18 +77,21 @@
                     <sheet>
                         <group>
                             <group>
+                                <field name="name"/>
                                 <field name="WhoId" />
                                 <field name="tag_ids" string="Related To"/>
                                 <field name="Subject" />
-                                <field name="description"/>
                             </group>
                             <group>
                                 <field name="user_id" />
-                                <field name="stage_id" string="Status"/>
+                                <field name="Status" string="Status"/>
                                 <field name="priority"/>
                                 <field name="ActivityDate"/>
                             </group>
                         </group>
+                            <group>
+                                <field name="description"/>
+                            </group>
                         <notebook>
                             <page string="Reminder">
                                 <group>
@@ -105,7 +111,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="WhoId"/>
-                    <field name="tag_ids"/>
+                    <field name="tag_ids" widget='many2many_tags'/>
                     <field name="Subject" />
                     <field name="user_id"/>
                     <field name="priority"/>
@@ -140,21 +146,24 @@
                     <sheet>
                         <group>
                             <group>
+                                <field name="name"/>
                                 <field name="Subject" />
                                 <field name="user_id" />
                                 <field name="WhoId" />
-                                <field name="description"/>
                             </group>
                             <group>
                                 <field name="ActivityDate"/>
                                 <field name="tag_ids" string="Related To"/>
                             </group>
                         </group>
+                            <group>
+                                <field name="description"/>
+                            </group>
                         <notebook>
                             <page string="Additional Information">
                                 <group>
                                     <field name="priority"/>
-                                    <field name="stage_id" string="Status"/>
+                                    <field name="Status" string="Status"/>
                                 </group>
                             </page>
 
@@ -206,7 +215,7 @@
                 </p>
             </field>
         </record>
-        <!-- Deployment Talk Layout End -->
+        <!-- Task Talk Layout End -->
 
     </data>
 </odoo>

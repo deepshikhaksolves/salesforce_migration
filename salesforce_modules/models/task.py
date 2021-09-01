@@ -25,7 +25,7 @@ class ModelTask(models.Model):
     IsReminderSet = fields.Boolean('Reminder Set')
 
     RecurrenceRegeneratedType = fields.Selection([('1','1'),('2','2')],'Repeat This Task')
-    # Status = already in odoo (stage_id)
+    Status = fields.Selection([('Open','Open'),('Completed','Finished'),('cancel','Called off')],'Status')
     Subject = fields.Selection([('Call','Call'),('Send Letter','Send Letter'),('Send Quote','Send Quote'),('Prospecting Return','Prospecting Return'),('Other','Other')],'Subject')
     # RecordTypeId already in odoo
     TaskSubtype     = fields.Selection([('1','1'),('2','2')],'Task Subtype')

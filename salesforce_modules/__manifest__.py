@@ -20,11 +20,11 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','account_accountant','project','crm','hr_contract'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
         'views/account_views.xml',
@@ -33,6 +33,13 @@
         'views/task_view.xml',
         'views/user_contract_views.xml',
         'views/revenue_view.xml',
+        'views/lead_view.xml',
+        'views/channel_segment_views.xml',
+        'views/work_flow_config.xml',
+        'views/record_type_views.xml',
+        'views/market_reserve_views.xml',
+        'views/type_of_operator_views.xml',
+        'views/menus.xml',
 
     ],
     # only loaded in demonstration mode

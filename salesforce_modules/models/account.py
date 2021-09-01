@@ -42,7 +42,9 @@ class Account(models.Model):
     allow_create_accredited_net_case__c = fields.Boolean(string="Allow Create Accredited Net Case")
     allow_create_reimbursement_case__c = fields.Boolean(string="Allow Create Reimbursement Case")
     allow_direct_mail__pc = fields.Boolean(string="Allow Direct Mail")
-    AnnualRevenue         = fields.Many2one('res.currency', string='Annual Revenue', default=lambda self: self.env.user.company_id.currency_id.id)
+    # AnnualRevenue         = fields.Many2one('res.currency', string='Annual Revenue', default=lambda self: self.env.user.company_id.currency_id.id)
+    AnnualRevenue       = fields.Float('Annual Revenue', digits=(18, 0))
+
     ans_start__c        = fields.Date('YEARS Start')
     ans_code__c         = fields.Integer('ANS / SUSEP Code')
     app_address__c      = fields.Text('App Address',size=255)
@@ -152,7 +154,7 @@ class Account(models.Model):
     number_of_children__pc      = fields.Integer('Number of Children')
     NumberofLocations__c        = fields.Integer('Number of Locations')
     Company_Origin__c           = fields.Selection([('New', 'New'),('Cross Sell', 'Cross Sell'),('Up Sell', 'Up Sell'),('Drama', 'Drama'),('redeployment', 'redeployment')],'Company Origin')
-    PersonOtherAddress          = fields.text('Other Address')
+    PersonOtherAddress          = fields.Text('Other Address')
     PersonOtherPhone            = fields.Char('Other Phone')
     Ownership                   = fields.Selection([('Public', 'Public'),('Private', 'Private'),('Subsidiary', 'Subsidiary'),('Other', 'Other')],'Ownership')
     parent__pc                  = fields.Many2one('res.partner',string='Parent')
@@ -202,6 +204,6 @@ class Account(models.Model):
     # LastModifiedById already in odoo
     OwnerId          = fields.Many2one('res.users',string='Owner')
     Prefix__c        = fields.Text('Prefix',size=3)
-    Name             = fields.Text('Revenue',size=80)
+    # Name             = fields.Text('Revenue',size=80) already in odoo
     Income_Type__c   = fields.Selection([('direct','Direct'),('indirect','indirect')],'Type of Revenue')
     # ============== Fields For Revenue end ===========================

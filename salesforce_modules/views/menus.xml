@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+        <menuitem name="Salesforce" web_icon="salesforce_modules,static/description/salesforce_migration_logo.png" id="salesforce_menu_root" />
+
+        <!-- Menu For Lead -->
+            <menuitem name="Lead" id="lead_parent_action_menu" parent='salesforce_menu_root' sequence='1'/>
+
+                <menuitem name="Master" id="broker_lead_layout_menu" parent='lead_parent_action_menu' action="lead_layout_action" sequence="1" />
+
+                <menuitem name="Broker Lead Layout PF" id="broker_lead_layout_pf_menu" parent='lead_parent_action_menu' action="broker_lead_layout_pf_action" sequence="2" />
+
+                <menuitem name="Broker Lead Layout PJ" id="broker_lead_layout_pj_menu" parent='lead_parent_action_menu' action="broker_lead_layout_pj_action" sequence="3" />
+
+                <menuitem name="Small Lead Layout" id="small_lead_layout_menu" parent='lead_parent_action_menu' action="small_lead_layout_action" sequence="4" />
+
+        <!-- Menu For Task -->
+            <menuitem name="Task" id="task_parent_action_menu" parent='salesforce_menu_root' sequence='2'/>
+
+                <menuitem name="Master" id="broker_task_layout_menu" parent='task_parent_action_menu' action="broker_task_layout_action" sequence="1" />
+
+                <menuitem name="Deployment Talk" id="deployment_talk_menu" parent='task_parent_action_menu' action="deployement_talk_layout_action" sequence="2" />
+
+                <menuitem name="Task Layout" id="task_layout_menu" parent='task_parent_action_menu' action="task_layout_action" sequence="3" />
+
+        <!-- Menu For Geographic Scope -->
+            <menuitem name="Geographic Scope" id="geographic_scope_parent_action_menu1" parent='salesforce_menu_root' action='geographic_scope_layout_action' sequence='3'/>
+                <!-- <menuitem name="Geographic Scope" id="geo_scope_layout_menu" parent='geographic_scope_parent_action_menu' action="geographic_scope_layout_action" sequence="1" /> -->
+
+        <!-- Menu for revenue -->
+            <menuitem name="Revenue" id="revenue_parent_action_menu" parent='salesforce_menu_root' sequence='4'/>
+                <menuitem name="Recipe Type Layout" id="revenue_layout_menu" parent='revenue_parent_action_menu' action="recipe_type_layout_action" sequence="1" />
+
+        <!-- Menu for user contract permission -->
+            <menuitem name="User Contract" id="contract_permission_parent_action_menu" parent='salesforce_menu_root' sequence='5'/>
+                <menuitem name="Contract User" id="contract_parent_menu" parent='contract_permission_parent_action_menu' sequence="1" />
+
+                    <menuitem name="Company Contract Permissions" id="contract_user_permission_menu" parent='contract_parent_menu' action="user_contract_layout_action" sequence="1" />
+                    <menuitem name="Agreement Jurisdiction" id="agreement_jurisdiction_menu" parent='contract_parent_menu' action="user_agreement_layout_action" sequence="2" />
+
+                <menuitem name="SubContract User" id="subcontract_parent_menu" parent='contract_permission_parent_action_menu' sequence="2" />
+
+                    <menuitem name="Company Contract Permissions" id="subcontract_user_permission_menu" parent='subcontract_parent_menu' action="subcontract_user_layout_action" sequence="1" />
+
+                <menuitem name="User Company Contract Permissions" id="user_company_contract_permission_menu" parent='contract_parent_menu' action="User_company_contract_permissions_layout_action" sequence="3" />
+
+        <!-- Menu for account -->
+            <menuitem name="Account" id="account_parent_action_menu" parent='salesforce_menu_root' sequence='6'/>
+                <menuitem name="Master" id="account_layout_menu" parent='account_parent_action_menu' action="account_layout_old_action" sequence="1" />
+                <menuitem name="Administrator" id="administrator_account_layout_menu" parent='account_parent_action_menu' action="administrator_account_layout_action" sequence="2" />
+                <menuitem name="Legal Entity Customer" id="legal_entity_customer_layout_menu" parent='account_parent_action_menu' action="customer_legal_entity_layout_action" sequence="3" />
+                <menuitem name="Hospital" id="hospital_layout_menu" parent='account_parent_action_menu' action="hospital_layout_action" sequence="4" />
+
+        <!-- Menu for revenue -->
+            <menuitem name="User" id="user_parent_action_menu" parent='salesforce_menu_root' sequence='7'/>
+                <menuitem name="Page Layout" id="user_page_layout_menu" parent='user_parent_action_menu' action="user_profile_page_layout_action" sequence="1" />
+
+	</data>
+</odoo>
