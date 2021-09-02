@@ -14,6 +14,12 @@ access_type_of_operator,salesforce_type_of_operator,model_type_of_operator,base.
 access_market_reserve,salesforce_market_reserve,model_market_reserve,base.group_user,1,1,1,1
 access_record_type,salesforce_record_type,model_record_type,base.group_user,1,1,1,1
 
+access_contentdocument,salesforce_contentdocument,model_contentdocument,base.group_user,1,1,1,1
+access_lead_sort_colums_in_capaign,salesforce_lead_sort_colums_in_capaign,model_lead_sort_colums_in_capaign,base.group_user,1,1,1,1
+
+access_model_campaign,salesforce_model_campaign,model_model_campaign,base.group_user,1,1,1,1
+
+
 
 
 

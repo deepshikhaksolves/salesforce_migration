@@ -18,7 +18,7 @@
                                 <field name="financial_group__c" />
                                 <field name="CNPJ__c"/>
                                 <field name="Social_Reason__c"/>
-                                <field name="Name"/>
+                                <!-- <field name="Name"/> -->
                                 <field name="State_Registration__c"/>
                                 <field name="Municipal_Registration__c"/>
                                 <field name="CNAE__c"/>
@@ -187,7 +187,7 @@
                 <tree>
                     <field name="CNPJ__c"/>
                     <field name="Social_Reason__c"/>
-                    <field name="Name"/>
+                    <field name="name"/>
                     <field name="comercial_name__c" />
                     <field name="State_Registration__c"/>
                 </tree>

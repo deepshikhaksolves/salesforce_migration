@@ -40,6 +40,8 @@
         'views/market_reserve_views.xml',
         'views/type_of_operator_views.xml',
         'views/cnae_views.xml',
+        'views/campaign_layout.xml',
+        'views/lead_sort_columns_in_campaign_view.xml',
         'views/menus.xml',
 
     ],
