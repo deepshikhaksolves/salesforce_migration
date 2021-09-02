@@ -19,6 +19,9 @@ access_lead_sort_colums_in_capaign,salesforce_lead_sort_colums_in_capaign,model_
 
 access_model_campaign,salesforce_model_campaign,model_model_campaign,base.group_user,1,1,1,1
 
+access_model_brand,salesforce_model_brand,model_model_brand,base.group_user,1,1,1,1
+access_model__c,salesforce_model__c,model_model__c,base.group_user,1,1,1,1
+
 
 
 

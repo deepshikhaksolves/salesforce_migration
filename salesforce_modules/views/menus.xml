@@ -72,6 +72,9 @@
             <menuitem name="Lead Sort Columns" id="lead_sort_columns_campaign_action_menu" parent='salesforce_menu_root' sequence='9'/>
                 <menuitem name="Lead Sort Columns Campaign Layout" id="lead_sort_columns_campaign_page_layout_menu" parent='lead_sort_columns_campaign_action_menu' action="lead_sort_columns_campaign_action" sequence="1" />
 
+        <!-- Menu for Model -->
+            <menuitem name="Model" id="model_action_menu" parent='salesforce_menu_root' action="model_action" sequence='10'/>
+
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />

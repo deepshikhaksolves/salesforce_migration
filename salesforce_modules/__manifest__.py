@@ -42,6 +42,7 @@
         'views/cnae_views.xml',
         'views/campaign_layout.xml',
         'views/lead_sort_columns_in_campaign_view.xml',
+        'views/model__c_views.xml',
         'views/menus.xml',
 
     ],
