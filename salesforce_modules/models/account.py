@@ -31,7 +31,7 @@ class Account(models.Model):
 
     ABC_Analysis__pc    = fields.Selection([('B', 'B'),('B', 'B'),('C', 'C')],'ABC Analysis')
     Account__c          = fields.Many2one('account.account',string='Account')
-    Name                = fields.Char('Account Name')
+    # Name                = fields.Char('Account Name')
     AccountNumber       = fields.Text('Account Number',size=40)
     OwnerId             = fields.Many2one('res.users',string='Account Owner')
     RecordTypeId        = fields.Many2one('record_type',string='Record Type')
