@@ -39,6 +39,7 @@
         'views/record_type_views.xml',
         'views/market_reserve_views.xml',
         'views/type_of_operator_views.xml',
+        'views/cnae_views.xml',
         'views/menus.xml',
 
     ],
