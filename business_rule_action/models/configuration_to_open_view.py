@@ -39,6 +39,7 @@ class salesforce_open_view_configs(models.Model):
 
     _name = 'config.open.view.configurations'
 
+    sequence = fields.Integer("Sequence")
     ir_view = fields.Many2one('ir.ui.view', string="View", required=True)
     context = fields.Char(string='Context Value', default={},
                           help="Context dictionary as Python expression, empty by default (Default: {})")

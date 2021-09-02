@@ -19,6 +19,7 @@
                         <page name="business_rule_config">
                             <field name="configuration_ids">
                                 <tree>
+                                    <field name="sequence" widget="handle" />
                                     <field name="model_name" invisible="1"/>
                                     <field name="ir_view" options="{'no_create': True, 'no_open': True}"
                                            domain="[('type', '=', 'form'), ('model', '=', model_name)]"/>
