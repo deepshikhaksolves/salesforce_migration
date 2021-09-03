@@ -42,6 +42,12 @@
         'views/cnae_views.xml',
         'views/campaign_layout.xml',
         'views/lead_sort_columns_in_campaign_view.xml',
+        'views/model__c_views.xml',
+        'views/pathology_view.xml',
+        'views/region_views.xml',
+        'views/accredited_network_views.xml',
+        'views/quote_line_item_views.xml',
+        # 'views/quotation_item_price_views.xml',
         'views/menus.xml',
 
     ],

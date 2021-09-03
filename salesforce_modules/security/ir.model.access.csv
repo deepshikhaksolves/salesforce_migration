@@ -19,6 +19,16 @@ access_lead_sort_colums_in_capaign,salesforce_lead_sort_colums_in_capaign,model_
 
 access_model_campaign,salesforce_model_campaign,model_model_campaign,base.group_user,1,1,1,1
 
+access_model_brand,salesforce_model_brand,model_model_brand,base.group_user,1,1,1,1
+access_model__c,salesforce_model__c,model_model__c,base.group_user,1,1,1,1
+
+access_model_pathology,salesforce_model_pathology,model_model_pathology,base.group_user,1,1,1,1
+access_model_region,salesforce_model_region,model_model_region,base.group_user,1,1,1,1
+access_accredited_network,salesforce_accredited_network,model_accredited_network,base.group_user,1,1,1,1
+
+access_quote_line_item,salesforce_quote_line_item,model_quote_line_item,base.group_user,1,1,1,1
+access_quotation_item_price,salesforce_quotation_item_price,model_quotation_item_price,base.group_user,1,1,1,1
+
 
 
 

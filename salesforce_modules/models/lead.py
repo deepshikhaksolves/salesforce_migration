@@ -37,7 +37,7 @@ class SalesforceLead(models.Model):
 
     actual_birth_policy_order__c    = fields.Text('Current Order Policy Anniversary')
     # AnnualRevenue           = fields.Many2one('res.currency', string='Annual Revenue', default=lambda self: self.env.user.company_id.currency_id.id)
-    AnnualRevenue       = fields.Float('Actual Invoice', digits=(18, 0))
+    AnnualRevenue           = fields.Float('Actual Invoice', digits=(18, 0))
 
     Business_Name__c        = fields.Text('Business Name',size=255)
     CNAE__c                 = fields.Many2one('model_cnae',string='NINE')
@@ -97,7 +97,7 @@ class SalesforceLead(models.Model):
 
     rescue_date__c          = fields.Date('Rescue Date')
     secondary_mobile_phone__c = fields.Char('Secondary Mobile Phone')
-    Sales_Channel__c          = fields.Many2one('channel_segmentation',string='Channel Segmentation')
+    Sales_Channel__c        = fields.Many2one('channel_segmentation',string='Channel Segmentation')
     secondary_phone__c      = fields.Char('Secondary phone')
 
     telemarketing__c        = fields.Selection([('Active', 'Active'),('Receptive', 'Receptive'),('Not applicable', 'Not applicable')],'Telemarketing')

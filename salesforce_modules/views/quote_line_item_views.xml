@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- Quote Line Item Layout form view -->
+        <record id="quote_line_item_layout_view_form" model="ir.ui.view">
+            <field name="name">Quote Line Item Layout</field>
+            <field name="model">quote_line_item</field>
+            <field name="arch" type="xml">
+                <form string="Quote Line Item View">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="LineNumber" />
+                                <!-- <field name="Product2Id"/> -->
+                                <!-- <field name="QuoteId"/> -->
+                                <field name="ListPrice"/>
+                                <field name="UnitPrice"/>
+                                <field name="Quantity"/>
+                                <field name="requested_proposal__c"/>
+                                <field name="accredited_network__c"/>
+                            </group>
+                            <group>
+                                <field name="Subtotal" />
+                                <field name="Discount"/>
+                                <field name="TotalPrice"/>
+                                <field name="Description"/>
+                                <field name="copay__c"/>
+                            </group>
+                        </group>
+                            <notebook>
+                            <page string="System Information">
+                                <group>
+                                    <field name="create_uid" string="Created By"/>
+                                    <field name="write_uid" string="Last Modified By"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- quote_line_item Layout tree view -->
+        <record id="quote_line_item_layout_view_tree" model="ir.ui.view">
+            <field name="name">Quote Line Item Layout Tree</field>
+            <field name="model">quote_line_item</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="LineNumber" />
+                    <!-- <field name="QuoteId"/> -->
+                    <field name="ListPrice"/>
+                    <field name="UnitPrice"/>
+                    <field name="Quantity"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- quote_line_item Layout action window -->
+        <record id="quote_line_item_layout_action" model="ir.actions.act_window">
+            <field name="name">Quote Line Item</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">quote_line_item</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('quote_line_item_layout_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('quote_line_item_layout_view_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>
