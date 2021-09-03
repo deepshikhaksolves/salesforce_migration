@@ -62,7 +62,7 @@
                             </page>
                             <page string="Files">
                                 <group>
-                                    <field name="CampaignImageId"/>
+                                    <field name="CampaignImageId" widget='many2many_tags'/>
                                 </group>
                             </page>
                             <page string="Groups">

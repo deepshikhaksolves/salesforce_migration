@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- region Layout form view -->
+        <record id="region_layout_form" model="ir.ui.view">
+            <field name="name">Region Layout</field>
+            <field name="model">model_region</field>
+            <field name="arch" type="xml">
+                <form string="Region Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="active__c"/>
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                <field name="OwnerId"/>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Region States">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Region Cities">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Product Regions">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Prices x Regions">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Accredited Networks">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- region tree view -->
+        <record id="region_layout_tree" model="ir.ui.view">
+            <field name="name">Region Layout Tree</field>
+            <field name="model">model_region</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name" />
+                    <field name="active__c"/>
+                    <field name="OwnerId"/>
+                    <field name="create_uid" />
+                    <field name="write_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- region action window -->
+        <record id="region_layout_action" model="ir.actions.act_window">
+            <field name="name">Region Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_region</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('region_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('region_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

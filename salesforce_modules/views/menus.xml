@@ -75,6 +75,21 @@
         <!-- Menu for Model -->
             <menuitem name="Model" id="model_action_menu" parent='salesforce_menu_root' action="model_action" sequence='10'/>
 
+        <!-- Menu for Pathology -->
+            <menuitem name="Pathology" id="pathology_menu" parent='salesforce_menu_root' action="pathology_layout_action" sequence='11'/>
+
+        <!-- Menu for Region -->
+            <menuitem name="Region" id="Region_menu" parent='salesforce_menu_root' action="region_layout_action" sequence='12'/>
+
+        <!-- Menu for Accredited Network -->
+            <menuitem name="Accredited Network" id="accredited_network_menu" parent='salesforce_menu_root' action="accredited_network_layout_action" sequence='13'/>
+
+        <!-- Menu for Quote Line Item -->
+            <menuitem name="Quote Line Item" id="quote_line_item_menu" parent='salesforce_menu_root' action="quote_line_item_layout_action" sequence='14'/>
+
+        <!-- Menu for Quotation Item Price -->
+            <menuitem name="Quotation Item Price" id="quotation_item_price_menu" parent='salesforce_menu_root' action="quote_line_item_layout_action" sequence='15'/>
+
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
