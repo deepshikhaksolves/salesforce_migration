@@ -26,7 +26,7 @@ class SalesforceLead(models.Model):
     # actual_invoice__c       = fields.Many2one('res.currency', string='Actual Invoice', default=lambda self: self.env.user.company_id.currency_id.id)
 
     actual_invoice__c       = fields.Float('Actual Invoice', digits=(16, 5))
-    actual_lifes__c         = fields.Integer('Actual Lifes')
+    actual_lifes__c         = fields.Float('Actual Lifes', digits=(18, 0))
 
     street                  = fields.Char()
     street2                 = fields.Char()
@@ -39,31 +39,31 @@ class SalesforceLead(models.Model):
     # AnnualRevenue           = fields.Many2one('res.currency', string='Annual Revenue', default=lambda self: self.env.user.company_id.currency_id.id)
     AnnualRevenue           = fields.Float('Actual Invoice', digits=(18, 0))
 
-    Business_Name__c        = fields.Text('Business Name',size=255)
+    Business_Name__c        = fields.Char('Business Name',size=255)
     CNAE__c                 = fields.Many2one('model_cnae',string='NINE')
-    CNPJ__c                 = fields.Text('CNPJ',size=18)
-    Company                 = fields.Text('Company',size=255)
+    CNPJ__c                 = fields.Char('CNPJ',size=18)
+    Company                 = fields.Char('Company',size=255)
 
     Company_Segmentation__c  = fields.Selection([('Small','Recipe <40k'),('Small_Large','Revenue between 40k and 100k'),('Middle','Revenue between 100k and 250k'),('Middle_Large','Revenue between 250k and 400k'),('Corporate','Revenue between 400k and 1MM'),('Corporate_Large','Revenue >1MM')],'Company Segmentation')
 
     unqualified_account_source__c   = fields.Many2one('account.account', string='Disqualification Account')
     converted__c             = fields.Char('Converted')
     Broker__c                = fields.Many2one('res.partner',string='Broker')
-    cpf__c                   = fields.Text('CPF',size=14)
+    cpf__c                   = fields.Char('CPF',size=14)
     # CreatedById already in odoo
 
-    CurrentGenerators__c    = fields.Text('Current Generator(s)',size=100)
+    CurrentGenerators__c    = fields.Char('Current Generator(s)',size=100)
     Date_of_Birth__c        = fields.Date('Birth date')
-    Jigsaw                  = fields.Text('Data.com Key',size=20)
-    Description             = fields.Text('Description',size=32000)
+    Jigsaw                  = fields.Char('Data.com Key',size=20)
+    Description             = fields.Char('Description',size=32000)
     DoNotCall               = fields.Boolean('Do Not Call')
     # Email                   already in odoo i.e. (email_from)
     HasOptedOutOfEmail      = fields.Boolean('HasOptedOutOfEmail')
-    extension_number__c     = fields.Integer('Extension Number')
+    extension_number__c     = fields.Float('Extension Number', digits=(10, 0))
     Fax                     = fields.Char('Fax')
     HasOptedOutOfFax        = fields.Boolean('Fax Opt Out')
-    Financial_Group__c      = fields.Text('Financial Group',size=255)
-    Mailing_Origin__c       = fields.Text('Mailing Source',size=255)
+    Financial_Group__c      = fields.Char('Financial Group',size=255)
+    Mailing_Origin__c       = fields.Char('Mailing Source',size=255)
     Nominative__c           = fields.Boolean('Indicated')
     IndividualId            = fields.Many2one('res.users',string='Individual')
     Industry                = fields.Selection([('Agriculture','Agriculture'),('Banking','Banking'),('Biotechnology','Biotechnology'),('Food & Beverage','Food & Beverage'),('Communications','Communications'),('Construction','Construction'),('Consulting','Consulting'),('Education','Education'),('Electronics','Electronics'),('Energy','Energy'),('Engineering','Engineering'),('Entertainment','Entertainment'),('Manufacturing','Manufacturing'),('Chemicals','Chemicals'),('Finance','Finance'),('Government','Government'),('Hospitality','Hospitality'),('Machinery','Machinery'),('Environmental','Environmental'),('Media','Media'),('Oil and gas','Oil and gas'),('Recreation','Recreation'),('Shipping','Shipping'),('Healthcare','Healthcare'),('Insurance','Insurance'),('Not For Profit','Not For Profit'),('Technology','Technology'),('Telecommunications','Telecommunications'),('Transportation','Transportation'),('Utilities','Utilities'),('Retail','Retail'),('Apparel','Apparel'),('Other','Other')],'Industry')
@@ -76,18 +76,18 @@ class SalesforceLead(models.Model):
     LeadSource              = fields.Selection([('Quotator', 'Quotator'),('Customer Event', 'Customer Event'),('Exposure', 'Exposure'),('Google AdWords', 'Google AdWords'),('Employee Indication', 'Employee Indication'),('Mailing', 'Mailing'),('Partner', 'Partner'),('Advertising', 'Advertising'),('Site', 'Site'),('Webinar', 'Webinar'),('Others', 'Others')],'Lead Source')
 
     # Status =  already in odoo i.e(stage_id)
-    Locations__c            = fields.Text('Locations',size=255)
-    loss_comment__c         = fields.Text('Loss Comment',size=255)
+    Locations__c            = fields.Char('Locations',size=255)
+    loss_comment__c         = fields.Char('Loss Comment',size=255)
     # loss_reason__c         already in odoo i.e (lost_reason)
-    mailing_file_name__c    = fields.Text('Mailing File Name',size=255)
+    mailing_file_name__c    = fields.Char('Mailing File Name',size=255)
     # MobilePhone already in odoo i.e. (mobile)
     # Name already in odoo i.e. (name)
-    NumberOfEmployees       = fields.Integer('No. of Employees')
-    NumberofLocations__c    = fields.Integer('Number of Locations')
+    NumberOfEmployees       = fields.Float('No. of Employees', digits=(8, 0))
+    NumberofLocations__c    = fields.Float('Number of Locations', digits=(3, 0))
     Company_Origin__c       = fields.Selection([('New', 'New'),('Cross Sell', 'Cross Sell'),('Up Sell', 'Up Sell'),('Drama', 'Drama'),('redeployment', 'redeployment')],'Company Origin')
     # Contact_Origin__c           = already in odoo i.e. source_id
 
-    Owner_Division__c       = fields.Text('Owner Division',size=255)
+    Owner_Division__c       = fields.Char('Owner Division',size=255)
     PartnerAccountId        = fields.Many2one('account.account',string='Partner Account')
     # Phone already in odoo i.e. (phone)
     Primary__c              = fields.Selection([('No', 'No'),('Yes', 'Yes')],'Primary')
@@ -102,7 +102,7 @@ class SalesforceLead(models.Model):
 
     telemarketing__c        = fields.Selection([('Active', 'Active'),('Receptive', 'Receptive'),('Not applicable', 'Not applicable')],'Telemarketing')
 
-    Title                   = fields.Text('Title',size=128)
+    Title                   = fields.Char('Title',size=128)
     Website                 = fields.Char('Website')
     Workflow_Configuration__c = fields.Many2one('workflow_configuration',string='Workflow Configuration')
     

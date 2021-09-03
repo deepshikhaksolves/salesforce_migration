@@ -1,9 +1,9 @@
 from odoo import models, fields, api
 
 
-class Pathology(models.Model):
-    _name = 'model_pathology'
-    _description = "Salesforce Pathology"
+class Product(models.Model):
+    _name = 'model_product'
+    _description = "Salesforce Product"
     _rec_name = 'Name'
 
     # CreatedById  already in odoo

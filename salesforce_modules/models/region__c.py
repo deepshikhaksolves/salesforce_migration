@@ -10,4 +10,4 @@ class Region(models.Model):
     # CreatedById  already in odoo
     # LastModifiedById already in odoo
     OwnerId     = fields.Many2one('res.users',string='Owner')
-    Name        = fields.Text('Region',size=80)
+    Name        = fields.Char('Region',size=80)

@@ -7,8 +7,8 @@ class ModelTask(models.Model):
 
     # OwnerId         already in  odoo (user_id)
     CallDurationInSeconds = fields.Integer('Call Duration')
-    CallObject      = fields.Text('Call Object Identifier',size=255)
-    CallDisposition = fields.Text('Call Result',size=255)
+    CallObject      = fields.Char('Call Object Identifier',size=255)
+    CallDisposition = fields.Char('Call Result',size=255)
     CallType        = fields.Selection([('1','1'),('2','2')],'Call Type')
     # Description     already in odoo (description)
     CompletedDateTime   = fields.Date('Completed Date')
