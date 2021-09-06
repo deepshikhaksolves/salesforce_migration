@@ -2,9 +2,8 @@ from odoo import models, fields, api
 
 
 class Product(models.Model):
-    _name = 'model_product'
+    _inherit = 'product.template'
     _description = "Salesforce Product"
-    _rec_name = 'Name'
 
 
     accommodation__c    = fields.Selection([('nurse','Nursery'),('apt','Apartment')],'Accommodation')
@@ -31,4 +30,11 @@ class Product(models.Model):
     priority__c             = fields.Float('Priority', digits=(3, 0))
     ProductCode             = fields.Char(string='Product Code', size=255)
     Description             = fields.Char(string='Product Description', size=4000)
-    # Family                  =
+    Family                  = fields.Selection([('None','--None--'),('Basic','Basic'),('Blue','Blue'),('Dix','Dix'),('Executive','Executive'),('Flex','Flex'),('International','International'),('Top Preferred','Top Preferred'),('447','447'),('557','557')],'Product Family')
+    # name                   already in odoo
+    RecordTypeId            = fields.Integer('Product Record Type') # DATA TYPE IS Record Type
+    StockKeepingUnit        = fields.Char(string='Product SKU', size=180)
+    QuantityUnitOfMeasure   = fields.Selection([('Each','Each')],'Quantity Unit Of Measure')
+    Segmentation__c         = fields.Selection([('Outpatient','Outpatient'),('Hospital without obstetrics','Hospital without obstetrics'),('Hospital with obstetrics','Hospital with obstetrics'),('Exclusively Dental','Exclusively Dental'),('Reference','Reference'),('Outpatient + Dental','Outpatient + Dental'),('Outpatient + Inpatient without obstetrics','Outpatient + Inpatient without obstetrics'),('Outpatient + Hospital with obstetrics','Outpatient + Hospital with obstetrics'),('Hospital with obstetrics + dental','Hospital with obstetrics + dental'),('Hospital without obstetrics + Dental','Hospital without obstetrics + Dental'),('Outpatient + Inpatient without obstetrics + Dental','Outpatient + Inpatient without obstetrics + Dental'),('Outpatient + Hospital with obstetrics + Dental','Outpatient + Hospital with obstetrics + Dental')],'Segmentation')
+
+    upgrade__c              = fields.Boolean('Upgrade')

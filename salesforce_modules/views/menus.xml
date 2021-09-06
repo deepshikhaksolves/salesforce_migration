@@ -90,6 +90,22 @@
         <!-- Menu for Quotation Item Price -->
             <menuitem name="Quotation Item Price" id="quotation_item_price_menu" parent='salesforce_menu_root' action="quote_line_item_layout_action" sequence='15'/>
 
+        <!-- Menu for Product -->
+        <menuitem name="Product" id="product_parent_action_menu" parent='salesforce_menu_root' sequence='16'/>
+            <menuitem name="Broker Product" id="broker_product_menu" parent='product_parent_action_menu' action="broker_product_layout_action" sequence='1'/>
+            <menuitem name="Carrier Layout" id="carrier_layout_menu" parent='product_parent_action_menu' action="carrier_layout_action" sequence='2'/>
+            <menuitem name="Product Layout" id="product_layout_menu" parent='product_parent_action_menu' action="product_layout_action" sequence='3'/>
+
+        <!-- Menu for Product Family -->
+            <menuitem name="Product Family Layout" id="product_family_menu" parent='salesforce_menu_root' action="product_family_action" sequence='17'/>
+
+        <!-- Menu for Product Price -->
+        <menuitem name="Product Price" id="product_price_parent_action_menu" parent='salesforce_menu_root' sequence='18'/>
+            <menuitem name="Product Age Group" id="product_age_group_menu" parent='product_price_parent_action_menu' action="product_age_group_action" sequence='1'/>
+            <menuitem name="Product Age Group Contract" id="product_age_group_contract_menu" parent='product_price_parent_action_menu' action="product_age_group_contract_action" sequence='2'/>
+            <menuitem name="Average Product Cost" id="average_product_cost_menu" parent='product_price_parent_action_menu' action="average_product_cost_action" sequence='3'/>
+            <menuitem name="Average Product Cost Contract" id="average_product_cost_contract_menu" parent='product_price_parent_action_menu' action="average_product_cost_contract_action" sequence='4'/>
+
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />

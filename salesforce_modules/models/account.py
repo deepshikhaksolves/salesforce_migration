@@ -122,7 +122,7 @@ class Account(models.Model):
     PersonHomePhone             = fields.Char('Home Phone')
     Image__c                    = fields.Char('Image',size=32768)
 
-    PersonIndividualId          = fields.Many2one('res.partner')
+    PersonIndividualId          = fields.Many2one('res.partner',string='Individual')
 
     Industry                    = fields.Selection([('Agriculture', 'Agriculture'),('Banking', 'Banking'),('Biotechnology', 'Biotechnology'),('Food & Beverage', 'Food & Beverage'),('Communications', 'Communications'),('Construction', 'Construction'),('Consulting', 'Consulting'),('Education', 'Education'),('Electronics', 'Electronics'),('Energy', 'Energy'),('Engineering', 'Engineering'),('Entertainment', 'Entertainment'),('Manufacturing', 'Manufacturing'),('Chemicals', 'Chemicals'),('Finance', 'Finance'),('Government', 'Government'),('Hospitality', 'Hospitality'),('Machinery', 'Machinery'),('Environmental', 'Environmental'),('Media', 'Media'),('Recreation', 'Recreation'),('Shipping', 'Shipping'),('Healthcare', 'Healthcare'),('Insurance', 'Insurance'),('Not For Profit', 'Not For Profit'),('Technology', 'Technology'),('Telecommunications', 'Telecommunications'),('Transportation', 'Transportation'),('Utilities', 'Utilities'),('Retail', 'Retail'),('Apparel', 'Apparel'),('Other', 'Other')],'Industry')
 

@@ -28,10 +28,6 @@ access_accredited_network,salesforce_accredited_network,model_accredited_network
 
 access_quote_line_item,salesforce_quote_line_item,model_quote_line_item,base.group_user,1,1,1,1
 access_quotation_item_price,salesforce_quotation_item_price,model_quotation_item_price,base.group_user,1,1,1,1
+access_product_family,salesforce_product_family,model_product_family,base.group_user,1,1,1,1
 
-
-
-
-
-
-
+access_product_price,salesforce_product_price,model_product_price,base.group_user,1,1,1,1

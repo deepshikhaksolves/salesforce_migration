@@ -25,8 +25,8 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        # 'views/views.xml',
+        # 'views/templates.xml',
         'views/account_views.xml',
         'views/geographic_scope_views.xml',
         'views/users_views.xml',
@@ -47,7 +47,10 @@
         'views/region_views.xml',
         'views/accredited_network_views.xml',
         'views/quote_line_item_views.xml',
-        # 'views/quotation_item_price_views.xml',
+        'views/quotation_item_price_views.xml',
+        'views/product_views.xml',
+        'views/product_family_views.xml',
+        'views/product_price_views.xml',
         'views/menus.xml',
 
     ],

@@ -10,4 +10,4 @@ class ProductFamily(models.Model):
     # LastModifiedById  already in odoo
     Name                    = fields.Char('Name',size=80)
 
-    # carrier__c              = 
+    carrier__c              = fields.Many2many(string='Operator', comodel_name='account.account', relation='carrier_account_rel')

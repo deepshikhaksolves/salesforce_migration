@@ -11,7 +11,7 @@
                         <group>
                             <group>
                                 <field name="LineNumber" />
-                                <!-- <field name="Product2Id"/> -->
+                                <field name="Product2Id"/>
                                 <!-- <field name="QuoteId"/> -->
                                 <field name="ListPrice"/>
                                 <field name="UnitPrice"/>

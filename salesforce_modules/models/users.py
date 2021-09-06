@@ -15,11 +15,11 @@ class WorkspaceId(models.Model):
 
     name = fields.Char('Name')
 
-class Indivisual(models.Model):
-    _name = 'model_indivisual'
-    _description = "Salesforce Indivisual Id"
+# class Indivisual(models.Model):
+#     _name = 'model_indivisual'
+#     _description = "Salesforce Indivisual Id"
 
-    name = fields.Char('Name')
+#     name = fields.Char('Name')
 
 class salesforce_user(models.Model):
     _inherit = 'res.users'
@@ -60,7 +60,7 @@ class salesforce_user(models.Model):
     Fax = fields.Char('Fax')
     IsProfilePhotoActive = fields.Boolean('Has Profile Photo')
     WorkspaceId = fields.Many2one('model_workspace',string='IDE Workspace')
-    IndividualId = fields.Many2one('model_indivisual',string='Individual')
+    IndividualId = fields.Many2one('res.users',string='Individual')
     ReceivesInfoEmails = fields.Boolean('Info Emails')
     UserSubtype = fields.Selection([('1', '1')],'Internal Subtype')
     IsSystemControlled = fields.Boolean('Is Controlled By System')

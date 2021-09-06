@@ -21,7 +21,7 @@ class Campaign(models.Model):
     HierarchyActualCost         = fields.Float('Actual Cost in Hierarchy', digits=(18, 0))
     BudgetedCost                = fields.Float('Budgeted Cost in Campaign', digits=(18, 0))
     HierarchyBudgetedCost       = fields.Float('Budgeted Cost in Hierarchy', digits=(18, 0))
-    CampaignImageId             = fields.Many2many(string= 'Campaign Image', comodel_name='contentdocument', relation='campaign_contentdocument_rel')
+    CampaignImageId             = fields.Many2many(string='Campaign Image', comodel_name='contentdocument', relation='campaign_contentdocument_rel')
     CampaignMemberRecordTypeId  = fields.Many2one('record_type', string='Campaign Member Type')
     Name                        = fields.Char('Campaign Name', size=80)
     OwnerId                     = fields.Many2one('res.users',string='Campaign Owner')
