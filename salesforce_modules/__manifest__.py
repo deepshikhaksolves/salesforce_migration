@@ -48,7 +48,9 @@
         'views/accredited_network_views.xml',
         'views/quote_line_item_views.xml',
         # 'views/quotation_item_price_views.xml',
+        'views/market_reserve__c_view.xml',
         'views/menus.xml',
+
 
     ],
     # only loaded in demonstration mode

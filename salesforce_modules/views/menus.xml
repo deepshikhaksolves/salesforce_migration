@@ -93,6 +93,9 @@
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
-        
+        <!-- Market Reserve C -->
+            <menuitem name="Market Reserve" id="market_reserve_menu" parent='salesforce_menu_root' action="market_reserve_c_action"/>
+
+
 	</data>
 </odoo>

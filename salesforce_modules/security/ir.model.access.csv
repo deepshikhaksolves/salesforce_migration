@@ -29,6 +29,8 @@ access_accredited_network,salesforce_accredited_network,model_accredited_network
 access_quote_line_item,salesforce_quote_line_item,model_quote_line_item,base.group_user,1,1,1,1
 access_quotation_item_price,salesforce_quotation_item_price,model_quotation_item_price,base.group_user,1,1,1,1
 
+access_market_reserve__c,salesforce_market_reserve__c,model_model_market_reserve__c,base.group_user,1,1,1,1
+
 
 
 
