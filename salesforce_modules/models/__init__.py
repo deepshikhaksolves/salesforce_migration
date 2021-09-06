@@ -4,4 +4,6 @@ from . import users, account, Geographic_Scope__c, task, cnae, user_company_cont
 
 from . import lead_sort_columns_in_campaign, campaign, model__c
 from . import pathology, quotation_item_price, accredited_network,region__c, quote_line_item
-# from . import product
+
+# from . import product, product_family
+from . import workflow_config

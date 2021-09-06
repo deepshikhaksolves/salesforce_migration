@@ -10,7 +10,20 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="name" />
+                                <field name="Name"/>
+                                <field name="RecordTypeId__c"/>
+                                <field name="RecordType__c"/>
+                                <field name="Object__c"/>
+                                <field name="Initial_Status__c"/>
+                                <field name="ObjectStatusField__c"/>
+                                <field name="Initial_Status__c"/>
+                                <field name="Description__c"/>
+                                <field name="Workflow_Standard_of_Object__c"/>
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                <field name="OwnerId"/>
+                                <field name="write_uid" string='Last Modified By'/>
                             </group>
                         </group>
                     </sheet>
@@ -24,7 +37,16 @@
             <field name="model">workflow_configuration</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="name"/>
+                    <field name="Name"/>
+                    <field name="RecordTypeId__c"/>
+                    <field name="RecordType__c"/>
+                    <field name="Object__c"/>
+                    <field name="Initial_Status__c"/>
+                    <field name="ObjectStatusField__c"/>
+                    <field name="Initial_Status__c"/>
+                    <field name="Description__c"/>
+                    <field name="Workflow_Standard_of_Object__c"/>
+                    <field name="create_uid"/>
                 </tree>
             </field>
         </record>

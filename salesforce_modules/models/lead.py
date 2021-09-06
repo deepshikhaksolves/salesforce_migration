@@ -1,13 +1,5 @@
 from odoo import models, fields, api
 
-
-class WorkflowConfig(models.Model):
-    _name = 'workflow_configuration'
-    _description = "Salesforce Workflow configuration"
-    _rec_name = 'name'
-
-    name        = fields.Char('Name')
-
 class ChannelSegmentation(models.Model):
     _name = 'channel_segmentation'
     _description = "Salesforce Channel Segmentation"
