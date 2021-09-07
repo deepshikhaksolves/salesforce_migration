@@ -54,6 +54,7 @@
         'views/network_provider_views.xml',
         'views/operator_checklist_views.xml',
         'views/price_list_views.xml',
+        'views/contract_plan_views.xml',
         'views/menus.xml',
 
     ],

@@ -18,3 +18,5 @@ class ProductPrice(models.Model):
     others_value_copay__c   = fields.Float('Aggregate Value (copay)', digits=(10, 2))
     holder_value__c         = fields.Float('Value for or Holder', digits=(12, 2))
     holder_value_copay__c   = fields.Float('Value for the Holder (Copay)', digits=(10, 2))
+
+    contract_plan_id        = fields.Many2one('model_contract_plan', string="Contract Plan ID")

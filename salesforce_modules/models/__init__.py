@@ -8,4 +8,4 @@ from . import pathology, quotation_item_price, accredited_network,region__c, quo
 from . import product, product_family, product_price
 from . import workflow_config, market_reserve__c
 
-from . import network_provider, operator_checklist, price_list #, contract_plan
+from . import network_provider, operator_checklist, price_list , contract_plan

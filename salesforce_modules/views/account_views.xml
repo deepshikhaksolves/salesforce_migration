@@ -10,20 +10,20 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="name"/>
                                 <field name="code"/>
-                                <field name="user_type_id"/>
-                                <field name="Account__c" />
+                                <field name="user_type_id" string='Account Record Type'/>
                                 <field name="ParentId" />
                                 <field name="financial_group__c" />
                                 <field name="CNPJ__c"/>
                                 <field name="Social_Reason__c"/>
+                                <field name="name"/>
                                 <!-- <field name="Name"/> -->
                                 <field name="State_Registration__c"/>
                                 <field name="Municipal_Registration__c"/>
-                                <field name="CNAE__c"/>
+                                <field name="CNAE__c" string="NINE"/>
                                 <field name="Risk_Level__c"/>
                                 <field name="Foundation_Date__c"/>
+                                <field name="Account__c" />
                                 <field name="Broker__c"/>
                                 <field name="Company_Classification__c"/>
                                 <field name="Company_Origin__c"/>
@@ -65,7 +65,7 @@
 
         <!-- account_layout action window -->
         <record id="account_layout_action" model="ir.actions.act_window">
-            <field name="name">account Layout</field>
+            <field name="name">Account Layout</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">account.account</field>
             <field name="view_mode">tree,form</field>
@@ -561,7 +561,7 @@
                                 <field name="user_type_id"/>
                                 <field name="Social_Reason__c"/>
                                 <field name="comercial_name__c"/>
-                                <!-- <field name="NINE"/> -->
+                                <field name="CNAE__c"/>
                                 <field name="Risk_Level__c"/>
                                 <field name="Foundation_Date__c"/>
                                 <field name="Locations__c"/>

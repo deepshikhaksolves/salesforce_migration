@@ -35,3 +35,5 @@ access_market_reserve__c,salesforce_market_reserve__c,model_model_market_reserve
 access_model_network_provider,salesforce_model_network_provider,model_model_network_provider,base.group_user,1,1,1,1
 access_model_operator_checklist,salesforce_model_operator_checklist,model_model_operator_checklist,base.group_user,1,1,1,1
 access_model_price_list,salesforce_model_price_list,model_model_price_list,base.group_user,1,1,1,1
+access_model_contract_plan,salesforce_model_contract_plan,model_model_contract_plan,base.group_user,1,1,1,1
+access_product_price,salesforce_product_price,model_product_price,base.group_user,1,1,1,1
