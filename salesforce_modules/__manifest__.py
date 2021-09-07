@@ -49,6 +49,10 @@
         'views/quote_line_item_views.xml',
         # 'views/quotation_item_price_views.xml',
         'views/market_reserve__c_view.xml',
+        'views/subject_c_view.xml',
+        'views/pathology_account_c_view.xml',
+        'views/market_reserve_duration_mdt_view.xml',
+        'views/market_reserve_active_mdt_view.xml',
         'views/menus.xml',
 
 

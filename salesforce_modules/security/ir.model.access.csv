@@ -31,6 +31,10 @@ access_quotation_item_price,salesforce_quotation_item_price,model_quotation_item
 
 access_market_reserve__c,salesforce_market_reserve__c,model_model_market_reserve__c,base.group_user,1,1,1,1
 
+access_subject_c,salesforce_subject_c,model_model_subject_c,base.group_user,1,1,1,1
+access_pathology_account_c,salesforce_pathology_account_c,model_model_pathology_account_c,base.group_user,1,1,1,1
+access_market_reserve_duration_mdt,salesforce_market_reserve_duration_mdt,model_model_market_reserve_duration_mdt,base.group_user,1,1,1,1
+access_market_reserve_active_mdt,salesforce_market_reserve_active_mdt,model_model_market_reserve_active_mdt,base.group_user,1,1,1,1
 
 
 

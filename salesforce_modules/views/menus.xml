@@ -96,6 +96,19 @@
         <!-- Market Reserve C -->
             <menuitem name="Market Reserve" id="market_reserve_menu" parent='salesforce_menu_root' action="market_reserve_c_action"/>
 
+        <!-- Subject C -->
+            <menuitem name="Subject C" id="subject_c_menu" parent='salesforce_menu_root' action="subject_c_action"/>
+
+        <!-- Pathology Account C-->
+            <menuitem name="Pathology Account C" id="pathology_account_c_menu" parent='salesforce_menu_root' action="pathology_account_c_action"/>
+
+         <!-- Market Reserve Duration MDT-->
+            <menuitem name="Market Reserve Duration" id="market_reserve_duration_mdt_menu" parent='salesforce_menu_root' action="market_reserve_duration_mdt_action"/>
+
+         <!-- Market Reserve Active MDT-->
+            <menuitem name="Market Reserve Active" id="market_reserve_active_mdt_menu" parent='salesforce_menu_root' action="market_reserve_active_mdt_action"/>
+
+
 
 	</data>
 </odoo>
