@@ -6,7 +6,7 @@ class AccreditedNetwork(models.Model):
     _description = "Salesforce Accredited network"
     _rec_name = 'Name'
 
-    Name        = fields.Text(string='Accredited Network', size=80)
+    Name        = fields.Char(string='Accredited Network', size=80)
     active__c   = fields.Boolean('Active')
 
     # CreatedById  already in odoo

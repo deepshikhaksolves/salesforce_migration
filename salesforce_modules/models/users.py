@@ -15,17 +15,17 @@ class WorkspaceId(models.Model):
 
     name = fields.Char('Name')
 
-class Indivisual(models.Model):
-    _name = 'model_indivisual'
-    _description = "Salesforce Indivisual Id"
+# class Indivisual(models.Model):
+#     _name = 'model_indivisual'
+#     _description = "Salesforce Indivisual Id"
 
-    name = fields.Char('Name')
+#     name = fields.Char('Name')
 
 class salesforce_user(models.Model):
     _inherit = 'res.users'
     _description = 'salesforce users'
 
-    about_me = fields.Text(string = "About Me", limit=1000)
+    about_me = fields.Char(string = "About Me", limit=1000)
     # isactive field aready present in odoo
     street = fields.Char()
     street2 = fields.Char()
@@ -60,7 +60,7 @@ class salesforce_user(models.Model):
     Fax = fields.Char('Fax')
     IsProfilePhotoActive = fields.Boolean('Has Profile Photo')
     WorkspaceId = fields.Many2one('model_workspace',string='IDE Workspace')
-    IndividualId = fields.Many2one('model_indivisual',string='Individual')
+    IndividualId = fields.Many2one('res.users',string='Individual')
     ReceivesInfoEmails = fields.Boolean('Info Emails')
     UserSubtype = fields.Selection([('1', '1')],'Internal Subtype')
     IsSystemControlled = fields.Boolean('Is Controlled By System')
@@ -70,24 +70,24 @@ class salesforce_user(models.Model):
     ManagerId = fields.Many2one('res.users',string='Manager')
     MobilePhone = fields.Char('Mobile')
     # Name = already present in odoo
-    CommunityNickname = fields.Text('Nickname',size=40)
-    OutOfOfficeMessage = fields.Text('Out of office message',size=40)
+    CommunityNickname = fields.Char('Nickname',size=40)
+    OutOfOfficeMessage = fields.Char('Out of office message',size=40)
     PasswordResetAttempt = fields.Integer('Password Reset Attempt')
     PasswordResetLockoutDate = fields.Date('Password Reset Lockout Date')
     Phone   = fields.Char('Phone')
     PortalRole  = fields.Selection([('1', '1'),('2', '2')], 'Portal Role Level')
     ProfileId   = fields.Many2one('Profile')
-    reservations_to_vencer__c   = fields.Text('reserves to expire',size=32768)
+    reservations_to_vencer__c   = fields.Char('reserves to expire',size=32768)
     UserRoleId  = fields.Many2one('res.users',string='Role')
-    FederationIdentifier    = fields.Text('SAML Federation ID',size=512)
+    FederationIdentifier    = fields.Char('SAML Federation ID',size=512)
     IsExtIndicatorVisible   = fields.Boolean('Show external indicator')
     StartDay    = fields.Selection([('1', '1'),('2', '2')], 'Start of Day')
-    StayInTouchNote = fields.Text('Stay-in-Touch Email Note',size=512)
-    StayInTouchSignature = fields.Text('Stay-in-Touch Email Signature',size=512)
-    StayInTouchSubject  = fields.Text('Stay-in-Touch Email Subject',size=512)
+    StayInTouchNote = fields.Char('Stay-in-Touch Email Note',size=512)
+    StayInTouchSignature = fields.Char('Stay-in-Touch Email Signature',size=512)
+    StayInTouchSubject  = fields.Char('Stay-in-Touch Email Subject',size=512)
     heads__c    = fields.Text('test')
     TimeZoneSidKey  = fields.Selection([('1', '1'),('2', '2')], 'Time Zone')
-    Title   = fields.Text('Title',size=80)
+    Title   = fields.Char('Title',size=80)
     MediumBannerPhotoUrl    = fields.Char('Url for Android banner photo')
     BannerPhotoUrl    = fields.Char('Url for banner photo')
     SmallBannerPhotoUrl    = fields.Char('Url for IOS banner photo')

@@ -7,9 +7,9 @@ class CNAE(models.Model):
     _description = "Salesforce CNAE"
     _rec_name = 'Code'
 
-    Code        = fields.Text('Name',size=80)
+    Code        = fields.Char('Name',size=80)
     # CreatedById  already in odoo
-    Description__c  = fields.Text('Description',size=255)
+    Description__c  = fields.Char('Description',size=255)
     # LastModifiedById already in odoo
     OwnerId     = fields.Many2one('res.users',string='Owner')
     Parent_Code__c  = fields.Many2one('model_cnae',string='Parent Code')

@@ -25,8 +25,8 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        # 'views/views.xml',
+        # 'views/templates.xml',
         'views/account_views.xml',
         'views/geographic_scope_views.xml',
         'views/users_views.xml',
@@ -37,7 +37,6 @@
         'views/channel_segment_views.xml',
         'views/work_flow_config.xml',
         'views/record_type_views.xml',
-        'views/market_reserve_views.xml',
         'views/type_of_operator_views.xml',
         'views/cnae_views.xml',
         'views/campaign_layout.xml',
@@ -47,7 +46,11 @@
         'views/region_views.xml',
         'views/accredited_network_views.xml',
         'views/quote_line_item_views.xml',
-        # 'views/quotation_item_price_views.xml',
+        'views/quotation_item_price_views.xml',
+        'views/product_views.xml',
+        'views/product_family_views.xml',
+        'views/product_price_views.xml',
+        'views/market_reserve__c_view.xml',
         'views/menus.xml',
 
     ],
