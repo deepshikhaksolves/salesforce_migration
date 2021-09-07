@@ -213,6 +213,33 @@ class SalesforceOpprtunity(models.Model):
     next_step = fields.Char('Next Step')
     contract_carrier = fields.Many2one('account.account', string='Operadora do Contrato')
     name = fields.Char('Opportunity Name')
+    MainCompetitors__c = fields.Char(string="Mainly competitors", size=100)
+    Nominative__c = fields.Boolean(string="Indicated")
+    Opportunity_Event_Source__c = fields.Selection([
+        ('Study','Study'),
+        ('Visit','Visit')
+    ],string="Origin of the opportunity event")
+    Total_Capital__c = fields.Float(string="Total Capital", digits=(16, 2) )
+    contract_carrier__c = fields.Many2one('account.account', string="Contract Operator")
+    partnership__c =  fields.Many2one('account.account', string="Partnership")
+    stageName = fields.Selection([
+        ('Open','Open'),('Visit','Visit'),('Study','Study'),('Negotiation','Negotiation'),('Released for Deployment','Released for Deployment'),
+        ('Devolution','Devolution'),('Awaiting Documentation','Awaiting Documentation'),('Operator Proposal','Operator Proposal'),
+        ('In Operator Deployment','In Operator Deployment'),('Review','Review'),('closed','closed'),('Lost','Lost')
+    ],string="Stage")
+    Mailing_Origin__c = fields.Char('Mailing Source', size=255)
+    Cancel_Information__c = fields.Text(string="Cancellation Information")
+    Motive_Of_Gain__c = fields.Selection([
+        ('Expertise','Expertise'),('Claim Management','Claim Management'),('Price','Price'),
+        ('Relationship','Relationship'),('Service','Service')
+    ],string="reason for gain")
+    Loss_Reason__c = fields.Selection([
+        ('contractual mooring','contractual mooring'),('Flexible benefit','Flexible benefit'),
+        ('Broker mundial','Broker mundial'),('Converted','Converted'),('High risk','High risk'),
+        ('Expertise','Expertise'),('Market research','Market research'),('Price','Price'),
+        ('Network','Network'),('Relationship','Relationship'),('Service','Service'),
+        ('Other','Other')
+    ],string="reason for loss")
 
 
 class SalesforcePeriodicity(models.Model):

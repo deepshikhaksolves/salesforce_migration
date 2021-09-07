@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+       <!-- opportunity form view -->
+        <record id="opportunity_view_form" model="ir.ui.view">
+            <field name="name">Opportunity View Layout</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <form string="Opprotunity View">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="account_id"/>
+                                <field name="close_date"/>
+                                <field name="ForecastCategoryName"/>
+                                <field name="MainCompetitors__c"/>
+                                <field name="Nominative__c"/>
+                                <field name="Opportunity_Event_Source__c"/>
+                                <field name="capital"/>
+                                <field name="Total_Capital__c"/>
+                                <field name="min_capital_limit"/>
+                                <field name="life"/>
+                                <field name="contract_carrier__c"/>
+                                <field name="partnership__c"/>
+                            </group>
+                            <group>
+                                <field name="stageName"/>
+                                <field name="lead_source"/>
+                                <field name="benefits"/>
+                                <field name="employee"/>
+                                <field name="funeral_assistance_value"/>
+                                <field name="max_capital_limit"/>
+                                <field name="Cancel_Information__c"/>
+                                <field name="Motive_Of_Gain__c"/>
+                                <field name="Loss_Reason__c"/>
+                                <field name="lost_comment"/>
+
+                                <field name="mainly_carrier"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </data>
+</odoo>
