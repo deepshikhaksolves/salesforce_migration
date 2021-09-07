@@ -11,7 +11,6 @@ access_model_account,salesforce_module_account,model_account_account,base.group_
 access_financial_group,salesforce_financial_group,model_financial_group,base.group_user,1,1,1,1
 access_type_of_operator,salesforce_type_of_operator,model_type_of_operator,base.group_user,1,1,1,1
 
-access_market_reserve,salesforce_market_reserve,model_market_reserve,base.group_user,1,1,1,1
 access_record_type,salesforce_record_type,model_record_type,base.group_user,1,1,1,1
 
 access_contentdocument,salesforce_contentdocument,model_contentdocument,base.group_user,1,1,1,1
@@ -29,12 +28,6 @@ access_accredited_network,salesforce_accredited_network,model_accredited_network
 access_quote_line_item,salesforce_quote_line_item,model_quote_line_item,base.group_user,1,1,1,1
 access_quotation_item_price,salesforce_quotation_item_price,model_quotation_item_price,base.group_user,1,1,1,1
 
-access_market_reserve__c,salesforce_market_reserve__c,model_model_market_reserve__c,base.group_user,1,1,1,1
-
-
-
 access_product_family,salesforce_product_family,model_product_family,base.group_user,1,1,1,1
 
-
-
-
+access_market_reserve__c,salesforce_market_reserve__c,model_model_market_reserve__c,base.group_user,1,1,1,1

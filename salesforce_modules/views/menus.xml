@@ -106,11 +106,11 @@
             <menuitem name="Average Product Cost" id="average_product_cost_menu" parent='product_price_parent_action_menu' action="average_product_cost_action" sequence='3'/>
             <menuitem name="Average Product Cost Contract" id="average_product_cost_contract_menu" parent='product_price_parent_action_menu' action="average_product_cost_contract_action" sequence='4'/>
 
+        <!-- Market Reserve C -->
+            <menuitem name="Market Reserve" id="market_reserve_menu" parent='salesforce_menu_root' action="market_reserve_c_action" sequence='19'/>
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
-        <!-- Market Reserve C -->
-            <menuitem name="Market Reserve" id="market_reserve_menu" parent='salesforce_menu_root' action="market_reserve_c_action"/>
 
 
 	</data>

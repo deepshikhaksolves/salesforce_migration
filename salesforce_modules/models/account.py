@@ -9,14 +9,6 @@ class RecordType(models.Model):
     name  = fields.Char('Name')
 
 
-class MarketReserve(models.Model):
-    _name = 'market_reserve'
-    _description = "Salesforce Record Type"
-    _rec_name = 'name'
-
-    name  = fields.Char('Name')
-
-
 class TypeOfOperator(models.Model):
     _name = 'type_of_operator'
     _description = "Salesforce Operator"
@@ -167,7 +159,7 @@ class Account(models.Model):
     Rating                      = fields.Selection([('Hot', 'Hot'),('Cold', 'Cold'),('Blocked', 'Blocked'),('Global_Contract', 'Global_Contract'),('No interest', 'No interest'),('No Profile', 'No Profile'),('Non-existent phone', 'Non-existent phone')],'Rating')
     religion__pc                = fields.Selection([('Catholic', 'Catholic'),('spiritist', 'spiritist'),('evangelical', 'evangelical'),('Muslim', 'Muslim'),('Messianic', 'Messianic'),('Buddhism', 'Buddhism'),('Islam', 'Islam'),('Hinduism', 'Hinduism'),('Jewish', 'Jewish'),('Atheist', 'Atheist')],'Religion')
     Legal_Representative__pc    = fields.Boolean('Legal representative')
-    market_reserve__c           = fields.Many2one('market_reserve',string='Market Reserve')
+    market_reserve__c           = fields.Many2one('model_market_reserve__c',string='Market Reserve')
     Reserva_de_Mercado__c       = fields.Text('Market Reserve')
     RG__pc                      = fields.Char('RG',size=20)
     role__c                     = fields.Selection([('Association', 'Association'),('Strategic Partner', 'Strategic Partner'),('Strategic Broker', 'Strategic Broker'),('Partner', 'Partner')],'Role')
