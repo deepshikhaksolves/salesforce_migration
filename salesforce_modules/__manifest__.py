@@ -51,6 +51,11 @@
         'views/product_family_views.xml',
         'views/product_price_views.xml',
         'views/market_reserve__c_view.xml',
+        'views/state_view.xml',
+        'views/study_configuration_view.xml',
+        'views/study_configuration_price_table_view.xml',
+        'views/study_configuration_product_view.xml',
+        'views/legal_pending_matter_view.xml',
         'views/menus.xml',
 
     ],
