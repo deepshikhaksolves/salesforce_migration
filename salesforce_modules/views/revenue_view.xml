@@ -10,7 +10,7 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="name" string="Revenue"/>
+                                <field name="name" string="Benefit Carrier Revenue Name"/>
                                 <field name="code"/>
                                 <field name="user_type_id"/>
                                 <field name="Prefix__c" />

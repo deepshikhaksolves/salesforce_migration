@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 
-class Product(models.Model):
+class ProductTemplate(models.Model):
     _inherit = 'product.template'
     _description = "Salesforce Product"
 

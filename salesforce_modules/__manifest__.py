@@ -51,6 +51,9 @@
         'views/product_family_views.xml',
         'views/product_price_views.xml',
         'views/market_reserve__c_view.xml',
+        'views/network_provider_views.xml',
+        'views/operator_checklist_views.xml',
+        'views/price_list_views.xml',
         'views/menus.xml',
 
     ],

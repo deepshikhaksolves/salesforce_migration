@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- model_price_list Layout form view -->
+        <record id="price_list_form" model="ir.ui.view">
+            <field name="name">Price List</field>
+            <field name="model">model_price_list</field>
+            <field name="arch" type="xml">
+                <form string="Price List Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="minimum_lives_c"/>
+                                <field name="maximum_lives_c"/>
+                                <field name="minimum_holder_lives_c"/>
+                                <field name="maximum_holder_lives_c"/>
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                <field name="contract_c"/>
+                                <field name="carrier_c"/>
+                                <field name="start_validity_c"/>
+                                <field name="end_validity_c"/>
+                                <field name="readjustment_date_c"/>
+                                <field name="percentage_adjustment_c"/>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Product Prices">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- model_price_list tree view -->
+        <record id="price_list_tree" model="ir.ui.view">
+            <field name="name">Price List Tree</field>
+            <field name="model">model_price_list</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="minimum_lives_c"/>
+                    <field name="maximum_lives_c"/>
+                    <field name="minimum_holder_lives_c"/>
+                    <field name="maximum_holder_lives_c"/>
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- model_price_list action window -->
+        <record id="price_list_action" model="ir.actions.act_window">
+            <field name="name">Price List</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_price_list</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('price_list_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('price_list_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>
