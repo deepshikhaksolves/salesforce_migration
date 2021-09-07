@@ -53,7 +53,7 @@
                 <menuitem name="Hospital" id="hospital_layout_menu" parent='account_parent_action_menu' action="hospital_layout_action" sequence="4" />
 
                 <menuitem name="Extras" id="extra_menu" parent='account_parent_action_menu' sequence="5" />
-                    <menuitem name="Acccount Layout" id="extra_account_layout_menu" parent='extra_menu' action="account_layout_action" sequence="1" />
+                    <menuitem name="Account Layout" id="extra_account_layout_menu" parent='extra_menu' action="account_layout_action" sequence="1" />
                     <menuitem name="Broker Legal Entity Layout" id="broker_legal_entity_layout_menu" parent='extra_menu' action="broker_legal_entity_layout_action" sequence="2" />
                     <menuitem name="Carrier Account Layout" id="career_account_layout_menu" parent='extra_menu' action="carrer_account_layout_action" sequence="3" />
                     <menuitem name="Laboratory Layout" id="laboratory_layout_menu" parent='extra_menu' action="laboratory_layout_action" sequence="4" />
@@ -108,6 +108,16 @@
 
         <!-- Market Reserve C -->
             <menuitem name="Market Reserve" id="market_reserve_menu" parent='salesforce_menu_root' action="market_reserve_c_action" sequence='19'/>
+
+        <!-- Network Provider -->
+            <menuitem name="Network Provider" id="network_provider_menu" parent='salesforce_menu_root' action="network_provider_layout_action" sequence='20'/>
+
+        <!-- Operator Checklist -->
+            <menuitem name="Operator Checklist" id="operator_checklist_menu" parent='salesforce_menu_root' action="operator_checklist_layout_action" sequence='21'/>
+
+        <!-- Price List -->
+            <menuitem name="Price List" id="price_list_menu" parent='salesforce_menu_root' action="price_list_action" sequence='22'/>
+
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />

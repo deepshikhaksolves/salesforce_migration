@@ -28,9 +28,21 @@
                                 <field name="Email"/>
                             </group>
                         </group>
-                            <group>
-                                <field name="description"/>
-                            </group>
+                        <group>
+                            <field name="description" string='Comments'/>
+                        </group>
+                        <notebook>
+                            <page string="Reminder">
+                                <group>
+                                    <field name="IsReminderSet" string='Reminder'/>
+                                </group>
+                            </page>
+                            <page string="Attachments">
+                                <group>
+
+                                </group>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
@@ -95,7 +107,17 @@
                         <notebook>
                             <page string="Reminder">
                                 <group>
-                                    <field name="IsReminderSet" />
+                                    <field name="IsReminderSet" string='Reminder'/>
+                                </group>
+                            </page>
+                            <page string="Attachments">
+                                <group>
+
+                                </group>
+                            </page>
+                            <page string="Notes">
+                                <group>
+                                    
                                 </group>
                             </page>
                         </notebook>
@@ -157,7 +179,7 @@
                             </group>
                         </group>
                             <group>
-                                <field name="description"/>
+                                <field name="description" string='Comments'/>
                             </group>
                         <notebook>
                             <page string="Additional Information">
@@ -176,7 +198,12 @@
 
                             <page string="Reminder">
                                 <group>
-                                    <field name="IsReminderSet" />
+                                    <field name="IsReminderSet" string='Reminder'/>
+                                </group>
+                            </page>
+                            <page string="Attachments">
+                                <group>
+                                    
                                 </group>
                             </page>
                         </notebook>

@@ -92,13 +92,13 @@
                                 <field name="name" />
                                 <field name="code"/>
                                 <field name="user_type_id"/>
-                                <field name="Type" />
+                                <!-- <field name="Type" /> -->
                                 <field name="Website" />
                                 <field name="Description"/>
                                 <field name="AnnualRevenue"/>
                             </group>
                             <group>
-                                <field name="OwnerId"/>
+                                <field name="OwnerId" string='Account Owner'/>
                                 <field name="ParentId"/>
                                 <field name="phone"/>
                                 <field name="Industry"/>
@@ -132,8 +132,8 @@
             <field name="res_model">account.account</field>
             <field name="view_mode">tree,form</field>
             <field name="view_ids" eval="[(5, 0, 0), 
-                (0, 0, {'view_mode': 'tree', 'view_id': ref('account_layout_tree')}),
-                (0, 0, {'view_mode': 'form', 'view_id': ref('account_layout_form')})]"/>
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('account_layout_old_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('account_layout_old_form')})]"/>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     No records available.

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- model_operator_checklist Layout form view -->
+        <record id="operator_checklist_layout_form" model="ir.ui.view">
+            <field name="name">Operator Checklist Layout</field>
+            <field name="model">model_operator_checklist</field>
+            <field name="arch" type="xml">
+                <form string="Operator Checklist Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="create_uid"/>
+                                <field name="write_uid" string='Last Modified By'/>
+                                <field name="Name"/>
+                            </group>
+                            <group>
+                                <field name="operator__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- model_operator_checklist tree view -->
+        <record id="operator_checklist_layout_tree" model="ir.ui.view">
+            <field name="name">Operator Checklist Layout Tree</field>
+            <field name="model">model_operator_checklist</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="operator__c"/>
+                    <field name="create_uid" />
+                    <field name="write_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- model_operator_checklist action window -->
+        <record id="operator_checklist_layout_action" model="ir.actions.act_window">
+            <field name="name">Operator Checklist Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_operator_checklist</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('operator_checklist_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('operator_checklist_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

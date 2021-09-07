@@ -178,7 +178,7 @@
 
         <!-- User Company Contract Permissions Layout Start -->
         <record id="User_company_contract_permissions_layout_form" model="ir.ui.view">
-            <field name="name">User_company_contract_permissions Layout</field>
+            <field name="name">User company contract permissions Layout</field>
             <field name="model">user_company_contract_permissions__c</field>
             <field name="arch" type="xml">
                 <form string="User_company_contract_permissions Layout">
@@ -187,12 +187,11 @@
                             <group>
                                 <field name="id__c" />
                                 <field name="financial_group__c" />
-                                <field name="contract__c"/>
+                                <field name="RecordTypeId"/>
                                 <field name="create_uid" />
                             </group>
                             <group>
                                 <field name="status__c"/>
-                                <field name="RecordTypeId"/>
                                 <field name="Name"/>
                                 <field name="OwnerId"/>
                                 <field name="write_uid" string='Last Modified By'/>
@@ -205,7 +204,7 @@
 
         <!-- User_company_contract_permissions tree view -->
         <record id="User_company_contract_permissions_layout_tree" model="ir.ui.view">
-            <field name="name">User_company_contract_permissions Layout Tree</field>
+            <field name="name">User company contract permissions Layout Tree</field>
             <field name="model">user_company_contract_permissions__c</field>
             <field name="arch" type="xml">
                 <tree>
@@ -221,7 +220,7 @@
 
         <!-- User_company_contract_permissions action window -->
         <record id="User_company_contract_permissions_layout_action" model="ir.actions.act_window">
-            <field name="name">User_company_contract_permissions Layout</field>
+            <field name="name">User company contract permissions Layout</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">user_company_contract_permissions__c</field>
             <field name="view_mode">tree,form</field>

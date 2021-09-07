@@ -7,7 +7,7 @@ class ContentDocument(models.Model):
     _rec_name = 'name'
 
     name      = fields.Char('Name')
-    doc_name      = fields.Binary('Document Name')
+    doc_name  = fields.Binary('Document Name')
 
 
 class Campaign(models.Model):
