@@ -13,34 +13,117 @@
                                 <field name="name"/>
                                 <field name="account_id"/>
                                 <field name="close_date"/>
-                                <field name="ForecastCategoryName"/>
-                                <field name="MainCompetitors__c"/>
-                                <field name="Nominative__c"/>
-                                <field name="Opportunity_Event_Source__c"/>
+                                <field name="forecast_category_name"/>
+                                <field name="probability"/>
+                                <field name="main_competitors"/>
+                                <field name="campaign_id"/>
+                                <field name="nominative"/>
+                                <field name="opportunity_event_source"/>
                                 <field name="capital"/>
-                                <field name="Total_Capital__c"/>
+                                <field name="total_capital"/>
                                 <field name="min_capital_limit"/>
+                                <field name="actual_tax"/>
                                 <field name="life"/>
-                                <field name="contract_carrier__c"/>
-                                <field name="partnership__c"/>
+                                <field name="contract_carrier"/>
+                                <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stageName"/>
+                                <field name="stage_name"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="employee"/>
                                 <field name="funeral_assistance_value"/>
                                 <field name="max_capital_limit"/>
-                                <field name="Cancel_Information__c"/>
-                                <field name="Motive_Of_Gain__c"/>
-                                <field name="Loss_Reason__c"/>
+                                <field name="cancel_information"/>
+                                <field name="motive_of_gain"/>
+                                <field name="loss_reason"/>
                                 <field name="lost_comment"/>
-
+                                <field name="revenue_politic"/>
                                 <field name="mainly_carrier"/>
                             </group>
                         </group>
+                        <page string="Informações para Contrato" name="contract_information">
+                            <group>
+                                <group>
+                                    <field name="contract_origin"/>
+                                    <field name="brokerage_transfer"/>
+                                </group>
+                                <group>
+                                    <field name="contributory"/>
+                                    <field name="contributory_description"/>
+                                    <field name="frequency"/>
+                                    <field name="has_dps"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Financeiro" name="financial">
+                            <group>
+                                <group>
+                                    <field name="payment_mode"/>
+                                    <field name="broker_schedule_start"/>
+                                    <field name="broking"/>
+                                    <field name="broker_number_benefit"/>
+                                    <field name="broker_value"/>
+                                    <field name="amount"/>
+                                </group>
+                                <group>
+                                    <field name="invoice"/>
+                                    <field name="comission_schedule_start"/>
+                                    <field name="commision"/>
+                                    <field name="comission_number_benefit"/>
+                                    <field name="commision_value"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="System Information" name="system_information">
+                            <group>
+                                <group>
+                                    <field name="user_id"/>
+                                </group>
+                                <group>
+                                    <field name="last_modified_by_id"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Contact Roles" name="contact_roles">
+                            <group></group>
+                        </page>
+                        <page string="Opportunity Team" name="opportunity_team">
+                            <group></group>
+                        </page>
+                        <page string="Partners" name="partners">
+                            <group></group>
+                        </page>
+                        <page string="Quotes" name="quotes">
+                            <group></group>
+                        </page>
+                        <page string="Competitors" name="competitors">
+                            <group></group>
+                        </page>
+                        <page string="Notes / Attachments" name="notes_attachments">
+                            <group></group>
+                        </page>
+                        <page string="Activity History" name="activity_history">
+                            <group></group>
+                        </page>
+                        <page string="Stage History" name="stage_history">
+                            <group></group>
+                        </page>
+                        <page string="Products" name="products">
+                            <group></group>
+                        </page>
+                        <page string="Approval History" name="approval_history">
+                            <group></group>
+                        </page>
+                        <page string="Produtos da Oportunidade" name="opportunity_products">
+                            <group></group>
+                        </page>
+                        <page string="Cases" name="cases">
+                            <group></group>
+                        </page>
                     </sheet>
                 </form>
             </field>
+        </record>
     </data>
 </odoo>
