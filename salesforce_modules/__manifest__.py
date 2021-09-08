@@ -28,7 +28,7 @@
         # 'views/views.xml',
         # 'views/templates.xml',
         'views/account_views.xml',
-        'views/opportunity_views.xml',
+        # 'views/opportunity_view.xml',
         'views/geographic_scope_views.xml',
         'views/users_views.xml',
         'views/task_view.xml',
@@ -65,6 +65,11 @@
         'views/study_configuration_price_table_view.xml',
         'views/study_configuration_product_view.xml',
         'views/legal_pending_matter_view.xml',
+        'views/region_city_views.xml',
+        'views/region_state_views.xml',
+        'views/request_views.xml',
+        'views/service_reason_config_views.xml',
+        'views/request_config_views.xml',
         'views/menus.xml',
 
 

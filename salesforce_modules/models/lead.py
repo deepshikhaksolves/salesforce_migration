@@ -1,12 +1,5 @@
 from odoo import models, fields, api
 
-class ChannelSegmentation(models.Model):
-    _name = 'channel_segmentation'
-    _description = "Salesforce Channel Segmentation"
-    _rec_name = 'name'
-
-    name        = fields.Char('Name')
-    
 
 class SalesforceLead(models.Model):
     _inherit = 'crm.lead'
