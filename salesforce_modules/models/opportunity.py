@@ -249,7 +249,7 @@ class SalesforceOpprtunity(models.Model):
         ('Percentual do salário','Percentual do salário'),
     ], string="Purchase Limit")
     purchase_limit_value = fields.Float('Purchase Limit Value')
-    Number_of_Installments = fields.Integer('Quantidade de Parcelas')
+    politic = fields.Integer('Quantidade de Parcelas')
     total_opportunity_quantity = fields.Float('Quantity')
     rebate = fields.Float('Rebate')
     redeemed = fields.Integer('Redeemed')
@@ -311,7 +311,7 @@ class SalesforceOpprtunity(models.Model):
         ('Aberto','Aberto'),
         ('Fechado','Fechado'),
     ],string="Type of Pension")
-    Type_of_Revenue = fields.Selection([
+    type_of_revenue = fields.Selection([
         ('Pontual','Pontual'),
         ('Recorrente','Recorrente'),
     ],string="Type of Revenue")

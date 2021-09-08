@@ -151,6 +151,15 @@
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
 
+        <!--Menu for Opportunity-->
+        <menuitem name="Opportunity" id="opportunity_parent_action_menu" parent='salesforce_menu_root' sequence='24'/>
+            <menuitem name="Personal Accident Broker" id="opportunity_pab_menu" parent='opportunity_parent_action_menu' action="opportunity_pab_action" sequence="1" />
+            <menuitem name="Accident Broker" id="opportunity_ab_menu" parent='opportunity_parent_action_menu' action="opportunity_ab_action" sequence="2" />
+            <menuitem name="Broker Checkup Vaccine" id="opportunity_bcv_menu" parent='opportunity_parent_action_menu' action="opportunity_bcv_action" sequence="3" />
+            <menuitem name="Broker Consulting" id="opportunity_bc_menu" parent='opportunity_parent_action_menu' action="opportunity_bc_action" sequence="4" />
+            <menuitem name="Broker Fee" id="opportunity_bf_menu" parent='opportunity_parent_action_menu' action="opportunity_bf_action" sequence="5" />
+            <menuitem name="Broker Fleet" id="opportunity_broker_frota_menu" parent='opportunity_parent_action_menu' action="opportunity_broker_frota_action" sequence="6" />
+            <menuitem name="Broker Medicamento" id="opportunity_bm_menu" parent='opportunity_parent_action_menu' action="opportunity_bm_action" sequence="7" />
 
 	</data>
 </odoo>
