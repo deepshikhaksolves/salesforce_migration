@@ -28,6 +28,7 @@
         # 'views/views.xml',
         # 'views/templates.xml',
         'views/account_views.xml',
+        'views/opportunity_view.xml',
         'views/geographic_scope_views.xml',
         'views/users_views.xml',
         'views/task_view.xml',
