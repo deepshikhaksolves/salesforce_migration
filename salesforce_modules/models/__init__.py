@@ -16,3 +16,10 @@ from . import subject_c
 from . import pathology_account_c
 from . import market_reserve_duration_mdt
 from . import market_reserve_active_mdt
+
+from . import subject_case_model_c
+from . import service_c
+from . import sensus_management_document_c
+from . import service_benefit_c
+from . import sla_carrier_benefit_reason_c
+from . import salesforce_dim_beneficiario_x

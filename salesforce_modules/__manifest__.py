@@ -64,6 +64,12 @@
         'views/study_configuration_price_table_view.xml',
         'views/study_configuration_product_view.xml',
         'views/legal_pending_matter_view.xml',
+        'views/subject_case_model_c_view.xml',
+        'views/service_c_view.xml',
+        'views/sensus_management_document_c_view.xml',
+        'views/service_benefit_c_view.xml',
+        'views/sla_carrier_benefit_reason_c_view.xml',
+        'views/salesforce_dim_beneficiario_x_view.xml',
         'views/menus.xml',
 
 
