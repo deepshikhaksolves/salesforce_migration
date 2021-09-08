@@ -37,3 +37,13 @@ access_model_operator_checklist,salesforce_model_operator_checklist,model_model_
 access_model_price_list,salesforce_model_price_list,model_model_price_list,base.group_user,1,1,1,1
 access_model_contract_plan,salesforce_model_contract_plan,model_model_contract_plan,base.group_user,1,1,1,1
 access_product_price,salesforce_product_price,model_product_price,base.group_user,1,1,1,1
+
+access_state,salesforce_state,model_state,base.group_user,1,1,1,1
+
+access_study_configuration,salesforce_study_configuration,model_study_configuration,base.group_user,1,1,1,1
+
+access_model_study_configuration_price_table,salesforce_model_study_configuration_price_table,model_model_study_configuration_price_table,base.group_user,1,1,1,1
+
+access_model_study_configuration_product,salesforce_model_study_configuration_product,model_model_study_configuration_product,base.group_user,1,1,1,1
+
+access_model_legal_pending_matter,salesforce_model_legal_pending_matter,model_model_legal_pending_matter,base.group_user,1,1,1,1

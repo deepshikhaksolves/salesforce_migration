@@ -55,6 +55,11 @@
         'views/operator_checklist_views.xml',
         'views/price_list_views.xml',
         'views/contract_plan_views.xml',
+        'views/state_view.xml',
+        'views/study_configuration_view.xml',
+        'views/study_configuration_price_table_view.xml',
+        'views/study_configuration_product_view.xml',
+        'views/legal_pending_matter_view.xml',
         'views/menus.xml',
 
     ],

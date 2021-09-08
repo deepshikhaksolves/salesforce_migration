@@ -127,7 +127,16 @@
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
-
+        <!--State c  -->
+            <menuitem name="State C" id="state_c_menu" parent='salesforce_menu_root' action="state_layout_action"/>
+        <!--Study Setup-->
+            <menuitem name="Study Setup" id="study_setup_menu" parent='salesforce_menu_root' action="study_setup_layout_action"/>
+        <!--Study Configuration Price Table-->
+            <menuitem name="Study Configuration Price Table" id="Study_Configuration_Price_Table_menu" parent='salesforce_menu_root' action="study_configuration_price_table_action"/>
+        <!--Study Configuration Product-->
+            <menuitem name="Study Configuration Product" id="Study_Configuration_Product_menu" parent='salesforce_menu_root' action="study_configuration_product_layout_action"/>
+        <!--Legal Pending Matter-->
+            <menuitem name="Legal Pending Matter" id="legal_pending_menu" parent='salesforce_menu_root' action="legal_pending_matter_action"/>
 
 	</data>
 </odoo>
