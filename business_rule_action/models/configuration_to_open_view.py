@@ -19,7 +19,8 @@ class salesforce_open_view(models.Model):
         rec_set = self.env['config.open.view'].search([('ir_model.model', '=', model_name)])
 
         data = []
-        for rec in rec_set.configuration_ids:
+        sorted_data = rec_set.configuration_ids.sorted(key=lambda conf: conf.sequence)
+        for rec in sorted_data:
             data_dict = {
                 'model': rec_set.ir_model.model,
                 'view_id': rec.ir_view.id,
