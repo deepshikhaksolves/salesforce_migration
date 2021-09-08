@@ -11,7 +11,6 @@ access_model_account,salesforce_module_account,model_account_account,base.group_
 access_financial_group,salesforce_financial_group,model_financial_group,base.group_user,1,1,1,1
 access_type_of_operator,salesforce_type_of_operator,model_type_of_operator,base.group_user,1,1,1,1
 
-access_market_reserve,salesforce_market_reserve,model_market_reserve,base.group_user,1,1,1,1
 access_record_type,salesforce_record_type,model_record_type,base.group_user,1,1,1,1
 
 access_contentdocument,salesforce_contentdocument,model_contentdocument,base.group_user,1,1,1,1

@@ -106,9 +106,6 @@
             <menuitem name="Average Product Cost" id="average_product_cost_menu" parent='product_price_parent_action_menu' action="average_product_cost_action" sequence='3'/>
             <menuitem name="Average Product Cost Contract" id="average_product_cost_contract_menu" parent='product_price_parent_action_menu' action="average_product_cost_contract_action" sequence='4'/>
 
-        <!-- Market Reserve C -->
-            <menuitem name="Market Reserve" id="market_reserve_menu" parent='salesforce_menu_root' action="market_reserve_c_action" sequence='19'/>
-
         <!-- Network Provider -->
             <menuitem name="Network Provider" id="network_provider_menu" parent='salesforce_menu_root' action="network_provider_layout_action" sequence='20'/>
 
@@ -135,24 +132,24 @@
         <!--Legal Pending Matter-->
             <menuitem name="Legal Pending Matter" id="legal_pending_menu" parent='salesforce_menu_root' action="legal_pending_matter_action" sequence='28'/>
 
+        <!-- Market Reserve C -->
+            <menuitem name="Market Reserve" id="market_reserve_menu" parent='salesforce_menu_root' action="market_reserve_c_action" sequence='29'/>
+
+        <!-- Subject C -->
+            <menuitem name="Subject C" id="subject_c_menu" parent='salesforce_menu_root' action="subject_c_action" sequence='30'/>
+
+        <!-- Pathology Account C-->
+            <menuitem name="Pathology Account C" id="pathology_account_c_menu" parent='salesforce_menu_root' action="pathology_account_c_action" sequence='31'/>
+
+         <!-- Market Reserve Duration MDT-->
+            <menuitem name="Market Reserve Duration" id="market_reserve_duration_mdt_menu" parent='salesforce_menu_root' action="market_reserve_duration_mdt_action" sequence='32'/>
+
+         <!-- Market Reserve Active MDT-->
+            <menuitem name="Market Reserve Active" id="market_reserve_active_mdt_menu" parent='salesforce_menu_root' action="market_reserve_active_mdt_action" sequence='33'/>
+
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
-        <!-- Market Reserve C -->
-            <menuitem name="Market Reserve" id="market_reserve_menu" parent='salesforce_menu_root' action="market_reserve_c_action"/>
-
-        <!-- Subject C -->
-            <menuitem name="Subject C" id="subject_c_menu" parent='salesforce_menu_root' action="subject_c_action"/>
-
-        <!-- Pathology Account C-->
-            <menuitem name="Pathology Account C" id="pathology_account_c_menu" parent='salesforce_menu_root' action="pathology_account_c_action"/>
-
-         <!-- Market Reserve Duration MDT-->
-            <menuitem name="Market Reserve Duration" id="market_reserve_duration_mdt_menu" parent='salesforce_menu_root' action="market_reserve_duration_mdt_action"/>
-
-         <!-- Market Reserve Active MDT-->
-            <menuitem name="Market Reserve Active" id="market_reserve_active_mdt_menu" parent='salesforce_menu_root' action="market_reserve_active_mdt_action"/>
-
 
 
 	</data>
