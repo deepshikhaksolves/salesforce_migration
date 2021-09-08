@@ -2,11 +2,11 @@
 <odoo>
 	<data>
        <!-- opportunity form view -->
-        <record id="opportunity_view_form" model="ir.ui.view">
-            <field name="name">Opportunity View Layout</field>
+        <record id="opportunity_pab_form" model="ir.ui.view">
+            <field name="name">Opportunity Personal Accident Broker View Layout</field>
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
-                <form string="Opprotunity View">
+                <form string="Broker Saúde e Odonto PF">
                     <sheet>
                         <group>
                             <group>
@@ -123,6 +123,795 @@
                         </page>
                     </sheet>
                 </form>
+            </field>
+        </record>
+        <record id="opportunity_ab_form" model="ir.ui.view">
+            <field name="name">Opportunity Automobile Broker View Layout</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <form string="Broker Automóvel">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="account_id"/>
+                                <field name="close_date"/>
+                                <field name="forecast_category_name"/>
+                                <field name="probability"/>
+                                <field name="main_competitors"/>
+                                <field name="campaign_id"/>
+                                <field name="nominative"/>
+                                <field name="motive_of_gain"/>
+                                <field name="deployment_talk"/>
+                                <field name="contract_carrier"/>
+                                <field name="partnership"/>
+                            </group>
+                            <group>
+                                <field name="stage_name"/>
+                                <field name="lead_source"/>
+                                <field name="benefits"/>
+                                <field name="mailing_origin"/>
+                                <field name="loss_reason"/>
+                                <field name="lost_comment"/>
+                                <field name="cancel_information"/>
+                                <field name="opportunity_event_source"/>
+                                <field name="mainly_carrier"/>
+                                <field name="revenue_politic"/>
+                            </group>
+                        </group>
+                        <page string="Informações para Contrato" name="contract_information">
+                            <group>
+                                <group>
+                                    <field name="contract_origin"/>
+                                </group>
+                                <group>
+                                    <field name="frequency"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Financeiro" name="financial">
+                            <group>
+                                <group>
+                                    <field name="payment_mode"/>
+                                    <field name="number_of_installments"/>
+                                    <field name="broker_schedule_start"/>
+                                    <field name="broking"/>
+                                    <field name="broker_number_benefit"/>
+                                    <field name="broker_value"/>
+                                    <field name="amount"/>
+                                </group>
+                                <group>
+                                    <field name="due_date"/>
+                                    <field name="invoice"/>
+                                    <field name="comission_schedule_start"/>
+                                    <field name="commision"/>
+                                    <field name="comission_number_benefit"/>
+                                    <field name="commision_value"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Condições Auto" name="auto_conditions">
+                            <group>
+                                <group>
+                                    <field name="tag"/>
+                                    <field name="renavam"/>
+                                    <field name="renavam"/>
+                                </group>
+                                <group>
+                                    <field name="modelo_id"/>
+                                    <field name="brand"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="System Information" name="system_information">
+                            <group>
+                                <group>
+                                    <field name="user_id"/>
+                                </group>
+                                <group>
+                                    <field name="last_modified_by_id"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Contact Roles" name="contact_roles">
+                            <group></group>
+                        </page>
+                        <page string="Opportunity Team" name="opportunity_team">
+                            <group></group>
+                        </page>
+                        <page string="Partners" name="partners">
+                            <group></group>
+                        </page>
+                        <page string="Quotes" name="quotes">
+                            <group></group>
+                        </page>
+                        <page string="Competitors" name="competitors">
+                            <group></group>
+                        </page>
+                        <page string="Notes / Attachments" name="notes_attachments">
+                            <group></group>
+                        </page>
+                        <page string="Activity History" name="activity_history">
+                            <group></group>
+                        </page>
+                        <page string="Stage History" name="stage_history">
+                            <group></group>
+                        </page>
+                        <page string="Products" name="products">
+                            <group></group>
+                        </page>
+                        <page string="Approval History" name="approval_history">
+                            <group></group>
+                        </page>
+                        <page string="Produtos da Oportunidade" name="opportunity_products">
+                            <group></group>
+                        </page>
+                        <page string="Cases" name="cases">
+                            <group></group>
+                        </page>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="opportunity_bcv_form" model="ir.ui.view">
+            <field name="name">Opportunity Broker Checkup Vaccine View Layout</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <form string="Broker Checkup Vaccine">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="account_id"/>
+                                <field name="close_date"/>
+                                <field name="forecast_category_name"/>
+                                <field name="probability"/>
+                                <field name="main_competitors"/>
+                                <field name="campaign_id"/>
+                                <field name="nominative"/>
+                                <field name="life"/>
+                                <field name="mainly_carrier"/>
+                                <field name="revenue_politic"/>
+                                <field name="contract_carrier"/>
+                                <field name="partnership"/>
+                            </group>
+                            <group>
+                                <field name="stage_name"/>
+                                <field name="lead_source"/>
+                                <field name="benefits"/>
+                                <field name="mailing_origin"/>
+                                <field name="motive_of_gain"/>
+                                <field name="loss_reason"/>
+                                <field name="lost_comment"/>
+                                <field name="cancel_information"/>
+                                <field name="opportunity_event_source"/>
+                                <field name="deployment_talk"/>
+                            </group>
+                        </group>
+                        <page string="Informações para Contrato" name="contract_information">
+                            <group>
+                                <group>
+                                    <field name="contract_origin"/>
+                                </group>
+                                <group>
+                                    <field name="frequency"/>
+                                    <field name="provider"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Financeiro" name="financial">
+                            <group>
+                                <group>
+                                    <field name="fee"/>
+                                    <field name="fee_number_benefit"/>
+                                    <field name="fee_schedule_start"/>
+                                    <field name="amount"/>
+                                </group>
+                                <group>
+                                    <field name="invoice"/>
+                                    <field name="payment_mode"/>
+                                    <field name="due_date"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="System Information" name="system_information">
+                            <group>
+                                <group>
+                                    <field name="user_id"/>
+                                </group>
+                                <group>
+                                    <field name="last_modified_by_id"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Contact Roles" name="contact_roles">
+                            <group></group>
+                        </page>
+                        <page string="Opportunity Team" name="opportunity_team">
+                            <group></group>
+                        </page>
+                        <page string="Partners" name="partners">
+                            <group></group>
+                        </page>
+                        <page string="Quotes" name="quotes">
+                            <group></group>
+                        </page>
+                        <page string="Competitors" name="competitors">
+                            <group></group>
+                        </page>
+                        <page string="Notes / Attachments" name="notes_attachments">
+                            <group></group>
+                        </page>
+                        <page string="Activity History" name="activity_history">
+                            <group></group>
+                        </page>
+                        <page string="Stage History" name="stage_history">
+                            <group></group>
+                        </page>
+                        <page string="Products" name="products">
+                            <group></group>
+                        </page>
+                        <page string="Approval History" name="approval_history">
+                            <group></group>
+                        </page>
+                        <page string="Produtos da Oportunidade" name="opportunity_products">
+                            <group></group>
+                        </page>
+                        <page string="Cases" name="cases">
+                            <group></group>
+                        </page>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="opportunity_bc_form" model="ir.ui.view">
+            <field name="name">Opportunity Broker Consulting View Layout</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <form string="Broker Consultoria">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="account_id"/>
+                                <field name="close_date"/>
+                                <field name="forecast_category_name"/>
+                                <field name="probability"/>
+                                <field name="main_competitors"/>
+                                <field name="campaign_id"/>
+                                <field name="nominative"/>
+                                <field name="type_of_revenue"/>
+                                <field name="number_of_installments"/>
+                                <field name="contract_carrier"/>
+                                <field name="partnership"/>
+                            </group>
+                            <group>
+                                <field name="stage_name"/>
+                                <field name="lead_source"/>
+                                <field name="benefits"/>
+                                <field name="mailing_origin"/>
+                                <field name="motive_of_gain"/>
+                                <field name="loss_reason"/>
+                                <field name="lost_comment"/>
+                                <field name="cancel_information"/>
+                                <field name="opportunity_event_source"/>
+                                <field name="revenue_politic"/>
+                            </group>
+                        </group>
+                        <page string="Informações para Contrato" name="contract_information">
+                            <group>
+                                <group>
+                                    <field name="contract_origin"/>
+                                </group>
+                                <group>
+                                    <field name="frequency"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Financeiro" name="financial">
+                            <group>
+                                <group>
+                                    <field name="fee"/>
+                                    <field name="fee_number_benefit"/>
+                                    <field name="fee_schedule_start"/>
+                                    <field name="amount"/>
+                                </group>
+                                <group>
+                                    <field name="invoice"/>
+                                    <field name="payment_mode"/>
+                                    <field name="due_date"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="System Information" name="system_information">
+                            <group>
+                                <group>
+                                    <field name="user_id"/>
+                                </group>
+                                <group>
+                                    <field name="last_modified_by_id"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Contact Roles" name="contact_roles">
+                            <group></group>
+                        </page>
+                        <page string="Opportunity Team" name="opportunity_team">
+                            <group></group>
+                        </page>
+                        <page string="Partners" name="partners">
+                            <group></group>
+                        </page>
+                        <page string="Quotes" name="quotes">
+                            <group></group>
+                        </page>
+                        <page string="Competitors" name="competitors">
+                            <group></group>
+                        </page>
+                        <page string="Notes / Attachments" name="notes_attachments">
+                            <group></group>
+                        </page>
+                        <page string="Activity History" name="activity_history">
+                            <group></group>
+                        </page>
+                        <page string="Stage History" name="stage_history">
+                            <group></group>
+                        </page>
+                        <page string="Products" name="products">
+                            <group></group>
+                        </page>
+                        <page string="Approval History" name="approval_history">
+                            <group></group>
+                        </page>
+                        <page string="Produtos da Oportunidade" name="opportunity_products">
+                            <group></group>
+                        </page>
+                        <page string="Cases" name="cases">
+                            <group></group>
+                        </page>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="opportunity_bf_form" model="ir.ui.view">
+            <field name="name">Opportunity Broker Fee View Layout</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <form string="Broker Fee">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="account_id"/>
+                                <field name="close_date"/>
+                                <field name="forecast_category_name"/>
+                                <field name="probability"/>
+                                <field name="main_competitors"/>
+                                <field name="campaign_id"/>
+                                <field name="nominative"/>
+                                <field name="motive_of_gain"/>
+                                <field name="contract_carrier"/>
+                                <field name="partnership"/>
+                            </group>
+                            <group>
+                                <field name="stage_name"/>
+                                <field name="lead_source"/>
+                                <field name="benefits"/>
+                                <field name="mailing_origin"/>
+                                <field name="loss_reason"/>
+                                <field name="lost_comment"/>
+                                <field name="cancel_information"/>
+                                <field name="opportunity_event_source"/>
+                                <field name="revenue_politic"/>
+                            </group>
+                        </group>
+                        <page string="Informações para Contrato" name="contract_information">
+                            <group>
+                                <group>
+                                    <field name="contract_origin"/>
+                                </group>
+                                <group>
+                                    <field name="frequency"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Financeiro" name="financial">
+                            <group>
+                                <group>
+                                    <field name="fee"/>
+                                    <field name="fee_number_benefit"/>
+                                    <field name="fee_schedule_start"/>
+                                    <field name="amount"/>
+                                </group>
+                                <group>
+                                    <field name="invoice"/>
+                                    <field name="payment_mode"/>
+                                    <field name="due_date"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="System Information" name="system_information">
+                            <group>
+                                <group>
+                                    <field name="user_id"/>
+                                </group>
+                                <group>
+                                    <field name="last_modified_by_id"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Contact Roles" name="contact_roles">
+                            <group></group>
+                        </page>
+                        <page string="Opportunity Team" name="opportunity_team">
+                            <group></group>
+                        </page>
+                        <page string="Partners" name="partners">
+                            <group></group>
+                        </page>
+                        <page string="Quotes" name="quotes">
+                            <group></group>
+                        </page>
+                        <page string="Competitors" name="competitors">
+                            <group></group>
+                        </page>
+                        <page string="Notes / Attachments" name="notes_attachments">
+                            <group></group>
+                        </page>
+                        <page string="Activity History" name="activity_history">
+                            <group></group>
+                        </page>
+                        <page string="Stage History" name="stage_history">
+                            <group></group>
+                        </page>
+                        <page string="Products" name="products">
+                            <group></group>
+                        </page>
+                        <page string="Approval History" name="approval_history">
+                            <group></group>
+                        </page>
+                        <page string="Produtos da Oportunidade" name="opportunity_products">
+                            <group></group>
+                        </page>
+                        <page string="Cases" name="cases">
+                            <group></group>
+                        </page>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="opportunity_broker_frota_form" model="ir.ui.view">
+            <field name="name">Opportunity Broker Frota View Layout</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <form string="Broker Frota">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="account_id"/>
+                                <field name="close_date"/>
+                                <field name="forecast_category_name"/>
+                                <field name="probability"/>
+                                <field name="main_competitors"/>
+                                <field name="campaign_id"/>
+                                <field name="nominative"/>
+                                <field name="motive_of_gain"/>
+                                <field name="mainly_carrier"/>
+                                <field name="contract_carrier"/>
+                                <field name="partnership"/>
+                            </group>
+                            <group>
+                                <field name="stage_name"/>
+                                <field name="lead_source"/>
+                                <field name="benefits"/>
+                                <field name="mailing_origin"/>
+                                <field name="loss_reason"/>
+                                <field name="lost_comment"/>
+                                <field name="cancel_information"/>
+                                <field name="opportunity_event_source"/>
+                                <field name="revenue_politic"/>
+                                <field name="deployment_talk"/>
+                            </group>
+                        </group>
+                        <page string="Informações para Contrato" name="contract_information">
+                            <group>
+                                <group>
+                                    <field name="contract_origin"/>
+                                </group>
+                                <group>
+                                    <field name="frequency"/>
+                                    <field name="brokerage_transfer"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Financeiro" name="financial">
+                            <group>
+                               <group>
+                                    <field name="payment_mode"/>
+                                    <field name="broker_schedule_start"/>
+                                    <field name="broking"/>
+                                    <field name="broker_number_benefit"/>
+                                    <field name="broker_value"/>
+                                    <field name="amount"/>
+                                </group>
+                                <group>
+                                    <field name="invoice"/>
+                                    <field name="comission_schedule_start"/>
+                                    <field name="commision"/>
+                                    <field name="comission_number_benefit"/>
+                                    <field name="commision_value"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="System Information" name="system_information">
+                            <group>
+                                <group>
+                                    <field name="user_id"/>
+                                </group>
+                                <group>
+                                    <field name="last_modified_by_id"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Contact Roles" name="contact_roles">
+                            <group></group>
+                        </page>
+                        <page string="Opportunity Team" name="opportunity_team">
+                            <group></group>
+                        </page>
+                        <page string="Partners" name="partners">
+                            <group></group>
+                        </page>
+                        <page string="Quotes" name="quotes">
+                            <group></group>
+                        </page>
+                        <page string="Competitors" name="competitors">
+                            <group></group>
+                        </page>
+                        <page string="Notes / Attachments" name="notes_attachments">
+                            <group></group>
+                        </page>
+                        <page string="Activity History" name="activity_history">
+                            <group></group>
+                        </page>
+                        <page string="Stage History" name="stage_history">
+                            <group></group>
+                        </page>
+                        <page string="Products" name="products">
+                            <group></group>
+                        </page>
+                        <page string="Approval History" name="approval_history">
+                            <group></group>
+                        </page>
+                        <page string="Produtos da Oportunidade" name="opportunity_products">
+                            <group></group>
+                        </page>
+                        <page string="Cases" name="cases">
+                            <group></group>
+                        </page>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="opportunity_bm_form" model="ir.ui.view">
+            <field name="name">Opportunity Broker Medicamento View Layout</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <form string="Broker Medicamento">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="account_id"/>
+                                <field name="close_date"/>
+                                <field name="forecast_category_name"/>
+                                <field name="probability"/>
+                                <field name="main_competitors"/>
+                                <field name="campaign_id"/>
+                                <field name="nominative"/>
+                                <field name="opportunity_event_source"/>
+                                <field name="life"/>
+                                <field name="mainly_carrier"/>
+                                <field name="contract_carrier"/>
+                                <field name="partnership"/>
+                            </group>
+                            <group>
+                                <field name="stage_name"/>
+                                <field name="lead_source"/>
+                                <field name="benefits"/>
+                                <field name="employee"/>
+                                <field name="mailing_origin"/>
+                                <field name="motive_of_gain"/>
+                                <field name="loss_reason"/>
+                                <field name="lost_comment"/>
+                                <field name="cancel_information"/>
+                                <field name="revenue_politic"/>
+                                <field name="deployment_talk"/>
+                            </group>
+                        </group>
+                        <page string="Informações para Contrato" name="contract_information">
+                            <group>
+                                <group>
+                                    <field name="contract_origin"/>
+                                    <field name="coverage_limit_value"/>
+                                    <field name="purchase_limit"/>
+                                    <field name="purchase_limit_value"/>
+                                    <field name="has_dps"/>
+                                </group>
+                                <group>
+                                    <field name="frequency"/>
+                                    <field name="moderator_variable"/>
+                                    <field name="wage_limit_for_coparticipation"/>
+                                    <field name="wage_limit_amount"/>
+                                    <field name="moderator_variable_value"/>
+                                    <field name="contributory"/>
+                                    <field name="contributory_description"/>
+                                    <field name="contributory_value"/>
+                                    <field name="brokerage_transfer"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Financeiro" name="financial">
+                            <group>
+                               <group>
+                                    <field name="payment_mode"/>
+                                    <field name="broker_schedule_start"/>
+                                    <field name="broking"/>
+                                    <field name="broker_number_benefit"/>
+                                    <field name="broker_value"/>
+                                    <field name="amount"/>
+                                </group>
+                                <group>
+                                    <field name="invoice"/>
+                                    <field name="comission_schedule_start"/>
+                                    <field name="commision"/>
+                                    <field name="comission_number_benefit"/>
+                                    <field name="commision_value"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="System Information" name="system_information">
+                            <group>
+                                <group>
+                                    <field name="user_id"/>
+                                </group>
+                                <group>
+                                    <field name="last_modified_by_id"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Contact Roles" name="contact_roles">
+                            <group></group>
+                        </page>
+                        <page string="Opportunity Team" name="opportunity_team">
+                            <group></group>
+                        </page>
+                        <page string="Partners" name="partners">
+                            <group></group>
+                        </page>
+                        <page string="Quotes" name="quotes">
+                            <group></group>
+                        </page>
+                        <page string="Competitors" name="competitors">
+                            <group></group>
+                        </page>
+                        <page string="Notes / Attachments" name="notes_attachments">
+                            <group></group>
+                        </page>
+                        <page string="Activity History" name="activity_history">
+                            <group></group>
+                        </page>
+                        <page string="Stage History" name="stage_history">
+                            <group></group>
+                        </page>
+                        <page string="Products" name="products">
+                            <group></group>
+                        </page>
+                        <page string="Approval History" name="approval_history">
+                            <group></group>
+                        </page>
+                        <page string="Produtos da Oportunidade" name="opportunity_products">
+                            <group></group>
+                        </page>
+                        <page string="Cases" name="cases">
+                            <group></group>
+                        </page>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="opportunity_pab_action" model="ir.actions.act_window">
+            <field name="name">Opportunity Personal Accident Broker</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_pab_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <record id="opportunity_ab_action" model="ir.actions.act_window">
+            <field name="name">Opportunity Accident Broker</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_ab_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <record id="opportunity_bcv_action" model="ir.actions.act_window">
+            <field name="name">Broker Checkup Vaccine</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_bcv_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <record id="opportunity_bc_action" model="ir.actions.act_window">
+            <field name="name">Broker Consulting</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_bc_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <record id="opportunity_bf_action" model="ir.actions.act_window">
+            <field name="name">Broker Fee</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_bf_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <record id="opportunity_broker_frota_action" model="ir.actions.act_window">
+            <field name="name">Broker Frota</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_broker_frota_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <record id="opportunity_bm_action" model="ir.actions.act_window">
+            <field name="name">Broker Frota</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_bm_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
             </field>
         </record>
     </data>
