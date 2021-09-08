@@ -52,3 +52,5 @@ access_model_study_configuration_price_table,salesforce_model_study_configuratio
 access_model_study_configuration_product,salesforce_model_study_configuration_product,model_model_study_configuration_product,base.group_user,1,1,1,1
 
 access_model_legal_pending_matter,salesforce_model_legal_pending_matter,model_model_legal_pending_matter,base.group_user,1,1,1,1
+
+access_model_publico,salesforce_model_publico,model_model_publico,base.group_user,1,1,1,1

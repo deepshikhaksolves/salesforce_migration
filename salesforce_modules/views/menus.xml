@@ -151,6 +151,7 @@
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
 
-
+        <!--Publico  -->
+            <menuitem name="Publico" id="publico_menu" parent='salesforce_menu_root' action="publico_layout_action"/>
 	</data>
 </odoo>

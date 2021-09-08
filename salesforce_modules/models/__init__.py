@@ -10,7 +10,7 @@ from . import workflow_config, market_reserve__c
 
 from . import network_provider, operator_checklist, price_list , contract_plan
 from . import state, study_configuration, study_configuration_price_table, study_configuration_product
-from . import legal_pending_matter
+from . import legal_pending_matter, Publico
 from . import market_reserve__c
 from . import subject_c
 from . import pathology_account_c
