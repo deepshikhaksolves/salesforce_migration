@@ -25,7 +25,7 @@ class salesforce_user(models.Model):
     _inherit = 'res.users'
     _description = 'salesforce users'
 
-    about_me = fields.Char(string = "About Me", limit=1000)
+    about_me = fields.Char(string = "About Me", size=1000)
     # isactive field aready present in odoo
     street = fields.Char()
     street2 = fields.Char()
