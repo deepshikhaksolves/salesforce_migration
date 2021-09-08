@@ -58,7 +58,7 @@
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_market_reserve__c</field>
             <field name="view_mode">tree,form</field>
-            <field name="view_ids" eval="[(5, 0, 0), 
+            <field name="view_ids" eval="[(5, 0, 0),
                 (0, 0, {'view_mode': 'tree', 'view_id': ref('market_reserve_c_tree')}),
                 (0, 0, {'view_mode': 'form', 'view_id': ref('market_reserve_c_form')})]"/>
             <field name="help" type="html">
