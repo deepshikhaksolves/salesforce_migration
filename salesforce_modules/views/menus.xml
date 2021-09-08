@@ -160,6 +160,7 @@
             <menuitem name="Broker Fee" id="opportunity_bf_menu" parent='opportunity_parent_action_menu' action="opportunity_bf_action" sequence="5" />
             <menuitem name="Broker Fleet" id="opportunity_broker_frota_menu" parent='opportunity_parent_action_menu' action="opportunity_broker_frota_action" sequence="6" />
             <menuitem name="Broker Medicamento" id="opportunity_bm_menu" parent='opportunity_parent_action_menu' action="opportunity_bm_action" sequence="7" />
+            <menuitem name="Broker Occupational Health" id="opportunity_boh_menu" parent='opportunity_parent_action_menu' action="opportunity_boh_action" sequence="8" />
 
 	</data>
 </odoo>

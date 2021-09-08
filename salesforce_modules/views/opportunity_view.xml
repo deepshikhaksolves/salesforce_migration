@@ -821,7 +821,117 @@
                 </form>
             </field>
         </record>
-
+        <record id="opportunity_boh_form" model="ir.ui.view">
+            <field name="name">Opportunity Broker Occupational Health View Layout</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <form string="Broker Occupational Health">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="account_id"/>
+                                <field name="close_date"/>
+                                <field name="forecast_category_name"/>
+                                <field name="probability"/>
+                                <field name="main_competitors"/>
+                                <field name="campaign_id"/>
+                                <field name="nominative"/>
+                                <field name="motive_of_gain"/>
+                                <field name="deployment_talk"/>
+                                <field name="life"/>
+                                <field name="contract_carrier"/>
+                                <field name="partnership"/>
+                            </group>
+                            <group>
+                                <field name="stage_name"/>
+                                <field name="lead_source"/>
+                                <field name="benefits"/>
+                                <field name="mailing_origin"/>
+                                <field name="loss_reason"/>
+                                <field name="lost_comment"/>
+                                <field name="cancel_information"/>
+                                <field name="revenue_politic"/>
+                                <field name="mainly_carrier"/>
+                                <field name="opportunity_event_source"/>
+                            </group>
+                        </group>
+                        <page string="Informações para Contrato" name="contract_information">
+                            <group>
+                                <group>
+                                    <field name="contract_origin"/>
+                                </group>
+                                <group>
+                                    <field name="frequency"/>
+                                    <field name="places"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Financeiro" name="financial">
+                            <group>
+                               <group>
+                                    <field name="fee"/>
+                                    <field name="fee_number_benefit"/>
+                                    <field name="fee_schedule_start"/>
+                                    <field name="amount"/>
+                                </group>
+                                <group>
+                                    <field name="invoice"/>
+                                    <field name="payment_mode"/>
+                                    <field name="due_date"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="System Information" name="system_information">
+                            <group>
+                                <group>
+                                    <field name="user_id"/>
+                                </group>
+                                <group>
+                                    <field name="last_modified_by_id"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Contact Roles" name="contact_roles">
+                            <group></group>
+                        </page>
+                        <page string="Opportunity Team" name="opportunity_team">
+                            <group></group>
+                        </page>
+                        <page string="Partners" name="partners">
+                            <group></group>
+                        </page>
+                        <page string="Quotes" name="quotes">
+                            <group></group>
+                        </page>
+                        <page string="Competitors" name="competitors">
+                            <group></group>
+                        </page>
+                        <page string="Notes / Attachments" name="notes_attachments">
+                            <group></group>
+                        </page>
+                        <page string="Activity History" name="activity_history">
+                            <group></group>
+                        </page>
+                        <page string="Stage History" name="stage_history">
+                            <group></group>
+                        </page>
+                        <page string="Products" name="products">
+                            <group></group>
+                        </page>
+                        <page string="Approval History" name="approval_history">
+                            <group></group>
+                        </page>
+                        <page string="Produtos da Oportunidade" name="opportunity_products">
+                            <group></group>
+                        </page>
+                        <page string="Cases" name="cases">
+                            <group></group>
+                        </page>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
         <record id="opportunity_pab_action" model="ir.actions.act_window">
             <field name="name">Opportunity Personal Accident Broker</field>
@@ -908,6 +1018,19 @@
             <field name="view_mode">form</field>
             <field name="view_ids" eval="[(5, 0, 0),
                 (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_bm_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <record id="opportunity_boh_action" model="ir.actions.act_window">
+            <field name="name">Broker Occupational Health</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_boh_form')})]"/>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     No records available.
