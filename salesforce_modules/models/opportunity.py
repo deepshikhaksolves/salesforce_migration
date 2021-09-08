@@ -98,7 +98,7 @@ class SalesforceOpprtunity(models.Model):
     cut_off_date = fields.Integer('Data de Corte')
     due_date = fields.Date('Data de Vencimento')
     days_in_current_status = fields.Integer('Days In Current Status')
-    Ddelivery_installation_status = fields.Selection([
+    delivery_installation_status = fields.Selection([
         ('In progress','In progress'),
         ('Yet to begin','Yet to begin'),
         ('Completed','Completed'),
@@ -130,14 +130,14 @@ class SalesforceOpprtunity(models.Model):
     contract_end = fields.Date('Fim do Contrato')
     fired = fields.Integer('Fired')
     mailing_origin = fields.Char('Fonte do Mailing')
-    ForecastCategoryName = fields.Selection([
+    forecast_category_name = fields.Selection([
         ('Omitted','Omitido'),
         ('Pipeline','Pipeline'),
         ('Best Case','Valor de referência'),
         ('Commit','Confirmação'),
         ('Closed','Fechado'),
     ], string="Forecast Category")
-    frequency = fields.Many2one('periodicity', string='Frequency') #New Model
+    frequency = fields.Many2one('periodicity', string='Frequency') #New Model hence removed
     employee = fields.Integer('Funcionários')
     funeral_assistance = fields.Boolean('Funeral Assistance')
     funeral_assistance_value = fields.Float('Funeral Assistance Value')
@@ -179,7 +179,7 @@ class SalesforceOpprtunity(models.Model):
     max_capital_limit = fields.Float('Max Capital Limit')
     medical_appointment = fields.Char('Medical Appointment')
     min_capital_limit = fields.Float('Min Capital Limit')
-    Payment_Mode = fields.Selection([
+    payment_mode = fields.Selection([
         ('pre_pagamento','Pré-pagamento'),
         ('pos_pagamento','Pós-pagamento'),
     ],string="Modalidade de Pagamento")
@@ -213,74 +213,161 @@ class SalesforceOpprtunity(models.Model):
     next_step = fields.Char('Next Step')
     contract_carrier = fields.Many2one('account.account', string='Operadora do Contrato')
     name = fields.Char('Opportunity Name')
-    MainCompetitors__c = fields.Char(string="Mainly competitors", size=100)
-    Nominative__c = fields.Boolean(string="Indicated")
-    Opportunity_Event_Source__c = fields.Selection([
-        ('Study','Study'),
-        ('Visit','Visit')
-    ],string="Origin of the opportunity event")
-    Total_Capital__c = fields.Float(string="Total Capital", digits=(16, 2) )
-    contract_carrier__c = fields.Many2one('account.account', string="Contract Operator")
-    partnership__c =  fields.Many2one('account.account', string="Partnership")
-    stageName = fields.Selection([
-        ('Open','Open'),('Visit','Visit'),('Study','Study'),('Negotiation','Negotiation'),('Released for Deployment','Released for Deployment'),
-        ('Devolution','Devolution'),('Awaiting Documentation','Awaiting Documentation'),('Operator Proposal','Operator Proposal'),
-        ('In Operator Deployment','In Operator Deployment'),('Review','Review'),('closed','closed'),('Lost','Lost')
+    owner_id = fields.Many2one('res.users', string="Opportunity Owner")
+    iq_score = fields.Integer('Opportunity Score')
+    order_number = fields.Char('Order Number')
+    contract_origin = fields.Selection([
+        ('Novo','Novo'),
+        ('Cross Sell','Cross Sell'),
+        ('Up Sell','Up Sell'),
+        ('Reimplantação','Reimplantação'),
+    ], string="Origem do Contrato")
+    opportunity_event_source = fields.Selection([
+        ('Estudo','Estudo'),
+        ('Visita','Visita'),
+    ], string="Origem do evento oportunidade")
+    orthodontics = fields.Char('Orthodontics')
+    others = fields.Char('Others')
+    partner_account_id = fields.Many2one('account.account', string='Partner Account')
+    partnership = fields.Many2one('account.account', string='Partnership')
+    pension_mode = fields.Selection([
+        ('Plano Averbado', 'Plano Averbado'),
+        ('	Plano Instituído', '	Plano Instituído'),
+    ], string="Pension Mode")
+    periodicity_renewal = fields.Integer('Periodicity Renewal')
+    grace_period = fields.Integer('Período de Carência')
+    tag = fields.Char('Placa')
+    places = fields.Text('Places')
+    has_dps = fields.Boolean('Possui DPS')
+    main_competitors = fields.char('Principais Concorrentes')
+    is_private = fields.Boolean('Private')
+    probability = fields.Float('Probability (%)')
+    prosthesis = fields.Char('Prosthesis')
+    provider = fields.Many2one('account.account', string='Provider')
+    purchase_limit = fields.Selection([
+        ('Valor fixo','Valor fixo'),
+        ('Percentual do salário','Percentual do salário'),
+    ], string="Purchase Limit")
+    purchase_limit_value = fields.Float('Purchase Limit Value')
+    Number_of_Installments = fields.Integer('Quantidade de Parcelas')
+    total_opportunity_quantity = fields.Float('Quantity')
+    rebate = fields.Float('Rebate')
+    redeemed = fields.Integer('Redeemed')
+    renavam = fields.Integer('RENAVAM')
+    reserve = fields.Char('Reserva')
+    market_reserve = fields.Char('Reserva de Mercado')
+    reserve_days = fields.Integer('Reserve - Days')
+    retired = fields.Integer('Retired')
+    returned_reason = fields.Char('Returned Reason')
+    revenue = fields.Float('Revenue')
+    revenue_politic = fields.Float('Revenue Politic')
+    roi_analysis_completed = fields.Boolean('ROI Analysis Completed')
+    service_supplier = fields.Integer('Service Supplier')
+    simple_test = fields.Char('Simple Test')
+    sons_capital_limit = fields.Boolean('Sons Capital Limit')
+    special_condition = fields.Char('Special Condition')
+    stage_name = fields.Selection([
+        ('Aberto','Aberto'),
+        ('Visita','Visita'),
+        ('Estudo','Estudo'),
+        ('Negociação','Negociação'),
+        ('Liberado para Implantação','Liberado para Implantação'),
+        ('Devolução','Devolução'),
+        ('Aguardando Documentação','Aguardando Documentação'),
+        ('Proposta Operadora','Proposta Operadora'),
+        ('Em Implantação Operadora','Em Implantação Operadora'),
+        ('Crítica','Crítica'),
+        ('Fechada','Fechada'),
+        ('Perdida','Perdida'),
     ],string="Stage")
-    Mailing_Origin__c = fields.Char('Mailing Source', size=255)
-    Cancel_Information__c = fields.Text(string="Cancellation Information")
-    Motive_Of_Gain__c = fields.Selection([
-        ('Expertise','Expertise'),('Claim Management','Claim Management'),('Price','Price'),
-        ('Relationship','Relationship'),('Service','Service')
-    ],string="reason for gain")
-    Loss_Reason__c = fields.Selection([
-        ('contractual mooring','contractual mooring'),('Flexible benefit','Flexible benefit'),
-        ('Broker mundial','Broker mundial'),('Converted','Converted'),('High risk','High risk'),
-        ('Expertise','Expertise'),('Market research','Market research'),('Price','Price'),
-        ('Network','Network'),('Relationship','Relationship'),('Service','Service'),
-        ('Other','Other')
-    ],string="reason for loss")
+    status_change_date = fields.Date('Status Change Date')
+    administration_tax = fields.Float('Taxa de Administração')
+    charge_rate = fields.Float('Taxa de Carregamento')
+    emergencial_card_fee = fields.Float('Taxa de Cartão Emergencial')
+    availability_fee = fields.Float('Taxa de Disponibilização')
+    issuance_cost = fields.Float('Taxa de Emissão')
+    delivery_fee = fields.Float('Taxa de Entrega')
+    output_rate = fields.Float('Taxa de Saída')
+    replace_fee = fields.Float('Taxa de Segunda Via')
+    therapy = fields.Char('Therapy')
+    Income_Type = fields.Selection([
+        ('Renda Temporária','Renda Temporária'),
+        ('Renda Vitalícia','Renda Vitalícia'),
+        ('Renda Vitalícia Reversível ao Beneficiário','Renda Vitalícia Reversível ao Beneficiário'),
+
+    ],string="Tipo de Renda")
+    Tax_Type = fields.Selection([
+        ('Regressiva Definitiva', 'Regressiva Definitiva'),
+        ('Progressiva Compensável', 'Progressiva Compensável'),
+    ], string="Tipo de Tributação")
+    total_capital = fields.Float(string="Total Capital", digits=(16, 2) )
+    tracking_number = fields.Char('Tracking Number')
+    brokerage_transfer = fields.Boolean('Transferência de Corretagem')
+    type = fields.Selection([
+        ('Existing Business','Existing Business'),
+        ('New Business','New Business'),
+    ],string="Type")
+    type_of_pension = fields.Selection([
+        ('Aberto','Aberto'),
+        ('Fechado','Fechado'),
+    ],string="Type of Pension")
+    Type_of_Revenue = fields.Selection([
+        ('Pontual','Pontual'),
+        ('Recorrente','Recorrente'),
+    ],string="Type of Revenue")
+    broker_first_installment_value = fields.Float('Valor da Primeira Parcela - Agenciamento')
+    comission_first_installment_value = fields.Float('Valor da Primeira Parcela - Comissão')
+    fee_first_installment_value = fields.Float('Valor da Primeira Parcela - Fee')
+    monthly_average_value = fields.Float('Valor Médio Mensal')
+    wage_limit_amount = fields.Float('Wage Limit Amount')
+    wage_limit_for_coparticipation = fields.Selection([
+        ('Não possui','Não possui'),
+        ('Por Percentual','Por Percentual'),
+        ('Por Valor Fixo','Por Valor Fixo'),
+    ],string="Wage Limit For Coparticipation")
+    workflow_configuration = fields.Many2one('workflow_configuration', string="Workflow Configuration")
+    campaign_id = fields.Many2one('model_campaign','Primary Campaign Source')
 
 
-class SalesforcePeriodicity(models.Model):
-    _name = 'periodicity'
-    _description = "Salesforce Periodicity"
-
-    every = fields.Integer('A Cada')
-    user_id = fields.Many2one('res.users', string="Created By")
-    Day_of_the_Week = fields.Selection([
-        ('Domingo','Domingo'),
-        ('Segunda-feira','Segunda-feira'),
-        ('Terça-feira','Terça-feira'),
-        ('Quarta-feira','Quarta-feira'),
-        ('Quinta-feira','Quinta-feira'),
-        ('Sexta-feira','Sexta-feira'),
-        ('Sábado','Sábado'),
-    ], string="Dia da Semana")
-    end = fields.Date('Fim')
-    start = fields.Datetime('Início')
-    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
-    month = fields.Selection([   # this should be a multiselect picklist
-        ('Janeiro', 'Janeiro'),
-        ('Fevereiro', 'Fevereiro'),
-        ('Março', 'Março'),
-        ('Abril', 'Abril'),
-        ('Maio', 'Maio'),
-        ('Junho', 'Junho'),
-        ('Julho', 'Julho'),
-        ('Agosto', 'Agosto'),
-        ('Setembro', 'Setembro'),
-        ('Outubro', 'Outubro'),
-        ('Novembro', 'Novembro'),
-        ('Dezembro', 'Dezembro'),
-    ], string="Mês")
-    order = fields.Selection([
-        ('Primeira (o)','Primeira (o)'),
-        ('Segunda (o)','Segunda (o)'),
-        ('Terceira (o)','Terceira (o)'),
-        ('Quarta (o)','Quarta (o)'),
-        ('Última (o)','Última (o)'),
-    ],string="Ordem")
-    name = fields.char('Periodicidade')
-    # periodicity_id = fields.Integer('Periodicidade ID')   autogenerating  Id of the records
-    recurrence = fields.Integer('Recorrência')
+# class SalesforcePeriodicity(models.Model):
+#     _name = 'periodicity'
+#     _description = "Salesforce Periodicity"
+#
+#     every = fields.Integer('A Cada')
+#     user_id = fields.Many2one('res.users', string="Created By")
+#     Day_of_the_Week = fields.Selection([
+#         ('Domingo','Domingo'),
+#         ('Segunda-feira','Segunda-feira'),
+#         ('Terça-feira','Terça-feira'),
+#         ('Quarta-feira','Quarta-feira'),
+#         ('Quinta-feira','Quinta-feira'),
+#         ('Sexta-feira','Sexta-feira'),
+#         ('Sábado','Sábado'),
+#     ], string="Dia da Semana")
+#     end = fields.Date('Fim')
+#     start = fields.Datetime('Início')
+#     last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
+#     month = fields.Selection([   # this should be a multiselect picklist
+#         ('Janeiro', 'Janeiro'),
+#         ('Fevereiro', 'Fevereiro'),
+#         ('Março', 'Março'),
+#         ('Abril', 'Abril'),
+#         ('Maio', 'Maio'),
+#         ('Junho', 'Junho'),
+#         ('Julho', 'Julho'),
+#         ('Agosto', 'Agosto'),
+#         ('Setembro', 'Setembro'),
+#         ('Outubro', 'Outubro'),
+#         ('Novembro', 'Novembro'),
+#         ('Dezembro', 'Dezembro'),
+#     ], string="Mês")
+#     order = fields.Selection([
+#         ('Primeira (o)','Primeira (o)'),
+#         ('Segunda (o)','Segunda (o)'),
+#         ('Terceira (o)','Terceira (o)'),
+#         ('Quarta (o)','Quarta (o)'),
+#         ('Última (o)','Última (o)'),
+#     ],string="Ordem")
+#     name = fields.char('Periodicidade')
+#     # periodicity_id = fields.Integer('Periodicidade ID')   autogenerating  Id of the records
+#     recurrence = fields.Integer('Recorrência')

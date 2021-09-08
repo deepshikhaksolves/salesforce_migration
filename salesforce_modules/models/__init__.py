@@ -8,4 +8,11 @@ from . import pathology, quotation_item_price, accredited_network,region__c, quo
 from . import product, product_family, product_price
 from . import workflow_config, market_reserve__c
 
-from . import network_provider, operator_checklist, price_list #, contract_plan
+from . import network_provider, operator_checklist, price_list , contract_plan
+from . import state, study_configuration, study_configuration_price_table, study_configuration_product
+from . import legal_pending_matter
+from . import market_reserve__c
+from . import subject_c
+from . import pathology_account_c
+from . import market_reserve_duration_mdt
+from . import market_reserve_active_mdt

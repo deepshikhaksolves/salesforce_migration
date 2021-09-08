@@ -187,11 +187,12 @@
                             <group>
                                 <field name="id__c" />
                                 <field name="financial_group__c" />
-                                <field name="RecordTypeId"/>
+                                <field name="contract__c"/>
                                 <field name="create_uid" />
                             </group>
                             <group>
                                 <field name="status__c"/>
+                                <field name="RecordTypeId"/>
                                 <field name="Name"/>
                                 <field name="OwnerId"/>
                                 <field name="write_uid" string='Last Modified By'/>

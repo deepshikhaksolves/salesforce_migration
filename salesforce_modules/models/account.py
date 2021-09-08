@@ -60,7 +60,7 @@ class Account(models.Model):
     ChannelProgramLevelName   = fields.Char('Channel Program Level Name',size=255)
     ChannelProgramName  = fields.Char('Channel Program Name',size=255)
     cid__pc             = fields.Char('CID',size=100)
-    CNAE__c             = fields.Many2one('model_cnae',string='CNAE')
+    CNAE__c             = fields.Many2one('model_cnae',string='NINE')
     CNPJ__c             = fields.Char('CNPJ',size=18)
     CNS__c              = fields.Integer('CNS')
     comercial_name__c   = fields.Char('Comercial Name',size=255)
