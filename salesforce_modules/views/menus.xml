@@ -147,12 +147,8 @@
          <!-- Market Reserve Active MDT-->
             <menuitem name="Market Reserve Active" id="market_reserve_active_mdt_menu" parent='salesforce_menu_root' action="market_reserve_active_mdt_action" sequence='33'/>
 
-        <!-- Extra Menus -->
-            <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
-                <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
-
         <!--Menu for Opportunity-->
-        <menuitem name="Opportunity" id="opportunity_parent_action_menu" parent='salesforce_menu_root' sequence='24'/>
+        <menuitem name="Opportunity" id="opportunity_parent_action_menu" parent='salesforce_menu_root' sequence='34'/>
             <menuitem name="Personal Accident Broker" id="opportunity_pab_menu" parent='opportunity_parent_action_menu' action="opportunity_pab_action" sequence="1" />
             <menuitem name="Accident Broker" id="opportunity_ab_menu" parent='opportunity_parent_action_menu' action="opportunity_ab_action" sequence="2" />
             <menuitem name="Broker Checkup Vaccine" id="opportunity_bcv_menu" parent='opportunity_parent_action_menu' action="opportunity_bcv_action" sequence="3" />
@@ -161,5 +157,8 @@
             <menuitem name="Broker Fleet" id="opportunity_broker_frota_menu" parent='opportunity_parent_action_menu' action="opportunity_broker_frota_action" sequence="6" />
             <menuitem name="Broker Medicamento" id="opportunity_bm_menu" parent='opportunity_parent_action_menu' action="opportunity_bm_action" sequence="7" />
 
+        <!-- Extra Menus -->
+            <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
+                <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
 	</data>
 </odoo>
