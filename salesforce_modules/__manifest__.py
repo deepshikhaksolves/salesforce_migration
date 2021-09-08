@@ -64,6 +64,7 @@
         'views/study_configuration_price_table_view.xml',
         'views/study_configuration_product_view.xml',
         'views/legal_pending_matter_view.xml',
+        'views/portal_access.xml',
         'views/menus.xml',
 
 

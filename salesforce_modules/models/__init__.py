@@ -16,3 +16,4 @@ from . import subject_c
 from . import pathology_account_c
 from . import market_reserve_duration_mdt
 from . import market_reserve_active_mdt
+from . import portal_access

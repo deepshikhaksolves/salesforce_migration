@@ -160,5 +160,10 @@
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
+
+        <!-- portal Access -->
+        <menuitem name="Portal Access" id="portal_access_action_menu" parent='salesforce_menu_root'/>
+
+        <menuitem name="Portal Access" id="portal_access_menu" parent='portal_access_action_menu' action="portal_access_action"/>
 	</data>
 </odoo>
