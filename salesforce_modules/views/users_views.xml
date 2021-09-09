@@ -12,6 +12,7 @@
                         <group>
                             <group>
                                 <field name="name" />
+				                <field name="login"/>
                                 <field name="ManagerId" />
                                 <field name="customer__c" />
                                 <field name="heads__c"/>

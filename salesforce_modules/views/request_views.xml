@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- request form view -->
+        <record id="request_layout_form" model="ir.ui.view">
+            <field name="name">Request Layout</field>
+            <field name="model">model_request</field>
+            <field name="arch" type="xml">
+                <form string="Request Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name" />
+                                <field name="Status"/>
+                                <!-- <field name="Entitlement_id"/> -->
+                                <field name="Case_Priority"/>
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Cases">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- model_request tree view -->
+        <record id="request_layout_tree" model="ir.ui.view">
+            <field name="name">Request Layout Tree</field>
+            <field name="model">model_request</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name" />
+                    <field name="Status"/>
+                    <!-- <field name="Entitlement_id"/> -->
+                    <field name="Case_Priority"/>
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- model_request action window -->
+        <record id="model_request_action" model="ir.actions.act_window">
+            <field name="name">Request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('request_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('request_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

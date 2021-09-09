@@ -239,7 +239,7 @@ class SalesforceOpprtunity(models.Model):
     tag = fields.Char('Placa')
     places = fields.Text('Places')
     has_dps = fields.Boolean('Possui DPS')
-    main_competitors = fields.char('Principais Concorrentes')
+    main_competitors = fields.Char('Principais Concorrentes')
     is_private = fields.Boolean('Private')
     probability = fields.Float('Probability (%)')
     prosthesis = fields.Char('Prosthesis')
@@ -249,7 +249,7 @@ class SalesforceOpprtunity(models.Model):
         ('Percentual do salário','Percentual do salário'),
     ], string="Purchase Limit")
     purchase_limit_value = fields.Float('Purchase Limit Value')
-    Number_of_Installments = fields.Integer('Quantidade de Parcelas')
+    number_of_installments = fields.Integer('Quantidade de Parcelas')
     total_opportunity_quantity = fields.Float('Quantity')
     rebate = fields.Float('Rebate')
     redeemed = fields.Integer('Redeemed')
@@ -290,7 +290,7 @@ class SalesforceOpprtunity(models.Model):
     output_rate = fields.Float('Taxa de Saída')
     replace_fee = fields.Float('Taxa de Segunda Via')
     therapy = fields.Char('Therapy')
-    Income_Type = fields.Selection([
+    income_type = fields.Selection([
         ('Renda Temporária','Renda Temporária'),
         ('Renda Vitalícia','Renda Vitalícia'),
         ('Renda Vitalícia Reversível ao Beneficiário','Renda Vitalícia Reversível ao Beneficiário'),
@@ -303,7 +303,7 @@ class SalesforceOpprtunity(models.Model):
     total_capital = fields.Float(string="Total Capital", digits=(16, 2) )
     tracking_number = fields.Char('Tracking Number')
     brokerage_transfer = fields.Boolean('Transferência de Corretagem')
-    type = fields.Selection([
+    type_business = fields.Selection([
         ('Existing Business','Existing Business'),
         ('New Business','New Business'),
     ],string="Type")
@@ -311,7 +311,7 @@ class SalesforceOpprtunity(models.Model):
         ('Aberto','Aberto'),
         ('Fechado','Fechado'),
     ],string="Type of Pension")
-    Type_of_Revenue = fields.Selection([
+    type_of_revenue = fields.Selection([
         ('Pontual','Pontual'),
         ('Recorrente','Recorrente'),
     ],string="Type of Revenue")
@@ -326,7 +326,7 @@ class SalesforceOpprtunity(models.Model):
         ('Por Valor Fixo','Por Valor Fixo'),
     ],string="Wage Limit For Coparticipation")
     workflow_configuration = fields.Many2one('workflow_configuration', string="Workflow Configuration")
-    campaign_id = fields.Many2one('model_campaign','Primary Campaign Source')
+    # campaign_id = fields.Many2one('model_campaign',string ='Primary Campaign Source',ondelete='cascade')
 
 
 # class SalesforcePeriodicity(models.Model):

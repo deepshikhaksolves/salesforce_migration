@@ -70,6 +70,11 @@
         'views/service_benefit_c_view.xml',
         'views/sla_carrier_benefit_reason_c_view.xml',
         'views/salesforce_dim_beneficiario_x_view.xml',
+        'views/region_city_views.xml',
+        'views/region_state_views.xml',
+        'views/request_views.xml',
+        'views/service_reason_config_views.xml',
+        'views/request_config_views.xml',
         'views/menus.xml',
 
 
