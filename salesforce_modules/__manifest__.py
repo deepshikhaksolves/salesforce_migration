@@ -83,6 +83,14 @@
         'views/sla_carrier_benefit_reason_c_view.xml',
         'views/salesforce_dim_beneficiario_x_view.xml',
         'views/portal_access.xml',
+        'views/contract_team_views.xml',
+        'views/financial_group_views.xml',
+        'views/cost_center_views.xml',
+        'views/country_views.xml',
+        'views/attachment_views.xml',
+        'views/operator_document_views.xml',
+        'views/eligibility_views.xml',
+        'views/contract_eligibility_views.xml',
         'views/menus.xml',
 
 

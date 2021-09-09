@@ -228,6 +228,30 @@
 
         <menuitem name="Portal Access" id="portal_access_menu" parent='portal_access_action_menu' action="portal_access_action"/>
 
+        <!-- Menu For Contract Team -->
+            <menuitem name="Contract Team Layout" id="contract_team_menu" parent='salesforce_menu_root' action="contract_team_action" sequence='61'/>
+        
+        <!-- Menu For Financial Group -->
+            <menuitem name="Financial Group Layout" id="financial_group_menu" parent='salesforce_menu_root' action="financial_group_layout_action" sequence='62'/>
+
+        <!-- Menu For Cost Center -->
+            <menuitem name="Cost Center Layout" id="cost_center_menu" parent='salesforce_menu_root' action="cost_center_action" sequence='63'/>
+
+        <!-- Menu For Country -->
+            <menuitem name="Country Layout" id="country_menu" parent='salesforce_menu_root' action="country_action" sequence='64'/>
+
+        <!-- Menu For Attachment -->
+            <menuitem name="Attachment Layout" id="attachment_menu" parent='salesforce_menu_root' action="attachment_layout_action" sequence='65'/>
+
+        <!-- Menu For Document Operator -->
+            <menuitem name="Operator Document" id="operator_document_menu" parent='salesforce_menu_root' action="operator_document_layout_action" sequence='66'/>
+
+        <!-- Menu For Eligibility -->
+            <menuitem name="Eligibility Layout" id="eligibility_menu" parent='salesforce_menu_root' action="eligibility_action" sequence='67'/>
+
+        <!-- Menu For Contract Eligibility -->
+            <menuitem name="Contract Eligibility Layout" id="contract_eligibility_menu" parent='salesforce_menu_root' action="contract_eligibility_action" sequence='68'/>
+
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />

@@ -17,7 +17,7 @@
                             <group>
                                 <field name="Geographic_Scope_ID__c"/>
                                 <field name="Geographic_Scope_tnk__c"/>
-                                <field name="write_uid"/>
+                                <field name="write_uid" string='Last Modified By'/>
                             </group>
                         </group>
                     </sheet>

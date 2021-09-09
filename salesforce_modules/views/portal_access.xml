@@ -11,7 +11,7 @@
                             <field name="OwnerId"/>
                             <field name="carrier__c"/>
                             <field name="administrator__c"/>
-                            <field name="financial_group__c"/>
+                            <field name="financial_group_id"/>
                             <field name="contract__c"/>
                             <field name="registered_email__c"/>
                             <field name="access_users__c"/>

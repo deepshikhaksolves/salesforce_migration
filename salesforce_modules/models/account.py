@@ -199,3 +199,5 @@ class Account(models.Model):
     # Name             = fields.Text('Revenue',size=80) already in odoo
     Income_Type__c   = fields.Selection([('direct','Direct'),('indirect','indirect')],'Type of Revenue')
     # ============== Fields For Revenue end ===========================
+
+    financial_group_id             = fields.Many2one('model_financial_group', string="Financial Group ID")
