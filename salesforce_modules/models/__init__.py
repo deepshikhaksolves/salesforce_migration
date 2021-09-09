@@ -18,3 +18,10 @@ from . import market_reserve_duration_mdt
 from . import market_reserve_active_mdt
 from . import Quote, Quote_Products, Reason_for_Beneficial_Inclusion, refund, price_x_region
 from . import region_city, region_state, request, service_reason_config, request_config, channel_segmentation
+
+from . import subject_case_model_c
+from . import service_c
+from . import sensus_management_document_c
+from . import service_benefit_c
+from . import sla_carrier_benefit_reason_c
+from . import salesforce_dim_beneficiario_x
