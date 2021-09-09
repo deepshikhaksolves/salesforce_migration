@@ -70,6 +70,12 @@
         'views/request_views.xml',
         'views/service_reason_config_views.xml',
         'views/request_config_views.xml',
+        'views/publico_view.xml',
+        'views/quote_view.xml',
+        'views/quote_products_view.xml',
+        'views/reason_for_beneficial_view.xml',
+        'views/refund_view.xml',
+        'views/price_x_region_view.xml',
         'views/menus.xml',
 
 

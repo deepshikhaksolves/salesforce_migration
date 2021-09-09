@@ -10,11 +10,11 @@ from . import workflow_config, market_reserve__c
 
 from . import network_provider, operator_checklist, price_list , contract_plan
 from . import state, study_configuration, study_configuration_price_table, study_configuration_product
-from . import legal_pending_matter
+from . import legal_pending_matter, Publico
 from . import market_reserve__c
 from . import subject_c
 from . import pathology_account_c
 from . import market_reserve_duration_mdt
 from . import market_reserve_active_mdt
-
+from . import Quote, Quote_Products, Reason_for_Beneficial_Inclusion, refund, price_x_region
 from . import region_city, region_state, request, service_reason_config, request_config, channel_segmentation
