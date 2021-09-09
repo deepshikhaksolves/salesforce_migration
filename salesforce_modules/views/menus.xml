@@ -153,5 +153,29 @@
 
         <!--Publico  -->
             <menuitem name="Publico" id="publico_menu" parent='salesforce_menu_root' action="publico_layout_action"/>
+        <!--Quote Broker Benchmarking  -->
+            <menuitem name="Broker Benchmarking" id="broker_benchmarking_menu" parent='salesforce_menu_root' action="quote_broker_benchmarking_layout_action"/>
+        <!--Quote Broker Competition  -->
+            <menuitem name="Broker Competition" id="broker_competition_menu" parent='salesforce_menu_root' action="quote_broker_competition_layout_action"/>
+        <!--Quote Broker Quote  -->
+            <menuitem name="Broker Quote" id="broker_quote_menu" parent='salesforce_menu_root' action="quote_broker_quote_layout_action"/>
+        <!--Quote Broker Binding  -->
+            <menuitem name="Broker Binding" id="broker_binding_menu" parent='salesforce_menu_root' action="quote_broker_binding_layout_action"/>
+        <!--Quote Project Binding  -->
+            <menuitem name="Broker Project" id="broker_project_menu" parent='salesforce_menu_root' action="quote_broker_project_layout_action"/>
+        <!--Quote Technical Praposal Binding  -->
+            <menuitem name="Broker Technical Praposal" id="broker_praposal_menu" parent='salesforce_menu_root' action="quote_broker_technical_praposal_layout_action"/>
+        <!--Quote Rede Quote  -->
+            <menuitem name="Broker Rede" id="broker_rede_menu" parent='salesforce_menu_root' action="quote_broker_rede_layout_action"/>
+        <!--Quote  -->
+            <menuitem name="Quote Layout" id="quote_layout_menu" parent='salesforce_menu_root' action="quote_layout_action"/>
+        <!--Quote Product  -->
+            <menuitem name="Quote Products Layout" id="quote_product_layout_menu" parent='salesforce_menu_root' action="quote_product_layout_action"/>
+        <!--Reason For Beneficial  -->
+            <menuitem name="Reason For Beneficial" id="reason_for_beneficial_layout_menu" parent='salesforce_menu_root' action="beneficial_inclusion_reason_layout_action"/>
+        <!--Refund  -->
+            <menuitem name="Refund" id="refund_menu" parent='salesforce_menu_root' action="refund_layout_action"/>
+        <!--Price X Region  -->
+            <menuitem name="Price X Region" id="price_x_region_menu" parent='salesforce_menu_root' action="price_x_region_layout_action"/>
 	</data>
 </odoo>

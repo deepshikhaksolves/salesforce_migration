@@ -54,3 +54,11 @@ access_model_study_configuration_product,salesforce_model_study_configuration_pr
 access_model_legal_pending_matter,salesforce_model_legal_pending_matter,model_model_legal_pending_matter,base.group_user,1,1,1,1
 
 access_model_publico,salesforce_model_publico,model_model_publico,base.group_user,1,1,1,1
+
+access_model_quote,salesforce_model_quote,model_model_quote,base.group_user,1,1,1,1
+access_model_quote_products,salesforce_model_quote_products,model_model_quote_products,base.group_user,1,1,1,1
+access_model_reason_for_beneficial,salesforce_model_reason_for_beneficial,model_model_reason_for_beneficial,base.group_user,1,1,1,1
+access_model_refund,salesforce_model_refund,model_model_refund,base.group_user,1,1,1,1
+access_model_price_x_region,salesforce_model_price_x_region,model_model_price_x_region,base.group_user,1,1,1,1
+
+

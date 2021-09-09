@@ -65,6 +65,11 @@
         'views/study_configuration_product_view.xml',
         'views/legal_pending_matter_view.xml',
         'views/publico_view.xml',
+        'views/quote_view.xml',
+        'views/quote_products_view.xml',
+        'views/reason_for_beneficial_view.xml',
+        'views/refund_view.xml',
+        'views/price_x_region_view.xml',
         'views/menus.xml',
 
 
