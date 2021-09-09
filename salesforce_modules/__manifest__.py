@@ -87,6 +87,10 @@
         'views/service_reason_config_views.xml',
         'views/request_config_views.xml',
         'views/portal_access.xml',
+        'views/campaignmember_view.xml',
+        'views/opportunity_view.xml',
+        'views/car_fleet_c_view.xml',
+        'views/carrier_type_c_view.xml',
         'views/menus.xml',
 
 

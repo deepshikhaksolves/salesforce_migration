@@ -1,0 +1,68 @@
+<odoo>
+    <data>
+        <!--Car Fleet C Layout form view -->
+        <record id="car_fleet_c_form" model="ir.ui.view">
+            <field name="name">Car Fleet C Layout</field>
+            <field name="model">model_car_fleet_c</field>
+            <field name="arch" type="xml">
+                <form string="Car Fleet C Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+<!--                                <field name="Brand_id"/>Brand object is not define-->
+                                <field name="Model_id"/>
+                                <field name="Day"/>
+                                <field name="RENAVAM"/>
+                                <field name="Year"/>
+<!--                                <field name="Contract_id"/>Contract object is not define-->
+                            </group>
+                            <group>
+                                <field name="OwnerId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Open Activities">
+                            </page>
+                            <page string="Activity History">
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         <!-- Car Fleet C Layout tree view -->
+        <record id="car_fleet_c_tree" model="ir.ui.view">
+            <field name="name">Car Fleet C Tree</field>
+            <field name="model">model_car_fleet_c</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="Model_id"/>
+                    <field name="Day"/>
+                    <field name="RENAVAM"/>
+                    <field name="Year"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Car Fleet C Layout action window -->
+        <record id="car_fleet_c_action" model="ir.actions.act_window">
+            <field name="name">Car Fleet C Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_car_fleet_c</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('car_fleet_c_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('car_fleet_c_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

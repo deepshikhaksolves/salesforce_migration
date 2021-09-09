@@ -34,7 +34,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="Name"/>
-                     <field name="client_profile_text"/>
+                    <field name="client_profile_text"/>
                     <field name="accountable"/>
                 </tree>
             </field>

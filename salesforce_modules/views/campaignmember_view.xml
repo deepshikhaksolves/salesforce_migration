@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+        <!--Campaign Member Layout form view -->
+        <record id="campaign_member_form" model="ir.ui.view">
+            <field name="name"> Campaign Member Layout</field>
+            <field name="model">model_campaignmember</field>
+            <field name="arch" type="xml">
+                <form string="Campaign Member Layout">
+                    <sheet>
+                        <group>
+                            <field name="CampaignId"/>
+                            <field name="ContactId"/>
+                            <field name="Status"/>
+                            <field name="HasResponded"/>
+                            <field name="CompanyOrAccount"/>
+                            <field name="Title"/>
+                            <field name="Phone"/>
+                            <field name="Email"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         <!-- Campaign Member Layout tree view -->
+        <record id="campaign_member_tree" model="ir.ui.view">
+            <field name="name">Campaign Member Layout Tree</field>
+            <field name="model">model_campaignmember</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="CampaignId"/>
+                    <field name="ContactId"/>
+                    <field name="Status"/>
+                    <field name="HasResponded"/>
+                    <field name="CompanyOrAccount"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Campaign Member Layout action window -->
+        <record id="campaign_member_action" model="ir.actions.act_window">
+            <field name="name">Campaign Member Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_campaignmember</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('campaign_member_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('campaign_member_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

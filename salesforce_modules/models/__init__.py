@@ -28,3 +28,7 @@ from . import salesforce_dim_beneficiario_x
 
 from . import region_city, region_state, request, service_reason_config, request_config, channel_segmentation
 from . import portal_access
+from . import campaignmember
+from . import car_fleet_c
+from . import carrier_type_c
+from .import case

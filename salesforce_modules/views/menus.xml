@@ -248,6 +248,17 @@
 
         <menuitem name="Portal Access" id="portal_access_menu" parent='portal_access_action_menu' action="portal_access_action"/>
 
+        <!-- Campaign Member -->
+            <menuitem name="Campaign Member" id="campaign_member_menu" parent='salesforce_menu_root' action="campaign_member_action" />
+
+
+        <!-- Car Fleet C -->
+            <menuitem name="Car Fleet C" id="car_fleet_c_menu" parent='salesforce_menu_root' action="car_fleet_c_action" />
+
+        <!-- Carrier Type C -->
+            <menuitem name="Carrier Type C" id="carrier_type_c_menu" parent='salesforce_menu_root' action="carrier_type_c_action" />
+
+
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />

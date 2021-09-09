@@ -3,7 +3,7 @@ from odoo import models, fields, api
 class Salesforce_Dim_Beneficiario_X(models.Model):
     _name = 'model_salesforce_dim_beneficiario_x'
     _description = "Salesforce Salesforce Dim Beneficiario X"
-    _rec_name = 'ExternalId'
+    _rec_name = 'beneficiary_name'
 
     DisplayUrl = fields.Char(string='Display URL')
     ExternalId = fields.Char(string='External ID')

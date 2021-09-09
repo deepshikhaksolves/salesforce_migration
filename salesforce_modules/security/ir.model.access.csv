@@ -82,3 +82,8 @@ access_service_reason_config,salesforce_service_reason_config,model_service_reas
 access_request_config,salesforce_request_config,model_request_config,base.group_user,1,1,1,1
 
 access_model_portal_access,access_model_portal_access,model_portal_access,base.group_user,1,1,1,1
+
+access_campaignmember,access_campaignmember,model_model_campaignmember,base.group_user,1,1,1,1
+access_car_fleet_c,access_car_fleet_c,model_model_car_fleet_c,base.group_user,1,1,1,1
+access_carrier_type_c,access_carrier_type_c,model_model_carrier_type_c,base.group_user,1,1,1,1
+access_case,access_case,model_model_case,base.group_user,1,1,1,1
