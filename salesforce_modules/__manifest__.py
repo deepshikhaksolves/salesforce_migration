@@ -82,6 +82,7 @@
         'views/service_benefit_c_view.xml',
         'views/sla_carrier_benefit_reason_c_view.xml',
         'views/salesforce_dim_beneficiario_x_view.xml',
+        'views/portal_access.xml',
         'views/menus.xml',
 
 

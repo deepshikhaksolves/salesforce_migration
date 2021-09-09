@@ -25,3 +25,4 @@ from . import sensus_management_document_c
 from . import service_benefit_c
 from . import sla_carrier_benefit_reason_c
 from . import salesforce_dim_beneficiario_x
+from . import portal_access
