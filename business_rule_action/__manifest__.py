@@ -19,6 +19,6 @@
     'data': [
         'security/ir.model.access.csv',
         'views/configuration_to_open_view.xml',
-        # 'views/assets.xml',
+        'views/assets.xml',
     ],
 }
