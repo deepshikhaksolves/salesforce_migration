@@ -34,7 +34,7 @@
                                                    domain="[('type', '=', 'form'), ('model', '=', model_name)]"/>
                                             <field name="context"/>
                                         </group>
-                                        <field name="domain" widget="domain" options="{'model': 'model_name'}"/>
+                                        <field name="domain" widget="domain" options="{'model': 'model_name','in_dialog': true}"/>
                                     </group>
                                 </form>
                             </field>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="model_name_view_form" model="ir.ui.view">
+        <field name="name">portal.access.view.form</field>
+        <field name="model">portal.access</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="OwnerId"/>
+                            <field name="carrier__c"/>
+                            <field name="administrator__c"/>
+                            <field name="financial_group__c"/>
+                            <field name="contract__c"/>
+                            <field name="registered_email__c"/>
+                            <field name="access_users__c"/>
+                        </group>
+                        <group>
+                            <field name="site__c"/>
+                            <field name="login__c"/>
+                            <field name="access_code__c"/>
+                            <field name="password__c"/>
+                            <field name="access_type__c"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Portal and Access History">
+                            <!-- <field name="line_ids"/> -->
+                        </page>
+                        <page string="Open Activities">
+                            <!-- <field name="line_ids"/> -->
+                        </page>
+                        <page string="Activity History">
+                            <!-- <field name="line_ids"/> -->
+                        </page>
+                        <page string="Files">
+                            <!-- <field name="line_ids"/> -->
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="model_name_view_tree" model="ir.ui.view">
+        <field name="name">portal.access.view.tree</field>
+        <field name="model">portal.access</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="login__c"/>
+                <field name="password__c"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="portal_access_action" model="ir.actions.act_window">
+        <field name="name">portal.access</field>
+        <field name="res_model">portal.access</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

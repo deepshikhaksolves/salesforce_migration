@@ -52,8 +52,8 @@ class salesforce_user(models.Model):
     diretor_comercial__c = fields.Many2one('res.users',string='Diretor Comercial')
     Division = fields.Many2one('hr.department',string='Division')
     EmailEncodingKey = fields.Selection([('1', '1')],'Email Encoding')
-    SenderEmail = fields.Char('Email Sender Address')
-    SenderName = fields.Char('Email Sender Name',size=80)
+    # SenderEmail = fields.Char('Email Sender Address') already in odoo i.e (login)
+    # SenderName = fields.Char('Email Sender Name',size=80) already in odoo i.e (name)
     # Signature = Already present in odoo
     EndDay = fields.Selection([('1', '1'),('2', '2')], 'End of Day')
     Extension = fields.Char('Extension')

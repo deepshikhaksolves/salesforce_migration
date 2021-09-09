@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- Request Config form view -->
+        <record id="request_config_form" model="ir.ui.view">
+            <field name="name">Request Config Form</field>
+            <field name="model">request_config</field>
+            <field name="arch" type="xml">
+                <form string="State of the region">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name" />
+                                <field name="Request_id"/>
+                                <!-- <field name="Subject_Case_Model"/> -->
+                                <field name="FormulaEntitlement"/>
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                <field name="OwnerId"/>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Request Config tree view -->
+        <record id="request_config_tree" model="ir.ui.view">
+            <field name="name">Request Config Tree</field>
+            <field name="model">request_config</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name" />
+                    <field name="Request_id"/>
+                    <!-- <field name="Subject_Case_Model"/> -->
+                    <field name="FormulaEntitlement"/>
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Request Config action window -->
+        <record id="request_config_action" model="ir.actions.act_window">
+            <field name="name">Request Configuration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request_config</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('request_config_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('request_config_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

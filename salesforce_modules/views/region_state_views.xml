@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- region state form view -->
+        <record id="region_state_form" model="ir.ui.view">
+            <field name="name">region state Layout</field>
+            <field name="model">model_region_state</field>
+            <field name="arch" type="xml">
+                <form string="State of the region">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="region" />
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                <field name="state_id"/>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- region state tree view -->
+        <record id="region_state_tree" model="ir.ui.view">
+            <field name="name">region state Layout Tree</field>
+            <field name="model">model_region_state</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="region" />
+                    <field name="state_id"/>
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- region state action window -->
+        <record id="region_state_action" model="ir.actions.act_window">
+            <field name="name">State of the region</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_region_state</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('region_state_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('region_state_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>
