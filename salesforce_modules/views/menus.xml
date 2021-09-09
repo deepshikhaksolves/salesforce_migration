@@ -205,22 +205,22 @@
             <menuitem name="Price X Region" id="price_x_region_menu" parent='salesforce_menu_root' action="price_x_region_layout_action" sequence='53'/>
 
         <!-- Subject Case Model C-->
-            <menuitem name="Subject Case Model C" id="subject_case_model_c_menu" parent='salesforce_menu_root' action="subject_case_model_c_action" />
+            <menuitem name="Subject Case Model C" id="subject_case_model_c_menu" parent='salesforce_menu_root' action="subject_case_model_c_action" sequence='54'/>
 
         <!-- Service C-->
-            <menuitem name="Service C" id="service_c_menu" parent='salesforce_menu_root' action="service_c_action" />
+            <menuitem name="Service C" id="service_c_menu" parent='salesforce_menu_root' action="service_c_action" sequence='55'/>
 
         <!-- Sensus Management Document C-->
-            <menuitem name="Sensus Management Document C" id="sensus_management_document_c_menu" parent='salesforce_menu_root' action="sensus_management_document_c_action" />
+            <menuitem name="Sensus Management Document C" id="sensus_management_document_c_menu" parent='salesforce_menu_root' action="sensus_management_document_c_action" sequence='56'/>
 
         <!-- Service Benefit C-->
-            <menuitem name="Service Benefit C" id="service_benefit_c_menu" parent='salesforce_menu_root' action="service_benefit_c_action" />
+            <menuitem name="Service Benefit C" id="service_benefit_c_menu" parent='salesforce_menu_root' action="service_benefit_c_action" sequence='57'/>
 
         <!-- SLA Carrier Benefit Reason C-->
-            <menuitem name="SLA Carrier Benefit Reason C" id="sla_carrier_benefit_reason_c_menu" parent='salesforce_menu_root' action="sla_carrier_benefit_reason_c_action" />
+            <menuitem name="SLA Carrier Benefit Reason C" id="sla_carrier_benefit_reason_c_menu" parent='salesforce_menu_root' action="sla_carrier_benefit_reason_c_action" sequence='58'/>
 
         <!-- Salesforce Dim Beneficiario X -->
-            <menuitem name="Salesforce Dim Beneficiario X" id="salesforce_dim_beneficiario_x_menu" parent='salesforce_menu_root' action="salesforce_dim_beneficiario_x_action" />
+            <menuitem name="Salesforce Dim Beneficiario X" id="salesforce_dim_beneficiario_x_menu" parent='salesforce_menu_root' action="salesforce_dim_beneficiario_x_action" sequence='59'/>
 
 
 
