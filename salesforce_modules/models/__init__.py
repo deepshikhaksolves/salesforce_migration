@@ -32,6 +32,9 @@ from . import salesforce_dim_beneficiario_x
 
 from . import region_city, region_state, request, service_reason_config, request_config, channel_segmentation
 from . import portal_access
+from . import revenue_compensation, revenue_provisioning, accommodation, additional_parameter__c, address
+from . import application_parameter, bank_account
+
 
 from . import contract_team, cost_center, financial_group, country, attachment, operator_document, eligibilty, contract_eligibility
 from . import campaignmember

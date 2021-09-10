@@ -104,6 +104,13 @@
         'views/opportunity_view.xml',
         'views/car_fleet_c_view.xml',
         'views/carrier_type_c_view.xml',
+        'views/revenue_compensation_view.xml',
+        'views/revenue_provisioning_view.xml',
+        'views/accommodation_view.xml',
+        'views/additional_parameter_c_view.xml',
+        'views/address_view.xml',
+        'views/application_parameter_view.xml',
+        'views/bank_account_view.xml',
         'views/menus.xml',
 
 
