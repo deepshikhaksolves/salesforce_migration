@@ -111,6 +111,13 @@
         'views/address_view.xml',
         'views/application_parameter_view.xml',
         'views/bank_account_view.xml',
+        'views/event_control_views.xml',
+        'views/financial_agreement_views.xml',
+        'views/expense_provisioning_views.xml',
+        'views/expense_compensation_views.xml',
+        'views/financial_contract_views.xml',
+        'views/financial_doctor_views.xml',
+        'views/financial_group_master_user_views.xml',
         'views/menus.xml',
 
 

@@ -12,5 +12,5 @@ class Country(models.Model):
     OwnerId                 = fields.Many2one('res.users',string='Owner')
     # name                    already in odoo i.e. (name)
     
-    # state_ids       = fields.One2many('res.country.state', 'relational_field', string='State IDS')
+    state_ids       = fields.One2many('res.country.state', 'country_id', string='State IDS')
     

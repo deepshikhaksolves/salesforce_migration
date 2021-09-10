@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <odoo>
+    <data>
+       <record id="expence_compensation_form" model="ir.ui.view">
+            <field name="name">Expense Compensation Layout Form</field>
+            <field name="model">hr.expense</field>
+            <field name="arch" type="xml">
+                <form string="Expense Compensation">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" string='Expense Compensation'/>
+                                <field name="unit_amount"/>
+                                <field name="Provisioned_Premium_Amount"/>
+                                <field name="Value_of_Provisioned_Commission"/>
+                                <field name="Percentage_of_Provisioned_Comission"/>
+                                <field name="Premium_Amount_Paid"/>
+                                <field name="Value_of_Comission_Paid"/>
+                                <field name="Internal_Extract_Number"/>
+                                <field name="date" string='Payday'/>
+                                <field name="Percentage_of_Comission_Paid"/>
+                                <field name="state" invisible='1'/>
+                                <field name="Status" string="Status"/>
+                                <field name="Expense_Provisioning_id"/>
+                                <field name="Revenue_Compensation_id"/>
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                <field name="OwnerId"/>
+                                <field name="write_uid"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Open Activities">
+                                <group>
+
+                                </group>
+                            </page>
+                            <page string="Activity History">
+                                <group>
+
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+       <record id="expence_compensation_tree" model="ir.ui.view">
+            <field name="name">Expense Compensation Layout Tree</field>
+            <field name="model">hr.expense</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Provisioned_Premium_Amount"/>
+                    <field name="Value_of_Provisioned_Commission"/>
+                    <field name="Percentage_of_Provisioned_Comission"/>
+                    <field name="Premium_Amount_Paid"/>
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+       <record id="expence_compensation_action" model="ir.actions.act_window">
+        <field name="name">Expense Compensation Layout</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.expense</field>
+        <field name="view_mode">form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('expence_compensation_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('expence_compensation_form')})]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No records available.
+            </p>
+        </field>
+    </record>
+    </data>
+</odoo>

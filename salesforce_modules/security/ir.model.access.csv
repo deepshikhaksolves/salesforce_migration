@@ -97,3 +97,11 @@ access_campaignmember,access_campaignmember,model_model_campaignmember,base.grou
 access_car_fleet_c,access_car_fleet_c,model_model_car_fleet_c,base.group_user,1,1,1,1
 access_carrier_type_c,access_carrier_type_c,model_model_carrier_type_c,base.group_user,1,1,1,1
 access_case,access_case,model_model_case,base.group_user,1,1,1,1
+
+access_event_control,access_event_control,model_event_control,base.group_user,1,1,1,1
+access_financial_agreement,access_financial_agreement,model_financial_agreement,base.group_user,1,1,1,1
+access_expence_provisioning,access_expence_provisioning,model_expence_provisioning,base.group_user,1,1,1,1
+access_financial_contract,access_financial_contract,model_financial_contract,base.group_user,1,1,1,1
+access_financial_doctor,access_financial_doctor,model_financial_doctor,base.group_user,1,1,1,1
+access_financial_group_master_user,access_financial_group_master_user,model_financial_group_master_user,base.group_user,1,1,1,1
+access_global_parameter,access_global_parameter,model_global_parameter,base.group_user,1,1,1,1

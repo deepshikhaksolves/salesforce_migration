@@ -327,26 +327,47 @@
         <!-- Carrier Type C -->
             <menuitem name="Carrier Type C" id="carrier_type_c_menu" parent='salesforce_menu_root' action="carrier_type_c_action" sequence='71'/>
 
+        <!--Revenue Provisioning Menu-->
+            <menuitem name="Revenue Provisioning" id="revenue_provisioning_menu" parent='salesforce_menu_root' action="revenue_provisioning_layout_action" sequence='72'/>
+        <!--Revenue Compensation Menu-->
+            <menuitem name="Revenue Compensation" id="revenue_compensation_menu" parent='salesforce_menu_root' action="revenue_compensation_layout_action" sequence='73'/>
+
+        <!--Accommodation Menu-->
+            <menuitem name="Accommodation" id="accommodation_menu" parent='salesforce_menu_root' action="accommodation_layout_action" sequence='74'/>
+        <!--Additional Parameter Menu-->
+            <menuitem name="Additional Parameter" id="additional_parameter_menu" parent='salesforce_menu_root' action="additional_parameter_layout_action" sequence='75'/>
+        <!--Address Menu-->
+            <menuitem name="Address" id="address_menu" parent='salesforce_menu_root' action="address_layout_action" sequence='76'/>
+        <!--Application Parameter Menu-->
+            <menuitem name="Application Parameter" id="application_parameter_menu" parent='salesforce_menu_root' action="application_parameter_layout_action" sequence='77'/>
+
+        <!--Bank Account Menu-->
+            <menuitem name="Bank Account" id="bank_account_menu" parent='salesforce_menu_root' action="bank_account_layout_action" sequence='78'/>
+
+        <!-- Event Control Menu-->
+            <menuitem name="Event Control Layout" id="event_control_menu" parent='salesforce_menu_root' action="event_control_action" sequence='79'/>
+
+        <!-- Financial Agreement Menu-->
+            <menuitem name="Financial Agreement Layout" id="financial_agreement_menu" parent='salesforce_menu_root' action="financial_agreement_action" sequence='80'/>
+        
+        <!-- Expense provisioning Menu-->
+            <menuitem name="Expense Provisioning Layout" id="expence_provisioning_menu" parent='salesforce_menu_root' action="expence_provisioning_action" sequence='81'/>
+
+        <!-- Expense Compensation Menu-->
+            <menuitem name="Expense Compensation Layout" id="expence_compensation_menu" parent='salesforce_menu_root' action="expence_compensation_action" sequence='82'/>
+
+        <!-- Financial Contract Menu-->
+            <menuitem name="Financial Contract Layout" id="financial_contract_menu" parent='salesforce_menu_root' action="financial_contract_action" sequence='83'/>
+        
+        <!-- Financial Doctor Menu-->
+            <menuitem name="Financial Doctor Layout" id="financial_doctor_menu" parent='salesforce_menu_root' action="financial_doctor_action" sequence='84'/>
+
+        <!-- Financial Group Master User Menu-->
+            <menuitem name="Financial Group Master User Layout" id="financial_group_master_user_menu" parent='salesforce_menu_root' action="financial_group_master_user_action" sequence='85'/>
 
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
 
-        <!--Revenue Provisioning Menu-->
-            <menuitem name="Revenue Provisioning" id="revenue_provisioning_menu" parent='salesforce_menu_root' action="revenue_provisioning_layout_action"/>
-        <!--Revenue Compensation Menu-->
-            <menuitem name="Revenue Compensation" id="revenue_compensation_menu" parent='salesforce_menu_root' action="revenue_compensation_layout_action"/>
-
-        <!--Accommodation Menu-->
-            <menuitem name="Accommodation" id="accommodation_menu" parent='salesforce_menu_root' action="accommodation_layout_action"/>
-        <!--Additional Parameter Menu-->
-            <menuitem name="Additional Parameter" id="additional_parameter_menu" parent='salesforce_menu_root' action="additional_parameter_layout_action"/>
-        <!--Address Menu-->
-            <menuitem name="Address" id="address_menu" parent='salesforce_menu_root' action="address_layout_action"/>
-        <!--Application Parameter Menu-->
-            <menuitem name="Application Parameter" id="application_parameter_menu" parent='salesforce_menu_root' action="application_parameter_layout_action"/>
-
-        <!--Bank Account Menu-->
-            <menuitem name="Bank Account" id="bank_account_menu" parent='salesforce_menu_root' action="bank_account_layout_action"/>
 	</data>
 </odoo>

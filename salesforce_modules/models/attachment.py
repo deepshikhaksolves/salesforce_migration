@@ -13,4 +13,4 @@ class Attachment(models.Model):
     OwnerId                 = fields.Many2one('res.users',string='Owner')
 
     document_use               = fields.Selection([('Implantation','Implantation'),('Internal deployment','Internal deployment'),('Movement','Movement'),('Administered','Administered')],'Use of Documents')
-   
+    financial_contract_id    =   fields.Many2one('financial_contract', string="Financial Contract ID")

@@ -19,7 +19,9 @@
                         <notebook>
                             <page string="state">
                                 <field name="state_ids">
-                                    <field name="name" string="State"/>
+                                    <tree>
+                                        <field name="name" string="State"/>
+                                    </tree>
                                 </field>
                             </page>
                         </notebook>
@@ -44,7 +46,7 @@
 
         <!-- country action window -->
         <record id="country_action" model="ir.actions.act_window">
-            <field name="name">country Layout</field>
+            <field name="name">Country Layout</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">res.country</field>
             <field name="view_mode">tree,form</field>

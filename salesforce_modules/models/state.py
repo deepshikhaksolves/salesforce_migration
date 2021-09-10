@@ -13,3 +13,4 @@ class State(models.Model):
     # LastModifiedById already in odoo
     # Country__c alreay in odoo
     State_Initials =  fields.Char(string="State acronym", size=2)
+    

@@ -206,8 +206,8 @@
                         <group>
                             <group>
                                 <field name="Name" />
-                                <!-- <field name="contract_product__c"/> -->
-                                <!-- <field name="Price_Table__c"/> -->
+                                <field name="contract_product__c"/>
+                                <field name="Price_Table__c"/>
                                 <field name="RecordTypeId"/>
                                 <field name="create_uid"/>
                             </group>
