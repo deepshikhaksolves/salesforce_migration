@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <odoo>
+    <data>
+       <record id="plan_coverage_form" model="ir.ui.view">
+            <field name="name">Plan Coverager Layout Form</field>
+            <field name="model">plan.coverage</field>
+            <field name="arch" type="xml">
+                <form string="Layout de Cobertura do Plano">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="coverage"/>
+                                <field name="start_of_coverage"/>
+                                <field name="condition"/>
+                                <field name="user_id"/>
+                            </group>
+                            <group>
+                                <field name="plan_id"/>
+                                <field name="end_of_coverage"/>
+                                <field name="operator_description"/>
+                                <field name="last_modified_by_id"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Open Activities" name="open_activities">
+                                <group></group>
+                            </page>
+                            <page string="Activity History" name="activities_history">
+                                <group></group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+       <record id="plan_coverage_tree" model="ir.ui.view">
+            <field name="name">Plan Coverager Layout Tree</field>
+            <field name="model">plan.coverage</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="coverage"/>
+                    <field name="start_of_coverage"/>
+                    <field name="condition"/>
+                    <field name="user_id"/>
+                    <field name="plan_id"/>
+                    <field name="end_of_coverage"/>
+                    <field name="operator_description"/>
+                    <field name="last_modified_by_id"/>
+                </tree>
+            </field>
+        </record>
+       <record id="plan_coverage_action" model="ir.actions.act_window">
+        <field name="name">Plan Coverage</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">plan.coverage</field>
+        <field name="view_mode">form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('plan_coverage_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('plan_coverage_form')})]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No records available.
+            </p>
+        </field>
+    </record>
+    </data>
+</odoo>
