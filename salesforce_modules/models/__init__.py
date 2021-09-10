@@ -26,3 +26,5 @@ from . import service_benefit_c
 from . import sla_carrier_benefit_reason_c
 from . import salesforce_dim_beneficiario_x
 from . import portal_access
+from . import revenue_compensation, revenue_provisioning, accommodation, additional_parameter__c, address
+from . import application_parameter, bank_account

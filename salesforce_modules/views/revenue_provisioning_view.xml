@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Revenue Compensation Layout Start -->
+        <record id="revenue_compensation_layout_form" model="ir.ui.view">
+            <field name="name">Revenue Compensation Layout</field>
+            <field name="model">model_revenue_provisioning</field>
+            <field name="arch" type="xml">
+                <form string="Revenue Compensation Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Compensation_Type"/>
+                                <field name="Number_Of_Installments"/>
+                                <field name="Compensation_Value"/>
+                                <field name="First_Month"/>
+                                <field name="Last_Month"/>
+                                <field name="First_Month_Due"/>
+                                <field name="create_uid" string='Created By'/>
+                            </group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Contract_id"/>
+                                <field name="OwnerId"/>
+                                <field name="Description"/>
+                                <field name="Status"/>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Open Activities">
+                            </page>
+                            <page string="Activity History">
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Revenue Compensation Layout tree view -->
+        <record id="revenue_compensation_layout_tree" model="ir.ui.view">
+            <field name="name">Revenue Compensation Layout Tree</field>
+            <field name="model">model_revenue_provisioning</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Compensation_Type"/>
+                    <field name="Number_Of_Installments"/>
+                    <field name="Compensation_Value"/>
+                    <field name="First_Month"/>
+                    <field name="Last_Month"/>
+                    <field name="First_Month_Due"/>
+                    <field name="create_uid" string='Created By'/>
+                    <field name="Name"/>
+                    <field name="Contract_id"/>
+                    <field name="OwnerId"/>
+                    <field name="Description"/>
+                    <field name="Status"/>
+                    <field name="write_uid" string='Last Modified By'/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Revenue Compensation Layout action window -->
+        <record id="revenue_compensation_layout_action" model="ir.actions.act_window">
+            <field name="name">Revenue Compensation Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_revenue_provisioning</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('revenue_compensation_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('revenue_compensation_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>
