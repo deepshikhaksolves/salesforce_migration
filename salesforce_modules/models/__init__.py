@@ -38,3 +38,13 @@ from . import campaignmember
 from . import car_fleet_c
 from . import carrier_type_c
 from .import case
+from . import case_model_c
+from . import  case_request_c
+from . import case_request_sla_c
+from . import case_status_parameter_mdt
+from . import checklist_c
+from . import city_c
+from . import comercial_agent_c
+from . import comercial_structure_c
+from . import comments_c
+from . import company_parameter_c

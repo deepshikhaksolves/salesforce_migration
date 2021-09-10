@@ -94,3 +94,15 @@ access_campaignmember,access_campaignmember,model_model_campaignmember,base.grou
 access_car_fleet_c,access_car_fleet_c,model_model_car_fleet_c,base.group_user,1,1,1,1
 access_carrier_type_c,access_carrier_type_c,model_model_carrier_type_c,base.group_user,1,1,1,1
 access_case,access_case,model_model_case,base.group_user,1,1,1,1
+
+access_case_model_c,salesforce_case_model_c,model_model_case_model_c,base.group_user,1,1,1,1
+access_case_request_c,salesforce_case_request_c,model_model_case_request_c,base.group_user,1,1,1,1
+access_case_request_sla_c,salesforce_case_request_sla_c,model_model_case_request_sla_c,base.group_user,1,1,1,1
+access_case_status_parameter_mdt,salesforce_case_status_parameter_mdt,model_model_case_status_parameter_mdt,base.group_user,1,1,1,1
+access_checklist_c,salesforce_checklist_c,model_model_checklist_c,base.group_user,1,1,1,1
+access_city_c,salesforce_city_c,model_model_city_c,base.group_user,1,1,1,1
+access_comercial_agent_c,salesforce_comercial_agent_c,model_model_comercial_agent_c,base.group_user,1,1,1,1
+access_comercial_structure_c,salesforce_comercial_structure_c,model_model_comercial_structure_c,base.group_user,1,1,1,1
+access_comments_c,salesforce_comments_c,model_model_comments_c,base.group_user,1,1,1,1
+access_company_parameter_c,salesforce_company_parameter_c,model_model_company_parameter_c,base.group_user,1,1,1,1
+
