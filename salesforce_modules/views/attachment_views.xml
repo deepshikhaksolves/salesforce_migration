@@ -40,7 +40,7 @@
 
         <!-- ir.attachment action window -->
         <record id="attachment_layout_action" model="ir.actions.act_window">
-            <field name="name">attachment Layout</field>
+            <field name="name">Attachment Layout</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">ir.attachment</field>
             <field name="view_mode">tree,form</field>

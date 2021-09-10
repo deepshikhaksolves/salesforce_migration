@@ -318,14 +318,14 @@
             <menuitem name="Contract Eligibility Layout" id="contract_eligibility_menu" parent='salesforce_menu_root' action="contract_eligibility_action" sequence='68'/>
 
         <!-- Campaign Member -->
-            <menuitem name="Campaign Member" id="campaign_member_menu" parent='salesforce_menu_root' action="campaign_member_action" />
+            <menuitem name="Campaign Member" id="campaign_member_menu" parent='salesforce_menu_root' action="campaign_member_action" sequence='69'/>
 
 
         <!-- Car Fleet C -->
-            <menuitem name="Car Fleet C" id="car_fleet_c_menu" parent='salesforce_menu_root' action="car_fleet_c_action" />
+            <menuitem name="Car Fleet C" id="car_fleet_c_menu" parent='salesforce_menu_root' action="car_fleet_c_action" sequence='70'/>
 
         <!-- Carrier Type C -->
-            <menuitem name="Carrier Type C" id="carrier_type_c_menu" parent='salesforce_menu_root' action="carrier_type_c_action" />
+            <menuitem name="Carrier Type C" id="carrier_type_c_menu" parent='salesforce_menu_root' action="carrier_type_c_action" sequence='71'/>
 
 
         <!-- Extra Menus -->
