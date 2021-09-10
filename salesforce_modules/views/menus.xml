@@ -147,6 +147,26 @@
          <!-- Market Reserve Active MDT-->
             <menuitem name="Market Reserve Active" id="market_reserve_active_mdt_menu" parent='salesforce_menu_root' action="market_reserve_active_mdt_action" sequence='33'/>
 
+        <!-- Subject Case Model C-->
+            <menuitem name="Subject Case Model C" id="subject_case_model_c_menu" parent='salesforce_menu_root' action="subject_case_model_c_action" />
+
+        <!-- Service C-->
+            <menuitem name="Service C" id="service_c_menu" parent='salesforce_menu_root' action="service_c_action" />
+
+        <!-- Sensus Management Document C-->
+            <menuitem name="Sensus Management Document C" id="sensus_management_document_c_menu" parent='salesforce_menu_root' action="sensus_management_document_c_action" />
+
+        <!-- Service Benefit C-->
+            <menuitem name="Service Benefit C" id="service_benefit_c_menu" parent='salesforce_menu_root' action="service_benefit_c_action" />
+
+        <!-- SLA Carrier Benefit Reason C-->
+            <menuitem name="SLA Carrier Benefit Reason C" id="sla_carrier_benefit_reason_c_menu" parent='salesforce_menu_root' action="sla_carrier_benefit_reason_c_action" />
+
+        <!-- Salesforce Dim Beneficiario X -->
+            <menuitem name="Salesforce Dim Beneficiario X" id="salesforce_dim_beneficiario_x_menu" parent='salesforce_menu_root' action="salesforce_dim_beneficiario_x_action" />
+
+
+
         <!--Menu for Opportunity-->
         <menuitem name="Opportunity" id="opportunity_parent_action_menu" parent='salesforce_menu_root' sequence='34'/>
             <menuitem name="Personal Accident Broker" id="opportunity_pab_menu" parent='opportunity_parent_action_menu' action="opportunity_pab_action" sequence="1" />
@@ -230,7 +250,7 @@
 
         <!-- Menu For Contract Team -->
             <menuitem name="Contract Team Layout" id="contract_team_menu" parent='salesforce_menu_root' action="contract_team_action" sequence='61'/>
-        
+
         <!-- Menu For Financial Group -->
             <menuitem name="Financial Group Layout" id="financial_group_menu" parent='salesforce_menu_root' action="financial_group_layout_action" sequence='62'/>
 
@@ -251,6 +271,17 @@
 
         <!-- Menu For Contract Eligibility -->
             <menuitem name="Contract Eligibility Layout" id="contract_eligibility_menu" parent='salesforce_menu_root' action="contract_eligibility_action" sequence='68'/>
+
+        <!-- Campaign Member -->
+            <menuitem name="Campaign Member" id="campaign_member_menu" parent='salesforce_menu_root' action="campaign_member_action" />
+
+
+        <!-- Car Fleet C -->
+            <menuitem name="Car Fleet C" id="car_fleet_c_menu" parent='salesforce_menu_root' action="car_fleet_c_action" />
+
+        <!-- Carrier Type C -->
+            <menuitem name="Carrier Type C" id="carrier_type_c_menu" parent='salesforce_menu_root' action="carrier_type_c_action" />
+
 
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
