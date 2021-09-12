@@ -10,12 +10,13 @@ class ModelBrand(models.Model):
 
 
 class ModelObject(models.Model):
-    _name = 'model__c'
+    _inherit = 'ir.model'
     _description = "Salesforce model object"
-    _rec_name = 'Name'
 
     # CreatedById  already in odoo
     # LastModifiedById already in odoo
     Brand__c    = fields.Many2one('model_brand', string='Mark')
-    Name        = fields.Text(string='Model')
+    # Name        already in odoo i.e. (name)
     OwnerId     = fields.Many2one('res.users',string='Owner')
+    fleet_ids   = fields.One2many('model_car_fleet_c', 'Model_id', string='Fleet IDS')
+    opportunity_ids = fields.One2many('crm.lead', 'model_id', string='Opportunity IDS')

@@ -16,7 +16,7 @@ class Car_Fleet_C(models.Model):
     #Brand_id = fields.Many2one('brand',string='Mark')
     # Field is related to brand object which is not define
 
-    Model_id =fields.Many2one('model__c',string='Model')
+    Model_id =fields.Many2one('ir.model',string='Model')
     OwnerId = fields.Many2one('res.users',string='Owner')
     Day = fields.Char(string='Board',size=8)
     RENAVAM = fields.Float(string='RENAVAM',digits=(11,0))
