@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Benefit Policy Layout Form -->
+        <record id="benefit_policy_layout_form" model="ir.ui.view">
+            <field name="name">Benefit Policy Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Policy Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Performing_Index"/>
+                                <field name="How_c"/>
+                            </group>
+                            <group>
+                                <field name="Brokerage_Transfer"/>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Life"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Average_invoice"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                            <page string="Contracted Plans"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Benefit Policy Layout tree -->
+        <record id="benefit_policy_layout_tree" model="ir.ui.view">
+            <field name="name">Benefit Policy Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="Contract_End"/>
+                    <field name="Contract_Type"/>
+                    <field name="Payment_Method"/>
+                    <field name="Performing_Index"/>
+                    <field name="How_c"/>
+                    <field name="Brokerage_Transfer"/>
+                    <field name="Use_Product"/>
+                    <field name="Offer"/>
+                    <field name="Life"/>
+                    <field name="Monthly_Bill"/>
+                    <field name="Average_invoice"/>
+                    <field name="Comission"/>
+                    <field name="Revenue"/>
+                    <field name="OwnerId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Benefit Policy Layout action window -->
+        <record id="benefit_policy_layout_action" model="ir.actions.act_window">
+            <field name="name">Benefit Policy Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_policy_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_policy_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Plolitica Auto Layout Form -->
+        <record id="policy_auto_form" model="ir.ui.view">
+            <field name="name">Plitica Auto Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Politica Auto Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                            </group>
+                            <group>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                            <page string="Contracted Plans"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Politica Auto Layout tree -->
+        <record id="politica_auto_layout_tree" model="ir.ui.view">
+            <field name="name">Plitica Auto Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="Benefits"/>
+                    <field name="carrier_2_id"/>
+                    <field name="Effective_time_at_current_carrier"/>
+                    <field name="Contract_End"/>
+                    <field name="Contract_Type"/>
+                    <field name="Payment_Method"/>
+                    <field name="Use_Product"/>
+                    <field name="Offer"/>
+                    <field name="Monthly_Bill"/>
+                    <field name="Comission"/>
+                    <field name="Revenue"/>
+                    <field name="OwnerId"/>
+                    <field name="How_c"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Politica Auto Layout action window -->
+        <record id="political_layout_action" model="ir.actions.act_window">
+            <field name="name">Plitica Auto Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('politica_auto_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('policy_auto_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Politica Checkup Vaccine Layout Form -->
+        <record id="politica_checkup_vaccine_form" model="ir.ui.view">
+            <field name="name">Plitica Checkup Vaccine Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Politica Checkup Vaccine Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Provider_id"/>
+                            </group>
+                            <group>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                            <page string="Contracted Plans"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Politica Checkup Vaccine Layout tree -->
+        <record id="politica_checkup_vaccine_layout_tree" model="ir.ui.view">
+            <field name="name">Plitica Checkup Vaccine Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Provider_id"/>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Politica Checkup Vaccine Layout action window -->
+        <record id="political_checkup_vaccine_action" model="ir.actions.act_window">
+            <field name="name">Plitica Checkup Vaccine Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('politica_checkup_vaccine_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('politica_checkup_vaccine_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Policy Consulting Layout Form -->
+        <record id="policy_consulting_form" model="ir.ui.view">
+            <field name="name">Policy Consulting Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Policy Consulting Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Type_of_Revenue"/>
+                                <field name="Number_of_Installments"/>
+                            </group>
+                            <group>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                            </group>
+                         </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                            <page string="Contracted Plans"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Policy Consulting Layout tree -->
+        <record id="policy_consulting_tree" model="ir.ui.view">
+            <field name="name">Policy Consulting Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Type_of_Revenue"/>
+                                <field name="Number_of_Installments"/>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Policy Consulting Layout action window -->
+        <record id="policy_consulting_action" model="ir.actions.act_window">
+            <field name="name">Policy Consulting Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('policy_consulting_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('policy_consulting_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Policy Fee Layout Form -->
+        <record id="policy_fee_form" model="ir.ui.view">
+            <field name="name">Policy Fee Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Policy Fee Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                            </group>
+                            <group>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                            </group>
+                         </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                            <page string="Contracted Plans"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Policy Fee Layout tree -->
+        <record id="policy_fee_tree" model="ir.ui.view">
+            <field name="name">Policy Fee Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Policy Fee Layout action window -->
+        <record id="policy_fee_action" model="ir.actions.act_window">
+            <field name="name">Policy Fee Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('policy_fee_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('policy_fee_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Policy Fleet Layout Form -->
+        <record id="policy_fleet_form" model="ir.ui.view">
+            <field name="name">Policy Fleet Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Policy Fleet Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Total_Capital"/>
+                            </group>
+                            <group>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                            </group>
+                         </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                            <page string="Contracted Plans"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Policy Fleet Layout tree -->
+        <record id="policy_fleet_tree" model="ir.ui.view">
+            <field name="name">Policy Fleet Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Total_Capital"/>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Policy Fleet Layout action window -->
+        <record id="policy_fleet_action" model="ir.actions.act_window">
+            <field name="name">Policy Fleet Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('policy_fleet_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('policy_fleet_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Policy Medication Layout Form -->
+        <record id="policy_medication_form" model="ir.ui.view">
+            <field name="name">Policy Medication Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Policy Medication Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Moderator_Variable"/>
+                                <field name="Moderator_Variable_Value"/>
+                                <field name="Contributory"/>
+                                <field name="Contributory_Value"/>
+                                <field name="Purchase_Limit"/>
+                                <field name="Coverage_Limit_Value"/>
+                                <field name="Purchase_Limit_Value"/>
+                            </group>
+                            <group>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Performing_Index"/>
+                                <field name="Life"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Average_invoice"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                            </group>
+                         </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                            <page string="Contracted Plans"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Policy Medication Layout tree -->
+        <record id="policy_medication_tree" model="ir.ui.view">
+            <field name="name">Policy Medication Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Moderator_Variable"/>
+                                <field name="Moderator_Variable_Value"/>
+                                <field name="Contributory"/>
+                                <field name="Contributory_Value"/>
+                                <field name="Purchase_Limit"/>
+                                <field name="Coverage_Limit_Value"/>
+                                <field name="Purchase_Limit_Value"/>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Performing_Index"/>
+                                <field name="Life"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Average_invoice"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Policy Medication Layout action window -->
+        <record id="policy_medication_action" model="ir.actions.act_window">
+            <field name="name">Policy Medication Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('policy_medication_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('policy_medication_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Policy Occupational Health Layout Form -->
+        <record id="policy_occupational_health_form" model="ir.ui.view">
+            <field name="name">Policy Occupational Health Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Policy Occupational Health Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Places"/>
+                            </group>
+                            <group>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                            </group>
+                         </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                            <page string="Contracted Plans"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Policy Occupational Health Layout tree -->
+        <record id="policy_occupational_health_tree" model="ir.ui.view">
+            <field name="name">Policy Occupational Health Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Places"/>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Policy Occupational Health Layout action window -->
+        <record id="policy_occupational_health_action" model="ir.actions.act_window">
+            <field name="name">Policy Occupational Health Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('policy_occupational_health_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('policy_occupational_health_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Policy PAT Layout Form -->
+        <record id="policy_pat_form" model="ir.ui.view">
+            <field name="name">Policy PAT Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Policy PAT Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Contributory"/>
+                                <field name="Contributory_Value"/>
+                                <field name="OwnerId"/>
+                            </group>
+                            <group>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Availability_Fee"/>
+                                <field name="Monthly_Average_Value"/>
+                                <field name="Life"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="How_c"/>
+                            </group>
+                         </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                            <page string="Contracted Plans"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Policy PAT Layout tree -->
+        <record id="policy_pat_tree" model="ir.ui.view">
+            <field name="name">Policy PAT Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree>
+                            <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Contributory"/>
+                                <field name="Contributory_Value"/>
+                                <field name="OwnerId"/>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Availability_Fee"/>
+                                <field name="Monthly_Average_Value"/>
+                                <field name="Life"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="How_c"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Policy PAT Layout action window -->
+        <record id="policy_pat_action" model="ir.actions.act_window">
+            <field name="name">Policy PAT Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('policy_pat_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('policy_pat_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Policy Pension Layout Form -->
+        <record id="policy_pension_form" model="ir.ui.view">
+            <field name="name">Policy Pension Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Policy Pension Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Income_Type"/>
+                                <field name="Contributory"/>
+                                <field name="Contributory_Value"/>
+                                <field name="Tax_Type"/>
+                                <field name="Grace_Period"/>
+                                <field name="Charge_Rate"/>
+                                <field name="Type_of_Pension"/>
+                                <field name="Pension_Mode"/>
+                            </group>
+                            <group>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Administration_Tax"/>
+                                <field name="Output_Rate"/>
+                                <field name="Life"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Average_invoice"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                            </group>
+                         </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                            <page string="Contracted Plans"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Policy Pension Layout tree -->
+        <record id="policy_pension_tree" model="ir.ui.view">
+            <field name="name">Policy Pension Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree>
+                            <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Income_Type"/>
+                                <field name="Contributory"/>
+                                <field name="Contributory_Value"/>
+                                <field name="Tax_Type"/>
+                                <field name="Grace_Period"/>
+                                <field name="Charge_Rate"/>
+                                <field name="Type_of_Pension"/>
+                                <field name="Pension_Mode"/>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Administration_Tax"/>
+                                <field name="Output_Rate"/>
+                                <field name="Life"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Average_invoice"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Policy Pension Layout action window -->
+        <record id="policy_pension_action" model="ir.actions.act_window">
+            <field name="name">Policy Pension Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('policy_pension_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('policy_pension_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Policy Health Dental Medical Layout Form -->
+        <record id="policy_health_dental_medical_form" model="ir.ui.view">
+            <field name="name">Policy Health Dental Medical Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Policy Health Dental Medical Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Moderator_Variable"/>
+                                <field name="Moderator_Variable_Value"/>
+                                <field name="Contributory"/>
+                                <field name="Contributory_Value"/>
+                                <field name="has_Checkup"/>
+                                <field name="How_c"/>
+                            </group>
+                            <group>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Performing_Index"/>
+                                <field name="Life"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Average_invoice"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                            </group>
+                         </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                            <page string="Contracted Plans"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Policy Health Dental Medical Layout tree -->
+        <record id="policy_health_dental_medical_tree" model="ir.ui.view">
+            <field name="name">Policy Health Dental Medical Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree>
+                            <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Moderator_Variable"/>
+                                <field name="Moderator_Variable_Value"/>
+                                <field name="Contributory"/>
+                                <field name="Contributory_Value"/>
+                                <field name="has_Checkup"/>
+                                <field name="How_c"/>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Performing_Index"/>
+                                <field name="Life"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Average_invoice"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Policy Health Dental Medical Layout action window -->
+        <record id="policy_health_dental_medical_action" model="ir.actions.act_window">
+            <field name="name">Policy Health Dental Medical Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('policy_health_dental_medical_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('policy_health_dental_medical_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Policy Transport Medical Layout Form -->
+        <record id="policy_transport_form" model="ir.ui.view">
+            <field name="name">Policy Transport Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Policy Transport Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Contributory"/>
+                                <field name="Contributory_Value"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                            </group>
+                            <group>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Availability_Fee"/>
+                                <field name="Monthly_Average_Value"/>
+                                <field name="Life"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                            </group>
+                         </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                            <page string="Contracted Plans"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Policy Transport Layout tree -->
+        <record id="policy_transport_tree" model="ir.ui.view">
+            <field name="name">Policy Transport Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree>
+                            <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Contributory"/>
+                                <field name="Contributory_Value"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Availability_Fee"/>
+                                <field name="Monthly_Average_Value"/>
+                                <field name="Life"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Policy Transport Layout action window -->
+        <record id="policy_transport_action" model="ir.actions.act_window">
+            <field name="name">Policy Transport Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('policy_transport_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('policy_transport_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Policy Travel Layout Form -->
+        <record id="policy_travel_form" model="ir.ui.view">
+            <field name="name">Policy Travel Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Policy Travel Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Destination"/>
+                                <field name="Payment_Method"/>
+                            </group>
+                            <group>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                            </group>
+                         </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                            <page string="Contracted Plans"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Policy Travel Layout tree -->
+        <record id="policy_travel_tree" model="ir.ui.view">
+            <field name="name">Policy Travel Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree>
+                            <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Destination"/>
+                                <field name="Payment_Method"/>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Policy Travel Layout action window -->
+        <record id="policy_travel_action" model="ir.actions.act_window">
+            <field name="name">Policy Travel Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('policy_travel_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('policy_travel_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Policy Life Layout Form -->
+        <record id="policy_life_form" model="ir.ui.view">
+            <field name="name">Policy Life Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Policy Life Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Contributory"/>
+                                <field name="Contributory_Value"/>
+                                <field name="Capital"/>
+                                <field name="Min_Capital_Limit"/>
+                                <field name="Max_Capital_Limit"/>
+                                <field name="Sons_Capital_Limit"/>
+                                <field name="Total_Capital"/>
+                            </group>
+                            <group>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Life"/>
+                                <field name="Actual_Tax"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Funeral_Assistance"/>
+                                <field name="Funeral_Assistance_Value"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                            </group>
+                         </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                            <page string="Contracted Plans"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Policy Life Layout tree -->
+        <record id="policy_life_tree" model="ir.ui.view">
+            <field name="name">Policy Life Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree>
+                           <field name="Name"/>
+                                <field name="Benefits"/>
+                                <field name="carrier_2_id"/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Contract_End"/>
+                                <field name="Contract_Type"/>
+                                <field name="Payment_Method"/>
+                                <field name="Contributory"/>
+                                <field name="Contributory_Value"/>
+                                <field name="Capital"/>
+                                <field name="Min_Capital_Limit"/>
+                                <field name="Max_Capital_Limit"/>
+                                <field name="Sons_Capital_Limit"/>
+                                <field name="Total_Capital"/>
+                                <field name="Use_Product"/>
+                                <field name="Offer"/>
+                                <field name="Life"/>
+                                <field name="Actual_Tax"/>
+                                <field name="Monthly_Bill"/>
+                                <field name="Funeral_Assistance"/>
+                                <field name="Funeral_Assistance_Value"/>
+                                <field name="Comission"/>
+                                <field name="Revenue"/>
+                                <field name="OwnerId"/>
+                                <field name="How_c"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Policy Lofe Layout action window -->
+        <record id="policy_life_action" model="ir.actions.act_window">
+            <field name="name">Policy Life Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('policy_life_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('policy_life_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

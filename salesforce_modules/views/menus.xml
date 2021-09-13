@@ -369,5 +369,59 @@
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
 
-	</data>
+        <!--Revenue Provisioning Menu-->
+            <menuitem name="Revenue Provisioning" id="revenue_provisioning_menu" parent='salesforce_menu_root' action="revenue_provisioning_layout_action"/>
+        <!--Revenue Compensation Menu-->
+            <menuitem name="Revenue Compensation" id="revenue_compensation_menu" parent='salesforce_menu_root' action="revenue_compensation_layout_action"/>
+
+        <!--Accommodation Menu-->
+            <menuitem name="Accommodation" id="accommodation_menu" parent='salesforce_menu_root' action="accommodation_layout_action"/>
+        <!--Additional Parameter Menu-->
+            <menuitem name="Additional Parameter" id="additional_parameter_menu" parent='salesforce_menu_root' action="additional_parameter_layout_action"/>
+        <!--Address Menu-->
+            <menuitem name="Address" id="address_menu" parent='salesforce_menu_root' action="address_layout_action"/>
+        <!--Application Parameter Menu-->
+            <menuitem name="Application Parameter" id="application_parameter_menu" parent='salesforce_menu_root' action="application_parameter_layout_action"/>
+
+        <!--Bank Account Menu-->
+            <menuitem name="Bank Account" id="bank_account_menu" parent='salesforce_menu_root' action="bank_account_layout_action"/>
+	    <!--Beneficiary Menu-->
+            <menuitem name="Beneficiary" id="beneficiary_menu" parent='salesforce_menu_root' action="beneficiary_layout_action"/>
+        <!--Beneficiary Card Menu-->
+            <menuitem name="Beneficiary Card" id="beneficiary_card_menu" parent='salesforce_menu_root' action="beneficiary_card_layout_action"/>
+        <!--Benefit Carrier Menu-->
+            <menuitem name="Benefit Carrier" id="benefit_carrier_menu" parent='salesforce_menu_root' action="benefit_carrier_layout_action"/>
+        <!--Benefit Carrier Revenue Menu-->
+            <menuitem name="Benefit Carrier Revenue" id="benefit_carrier_revenue_menu" parent='salesforce_menu_root' action="benefit_carrier_revenue_layout_action"/>
+        <!--Brand Menu-->
+            <menuitem name="Brand" id="brand_menu" parent='salesforce_menu_root' action="brand_layout_action"/>
+        <!--Benefit Policy Layout Menu-->
+            <menuitem name="Benefit Policy" id="benefit_menu" parent='salesforce_menu_root' action="benefit_policy_layout_action"/>
+        <!--Politica Auto Layout Menu-->
+            <menuitem name="Politica Auto" id="politica_auto_menu" parent='salesforce_menu_root' action="political_layout_action"/>
+         <!--Politica Checkup Vaccine Layout Menu-->
+            <menuitem name="Politica Checkup Vaccine" id="politica_checkup_vaccine_menu" parent='salesforce_menu_root' action="political_checkup_vaccine_action"/>
+        <!--Policy Consulting Layout Menu-->
+            <menuitem name="Policy Consulting" id="policy_consulting_menu" parent='salesforce_menu_root' action="policy_consulting_action"/>
+        <!--Policy Fee Layout Menu-->
+            <menuitem name="Policy Fee" id="policy_fee_menu" parent='salesforce_menu_root' action="policy_fee_action"/>
+        <!--Policy Fleet Layout Menu-->
+            <menuitem name="Policy Fleet" id="policy_fleet_menu" parent='salesforce_menu_root' action="policy_fleet_action"/>
+        <!--Policy Medication Layout Menu-->
+            <menuitem name="Policy Medication" id="policy_medication_menu" parent='salesforce_menu_root' action="policy_medication_action"/>
+        <!--Policy Occupational Health Layout Menu-->
+            <menuitem name="Policy Occupational Health" id="policy_occupational_health_menu" parent='salesforce_menu_root' action="policy_occupational_health_action"/>
+        <!--Policy PAT Layout Menu-->
+            <menuitem name="Policy PAT" id="policy_pat_menu" parent='salesforce_menu_root' action="policy_pat_action"/>
+        <!--Policy Pension Layout Menu-->
+            <menuitem name="Policy Pension" id="policy_pension_menu" parent='salesforce_menu_root' action="policy_pension_action"/>
+        <!--Policy Health Dental Medical Layout Menu-->
+            <menuitem name="Policy Health Dental Medical" id="policy_health_dental_medical_menu" parent='salesforce_menu_root' action="policy_health_dental_medical_action"/>
+        <!--Policy Transport Layout Menu-->
+            <menuitem name="Policy Transport" id="policy_transport_menu" parent='salesforce_menu_root' action="policy_transport_action"/>
+        <!--Policy Travel Layout Menu-->
+            <menuitem name="Policy Travel" id="policy_travel_menu" parent='salesforce_menu_root' action="policy_travel_action"/>
+        <!--Policy Life Layout Menu-->
+            <menuitem name="Policy Life" id="policy_life_menu" parent='salesforce_menu_root' action="policy_life_action"/>
+    </data>
 </odoo>

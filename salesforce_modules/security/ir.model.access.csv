@@ -97,6 +97,13 @@ access_car_fleet_c,access_car_fleet_c,model_model_car_fleet_c,base.group_user,1,
 access_carrier_type_c,access_carrier_type_c,model_model_carrier_type_c,base.group_user,1,1,1,1
 access_case,access_case,model_model_case,base.group_user,1,1,1,1
 
+access_model_beneficiary,access_model_beneficiary,model_model_beneficiary,base.group_user,1,1,1,1
+access_model_beneficiary_card,access_model_beneficiary_card,model_model_beneficiary_card,base.group_user,1,1,1,1
+access_model_beneficiary_carrier,access_model_beneficiary_carrier,model_model_beneficiary_carrier,base.group_user,1,1,1,1
+access_model_beneficiary_carrier_revenue,access_model_beneficiary_carrier_revenue,model_model_beneficiary_carrier_revenue,base.group_user,1,1,1,1
+access_model_brand_c,access_model_brand_c,model_model_brand_c,base.group_user,1,1,1,1
+access_model_benfit_politic,access_model_benfit_politic,model_model_benfit_politic,base.group_user,1,1,1,1
+
 access_event_control,access_event_control,model_event_control,base.group_user,1,1,1,1
 access_financial_agreement,access_financial_agreement,model_financial_agreement,base.group_user,1,1,1,1
 access_expence_provisioning,access_expence_provisioning,model_expence_provisioning,base.group_user,1,1,1,1
