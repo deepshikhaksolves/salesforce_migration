@@ -46,6 +46,8 @@ from . import campaignmember
 from . import car_fleet_c
 from . import carrier_type_c
 from .import case
+from . import revenue_compensation, revenue_provisioning, accommodation, additional_parameter__c, address
+from . import application_parameter, bank_account, beneficiary, beneficiary_card, benefit_carrier__c, benefit_carrier_revenue, brand, benefit_politic
 
 from . import event_control, financial_agreement, expense_provisioning, expence_compensation, contract_financial_data, financial_group_doctor, financial_group_master_user, global_parameter
 from . import case_model_c
