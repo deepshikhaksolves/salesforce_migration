@@ -360,7 +360,7 @@
 
         <!-- Financial Agreement Menu-->
             <menuitem name="Financial Agreement Layout" id="financial_agreement_menu" parent='salesforce_menu_root' action="financial_agreement_action" sequence='80'/>
-        
+
         <!-- Expense provisioning Menu-->
             <menuitem name="Expense Provisioning Layout" id="expence_provisioning_menu" parent='salesforce_menu_root' action="expence_provisioning_action" sequence='81'/>
 
@@ -369,12 +369,52 @@
 
         <!-- Financial Contract Menu-->
             <menuitem name="Financial Contract Layout" id="financial_contract_menu" parent='salesforce_menu_root' action="financial_contract_action" sequence='83'/>
-        
+
         <!-- Financial Doctor Menu-->
             <menuitem name="Financial Doctor Layout" id="financial_doctor_menu" parent='salesforce_menu_root' action="financial_doctor_action" sequence='84'/>
 
         <!-- Financial Group Master User Menu-->
             <menuitem name="Financial Group Master User Layout" id="financial_group_master_user_menu" parent='salesforce_menu_root' action="financial_group_master_user_action" sequence='85'/>
+        <!--Menu for Case-->
+        <menuitem name="Case" id="case_parent_action_menu" parent='salesforce_menu_root' />
+            <menuitem name="Case - Risk Management" id="case_risk_management_menu" parent='case_parent_action_menu' action="case_risk_management_action" />
+            <menuitem name="Case - Layout" id="case_layout_menu" parent='case_parent_action_menu' action="case_layout_action" />
+            <menuitem name="Help Desk Layout" id="help_desk_layout_menu" parent='case_parent_action_menu' action="help_desk_layout_action" />
+            <menuitem name="Help Desk Layout Agent" id="help_desk_layout_agent_menu" parent='case_parent_action_menu' action="help_desk_layout_agent_action" />
+            <menuitem name="New Contract Process Layout" id="new_contract_process_layout_menu" parent='case_parent_action_menu' action="new_contract_process_layout_action" />
+            <menuitem name="Readjustment Layout" id="readjustment_layout_menu" parent='case_parent_action_menu' action="readjustment_layout_action" />
+
+        <!-- Case Model C -->
+            <menuitem name="Case Model C" id="case_model_c_menu" parent='salesforce_menu_root' action="case_model_c_action" />
+
+        <!-- Case Request C -->
+            <menuitem name="Case Request C" id="case_request_c_menu" parent='salesforce_menu_root' action="case_request_c_action" />
+
+        <!-- Case Request SLA C -->
+            <menuitem name="Case Request SLA C" id="case_request_sla_c_menu" parent='salesforce_menu_root' action="case_request_sla_c_action" />
+
+        <!-- Case Status Parameter MDT -->
+            <menuitem name="Case Status Parameter MDT" id="case_status_parameter_mdt_menu" parent='salesforce_menu_root' action="case_status_parameter_mdt_action" />
+
+        <!-- Checklist C -->
+            <menuitem name="Checklist C " id="checklist_c_menu" parent='salesforce_menu_root' action="checklist_c_action" />
+
+        <!-- City C -->
+            <menuitem name="City C " id="city_c_menu" parent='salesforce_menu_root' action="city_c_action" />
+
+        <!-- Comercial Agent -->
+            <menuitem name="Commercial Agent " id="comercial_agent_c_menu" parent='salesforce_menu_root' action="comercial_agent_c_action" />
+
+        <!-- Comercial Structure C -->
+            <menuitem name="Commercial Structure" id="comercial_structure_c_menu" parent='salesforce_menu_root' action="comercial_structure_c_action" />
+
+         <!-- Comments C -->
+            <menuitem name="Comments" id="comments_c_menu" parent='salesforce_menu_root' action="comments_c_action" />
+
+        <!-- Company Parameter C -->
+            <menuitem name="Company Parameter" id="company_parameter_c_menu" parent='salesforce_menu_root' action="company_parameter_c_action" />
+
+
 
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>

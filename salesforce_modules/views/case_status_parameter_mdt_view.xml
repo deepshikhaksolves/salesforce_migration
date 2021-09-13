@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+         <!--Case Status Parameter MDT Layout form view -->
+        <record id="case_status_parameter_mdt_form" model="ir.ui.view">
+            <field name="name">Case Status Parameter MDT Layout</field>
+            <field name="model">model_case_status_parameter_mdt</field>
+            <field name="arch" type="xml">
+                <form string="Case Status Parameter MDT Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="MasterLabel"/>
+                                <field name="DeveloperName"/>
+                                <field name="IsProtected"/>
+                                <field name="NamespacePrefix"/>
+                            </group>
+                            <group>
+                                <field name="status"/>
+                                <field name="process"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Case Status Parameter MDT Layout tree view -->
+        <record id="case_status_parameter_mdt_tree" model="ir.ui.view">
+            <field name="name">Case Status Parameter MDT Tree</field>
+            <field name="model">model_case_status_parameter_mdt</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="MasterLabel"/>
+                    <field name="DeveloperName"/>
+                    <field name="IsProtected"/>
+                    <field name="NamespacePrefix"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--  Case Status Parameter MDT Layout action window -->
+        <record id="case_status_parameter_mdt_action" model="ir.actions.act_window">
+            <field name="name">Case Status Parameter MDT Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_case_status_parameter_mdt</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('case_status_parameter_mdt_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('case_status_parameter_mdt_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -122,6 +122,17 @@
         'views/financial_contract_views.xml',
         'views/financial_doctor_views.xml',
         'views/financial_group_master_user_views.xml',
+        'views/case_view.xml',
+        'views/case_model_c_view.xml',
+        'views/case_request_c_view.xml',
+        'views/case_request_sla_c_view.xml',
+        'views/case_status_parameter_mdt_view.xml',
+        'views/checklist_c_view.xml',
+        'views/city_c_view.xml',
+        'views/comercial_agent_c_view.xml',
+        'views/comercial_structure_c_view.xml',
+        'views/comments_c_view.xml',
+        'views/company_parameter_c_view.xml',
         'views/menus.xml',
 
 

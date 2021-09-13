@@ -47,3 +47,13 @@ from . import carrier_type_c
 from .import case
 
 from . import event_control, financial_agreement, expense_provisioning, expence_compensation, contract_financial_data, financial_group_doctor, financial_group_master_user, global_parameter
+from . import case_model_c
+from . import  case_request_c
+from . import case_request_sla_c
+from . import case_status_parameter_mdt
+from . import checklist_c
+from . import city_c
+from . import comercial_agent_c
+from . import comercial_structure_c
+from . import comments_c
+from . import company_parameter_c
