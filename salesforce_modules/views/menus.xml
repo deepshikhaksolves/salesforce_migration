@@ -88,7 +88,7 @@
             <menuitem name="Quote Line Item" id="quote_line_item_menu" parent='salesforce_menu_root' action="quote_line_item_layout_action" sequence='14'/>
 
         <!-- Menu for Quotation Item Price -->
-            <menuitem name="Quotation Item Price" id="quotation_item_price_menu" parent='salesforce_menu_root' action="quote_line_item_layout_action" sequence='15'/>
+            <menuitem name="Quotation Item Price" id="quotation_item_price_menu" parent='salesforce_menu_root' action="quotation_item_price_action" sequence='15'/>
 
         <!-- Menu for Product -->
         <menuitem name="Product" id="product_parent_action_menu" parent='salesforce_menu_root' sequence='16'/>
