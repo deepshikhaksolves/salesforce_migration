@@ -19,4 +19,4 @@ class PriceList(models.Model):
     carrier_c              = fields.Many2one('account.account', string='Operator')
     OwnerId                 = fields.Many2one('res.users',string='Owner')
     percentage_adjustment_c= fields.Float('Percentage readjustment', digits=(2, 2))
-    # origin_table_c         = fields.Many2one('price_schedule', string='source table')
+    origin_table_c         = fields.Many2one('model_price_list', string='source table')

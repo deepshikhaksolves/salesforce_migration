@@ -88,7 +88,7 @@
             <menuitem name="Quote Line Item" id="quote_line_item_menu" parent='salesforce_menu_root' action="quote_line_item_layout_action" sequence='14'/>
 
         <!-- Menu for Quotation Item Price -->
-            <menuitem name="Quotation Item Price" id="quotation_item_price_menu" parent='salesforce_menu_root' action="quote_line_item_layout_action" sequence='15'/>
+            <menuitem name="Quotation Item Price" id="quotation_item_price_menu" parent='salesforce_menu_root' action="quotation_item_price_action" sequence='15'/>
 
         <!-- Menu for Product -->
         <menuitem name="Product" id="product_parent_action_menu" parent='salesforce_menu_root' sequence='16'/>
@@ -147,6 +147,26 @@
          <!-- Market Reserve Active MDT-->
             <menuitem name="Market Reserve Active" id="market_reserve_active_mdt_menu" parent='salesforce_menu_root' action="market_reserve_active_mdt_action" sequence='33'/>
 
+        <!-- Subject Case Model C-->
+            <menuitem name="Subject Case Model C" id="subject_case_model_c_menu" parent='salesforce_menu_root' action="subject_case_model_c_action" />
+
+        <!-- Service C-->
+            <menuitem name="Service C" id="service_c_menu" parent='salesforce_menu_root' action="service_c_action" />
+
+        <!-- Sensus Management Document C-->
+            <menuitem name="Sensus Management Document C" id="sensus_management_document_c_menu" parent='salesforce_menu_root' action="sensus_management_document_c_action" />
+
+        <!-- Service Benefit C-->
+            <menuitem name="Service Benefit C" id="service_benefit_c_menu" parent='salesforce_menu_root' action="service_benefit_c_action" />
+
+        <!-- SLA Carrier Benefit Reason C-->
+            <menuitem name="SLA Carrier Benefit Reason C" id="sla_carrier_benefit_reason_c_menu" parent='salesforce_menu_root' action="sla_carrier_benefit_reason_c_action" />
+
+        <!-- Salesforce Dim Beneficiario X -->
+            <menuitem name="Salesforce Dim Beneficiario X" id="salesforce_dim_beneficiario_x_menu" parent='salesforce_menu_root' action="salesforce_dim_beneficiario_x_action" />
+
+
+
         <!--Menu for Opportunity-->
         <menuitem name="Opportunity" id="opportunity_parent_action_menu" parent='salesforce_menu_root' sequence='34'/>
             <menuitem name="Personal Accident Broker" id="opportunity_pab_menu" parent='opportunity_parent_action_menu' action="opportunity_pab_action" sequence="1" />
@@ -157,6 +177,51 @@
             <menuitem name="Broker Fleet" id="opportunity_broker_frota_menu" parent='opportunity_parent_action_menu' action="opportunity_broker_frota_action" sequence="6" />
             <menuitem name="Broker Medicamento" id="opportunity_bm_menu" parent='opportunity_parent_action_menu' action="opportunity_bm_action" sequence="7" />
             <menuitem name="Broker Occupational Health" id="opportunity_boh_menu" parent='opportunity_parent_action_menu' action="opportunity_boh_action" sequence="8" />
+            <menuitem name="Broker PAT" id="opportunity_bp_menu" parent='opportunity_parent_action_menu' action="opportunity_bp_action" sequence="9" />
+            <menuitem name="Broker Previdência" id="opportunity_previdência_menu" parent='opportunity_parent_action_menu' action="opportunity_previdência_action" sequence="10" />
+            <menuitem name="Broker Saúde e Odonto" id="opportunity_so_menu" parent='opportunity_parent_action_menu' action="opportunity_so_action" sequence="11" />
+            <menuitem name="Broker Saúde e Odonto PF" id="opportunity_spf_menu" parent='opportunity_parent_action_menu' action="opportunity_spf_action" sequence="12" />
+            <menuitem name="Broker Transporte" id="opportunity_bt_menu" parent='opportunity_parent_action_menu' action="opportunity_bt_action" sequence="13" />
+            <menuitem name="Broker Viagem" id="opportunity_bv_menu" parent='opportunity_parent_action_menu' action="opportunity_bv_action" sequence="14" />
+            <menuitem name="Broker Vida" id="opportunity_b_vida_menu" parent='opportunity_parent_action_menu' action="opportunity_b_vida_action" sequence="15" />
+            <menuitem name="Opportunity Layout" id="opportunity_layout_menu" parent='opportunity_parent_action_menu' action="opportunity_layout_action" sequence="16" />
+
+        <!--Menu for Opportunity Contact Role-->
+        <menuitem name="Opportunity Contact Role" id="opportunity_cr_parent_action_menu" parent='salesforce_menu_root' sequence='61'/>
+            <menuitem name="Opportunity CR Layout" id="opportunity_cr_menu" parent='opportunity_cr_parent_action_menu' action="opportunity_cr_action" sequence="1" />
+
+        <!--Menu for Opportunity LineItem-->
+        <menuitem name="Opportunity LineItem" id="opportunity_lineitem_parent_action_menu" parent='salesforce_menu_root' sequence='62'/>
+            <menuitem name="Opportunity LineItem Layout" id="opportunity_lineitem_menu" parent='opportunity_lineitem_parent_action_menu' action="opportunity_lineitem_action" sequence="1" />
+
+        <!--Menu for Opportunity Product-->
+        <menuitem name="Opportunity Product" id="opportunity_product_parent_action_menu" parent='salesforce_menu_root' sequence='63'/>
+            <menuitem name="Opportunity Product Layout" id="opportunity_product_menu" parent='opportunity_product_parent_action_menu' action="opportunity_product_c_action" sequence="1" />
+
+        <!--Menu for Opportunity Stage Parameter-->
+        <menuitem name="Opportunity Stage Parameter" id="opportunity_stage_parameter_parent_action_menu" parent='salesforce_menu_root' sequence='64'/>
+            <menuitem name="Opportunity Stage Parameter Layout" id="opportunity_stage_parameter_menu" parent='opportunity_stage_parameter_parent_action_menu' action="opportunity_stage_parameter_action" sequence="1" />
+
+        <!--Menu for Opportunity Stage Path-->
+        <menuitem name="Opportunity Stage Path" id="opportunity_stage_path_parent_action_menu" parent='salesforce_menu_root' sequence='65'/>
+            <menuitem name="Opportunity Stage Path Layout" id="opportunity_stage_path_menu" parent='opportunity_stage_path_parent_action_menu' action="opportunity_stage_path_action" sequence="1" />
+
+        <!--Menu for Opportunity Team Member-->
+        <menuitem name="Opportunity Team Member" id="opportunity_team_member_parent_action_menu" parent='salesforce_menu_root' sequence='66'/>
+            <menuitem name="Opportunity Team Member Layout" id="opportunity_team_member_menu" parent='opportunity_team_member_parent_action_menu' action="opportunity_team_member_action" sequence="1" />
+
+        <!--Menu for Periodicity-->
+        <menuitem name="Periodicity Layout" id="periodicity_parent_action_menu" parent='salesforce_menu_root' sequence='67'/>
+            <menuitem name="Periodicity Layout" id="periodicity_menu" parent='periodicity_parent_action_menu' action="periodicity_action" sequence="1" />
+
+        <!--Menu for Contract Partner-->
+        <menuitem name="Contract Partner Layout" id="contract_partner_parent_action_menu" parent='salesforce_menu_root' sequence='68'/>
+            <menuitem name="Contract Partner Layout" id="contract_partner_menu" parent='contract_partner_parent_action_menu' action="contract_partner_action" sequence="1" />
+
+        <!--Menu for Plan Coverage-->
+        <menuitem name="Plan Coverage Layout" id="plan_coverage_parent_action_menu" parent='salesforce_menu_root' sequence='69'/>
+            <menuitem name="Plan Coverage Layout" id="plan_coverage_menu" parent='plan_coverage_parent_action_menu' action="plan_coverage_action" sequence="1" />
+
 
         <!-- Menu For Region City -->
             <menuitem name="City of the Region" id="city_of_region_menu" parent='salesforce_menu_root' action="region_city_action" sequence='35'/>
@@ -176,13 +241,133 @@
         <!-- Menu For Channel Segmentation-->
             <menuitem name="Channel Segmentation" id="channel_segmentation_menu" parent='salesforce_menu_root' action="channel_segmentation_layout_action" sequence='40'/>
 
+
+        <!--Publico  -->
+            <menuitem name="Publico" id="publico_menu" parent='salesforce_menu_root' action="publico_layout_action" sequence='41'/>
+        <!--Quote Broker Benchmarking  -->
+            <menuitem name="Broker Benchmarking" id="broker_benchmarking_menu" parent='salesforce_menu_root' action="quote_broker_benchmarking_layout_action" sequence='42'/>
+        <!--Quote Broker Competition  -->
+            <menuitem name="Broker Competition" id="broker_competition_menu" parent='salesforce_menu_root' action="quote_broker_competition_layout_action" sequence='43'/>
+        <!--Quote Broker Quote  -->
+            <menuitem name="Broker Quote" id="broker_quote_menu" parent='salesforce_menu_root' action="quote_broker_quote_layout_action" sequence='44'/>
+        <!--Quote Broker Binding  -->
+            <menuitem name="Broker Binding" id="broker_binding_menu" parent='salesforce_menu_root' action="quote_broker_binding_layout_action" sequence='45'/>
+        <!--Quote Project Binding  -->
+            <menuitem name="Broker Project" id="broker_project_menu" parent='salesforce_menu_root' action="quote_broker_project_layout_action" sequence='46'/>
+        <!--Quote Technical Praposal Binding  -->
+            <menuitem name="Broker Technical Praposal" id="broker_praposal_menu" parent='salesforce_menu_root' action="quote_broker_technical_praposal_layout_action" sequence='47'/>
+        <!--Quote Rede Quote  -->
+            <menuitem name="Broker Rede" id="broker_rede_menu" parent='salesforce_menu_root' action="quote_broker_rede_layout_action" sequence='48'/>
+        <!--Quote  -->
+            <menuitem name="Quote Layout" id="quote_layout_menu" parent='salesforce_menu_root' action="quote_layout_action" sequence='49'/>
+        <!--Quote Product  -->
+            <menuitem name="Quote Products Layout" id="quote_product_layout_menu" parent='salesforce_menu_root' action="quote_product_layout_action" sequence='50'/>
+        <!--Reason For Beneficial  -->
+            <menuitem name="Reason For Beneficial" id="reason_for_beneficial_layout_menu" parent='salesforce_menu_root' action="beneficial_inclusion_reason_layout_action" sequence='51'/>
+        <!--Refund  -->
+            <menuitem name="Refund" id="refund_menu" parent='salesforce_menu_root' action="refund_layout_action" sequence='52'/>
+        <!--Price X Region  -->
+            <menuitem name="Price X Region" id="price_x_region_menu" parent='salesforce_menu_root' action="price_x_region_layout_action" sequence='53'/>
+
+        <!-- Subject Case Model C-->
+            <menuitem name="Subject Case Model C" id="subject_case_model_c_menu" parent='salesforce_menu_root' action="subject_case_model_c_action" sequence='54'/>
+
+        <!-- Service C-->
+            <menuitem name="Service C" id="service_c_menu" parent='salesforce_menu_root' action="service_c_action" sequence='55'/>
+
+        <!-- Sensus Management Document C-->
+            <menuitem name="Sensus Management Document C" id="sensus_management_document_c_menu" parent='salesforce_menu_root' action="sensus_management_document_c_action" sequence='56'/>
+
+        <!-- Service Benefit C-->
+            <menuitem name="Service Benefit C" id="service_benefit_c_menu" parent='salesforce_menu_root' action="service_benefit_c_action" sequence='57'/>
+
+        <!-- SLA Carrier Benefit Reason C-->
+            <menuitem name="SLA Carrier Benefit Reason C" id="sla_carrier_benefit_reason_c_menu" parent='salesforce_menu_root' action="sla_carrier_benefit_reason_c_action" sequence='58'/>
+
+        <!-- Salesforce Dim Beneficiario X -->
+            <menuitem name="Salesforce Dim Beneficiario X" id="salesforce_dim_beneficiario_x_menu" parent='salesforce_menu_root' action="salesforce_dim_beneficiario_x_action" sequence='59'/>
+
+
+        <!-- portal Access -->
+        <menuitem name="Portal Access" id="portal_access_action_menu" parent='salesforce_menu_root' sequence='60'/>
+
+        <menuitem name="Portal Access" id="portal_access_menu" parent='portal_access_action_menu' action="portal_access_action"/>
+
+        <!-- Menu For Contract Team -->
+            <menuitem name="Contract Team Layout" id="contract_team_menu" parent='salesforce_menu_root' action="contract_team_action" sequence='61'/>
+
+        <!-- Menu For Financial Group -->
+            <menuitem name="Financial Group Layout" id="financial_group_menu" parent='salesforce_menu_root' action="financial_group_layout_action" sequence='62'/>
+
+        <!-- Menu For Cost Center -->
+            <menuitem name="Cost Center Layout" id="cost_center_menu" parent='salesforce_menu_root' action="cost_center_action" sequence='63'/>
+
+        <!-- Menu For Country -->
+            <menuitem name="Country Layout" id="country_menu" parent='salesforce_menu_root' action="country_action" sequence='64'/>
+
+        <!-- Menu For Attachment -->
+            <menuitem name="Attachment Layout" id="attachment_menu" parent='salesforce_menu_root' action="attachment_layout_action" sequence='65'/>
+
+        <!-- Menu For Document Operator -->
+            <menuitem name="Operator Document" id="operator_document_menu" parent='salesforce_menu_root' action="operator_document_layout_action" sequence='66'/>
+
+        <!-- Menu For Eligibility -->
+            <menuitem name="Eligibility Layout" id="eligibility_menu" parent='salesforce_menu_root' action="eligibility_action" sequence='67'/>
+
+        <!-- Menu For Contract Eligibility -->
+            <menuitem name="Contract Eligibility Layout" id="contract_eligibility_menu" parent='salesforce_menu_root' action="contract_eligibility_action" sequence='68'/>
+
+        <!-- Campaign Member -->
+            <menuitem name="Campaign Member" id="campaign_member_menu" parent='salesforce_menu_root' action="campaign_member_action" sequence='69'/>
+
+
+        <!-- Car Fleet C -->
+            <menuitem name="Car Fleet C" id="car_fleet_c_menu" parent='salesforce_menu_root' action="car_fleet_c_action" sequence='70'/>
+
+        <!-- Carrier Type C -->
+            <menuitem name="Carrier Type C" id="carrier_type_c_menu" parent='salesforce_menu_root' action="carrier_type_c_action" sequence='71'/>
+
+        <!--Revenue Provisioning Menu-->
+            <menuitem name="Revenue Provisioning" id="revenue_provisioning_menu" parent='salesforce_menu_root' action="revenue_provisioning_layout_action" sequence='72'/>
+        <!--Revenue Compensation Menu-->
+            <menuitem name="Revenue Compensation" id="revenue_compensation_menu" parent='salesforce_menu_root' action="revenue_compensation_layout_action" sequence='73'/>
+
+        <!--Accommodation Menu-->
+            <menuitem name="Accommodation" id="accommodation_menu" parent='salesforce_menu_root' action="accommodation_layout_action" sequence='74'/>
+        <!--Additional Parameter Menu-->
+            <menuitem name="Additional Parameter" id="additional_parameter_menu" parent='salesforce_menu_root' action="additional_parameter_layout_action" sequence='75'/>
+        <!--Address Menu-->
+            <menuitem name="Address" id="address_menu" parent='salesforce_menu_root' action="address_layout_action" sequence='76'/>
+        <!--Application Parameter Menu-->
+            <menuitem name="Application Parameter" id="application_parameter_menu" parent='salesforce_menu_root' action="application_parameter_layout_action" sequence='77'/>
+
+        <!--Bank Account Menu-->
+            <menuitem name="Bank Account" id="bank_account_menu" parent='salesforce_menu_root' action="bank_account_layout_action" sequence='78'/>
+
+        <!-- Event Control Menu-->
+            <menuitem name="Event Control Layout" id="event_control_menu" parent='salesforce_menu_root' action="event_control_action" sequence='79'/>
+
+        <!-- Financial Agreement Menu-->
+            <menuitem name="Financial Agreement Layout" id="financial_agreement_menu" parent='salesforce_menu_root' action="financial_agreement_action" sequence='80'/>
+        
+        <!-- Expense provisioning Menu-->
+            <menuitem name="Expense Provisioning Layout" id="expence_provisioning_menu" parent='salesforce_menu_root' action="expence_provisioning_action" sequence='81'/>
+
+        <!-- Expense Compensation Menu-->
+            <menuitem name="Expense Compensation Layout" id="expence_compensation_menu" parent='salesforce_menu_root' action="expence_compensation_action" sequence='82'/>
+
+        <!-- Financial Contract Menu-->
+            <menuitem name="Financial Contract Layout" id="financial_contract_menu" parent='salesforce_menu_root' action="financial_contract_action" sequence='83'/>
+        
+        <!-- Financial Doctor Menu-->
+            <menuitem name="Financial Doctor Layout" id="financial_doctor_menu" parent='salesforce_menu_root' action="financial_doctor_action" sequence='84'/>
+
+        <!-- Financial Group Master User Menu-->
+            <menuitem name="Financial Group Master User Layout" id="financial_group_master_user_menu" parent='salesforce_menu_root' action="financial_group_master_user_action" sequence='85'/>
+
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
 
-        <!-- portal Access -->
-        <menuitem name="Portal Access" id="portal_access_action_menu" parent='salesforce_menu_root'/>
-
-        <menuitem name="Portal Access" id="portal_access_menu" parent='portal_access_action_menu' action="portal_access_action"/>
 	</data>
 </odoo>

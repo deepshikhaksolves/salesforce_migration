@@ -30,18 +30,16 @@
                                 </group>
                             </page>
                             <page string="Product Prices">
-                                <group>
-                                    <field name="product_price_ids">
-                                        <tree>
-                                            <field name="Name"/>
-                                            <!-- <field name="Price_Table__c"/> -->
-                                            <field name="age_range__c"/>
-                                            <field name="holder_value_copay__c"/>
-                                            <!-- Value to the Holder field not available -->
-                                            <field name="others_value_copay__c"/>
-                                        </tree>
-                                    </field>
-                                </group>
+                                <field name="product_price_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="Price_Table__c"/>
+                                        <field name="age_range__c"/>
+                                        <field name="holder_value_copay__c"/>
+                                        <!-- Value to the Holder field not available -->
+                                        <field name="others_value_copay__c"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
@@ -103,18 +101,16 @@
                         </group>
                         <notebook>
                             <page string="Product Prices">
-                                <group>
-                                    <field name="product_price_ids">
-                                        <tree>
-                                            <field name="Name"/>
-                                            <!-- <field name="Price_Table__c"/> -->
-                                            <field name="age_range__c"/>
-                                            <field name="holder_value_copay__c"/>
-                                            <!-- Value to the Holder field not available -->
-                                            <field name="others_value_copay__c"/>
-                                        </tree>
-                                    </field>
-                                </group>
+                                <field name="product_price_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <!-- <field name="Price_Table__c"/> -->
+                                        <field name="age_range__c"/>
+                                        <field name="holder_value_copay__c"/>
+                                        <!-- Value to the Holder field not available -->
+                                        <field name="others_value_copay__c"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>

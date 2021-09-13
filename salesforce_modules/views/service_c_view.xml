@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+        <!--Service C Layout form view -->
+        <record id="service_c_form" model="ir.ui.view">
+            <field name="name"> Service C Layout</field>
+            <field name="model">model_service_c</field>
+            <field name="arch" type="xml">
+                <form string="Servcie C Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="client_profile_text"/>
+                                <field name="accountable"/>
+                            </group>
+                            <group>
+                                <field name="OwnerId"/>
+<!--                                <field name="periodicity_id"/> Periodicity object is not define-->
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Contract Services">
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         <!-- Service C Layout tree view -->
+        <record id="service_c_tree" model="ir.ui.view">
+            <field name="name">Service C Tree</field>
+            <field name="model">model_service_c</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="client_profile_text"/>
+                    <field name="accountable"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Service C Layout action window -->
+        <record id="service_c_action" model="ir.actions.act_window">
+            <field name="name">Service C Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_service_c</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('service_c_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('service_c_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

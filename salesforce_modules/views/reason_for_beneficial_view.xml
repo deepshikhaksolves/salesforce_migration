@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Beneficiary Inclusion Reason Layout Start -->
+        <record id="beneficial_inclusion_reason_layout_form" model="ir.ui.view">
+            <field name="name">Beneficial Inclusion Reason Layout Form</field>
+            <field name="model">model_reason_for_beneficial</field>
+            <field name="arch" type="xml">
+                <form string="Beneficial Inclusion Reason Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="code"/>
+                                <field name="home_term"/>
+                                <field name="end_term"/>
+                                <field name="create_uid" string='Created By'/>
+                            </group>
+                            <group>
+                                <field name="OwnerId"/>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Open Activities"></page>
+                            <page string="Activity History"></page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Beneficiary Inclusion Reason Layout tree view -->
+        <record id="beneficial_inclusion_reason_layout_tree" model="ir.ui.view">
+            <field name="name">Beneficial Inclusion Reason Layout Tree</field>
+            <field name="model">model_reason_for_beneficial</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="Name"/>
+                    <field name="code"/>
+                    <field name="home_term"/>
+                    <field name="end_term"/>
+                    <field name="create_uid" string='Created By'/>
+                    <field name="OwnerId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Beneficiary Inclusion Reason Layout action window -->
+        <record id="beneficial_inclusion_reason_layout_action" model="ir.actions.act_window">
+            <field name="name">Beneficial Inclusion Reason Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_reason_for_beneficial</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('beneficial_inclusion_reason_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('beneficial_inclusion_reason_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

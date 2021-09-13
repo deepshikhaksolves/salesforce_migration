@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- model.name form view -->
+        <record id="attachment_layout_form" model="ir.ui.view">
+            <field name="name">attachment Layout</field>
+            <field name="model">ir.attachment</field>
+            <field name="arch" type="xml">
+                <form string="Contract Team Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" string="Document"/>
+                                <field name="document_use" />
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                <field name="OwnerId"/>
+                                <field name="active"/>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- model.name tree view -->
+        <record id="attachment_layout_tree" model="ir.ui.view">
+            <field name="name">attachment Layout Tree</field>
+            <field name="model">ir.attachment</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" string="Document"/>
+                    <field name="document_use" />
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- ir.attachment action window -->
+        <record id="attachment_layout_action" model="ir.actions.act_window">
+            <field name="name">Attachment Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ir.attachment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('attachment_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('attachment_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

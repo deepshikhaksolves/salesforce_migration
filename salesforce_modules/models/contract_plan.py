@@ -3,7 +3,7 @@ from odoo import models, fields, api
 
 class ContractPlan(models.Model):
     _name = 'model_contract_plan'
-    _description = "Salesforce Coverage"
+    _description = "Salesforce Contract Plan"
     _rec_name = 'accommodation'
 
 

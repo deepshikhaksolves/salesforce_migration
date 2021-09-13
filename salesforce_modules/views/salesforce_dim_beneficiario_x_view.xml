@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+        <!--Salesforce Dim Beneficiario X Layout form view -->
+        <record id="salesforce_dim_beneficiario_x_form" model="ir.ui.view">
+            <field name="name">Salesforce Dim Beneficiario X Layout</field>
+            <field name="model">model_salesforce_dim_beneficiario_x</field>
+            <field name="arch" type="xml">
+                <form string="Salesforce Dim Beneficiario X Layout">
+                    <sheet>
+                        <group>
+                            <field name="beneficiary_id"/>
+                            <field name="birth"/>
+                            <field name="beneficiary_name"/>
+                            <field name="ownername"/>
+                            <field name="sex"/>
+                            <field name="beneficiary_type"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Salesforce Dim Beneficiario X Layout tree view -->
+        <record id="salesforce_dim_beneficiario_x_tree" model="ir.ui.view">
+            <field name="name">Salesforce Dim Beneficiario X Tree</field>
+            <field name="model">model_salesforce_dim_beneficiario_x</field>
+            <field name="arch" type="xml">
+                <tree>
+                   <field name="beneficiary_id"/>
+                    <field name="birth"/>
+                    <field name="beneficiary_name"/>
+                    <field name="ownername"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Salesforce Dim Beneficiario X Layout action window -->
+        <record id="salesforce_dim_beneficiario_x_action" model="ir.actions.act_window">
+            <field name="name">Salesforce Dim Beneficiario X Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_salesforce_dim_beneficiario_x</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('salesforce_dim_beneficiario_x_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('salesforce_dim_beneficiario_x_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>
