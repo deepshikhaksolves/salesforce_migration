@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','account_accountant','project','crm','hr_contract'],
+    'depends': ['base','account_accountant','project','crm','hr_contract','hr_expense'],
 
     # always loaded
     'data': [

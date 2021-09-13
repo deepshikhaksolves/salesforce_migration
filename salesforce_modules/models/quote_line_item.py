@@ -20,7 +20,7 @@ class QuoteLineItem(models.Model):
     Product2Id              = fields.Many2one('product.template', string='Product')
     requested_proposal__c   = fields.Boolean('Requested proposal')
     Quantity                = fields.Float('Quantity', digits=(10, 2))
-    # QuoteId                 = fields.Many2one('model_quote', string='Quote Name')
+    QuoteId                 = fields.Many2one('model_quote', string='Quote Name')
     UnitPrice               = fields.Float('Sales Price', digits=(16, 2))
     Subtotal                = fields.Float('Subtotal', digits=(16, 2))
     TotalPrice              = fields.Float('Total Price', digits=(16, 2))
