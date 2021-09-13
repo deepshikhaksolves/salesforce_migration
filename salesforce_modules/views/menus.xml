@@ -37,7 +37,7 @@
                 <menuitem name="Contract User" id="contract_parent_menu" parent='contract_permission_parent_action_menu' sequence="1" />
 
                     <menuitem name="Company Contract Permissions" id="contract_user_permission_menu" parent='contract_parent_menu' action="user_contract_layout_action" sequence="1" />
-                    <menuitem name="Agreement Jurisdiction" id="agreement_jurisdiction_menu" parent='contract_parent_menu' action="user_agreement_layout_action" sequence="2" />
+                    <menuitem name="GF-User Company Contract Permissions" id="agreement_jurisdiction_menu" parent='contract_parent_menu' action="user_agreement_layout_action" sequence="2" />
 
                 <menuitem name="SubContract User" id="subcontract_parent_menu" parent='contract_permission_parent_action_menu' sequence="2" />
 
@@ -156,6 +156,25 @@
             <menuitem name="Broker Fee" id="opportunity_bf_menu" parent='opportunity_parent_action_menu' action="opportunity_bf_action" sequence="5" />
             <menuitem name="Broker Fleet" id="opportunity_broker_frota_menu" parent='opportunity_parent_action_menu' action="opportunity_broker_frota_action" sequence="6" />
             <menuitem name="Broker Medicamento" id="opportunity_bm_menu" parent='opportunity_parent_action_menu' action="opportunity_bm_action" sequence="7" />
+            <menuitem name="Broker Occupational Health" id="opportunity_boh_menu" parent='opportunity_parent_action_menu' action="opportunity_boh_action" sequence="8" />
+
+        <!-- Menu For Region City -->
+            <menuitem name="City of the Region" id="city_of_region_menu" parent='salesforce_menu_root' action="region_city_action" sequence='35'/>
+
+        <!-- Menu For Region State -->
+            <menuitem name="State of the Region" id="state_of_region_menu" parent='salesforce_menu_root' action="region_state_action" sequence='36'/>
+
+        <!-- Menu For Request -->
+            <menuitem name="Request" id="request_menu" parent='salesforce_menu_root' action="model_request_action" sequence='37'/>
+
+        <!-- Menu For Request Fulfillment Reason  -->
+            <menuitem name="Request Fulfillment Reason" id="service_reason_config_menu" parent='salesforce_menu_root' action="service_reason_config_action" sequence='38'/>
+
+        <!-- Menu For Request Configuration -->
+            <menuitem name="Request Configuration" id="request_config_menu" parent='salesforce_menu_root' action="request_config_action" sequence='39'/>
+
+        <!-- Menu For Channel Segmentation-->
+            <menuitem name="Channel Segmentation" id="channel_segmentation_menu" parent='salesforce_menu_root' action="channel_segmentation_layout_action" sequence='40'/>
 
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='99'/>

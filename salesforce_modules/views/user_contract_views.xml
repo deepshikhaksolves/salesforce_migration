@@ -102,7 +102,7 @@
 
         <!-- user_agreement action window -->
         <record id="user_agreement_layout_action" model="ir.actions.act_window">
-            <field name="name">User Agreement Jurisdiction</field>
+            <field name="name">GF-User Company Contract Permissions</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">user_company_contract_permissions__c</field>
             <field name="view_mode">tree,form</field>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="contract_copayment_view_form" model="ir.ui.view">
+        <field name="name">contract.coverage.view.form</field>
+        <field name="model">contract.coverage</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="coverage"/>
+                        <field name="contracts"/>
+                        <!-- <field name="Plan"/> -->
+                    </group>
+                    <group>
+                        <field name="condition"/>
+                        <field name="additive_start"/>
+                        <field name="additive_end"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
