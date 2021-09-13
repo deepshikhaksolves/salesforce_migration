@@ -53,7 +53,7 @@
         <field name="name">Plan Coverage</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">plan.coverage</field>
-        <field name="view_mode">form</field>
+        <field name="view_mode">tree,form</field>
         <field name="view_ids" eval="[(5, 0, 0),
             (0, 0, {'view_mode': 'tree', 'view_id': ref('plan_coverage_tree')}),
             (0, 0, {'view_mode': 'form', 'view_id': ref('plan_coverage_form')})]"/>

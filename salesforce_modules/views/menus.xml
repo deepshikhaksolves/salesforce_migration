@@ -320,6 +320,17 @@
         <!-- Campaign Member -->
             <menuitem name="Campaign Member" id="campaign_member_menu" parent='salesforce_menu_root' action="campaign_member_action" sequence='69'/>
 
+        <!-- Politic Bill -->
+            <menuitem name="Politic Bill" id="politic_bill_menu" parent='salesforce_menu_root' action="politic_bill_action" sequence='72'/>
+
+        <!-- Paying Company -->
+            <menuitem name="Paying Company" id="paying_company_menu" parent='salesforce_menu_root' action="paying_company_action" sequence='73'/>
+
+        <!-- Product Network -->
+            <menuitem name="Product Network" id="product_network_menu" parent='salesforce_menu_root' action="product_network_action" sequence='74'/>
+
+        <!-- Product Region -->
+            <menuitem name="Product Region" id="product_region_menu" parent='salesforce_menu_root' action="product_region_action" sequence='75'/>
 
         <!-- Car Fleet C -->
             <menuitem name="Car Fleet C" id="car_fleet_c_menu" parent='salesforce_menu_root' action="car_fleet_c_action" sequence='70'/>

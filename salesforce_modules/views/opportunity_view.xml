@@ -2166,7 +2166,7 @@
             <field name="name">Broker Previdência</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">crm.lead</field>
-            <field name="view_mode">form</field>
+            <field name="view_mode">tree,form</field>
             <field name="view_ids" eval="[(5, 0, 0),
                 (0, 0, {'view_mode': 'tree', 'view_id': ref('opportunity_so_tree')}),
                 (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_so_form')})]"/>
@@ -2236,7 +2236,7 @@
             <field name="name">Opportunity Layout</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">crm.lead</field>
-            <field name="view_mode">form</field>
+            <field name="view_mode">tree,form</field>
             <field name="view_ids" eval="[(5, 0, 0),
                 (0, 0, {'view_mode': 'tree', 'view_id': ref('opportunity_layout_tree')}),
                 (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_layout_form')})]"/>

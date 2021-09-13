@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <odoo>
+    <data>
+       <record id="product_network_form" model="ir.ui.view">
+            <field name="name">Layout de Product Network Form</field>
+            <field name="model">product.network</field>
+            <field name="arch" type="xml">
+                <form string="Layout de Product Network">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="region"/>
+                                <field name="user_id"/>
+                            </group>
+                            <group>
+                                <field name="product_id"/>
+                                <field name="last_modified_by_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+       <record id="product_network_tree" model="ir.ui.view">
+            <field name="name">Layout de Product Network Tree</field>
+            <field name="model">product.network</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="region"/>
+                    <field name="user_id"/>
+                    <field name="product_id"/>
+                    <field name="last_modified_by_id"/>
+                </tree>
+            </field>
+        </record>
+       <record id="product_network_action" model="ir.actions.act_window">
+        <field name="name">Layout de Product Network</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.network</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('product_network_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('product_network_form')})]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No records available.
+            </p>
+        </field>
+    </record>
+    </data>
+</odoo>

@@ -98,6 +98,21 @@ access_car_fleet_c,access_car_fleet_c,model_model_car_fleet_c,base.group_user,1,
 access_carrier_type_c,access_carrier_type_c,model_model_carrier_type_c,base.group_user,1,1,1,1
 access_case,access_case,model_model_case,base.group_user,1,1,1,1
 
+access_paying_company,access_paying_company,model_paying_company,base.group_user,1,1,1,1
+access_product_network,access_product_network,model_product_network,base.group_user,1,1,1,1
+access_politic_bill,access_politic_bill,model_politic_bill,base.group_user,1,1,1,1
+access_product_region,access_product_region,model_product_region,base.group_user,1,1,1,1
+access_plan_coverage,access_plan_coverage,model_plan_coverage,base.group_user,1,1,1,1
+access_model_periodicity,access_model_periodicity,model_model_periodicity,base.group_user,1,1,1,1
+access_crm_lead_contact_role,access_crm_lead_contact_role,model_crm_lead_contact_role,base.group_user,1,1,1,1
+access_crm_lead_competitor,access_crm_lead_competitor,model_crm_lead_competitor,base.group_user,1,1,1,1
+access_crm_lead_lineitem,access_crm_lead_lineitem,model_crm_lead_lineitem,base.group_user,1,1,1,1
+access_crm_lead_product,access_crm_lead_product,model_crm_lead_product,base.group_user,1,1,1,1
+access_crm_lead_team_member,access_crm_lead_team_member,model_crm_lead_team_member,base.group_user,1,1,1,1
+access_crm_lead_stage_parameter,access_crm_lead_stage_parameter,model_crm_lead_stage_parameter,base.group_user,1,1,1,1
+access_crm_lead_stage_path,access_crm_lead_stage_path,model_crm_lead_stage_path,base.group_user,1,1,1,1
+
+
 access_event_control,access_event_control,model_event_control,base.group_user,1,1,1,1
 access_financial_agreement,access_financial_agreement,model_financial_agreement,base.group_user,1,1,1,1
 access_expence_provisioning,access_expence_provisioning,model_expence_provisioning,base.group_user,1,1,1,1
