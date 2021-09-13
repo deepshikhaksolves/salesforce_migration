@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class Car_Fleet_C(models.Model):
     _name = 'model_car_fleet_c'
+    _inherit = ['mail.thread','mail.activity.mixin']
     _description = "Salesforce Car Fleet C"
     _rec_name = 'Name'
 

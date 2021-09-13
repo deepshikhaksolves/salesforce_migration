@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class Case_Request_SLA_C(models.Model):
     _name = 'model_case_request_sla_c'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Case Request SLA C"
     _rec_name = 'Name'
 

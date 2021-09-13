@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class Checklist_C(models.Model):
     _name = 'model_checklist_c'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Checklist C"
     _rec_name = 'Name'
 

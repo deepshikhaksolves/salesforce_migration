@@ -13,11 +13,11 @@
                                 <field name="study_configuration_id"/>
                                 <field name="priority"/>
                                 <field name="value"/>
-                                <field name="create_uid"/>
+                                <field name="create_uid" string="Created By"/>
                             </group>
                             <group>
                                 <field name="company_id"/>
-                                <field name="write_uid"/>
+                                <field name="write_uid" string="Last Modified By"/>
                             </group>
                         </group>
                         <notebook>
@@ -28,6 +28,11 @@
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
