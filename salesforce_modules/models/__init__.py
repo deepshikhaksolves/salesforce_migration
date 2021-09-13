@@ -6,6 +6,10 @@ from . import opportunity_other
 from . import periodicity
 from . import contract_partner
 from . import plan_coverage
+from . import politic_bill
+from . import paying_company
+from . import product_network
+from . import product_region
 from . import lead_sort_columns_in_campaign, campaign, model__c
 from . import pathology, quotation_item_price, accredited_network,region__c, quote_line_item
 

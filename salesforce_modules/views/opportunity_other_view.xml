@@ -33,7 +33,7 @@
         <field name="name">Opportunity Contact Role</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">crm.lead.contact.role</field>
-        <field name="view_mode">form</field>
+        <field name="view_mode">tree,form</field>
         <field name="view_ids" eval="[(5, 0, 0),
             (0, 0, {'view_mode': 'tree', 'view_id': ref('opportunity_cr_tree')}),
             (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_cr_form')})]"/>
@@ -92,7 +92,7 @@
         <field name="name">Opportunity product</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">crm.lead.lineitem</field>
-        <field name="view_mode">form</field>
+        <field name="view_mode">tree,form</field>
         <field name="view_ids" eval="[(5, 0, 0),
             (0, 0, {'view_mode': 'tree', 'view_id': ref('opportunity_lineitem_tree')}),
             (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_lineitem_form')})]"/>
@@ -150,7 +150,7 @@
         <field name="name">Opportunity product</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">crm.lead.product</field>
-        <field name="view_mode">form</field>
+        <field name="view_mode">tree,form</field>
         <field name="view_ids" eval="[(5, 0, 0),
             (0, 0, {'view_mode': 'tree', 'view_id': ref('opportunity_product_c_tree')}),
             (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_product_c_form')})]"/>
@@ -203,7 +203,7 @@
         <field name="name">Opportunity Stage Parameter</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">crm.lead.stage.parameter</field>
-        <field name="view_mode">form</field>
+        <field name="view_mode">tree,form</field>
         <field name="view_ids" eval="[(5, 0, 0),
             (0, 0, {'view_mode': 'tree', 'view_id': ref('opportunity_stage_parameter_tree')}),
             (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_stage_parameter_form')})]"/>
@@ -255,7 +255,7 @@
         <field name="name">Opportunity Stage Path</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">crm.lead.stage.path</field>
-        <field name="view_mode">form</field>
+        <field name="view_mode">tree,form</field>
         <field name="view_ids" eval="[(5, 0, 0),
             (0, 0, {'view_mode': 'tree', 'view_id': ref('opportunity_stage_path_tree')}),
             (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_stage_path_form')})]"/>
@@ -303,7 +303,7 @@
             <field name="name">Opportunity Team Member</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">crm.lead.team_member</field>
-            <field name="view_mode">form</field>
+            <field name="view_mode">tree,form</field>
             <field name="view_ids" eval="[(5, 0, 0),
                 (0, 0, {'view_mode': 'tree', 'view_id': ref('opportunity_team_member_tree')}),
                 (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_team_member_form')})]"/>

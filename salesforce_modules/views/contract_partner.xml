@@ -39,7 +39,7 @@
         <field name="name">Opportunity Contact Role</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">contract.partner</field>
-        <field name="view_mode">form</field>
+        <field name="view_mode">tree,form</field>
         <field name="view_ids" eval="[(5, 0, 0),
             (0, 0, {'view_mode': 'tree', 'view_id': ref('contract_partner_tree')}),
             (0, 0, {'view_mode': 'form', 'view_id': ref('contract_partner_form')})]"/>
