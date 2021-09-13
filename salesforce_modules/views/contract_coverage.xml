@@ -19,5 +19,11 @@
                 </sheet>
             </form>
         </field>
+    </record><record id="contract_coverage_action" model="ir.actions.act_window">
+        <field name="name">contract.coverage</field>
+        <field name="res_model">contract.coverage</field>
+        <field name="view_mode">form</field>
     </record>
+
+
 </odoo>

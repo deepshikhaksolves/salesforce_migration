@@ -14,5 +14,5 @@ class contractCoverage(models.Model):
     additive_start = fields.Date(string='Start of the Additive')
     # LastModifiedById created default
     owner_id = fields.Many2one('res.users', string='Owner')
-    # Plan = fields.Many2one('comodel_name', string='') contract plan
+    contract_plan = fields.Many2one('model_contract_plan', string='Contract Plan')
     record_type_id = fields.Char(string='Record Type')
