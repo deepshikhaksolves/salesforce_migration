@@ -26,8 +26,6 @@
                             </page>
                             <page string="Quotation Products"></page>
                             <page string="Opportunities"></page>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="Notes"></page>
                             <page string="Reissues"></page>
                             <page string="Cases"></page>
@@ -99,8 +97,6 @@
                             </page>
                             <page string="Quotation Products"></page>
                             <page string="Opportunities"></page>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="Notes"></page>
                             <page string="Reissues"></page>
                             <page string="Cases"></page>
@@ -173,8 +169,6 @@
                             </page>
                             <page string="Quote Line Item"></page>
                             <page string="Opportunities"></page>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="Notes"></page>
                             <page string="Reissues"></page>
                             <page string="Cases"></page>
@@ -248,8 +242,6 @@
                             </page>
                             <page string="Quote Line Item"></page>
                             <page string="Opportunities"></page>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="Notes"></page>
                             <page string="Reissues"></page>
                             <page string="Cases"></page>
@@ -322,8 +314,6 @@
                             </page>
                             <page string="Quotation Product"></page>
                             <page string="Opportunities"></page>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="Notes"></page>
                             <page string="Reissues"></page>
                             <page string="Cases"></page>
@@ -395,8 +385,6 @@
                             </page>
                             <page string="Quotation Product"></page>
                             <page string="Opportunities"></page>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="Notes"></page>
                             <page string="Reissues"></page>
                             <page string="Cases"></page>
@@ -468,8 +456,6 @@
                             </page>
                             <page string="Quotation Product"></page>
                             <page string="Opportunities"></page>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="Notes"></page>
                             <page string="Reissues"></page>
                             <page string="Cases"></page>
@@ -549,8 +535,6 @@
                             <page string="Quote PDFs"></page>
                             <page string="Notes"></page>
                             <page string="Files"></page>
-                            <page string="Open Activities"/>
-                            <page string="Activity History"></page>
                             <page string="Reissues"/>
                             <page string="Cases"/>
                         </notebook>
@@ -645,7 +629,6 @@
                             <page string="Notes/Attachments">
                                 <field name="attachment_ids"/>
                             </page>
-                            <page string="Activity History"></page>
                             <page string="Reissues"/>
                             <page string="Cases"/>
                         </notebook>

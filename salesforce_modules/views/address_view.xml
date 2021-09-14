@@ -22,10 +22,6 @@
                                 <field name="City"/>
                                 <field name="Coordinates"/>
                             </group>
-                            <notebook>
-                                <page string="Open Activities"></page>
-                                <page string="Activity History"></page>
-                            </notebook>
                         </group>
                     </sheet>
                     <div class="oe_chatter">
