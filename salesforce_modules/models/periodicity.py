@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class SalesforcePeriodicity(models.Model):
     _name = 'model.periodicity'
+    _inherit = 'mail.thread'
     _description = "Salesforce Periodicity"
 
     every = fields.Integer('A Cada')
@@ -49,3 +50,4 @@ class SalesforcePeriodicity(models.Model):
         ('Mês','Mês'),
         ('Ano','Ano'),
     ],string="Padrão")
+    service_lines = fields.One2many('model_service_c', 'periodicity_id', string="Service Lines")

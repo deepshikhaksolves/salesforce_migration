@@ -26,7 +26,9 @@
                        </group>
                         <notebook>
                             <page string="Serviços" name="services">
-                                <group></group>
+                                <group>
+                                    <field name="service_lines" />
+                                </group>
                             </page>
                         </notebook>
                     </sheet>

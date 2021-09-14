@@ -22,7 +22,7 @@ class Quote(models.Model):
     ContractId = fields.Many2one('hr.contract', string="Contract")
     cpf = fields.Char(string="CPF", size=14)
     # CreatedById already in odoo
-    # creation_date already in odoo
+    creation_date = fields.Date('Creation Date')
     status_change_date = fields.Date(string="Status Change Date")
     Description = fields.Text(string="Description")
     days_in_current_status = fields.Char(string="Days in Current Status")

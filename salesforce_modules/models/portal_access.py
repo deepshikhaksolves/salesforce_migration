@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class PortalAccess(models.Model):
     _name = 'portal.access'
+    _inherit = 'mail.thread'
 
     access_code__c = fields.Char(string='Access Code', size=255)
     access_type__c = fields.Selection([
@@ -15,13 +16,14 @@ class PortalAccess(models.Model):
     carrier__c = fields.Many2one('comodel_name', string='Carrier')
     contract__c = fields.Many2one('comodel_name', string='Contract')
     contract_summary__c = fields.Char(string='Contract Summary')
-    # Created By created default
+    user_id = fields.Many2one('res.users', string="Created By")
+    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
     financial_group_id = fields.Many2one('model_financial_group', string='Financial Group')
-    # LastModifiedById created default
     login__c = fields.Char(string='Login', size=255)
     OwnerId = fields.Many2one('res.partner', string='owner')
     password__c = fields.Char(string='password', size=255)
     registered_email__c = fields.Char(string='Registered email')
     site__c = fields.Char(string='Site', size=255)
+    attachment_lines = fields.One2many('ir.attachment','opportunity_id',string="Attachment Lines")
 
     account_id = fields.Many2one('account.account', string='Account Id')
