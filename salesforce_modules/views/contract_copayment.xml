@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="contract_copayment_view_form" model="ir.ui.view">
+        <field name="name">contract.copayment.view.form</field>
+        <field name="model">contract.copayment</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="contract" />
+                        <field name="Plan" />
+                        <field name="type_of_procedures" />
+                    </group>
+                    <group>
+                        <field name="value_Type" />
+                        <field name="value" />
+                        <field name="limit" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="contract_copayment_action" model="ir.actions.act_window">
+        <field name="name">contract.copayment</field>
+        <field name="res_model">contract.copayment</field>
+        <field name="view_mode">form</field>
+    </record>
+</odoo>

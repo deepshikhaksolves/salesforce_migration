@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="contract_contribution_view_form" model="ir.ui.view">
+        <field name="name">contract.contribution.view.form</field>
+        <field name="model">contract.contribution</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="contract_id" />
+                        <field name="Plan" />
+                        <field name="type_of_beneficiary" />
+                    </group>
+                    <group>
+                        <field name="value_type" />
+                        <field name="Value" />
+                        <field name="coments" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="condition_action" model="ir.actions.act_window">
+        <field name="name">contract.contribution</field>
+        <field name="res_model">contract.contribution</field>
+        <field name="view_mode">form</field>
+    </record>
+</odoo>

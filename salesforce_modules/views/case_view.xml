@@ -1,0 +1,683 @@
+<odoo>
+    <data>
+        <!--Case - Risk Management Layout form view -->
+        <record id="case_risk_management_form" model="ir.ui.view">
+            <field name="name"> Case - Risk Management Layout</field>
+            <field name="model">model_case</field>
+            <field name="arch" type="xml">
+                <form string="Case - Risk Management Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Subject"/>
+                                <field name="Origin"/>
+                                <field name="Type"/>
+                                <field name="Reason"/>
+                                <field name="Request"/>
+                                <field name="Priority"/>
+                                <field name="CreatedDate"/>
+                                <field name="ClosedDate"/>
+                                <field name="IsStopped"/>
+                                <field name="Cancelation_Reason"/>
+                                <field name="opportunity_id"/>
+                                <field name="quote_id"/>
+                                <field name="Stage"/>
+<!--                                <field name="Subject_Request_id"/> field not define-->
+                            </group>
+                            <group>
+                                <field name="AccountId"/>
+<!--                                <field name="Contract_id"/> model_contract object is not define-->
+                                <field name="ContactId"/>
+                                <field name="Status"/>
+                                <field name="ParentId"/>
+                                <field name="IsEscalated"/>
+                                <field name="Reopening"/>
+                                <field name="SuppliedEmail"/>
+                                <field name="Description"/>
+                                <field name="SuppliedName"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Case Comments">
+                            </page>
+
+                            <page string="Case Milestones">
+                            </page>
+
+                            <page string="Emails">
+                            </page>
+
+                            <page string="Attachments">
+                            </page>
+
+                            <page string="Notes">
+                            </page>
+
+                            <page string="Case Team">
+                            </page>
+
+                            <page string="Contact Roles">
+                            </page>
+
+                            <page string="Open Activities">
+                            </page>
+
+                            <page string="Activity History">
+                            </page>
+
+                            <page string="Related Cases">
+                            </page>
+
+                            <page string="Case History">
+                            </page>
+
+                            <page string="Approval History">
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+         <!-- Case - Risk Management Layout tree view -->
+        <record id="case_risk_management_tree" model="ir.ui.view">
+            <field name="name">Case - Risk Management Tree</field>
+            <field name="model">model_case</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Subject"/>
+                    <field name="Origin"/>
+                    <field name="Type"/>
+                    <field name="Reason"/>
+                    <field name="Request"/>
+                    <field name="Priority"/>
+                    <field name="CreatedDate"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Case Layout Layout form view -->
+        <record id="case_layout_form" model="ir.ui.view">
+            <field name="name"> Case - Layout Layout</field>
+            <field name="model">model_case</field>
+            <field name="arch" type="xml">
+                <form string="Case Layout Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Subject"/>
+                                <field name="Origin"/>
+                                <field name="Type"/>
+                                <field name="Reason"/>
+                                <field name="Request"/>
+                                <field name="Priority"/>
+                                <field name="CreatedDate"/>
+                                <field name="ClosedDate"/>
+                                <field name="IsStopped"/>
+                                <field name="Cancelation_Reason"/>
+                                <field name="opportunity_id"/>
+                                <field name="quote_id"/>
+                                <field name="Stage"/>
+                                <field name="beneficiary_id"/>
+                                <field name="client_view_permission"/>
+                                <field name="SuppliedEmail"/>
+                                <field name="Description"/>
+
+<!--                                <field name="Subject_Request_id"/> field not define-->
+                            </group>
+                            <group>
+                                <field name="AccountId"/>
+<!--                                <field name="Contract_id"/> model_contract object is not define-->
+                                <field name="Contract_New"/>
+                                <field name="ContactId"/>
+                                <field name="Status"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Case Comments">
+                            </page>
+
+                            <page string="Case Milestones">
+                            </page>
+
+                            <page string="Emails">
+                            </page>
+
+                            <page string="Attachments">
+                            </page>
+
+                            <page string="Notes">
+                            </page>
+
+                            <page string="Case Team">
+                            </page>
+
+                            <page string="Contact Roles">
+                            </page>
+
+                            <page string="Open Activities">
+                            </page>
+
+                            <page string="Activity History">
+                            </page>
+
+                            <page string="Related Cases">
+                            </page>
+
+                            <page string="Case History">
+                            </page>
+
+                            <page string="Approval History">
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Case - Layout Layout tree view -->
+        <record id="case_layout_tree" model="ir.ui.view">
+            <field name="name">Case - Layout Tree</field>
+            <field name="model">model_case</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Subject"/>
+                    <field name="Origin"/>
+                    <field name="Type"/>
+                    <field name="Reason"/>
+                    <field name="Request"/>
+                    <field name="Priority"/>
+                    <field name="CreatedDate"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!--Help Desk Layout form view -->
+        <record id="help_desk_layout_form" model="ir.ui.view">
+            <field name="name"> Help Desk Layout</field>
+            <field name="model">model_case</field>
+            <field name="arch" type="xml">
+                <form string="Help Desk Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="OwnerId"/>
+                                <field name="Subject"/>
+                                <field name="Type"/>
+                                <field name="Request"/>
+                                <field name="opportunity_id"/>
+                                <field name="quote_id"/>
+                                <field name="Stage"/>
+                                <field name="ContactId"/>
+                                <field name="client_view_permission"/>
+
+
+<!--                                <field name="Subject_Request_id"/> field not define-->
+                            </group>
+                            <group>
+                                <field name="Status"/>
+<!--                                <field name="Contract_id"/> model_contract object is not define-->
+                                <field name="Priority"/>
+
+                                <field name="Status"/>
+                                <field name="SuppliedEmail"/>
+                                <field name="Description"/>
+                                <field name="Origin"/>
+                                <field name="Cancelation_Reason"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Attachments">
+                            </page>
+
+                             <page string="Emails">
+                            </page>
+
+                            <page string="Notes">
+                            </page>
+
+                            <page string="Case Comments">
+                            </page>
+
+                            <page string="Activity History">
+                            </page>
+
+                            <page string="Related Cases">
+                            </page>
+
+                            <page string="Approval History">
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Help - Desk Layout tree view -->
+        <record id="help_desk_layout_tree" model="ir.ui.view">
+            <field name="name">Help Desk Layout Tree</field>
+            <field name="model">model_case</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="OwnerId"/>
+                    <field name="Subject"/>
+                    <field name="Type"/>
+                    <field name="Request"/>
+                    <field name="opportunity_id"/>
+                    <field name="quote_id"/>
+                    <field name="Stage"/>
+                    <field name="ContactId"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!--Help Desk Layout-Agent form view -->
+        <record id="help_desk_layout_agent_form" model="ir.ui.view">
+            <field name="name"> Help Desk Layout Agent Layout</field>
+            <field name="model">model_case</field>
+            <field name="arch" type="xml">
+                <form string=" Help Desk Layout Agent Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="OwnerId"/>
+                                <field name="Subject"/>
+                                <field name="Type"/>
+                                <field name="Request"/>
+                                <field name="opportunity_id"/>
+                                <field name="Hour_Register"/>
+                                <field name="quote_id"/>
+                                <field name="Stage"/>
+                                <field name="Origin"/>
+                                <field name="SuppliedEmail"/>
+                                <field name="ContactId"/>
+                                <field name="create_uid" string="Created By"/>
+<!--                                <field name="Subject_Request_id"/> field not define-->
+                            </group>
+                            <group>
+                                <field name="attendee_by_id"/>
+                                 <field name="Status"/>
+                                <field name="Priority"/>
+                                <field name="Description"/>
+                                <field name="Cancelation_Reason"/>
+                                <field name="write_uid" string="Last Modified By"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Articles">
+                            </page>
+
+                            <page string="Case History">
+                            </page>
+
+                            <page string="Attachments">
+                            </page>
+
+                            <page string="Emails">
+                            </page>
+
+                            <page string="Notes">
+                            </page>
+
+                            <page string="Case Comments">
+                            </page>
+
+                            <page string="Activity History">
+                            </page>
+
+                            <page string="Related Cases">
+                            </page>
+
+                            <page string="Approval History">
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Help - Desk Layout Agent tree view -->
+        <record id="help_desk_layout_agent_tree" model="ir.ui.view">
+            <field name="name">Help Desk Layout Agent Tree</field>
+            <field name="model">model_case</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="OwnerId"/>
+                    <field name="Subject"/>
+                    <field name="Type"/>
+                    <field name="Request"/>
+                    <field name="opportunity_id"/>
+                    <field name="Hour_Register"/>
+                    <field name="quote_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--New Contract Process Layout form view -->
+        <record id="new_contract_process_layout_form" model="ir.ui.view">
+            <field name="name"> New Contract Process Layout</field>
+            <field name="model">model_case</field>
+            <field name="arch" type="xml">
+                <form string="New Contract Process Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Subject"/>
+                                <field name="Origin"/>
+                                <field name="Type"/>
+                                <field name="Reason"/>
+                                <field name="Request"/>
+                                <field name="Priority"/>
+                                <field name="CreatedDate"/>
+                                <field name="ClosedDate"/>
+                                <field name="IsStopped"/>
+                                <field name="Visible_to_the_Customer"/>
+                                <field name="Cancelation_Reason"/>
+                                <field name="opportunity_id"/>
+                                <field name="quote_id"/>
+                                <field name="Stage"/>
+                                <field name="SuppliedEmail"/>
+                                <field name="Description"/>
+<!--                                <field name="Subject_Request_id"/> field not define-->
+                            </group>
+                            <group>
+                                <field name="AccountId"/>
+<!--                                <field name="Contract_id"/ field not define>-->
+                                <field name="Contract_New"/>
+                                <field name="ContactId"/>
+                                <field name="Status"/>
+                                <field name="RecordTypeId"/>
+                                <field name="ParentId"/>
+                                <field name="IsEscalated"/>
+                                <field name="Reopening"/>
+                                <field name="SuppliedName"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Quotes">
+                            </page>
+
+                            <page string="Case Comments">
+                            </page>
+
+                            <page string="Case Milestones">
+                            </page>
+
+                            <page string="Attachments">
+                            </page>
+
+                            <page string="Emails">
+                            </page>
+
+                            <page string="Notes">
+                            </page>
+
+                            <page string="Case Team">
+                            </page>
+
+                            <page string="Open Activities">
+                            </page>
+
+                            <page string="Contact Roles">
+                            </page>
+
+                            <page string="Activity History">
+                            </page>
+
+                            <page string="Related Cases">
+                            </page>
+
+                            <page string="Case History">
+                            </page>
+
+                            <page string="Approval History">
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- New Contract Process Layout tree view -->
+        <record id="new_contract_process_layout_tree" model="ir.ui.view">
+            <field name="name">New Contract Process Layout Tree</field>
+            <field name="model">model_case</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Subject"/>
+                    <field name="Origin"/>
+                    <field name="Type"/>
+                    <field name="Reason"/>
+                    <field name="Request"/>
+                    <field name="Priority"/>
+                    <field name="CreatedDate"/>
+                    <field name="ClosedDate"/>
+                    <field name="IsStopped"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!--Readjustment Layout form view -->
+        <record id="readjustment_layout_form" model="ir.ui.view">
+            <field name="name">Readjustment Layout</field>
+            <field name="model">model_case</field>
+            <field name="arch" type="xml">
+                <form string="Readjustment Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Type"/>
+                                <field name="Subject"/>
+                                <field name="Description"/>
+                                <field name="AccountId"/>
+<!--                                <field name="Contract_id"/>field not define-->
+                                <field name="opportunity_id"/>
+                                <field name="quote_id"/>
+                                <field name="Stage"/>
+<!--                                <field name="Subject_Request_id"/> field not define-->
+                            </group>
+                            <group>
+                                <field name="Status"/>
+                                <field name="Origin"/>
+                                <field name="Priority"/>
+                                <field name="ContactId"/>
+                                <field name="OwnerId"/>
+                                <field name="ContactPhone"/>
+                                <field name="SuppliedEmail"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Case Comments">
+                            </page>
+
+                            <page string="Contact Roles">
+                            </page>
+
+                            <page string="Case Team">
+                            </page>
+
+                            <page string="Quotes">
+                            </page>
+
+                            <page string="Related Cases">
+                            </page>
+
+                            <page string="Merged Cases">
+                            </page>
+
+                            <page string="Attachments">
+                            </page>
+
+                            <page string="Emails">
+                            </page>
+
+                            <page string="Case Milestones">
+                            </page>
+
+                             <page string="Case History">
+                            </page>
+
+                            <page string="Notes">
+                            </page>
+
+                            <page string="Approval History">
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Readjustment Layout tree view -->
+        <record id="readjustment_layout_tree" model="ir.ui.view">
+            <field name="name">Readjustment Layout Tree</field>
+            <field name="model">model_case</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Type"/>
+                    <field name="Subject"/>
+                    <field name="Description"/>
+                    <field name="AccountId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Readjustment Layout action window -->
+        <record id="readjustment_layout_action" model="ir.actions.act_window">
+            <field name="name">Readjustment Layout Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_case</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('readjustment_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('readjustment_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+
+        <!-- New Contract Process Layout action window -->
+        <record id="new_contract_process_layout_action" model="ir.actions.act_window">
+            <field name="name">New Contract Process Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_case</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('new_contract_process_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('new_contract_process_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+
+
+        <!-- Help - Desk Layout Agent action window -->
+        <record id="help_desk_layout_agent_action" model="ir.actions.act_window">
+            <field name="name">Help Desk Layout Agent Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_case</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('help_desk_layout_agent_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('help_desk_layout_agent_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Help - Desk Layout action window -->
+        <record id="help_desk_layout_action" model="ir.actions.act_window">
+            <field name="name">Help Desk Layout Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_case</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('help_desk_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('help_desk_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+
+        <!-- Case - Layout Layout action window -->
+        <record id="case_layout_action" model="ir.actions.act_window">
+            <field name="name">Case - Layout Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_case</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('case_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('case_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Case - Risk Management Layout action window -->
+        <record id="case_risk_management_action" model="ir.actions.act_window">
+            <field name="name">Case - Risk Management Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_case</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('case_risk_management_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('case_risk_management_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

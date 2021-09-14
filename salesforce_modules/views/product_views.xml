@@ -39,17 +39,28 @@
                                 </group>
                             </page>
                             <page string="Product Regions">
-                                <group>
-                                    
-                                </group>
+                                <field name="product_region_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="region"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Products Networks">
-                                <group>
-                                    
-                                </group>
+                                <field name="product_network_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="region"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -123,23 +134,33 @@
                         <notebook>
                             <page string="System Information">
                                 <group>
-                                    
+                                    <field name="create_uid"/>
+                                    <field name="write_uid" string="Last Modified By"/>
                                 </group>
                             </page>
                             <page string="Product Regions">
-                                <group>
-                                    
-                                </group>
+                                <field name="product_region_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="region"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Products Networks">
-                                <group>
-                                    
-                                </group>
+                                <field name="product_network_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="region"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Network Providers">
-                                <group>
-                                    
-                                </group>
+                                <field name="network_provider_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="accredited_network__c"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Standard Price">
                                 <group>
@@ -147,9 +168,16 @@
                                 </group>
                             </page>
                             <page string="Product Prices">
-                                <group>
-                                    
-                                </group>
+                                <field name="product_price_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="Price_Table__c"/>
+                                        <field name="age_range__c"/>
+                                        <field name="holder_value__c"/>
+                                        <field name="holder_value_copay__c"/>
+                                        <field name="others_value_copay__c"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Refunds">
                                 <group>
@@ -163,6 +191,11 @@
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -240,27 +273,44 @@
                                 </group>
                             </page>
                             <page string="Notes">
-                                <group>
-                                    
-                                </group>
+                                <field name="attachment_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="active"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Files">
-                                <group>
-                                    
-                                </group>
+                                <field name="attachment_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="active"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Product Regions">
-                                <group>
-                                    
-                                </group>
+                                <field name="product_region_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="region"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Products Networks">
-                                <group>
-                                    
-                                </group>
+                                <field name="product_network_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="region"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>

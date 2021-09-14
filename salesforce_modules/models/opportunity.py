@@ -1,5 +1,6 @@
 from odoo import models, fields, api
 
+
 class SalesforceOpprtunity(models.Model):
     _inherit = 'crm.lead'
     _description = "Salesforce Opportunity"
@@ -115,7 +116,7 @@ class SalesforceOpprtunity(models.Model):
         ('Oceania','Oceania'),
         ('Múltiplos destinos','Múltiplos destinos'),
         ('Brasil','Brasil'),
-    ], string="Destino"),
+    ], string="Destino")
     discovery_completed = fields.Boolean('Discovery Completed')
     emergency_room_appointment = fields.Text('Emergency Room Appointment')
     expected_revenue = fields.Float('Expected Revenue')
@@ -278,7 +279,7 @@ class SalesforceOpprtunity(models.Model):
         ('Em Implantação Operadora','Em Implantação Operadora'),
         ('Crítica','Crítica'),
         ('Fechada','Fechada'),
-        ('Perdida','Perdida'),
+            ('Perdida','Perdida'),
     ],string="Stage")
     status_change_date = fields.Date('Status Change Date')
     administration_tax = fields.Float('Taxa de Administração')
@@ -327,47 +328,5 @@ class SalesforceOpprtunity(models.Model):
     ],string="Wage Limit For Coparticipation")
     workflow_configuration = fields.Many2one('workflow_configuration', string="Workflow Configuration")
     # campaign_id = fields.Many2one('model_campaign',string ='Primary Campaign Source',ondelete='cascade')
-
-
-# class SalesforcePeriodicity(models.Model):
-#     _name = 'periodicity'
-#     _description = "Salesforce Periodicity"
-#
-#     every = fields.Integer('A Cada')
-#     user_id = fields.Many2one('res.users', string="Created By")
-#     Day_of_the_Week = fields.Selection([
-#         ('Domingo','Domingo'),
-#         ('Segunda-feira','Segunda-feira'),
-#         ('Terça-feira','Terça-feira'),
-#         ('Quarta-feira','Quarta-feira'),
-#         ('Quinta-feira','Quinta-feira'),
-#         ('Sexta-feira','Sexta-feira'),
-#         ('Sábado','Sábado'),
-#     ], string="Dia da Semana")
-#     end = fields.Date('Fim')
-#     start = fields.Datetime('Início')
-#     last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
-#     month = fields.Selection([   # this should be a multiselect picklist
-#         ('Janeiro', 'Janeiro'),
-#         ('Fevereiro', 'Fevereiro'),
-#         ('Março', 'Março'),
-#         ('Abril', 'Abril'),
-#         ('Maio', 'Maio'),
-#         ('Junho', 'Junho'),
-#         ('Julho', 'Julho'),
-#         ('Agosto', 'Agosto'),
-#         ('Setembro', 'Setembro'),
-#         ('Outubro', 'Outubro'),
-#         ('Novembro', 'Novembro'),
-#         ('Dezembro', 'Dezembro'),
-#     ], string="Mês")
-#     order = fields.Selection([
-#         ('Primeira (o)','Primeira (o)'),
-#         ('Segunda (o)','Segunda (o)'),
-#         ('Terceira (o)','Terceira (o)'),
-#         ('Quarta (o)','Quarta (o)'),
-#         ('Última (o)','Última (o)'),
-#     ],string="Ordem")
-#     name = fields.char('Periodicidade')
-#     # periodicity_id = fields.Integer('Periodicidade ID')   autogenerating  Id of the records
-#     recurrence = fields.Integer('Recorrência')
+    model_id   = fields.Many2one('ir.model', string='Model ID')
+    channel_id = fields.Many2one('channel_segmentation', string='Channel Id')

@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class ServiceReasonConfig(models.Model):
     _name = 'service_reason_config'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Service Reason Config"
     _rec_name = 'Name'
 

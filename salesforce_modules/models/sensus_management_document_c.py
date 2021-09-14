@@ -2,6 +2,7 @@ from odoo import models,fields,api
 
 class Sensus_Management_Document_C(models.Model):
     _name = 'model_sensus_management_document_c'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Sensus Management Document C"
     _rec_name = 'Name'
 

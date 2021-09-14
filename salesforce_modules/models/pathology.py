@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class Pathology(models.Model):
     _name = 'model_pathology'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Pathology"
     _rec_name = 'Name'
 

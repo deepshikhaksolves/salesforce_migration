@@ -17,10 +17,40 @@
                             <group>
                                 <field name="Geographic_Scope_ID__c"/>
                                 <field name="Geographic_Scope_tnk__c"/>
-                                <field name="write_uid"/>
+                                <field name="write_uid" string='Last Modified By'/>
                             </group>
                         </group>
                     </sheet>
+                    <notebook>
+                        <page string="Products">
+                            <field name="product_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="ProductCode"/>
+                                    <field name="Description"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Cities">
+                            <field name="address_ids">
+                                <tree>
+                                    <field name="City" string="City"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="State">
+                            <field name="address_ids">
+                                <tree>
+                                    <field name="State__id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>

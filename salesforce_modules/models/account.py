@@ -18,7 +18,8 @@ class TypeOfOperator(models.Model):
 
 
 class Account(models.Model):
-    _inherit = 'account.account'
+    _name = 'account.account'
+    _inherit = ['account.account', 'mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Account"
 
     ABC_Analysis__pc    = fields.Selection([('B', 'B'),('B', 'B'),('C', 'C')],'ABC Analysis')
@@ -199,3 +200,19 @@ class Account(models.Model):
     # Name             = fields.Text('Revenue',size=80) already in odoo
     Income_Type__c   = fields.Selection([('direct','Direct'),('indirect','indirect')],'Type of Revenue')
     # ============== Fields For Revenue end ===========================
+
+    financial_group_id  = fields.Many2one('model_financial_group', string="Financial Group ID")
+
+    portal_access_ids   = fields.One2many('portal.access','account_id',string='Portal Access IDS')
+    bank_account_ids     = fields.One2many('account.setup.bank.manual.config','Account_id',string='Bank Account IDS')
+    attachment_ids  = fields.One2many('ir.attachment','account_id', string='Attachment IDS')
+    opportunity_ids = fields.One2many('crm.lead','account_id', string='Opportunity IDS')
+
+    partner_ids     = fields.Many2many(string='Partner IDS', comodel_name='res.partner', relation='account_partner_rel')
+
+    address_ids = fields.One2many('model_address','Account_id', string='Address IDS')
+    benificiaty_ids  = fields.One2many('model_beneficiary_carrier', 'carrier_id', string='Benificiary IDS')
+
+    product_family_ids  = fields.One2many('product_family', 'account_id', string='Product Family IDS')
+    price_list_ids  = fields.One2many('model_price_list', 'account_id', string='Price List IDS')
+    network_ids  = fields.One2many('accredited_network', 'account_id', string='Network IDS')

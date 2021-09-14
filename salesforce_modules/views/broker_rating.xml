@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="broker_rating_view_form" model="ir.ui.view">
+        <field name="name">broker.rating.view.form</field>
+        <field name="model">broker.rating</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="Rating"/>
+                            <field name="Start"/>
+                            <field name="End"/>
+                            <field name="Segmentation"/>
+                            <!-- <field name="createdBy"/> -->
+                        </group>
+                        <group>
+                            <field name="OwnerId"/>
+                            <!-- <field name="nama_kolom"/> -->
+                            <field name="Name"/>
+                            <!-- <field name="lastModifyedBy"/> -->
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Open Activities">
+                            <!-- <field name="line_ids"/> -->
+                        </page>
+                        <page string="Activity History">
+                            <!-- <field name="line_ids"/> -->
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="broker_rating_action" model="ir.actions.act_window">
+        <field name="name">broker.rating</field>
+        <field name="res_model">broker.rating</field>
+        <field name="view_mode">form</field>
+    </record>
+</odoo>

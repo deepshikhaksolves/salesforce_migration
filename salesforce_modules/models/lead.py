@@ -2,7 +2,8 @@ from odoo import models, fields, api
 
 
 class SalesforceLead(models.Model):
-    _inherit = 'crm.lead'
+    _name = 'crm.lead'
+    _inherit = ['crm.lead', 'mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Lead"
 
     actual_birth_policy__c  = fields.Selection([('January','January'),('February','February'),('March','March'),('April','April'),('May','May'),('June','June'),('July','July'),('August','August'),('September','September'),('October','October'),('November','November'),('December','December')],'Actual Birth Policy')
@@ -91,5 +92,6 @@ class SalesforceLead(models.Model):
     Website                 = fields.Char('Website')
     Workflow_Configuration__c = fields.Many2one('workflow_configuration',string='Workflow Configuration')
     
-   
+    attachment_ids  = fields.One2many('ir.attachment','lead_id', string='Attachment IDS')
     
+    benifit_ids = fields.One2many('model_benfit_politic','lead_id', string='Benifit IDS')

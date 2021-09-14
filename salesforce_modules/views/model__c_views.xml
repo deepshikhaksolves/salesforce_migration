@@ -4,44 +4,46 @@
         <!-- model form view -->
         <record id="model_view_form" model="ir.ui.view">
             <field name="name">Model View Layout</field>
-            <field name="model">model__c</field>
+            <field name="model">ir.model</field>
             <field name="arch" type="xml">
                 <form string="Model View">
                     <sheet>
                         <group>
                             <group>
-                                <field name="Name" />
+                                <field name="name"/>
+                                <field name="model"/>
                                 <field name="Brand__c"/>
                                 <field name="create_uid"/>
                             </group>
                             <group>
                                 <field name="OwnerId" />
-                                <field name="write_uid"/>
+                                <field name="write_uid" string="Last Modified By"/>
                             </group>
                         </group>
                         <notebook>
-                            <page string="Open Activities">
-                                <group>
-                                    
-                                </group>
-                            </page>
-                            <page string="Activity History">
-                                <group>
-                                    
-                                </group>
-                            </page>
                             <page string="Opportunities">
-                                <group>
-                                    
-                                </group>
+                                <field name="opportunity_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="account_id"/>
+                                        <field name="close_date"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="fleets">
-                                <group>
-                                    
-                                </group>
+                                <field name="fleet_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -49,10 +51,10 @@
         <!-- model tree view -->
         <record id="model_view_tree" model="ir.ui.view">
             <field name="name">Model Layout Tree</field>
-            <field name="model">model__c</field>
+            <field name="model">ir.model</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="Name" />
+                    <field name="name" />
                     <field name="Brand__c"/>
                     <field name="OwnerId"/>
                     <field name="create_uid"/>
@@ -65,7 +67,7 @@
         <record id="model_action" model="ir.actions.act_window">
             <field name="name">Model</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">model__c</field>
+            <field name="res_model">ir.model</field>
             <field name="view_mode">tree,form</field>
             <field name="view_ids" eval="[(5, 0, 0), 
                 (0, 0, {'view_mode': 'tree', 'view_id': ref('model_view_tree')}),

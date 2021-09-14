@@ -1,0 +1,72 @@
+<odoo>
+    <data>
+        <!--Comercial Structure C Layout form view -->
+        <record id="comercial_structure_c_form" model="ir.ui.view">
+            <field name="name">Comercial Structure C Layout</field>
+            <field name="model">model_comercial_structure_c</field>
+            <field name="arch" type="xml">
+                <form string="Comercial Structure C Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Internal_Structure"/>
+                                <field name="Quantity"/>
+                                <field name="Allows_Pair"/>
+                                <field name="Parent_Access"/>
+                                <field name="Multiple"/>
+                                <field name="create_uid" string="Created By"/>
+                            </group>
+                            <group>
+                                <field name="OwnerId"/>
+                                <field name="write_uid" string="Last Modified By"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Open Activities">
+                            </page>
+
+                            <page string="Activity History">
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Comercial Structure C Layout tree view -->
+        <record id="comercial_structure_c_tree" model="ir.ui.view">
+            <field name="name">Comercial Structure C Tree</field>
+            <field name="model">model_comercial_structure_c</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="Internal_Structure"/>
+                    <field name="Quantity"/>
+                    <field name="Allows_Pair"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Comercial Structure C Layout action window -->
+        <record id="comercial_structure_c_action" model="ir.actions.act_window">
+            <field name="name">Comercial Structure C Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_comercial_structure_c</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('comercial_structure_c_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('comercial_structure_c_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

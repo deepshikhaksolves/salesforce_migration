@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- financial group layout -->
+        <record id="financial_group_layout_form" model="ir.ui.view">
+            <field name="name">Financial Group Layout</field>
+            <field name="model">model_financial_group</field>
+            <field name="arch" type="xml">
+                <form string="Financial Group Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="company_classification" />
+                                <field name="profile" />
+                                <field name="active" />
+                            </group>
+                            <group>
+                                <field name="cost_center"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Drive">
+                                <group>
+                                    <group>
+                                        <field name="storage_code"/>
+                                        <field name="folder_template"/>
+                                        <field name="general_rule_group_backoffice_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="started"/>
+                                        <field name="drive_path"/>
+                                        <field name="general_rule_group_company_id"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="HR Protected">
+                                <group>
+                                    <field name="rh_protected"/>
+                                </group>
+                            </page>
+                            <page string="I Protected">
+                                <group>
+                                    <group>
+                                        <field name="I_protected"/>
+                                        <field name="domain"/>
+                                        <field name="approval_connection"/>
+                                    </group>
+                                    <group>
+                                        <field name="trail_code"/>
+                                        <field name="screening_code"/>
+                                        <field name="covid"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Protected Dr">
+                                <group>
+                                    <field name="dr_protected"/>
+                                </group>
+                            </page>
+
+                            <page string="Accounts">
+                                    <field name="account_ids">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="Social_Reason__c"/>
+                                            <field name="CNPJ__c"/>
+                                        </tree>
+                                    </field>
+                            </page>
+                            <page string="cost centers">
+                                    <field name="cost_center_ids">
+                                        <tree>
+                                            <field name="name" string='Cost Center ID'/>
+                                        </tree>
+                                    </field>
+                            </page>
+                            <page string="Portals and Accesses">
+                                    <field name="portal_access_ids">
+                                        <tree>
+                                            <field name="access_code__c" string='Access Number'/>
+                                            <field name="contract_summary__c"/>
+                                            <field name="access_type__c"/>
+                                            <field name="access_users__c"/>
+                                        </tree>
+                                    </field>
+                            </page>
+                            <page string="Financial Group History">
+                                <group>
+                                    <!-- <field name=""/> -->
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- financial_group_layout tree view -->
+        <record id="financial_group_layout_tree" model="ir.ui.view">
+            <field name="name">Financial Group Tree</field>
+            <field name="model">model_financial_group</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="company_classification" />
+                    <field name="profile" />
+                    <field name="active" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- financial_group_layout action window -->
+        <record id="financial_group_layout_action" model="ir.actions.act_window">
+            <field name="name">Financial Group Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_financial_group</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('financial_group_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('financial_group_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -12,7 +12,7 @@
                             <group>
                                 <field name="LineNumber" />
                                 <field name="Product2Id"/>
-                                <!-- <field name="QuoteId"/> -->
+                                <field name="QuoteId"/>
                                 <field name="ListPrice"/>
                                 <field name="UnitPrice"/>
                                 <field name="Quantity"/>
@@ -47,7 +47,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="LineNumber" />
-                    <!-- <field name="QuoteId"/> -->
+                    <field name="QuoteId"/>
                     <field name="ListPrice"/>
                     <field name="UnitPrice"/>
                     <field name="Quantity"/>

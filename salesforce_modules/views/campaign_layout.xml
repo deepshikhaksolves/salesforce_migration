@@ -56,13 +56,21 @@
                                 </group>
                             </page>
                             <page string="Notes">
-                                <group>
-                                    
-                                </group>
+                                <field name="attachment_ids">
+                                    <tree>
+                                        <field name="name" string='Attachment Name'/>
+                                        <field name="write_uid" string='Last Modified'/>
+                                        <field name="create_uid" />
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Files">
                                 <group>
-                                    <field name="CampaignImageId" widget='many2many_tags'/>
+                                    <field name="CampaignImageId">
+                                       <tree>
+                                            <field name="name" string='Attachment Name'/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <page string="Groups">
@@ -72,6 +80,11 @@
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>

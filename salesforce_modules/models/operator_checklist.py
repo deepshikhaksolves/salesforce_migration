@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class OperatorChecklist(models.Model):
     _name = 'model_operator_checklist'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Operator Checklist"
     _rec_name = 'Name'
 
