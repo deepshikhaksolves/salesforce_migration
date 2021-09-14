@@ -30,6 +30,8 @@
                             <group>
                                 <field name="stage_name"/>
                                 <field name="lead_source"/>
+                                <field name="sons_capital_limit"/>
+                                <field name="mailing_origin"/>
                                 <field name="benefits"/>
                                 <field name="employee"/>
                                 <field name="funeral_assistance_value"/>

@@ -6,7 +6,7 @@ class SalesforcePeriodicity(models.Model):
     _inherit = 'mail.thread'
     _description = "Salesforce Periodicity"
 
-    every = fields.Integer('A Cada')
+    every = fields.Integer('A Cada',size=3)
     user_id = fields.Many2one('res.users', string="Created By")
     day_of_the_week = fields.Selection([
         ('Domingo', 'Domingo'),
@@ -35,15 +35,15 @@ class SalesforcePeriodicity(models.Model):
         ('Dezembro', 'Dezembro'),
     ], string="Mês")
     order = fields.Selection([
-        ('Primeira (o)', 'Primeira (o)'),
-        ('Segunda (o)', 'Segunda (o)'),
-        ('Terceira (o)', 'Terceira (o)'),
-        ('Quarta (o)', 'Quarta (o)'),
-        ('Última (o)', 'Última (o)'),
-    ], string="Ordem")
-    name = fields.Char('Periodicidade')
+        ('Primeira (o)','Primeira (o)'),
+        ('Segunda (o)','Segunda (o)'),
+        ('Terceira (o)','Terceira (o)'),
+        ('Quarta (o)','Quarta (o)'),
+        ('Última (o)','Última (o)'),
+    ],string="Ordem")
+    name = fields.Char('Periodicidade',size=80)
     # periodicity_id = fields.Integer('Periodicidade ID')   autogenerating  Id of the records
-    recurrence = fields.Integer('Recorrência')
+    recurrence = fields.Integer('Recorrência',size=3)
     pattern = fields.Selection([
         ('Dia', 'Dia'),
         ('Semana', 'Semana'),
