@@ -41,8 +41,8 @@ class SalesforceOpportunityCompetitor(models.Model):
     competitor_name = fields.Selection([
         ('',''),
     ],string="Competitor Name")
-    strengths = fields.Char('Strengths')
-    weaknesses = fields.Char('Weaknesses')
+    strengths = fields.Char('Strengths',size=1000)
+    weaknesses = fields.Char('Weaknesses',size=1000)
     system_mod_stamp = fields.Datetime('System Modstamp')
 
 
@@ -55,17 +55,17 @@ class SalesforceOpportunityLineItem(models.Model):
     user_id = fields.Many2one('res.users', string="Created By")
     last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
     opportunity_id = fields.Many2one('crm.lead', string="Opportunity")
-    discount = fields.Float('Discount')
-    quantity = fields.Float('Quantity')
-    unit_price = fields.Float('Sales Price')
-    Subtotal = fields.Float('Subtotal')
-    TotalPrice = fields.Float('TotalPrice')
-    list_price = fields.Float('List Price')
-    description = fields.Char('Line Description')
+    discount = fields.Float('Discount',digits=(3,2))
+    quantity = fields.Float('Quantity', digits=(10, 2))
+    unit_price = fields.Float('Sales Price', digits=(16, 2))
+    Subtotal = fields.Float('Subtotal', digits=(16, 2))
+    TotalPrice = fields.Float('TotalPrice', digits=(16, 2))
+    list_price = fields.Float('List Price', digits=(16, 2))
+    description = fields.Char('Line Description',size=255)
     carrier = fields.Char('Operadora')
-    name = fields.Char('Opportunity Product Name')
+    name = fields.Char('Opportunity Product Name',size=376)
     product2Id = fields.Many2one('product.product', string="Product")
-    product_code = fields.Char('Product Code')
+    product_code = fields.Char('Product Code',size=255)
 
 
 class SalesforceOpportunityProduct(models.Model):
@@ -86,8 +86,8 @@ class SalesforceOpportunityProduct(models.Model):
         ('Fixed','Fixed'),
         ('Percentage','Percentage'),
     ],string="Reimbursement Value Type")
-    life = fields.Integer('Vidas')
-    reimbursement_value = fields.Float('Reimbursement Value')
+    life = fields.Integer('Vidas',size=18)
+    reimbursement_value = fields.Float('Reimbursement Value',digits=(3,2))
     consultation_reimbursement = fields.Float('Consultation Reimbursement')
 
 
@@ -125,8 +125,8 @@ class SalesforceOpportunityStageParameter(models.Model):
 
 
     user_id = fields.Many2one('res.users', string="User")
-    developer_name = fields.Char('Custom Metadata Record Name')
-    master_label = fields.Char('Label')
+    developer_name = fields.Char('Custom Metadata Record Name',size=40)
+    master_label = fields.Char('Label',size=40)
     namespace_prefix = fields.Char('Namespace Prefix')
     last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
     is_protected = fields.Boolean('Protected Component')
@@ -144,7 +144,7 @@ class SalesforceOpportunityStageParameter(models.Model):
         ('Fechada','Fechada'),
         ('Perdida','Perdida'),
     ],string="Opportunity Stage")
-    process = fields.Char('Process')
+    process = fields.Char('Process',size=255)
 
 
 class SalesforceOpportunityStagePath(models.Model):
@@ -154,10 +154,10 @@ class SalesforceOpportunityStagePath(models.Model):
 
 
     user_id = fields.Many2one('res.users', string="User")
-    developer_name = fields.Char('Custom Metadata Record Name')
-    master_label = fields.Char('Label')
+    developer_name = fields.Char('Custom Metadata Record Name',size=40)
+    master_label = fields.Char('Label',size=40)
     namespace_prefix = fields.Char('Namespace Prefix')
     last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
     is_protected = fields.Boolean('Protected Component')
-    current_stage = fields.Char('Current Stage')
-    next_stage = fields.Char('Next Stage')
+    current_stage = fields.Char('Current Stage',size=255)
+    next_stage = fields.Char('Next Stage',size=255)
