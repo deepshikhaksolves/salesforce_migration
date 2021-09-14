@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class AdditionalParameter(models.Model):
     _name = 'model_additional_parameter'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Additional Parameter'
     _rec_name = 'Name'
 

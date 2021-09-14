@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class BeneficiaryCard(models.Model):
     _name = 'model_beneficiary_card'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Beneficiary Card'
 
     beneficiary = fields.Many2one('model_beneficiary',string="Recipient")

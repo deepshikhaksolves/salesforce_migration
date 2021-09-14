@@ -14,6 +14,7 @@
                                 <field name="Contract_End"/>
                                 <field name="Contract_Type"/>
                                 <field name="Payment_Method"/>
+                                <field name="Competitor"/>
                                 <field name="Performing_Index"/>
                                 <field name="How_c"/>
                             </group>
@@ -35,6 +36,11 @@
                             <page string="Contracted Plans"></page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -49,6 +55,7 @@
                     <field name="Contract_End"/>
                     <field name="Contract_Type"/>
                     <field name="Payment_Method"/>
+                    <field name="Competitor"/>
                     <field name="Performing_Index"/>
                     <field name="How_c"/>
                     <field name="Brokerage_Transfer"/>
@@ -100,6 +107,7 @@
                             <group>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Monthly_Bill"/>
                                 <field name="Comission"/>
                                 <field name="Revenue"/>
@@ -113,6 +121,11 @@
                             <page string="Contracted Plans"></page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -132,6 +145,7 @@
                     <field name="Payment_Method"/>
                     <field name="Use_Product"/>
                     <field name="Offer"/>
+                    <field name="Competitor"/>
                     <field name="Monthly_Bill"/>
                     <field name="Comission"/>
                     <field name="Revenue"/>
@@ -178,6 +192,7 @@
                             <group>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Monthly_Bill"/>
                                 <field name="Comission"/>
                                 <field name="Revenue"/>
@@ -191,6 +206,11 @@
                             <page string="Contracted Plans"></page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -210,6 +230,7 @@
                                 <field name="Provider_id"/>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Monthly_Bill"/>
                                 <field name="Comission"/>
                                 <field name="Revenue"/>
@@ -257,6 +278,7 @@
                             <group>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Monthly_Bill"/>
                                 <field name="Comission"/>
                                 <field name="Revenue"/>
@@ -270,6 +292,11 @@
                             <page string="Contracted Plans"></page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -290,6 +317,7 @@
                                 <field name="Number_of_Installments"/>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Monthly_Bill"/>
                                 <field name="Comission"/>
                                 <field name="Revenue"/>
@@ -335,6 +363,7 @@
                             <group>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Monthly_Bill"/>
                                 <field name="Revenue"/>
                                 <field name="OwnerId"/>
@@ -347,6 +376,11 @@
                             <page string="Contracted Plans"></page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -365,6 +399,7 @@
                                 <field name="Contract_Type"/>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Monthly_Bill"/>
                                 <field name="Revenue"/>
                                 <field name="OwnerId"/>
@@ -411,6 +446,7 @@
                             <group>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Monthly_Bill"/>
                                 <field name="Comission"/>
                                 <field name="Revenue"/>
@@ -424,6 +460,11 @@
                             <page string="Contracted Plans"></page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -441,6 +482,7 @@
                                 <field name="Contract_End"/>
                                 <field name="Contract_Type"/>
                                 <field name="Payment_Method"/>
+                                <field name="Competitor"/>
                                 <field name="Total_Capital"/>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
@@ -495,6 +537,7 @@
                             <group>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Contract_Type"/>
                                 <field name="Payment_Method"/>
                                 <field name="Performing_Index"/>
@@ -513,6 +556,11 @@
                             <page string="Contracted Plans"></page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -537,6 +585,7 @@
                                 <field name="Purchase_Limit_Value"/>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Contract_Type"/>
                                 <field name="Payment_Method"/>
                                 <field name="Performing_Index"/>
@@ -587,6 +636,7 @@
                             <group>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Monthly_Bill"/>
                                 <field name="Revenue"/>
                                 <field name="OwnerId"/>
@@ -599,6 +649,11 @@
                             <page string="Contracted Plans"></page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -618,6 +673,7 @@
                                 <field name="Places"/>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Monthly_Bill"/>
                                 <field name="Revenue"/>
                                 <field name="OwnerId"/>
@@ -666,6 +722,7 @@
                             <group>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Availability_Fee"/>
                                 <field name="Monthly_Average_Value"/>
                                 <field name="Life"/>
@@ -681,6 +738,11 @@
                             <page string="Contracted Plans"></page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -703,6 +765,7 @@
                                 <field name="OwnerId"/>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Availability_Fee"/>
                                 <field name="Monthly_Average_Value"/>
                                 <field name="Life"/>
@@ -758,6 +821,7 @@
                             <group>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Administration_Tax"/>
                                 <field name="Output_Rate"/>
                                 <field name="Life"/>
@@ -775,6 +839,11 @@
                             <page string="Contracted Plans"></page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -801,6 +870,7 @@
                                 <field name="Pension_Mode"/>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Administration_Tax"/>
                                 <field name="Output_Rate"/>
                                 <field name="Life"/>
@@ -857,6 +927,7 @@
                             <group>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Performing_Index"/>
                                 <field name="Life"/>
                                 <field name="Monthly_Bill"/>
@@ -874,6 +945,11 @@
                             <page string="Contracted Plans"></page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -899,6 +975,7 @@
                                 <field name="How_c"/>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Performing_Index"/>
                                 <field name="Life"/>
                                 <field name="Monthly_Bill"/>
@@ -953,6 +1030,7 @@
                             <group>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Availability_Fee"/>
                                 <field name="Monthly_Average_Value"/>
                                 <field name="Life"/>
@@ -967,6 +1045,11 @@
                             <page string="Contracted Plans"></page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -990,6 +1073,7 @@
                                 <field name="How_c"/>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Availability_Fee"/>
                                 <field name="Monthly_Average_Value"/>
                                 <field name="Life"/>
@@ -1038,6 +1122,7 @@
                             <group>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Monthly_Bill"/>
                                 <field name="Comission"/>
                                 <field name="Revenue"/>
@@ -1051,6 +1136,11 @@
                             <page string="Contracted Plans"></page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -1071,6 +1161,7 @@
                                 <field name="Payment_Method"/>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Monthly_Bill"/>
                                 <field name="Comission"/>
                                 <field name="Revenue"/>
@@ -1123,6 +1214,7 @@
                             <group>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Life"/>
                                 <field name="Actual_Tax"/>
                                 <field name="Monthly_Bill"/>
@@ -1140,6 +1232,11 @@
                             <page string="Contracted Plans"></page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -1166,6 +1263,7 @@
                                 <field name="Total_Capital"/>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
+                                <field name="Competitor"/>
                                 <field name="Life"/>
                                 <field name="Actual_Tax"/>
                                 <field name="Monthly_Bill"/>

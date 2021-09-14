@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class QuoteProducts(models.Model):
     _name = 'model_quote_products'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Quote Products'
     _rec_name = 'Name'
 

@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class Quote(models.Model):
     _name = 'model_quote'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Quote'
     _rec_name = 'Name'
 
@@ -15,14 +16,14 @@ class Quote(models.Model):
     BillingAddress = fields.Text(string="Bill To")
     BillingName = fields.Char(string="Bill To Name", size=255)
     carrier = fields.Char(string="Carrier")
-    # Case =  fields.Many2one('case',string="Case") Model Not found
+    Case =  fields.Many2one('model_case',string="Case")
     cc_email = fields.Char(string="CC Email")
     CNPJ = fields.Char(string="CNPJ")
     ContactId = fields.Many2one('res.partner',string="Contact Name")
     ContractId = fields.Many2one('hr.contract', string="Contract")
     cpf = fields.Char(string="CPF", size=14)
     # CreatedById already in odoo
-    # creation_date already in odoo
+    creation_date = fields.Date('Creation Date')
     status_change_date = fields.Date(string="Status Change Date")
     Description = fields.Text(string="Description")
     days_in_current_status = fields.Char(string="Days in Current Status")
@@ -107,7 +108,7 @@ class Quote(models.Model):
     ShippingName =  fields.Char(string="Ship To Name", size=255)
     ShippingHandling = fields.Float(string="Shipping and Handling", digits=(16, 2))
     Quote__c = fields.Char(string="Study request")
-    # parent_quote_id = fields.Many2one('')
+    parent_quote_id = fields.Many2one('model_quote', string="Parent Study Request" )
     Status = fields.Selection([
         ('Draft','In filling'),
         ('Needs Review','Open'),
@@ -137,6 +138,7 @@ class Quote(models.Model):
     # TotalPrice
     verified_partnership = fields.Char(string="Verified Partnership", size=100)
     last_quote = fields.Boolean(string="Last quote")
+    attachment_ids = fields.One2many('ir.attachment', 'quote_id', string="Attachment IDS")
 
     _sql_constraints = [
         ('check_external_id_uniq', 'unique (External_ID)', "External ID Should be unique!!"),

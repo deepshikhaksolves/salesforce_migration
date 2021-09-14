@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class RevenueProvisioning(models.Model):
     _name = 'model_revenue_provisioning'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Revenue Provisioning'
     _rec_name = 'Name'
 

@@ -15,8 +15,8 @@ class Service_C(models.Model):
     Required = fields.Boolean(string='Mandatory')
     OwnerId = fields.Many2one('res.users',string='Owner')
 
-    # periodicity_id = fields.Many2one('model.periodicity',string='Periodicity')
-    # periodicity_id field is related to Periodicity model which is not created
+    periodicity_id = fields.Many2one('model.periodicity',string='Periodicity')
+    #Field is related to periodicity object which is not define
 
     Name = fields.Char(string='Service',size=80)
     type = fields.Selection([('Request','Request'),('Assignment','Assignment')],string='Type')

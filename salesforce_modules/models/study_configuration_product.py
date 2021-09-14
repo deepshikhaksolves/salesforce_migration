@@ -4,6 +4,7 @@ from odoo import models, fields, api
 class StudyConfigurationProduct(models.Model):
     _name = 'model_study_configuration_product'
     _description = "Salesforce Study Configuration Product"
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name = 'Name'
 
     carrier =  fields.Char(string="Carrier")

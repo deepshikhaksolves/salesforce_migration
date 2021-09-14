@@ -22,10 +22,12 @@
                                 <field name="Comission_Hold"/>
                                 <field name="Endorsement_Code"/>
                                 <field name="Status"/>
+                                <field name="Revenue_Provisioning"/>
                                 <field name="create_uid" string='Created By'/>
                             </group>
                             <group>
                                 <field name="OwnerId"/>
+                                <field name="write_uid" string='Last Modified By'/>
                             </group>
                         </group>
                         <notebook>
@@ -35,6 +37,11 @@
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -57,6 +64,7 @@
                     <field name="Comission_Hold"/>
                     <field name="Endorsement_Code"/>
                     <field name="Status"/>
+                    <field name="Revenue_Provisioning"/>
                     <field name="create_uid" string='Created By'/>
                     <field name="OwnerId"/>
                 </tree>

@@ -87,43 +87,100 @@
                                 </group>
                             </page>
                             <page string="Contact Roles" name="contact_roles">
-                                <group></group>
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Opportunity Team" name="opportunity_team">
-                                <group></group>
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Partners" name="partners">
-                                <group></group>
+                                <group>
+                                    <field name="contact_partner_lines" >
+                                        <tree string="Contract Partner" editable="bottom">
+                                             <field name="partner_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group></group>
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Competitors" name="competitors">
-                                <group></group>
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activity_history">
-                                <group></group>
-                            </page>
-                            <page string="Stage History" name="stage_history">
-                                <group></group>
-                            </page>
-                            <page string="Products" name="products">
-                                <group></group>
-                            </page>
-                            <page string="Approval History" name="approval_history">
-                                <group></group>
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
-                                <group></group>
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Cases" name="cases">
-                                <group></group>
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -232,43 +289,100 @@
                                 </group>
                             </page>
                             <page string="Contact Roles" name="contact_roles">
-                                <group></group>
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Opportunity Team" name="opportunity_team">
-                                <group></group>
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Partners" name="partners">
-                                <group></group>
+                                <group>
+                                    <field name="contact_partner_lines" >
+                                        <tree string="Contract Partner" editable="bottom">
+                                             <field name="partner_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group></group>
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Competitors" name="competitors">
-                                <group></group>
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activity_history">
-                                <group></group>
-                            </page>
-                            <page string="Stage History" name="stage_history">
-                                <group></group>
-                            </page>
-                            <page string="Products" name="products">
-                                <group></group>
-                            </page>
-                            <page string="Approval History" name="approval_history">
-                                <group></group>
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
-                                <group></group>
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Cases" name="cases">
-                                <group></group>
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -360,43 +474,100 @@
                                 </group>
                             </page>
                             <page string="Contact Roles" name="contact_roles">
-                                <group></group>
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Opportunity Team" name="opportunity_team">
-                                <group></group>
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Partners" name="partners">
-                                <group></group>
+                                <group>
+                                    <field name="contact_partner_lines" >
+                                        <tree string="Contract Partner" editable="bottom">
+                                             <field name="partner_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group></group>
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Competitors" name="competitors">
-                                <group></group>
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activity_history">
-                                <group></group>
-                            </page>
-                            <page string="Stage History" name="stage_history">
-                                <group></group>
-                            </page>
-                            <page string="Products" name="products">
-                                <group></group>
-                            </page>
-                            <page string="Approval History" name="approval_history">
-                                <group></group>
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
-                                <group></group>
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Cases" name="cases">
-                                <group></group>
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -486,43 +657,100 @@
                                 </group>
                             </page>
                             <page string="Contact Roles" name="contact_roles">
-                                <group></group>
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Opportunity Team" name="opportunity_team">
-                                <group></group>
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Partners" name="partners">
-                                <group></group>
+                                <group>
+                                    <field name="contact_partner_lines" >
+                                        <tree string="Contract Partner" editable="bottom">
+                                             <field name="partner_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group></group>
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Competitors" name="competitors">
-                                <group></group>
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activity_history">
-                                <group></group>
-                            </page>
-                            <page string="Stage History" name="stage_history">
-                                <group></group>
-                            </page>
-                            <page string="Products" name="products">
-                                <group></group>
-                            </page>
-                            <page string="Approval History" name="approval_history">
-                                <group></group>
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
-                                <group></group>
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Cases" name="cases">
-                                <group></group>
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -610,43 +838,100 @@
                                 </group>
                             </page>
                             <page string="Contact Roles" name="contact_roles">
-                                <group></group>
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Opportunity Team" name="opportunity_team">
-                                <group></group>
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Partners" name="partners">
-                                <group></group>
+                                <group>
+                                    <field name="contact_partner_lines" >
+                                        <tree string="Contract Partner" editable="bottom">
+                                             <field name="partner_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group></group>
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Competitors" name="competitors">
-                                <group></group>
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activity_history">
-                                <group></group>
-                            </page>
-                            <page string="Stage History" name="stage_history">
-                                <group></group>
-                            </page>
-                            <page string="Products" name="products">
-                                <group></group>
-                            </page>
-                            <page string="Approval History" name="approval_history">
-                                <group></group>
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
-                                <group></group>
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Cases" name="cases">
-                                <group></group>
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -741,43 +1026,100 @@
                                 </group>
                             </page>
                             <page string="Contact Roles" name="contact_roles">
-                                <group></group>
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Opportunity Team" name="opportunity_team">
-                                <group></group>
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Partners" name="partners">
-                                <group></group>
+                                <group>
+                                    <field name="contact_partner_lines" >
+                                        <tree string="Contract Partner" editable="bottom">
+                                             <field name="partner_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group></group>
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Competitors" name="competitors">
-                                <group></group>
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activity_history">
-                                <group></group>
-                            </page>
-                            <page string="Stage History" name="stage_history">
-                                <group></group>
-                            </page>
-                            <page string="Products" name="products">
-                                <group></group>
-                            </page>
-                            <page string="Approval History" name="approval_history">
-                                <group></group>
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
-                                <group></group>
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Cases" name="cases">
-                                <group></group>
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -885,43 +1227,100 @@
                                 </group>
                             </page>
                             <page string="Contact Roles" name="contact_roles">
-                                <group></group>
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Opportunity Team" name="opportunity_team">
-                                <group></group>
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Partners" name="partners">
-                                <group></group>
+                                <group>
+                                    <field name="contact_partner_lines" >
+                                        <tree string="Contract Partner" editable="bottom">
+                                             <field name="partner_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group></group>
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Competitors" name="competitors">
-                                <group></group>
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activity_history">
-                                <group></group>
-                            </page>
-                            <page string="Stage History" name="stage_history">
-                                <group></group>
-                            </page>
-                            <page string="Products" name="products">
-                                <group></group>
-                            </page>
-                            <page string="Approval History" name="approval_history">
-                                <group></group>
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
-                                <group></group>
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Cases" name="cases">
-                                <group></group>
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -1013,43 +1412,100 @@
                                 </group>
                             </page>
                             <page string="Contact Roles" name="contact_roles">
-                                <group></group>
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Opportunity Team" name="opportunity_team">
-                                <group></group>
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Partners" name="partners">
-                                <group></group>
+                                <group>
+                                    <field name="contact_partner_lines" >
+                                        <tree string="Contract Partner" editable="bottom">
+                                             <field name="partner_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group></group>
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Competitors" name="competitors">
-                                <group></group>
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activity_history">
-                                <group></group>
-                            </page>
-                            <page string="Stage History" name="stage_history">
-                                <group></group>
-                            </page>
-                            <page string="Products" name="products">
-                                <group></group>
-                            </page>
-                            <page string="Approval History" name="approval_history">
-                                <group></group>
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
-                                <group></group>
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Cases" name="cases">
-                                <group></group>
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -1167,43 +1623,100 @@
                                 </group>
                             </page>
                             <page string="Contact Roles" name="contact_roles">
-                                <group></group>
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Opportunity Team" name="opportunity_team">
-                                <group></group>
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Partners" name="partners">
-                                <group></group>
+                                <group>
+                                    <field name="contact_partner_lines" >
+                                        <tree string="Contract Partner" editable="bottom">
+                                             <field name="partner_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group></group>
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Competitors" name="competitors">
-                                <group></group>
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activity_history">
-                                <group></group>
-                            </page>
-                            <page string="Stage History" name="stage_history">
-                                <group></group>
-                            </page>
-                            <page string="Products" name="products">
-                                <group></group>
-                            </page>
-                            <page string="Approval History" name="approval_history">
-                                <group></group>
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
-                                <group></group>
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Cases" name="cases">
-                                <group></group>
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -1302,7 +1815,6 @@
                                     </group>
                                 </group>
                             </page>
-
                             <page string="System Information" name="system_information">
                                 <group>
                                     <group>
@@ -1314,43 +1826,100 @@
                                 </group>
                             </page>
                             <page string="Contact Roles" name="contact_roles">
-                                <group></group>
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Opportunity Team" name="opportunity_team">
-                                <group></group>
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Partners" name="partners">
-                                <group></group>
+                                <group>
+                                    <field name="contact_partner_lines" >
+                                        <tree string="Contract Partner" editable="bottom">
+                                             <field name="partner_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group></group>
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Competitors" name="competitors">
-                                <group></group>
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activity_history">
-                                <group></group>
-                            </page>
-                            <page string="Stage History" name="stage_history">
-                                <group></group>
-                            </page>
-                            <page string="Products" name="products">
-                                <group></group>
-                            </page>
-                            <page string="Approval History" name="approval_history">
-                                <group></group>
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
-                                <group></group>
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Cases" name="cases">
-                                <group></group>
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -1427,43 +1996,91 @@
                                 </group>
                             </page>
                             <page string="Contact Roles" name="contact_roles">
-                                <group></group>
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Opportunity Team" name="opportunity_team">
-                                <group></group>
-                            </page>
-                            <page string="Partners" name="partners">
-                                <group></group>
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group></group>
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Competitors" name="competitors">
-                                <group></group>
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activity_history">
-                                <group></group>
-                            </page>
-                            <page string="Stage History" name="stage_history">
-                                <group></group>
-                            </page>
-                            <page string="Products" name="products">
-                                <group></group>
-                            </page>
-                            <page string="Approval History" name="approval_history">
-                                <group></group>
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
-                                <group></group>
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Cases" name="cases">
-                                <group></group>
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -1519,7 +2136,124 @@
                                 <field name="opportunity_event_source"/>
                             </group>
                         </group>
+                        <notebook>
+                            <page string="Informações para Contrato" name="contract_information">
+                                <group>
+                                    <group>
+                                        <field name="contract_origin"/>
+                                        <field name="brokerage_transfer"/>
+                                        <field name="income_type"/>
+                                        <field name="income_type"/>
+                                        <field name="Tax_Type"/>
+                                        <field name="grace_period"/>
+                                    </group>
+                                    <group>
+                                        <field name="frequency"/>
+                                        <field name="contributory"/>
+                                        <field name="contributory_value"/>
+                                        <field name="contributory_description"/>
+                                        <field name="has_dps"/>
+                                        <field name="charge_rate"/>
+                                        <field name="administration_tax"/>
+                                        <field name="output_rate"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Contact Roles" name="contact_roles">
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Opportunity Team" name="opportunity_team">
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Partners" name="partners">
+                                <group>
+                                    <field name="contact_partner_lines" >
+                                        <tree string="Contract Partner" editable="bottom">
+                                             <field name="partner_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Quotes" name="quotes">
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Competitors" name="competitors">
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Notes / Attachments" name="notes_attachments">
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Produtos da Oportunidade" name="opportunity_products">
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Cases" name="cases">
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -1563,7 +2297,92 @@
                                 <field name="lost_comment"/>
                             </group>
                         </group>
+                        <notebook>
+                            <page string="Informações para Contrato" name="contract_information">
+                                <group>
+                                    <group>
+                                        <field name="contract_origin"/>
+                                        <field name="brokerage_transfer"/>
+                                        <field name="income_type"/>
+                                        <field name="income_type"/>
+                                        <field name="Tax_Type"/>
+                                        <field name="grace_period"/>
+                                    </group>
+                                    <group>
+                                        <field name="frequency"/>
+                                        <field name="contributory"/>
+                                        <field name="contributory_value"/>
+                                        <field name="contributory_description"/>
+                                        <field name="has_dps"/>
+                                        <field name="charge_rate"/>
+                                        <field name="administration_tax"/>
+                                        <field name="output_rate"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Contact Roles" name="contact_roles">
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Opportunity Team" name="opportunity_team">
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Quotes" name="quotes">
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Notes / Attachments" name="notes_attachments">
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Cases" name="cases">
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -1682,43 +2501,100 @@
                                 </group>
                             </page>
                             <page string="Contact Roles" name="contact_roles">
-                                <group></group>
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Opportunity Team" name="opportunity_team">
-                                <group></group>
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Partners" name="partners">
-                                <group></group>
+                                <group>
+                                    <field name="contact_partner_lines" >
+                                        <tree string="Contract Partner" editable="bottom">
+                                             <field name="partner_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group></group>
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Competitors" name="competitors">
-                                <group></group>
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activity_history">
-                                <group></group>
-                            </page>
-                            <page string="Stage History" name="stage_history">
-                                <group></group>
-                            </page>
-                            <page string="Products" name="products">
-                                <group></group>
-                            </page>
-                            <page string="Approval History" name="approval_history">
-                                <group></group>
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
-                                <group></group>
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Cases" name="cases">
-                                <group></group>
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -1818,43 +2694,100 @@
                                 </group>
                             </page>
                             <page string="Contact Roles" name="contact_roles">
-                                <group></group>
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Opportunity Team" name="opportunity_team">
-                                <group></group>
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Partners" name="partners">
-                                <group></group>
+                                <group>
+                                    <field name="contact_partner_lines" >
+                                        <tree string="Contract Partner" editable="bottom">
+                                             <field name="partner_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group></group>
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Competitors" name="competitors">
-                                <group></group>
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activity_history">
-                                <group></group>
-                            </page>
-                            <page string="Stage History" name="stage_history">
-                                <group></group>
-                            </page>
-                            <page string="Products" name="products">
-                                <group></group>
-                            </page>
-                            <page string="Approval History" name="approval_history">
-                                <group></group>
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
-                                <group></group>
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Cases" name="cases">
-                                <group></group>
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -1965,43 +2898,100 @@
                                 </group>
                             </page>
                             <page string="Contact Roles" name="contact_roles">
-                                <group></group>
+                                <group>
+                                    <field name="contact_role_lines" >
+                                        <tree string="Contact Roles" editable="bottom">
+                                             <field name="is_primary"/>
+                                             <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Opportunity Team" name="opportunity_team">
-                                <group></group>
+                                <group>
+                                    <field name="opportunity_team_lines" >
+                                        <tree string="Opportunity Team" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Partners" name="partners">
-                                <group></group>
+                                <group>
+                                    <field name="contact_partner_lines" >
+                                        <tree string="Contract Partner" editable="bottom">
+                                             <field name="partner_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group></group>
+                                <group>
+                                    <field name="quote_lines" >
+                                        <tree string="Quotes" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="Name"/>
+                                             <field name="Quotation_Reason"/>
+                                             <field name="OwnerId"/>
+                                             <field name="Status"/>
+                                             <field name="creation_date"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Competitors" name="competitors">
-                                <group></group>
+                                <group>
+                                    <field name="competitor_lines" >
+                                        <tree string="Competitor" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="competitor_name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activity_history">
-                                <group></group>
-                            </page>
-                            <page string="Stage History" name="stage_history">
-                                <group></group>
-                            </page>
-                            <page string="Products" name="products">
-                                <group></group>
-                            </page>
-                            <page string="Approval History" name="approval_history">
-                                <group></group>
+                                <group>
+                                    <field name="attachment_lines" >
+                                        <tree string="Attachment" editable="bottom">
+                                             <field name="id"/>
+                                             <field name="document_use"/>
+                                             <field name="financial_contract_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
-                                <group></group>
+                                <group>
+                                    <field name="product_lines" >
+                                        <tree string="Opportunity Product" editable="bottom">
+                                             <field name="name"/>
+                                             <field name="carrier"/>
+                                             <field name="product"/>
+                                             <field name="life"/>
+                                             <field name="winner"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                             <page string="Cases" name="cases">
-                                <group></group>
+                                <group>
+                                    <field name="case_lines" >
+                                        <tree string="Cases" editable="bottom">
+                                             <field name="CaseNumber"/>
+                                             <field name="Subject"/>
+                                             <field name="CreatedDate"/>
+                                             <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
