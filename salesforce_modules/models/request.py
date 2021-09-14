@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class Request(models.Model):
     _name = 'model_request'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Request"
     _rec_name = 'Name'
 

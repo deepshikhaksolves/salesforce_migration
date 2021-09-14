@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class Eligibility(models.Model):
     _name = 'model_eligibility'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Eligibility"
     _rec_name = 'name'
 

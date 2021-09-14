@@ -146,3 +146,5 @@ class BenefitPolitic(models.Model):
         ('Recurrent','Recurrent')
     ],string="Type of Revenue")
     Life =fields.Float(string="Lives", digits=(18, 0))
+
+    lead_id = fields.Many2one('crm.lead', string='Lead Id')

@@ -21,22 +21,40 @@
                         </group>
                         <notebook>
                             <page string="Network Providers Products">
-                                <group>
-                                    
-                                </group>
+                                <field name="network_provider_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Products Networks">
-                                <group>
-                                    
-                                </group>
+                                <field name="network_provider_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="product2__c" string='Product'/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Quote Line Items">
-                                <group>
-                                    
-                                </group>
+                                <field name="quote_line_item_ids">
+                                    <tree>
+                                        <field name="Product2Id" string='Product'/>
+                                        <field name="Quantity"/>
+                                        <field name="UnitPrice"/>
+                                        <field name="ListPrice"/>
+                                        <field name="Subtotal"/>
+                                        <field name="TotalPrice"/>
+                                        <field name="Discount"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>

@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class ExpenceProvisioning(models.Model):
     _name = 'expence_provisioning'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Expence Provisioning"
     _rec_name = 'name'
 

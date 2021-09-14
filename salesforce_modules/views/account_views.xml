@@ -43,7 +43,95 @@
                                 <field name="write_uid" string="Last Modified By"/>
                             </group>
                         </group>
+                        <notebook>
+                            <page string="Adresses">
+                                <field name="address_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="City"/>
+                                        <field name="State__id"/>
+                                        <field name="Address_Type"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Contacts">
+                                <field name="partner_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="title"/>
+                                        <field name="email"/>
+                                        <field name="phone"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Opportunities">
+                                <field name="opportunity_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="lead_source"/>
+                                        <field name="write_date" string="Last Modified Date"/>
+                                        <field name="stage_name"/>
+                                        <field name="amount"/>
+                                        <field name="close_date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Cases">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Notes &amp; Attachments">
+                                <field name="attachment_ids">
+                                    <tree>
+                                        <field name="name" string='Attachment Name'/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Partners">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Bills">
+                                <group>
+                                    <field name="name" string="Account Name"/>
+                                    <field name="CNPJ__c"/>
+                                    <field name="Social_Reason__c"/>
+                                    <field name="financial_group__c"/>
+                                </group>
+                            </page>
+                            <page string="Bank accounts">
+                                <field name="bank_account_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Benefit Policies">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Account Team">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Portals and Accesses (Administrator)">
+                                <field name="portal_access_ids">
+                                    <tree>
+                                        <field name="access_code__c" string='Access Number'/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -106,6 +194,90 @@
                             </group>
                         </group>
                     </sheet>
+                    <notebook>
+                        <page string="Account Summary">
+                            
+                        </page>
+                        <page string="Address Information">
+                            <group>
+                                <group>
+                                    <field name="BillingAddress"/>
+                                </group>
+                                <group>
+                                    <field name="ShippingAddress"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="System Information">
+                            <group>
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </page>
+                        <page string="Custom Links">
+                            <group>
+                                
+                            </group>
+                        </page>
+                        <page string="Related Contacts">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Opportunities">
+                            <field name="opportunity_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="stage_name"/>
+                                    <field name="amount"/>
+                                    <field name="close_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Cases">
+                            
+                        </page>
+                        <page string="Notes">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Files">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                    <field name="write_uid" string='Last Modified'/>
+                                    <field name="create_uid" />
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Account Team">
+                            <group>
+                                
+                            </group>
+                        </page>
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -175,6 +347,82 @@
                             </group>
                         </group>
                     </sheet>
+                    <notebook>
+                        <page string="Address">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="city"/>
+                                    <field name="state_id"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Contacts">
+                            
+                        </page>
+                        <page string="Benefits">
+                            <group>
+                                <field name="benificiaty_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Product Family">
+                            <field name="product_family_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Price Tables">
+                            <field name="price_list_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Bank accounts">
+                            <field name="bank_account_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>                            
+                        </page>
+
+                        <page string="Notes &amp; Attachments">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page>
+                        
+                        <page string="Portals and Accesses">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                    <field name="contract_summary__c"/>
+                                    <field name="financial_group_id"/>
+                                    <field name="access_type__c"/>
+                                    <field name="access_users__c"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -250,6 +498,100 @@
                             </group>
                         </group>
                     </sheet>
+                    <notebook>
+                        <page string="Address">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="city"/>
+                                    <field name="state_id"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Contacts">
+                            
+                        </page>
+                        <page string="Related Contacts">
+                            
+                        </page>
+                        <page string="Opportunities">
+                            <field name="opportunity_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="stage_name"/>
+                                    <field name="amount"/>
+                                    <field name="close_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Account Team">
+                            <group>
+                                
+                            </group>
+                        </page>
+                        <page string="Bills">
+                            <group>
+                                <field name="name" string="Account Name"/>
+                                <field name="CNPJ__c"/>
+                                <field name="Social_Reason__c"/>
+                                <field name="financial_group__c"/>
+                            </group>
+                        </page>
+
+                        <page string="Benefit Policies">
+                            <group>
+                                
+                            </group>
+                        </page>
+
+                        <page string="Partners">
+                            <group>
+                                
+                            </group>
+                        </page>
+
+                        <page string="Bank accounts">
+                            <field name="bank_account_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>                            
+                        </page>
+
+                        <page string="Notes &amp; Attachments">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Cases">
+                            <group>
+                                
+                            </group>
+                        </page>
+                        <page string="Notes">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page>
+                        
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -324,6 +666,82 @@
                             </group>
                         </group>
                     </sheet>
+                    <notebook>
+                        <page string="Address">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="city"/>
+                                    <field name="state_id"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Contacts">
+                            
+                        </page>
+                        <page string="Benefits">
+                            <group>
+                                <field name="benificiaty_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Product Family">
+                            <field name="product_family_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Price Tables">
+                            <field name="price_list_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Bank accounts">
+                            <field name="bank_account_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>                            
+                        </page>
+
+                        <page string="Notes &amp; Attachments">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page>
+                        
+                        <page string="Portals and Accesses">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                    <field name="contract_summary__c"/>
+                                    <field name="financial_group_id"/>
+                                    <field name="access_type__c"/>
+                                    <field name="access_users__c"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -400,6 +818,104 @@
                             </group>
                         </group>
                     </sheet>
+                    <notebook>
+                        <page string="Address">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="city"/>
+                                    <field name="state_id"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Contacts">
+                            
+                        </page>
+                        <page string="Related Contacts">
+                            
+                        </page>
+                        <page string="Opportunities">
+                            <field name="opportunity_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="stage_name"/>
+                                    <field name="amount"/>
+                                    <field name="close_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Account Team">
+                            <group>
+                                
+                            </group>
+                        </page>
+                        <page string="Bills">
+                            <group>
+                                <field name="name" string="Account Name"/>
+                                <field name="CNPJ__c"/>
+                                <field name="Social_Reason__c"/>
+                                <field name="financial_group__c"/>
+                            </group>
+                        </page>
+
+                        <page string="Benefit Policies">
+                            <group>
+                                
+                            </group>
+                        </page>
+
+                        <page string="Partners">
+                            <group>
+                                
+                            </group>
+                        </page>
+
+                        <page string="Bank accounts">
+                            <field name="bank_account_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>                            
+                        </page>
+
+                        <page string="Notes &amp; Attachments">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Cases">
+                            <group>
+                                
+                            </group>
+                        </page>
+                        <page string="Notes">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Account History">
+                            
+                        </page>
+                        
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -457,6 +973,36 @@
                             </group>
                         </group>
                     </sheet>
+                    <notebook>
+                        <page string="Address">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="city"/>
+                                    <field name="state_id"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Network Providers">
+                            <field name="network_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -511,6 +1057,36 @@
                             </group>
                         </group>
                     </sheet>
+                    <notebook>
+                        <page string="Address">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="city"/>
+                                    <field name="state_id"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Network Providers">
+                            <field name="network_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -584,6 +1160,104 @@
                             </group>
                         </group>
                     </sheet>
+                    <notebook>
+                        <page string="Address">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="city"/>
+                                    <field name="state_id"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Contacts">
+                            
+                        </page>
+                        <page string="Related Contacts">
+                            
+                        </page>
+                        <page string="Opportunities">
+                            <field name="opportunity_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="stage_name"/>
+                                    <field name="amount"/>
+                                    <field name="close_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Account Team">
+                            <group>
+                                
+                            </group>
+                        </page>
+                        <page string="Bills">
+                            <group>
+                                <field name="name" string="Account Name"/>
+                                <field name="CNPJ__c"/>
+                                <field name="Social_Reason__c"/>
+                                <field name="financial_group__c"/>
+                            </group>
+                        </page>
+
+                        <page string="Benefit Policies">
+                            <group>
+                                
+                            </group>
+                        </page>
+
+                        <page string="Partners">
+                            <group>
+                                
+                            </group>
+                        </page>
+
+                        <page string="Bank accounts">
+                            <field name="bank_account_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>                            
+                        </page>
+
+                        <page string="Notes &amp; Attachments">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Cases">
+                            <group>
+                                
+                            </group>
+                        </page>
+                        <page string="Notes">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Opportunities (Partnership)">
+                            
+                        </page>
+                        
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -647,6 +1321,82 @@
                             </group>
                         </group>
                     </sheet>
+                    <notebook>
+                            <page string="Adresses">
+                                <field name="address_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="City"/>
+                                        <field name="State__id"/>
+                                        <field name="Address_Type"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Contacts">
+                                <field name="partner_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="title"/>
+                                        <field name="email"/>
+                                        <field name="phone"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Opportunities">
+                                <field name="opportunity_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="lead_source"/>
+                                        <field name="write_date" string="Last Modified Date"/>
+                                        <field name="stage_name"/>
+                                        <field name="amount"/>
+                                        <field name="close_date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Cases">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Notes &amp; Attachments">
+                                <field name="attachment_ids">
+                                    <tree>
+                                        <field name="name" string='Attachment Name'/>
+                                    </tree>
+                                </field>
+                            </page>
+                            
+                            <page string="Bank accounts">
+                                <field name="bank_account_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Benefit Policies">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Account Team">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Portals and Accesses (Administrator)">
+                                <field name="portal_access_ids">
+                                    <tree>
+                                        <field name="access_code__c" string='Access Number'/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>

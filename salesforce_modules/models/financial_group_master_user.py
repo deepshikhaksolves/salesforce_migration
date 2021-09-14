@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class FinancialGroupMasterUser(models.Model):
     _name = 'financial_group_master_user'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Financial Group Master User"
     _rec_name = 'name'
 

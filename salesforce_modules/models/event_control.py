@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class EventControl(models.Model):
     _name = 'event_control'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Event Control"
     _rec_name = 'name'
 

@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class ProductPrice(models.Model):
     _name = 'product_price'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Product Price"
     _rec_name = 'Name'
 
@@ -19,4 +20,4 @@ class ProductPrice(models.Model):
     holder_value__c         = fields.Float('Value for or Holder', digits=(12, 2))
     holder_value_copay__c   = fields.Float('Value for the Holder (Copay)', digits=(10, 2))
 
-    contract_plan_id        = fields.Many2one('model_contract_plan', string="Contract Plan ID")
+    price_list_id        = fields.Many2one('model_price_list', string="Price List ID")

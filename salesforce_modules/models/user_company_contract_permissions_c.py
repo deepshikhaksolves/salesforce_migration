@@ -12,6 +12,7 @@ class FinancialGroup(models.Model):
 
 class UserAgreement(models.Model):
     _name = 'user_company_contract_permissions__c'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Corporate User Agreement Jurisdiction"
     _rec_name = 'id__c'
 

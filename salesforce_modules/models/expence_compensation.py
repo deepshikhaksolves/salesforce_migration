@@ -2,7 +2,8 @@ from odoo import models, fields, api
 
 
 class ExpenceCompensation(models.Model):
-    _inherit = 'hr.expense'
+    _name = 'hr.expense'
+    _inherit = ['hr.expense', 'mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Expence Compensation"
 
 

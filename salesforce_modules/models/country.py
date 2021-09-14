@@ -2,7 +2,8 @@ from odoo import models, fields, api
 
 
 class Country(models.Model):
-    _inherit = 'res.country'
+    _name = 'res.country'
+    _inherit = ['res.country', 'mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Country"
 
 

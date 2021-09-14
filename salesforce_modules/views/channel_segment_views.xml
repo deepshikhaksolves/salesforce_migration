@@ -27,23 +27,22 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Open Activities">
-                                <group>
-                                    
-                                </group>
-                            </page>
-                            <page string="Activity History">
-                                <group>
-                                    
-                                </group>
-                            </page>
                             <page string="Opportunities">
-                                <group>
-                                    <!-- <field name="opportunity_ids"/> -->
-                                </group>
+                                <field name="opportunity_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="account_id"/>
+                                        <field name="close_date"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>

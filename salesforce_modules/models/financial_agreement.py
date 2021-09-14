@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class FinancialAgreement(models.Model):
     _name = 'financial_agreement'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Financial Agreement"
     _rec_name = 'name'
 
