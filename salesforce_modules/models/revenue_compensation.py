@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class RevenueCompensation(models.Model):
     _name = 'model_revenue_compensation'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Revenue Compensation'
     _rec_name = 'Name'
 
@@ -13,7 +14,7 @@ class RevenueCompensation(models.Model):
     OwnerId = fields.Many2one('res.users', string="Owner")
     Percentage_of_Revenue_Paid =  fields.Float(string="Percentage of Paid Revenue", digits=(16, 2))
     Percentage_of_Provisioned_Revenue = fields.Float(string="Percentage of Provisioned Revenue", digits=(16, 2))
-    # Revenue_Provisioning = fields.Many2one('Provisioning of Revenue', string="Revenue Provisioning") #Model not found
+    Revenue_Provisioning = fields.Many2one('model_revenue_provisioning', string="Revenue Provisioning")
     Received = fields.Date(string="Receivement")
     Name = fields.Char(string="Revenue remuneration")
     Comission_Hold =  fields.Boolean(string="retain commission")

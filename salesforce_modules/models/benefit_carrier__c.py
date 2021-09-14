@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class BeneficiaryCarrier(models.Model):
     _name = 'model_beneficiary_carrier'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Beneficiary Carrier'
 
     Benefits =  fields.Selection([

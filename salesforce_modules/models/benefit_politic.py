@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class BenefitPolitic(models.Model):
     _name = 'model_benfit_politic'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Benefit Politice'
     _rec_name = 'Name'
 
@@ -57,7 +58,7 @@ class BenefitPolitic(models.Model):
     BenefitOperadora = fields.Char(string="Carrier Benefit")
     Charge_Rate = fields.Float(string="Charge Rate", digits=(3, 2))
     Comission = fields.Float(string="Comission", digits=(3, 2))
-    # Competitor = fields.Many2one('Corretora', string="Competitor") #Model Not Found
+    Competitor = fields.Many2one('broker', string="Competitor")
     Account_id = fields.Many2one('account.account',string="Account")
     Contributory =  fields.Selection([
         ('By_Salary_Range', 'By Salary Range'),

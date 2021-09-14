@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class Refund(models.Model):
     _name = 'model_refund'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Refund'
     _rec_name = 'Name'
 

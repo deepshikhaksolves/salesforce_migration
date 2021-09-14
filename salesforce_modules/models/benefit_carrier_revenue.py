@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class BenefitCarrierRevenue(models.Model):
     _name = 'model_beneficiary_carrier_revenue'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Beneficiary Carrier Revenue'
     _rec_name = 'Name'
 
@@ -15,6 +16,6 @@ class BenefitCarrierRevenue(models.Model):
         ('percentage','Percentage'),
         ('value','Value')
     ],string="Paid by")
-    # Revenue_id = fields.Many2one('Receita',string="Revenue") #Model not found
+    Revenue_id = fields.Many2one('revenue_compensation',string="Revenue") #Model not found
     Revenue_Value = fields.Float(string="Revenue Value", digits=(16, 2))
 

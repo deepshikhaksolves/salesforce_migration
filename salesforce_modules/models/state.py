@@ -2,8 +2,9 @@ from odoo import models, fields, api
 
 
 class State(models.Model):
-    # _name = 'state'
-    _inherit = 'res.country.state'
+    _name = 'res.country.state'
+    # _inherit = 'res.country.state'
+    _inherit = ['res.country.state','mail.thread', 'mail.activity.mixin']
     _description = "Salesforce State"
 
     Geographic_Scope_id = fields.Many2one('model_geographic_scope', string="Coverage")

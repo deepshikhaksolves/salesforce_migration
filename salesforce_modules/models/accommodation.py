@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class Accomomodation(models.Model):
     _name = 'model_accommodation'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Accommodation'
     _rec_name = 'Name'
 
