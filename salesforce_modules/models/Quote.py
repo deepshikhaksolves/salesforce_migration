@@ -134,15 +134,13 @@ class Quote(models.Model):
     # Subtotal =
     IsSyncing = fields.Boolean(string="Syncing")
     Tax = fields.Float(string="Tax",digits=(16, 2))
-    total_lives =  fields.Float(string="Total VIdas", digits=(10, 0))
+    total_lives =  fields.Float(string="Total Vidas", digits=(10, 0))
     # TotalPrice
     verified_partnership = fields.Char(string="Verified Partnership", size=100)
     last_quote = fields.Boolean(string="Last quote")
     attachment_ids = fields.One2many('ir.attachment', 'quote_id', string="Attachment IDS")
 
-    _sql_constraints = [
-        ('check_external_id_uniq', 'unique (External_ID)', "External ID Should be unique!!"),
-    ]
+
 
 
 

@@ -1,4 +1,5 @@
-from odoo import models, fields, api
+from odoo import models, fields, api, _
+from odoo.exceptions import ValidationError
 
 
 class QuoteProducts(models.Model):
@@ -38,3 +39,5 @@ class QuoteProducts(models.Model):
     ], string="Cost Type")
     Value = fields.Float(string="Value", digits=(16, 2))
     # LastModifiedById already in odoo
+
+

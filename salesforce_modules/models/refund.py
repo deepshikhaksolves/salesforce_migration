@@ -1,4 +1,6 @@
-from odoo import models, fields, api
+from odoo import models, fields, api,_
+
+from odoo.exceptions import ValidationError
 
 
 class Refund(models.Model):
@@ -36,3 +38,4 @@ class Refund(models.Model):
     Name = fields.Char(string="Refund")
     start_date = fields.Date(string="Start Date")
     value = fields.Float(string="Value", digits=(16, 2))
+

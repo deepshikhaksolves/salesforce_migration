@@ -27,8 +27,6 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="cost centers"></page>
                         </notebook>
                     </sheet>

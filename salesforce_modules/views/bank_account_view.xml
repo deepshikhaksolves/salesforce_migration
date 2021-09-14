@@ -24,10 +24,6 @@
                                 <field name="write_uid" string='Last Modified By'/>
                             </group>
                         </group>
-                        <notebook>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
-                        </notebook>
                     </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers"/>

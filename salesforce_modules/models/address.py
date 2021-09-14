@@ -9,14 +9,14 @@ class Address(models.Model):
 
     District = fields.Char(string="Neighborhood", size=100)
     Zip_Code = fields.Char(string="POCKET", size=9)
-    City = fields.Char(string="City")
-    Complement = fields.Char(string="Complement", size=255)
+    City = fields.Many2one('model_city_c',string="City")
+    Complement =  fields.Char(string="Complement", size=255)
     Contract_id = fields.Many2one('hr.contract', string="Contract")
     # CreatedById already in odoo
     # LastModifiedById already in odoo
-    Name = fields.Char(string="Address", size=30)
-    Address = fields.Char(string="Address ID")
-    State__id = fields.Many2one('res.country.state', string="State")
+    Name =  fields.Char(string="Address", size=30)
+    Address = fields.Char(string="Address ID", size=80)
+    State__id = fields.Many2one('res.country.state',string="State")
     Coordinates = fields.Float(string="Geolocation")
     Number = fields.Char(string="Number", size=100)
     Account_id = fields.Many2one('account.account', string="Legal person")
