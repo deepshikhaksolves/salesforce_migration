@@ -12,3 +12,4 @@ class PriceXRegion(models.Model):
     # LastModifiedById already in odoo
     product_price_id = fields.Many2one('product.product', string="Product Price")
     region_id = fields.Many2one('model_region', string="Region")
+    model_product_price_id = fields.Many2one('product_price', string='Product Price Id')
