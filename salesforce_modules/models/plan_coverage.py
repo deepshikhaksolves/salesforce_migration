@@ -4,6 +4,7 @@ from odoo import models, fields, api
 class SalesforcePlanCoverage(models.Model):
 
     _name = 'plan.coverage'
+    _inherit = 'mail.thread'
     _description = 'Salesforce Plan Coverage'
 
     name = fields.Char('Coverage')

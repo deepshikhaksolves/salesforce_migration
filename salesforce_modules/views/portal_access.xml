@@ -25,20 +25,22 @@
                         </group>
                     </group>
                     <notebook>
-                        <page string="Portal and Access History">
-                            <!-- <field name="line_ids"/> -->
-                        </page>
-                        <page string="Open Activities">
-                            <!-- <field name="line_ids"/> -->
-                        </page>
-                        <page string="Activity History">
-                            <!-- <field name="line_ids"/> -->
-                        </page>
+
                         <page string="Files">
-                            <!-- <field name="line_ids"/> -->
+                            <field name="attachment_lines" >
+                                <tree string="Attachment" editable="bottom">
+                                     <field name="id"/>
+                                     <field name="document_use"/>
+                                     <field name="financial_contract_id"/>
+                                </tree>
+                            </field>
                         </page>
                     </notebook>
                 </sheet>
+                <div class="oe_chatter">
+                  <field name="message_follower_ids"/>
+                  <field name="message_ids"/>
+                </div>
             </form>
         </field>
     </record>

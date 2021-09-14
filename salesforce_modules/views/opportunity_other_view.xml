@@ -121,15 +121,11 @@
                             </group>
 
                         </group>
-                        <notebook>
-                            <page string="Open Activities" name="open_activities">
-                                <group></group>
-                            </page>
-                            <page string="Activity History" name="activities_history">
-                                <group></group>
-                            </page>
-                        </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>

@@ -4,6 +4,7 @@ from odoo import models, fields, api
 class SalesforcePoliticBill(models.Model):
 
     _name = 'politic.bill'
+    _inherit = 'mail.thread'
     _description = 'Salesforce Politic Bill'
 
     user_id = fields.Many2one('res.users', string="Created By")

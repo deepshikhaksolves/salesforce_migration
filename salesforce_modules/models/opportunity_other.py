@@ -71,6 +71,7 @@ class SalesforceOpportunityLineItem(models.Model):
 class SalesforceOpportunityProduct(models.Model):
 
     _name = 'crm.lead.product'
+    _inherit = 'mail.thread'
     _description = 'Salesforce Opportunity Product'
 
 
