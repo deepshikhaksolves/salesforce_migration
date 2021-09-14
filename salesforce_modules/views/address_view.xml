@@ -11,16 +11,16 @@
                         <group>
                             <group>
                                 <field name="Zip_Code"/>
-                                <field name="Address"/>
+                                <field name="Name"/>
                                 <field name="Number"/>
                                 <field name="Complement"/>
                                 <field name="Address_Type"/>
-                                <field name="Coordinates"/>
                             </group>
                             <group>
                                 <field name="Landmark"/>
                                 <field name="District"/>
                                 <field name="City"/>
+                                <field name="Coordinates"/>
                             </group>
                             <notebook>
                                 <page string="Open Activities"></page>
@@ -28,6 +28,11 @@
                             </notebook>
                         </group>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -39,7 +44,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="Zip_Code"/>
-                    <field name="Address"/>
+                    <field name="Name"/>
                     <field name="Number"/>
                     <field name="Complement"/>
                     <field name="Address_Type"/>

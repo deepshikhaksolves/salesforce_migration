@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class StudyConfiguration(models.Model):
     _name = 'study_configuration'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Study Configuration C"
     _rec_name = 'Name'
 
@@ -24,7 +25,7 @@ class StudyConfiguration(models.Model):
     report_key = fields.Char(string="Report Key", size=100)
     staging = fields.Boolean(string="staging")
     person_type = fields.Selection([
-        ('PF','Pessoa Física'),('PJ','Pessoa Jurídica')
+        ('PF','Physical person'),('PJ','Legal person')
     ], string="Kind of person")
     validity_of_the_proposal = fields.Float(string="Validity of the Proposal", digits=(3, 0))
 

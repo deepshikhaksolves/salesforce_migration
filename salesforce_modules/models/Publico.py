@@ -4,10 +4,11 @@ from odoo import models, fields, api
 class Publico(models.Model):
     _name = 'model_publico'
     _description = 'Salesforce Publico'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name = 'Name'
 
     Contract_id = fields.Many2one('hr.contract', string="Contract")
-    # Brokerage_id = fields.Many2one('Broker', string="Broker")# Broker Model Not Found
+    Brokerage_id = fields.Many2one('broker', string="Broker")
     # CreatedById already in odoo
     Name = fields.Char(string="Code")
     FDescription = fields.Char(string="Description")

@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class PriceXRegion(models.Model):
     _name = 'model_price_x_region'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Price X Region'
     _rec_name = 'Name'
 

@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class Address(models.Model):
     _name = 'model_address'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Address'
     _rec_name = 'Name'
 

@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class ReasonForBeneficial(models.Model):
     _name = 'model_reason_for_beneficial'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce REason For Beneficial'
     _rec_name = 'Name'
 

@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class Beneficiary(models.Model):
     _name = 'model_beneficiary'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Beneficiary'
 
     Name =fields.Char(string="Recipient")
