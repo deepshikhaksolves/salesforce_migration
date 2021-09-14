@@ -26,7 +26,7 @@
                             </group>
                             <group>
                                 <field name="AccountId"/>
-<!--                                <field name="Contract_id"/> model_contract object is not define-->
+                                <field name="Contract_id"/>
                                 <field name="ContactId"/>
                                 <field name="Status"/>
                                 <field name="ParentId"/>
@@ -48,6 +48,13 @@
                             </page>
 
                             <page string="Attachments">
+                                <field name="attachment_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="document_use"/>
+                                        <field name="OwnerId"/>
+                                    </tree>
+                                </field>
                             </page>
 
                             <page string="Notes">
@@ -132,7 +139,7 @@
                             </group>
                             <group>
                                 <field name="AccountId"/>
-<!--                                <field name="Contract_id"/> model_contract object is not define-->
+                                <field name="Contract_id"/>
                                 <field name="Contract_New"/>
                                 <field name="ContactId"/>
                                 <field name="Status"/>
@@ -149,6 +156,13 @@
                             </page>
 
                             <page string="Attachments">
+                                <field name="attachment_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="document_use"/>
+                                        <field name="OwnerId"/>
+                                    </tree>
+                                </field>
                             </page>
 
                             <page string="Notes">
@@ -227,7 +241,7 @@
                             </group>
                             <group>
                                 <field name="Status"/>
-<!--                                <field name="Contract_id"/> model_contract object is not define-->
+                                <field name="Contract_id"/>
                                 <field name="Priority"/>
 
                                 <field name="Status"/>
@@ -239,6 +253,13 @@
                         </group>
                         <notebook>
                             <page string="Attachments">
+                                <field name="attachment_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="document_use"/>
+                                        <field name="OwnerId"/>
+                                    </tree>
+                                </field>
                             </page>
 
                              <page string="Emails">
@@ -328,6 +349,13 @@
                             </page>
 
                             <page string="Attachments">
+                                <field name="attachment_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="document_use"/>
+                                        <field name="OwnerId"/>
+                                    </tree>
+                                </field>
                             </page>
 
                             <page string="Emails">
@@ -404,7 +432,7 @@
                             </group>
                             <group>
                                 <field name="AccountId"/>
-<!--                                <field name="Contract_id"/ field not define>-->
+                                <field name="Contract_id"/>
                                 <field name="Contract_New"/>
                                 <field name="ContactId"/>
                                 <field name="Status"/>
@@ -426,6 +454,13 @@
                             </page>
 
                             <page string="Attachments">
+                                <field name="attachment_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="document_use"/>
+                                        <field name="OwnerId"/>
+                                    </tree>
+                                </field>
                             </page>
 
                             <page string="Emails">
@@ -498,7 +533,7 @@
                                 <field name="Subject"/>
                                 <field name="Description"/>
                                 <field name="AccountId"/>
-<!--                                <field name="Contract_id"/>field not define-->
+                                <field name="Contract_id"/>
                                 <field name="opportunity_id"/>
                                 <field name="quote_id"/>
                                 <field name="Stage"/>
@@ -534,6 +569,13 @@
                             </page>
 
                             <page string="Attachments">
+                                <field name="attachment_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="document_use"/>
+                                        <field name="OwnerId"/>
+                                    </tree>
+                                </field>
                             </page>
 
                             <page string="Emails">

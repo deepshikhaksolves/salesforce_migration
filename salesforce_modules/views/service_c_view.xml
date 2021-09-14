@@ -16,7 +16,7 @@
                             <group>
                                 <field name="OwnerId"/>
                                 <field name="type"/>
-<!--                                <field name="periodicity_id"/>Field not created-->
+                                <field name="periodicity_id"/>
                             </group>
                         </group>
                         <notebook>
