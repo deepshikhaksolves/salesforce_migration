@@ -27,8 +27,8 @@ class HrContract(models.Model):
         ('health', 'Health'),('dental', 'Dental'),('life', 'Life'),('medicine', 'Medicine'),('personal accidents', 'Personal Accidents'),('in_company', 'Consultoria'),('medical_consulting', 'Medical Consulting'),('meal', 'Meal'),('food', 'Food'),('transportation', 'Transportation'),('pension', 'pension'),('travel', 'Travel'),('car_fleet', 'Fleet'),('car', 'Automobile Car'),('fuel', 'Fuel'),('occupational_health', 'Occupational Health'),('checkup', 'Check-up'),('vaccine', 'Vaccine'),('I_Protected', 'I Protected'),('fee', 'Fee'),
     ], string='Benefits')
     business_name = fields.Char(string='Business Name', size=255)
-    # Sales_Channel not clear
-    cancellation_notice = fields.Html(string='Cancellation Notice')
+    channel_segmentation = fields.Many2one('channel_segmentation', string='Sales channel')
+    cancellation_notice = fields.Text(string='Cancellation Notice')
     capital = fields.Selection([
         ('uniform', 'Uniform'),('multiple', 'Multiple'),('staggered', 'Staggered'),('free_choice', 'Free Choice'),('global', 'Global')
     ], string='Capital')
@@ -53,7 +53,7 @@ class HrContract(models.Model):
     # EndDate created in default with name End date
     # name created in default with name name 
     contact_number = fields.Char(string='Contact Number')
-    Owner_id = fields.Many2one('res.users', string='Owner')
+    Owner_id = fields.Many2one('res.users', string='Contract Owner')
     record_type = fields.Char(string='Contract Record Type')
     # StartDate created in default with name start date
     # contract_summary created in default with name Notes
@@ -74,7 +74,7 @@ class HrContract(models.Model):
     customer_signed_title = fields.Char(string='Customer_Signed_Title', size=40, )
     cut_off_date = fields.Float(string='Movement Cutoff Date')
     broker_start_date = fields.Date(string='Start date at brokerage')
-    broker_end_date = fields.Date(string='Etart date at brokerage')
+    broker_end_date = fields.Date(string='End date at brokerage')
     date_of_issue_copay = fields.Float(string='Date of Issue - Copay')
     decline_notice = fields.Text(string='Decline Notice')
     decline_reason = fields.Selection([
@@ -96,7 +96,7 @@ class HrContract(models.Model):
     ], string='')
     executive_manager = fields.Many2one('res.users', string='Executive Manager')
     child_with_disability = fields.Float(string='Disabled children')
-    # financial_group not clear
+    financial_group = fields.Many2one('model_financial_group', string='Financial Group')
     financial_index = fields.Selection([
         ('vcmh', 'Vcmh'), ('ipca', 'ipca'), ('igpm', 'Igpm'), ('vco', 'Vco')  
     ], string='')
@@ -142,7 +142,7 @@ class HrContract(models.Model):
     fee_model = fields.Selection([
         ('small', 'Small'), ('rebate', 'Rebate')
     ], string='Model')
-    # Model not clear
+    Model = fields.Many2one('model_brand', string='Model')
     moderator_variable = fields.Selection([
         ('no_moderating_factor', 'No Moderating Factor'), ('coparticipation_reverted_company', 'Reverted to'), ('coparticipation_reverted_to_operator', 'Reverted to Operator'),
     ], string='Moderator Variable')
@@ -172,7 +172,7 @@ class HrContract(models.Model):
     places = fields.Text(string='Places')
     Has_dps = fields.Boolean(string='Has DPS')
     payment_deadline = fields.Float(string='Payment Term')
-    # Previous_Broker not clear
+    # Previous_Broker = fields.Many2one('Corretora', string='Previous Broker') model not found
     previous_policy = fields.Many2one('hr.contract', string='Previous Policy')
     # Pricebook2Id not clear
     First_Bill = fields.Float(string='First Invoice')

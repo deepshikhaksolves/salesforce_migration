@@ -8,7 +8,7 @@
                 <sheet>
                     <group>
                         <field name="contract" />
-                        <!-- <field name="plan" /> -->
+                        <field name="Plan" />
                         <field name="type_of_procedures" />
                     </group>
                     <group>
@@ -19,5 +19,11 @@
                 </sheet>
             </form>
         </field>
+    </record>
+
+    <record id="contract_copayment_action" model="ir.actions.act_window">
+        <field name="name">contract.copayment</field>
+        <field name="res_model">contract.copayment</field>
+        <field name="view_mode">form</field>
     </record>
 </odoo>
