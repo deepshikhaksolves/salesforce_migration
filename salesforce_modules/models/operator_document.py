@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class OperatorDocument(models.Model):
     _name = 'operator_document'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Operator Document"
     _rec_name = 'document_id'
 

@@ -156,6 +156,9 @@
         'views/comercial_structure_c_view.xml',
         'views/comments_c_view.xml',
         'views/company_parameter_c_view.xml',
+        'views/contract_readjust.xml',
+        'views/contract_service.xml',
+        'views/hr_contract.xml',
         'views/menus.xml',
 
 

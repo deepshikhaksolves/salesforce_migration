@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class BrokerRating(models.Model):
     _name = 'broker.rating'
+    _inherit = 'mail.thread'
     
     Rating = fields.Selection([
         ('Bronze', 'Bronze'), ('Silver', 'Silver'), ('Gold', 'Gold'), ('Diamond', 'Diamond')
@@ -15,3 +16,4 @@ class BrokerRating(models.Model):
     Segmentation = fields.Selection([
         ('Physical_person', 'Physical person'), ('Legal_person', 'Legal person')
     ], string='Segmentation')
+    # Broker = fields.Many2one('Corretora', string="Corretora") #Model Not Found

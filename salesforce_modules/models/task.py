@@ -2,7 +2,8 @@ from odoo import models, fields, api
 
 
 class ModelTask(models.Model):
-    _inherit = 'project.task'
+    _name = 'project.task'
+    _inherit = ['project.task', 'mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Task"
 
     # OwnerId         already in  odoo (user_id)
@@ -32,3 +33,4 @@ class ModelTask(models.Model):
     Type            = fields.Selection([('Call','Call'),('Meeting','Meeting'),('Other','Other')],'Type')
     Email           = fields.Char('Email') 
     
+    attachment_ids  = fields.One2many('ir.attachment','task_id', string='Task IDS')

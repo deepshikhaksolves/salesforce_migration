@@ -45,7 +45,7 @@ from . import contract_team, cost_center, financial_group, country, attachment, 
 from . import campaignmember
 from . import car_fleet_c
 from . import carrier_type_c
-from .import case
+from . import case
 from . import revenue_compensation, revenue_provisioning, accommodation, additional_parameter__c, address
 from . import application_parameter, bank_account, beneficiary, beneficiary_card, benefit_carrier__c, benefit_carrier_revenue, brand, benefit_politic
 

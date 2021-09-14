@@ -10,7 +10,8 @@ class ModelBrand(models.Model):
 
 
 class ModelObject(models.Model):
-    _inherit = 'ir.model'
+    _name = 'ir.model'
+    _inherit = ['ir.model', 'mail.thread', 'mail.activity.mixin']
     _description = "Salesforce model object"
 
     # CreatedById  already in odoo

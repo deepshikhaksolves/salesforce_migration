@@ -1,17 +1,9 @@
 from odoo import models, fields, api
 
 
-class ContentDocument(models.Model):
-    _name = 'contentdocument'
-    _description = "Salesforce Content Document"
-    _rec_name = 'name'
-
-    name      = fields.Char('Name')
-    doc_name  = fields.Binary('Document Name')
-
-
 class Campaign(models.Model):
     _name = 'model_campaign'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Campaign"
     _rec_name = 'Name'
 
@@ -21,7 +13,7 @@ class Campaign(models.Model):
     HierarchyActualCost         = fields.Float('Actual Cost in Hierarchy', digits=(18, 0))
     BudgetedCost                = fields.Float('Budgeted Cost in Campaign', digits=(18, 0))
     HierarchyBudgetedCost       = fields.Float('Budgeted Cost in Hierarchy', digits=(18, 0))
-    CampaignImageId             = fields.Many2many(string='Campaign Image', comodel_name='contentdocument', relation='campaign_contentdocument_rel')
+    CampaignImageId             = fields.One2many('ir.attachment','campaign_id', string='Campaign Image')
     CampaignMemberRecordTypeId  = fields.Many2one('record_type', string='Campaign Member Type')
     Name                        = fields.Char('Campaign Name', size=80)
     OwnerId                     = fields.Many2one('res.users',string='Campaign Owner')
@@ -59,5 +51,6 @@ class Campaign(models.Model):
     NumberOfWonOpportunities    = fields.Integer('Won Opportunities in Campaign')
     HierarchyNumberOfWonOpportunities = fields.Integer('Won Opportunities in Hierarchy')
 
+    attachment_ids  = fields.One2many('ir.attachment','campaign_id', string='Attachment IDS')
 
 

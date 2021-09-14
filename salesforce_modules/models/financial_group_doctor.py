@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class FinancialGroupDoctor(models.Model):
     _name = 'financial_doctor'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Financial doctor"
     _rec_name = 'name'
 

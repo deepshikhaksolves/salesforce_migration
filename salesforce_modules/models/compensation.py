@@ -11,7 +11,7 @@ class Compensation(models.Model):
     Parcel_Number = fields.Float(string='Installment Number	', digits=(10, 0))
     Provision_Number = fields.Char(string='Provision Number', size=50)
     OwnerId = fields.Many2one('res.users', string='Owner')
-    # Income not clear
+    # Income = fields.Many2one('Revenue', string="Revenue") # Model Not Found
     name = fields.Char(string='Remuneration')
     Status = fields.Selection([
         ('provisioned', 'provisioned'), ('downloaded', 'downloaded')

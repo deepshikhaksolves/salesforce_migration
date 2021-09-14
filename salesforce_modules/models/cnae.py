@@ -4,6 +4,7 @@ from odoo import models, fields, api
 
 class CNAE(models.Model):
     _name = 'model_cnae'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce CNAE"
     _rec_name = 'Code'
 

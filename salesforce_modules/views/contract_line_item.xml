@@ -49,4 +49,9 @@
         </field>
     </record>
 
+    <record id="contract_line_item_action" model="ir.actions.act_window">
+        <field name="name">contract.line.item</field>
+        <field name="res_model">contract.line.item</field>
+        <field name="view_mode">form</field>
+    </record>
 </odoo>

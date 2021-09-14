@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class ContractPlan(models.Model):
     _name = 'model_contract_plan'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Contract Plan"
     _rec_name = 'accommodation'
 
@@ -28,4 +29,4 @@ class ContractPlan(models.Model):
 
     Plan_Value           = fields.Float('Plan Value', digits=(16, 2))
 
-    product_price_ids    = fields.One2many('product_price', 'contract_plan_id', 'Product Price IDS')
+    product_price_ids    = fields.One2many('product_price', 'contract_product__c', 'Product Price IDS')

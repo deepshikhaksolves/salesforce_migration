@@ -2,6 +2,8 @@ from odoo import models, fields, api
 
 class ContractReadjust(models.Model):
     _name = 'contract.readjust'
+    _inherit = 'mail.thread'
+    
 
     Calculated_Claim_Readjustment_Index = fields.Float(string='Calculated Claim Readjustment Index', digits=(4, 2))
     Comment = fields.Text(string='Comment')

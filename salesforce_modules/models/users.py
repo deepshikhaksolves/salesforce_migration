@@ -22,7 +22,8 @@ class WorkspaceId(models.Model):
 #     name = fields.Char('Name')
 
 class salesforce_user(models.Model):
-    _inherit = 'res.users'
+    _name = 'res.users'
+    _inherit = ['res.users', 'mail.thread', 'mail.activity.mixin']
     _description = 'salesforce users'
 
     about_me = fields.Char(string = "About Me", size=1000)

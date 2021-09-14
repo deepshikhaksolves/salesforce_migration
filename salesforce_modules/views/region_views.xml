@@ -21,32 +21,53 @@
                         </group>
                         <notebook>
                             <page string="Region States">
-                                <group>
-                                    
-                                </group>
+                                <field name="region_state_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="state_id"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Region Cities">
-                                <group>
-                                    
-                                </group>
+                                <field name="region_city_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="state__c"/>
+                                        <field name="priority"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Product Regions">
-                                <group>
-                                    
-                                </group>
+                                <field name="product_region_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="product_id"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Prices x Regions">
-                                <group>
-                                    
-                                </group>
+                                <!-- <field name="price_x_region_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="product_id"/>
+                                    </tree>
+                                </field> -->
                             </page>
                             <page string="Accredited Networks">
-                                <group>
-                                    
-                                </group>
+                                <field name="accredited_network_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="active__c"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
                 </form>
             </field>
         </record>

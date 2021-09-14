@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class Broker(models.Model):
     _name = 'broker'
+    _inherit = 'mail.thread'
 
     Name = fields.Char(string='Broker', size=80)
     # CreatedById created bu default
@@ -9,7 +10,7 @@ class Broker(models.Model):
     # LastModifiedById created by default
     Logo = fields.Text(string='Logo')
     OwnerId = fields.Many2one('res.users', string='Owner')
-    # Payment_Period not clear
+    Payment_Period = fields.Many2one('model.periodicity', string='Payment Frequency')
     Account = fields.Many2one('account.account', string='people')
     Portfolio_Segmentation = fields.Selection([
         ('Individual', 'Individual'), ('legal_person',  'Legal person')

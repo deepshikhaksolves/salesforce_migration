@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class GeographicScope(models.Model):
     _name = 'model_geographic_scope'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Coverage"
     _rec_name = 'Abbreviation__c'
 
@@ -15,3 +16,6 @@ class GeographicScope(models.Model):
     # LastModifiedById already in odoo
     OwnerId = fields.Many2one('res.users',string='Owner')
     RecordTypeId = fields.Char('Record Type')
+
+    product_ids  = fields.One2many('product.template', 'geo_scope_id', string='Product IDS')
+    address_ids     = fields.One2many('model_address', 'geo_scope_id', string='Address Ids')

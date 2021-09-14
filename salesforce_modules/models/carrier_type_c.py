@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class Carrier_Type_C(models.Model):
     _name = 'model_carrier_type_c'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Carrier Type C"
     _rec_name = 'Name'
 

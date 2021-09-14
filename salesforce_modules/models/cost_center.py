@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class CoastCenter(models.Model):
     _name = 'model_cost_center'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Cost Center"
     _rec_name = 'name'
 

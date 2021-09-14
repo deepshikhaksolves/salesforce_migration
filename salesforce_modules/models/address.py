@@ -15,7 +15,7 @@ class Address(models.Model):
     # LastModifiedById already in odoo
     Name =  fields.Char(string="Address", size=30)
     Address = fields.Char(string="Address ID")
-    # State__id = fields.Many2one('status',string="State")# Model not found
+    State__id = fields.Many2one('res.country.state',string="State")
     Coordinates = fields.Float(string="Geolocation")
     Number = fields.Char(string="Number", size=100)
     Account_id = fields.Many2one('account.account', string="Legal person")
@@ -33,3 +33,5 @@ class Address(models.Model):
         ('Everybody','Everybody')
     ],string="Type of address")
     OwnerId = fields.Many2one('res.users', string="Owner")
+
+    geo_scope_id = fields.Many2one('model_geographic_scope', string='Geographic Scope ID')

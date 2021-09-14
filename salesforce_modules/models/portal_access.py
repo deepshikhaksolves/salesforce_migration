@@ -23,3 +23,5 @@ class PortalAccess(models.Model):
     password__c = fields.Char(string='password', size=255)
     registered_email__c = fields.Char(string='Registered email')
     site__c = fields.Char(string='Site', size=255)
+
+    account_id = fields.Many2one('account.account', string='Account Id')
