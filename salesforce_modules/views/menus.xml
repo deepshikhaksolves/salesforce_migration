@@ -136,10 +136,10 @@
             <menuitem name="Market Reserve" id="market_reserve_menu" parent='salesforce_menu_root' action="market_reserve_c_action" sequence='29'/>
 
         <!-- Subject C -->
-            <menuitem name="Subject C" id="subject_c_menu" parent='salesforce_menu_root' action="subject_c_action" sequence='30'/>
+            <menuitem name="Subject" id="subject_c_menu" parent='salesforce_menu_root' action="subject_c_action" sequence='30'/>
 
         <!-- Pathology Account C-->
-            <menuitem name="Pathology Account C" id="pathology_account_c_menu" parent='salesforce_menu_root' action="pathology_account_c_action" sequence='31'/>
+            <menuitem name="Pathology Account" id="pathology_account_c_menu" parent='salesforce_menu_root' action="pathology_account_c_action" sequence='31'/>
 
          <!-- Market Reserve Duration MDT-->
             <menuitem name="Market Reserve Duration" id="market_reserve_duration_mdt_menu" parent='salesforce_menu_root' action="market_reserve_duration_mdt_action" sequence='32'/>
@@ -251,22 +251,22 @@
             <menuitem name="Price X Region" id="price_x_region_menu" parent='salesforce_menu_root' action="price_x_region_layout_action" sequence='62'/>
 
         <!-- Subject Case Model C-->
-            <menuitem name="Subject Case Model C" id="subject_case_model_c_menu" parent='salesforce_menu_root' action="subject_case_model_c_action" sequence='63'/>
+            <menuitem name="Subject Case Model" id="subject_case_model_c_menu" parent='salesforce_menu_root' action="subject_case_model_c_action" sequence='63'/>
 
         <!-- Service C-->
-            <menuitem name="Service C" id="service_c_menu" parent='salesforce_menu_root' action="service_c_action" sequence='64'/>
+            <menuitem name="Service " id="service_c_menu" parent='salesforce_menu_root' action="service_c_action" sequence='64'/>
 
         <!-- Sensus Management Document C-->
-            <menuitem name="Sensus Management Document C" id="sensus_management_document_c_menu" parent='salesforce_menu_root' action="sensus_management_document_c_action" sequence='65'/>
+            <menuitem name="Sensus Management Document " id="sensus_management_document_c_menu" parent='salesforce_menu_root' action="sensus_management_document_c_action" sequence='65'/>
 
         <!-- Service Benefit C-->
-            <menuitem name="Service Benefit C" id="service_benefit_c_menu" parent='salesforce_menu_root' action="service_benefit_c_action" sequence='66'/>
+            <menuitem name="Service Benefit " id="service_benefit_c_menu" parent='salesforce_menu_root' action="service_benefit_c_action" sequence='66'/>
 
         <!-- SLA Carrier Benefit Reason C-->
-            <menuitem name="SLA Carrier Benefit Reason C" id="sla_carrier_benefit_reason_c_menu" parent='salesforce_menu_root' action="sla_carrier_benefit_reason_c_action" sequence='67'/>
+            <menuitem name="SLA Carrier Benefit Reason " id="sla_carrier_benefit_reason_c_menu" parent='salesforce_menu_root' action="sla_carrier_benefit_reason_c_action" sequence='67'/>
 
         <!-- Salesforce Dim Beneficiario X -->
-            <menuitem name="Salesforce Dim Beneficiario X" id="salesforce_dim_beneficiario_x_menu" parent='salesforce_menu_root' action="salesforce_dim_beneficiario_x_action" sequence='68'/>
+            <menuitem name="Salesforce Dim Beneficiario " id="salesforce_dim_beneficiario_x_menu" parent='salesforce_menu_root' action="salesforce_dim_beneficiario_x_action" sequence='68'/>
 
 
         <!-- portal Access -->
@@ -314,10 +314,10 @@
             <menuitem name="Product Region" id="product_region_menu" parent='salesforce_menu_root' action="product_region_action" sequence='82'/>
 
         <!-- Car Fleet C -->
-            <menuitem name="Car Fleet C" id="car_fleet_c_menu" parent='salesforce_menu_root' action="car_fleet_c_action" sequence='83'/>
+            <menuitem name="Car Fleet" id="car_fleet_c_menu" parent='salesforce_menu_root' action="car_fleet_c_action" sequence='83'/>
 
         <!-- Carrier Type C -->
-            <menuitem name="Carrier Type C" id="carrier_type_c_menu" parent='salesforce_menu_root' action="carrier_type_c_action" sequence='84'/>
+            <menuitem name="Carrier Type" id="carrier_type_c_menu" parent='salesforce_menu_root' action="carrier_type_c_action" sequence='84'/>
 
         <!--Revenue Provisioning Menu-->
             <menuitem name="Revenue Provisioning" id="revenue_provisioning_menu" parent='salesforce_menu_root' action="revenue_provisioning_layout_action" sequence='85'/>
@@ -366,22 +366,22 @@
             <menuitem name="Readjustment Layout" id="readjustment_layout_menu" parent='case_parent_action_menu' action="readjustment_layout_action" />
 
         <!-- Case Model C -->
-            <menuitem name="Case Model C" id="case_model_c_menu" parent='salesforce_menu_root' action="case_model_c_action" sequence='100'/>
+            <menuitem name="Case Model" id="case_model_c_menu" parent='salesforce_menu_root' action="case_model_c_action" sequence='100'/>
 
         <!-- Case Request C -->
-            <menuitem name="Case Request C" id="case_request_c_menu" parent='salesforce_menu_root' action="case_request_c_action" sequence='101'/>
+            <menuitem name="Case Request" id="case_request_c_menu" parent='salesforce_menu_root' action="case_request_c_action" sequence='101'/>
 
         <!-- Case Request SLA C -->
-            <menuitem name="Case Request SLA C" id="case_request_sla_c_menu" parent='salesforce_menu_root' action="case_request_sla_c_action" sequence='102' />
+            <menuitem name="Case Request SLA" id="case_request_sla_c_menu" parent='salesforce_menu_root' action="case_request_sla_c_action" sequence='102' />
 
         <!-- Case Status Parameter MDT -->
-            <menuitem name="Case Status Parameter MDT" id="case_status_parameter_mdt_menu" parent='salesforce_menu_root' action="case_status_parameter_mdt_action" sequence='103'/>
+            <menuitem name="Case Status Parameter" id="case_status_parameter_mdt_menu" parent='salesforce_menu_root' action="case_status_parameter_mdt_action" sequence='103'/>
 
         <!-- Checklist C -->
-            <menuitem name="Checklist C " id="checklist_c_menu" parent='salesforce_menu_root' action="checklist_c_action" sequence='104'/>
+            <menuitem name="Checklist " id="checklist_c_menu" parent='salesforce_menu_root' action="checklist_c_action" sequence='104'/>
 
         <!-- City C -->
-            <menuitem name="City C " id="city_c_menu" parent='salesforce_menu_root' action="city_c_action" sequence='105'/>
+            <menuitem name="City " id="city_c_menu" parent='salesforce_menu_root' action="city_c_action" sequence='105'/>
 
         <!-- Comercial Agent -->
             <menuitem name="Commercial Agent " id="comercial_agent_c_menu" parent='salesforce_menu_root' action="comercial_agent_c_action" sequence='106'/>
@@ -396,22 +396,22 @@
             <menuitem name="Company Parameter" id="company_parameter_c_menu" parent='salesforce_menu_root' action="company_parameter_c_action" sequence='109'/>
 
         <!-- Subject Case Model C-->
-            <menuitem name="Subject Case Model C" id="subject_case_model_c_menu" parent='salesforce_menu_root' action="subject_case_model_c_action" sequence='110'/>
+            <menuitem name="Subject Case Model" id="subject_case_model_c_menu" parent='salesforce_menu_root' action="subject_case_model_c_action" sequence='110'/>
 
         <!-- Service C-->
-            <menuitem name="Service C" id="service_c_menu" parent='salesforce_menu_root' action="service_c_action" sequence='111'/>
+            <menuitem name="Service" id="service_c_menu" parent='salesforce_menu_root' action="service_c_action" sequence='111'/>
 
         <!-- Sensus Management Document C-->
-            <menuitem name="Sensus Management Document C" id="sensus_management_document_c_menu" parent='salesforce_menu_root' action="sensus_management_document_c_action" sequence='112'/>
+            <menuitem name="Sensus Management Document" id="sensus_management_document_c_menu" parent='salesforce_menu_root' action="sensus_management_document_c_action" sequence='112'/>
 
         <!-- Service Benefit C-->
-            <menuitem name="Service Benefit C" id="service_benefit_c_menu" parent='salesforce_menu_root' action="service_benefit_c_action" sequence='113'/>
+            <menuitem name="Service Benefit " id="service_benefit_c_menu" parent='salesforce_menu_root' action="service_benefit_c_action" sequence='113'/>
 
         <!-- SLA Carrier Benefit Reason C-->
-            <menuitem name="SLA Carrier Benefit Reason C" id="sla_carrier_benefit_reason_c_menu" parent='salesforce_menu_root' action="sla_carrier_benefit_reason_c_action" sequence='114'/>
+            <menuitem name="SLA Carrier Benefit Reason " id="sla_carrier_benefit_reason_c_menu" parent='salesforce_menu_root' action="sla_carrier_benefit_reason_c_action" sequence='114'/>
 
         <!-- Salesforce Dim Beneficiario X -->
-            <menuitem name="Salesforce Dim Beneficiario X" id="salesforce_dim_beneficiario_x_menu" parent='salesforce_menu_root' action="salesforce_dim_beneficiario_x_action" sequence='115'/>
+            <menuitem name="Salesforce Dim Beneficiario " id="salesforce_dim_beneficiario_x_menu" parent='salesforce_menu_root' action="salesforce_dim_beneficiario_x_action" sequence='115'/>
 
 
         <!--Revenue Provisioning Menu-->

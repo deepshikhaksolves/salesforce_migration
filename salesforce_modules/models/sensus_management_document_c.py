@@ -9,8 +9,8 @@ class Sensus_Management_Document_C(models.Model):
     # CreatedById  already in odoo
     # LastModifiedById already in odoo
 
-    #Contract_id = fields.Many2one('contract',string='Contract')
-    #Field is related to contract object which is not define
+    Contract_id = fields.Many2one('hr.contract',string='Contract')
+
     #document_id = fields.Many2one('record',string='Document')
     # Field is related to record object which is not define
 
