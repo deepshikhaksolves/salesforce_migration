@@ -2,6 +2,7 @@ from odoo import models,fields,api
 
 class Subject_Case_Model_C(models.Model):
     _name = 'model_subject_case_model_c'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Subject Case Model C"
     _rec_name = 'Name'
 

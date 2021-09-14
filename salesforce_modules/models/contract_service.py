@@ -13,6 +13,6 @@ class ContractService(models.Model):
     Service_Start = fields.Date(string='Start of Service')
     # LastModifiedById created by default
     OwnerId = fields.Many2one('res.users', string='Owner')
-    # Periodicity not clear
-    # Service not clear
+    Periodicity	 = fields.Many2one('model.periodicity', string='Frequency')
+    Service = fields.Many2one('contract.service', string='Service')
     Name = fields.Char(string='Contract ID Service') 

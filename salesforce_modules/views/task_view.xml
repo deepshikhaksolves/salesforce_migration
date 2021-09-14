@@ -41,7 +41,7 @@
                                 <field name="attachment_ids">
                                     <tree>
                                         <field name="name" string='Attachment Name'/>
-                                        <field name="write_uid" string='Last Modified'/>
+                                        <field name="write_uid" string='Last Modified By'/>
                                         <field name="create_uid" />
                                     </tree>
                                 </field>
@@ -123,7 +123,7 @@
                                 <field name="attachment_ids">
                                     <tree>
                                         <field name="name" string='Attachment Name'/>
-                                        <field name="write_uid" string='Last Modified'/>
+                                        <field name="write_uid" string='Last Modified By'/>
                                         <field name="create_uid" />
                                     </tree>
                                 </field>
@@ -132,7 +132,7 @@
                                 <field name="attachment_ids">
                                     <tree>
                                         <field name="name" string='Attachment Name'/>
-                                        <field name="write_uid" string='Last Modified'/>
+                                        <field name="write_uid" string='Last Modified By'/>
                                         <field name="create_uid" />
                                     </tree>
                                 </field>
@@ -227,7 +227,7 @@
                                 <field name="attachment_ids">
                                     <tree>
                                         <field name="name" string='Attachment Name'/>
-                                        <field name="write_uid" string='Last Modified'/>
+                                        <field name="write_uid" string='Last Modified By'/>
                                         <field name="create_uid" />
                                     </tree>
                                 </field>

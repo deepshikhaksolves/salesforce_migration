@@ -18,3 +18,4 @@ class SalesforceContractPartner(models.Model):
     partner_id = fields.Many2one('account.account', string='Partner Account')
     owner_id = fields.Many2one('account.account', string='Owner')
     name = fields.Char('Parceiro do Contrato')
+    opportunity_id = fields.Many2one('crm.lead', string="Opportunity")

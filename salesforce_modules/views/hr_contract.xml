@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_contract_view_form_hr_contract" model="ir.ui.view">
+        <field name="name">hr.contract.view.form.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="after">
+                <group>
+                    <group>
+                        <field name="financial_group"/>
+                        <field name="cnpj"/>
+                        <field name="business_name"/>
+                        <!-- <field name="nama_kolom"/> -->
+                        <field name="Account_id"/>
+                        <field name="project_type"/>
+                        <!-- <field name="Previous_Broker"/> -->
+                        <!-- <field name="startDate"/> -->
+                        <field name="broker_start_date"/>
+                        <field name="contract_term"/>
+                        <field name="carrier_data_cancelation"/>
+                        <field name="broker_end_date"/>
+                        <field name="approval"/>
+                        <field name="adjustment_negotiation_notification"/>
+                        <!-- <field name="readjustment base date"/> -->
+                    </group>
+                    <group>
+                        <!-- <field name="Status"/> -->
+                        <field name="policy"/>
+                        <field name="benefits"/>
+                        <field name="carrier_2"/>
+                        <field name="Owner_id"/>
+                        <field name="relationship_director"/>
+                        <field name="channel_segmentation"/>
+                        <!-- <field name="nama_kolom"/> -->
+                        <field name="opportunity"/>
+                        <field name="cancellation_reason"/>
+                        <field name="cancellation_notice"/>
+                        <field name="decline_notice"/>
+                        <field name="decline_reason"/>
+                        <field name="give_up_reason"/>
+                        <field name="give_up_notice"/>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='information']" position="after">
+                <page string="Contract Rules">
+                    <group>
+                        <group>
+                            <field name="contract_type"/>
+                            <field name="contract_origin"/>
+                            <field name="previous_policy"/>
+                            <field name="company_classification"/>
+                        </group>
+                        <group>
+                            <field name="payment_mode"/>
+                        </group>
+                    </group>
+                </page>
+                <page string="Invoice">
+                    <group>
+                        <group>
+                            <field name="due_date_invoice"/>
+                            <field name="number_of_installments"/>
+                            <field name="Value"/>
+                        </group>
+                        <group>
+                            <field name="transfer_method_in"/>
+                            <field name="transfer_method_out"/>
+                        </group>
+                    </group>
+                </page>
+                <page string="Vehicle">
+                    <group>
+                        <group>
+                            <field name="brand"/>
+                            <field name="Model"/>
+                        </group>
+                        <group>
+                            <field name="renavam"/>
+                            <field name="tag"/>
+                            <field name="additional_driver"/>
+                        </group>
+                    </group>
+                </page>
+                <page string="Legal Pending">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Adresses">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Contact Roles">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Sub Contracts">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Contract Plans">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="cost centers">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Attendances">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Contract History">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Notes">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Approval History">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Contract Financial Data">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Readjustments">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="services">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Special conditions">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Special conditions">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Checklists">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Contract Partners">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Contract Teams">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+                <page string="Corporate User Agreement Permissions">
+                    <!-- <field name="line_ids"/> -->
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

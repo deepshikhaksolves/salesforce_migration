@@ -8,7 +8,7 @@
                 <sheet>
                     <group>
                         <field name="contract_id" />
-                        <!-- <field name="plan" /> -->
+                        <field name="Plan" />
                         <field name="type_of_beneficiary" />
                     </group>
                     <group>
@@ -19,5 +19,11 @@
                 </sheet>
             </form>
         </field>
+    </record>
+    
+    <record id="condition_action" model="ir.actions.act_window">
+        <field name="name">contract.contribution</field>
+        <field name="res_model">contract.contribution</field>
+        <field name="view_mode">form</field>
     </record>
 </odoo>

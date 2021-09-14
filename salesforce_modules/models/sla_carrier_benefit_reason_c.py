@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class SLA_Carrier_Benefit_Reason_C(models.Model):
     _name = 'model_sla_carrier_benefit_reason_c'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce SLA Carrier Benefit Reason C"
     _rec_name = 'Name'
 

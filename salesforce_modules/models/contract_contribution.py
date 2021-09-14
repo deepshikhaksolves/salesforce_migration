@@ -9,7 +9,7 @@ class ContractContribution(models.Model):
     # CreatedById created by default
     # LastModifiedById created by default
     owner_id = fields.Many2one('res.users', string='Owner')
-    # Plan = fields.Many2one('comodel_name', string='') contract plan
+    Plan = fields.Many2one('model_contract_plan', string='Plano')
     type_of_beneficiary = fields.Selection([
         ('holder', 'Holder'), ('dependente', 'Dependente')
     ], string='Type of Beneficiary')

@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class City_C(models.Model):
     _name = 'model_city_c'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce City C"
     _rec_name = 'Name'
 

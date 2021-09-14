@@ -20,4 +20,9 @@
             </form>
         </field>
     </record>
+    <record id="condition_action" model="ir.actions.act_window">
+        <field name="name">condition</field>
+        <field name="res_model">condition</field>
+        <field name="view_mode">form</field>
+    </record>
 </odoo>

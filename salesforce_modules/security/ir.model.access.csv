@@ -119,6 +119,7 @@ access_crm_lead_product,access_crm_lead_product,model_crm_lead_product,base.grou
 access_crm_lead_team_member,access_crm_lead_team_member,model_crm_lead_team_member,base.group_user,1,1,1,1
 access_crm_lead_stage_parameter,access_crm_lead_stage_parameter,model_crm_lead_stage_parameter,base.group_user,1,1,1,1
 access_crm_lead_stage_path,access_crm_lead_stage_path,model_crm_lead_stage_path,base.group_user,1,1,1,1
+access_contract_partner,access_contract_partner,model_contract_partner,base.group_user,1,1,1,1
 
 
 access_model_beneficiary,access_model_beneficiary,model_model_beneficiary,base.group_user,1,1,1,1

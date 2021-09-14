@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class Comercial_Agent_C(models.Model):
     _name = 'model_comercial_agent_c'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Comercial Agent C"
     _rec_name = 'Name'
 

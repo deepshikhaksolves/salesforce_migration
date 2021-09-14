@@ -11,4 +11,4 @@ class RegionState(models.Model):
     Name        = fields.Char('Identification')
     # LastModifiedById already in odoo
     region      = fields.Many2one('model_region', string='Region')
-    state_id    = fields.Many2one('state', string="State")
+    state_id    = fields.Many2one('res.country.state', string="State")
