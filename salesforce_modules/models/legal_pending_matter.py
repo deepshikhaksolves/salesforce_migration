@@ -21,4 +21,4 @@ class LegalPendingMatter(models.Model):
     observation = fields.Char(string="Observation", size=32768)
     OwnerId = fields.Many2one('res.users', string="Owner")
     subcontract_id = fields.Many2one('hr.contract', string="Subcontract")
-    attachment_ids = fields.One2many('ir.attachment', 'legal_panding_matter_id', string="Attachment IDS")
+    attachment_ids = fields.One2many('ir.attachment', 'legal_pending_matter_id', string="Attachment IDS")

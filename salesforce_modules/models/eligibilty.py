@@ -7,9 +7,7 @@ class Eligibility(models.Model):
     _description = "Salesforce Eligibility"
     _rec_name = 'name'
 
-
     # CreatedById already in odoo
-    name    = fields.Char('Eligibility', size=80)
+    name = fields.Char('Eligibility', size=80)
     # LastModifiedById already in odoo
-    OwnerId = fields.Many2one('res.users',string='Owner')
-    
+    OwnerId = fields.Many2one('res.users', string='Owner')

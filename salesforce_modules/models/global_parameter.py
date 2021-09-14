@@ -1,5 +1,6 @@
 from odoo import models, fields, api
 
+
 class GlobalParameter(models.Model):
     _name = 'global_parameter'
     _description = "Salesforce Global Parameter"

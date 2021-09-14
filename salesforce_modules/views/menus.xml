@@ -216,8 +216,8 @@
         <!-- Menu For Request Fulfillment Reason  -->
             <menuitem name="Request Fulfillment Reason" id="service_reason_config_menu" parent='salesforce_menu_root' action="service_reason_config_action" sequence='47'/>
 
-        <!-- Menu For Request Configuration -->
-            <menuitem name="Request Configuration" id="request_config_menu" parent='salesforce_menu_root' action="request_config_action" sequence='48'/>
+        <!-- Menu For Request Layout Subject Service Template -->
+            <menuitem name="Request Layout Subject Service Template" id="request_config_menu" parent='salesforce_menu_root' action="request_config_action" sequence='48'/>
 
         <!-- Menu For Channel Segmentation-->
             <menuitem name="Channel Segmentation" id="channel_segmentation_menu" parent='salesforce_menu_root' action="channel_segmentation_layout_action" sequence='49'/>

@@ -6,14 +6,15 @@ class Attachment(models.Model):
     _inherit = ['ir.attachment', 'mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Attachment"
 
-
-    active = fields.Boolean('Active',default=True)
+    active = fields.Boolean('Active', default=True)
     # CreatedById already in odoo
     # name                    already in odoo i.e. (name)
     # LastModifiedById already in odoo
-    OwnerId = fields.Many2one('res.users',string='Owner')
+    OwnerId = fields.Many2one('res.users', string='Owner')
 
-    document_use = fields.Selection([('Implantation','Implantation'),('Internal deployment','Internal deployment'),('Movement','Movement'),('Administered','Administered')],'Use of Documents')
+    document_use = fields.Selection(
+        [('Implantation', 'Implantation'), ('Internal deployment', 'Internal deployment'), ('Movement', 'Movement'),
+         ('Administered', 'Administered')], 'Use of Documents')
     financial_contract_id = fields.Many2one('financial_contract', string="Financial Contract ID")
 
     account_id = fields.Many2one('account.account', string='Account ID')
@@ -22,7 +23,7 @@ class Attachment(models.Model):
     campaign_id = fields.Many2one('model_campaign', string='Campaign Id')
     product_id = fields.Many2one('product.template', string='Product Id')
 
-    legal_panding_matter_id = fields.Many2one('model_legal_pending_matter', string="Legal Pending Matter ID")
+    legal_pending_matter_id = fields.Many2one('model_legal_pending_matter', string="Legal Pending Matter ID")
     quote_id = fields.Many2one('quote', string="Quote ID")
     # document_use               = fields.Selection([('Implantation','Implantation'),('Internal deployment','Internal deployment'),('Movement','Movement'),('Administered','Administered')],'Use of Documents')
     # financial_contract_id    =   fields.Many2one('financial_contract', string="Financial Contract ID")
