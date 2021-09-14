@@ -470,27 +470,27 @@
             <menuitem name="Policy Life" id="policy_life_menu" parent='salesforce_menu_root' action="policy_life_action" sequence='141'/>
         
         <!-- broker Access -->
-        <menuitem name="Broker" id="broker_action_menu" parent='salesforce_menu_root'/>
+        <menuitem name="Broker" id="broker_action_menu" parent='salesforce_menu_root' sequence='142'/>
 
         <menuitem name="Broker" id="portal_access_menu" parent='broker_action_menu' action="broker_action"/>
 
         <!-- broker rating Access -->
-        <menuitem name="Broker Rating" id="broker_rating_action_menu" parent='salesforce_menu_root'/>
+        <menuitem name="Broker Rating" id="broker_rating_action_menu" parent='salesforce_menu_root' sequence='143'/>
 
         <menuitem name="Broker Rating" id="broker_rating_access_menu" parent='broker_rating_action_menu' action="broker_rating_action"/>
 
         <!-- Compensation Access -->
-        <menuitem name="Compensation" id="compensation_action_menu" parent='salesforce_menu_root'/>
+        <menuitem name="Compensation" id="compensation_action_menu" parent='salesforce_menu_root' sequence='144'/>
 
         <menuitem name="Compensation" id="compensation_access_menu" parent='compensation_action_menu' action="compensation_action"/>
 
         <!-- Condition Access -->
-        <menuitem name="Condition" id="condition_action_menu" parent='salesforce_menu_root'/>
+        <menuitem name="Condition" id="condition_action_menu" parent='salesforce_menu_root' sequence='145'/>
 
         <menuitem name="Condition" id="condition_access_menu" parent='condition_action_menu' action="condition_action"/>
 
         <!-- Contract Access -->
-        <menuitem name="Contract" id="contract_action_menu" parent='salesforce_menu_root'/>
+        <menuitem name="Contract" id="contract_action_menu" parent='salesforce_menu_root' sequence='146'/>
 
         <menuitem name="Contract Contributory" id="contract_contributory_access_menu" parent='contract_action_menu' action="condition_action"/>
         <menuitem name="Contract Copayment" id="contract_copayment_access_menu" parent='contract_action_menu' action="contract_copayment_action"/>
@@ -498,10 +498,6 @@
         <menuitem name="Contract Line Items" id="contract_line_item_access_menu" parent='contract_action_menu' action="contract_line_item_action"/>
         <menuitem name="Contract Readjust" id="contract_readjust_access_menu" parent='contract_action_menu' action="contract_readjust_action"/>
         <menuitem name="Contract Service" id="contract_service_access_menu" parent='contract_action_menu' action="contract_service_action"/>
-
-
-
-
 
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='199'/>
