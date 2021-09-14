@@ -22,7 +22,7 @@
                                 <field name="Start_Date"/>
                                 <field name="Rescheduled"/>
                                 <field name="cancelled"/>
-                                <field name="write_uid"/>
+                                <field name="write_uid" string='Last Modified By'/>
                             </group>
                         </group>
                     </sheet>

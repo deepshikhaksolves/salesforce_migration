@@ -11,7 +11,7 @@
                         <group>
                             <group>
                                 <field name="Name" />
-                                <!-- <field name="Price_Table__c"/> -->
+                                <field name="Price_Table__c"/>
                                 <field name="RecordTypeId"/>
                                 <field name="create_uid"/>
                             </group>
@@ -25,9 +25,12 @@
                         </group>
                         <notebook>
                             <page string="Prices x Regions">
-                                <group>
-                                    
-                                </group>
+                                <field name="price_x_region_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="region_id"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
@@ -81,14 +84,14 @@
                         <group>
                             <group>
                                 <field name="Name" />
-                                <!-- <field name="contract_product__c"/> -->
-                                <!-- <field name="Price_Table__c"/> -->
+                                <field name="contract_product__c"/>
+                                <field name="Price_Table__c"/>
                                 <field name="RecordTypeId"/>
                                 <field name="create_uid"/>
                             </group>
                             <group>
                                 <field name="age_range__c"/>
-                                <field name="holder_value__c"/>
+                                <field name="holder_value__c" string='Value to the Holder'/>
                                 <field name="holder_value_copay__c"/>
                                 <field name="others_value_copay__c"/>
                                 <field name="write_uid" string="Last Modified By"/>
@@ -96,9 +99,12 @@
                         </group>
                         <notebook>
                             <page string="Prices x Regions">
-                                <group>
-                                    
-                                </group>
+                                <field name="price_x_region_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="region_id"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
@@ -152,12 +158,12 @@
                         <group>
                             <group>
                                 <field name="Name" />
-                                <!-- <field name="Price_Table__c"/> -->
+                                <field name="Price_Table__c"/>
                                 <field name="RecordTypeId"/>
                                 <field name="create_uid"/>
                             </group>
                             <group>
-                                <field name="holder_value__c"/>
+                                <field name="holder_value__c" string='Value to the Holder'/>
                                 <field name="holder_value_copay__c"/>
                                 <field name="others_value_copay__c"/>
                                 <field name="write_uid" string="Last Modified By"/>
@@ -165,9 +171,12 @@
                         </group>
                         <notebook>
                             <page string="Prices x Regions">
-                                <group>
-                                    
-                                </group>
+                                <field name="price_x_region_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="region_id"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
@@ -235,9 +244,12 @@
                         </group>
                         <notebook>
                             <page string="Prices x Regions">
-                                <group>
-                                    
-                                </group>
+                                <field name="price_x_region_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="region_id"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
