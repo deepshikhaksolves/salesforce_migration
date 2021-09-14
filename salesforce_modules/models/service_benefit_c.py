@@ -2,6 +2,7 @@ from odoo import models,fields,api
 
 class Service_Benefit_C(models.Model):
     _name = 'model_service_benefit_c'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Service Benefit C"
     _rec_name = 'Name'
 
@@ -18,4 +19,4 @@ class Service_Benefit_C(models.Model):
                                  ('Fee','Fee')],string='Benefit')
     OwnerId = fields.Many2one('res.users',string='Owner')
     service_id = fields.Many2one('model_service_c',string='Service')
-    Name = fields.Text(string='Service Benefit',size=80)
+    Name = fields.Char(string='Service Benefit',size=80)

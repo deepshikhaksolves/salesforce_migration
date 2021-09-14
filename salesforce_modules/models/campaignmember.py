@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class CampaignMember(models.Model):
     _name = 'model_campaignmember'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Campaign Member"
     _rec_name = 'FirstName'
 
@@ -15,7 +16,7 @@ class CampaignMember(models.Model):
     CompanyOrAccount = fields.Char(string='Company (Account)', size=255)
     ContactId = fields.Many2one('res.partner',string='Contact')
     Country = fields.Char(string='Country',size=80)
-    Description = fields.Text(string='Description')
+    Description = fields.Char(string='Description',size=32000)
     DoNotCall = fields.Boolean(string='Do Not Call')
     Email = fields.Char(string='Email')
     HasOptedOutOfEmail = fields.Boolean(string='Email Opt Out')

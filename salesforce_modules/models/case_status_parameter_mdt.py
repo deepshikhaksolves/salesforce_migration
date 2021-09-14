@@ -2,6 +2,7 @@ from odoo import models, fields, api
 
 class Case_Status_Parameter_MDT(models.Model):
     _name = 'model_case_status_parameter_mdt'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Salesforce Case_Status_Parameter_MDT"
     _rec_name = 'DeveloperName'
 
