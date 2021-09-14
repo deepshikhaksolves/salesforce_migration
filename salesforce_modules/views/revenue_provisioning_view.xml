@@ -23,6 +23,7 @@
                                 <field name="Contract_id"/>
                                 <field name="OwnerId"/>
                                 <field name="Description"/>
+                                <field name="Revenue_id"/>
                                 <field name="Status"/>
                                 <field name="write_uid" string='Last Modified By'/>
                             </group>
@@ -54,6 +55,7 @@
                     <field name="Contract_id"/>
                     <field name="OwnerId"/>
                     <field name="Description"/>
+                    <field name="Revenue_id"/>
                     <field name="Status"/>
                     <field name="write_uid" string='Last Modified By'/>
                 </tree>
