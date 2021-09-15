@@ -37,5 +37,5 @@ class Refund(models.Model):
     Product_id = fields.Many2one('product.template', string="Product")
     Name = fields.Char(string="Refund")
     start_date = fields.Date(string="Start Date")
-    value = fields.Float(string="Value", digits=(16, 2))
+    value = fields.Float(string="Value")
 

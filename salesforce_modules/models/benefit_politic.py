@@ -7,8 +7,8 @@ class BenefitPolitic(models.Model):
     _description = 'Salesforce Benefit Politice'
     _rec_name = 'Name'
 
-    Actual_Tax = fields.Float(string="Actual Tax", digits=(16, 2))
-    Administration_Tax = fields.Float(string="Administration Tax", digits=(3, 2))
+    Actual_Tax = fields.Float(string="Actual Tax")
+    Administration_Tax = fields.Float(string="Administration Tax")
     Contract_End = fields.Selection([
         ('January', 'January'),
         ('February', 'February'),
@@ -23,7 +23,7 @@ class BenefitPolitic(models.Model):
         ('November', 'November'),
         ('December', 'December')
     ], string="Policy Anniversary")
-    Availability_Fee = fields.Float(string="Availability Fee", digits=(3, 2))
+    Availability_Fee = fields.Float(string="Availability Fee")
     Average_invoice = fields.Char(string="Average Invoice")
     Benefits = fields.Selection([
         ('Health', 'Health'),
@@ -56,8 +56,8 @@ class BenefitPolitic(models.Model):
         ('Global', 'Global')
     ], string="Capital")
     BenefitOperadora = fields.Char(string="Carrier Benefit")
-    Charge_Rate = fields.Float(string="Charge Rate", digits=(3, 2))
-    Comission = fields.Float(string="Comission", digits=(3, 2))
+    Charge_Rate = fields.Float(string="Charge Rate")
+    Comission = fields.Float(string="Comission")
     Competitor = fields.Many2one('broker', string="Competitor")
     Account_id = fields.Many2one('account.account', string="Account")
     Contributory = fields.Selection([
@@ -66,8 +66,8 @@ class BenefitPolitic(models.Model):
         ('By_Value', 'By Value'),
         ('No_Contribution', 'No Contribution')
     ], string="Contributory")
-    Contributory_Value = fields.Float(string="Contributory Value", digits=(5, 2))
-    Coverage_Limit_Value = fields.Float(string="Coverage Limit Value", digits=(5, 2))
+    Contributory_Value = fields.Float(string="Contributory Value")
+    Coverage_Limit_Value = fields.Float(string="Coverage Limit Value")
     # CreatedById already in odoo
     # LastModifiedById already in odoo
     Destination = fields.Selection([
@@ -81,12 +81,12 @@ class BenefitPolitic(models.Model):
         ('multiple_destinations', 'Multiple Destinations'),
         ('Brazil', 'Brazil')
     ], string="Destination")
-    Effective_time_at_current_carrier = fields.Float(string="Effective time at current carrier", digits=(3, 0))
-    Monthly_Bill = fields.Float(string="Monthly Invoice", digits=(16, 2))
+    Effective_time_at_current_carrier = fields.Float(string="Effective time at current carrier")
+    Monthly_Bill = fields.Float(string="Monthly Invoice")
     Funeral_Assistance = fields.Boolean(string="Funeral Assistance")
-    Funeral_Assistance_Value = fields.Float(string="Funeral Assistance Value", digits=(16, 2))
+    Funeral_Assistance_Value = fields.Float(string="Funeral Assistance Value")
     Offer = fields.Boolean(string="Generate opportunity?")
-    Grace_Period = fields.Float(string="Grace Period", digits=(18, 0))
+    Grace_Period = fields.Float(string="Grace Period")
     Use_Product = fields.Boolean(string="Has Benefit?")
     has_Checkup = fields.Boolean(string="Has Checkup?")
     Income_Type = fields.Selection([
@@ -95,8 +95,8 @@ class BenefitPolitic(models.Model):
         ('Life_Income_Reversible_to_the_Beneficiary', 'Life Income Reversible to the Beneficiary')
     ], string="Income Type")
     Lead_id = fields.Many2one('crm.lead', string="Lead")
-    Max_Capital_Limit = fields.Float(string="Max Capital Limit", digits=(16, 0))
-    Min_Capital_Limit = fields.Float(string="Min Capital Limit", digits=(16, 0))
+    Max_Capital_Limit = fields.Float(string="Max Capital Limit")
+    Min_Capital_Limit = fields.Float(string="Min Capital Limit")
     Payment_Method = fields.Selection([
         ('pre_payment', 'Pre Payment'),
         ('post_payment', 'Post Payment')
@@ -106,12 +106,12 @@ class BenefitPolitic(models.Model):
         ('Co_participation_Reverted_Company', 'Reverted to Company'),
         ('Co_participation_Reverted_to_Operator', 'Reverted to Operator')
     ], string="Moderator Variable")
-    Moderator_Variable_Value = fields.Float(string="Moderator Variable Value", digits=(5, 0))
-    Monthly_Average_Value = fields.Float(string="Monthly Average Value", digits=(4, 2))
-    Number_of_Installments = fields.Float(string="Number of Installments", digits=(3, 0))
+    Moderator_Variable_Value = fields.Float(string="Moderator Variable Value")
+    Monthly_Average_Value = fields.Float(string="Monthly Average Value")
+    Number_of_Installments = fields.Float(string="Number of Installments")
     How_c = fields.Char(string="Observation", size=255)
     carrier_2_id = fields.Many2one('account.account', string="Operator")
-    Output_Rate = fields.Float(string="Output Rate", digits=(3, 0))
+    Output_Rate = fields.Float(string="Output Rate")
     OwnerId = fields.Many2one('res.users', string='Owner')
     Pension_Mode = fields.Selection([
         ('Plano_Averbado', 'Plano Averbado'),
@@ -124,10 +124,10 @@ class BenefitPolitic(models.Model):
         ('Fixed_value', 'Fixed value'),
         ('Salary_Percentage', 'Salary Percentage')
     ], string="Purchase Limit")
-    Purchase_Limit_Value = fields.Float(string="Purchase Limit Value", digits=(5, 2))
+    Purchase_Limit_Value = fields.Float(string="Purchase Limit Value")
     Revenue = fields.Char(string="Revenue")
-    Performing_Index = fields.Float(string="loss ratio", digits=(16, 2))
-    Sons_Capital_Limit = fields.Float(string="Sons Capital Limit", digits=(16, 2))
+    Performing_Index = fields.Float(string="loss ratio")
+    Sons_Capital_Limit = fields.Float(string="Sons Capital Limit")
     Tax_Type = fields.Selection([
         ('Definitive_Regressive', 'Definitive Regressive'),
         ('Compensable_Progressive', 'Compensable Progressive')
@@ -137,7 +137,7 @@ class BenefitPolitic(models.Model):
         ('Individual', 'Individual'),
         ('Subcontract', 'Subcontract')
     ], string="Type of contract")
-    Total_Capital = fields.Float(string="Total Capital", digits=(16, 2))
+    Total_Capital = fields.Float(string="Total Capital")
     Type_of_Pension = fields.Selection([
         ('Open', 'Open'),
         ('Closed', 'Closed')
@@ -146,6 +146,6 @@ class BenefitPolitic(models.Model):
         ('One_off', 'One-off'),
         ('Recurrent', 'Recurrent')
     ], string="Type of Revenue")
-    Life = fields.Float(string="Lives", digits=(18, 0))
+    Life = fields.Float(string="Lives")
 
     lead_id = fields.Many2one('crm.lead', string='Lead Id')

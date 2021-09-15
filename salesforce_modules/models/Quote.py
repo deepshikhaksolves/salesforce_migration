@@ -27,7 +27,7 @@ class Quote(models.Model):
     status_change_date = fields.Date(string="Status Change Date")
     Description = fields.Text(string="Description")
     days_in_current_status = fields.Char(string="Days in Current Status")
-    Discount = fields.Float(string="Discount", digits=(3, 2))
+    Discount = fields.Float(string="Discount")
     Email = fields.Char(string="Email")
     email_from = fields.Char(string="email_from")
     send_email = fields.Boolean(string="Send email")
@@ -36,7 +36,7 @@ class Quote(models.Model):
     External_Id = fields.Char(string="External Id", size=255)
     Fax = fields.Char(string="Fax")
     first_quote = fields.Boolean(string="First quote")
-    GrandTotal = fields.Float(string="Grand Total", digits=(16, 2))
+    GrandTotal = fields.Float(string="Grand Total")
     # LastModifiedById already in odoo
     lead_source =  fields.Char(string="Lead Source")
     # LineItemCount #RollUP Summery
@@ -106,7 +106,7 @@ class Quote(models.Model):
     returned_reason =  fields.Char(string="Returned Reason", size=255)
     ShippingAddress = fields.Text(string="Ship To")
     ShippingName =  fields.Char(string="Ship To Name", size=255)
-    ShippingHandling = fields.Float(string="Shipping and Handling", digits=(16, 2))
+    ShippingHandling = fields.Float(string="Shipping and Handling")
     Quote__c = fields.Char(string="Study request")
     parent_quote_id = fields.Many2one('model_quote', string="Parent Study Request" )
     Status = fields.Selection([
@@ -133,8 +133,8 @@ class Quote(models.Model):
     study_configuration_id = fields.Many2one('study_configuration', string="Study Configuration")
     # Subtotal =
     IsSyncing = fields.Boolean(string="Syncing")
-    Tax = fields.Float(string="Tax",digits=(16, 2))
-    total_lives =  fields.Float(string="Total Vidas", digits=(10, 0))
+    Tax = fields.Float(string="Tax")
+    total_lives =  fields.Float(string="Total Vidas")
     # TotalPrice
     verified_partnership = fields.Char(string="Verified Partnership", size=100)
     last_quote = fields.Boolean(string="Last quote")

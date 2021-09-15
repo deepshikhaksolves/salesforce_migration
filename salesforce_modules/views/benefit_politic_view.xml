@@ -85,9 +85,9 @@
             </field>
         </record>
 
-        <!-- Plolitica Auto Layout Form -->
+        <!-- Plolicy Auto Layout Form -->
         <record id="policy_auto_form" model="ir.ui.view">
-            <field name="name">Plitica Auto Layout Form</field>
+            <field name="name">Policy Auto Layout Form</field>
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <form string="Politica Auto Layout">
@@ -126,9 +126,9 @@
             </field>
         </record>
 
-        <!-- Politica Auto Layout tree -->
-        <record id="politica_auto_layout_tree" model="ir.ui.view">
-            <field name="name">Plitica Auto Layout Tree</field>
+        <!-- Policy Auto Layout tree -->
+        <record id="policy_auto_layout_tree" model="ir.ui.view">
+            <field name="name">Policy Auto Layout Tree</field>
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <tree>
@@ -151,14 +151,14 @@
             </field>
         </record>
 
-         <!-- Politica Auto Layout action window -->
-        <record id="political_layout_action" model="ir.actions.act_window">
-            <field name="name">Plitica Auto Layout</field>
+         <!-- Policy Auto Layout action window -->
+        <record id="policy_layout_action" model="ir.actions.act_window">
+            <field name="name">Policy Auto Layout</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_benfit_politic</field>
             <field name="view_mode">tree,form</field>
             <field name="view_ids" eval="[(5, 0, 0),
-                (0, 0, {'view_mode': 'tree', 'view_id': ref('politica_auto_layout_tree')}),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('policy_auto_layout_tree')}),
                 (0, 0, {'view_mode': 'form', 'view_id': ref('policy_auto_form')})]"/>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
@@ -168,9 +168,9 @@
         </record>
 
 
-        <!-- Politica Checkup Vaccine Layout Form -->
-        <record id="politica_checkup_vaccine_form" model="ir.ui.view">
-            <field name="name">Plitica Checkup Vaccine Layout Form</field>
+        <!-- Policy Checkup Vaccine Layout Form -->
+        <record id="policy_checkup_vaccine_form" model="ir.ui.view">
+            <field name="name">Policy Checkup Vaccine Layout Form</field>
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <form string="Politica Checkup Vaccine Layout">
@@ -209,9 +209,9 @@
             </field>
         </record>
 
-        <!-- Politica Checkup Vaccine Layout tree -->
-        <record id="politica_checkup_vaccine_layout_tree" model="ir.ui.view">
-            <field name="name">Plitica Checkup Vaccine Layout Tree</field>
+        <!-- Policy Checkup Vaccine Layout tree -->
+        <record id="policy_checkup_vaccine_layout_tree" model="ir.ui.view">
+            <field name="name">Policy Checkup Vaccine Layout Tree</field>
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <tree>
@@ -234,15 +234,15 @@
             </field>
         </record>
 
-         <!-- Politica Checkup Vaccine Layout action window -->
-        <record id="political_checkup_vaccine_action" model="ir.actions.act_window">
-            <field name="name">Plitica Checkup Vaccine Layout</field>
+         <!-- Policy Checkup Vaccine Layout action window -->
+        <record id="policy_checkup_vaccine_action" model="ir.actions.act_window">
+            <field name="name">Policy Checkup Vaccine Layout</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_benfit_politic</field>
             <field name="view_mode">tree,form</field>
             <field name="view_ids" eval="[(5, 0, 0),
-                (0, 0, {'view_mode': 'tree', 'view_id': ref('politica_checkup_vaccine_layout_tree')}),
-                (0, 0, {'view_mode': 'form', 'view_id': ref('politica_checkup_vaccine_form')})]"/>
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('policy_checkup_vaccine_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('policy_checkup_vaccine_form')})]"/>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     No records available.
@@ -804,6 +804,7 @@
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
                                 <field name="Competitor"/>
+                                <field name="Effective_time_at_current_carrier"/>
                                 <field name="Administration_Tax"/>
                                 <field name="Output_Rate"/>
                                 <field name="Life"/>
@@ -851,6 +852,7 @@
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
                                 <field name="Competitor"/>
+                                <field name="Effective_time_at_current_carrier"/>
                                 <field name="Administration_Tax"/>
                                 <field name="Output_Rate"/>
                                 <field name="Life"/>
