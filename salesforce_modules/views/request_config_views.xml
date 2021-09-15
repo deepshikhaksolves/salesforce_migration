@@ -12,7 +12,7 @@
                             <group>
                                 <field name="Name" />
                                 <field name="Request_id"/>
-                                <!-- <field name="Subject_Case_Model"/> -->
+                                <field name="Subject_Case_Model"/>
                                 <field name="FormulaEntitlement"/>
                                 <field name="create_uid"/>
                             </group>
@@ -43,7 +43,7 @@
 
         <!-- Request Config action window -->
         <record id="request_config_action" model="ir.actions.act_window">
-            <field name="name">Request Configuration</field>
+            <field name="name">Request Layout Subject Service Template</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">request_config</field>
             <field name="view_mode">tree,form</field>

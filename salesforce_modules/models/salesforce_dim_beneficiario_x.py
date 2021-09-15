@@ -1,4 +1,5 @@
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 class Salesforce_Dim_Beneficiario_X(models.Model):
     _name = 'model_salesforce_dim_beneficiario_x'
@@ -14,3 +15,9 @@ class Salesforce_Dim_Beneficiario_X(models.Model):
     ownername = fields.Char(string='Title Holder',size=1000)
     sex = fields.Char(string='sex',size=100)
     beneficiary_type = fields.Char(string='Beneficiary Type',size=1000)
+
+    @api.constrains('beneficiary_id')
+    def digit_validation(self):
+        for rec in self:
+            if rec.beneficiary_id > 999999999999999999:
+                raise ValidationError("Beneficiary Id should not greater then 18 digits")

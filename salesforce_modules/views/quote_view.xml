@@ -26,8 +26,6 @@
                             </page>
                             <page string="Quotation Products"></page>
                             <page string="Opportunities"></page>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="Notes"></page>
                             <page string="Reissues"></page>
                             <page string="Cases"></page>
@@ -99,8 +97,6 @@
                             </page>
                             <page string="Quotation Products"></page>
                             <page string="Opportunities"></page>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="Notes"></page>
                             <page string="Reissues"></page>
                             <page string="Cases"></page>
@@ -173,8 +169,6 @@
                             </page>
                             <page string="Quote Line Item"></page>
                             <page string="Opportunities"></page>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="Notes"></page>
                             <page string="Reissues"></page>
                             <page string="Cases"></page>
@@ -236,7 +230,6 @@
                                 <field name="Quotation_Reason"/>
                             </group>
                             <group>
-                                <field name="OwnerId"/>
                                 <field name="QuoteNumber"/>
                                 <field name="AccountId"/>
                                 <field name="RecordTypeId"/>
@@ -248,8 +241,6 @@
                             </page>
                             <page string="Quote Line Item"></page>
                             <page string="Opportunities"></page>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="Notes"></page>
                             <page string="Reissues"></page>
                             <page string="Cases"></page>
@@ -266,7 +257,7 @@
 
         <!-- Broker Binding Layout tree view -->
         <record id="quote_broker_binding_layout_tree" model="ir.ui.view">
-            <field name="name">Broker Binding Tree</field>
+            <field name="name">Broker Bidding Tree</field>
             <field name="model">model_quote</field>
             <field name="arch" type="xml">
                 <tree>
@@ -283,7 +274,7 @@
 
         <!-- Broker Binding Layout action window -->
         <record id="quote_broker_binding_layout_action" model="ir.actions.act_window">
-            <field name="name">Broker Binding Action</field>
+            <field name="name">Broker Bidding Action</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>
             <field name="view_mode">tree,form</field>
@@ -322,8 +313,6 @@
                             </page>
                             <page string="Quotation Product"></page>
                             <page string="Opportunities"></page>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="Notes"></page>
                             <page string="Reissues"></page>
                             <page string="Cases"></page>
@@ -395,8 +384,6 @@
                             </page>
                             <page string="Quotation Product"></page>
                             <page string="Opportunities"></page>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="Notes"></page>
                             <page string="Reissues"></page>
                             <page string="Cases"></page>
@@ -468,8 +455,6 @@
                             </page>
                             <page string="Quotation Product"></page>
                             <page string="Opportunities"></page>
-                            <page string="Open Activities"></page>
-                            <page string="Activity History"></page>
                             <page string="Notes"></page>
                             <page string="Reissues"></page>
                             <page string="Cases"></page>
@@ -549,8 +534,6 @@
                             <page string="Quote PDFs"></page>
                             <page string="Notes"></page>
                             <page string="Files"></page>
-                            <page string="Open Activities"/>
-                            <page string="Activity History"></page>
                             <page string="Reissues"/>
                             <page string="Cases"/>
                         </notebook>
@@ -645,7 +628,6 @@
                             <page string="Notes/Attachments">
                                 <field name="attachment_ids"/>
                             </page>
-                            <page string="Activity History"></page>
                             <page string="Reissues"/>
                             <page string="Cases"/>
                         </notebook>
@@ -695,7 +677,7 @@
         </record>
 
         <!-- Small Quote Layout action window -->
-        <record id="quote_layout_action" model="ir.actions.act_window">
+        <record id="small_quote_layout_action" model="ir.actions.act_window">
             <field name="name">Small Quote Layout Action</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>

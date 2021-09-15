@@ -1,5 +1,6 @@
 from odoo import models, fields, api
 
+
 class ContractLineItem(models.Model):
     _name = 'contract.line.item'
 
@@ -15,14 +16,14 @@ class ContractLineItem(models.Model):
     list_price = fields.Float(string='List Price')
     # LocationId not clear
     ParentContractLineItemId = fields.Many2one('contract.line.item', string='Parent Contract Line Item')
-    Product2Id	 = fields.Many2one('product.product', string='Product')
-    Quantity	 = fields.Float(string='Quantity', digits=(10, 2))
+    Product2Id = fields.Many2one('product.product', string='Product')
+    Quantity = fields.Float(string='Quantity', digits=(10, 2))
     RootContractLineItemId = fields.Many2one('contract.line.item', string='Root Contract Line Item')
-    UnitPrice	 = fields.Float(string='Sales Price', digits=(16, 2))
-    ServiceContractId	 = fields.Many2one('contract.service', string='Service Contract')
-    StartDate	 = fields.Date(string='Start Date')
+    UnitPrice = fields.Float(string='Sales Price', digits=(16, 2))
+    ServiceContractId = fields.Many2one('contract.service', string='Service Contract')
+    StartDate = fields.Date(string='Start Date')
     # Status	 = fields.Selection([
     #     ('key', 'value')
     # ], string='Status')
-    Subtotal	 = fields.Float(string='Subtotal', digits=(16, 2))
-    TotalPrice	 = fields.Float(string='Total Price', digits=(16, 2))
+    Subtotal = fields.Float(string='Subtotal', digits=(16, 2))
+    TotalPrice = fields.Float(string='Total Price', digits=(16, 2))

@@ -20,12 +20,9 @@
                                 <field name="Landmark"/>
                                 <field name="District"/>
                                 <field name="City"/>
+                                <field name="State__id"/>
                                 <field name="Coordinates"/>
                             </group>
-                            <notebook>
-                                <page string="Open Activities"></page>
-                                <page string="Activity History"></page>
-                            </notebook>
                         </group>
                     </sheet>
                     <div class="oe_chatter">
@@ -52,6 +49,7 @@
                     <field name="Landmark"/>
                     <field name="District"/>
                     <field name="City"/>
+                    <field name="State__id"/>
                 </tree>
             </field>
         </record>

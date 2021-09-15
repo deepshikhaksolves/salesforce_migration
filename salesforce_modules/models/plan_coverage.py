@@ -2,12 +2,11 @@ from odoo import models, fields, api
 
 
 class SalesforcePlanCoverage(models.Model):
-
     _name = 'plan.coverage'
     _inherit = 'mail.thread'
     _description = 'Salesforce Plan Coverage'
 
-    name = fields.Char('Coverage')
+    name = fields.Char('Coverage', size=80)
     coverage = fields.Selection([
         ('Consulta','Consulta'),
         ('Exame','Exame'),
@@ -40,9 +39,9 @@ class SalesforcePlanCoverage(models.Model):
         ('Acidente de trabalho','Acidente de trabalho'),
         ('Rede de atendimento','Rede de atendimento'),
     ],string="Coverage")
-    condition = fields.Char('Condition')
+    condition = fields.Char('Condition',size=255)
     user_id = fields.Many2one('res.users', string="Created By")
-    operator_description = fields.Char('Description in the Operator')
+    operator_description = fields.Char('Description in the Operator',size=255)
     start_of_coverage = fields.Date('Start of Coverage')
     end_of_coverage = fields.Date('End of Coverage')
     plan_id = fields.Many2one('product.product', 'Plano')

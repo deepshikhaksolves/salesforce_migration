@@ -10,12 +10,12 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-<!--                                <field name="Brand_id"/>Brand object is not define-->
+                                <field name="Brand_id"/>
                                 <field name="Model_id"/>
                                 <field name="Day"/>
                                 <field name="RENAVAM"/>
                                 <field name="Year"/>
-<!--                                <field name="Contract_id"/>Contract object is not define-->
+                                <field name="Contract_id"/>
                                 <field name="create_uid" string="Created By"/>
                             </group>
                             <group>

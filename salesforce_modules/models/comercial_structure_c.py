@@ -1,4 +1,6 @@
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
+
 
 class Comercial_Structure_C(models.Model):
     _name = 'model_comercial_structure_c'
@@ -15,3 +17,10 @@ class Comercial_Structure_C(models.Model):
     OwnerId = fields.Many2one('res.users',string='Owner')
     Allows_Pair = fields.Boolean(string='Permit By')
     Quantity = fields.Float(string='The amount',digits=(3,0))
+
+    @api.constrains('Quantity')
+    def digit_validation(self):
+        for rec in self:
+            if rec.Quantity > 999:
+                raise ValidationError("The amount should not greater than 3 digits")
+

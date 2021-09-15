@@ -11,7 +11,7 @@ class ContractEligibility(models.Model):
     contract_id = fields.Many2one('hr.contract', string='Contract')
     # CreatedById already in odoo
     Start_Date = fields.Date('Start date')
-    End_Date = fields.Date('date Final')
+    End_Date = fields.Date('Date Final')
     Elegibility_id = fields.Many2one('model_eligibility', string='Eligibility')
     name = fields.Char('Elegibility', size=80)
     # LastModifiedById already in odoo

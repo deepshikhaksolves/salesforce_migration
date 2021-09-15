@@ -1,4 +1,6 @@
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
+
 
 class Case(models.Model):
     _name = 'model_case'
@@ -56,8 +58,8 @@ class Case(models.Model):
     Contract_New = fields.Char(string='Contract New',size=255)
     #Contract_Readjustment_id = fields.Many2one('model_adjustment_of_the_contract',string='Contract Readjustment')
     # Contract_Readjustment_id is related to model_adjustment_of_the_contract object which is not define
-    #Contract_id = fields.Many2one('model_contract',string='Contract')
-    # Contract_id is related to model_contract object which is not define
+    Contract_id = fields.Many2one('hr.contract',string='Contract')
+
 
     created_current_user = fields.Boolean(string='Created Current User')
     regularization_date = fields.Date(string='Regularization Date')
@@ -178,6 +180,22 @@ class Case(models.Model):
     SuppliedEmail = fields.Char(string='Web Email')
     SuppliedName = fields.Char(string='Web Name',size=80)
     SuppliedPhone = fields.Char(string='Web Phone',size=40)
+    attachment_ids = fields.One2many('ir.attachment','case_id',string="Attachment")
+
+    @api.constrains('beneficiary_id','Hour_Register')
+    def digit_validation(self):
+        for rec in self:
+            if rec.beneficiary_id > 999999999999999:
+                raise ValidationError("Beneficiary Id should not greater then 15 digits")
+            if rec.Hour_Register >999:
+                raise ValidationError("Hour Register should not greater then 3 digits")
+
+
+
+class AttachmentInherit(models.Model):
+    _inherit = 'ir.attachment'
+
+    case_id = fields.Many2one('model_case',string="Case Id")
 
 
 

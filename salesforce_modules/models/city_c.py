@@ -12,4 +12,4 @@ class City_C(models.Model):
     Geographic_Scope_id = fields.Many2one('model_geographic_scope',string='Coverage')
     Name = fields.Char(string='City',size=80)
     City_Code = fields.Char(string='City code',size=7)
-    State_id = fields.Many2one('state',string='State')
+    State_id = fields.Many2one('res.country.state',string='State')

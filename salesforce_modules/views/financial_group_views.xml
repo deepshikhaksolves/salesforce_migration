@@ -12,7 +12,7 @@
                             <group>
                                 <field name="name"/>
                                 <field name="company_classification" />
-                                <field name="profile" />
+                                <field name="profile" /> <!--widget='checkbox'-->
                                 <field name="active" />
                             </group>
                             <group>

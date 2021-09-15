@@ -9,5 +9,5 @@ class OperatorChecklist(models.Model):
 
     # CreatedById already in odoo
     # LastModifiedById already in odoo
-    Name                    = fields.Char('Name Operator Checklist',size=80)
-    operator__c             = fields.Many2one('account.account',string='Operator')
+    Name = fields.Char('Name Operator Checklist', size=80)
+    operator__c = fields.Many2one('account.account', string='Operator')

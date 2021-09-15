@@ -13,9 +13,8 @@ class BenefitCarrierRevenue(models.Model):
     # LastModifiedById already in odoo
     OwnerId = fields.Many2one('res.users', string='Owner')
     Paid_by = fields.Selection([
-        ('percentage','Percentage'),
-        ('value','Value')
-    ],string="Paid by")
-    Revenue_id = fields.Many2one('revenue_compensation',string="Revenue") #Model not found
+        ('percentage', 'Percentage'),
+        ('value', 'Value')
+    ], string="Paid by")
+    Revenue_id = fields.Many2one('revenue_compensation', string="Revenue")  # Model not found
     Revenue_Value = fields.Float(string="Revenue Value", digits=(16, 2))
-

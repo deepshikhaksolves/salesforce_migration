@@ -20,8 +20,6 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Open Activities"/>
-                            <page string="Activity History"/>
                             <page string="Notes/Attachments">
                                 <field name="attachment_ids"/>
                             </page>

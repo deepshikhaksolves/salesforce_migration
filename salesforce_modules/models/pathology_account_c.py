@@ -1,5 +1,6 @@
 from odoo import models, fields, api
 
+
 class Pathology_Account_C(models.Model):
     _name = 'model_pathology_account_c'
     _inherit = ['mail.thread', 'mail.activity.mixin']
@@ -11,5 +12,5 @@ class Pathology_Account_C(models.Model):
     pathology_start_date = fields.Date(string='Date Onset of the Pathology')
     # LastModifiedById already in odoo
     Name = fields.Char(string='Pathology Name Account', size=80)
-    OwnerId = fields.Many2one('res.users',string='Owner')
-    pathology_id = fields.Many2one('model_pathology',string='Pathology')
+    OwnerId = fields.Many2one('res.users', string='Owner')
+    pathology_id = fields.Many2one('model_pathology', string='Pathology')

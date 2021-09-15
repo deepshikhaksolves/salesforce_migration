@@ -20,7 +20,7 @@ class Publico(models.Model):
         ('Broker','Broker')
     ],string="Entity Type")
     Full_Description = fields.Char(string="Full Description")
-    # Financial_Group_id = fields.Many2one('Financial Group',string="Financial Group")#Financial Group Model not found
+    Financial_Group_id = fields.Many2one('model_financial_group',string="Financial Group")
     # LastModifiedById already in odoo
     carrier_id = fields.Many2one('account.account', string="Operator")
     OwnerId = fields.Many2one('res.users', string="Owner")

@@ -2,7 +2,6 @@ from odoo import models, fields, api
 
 
 class SalesforcePayingCompany(models.Model):
-
     _name = 'paying.company'
     _description = 'Salesforce Paying Company'
 
