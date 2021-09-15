@@ -230,7 +230,6 @@
                                 <field name="Quotation_Reason"/>
                             </group>
                             <group>
-                                <field name="OwnerId"/>
                                 <field name="QuoteNumber"/>
                                 <field name="AccountId"/>
                                 <field name="RecordTypeId"/>
@@ -258,7 +257,7 @@
 
         <!-- Broker Binding Layout tree view -->
         <record id="quote_broker_binding_layout_tree" model="ir.ui.view">
-            <field name="name">Broker Binding Tree</field>
+            <field name="name">Broker Bidding Tree</field>
             <field name="model">model_quote</field>
             <field name="arch" type="xml">
                 <tree>
@@ -275,7 +274,7 @@
 
         <!-- Broker Binding Layout action window -->
         <record id="quote_broker_binding_layout_action" model="ir.actions.act_window">
-            <field name="name">Broker Binding Action</field>
+            <field name="name">Broker Bidding Action</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>
             <field name="view_mode">tree,form</field>
@@ -678,7 +677,7 @@
         </record>
 
         <!-- Small Quote Layout action window -->
-        <record id="quote_layout_action" model="ir.actions.act_window">
+        <record id="small_quote_layout_action" model="ir.actions.act_window">
             <field name="name">Small Quote Layout Action</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>

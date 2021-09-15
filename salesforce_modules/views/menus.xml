@@ -232,7 +232,7 @@
         <!--Quote Broker Quote  -->
             <menuitem name="Broker Quote" id="broker_quote_menu" parent='salesforce_menu_root' action="quote_broker_quote_layout_action" sequence='53'/>
         <!--Quote Broker Binding  -->
-            <menuitem name="Broker Binding" id="broker_binding_menu" parent='salesforce_menu_root' action="quote_broker_binding_layout_action" sequence='54'/>
+            <menuitem name="Broker Bidding" id="broker_binding_menu" parent='salesforce_menu_root' action="quote_broker_binding_layout_action" sequence='54'/>
         <!--Quote Project Binding  -->
             <menuitem name="Broker Project" id="broker_project_menu" parent='salesforce_menu_root' action="quote_broker_project_layout_action" sequence='55'/>
         <!--Quote Technical Praposal Binding  -->
@@ -241,6 +241,10 @@
             <menuitem name="Broker Rede" id="broker_rede_menu" parent='salesforce_menu_root' action="quote_broker_rede_layout_action" sequence='57'/>
         <!--Quote  -->
             <menuitem name="Quote Layout" id="quote_layout_menu" parent='salesforce_menu_root' action="quote_layout_action" sequence='58'/>
+
+        <!--Small Quote Layout -->
+            <menuitem name="Small Quote Layout" id="small_quote_layout_menu" parent='salesforce_menu_root' action="small_quote_layout_action"/>
+
         <!--Quote Product  -->
             <menuitem name="Quote Products Layout" id="quote_product_layout_menu" parent='salesforce_menu_root' action="quote_product_layout_action" sequence='59'/>
         <!--Reason For Beneficial  -->
