@@ -32,7 +32,7 @@
                                 <field name="region_city_ids">
                                     <tree>
                                         <field name="Name"/>
-                                        <field name="state__c"/>
+                                        <field name="city__c"/>
                                         <field name="priority"/>
                                     </tree>
                                 </field>
@@ -46,12 +46,12 @@
                                 </field>
                             </page>
                             <page string="Prices x Regions">
-                                <!-- <field name="price_x_region_ids">
+                                <field name="price_x_region_ids">
                                     <tree>
-                                        <field name="name"/>
-                                        <field name="product_id"/>
+                                        <field name="Name"/>
+                                        <field name="product_price_id"/>
                                     </tree>
-                                </field> -->
+                                </field>
                             </page>
                             <page string="Accredited Networks">
                                 <field name="accredited_network_ids">

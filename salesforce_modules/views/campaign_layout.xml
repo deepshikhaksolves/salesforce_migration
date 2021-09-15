@@ -65,13 +65,11 @@
                                 </field>
                             </page>
                             <page string="Files">
-                                <group>
-                                    <field name="CampaignImageId">
-                                       <tree>
-                                            <field name="name" string='Attachment Name'/>
-                                        </tree>
-                                    </field>
-                                </group>
+                                <field name="CampaignImageId">
+                                    <tree>
+                                        <field name="name" string='Attachment Name'/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Groups">
                                 <group>

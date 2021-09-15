@@ -7,7 +7,7 @@ class RegionCity(models.Model):
     _description = "Salesforce Region City"
     _rec_name = 'state__c'
 
-    # city__c   = fields.Many2one('model_city',string='City') #model_city Not created 
+    city__c   = fields.Many2one('model_city_c',string='City')
     # CreatedById  already in odoo
     Name = fields.Char('Identification')
     # LastModifiedById already in odoo
