@@ -327,7 +327,7 @@ class SalesforceOpprtunity(models.Model):
         ('Por Valor Fixo','Por Valor Fixo'),
     ],string="Wage Limit For Coparticipation")
     workflow_configuration = fields.Many2one('workflow_configuration', string="Workflow Configuration")
-    # campaign_id = fields.Many2one('model_campaign',string ='Primary Campaign Source',ondelete='cascade')
+    campaigns_id = fields.Many2one('model_campaign',string ='Primary Campaign Source',ondelete='cascade')
     model_id   = fields.Many2one('ir.model', string='Model ID')
     channel_id = fields.Many2one('channel_segmentation', string='Channel Id')
 

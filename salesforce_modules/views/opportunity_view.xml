@@ -16,7 +16,7 @@
                                 <field name="forecast_category_name"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="nominative"/>
                                 <field name="opportunity_event_source"/>
                                 <field name="capital"/>
@@ -215,7 +215,7 @@
                                 <field name="forecast_category_name"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="nominative"/>
                                 <field name="motive_of_gain"/>
                                 <field name="deployment_talk"/>
@@ -417,7 +417,7 @@
                                 <field name="forecast_category_name"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="nominative"/>
                                 <field name="life"/>
                                 <field name="mainly_carrier"/>
@@ -602,7 +602,7 @@
                                 <field name="forecast_category_name"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="nominative"/>
                                 <field name="type_of_revenue"/>
                                 <field name="number_of_installments"/>
@@ -785,7 +785,7 @@
                                 <field name="forecast_category_name"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="nominative"/>
                                 <field name="motive_of_gain"/>
                                 <field name="contract_carrier"/>
@@ -966,7 +966,7 @@
                                 <field name="forecast_category_name"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="nominative"/>
                                 <field name="motive_of_gain"/>
                                 <field name="mainly_carrier"/>
@@ -1154,7 +1154,7 @@
                                 <field name="forecast_category_name"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="nominative"/>
                                 <field name="opportunity_event_source"/>
                                 <field name="life"/>
@@ -1355,7 +1355,7 @@
                                 <field name="forecast_category_name"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="nominative"/>
                                 <field name="motive_of_gain"/>
                                 <field name="deployment_talk"/>
@@ -1540,7 +1540,7 @@
                                 <field name="forecast_category_name"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="nominative"/>
                                 <field name="motive_of_gain"/>
                                 <field name="deployment_talk"/>
@@ -1751,7 +1751,7 @@
                                 <field name="forecast_category_name"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="pension_mode"/>
                                 <field name="type_of_pension"/>
                                 <field name="nominative"/>
@@ -1954,7 +1954,7 @@
                                 <field name="budget_confirmed"/>
                                 <field name="type_business"/>
                                 <field name="roi_analysis_completed"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="discovery_completed"/>
                                 <field name="broker_number_benefit"/>
                                 <field name="comission_number_benefit"/>
@@ -2097,7 +2097,7 @@
                     <field name="budget_confirmed"/>
                     <field name="type_business"/>
                     <field name="roi_analysis_completed"/>
-<!--                                <field name="campaign_id"/>-->
+                    <field name="campaigns_id"/>
                     <field name="discovery_completed"/>
                     <field name="broker_number_benefit"/>
                     <field name="comission_number_benefit"/>
@@ -2118,7 +2118,7 @@
                                 <field name="close_date"/>
                                 <field name="forecast_category_name"/>
                                 <field name="probability"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="nominative"/>
                                 <field name="motive_of_gain"/>
                                 <field name="life"/>
@@ -2419,7 +2419,7 @@
                                 <field name="forecast_category_name"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="nominative"/>
                                 <field name="motive_of_gain"/>
                                 <field name="deployment_talk"/>
@@ -2631,7 +2631,7 @@
                                 <field name="forecast_category_name"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="nominative"/>
                                 <field name="motive_of_gain"/>
                                 <field name="deployment_talk"/>
@@ -2824,7 +2824,7 @@
                                 <field name="forecast_category_name"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
-    <!--                                <field name="campaign_id"/>-->
+                                <field name="campaigns_id"/>
                                 <field name="nominative"/>
                                 <field name="motive_of_gain"/>
                                 <field name="deployment_talk"/>
@@ -2924,6 +2924,7 @@
                                     <field name="contact_partner_lines" >
                                         <tree string="Contract Partner" editable="bottom">
                                              <field name="partner_id"/>
+                                             <field name="role"/>
                                         </tree>
                                     </field>
                                 </group>

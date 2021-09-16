@@ -274,9 +274,9 @@
 
 
         <!-- portal Access -->
-        <menuitem name="Portal Access" id="portal_access_action_menu" parent='salesforce_menu_root' sequence='69'/>
+        <menuitem name="Portal Access" id="portal_access_action_menu" parent='salesforce_menu_root' action="portal_access_action" sequence='69'/>
 
-        <menuitem name="Portal Access" id="portal_access_menu" parent='portal_access_action_menu' action="portal_access_action"/>
+
 
         <!-- Menu For Contract Team -->
             <menuitem name="Contract Team Layout" id="contract_team_menu" parent='salesforce_menu_root' action="contract_team_action" sequence='70'/>
