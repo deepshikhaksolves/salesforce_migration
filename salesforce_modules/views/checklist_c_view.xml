@@ -19,12 +19,6 @@
                         <notebook>
                             <page string="Notes">
                             </page>
-
-                            <page string="Open Activities">
-                            </page>
-
-                            <page string="Activity History">
-                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">

@@ -66,12 +66,6 @@
                             <page string="Contact Roles">
                             </page>
 
-                            <page string="Open Activities">
-                            </page>
-
-                            <page string="Activity History">
-                            </page>
-
                             <page string="Related Cases">
                             </page>
 
@@ -174,12 +168,6 @@
                             <page string="Contact Roles">
                             </page>
 
-                            <page string="Open Activities">
-                            </page>
-
-                            <page string="Activity History">
-                            </page>
-
                             <page string="Related Cases">
                             </page>
 
@@ -269,9 +257,6 @@
                             </page>
 
                             <page string="Case Comments">
-                            </page>
-
-                            <page string="Activity History">
                             </page>
 
                             <page string="Related Cases">
@@ -365,9 +350,6 @@
                             </page>
 
                             <page string="Case Comments">
-                            </page>
-
-                            <page string="Activity History">
                             </page>
 
                             <page string="Related Cases">
@@ -472,13 +454,7 @@
                             <page string="Case Team">
                             </page>
 
-                            <page string="Open Activities">
-                            </page>
-
                             <page string="Contact Roles">
-                            </page>
-
-                            <page string="Activity History">
                             </page>
 
                             <page string="Related Cases">
