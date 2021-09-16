@@ -12,6 +12,7 @@
                             <group>
                                 <field name="Compensation_Type"/>
                                 <field name="Number_Of_Installments"/>
+                                <field name="Periodicity_id"/>
                                 <field name="Compensation_Value"/>
                                 <field name="First_Month"/>
                                 <field name="Last_Month"/>
@@ -46,6 +47,7 @@
                 <tree>
                     <field name="Compensation_Type"/>
                     <field name="Number_Of_Installments"/>
+                    <field name="Periodicity_id"/>
                     <field name="Compensation_Value"/>
                     <field name="First_Month"/>
                     <field name="Last_Month"/>

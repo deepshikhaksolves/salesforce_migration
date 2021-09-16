@@ -37,7 +37,7 @@ class QuoteProducts(models.Model):
         ('Average cost', 'Average cost'),
         ('age group', 'Age group')
     ], string="Cost Type")
-    Value = fields.Float(string="Value", digits=(16, 2))
+    Value = fields.Float(string="Value")
     # LastModifiedById already in odoo
 
 

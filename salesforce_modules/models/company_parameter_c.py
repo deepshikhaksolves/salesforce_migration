@@ -1,5 +1,5 @@
 from odoo import models, fields, api
-from odoo.exceptions import ValidationError
+
 
 
 class Company_Parameter_C(models.Model):
@@ -18,11 +18,6 @@ class Company_Parameter_C(models.Model):
     value = fields.Char(string='Value',size=100000)
     attachment_ids = fields.One2many('ir.attachment', 'company_parameter_c_id', string="Attachment")
 
-    @api.constrains('priority')
-    def digit_validation(self):
-        for rec in self:
-            if rec.priority > 999:
-                raise ValidationError("Priority should not greater than 3 digits")
 
 
 class AttachmentInherit(models.Model):

@@ -6,7 +6,7 @@ class BankAccount(models.TransientModel):
     _inherit = ['account.setup.bank.manual.config','mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Bank account'
 
-    Bank_Branch = fields.Float(string="Agency", digits=(5, 0))
+    Bank_Branch = fields.Float(string="Agency")
     # Account_Bank__c already in odoo as acc_number
     Name = fields.Char(string="Bank Account", size=80)
     # CreatedById already in odoo

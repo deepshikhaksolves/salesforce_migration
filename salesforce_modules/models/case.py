@@ -1,5 +1,5 @@
 from odoo import models, fields, api
-from odoo.exceptions import ValidationError
+
 
 
 class Case(models.Model):
@@ -182,13 +182,6 @@ class Case(models.Model):
     SuppliedPhone = fields.Char(string='Web Phone',size=40)
     attachment_ids = fields.One2many('ir.attachment','case_id',string="Attachment")
 
-    @api.constrains('beneficiary_id','Hour_Register')
-    def digit_validation(self):
-        for rec in self:
-            if rec.beneficiary_id > 999999999999999:
-                raise ValidationError("Beneficiary Id should not greater then 15 digits")
-            if rec.Hour_Register >999:
-                raise ValidationError("Hour Register should not greater then 3 digits")
 
 
 

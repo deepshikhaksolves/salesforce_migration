@@ -119,7 +119,7 @@
                                 <field name="Geographic_Scope_tnk__c"/>
                             </group>
                             <group>
-                                <field name="product_family__c"/>
+                                <field name="Family"/>
                                 <field name="Internal_Code__c"/>
                                 <field name="Description"/>
                                 <field name="Charge_Mode__c"/>

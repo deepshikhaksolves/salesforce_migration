@@ -12,7 +12,7 @@ class Checklist_C(models.Model):
     Name = fields.Char(string='Checklist',size=80)
     How = fields.Char(string='Comment',size=255)
     Contract_id = fields.Many2one('hr.contract',string='Contract')
-    # Contract_id field is related to contract object which is not define
+
     critical = fields.Selection([('NOT SIGNED BY REP. COMPANY LEGAL','NOT SIGNED BY REP. COMPANY LEGAL'),
                                  ('MISSING CNPJ STAMP','MISSING CNPJ STAMP'),('PAGES MISSING','PAGES MISSING'),
                                  ('INCORRECT INFORMATION IN THE DOCUMENT','INCORRECT INFORMATION IN THE DOCUMENT'),

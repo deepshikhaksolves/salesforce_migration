@@ -274,9 +274,9 @@
 
 
         <!-- portal Access -->
-        <menuitem name="Portal Access" id="portal_access_action_menu" parent='salesforce_menu_root' sequence='69'/>
+        <menuitem name="Portal Access" id="portal_access_action_menu" parent='salesforce_menu_root' action="portal_access_action" sequence='69'/>
 
-        <menuitem name="Portal Access" id="portal_access_menu" parent='portal_access_action_menu' action="portal_access_action"/>
+
 
         <!-- Menu For Contract Team -->
             <menuitem name="Contract Team Layout" id="contract_team_menu" parent='salesforce_menu_root' action="contract_team_action" sequence='70'/>
@@ -446,10 +446,10 @@
             <menuitem name="Brand" id="brand_menu" parent='salesforce_menu_root' action="brand_layout_action" sequence='127'/>
         <!--Benefit Policy Layout Menu-->
             <menuitem name="Benefit Policy" id="benefit_menu" parent='salesforce_menu_root' action="benefit_policy_layout_action" sequence='128'/>
-        <!--Politica Auto Layout Menu-->
-            <menuitem name="Politica Auto" id="politica_auto_menu" parent='salesforce_menu_root' action="political_layout_action" sequence='129'/>
-         <!--Politica Checkup Vaccine Layout Menu-->
-            <menuitem name="Politica Checkup Vaccine" id="politica_checkup_vaccine_menu" parent='salesforce_menu_root' action="political_checkup_vaccine_action" sequence='130'/>
+        <!--Policy Auto Layout Menu-->
+            <menuitem name="Policy Auto" id="politica_auto_menu" parent='salesforce_menu_root' action="policy_layout_action" sequence='129'/>
+         <!--Policy Checkup Vaccine Layout Menu-->
+            <menuitem name="Policy Checkup Vaccine" id="politica_checkup_vaccine_menu" parent='salesforce_menu_root' action="policy_checkup_vaccine_action" sequence='130'/>
         <!--Policy Consulting Layout Menu-->
             <menuitem name="Policy Consulting" id="policy_consulting_menu" parent='salesforce_menu_root' action="policy_consulting_action" sequence='131'/>
         <!--Policy Fee Layout Menu-->

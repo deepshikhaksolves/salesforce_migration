@@ -36,7 +36,7 @@
             </field>
         </record>
        <record id="contract_partner_action" model="ir.actions.act_window">
-        <field name="name">Opportunity Contact Role</field>
+        <field name="name">Contract Partner Layout</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">contract.partner</field>
         <field name="view_mode">tree,form</field>

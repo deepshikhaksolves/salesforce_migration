@@ -29,14 +29,14 @@ class Beneficiary(models.Model):
     ], string="Degree of kinship")
     suspension_start = fields.Date(string="Start of suspension")
     # LastModifiedById already in odoo
-    Limit = fields.Float(string="Limit", digits=(16, 2))
+    Limit = fields.Float(string="Limit")
     registration = fields.Char(string="Enrollment", size=100)
-    currency = fields.Float(string="Currency", digits=(16, 2))
+    currency = fields.Float(string="Currency")
     OwnerId = fields.Many2one('res.users', string='Owner')
     has_liminal = fields.Boolean(string="Has Preliminary")
     # RecordTypeId =
     retain_billing = fields.Boolean(string="Retain Billing")
-    balance = fields.Float(string="Balance", digits=(16, 2))
-    additional_salary = fields.Float(string="Additional Salary", digits=(16, 2))
+    balance = fields.Float(string="Balance")
+    additional_salary = fields.Float(string="Additional Salary")
     status = fields.Selection([], string="Status")
     holder = fields.Many2one('model_beneficiary', string="Headline")
