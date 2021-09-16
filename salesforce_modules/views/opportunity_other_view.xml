@@ -9,7 +9,7 @@
                     <sheet>
                         <group>
                             <field name="opportunity_id"/>
-                            <field name="contact_id"/>
+                            <field name="contacts_id"/>
                             <field name="role"/>
                             <field name="is_primary"/>
                         </group>
@@ -23,7 +23,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="opportunity_id"/>
-                    <field name="contact_id"/>
+                    <field name="contacts_id"/>
                     <field name="role"/>
                     <field name="is_primary"/>
                 </tree>
@@ -157,6 +157,62 @@
         </field>
     </record>
 
+        <record id="opportunity_product_medicine_c_form" model="ir.ui.view">
+            <field name="name">Opportunity Layout - Medicine Product Form</field>
+            <field name="model">crm.lead.product</field>
+            <field name="arch" type="xml">
+                <form string="Opportunity Layout - Medicine Product">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="winner"/>
+                                <field name="product"/>
+                                <field name="reimbursement_value"/>
+                                <field name="reimbursement_value_type"/>
+                            </group>
+                            <group>
+                               <field name="life"/>
+                                <field name="consultation_reimbursement"/>
+                                <field name="carrier"/>
+                            </group>
+
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+       <record id="opportunity_product_medicine_c_tree" model="ir.ui.view">
+            <field name="name">Opportunity Layout - Medicine Product Tree</field>
+            <field name="model">crm.lead.product</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="life"/>
+                    <field name="consultation_reimbursement"/>
+                    <field name="carrier"/>
+                    <field name="winner"/>
+                    <field name="product"/>
+                </tree>
+            </field>
+        </record>
+       <record id="opportunity_product_medicine_c_action" model="ir.actions.act_window">
+        <field name="name">Opportunity Layout - Medicine Product</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">crm.lead.product</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('opportunity_product_medicine_c_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('opportunity_product_medicine_c_form')})]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No records available.
+            </p>
+        </field>
+    </record>
+
         <record id="opportunity_stage_parameter_form" model="ir.ui.view">
             <field name="name">Opportunity Opportunity Stage Parameter Layout Form</field>
             <field name="model">crm.lead.stage.parameter</field>
@@ -221,10 +277,12 @@
                                 <field name="master_label"/>
 <!--                                <field name="opportunity_stage"/>-->
                                 <field name="current_stage"/>
+                                <field name="user_id"/>
                                 <field name="next_stage"/>
                             </group>
                             <group>
                                 <field name="is_protected"/>
+                                <field name="last_modified_by_id"/>
                                 <field name="namespace_prefix"/>
                             </group>
                         </group>
