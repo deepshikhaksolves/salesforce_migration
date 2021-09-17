@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="Lead_form_inherit">
+            <field name="name">lead.form.inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet//group/group[2]/field[@name='phone']" position="after">
+                    <field name="RFQ_type"/>
+                </xpath>
+                <page name="extra" position="after">
+                    <page name="salesforce" string="SalesForce Details"
+                          attrs="{'invisible': ['|',('sf_id', '=', False),('type','=','opportunity')]}">
+                        <group>
+                            <group>
+                                <field name="sf_id" string="Sf Lead Id"/>
+                            </group>
+                            <group>
+                                <field name="sf_name"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="sf_assembly_amount"/>
+                                <field name="sf_assembly"/>
+                                <field name="sf_amount"/>
+                                <field name="sf_blanket_order"/>
+                                <field name="sf_buyer_feedback"/>
+                                <field name="sf_connection_rcv_id"/>
+                                <field name="sf_connection_snt_id"/>
+                                <field name="sf_contact_id"/>
+                                <field name="sf_buyer_notes_c"/>
+
+                                <field name="sf_salesperson_id"/>
+                                <field name="sf_created_by_id"/>
+                                <field name="sf_last_modified_by_id"/>
+                                <field name="sf_company_type"/>
+                                <field name="sf_lead_expected_annual_spend__c"/>
+                                <field name="sf_EmailBouncedDate"/>
+                                <field name="sf_EmailBouncedReason"/>
+                                <field name="sf_country"/>
+                                <field name="sf_state"/>
+                                <field name="sf_street"/>
+                                <field name="sf_postal_code"/>
+
+                            </group>
+                            <group>
+                                <field name="sf_description"/>
+                                <field name="sf_comment"/>
+                                <field name="sf_expected_order_val"/>
+                                <field name="sf_feed_back"/>
+                                <field name="sf_fiscal"/>
+                                <field name="sf_fiscal_quarter"/>
+                                <field name="sf_fiscal_year"/>
+                                <field name="sf_comment_2__c"/>
+                                <field name="sf_lead_source"/>
+                                <field name="sf_title"/>
+                                <field name="sf_is_converted"/>
+
+                                <field name="sf_is_deleted"/>
+                                <field name="sf_created_date"/>
+                                <field name="sf_last_modified_date"/>
+                                <!--<field name="sf_open_date"/>-->
+                                <!--<field name="sf_quote_type__c"/>-->
+                                <field name="sf_stencil_amount"/>
+                                <field name="sf_lead_stencil__c"/>
+                                <field name="sf_lead_stencil_notes__c"/>
+                                <field name="sf_tariff_amount"/>
+                            </group>
+                        </group>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="opportunity_form_inherit">
+            <field name="name">opportunity.form.inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="sale_crm.crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+                <page name="lead" position="after">
+                    <page name="salesforce" string="SalesForce Details" attrs="{'invisible': ['|',('sf_id', '=', False),('type','=','lead')]}">
+                        <group>
+                            <group>
+                                <field name="sf_id"/>
+                            </group>
+                            <group>
+                                <field name="sf_name"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="sf_assembly_amount"/>
+                                <field name="sf_assembly"/>
+                                <field name="sf_amount"/>
+                                <field name="sf_blanket_order"/>
+                                <field name="sf_buyer_feedback"/>
+                                <field name="sf_connection_rcv_id"/>
+                                <field name="sf_connection_snt_id"/>
+                                <field name="sf_salesperson_id"/>
+                                <field name="sf_created_by_id"/>
+                                <field name="sf_last_modified_by_id"/>
+                                <field name="sf_contact_id"/>
+                                <field name="sf_description"/>
+                                <field name="sf_company_type"/>
+                                <field name="sf_comment"/>
+                                <field name="sf_expected_order_val"/>
+                                <field name="sf_feed_back"/>
+                                <field name="sf_fiscal"/>
+                                <field name="sf_fiscal_quarter"/>
+                                <field name="sf_fiscal_year"/>
+                            </group>
+                            <group>
+                                <field name="sf_forecast_category"/>
+                                <!--
+                                <field name="sf_forecast_cat_name"/>
+                                -->
+                                <field name="sf_has_opn_activity"/>
+                                <field name="sf_has_opp_lineitem"/>
+                                <field name="sf_has_overduetask"/>
+                                <field name="sf_is_closed"/>
+                                <field name="sf_is_deleted"/>
+                                <field name="sf_is_won"/>
+                                <field name="sf_potential_customer"/>
+                                <field name="sf_pcb_amount"/>
+                                <!--<field name="sf_open_date"/>-->
+                                <field name="sf_created_date"/>
+                                <field name="sf_last_modified_date"/>
+                                <field name="create_date"/>
+                                <field name="date_conversion"/>
+                                <field name="date_closed"/>
+                                <field name="sf_closed_date"/>
+                                <field name="sf_stencil__c"/>
+                                <field name="sf_tariff_amount"/>
+                                <field name="sf_stencil_amount"/>
+                            </group>
+                        </group>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="opportunity_form_inherit_search_view">
+            <field name="name">opportunity.form.search</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
+            <field name="arch" type="xml">
+                <filter name="stage" position="after">
+                    <filter string="RFQ Type" name="RFQ_type" context="{'group_by': 'RFQ_type'}"/>
+                </filter>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="lead_form_inherit_view">
+            <field name="name">crm.lead.form.opportunity.inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="mcl_crm.crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='company_details']/group[1]" position="before">
+                    <group name="sf_buyer_notes_c_field" col="2">
+                        <field name="sf_buyer_notes_c" string="Buyer's Notes"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+         <record id="bid_for_bid_type" model="sf.quote.type.map">
+            <field name="quote_type_name">Bid for Bid</field>
+        </record>
+
+        <record id="bid_for_buy_type" model="sf.quote.type.map">
+            <field name="quote_type_name">Bid for Buy</field>
+        </record>
+
+        <record id="unknown_type" model="sf.quote.type.map">
+            <field name="quote_type_name">Unknown</field>
+        </record>
+    </data>
+</odoo>

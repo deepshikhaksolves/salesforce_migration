@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="Partner_form_inherit">
+            <field name="name">partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="priority">3000</field>
+            <field name="arch" type="xml">
+                <page name="geo_location" position="after">
+                    <page name="salesforce_account" string="Salesforce Details" attrs="{'invisible': [('sf_account_id', '=', False)]}">
+                        <group>
+                            <group>
+                                <field name="sf_account_id"/>
+                            </group>
+                            <group>
+                                <field name="sf_customer_name"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="sf_billing_street"/>
+                                <field name="sf_billing_city"/>
+                                <field name="sf_billing_state"/>
+                                <field name="sf_billing_geocode_accuracy"/>
+                                <field name="sf_billing_latitude"/>
+                                <field name="sf_billing_longitude"/>
+                                <field name="sf_billing_postalcode"/>
+                                <field name="sf_billing_country"/>
+                            </group>
+                            <group>
+                                <field name="sf_shipping_street"/>
+                                <field name="sf_shipping_city"/>
+                                <field name="sf_shipping_state"/>
+                                <field name="sf_shipping_geocode_accuracy"/>
+                                <field name="sf_shipping_latitude"/>
+                                <field name="sf_shipping_longitude"/>
+                                <field name="sf_shipping_postalcode"/>
+                                <field name="sf_shipping_country"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="sf_contact_id"/>
+                                <field name="sf_individual_id"/>
+                                <field name="first_order_date"/>
+                                <field name="website"/>
+                                <field name="phone" widget="originate_call"/>
+                                <field name="sf_company_number_of_employees"/>
+                                <field name="fax_number"/>
+                                <field name="sf_annualrevenue" string="Annual Revenue"/>
+                                <field name="sf_design"/>
+                                <field name="pcb_account_status"/>
+                                <field name="sf_assembly_first_order__c"/>
+                                <field name="assembly_account_status"/>
+                                <field name="stencil_account_status"/>
+                                <!--                                <field name="sf_classification__c"/>-->
+                                <field name="sf_comments_2__c"/>
+                                <field name="sf_comments__c"/>
+                                <!--                                <field name="sf_company_type__c"/>-->
+                                <field name="sf_connection_rcv_id"/>
+                                <field name="sf_connection_snt_id"/>
+                                <field name="sf_credit_ref__c"/>
+                                <field name="sf_description"/>
+                                <field name="sf_estimated_pcb_expense__c"/>
+                                <field name="sf_expected_annual_spend__c"/>
+                                <field name="sf_interested_in_assembly__c"/>
+                            </group>
+                            <group>
+                                <field name="sf_jigsaw_com_id"/>
+                                <field name="sf_lead_status__c"/>
+                                <field name="sf_account_source"/>
+                                <field name="sf_created_date"/>
+                                <field name="sf_last_modified_date"/>
+                                <field name="sf_is_deleted"/>
+                                <field name="is_key_customer"/>
+                                <field name="sf_master_rec_id"/>
+                                <field name="sf_partner_id"/>
+                                <field name="is_reached_buyer"/>
+                                <field name="sf_photo_url"/>
+                                <field name="sf_prospecting__c"/>
+                                <field name="sf_rep_name__c"/>
+                                <field name="sf_sp_acc_status__c"/>
+                                <field name="sf_sp_notes__c"/>
+                                <field name="sf_stencil_notes__c"/>
+                                <field name="sf_type"/>
+<!--                                <field name="sf_stensil_acc_status__c" string="Stencil Account Status"/>-->
+                                <field name="sf_source__c"/>
+<!--                                <field name="sf_square_footage__c"/>-->
+<!--                                <field name="sf_no_of_employees__c"/>-->
+                            </group>
+                        </group>
+                    </page>
+                    <page name="salesforce_contact" string="Salesforce Details" attrs="{'invisible': [('sf_contact_id', '=', False)]}">
+                        <group>
+                            <group>
+                                <field name="sf_contact_id"/>
+                            </group>
+                            <group>
+                                <field name="sf_related_account_id"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="sf_mailing_street"/>
+                                <field name="sf_mailing_city"/>
+                                <field name="sf_mailing_state"/>
+                                <field name="sf_mailing_geocode_accuracy"/>
+                                <field name="sf_mailing_latitude"/>
+                                <field name="sf_mailing_longitude"/>
+                                <field name="sf_mailing_postalcode"/>
+                                <field name="sf_mailing_country"/>
+                            </group>
+                            <group>
+                                <field name="sf_other_street"/>
+                                <field name="sf_other_city"/>
+                                <field name="sf_other_state"/>
+                                <field name="sf_other_geocode_accuracy"/>
+                                <field name="sf_other_latitude"/>
+                                <field name="sf_other_longitude"/>
+                                <field name="sf_other_postalcode"/>
+                                <field name="sf_other_country"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="sf_asst_phone"/>
+                                <field name="sf_asst_name"/>
+                                <field name="sf_salutation"/>
+                                <field name="sf_first_name"/>
+                                <field name="sf_last_name"/>
+                                <field name="sf_birth_date"/>
+                                <field name="sf_connection_rcv_id"/>
+                                <field name="sf_connection_snt_id"/>
+                                <field name="sf_department"/>
+                                <field name="sf_description"/>
+                                <field name="email"/>
+                                <field name="sf_email_bounce_date"/>
+                            </group>
+                            <group>
+                                <field name="sf_individual_rel_id"/>
+                                <field name="sf_jigsaw_contact_id"/>
+                                <field name="sf_email_bounce_rsn"/>
+                                <field name="fax_number"/>
+                                <field name="sf_is_deleted"/>
+                                <field name="sf_is_mail_bounced"/>
+                                <field name="sf_lst_ref_data"/>
+                                <field name="sf_lead_source"/>
+                                <field name="sf_created_date"/>
+                                <field name="sf_last_modified_date"/>
+                                <field name="mobile" widget="originate_call"/>
+                                <field name="phone" widget="originate_call"/>
+                                <field name="sf_photo_url"/>
+                                <field name="sf_reports_to"/>
+                                <field name="sf_title"/>
+                            </group>
+                        </group>
+                    </page>
+                    <page name="salesforce_individual" string="Salesforce Details" attrs="{'invisible': [('sf_individual_id', '=', False)]}">
+                        <group>
+                            <group>
+                                <field name="sf_individual_id"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="sf_salutation"/>
+                                <field name="sf_first_name"/>
+                                <field name="sf_last_name"/>
+                                <field name="sf_birth_date"/>
+                                <field name="sf_can_store_pii_elsewhere"/>
+                                <field name="sf_created_date"/>
+                                <field name="sf_last_modified_date"/>
+                                <field name="sf_children_count"/>
+                                <field name="sf_consume_credit_score"/>
+                                <field name="sf_ccs_povider_name"/>
+                                <field name="fax_number"/>
+                                <field name="sf_death_date"/>
+                                <field name="sf_hasoptedout_processing"/>
+                                <field name="sf_hasoptedout_profiling"/>
+                                <field name="sf_hasoptedout_solicit"/>
+
+                            </group>
+                            <group>
+                                <field name="sf_occupation"/>
+                                <field name="sf_convictions_count"/>
+                                <field name="sf_sendindividualdata"/>
+                                <field name="sf_should_forget"/>
+                                <field name="website"/>
+                                <field name="sf_hasoptedout_trac"/>
+                                <field name="sf_hasoptedoutgeo_track"/>
+                                <field name="sf_related_account_id"/>
+                                <field name="sf_individual_age"/>
+                                <field name="sf_influencer_rating"/>
+                                <field name="sf_is_deleted"/>
+                                <field name="sf_is_home_own"/>
+                                <field name="sf_military_service"/>
+                            </group>
+                        </group>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="sf_follow_up_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Follow-up</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead5"/>
+            <field name="tags" ref="sf_follow_up_tag"/>
+        </record>
+
+        <record id="sf_closed_won_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Closed Won</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead7"/>
+            <field name="mark">won</field>
+        </record>
+
+        <record id="sf_closed_lost_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Closed Lost</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead5"/>
+            <field name="mark">lost</field>
+        </record>
+
+        <record id="sf_cancelled_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Cancelled</field>
+            <field name="sf_crm_stage" ref="crm.stage_lead1"/>
+            <field name="mark">archive</field>
+        </record>
+
+        <record id="sf_requote_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Requote</field>
+            <field name="sf_crm_stage" ref="crm.stage_lead3"/>
+            <field name="tags" ref="sf_requote_tag"/>
+        </record>
+
+        <record id="sf_requote_again_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Requote 2nd or More</field>
+            <field name="sf_crm_stage" ref="crm.stage_lead3"/>
+            <field name="tags" ref="sf_requote_again_tag"/>
+        </record>
+
+        <record id="sf_requote_won_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Requote Won</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead7"/>
+            <field name="mark">won</field>
+            <field name="tags" ref="sf_requote_tag"/>
+        </record>
+
+        <record id="sf_requote_lost_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Requote Lost</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead5"/>
+            <field name="tags" ref="sf_requote_tag"/>
+            <field name="mark">lost</field>
+        </record>
+
+        <record id="sf_bidding_won_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Bidding Won</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead5"/>
+            <field name="tags" ref="sf_bidding_tag"/>
+        </record>
+
+        <record id="sf_bidding_lost_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Bidding Lost</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead5"/>
+            <field name="mark">lost</field>
+            <field name="tags" ref="sf_bidding_tag"/>
+        </record>
+
+        <record id="sf_reorder_won_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Reorder Won</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead7"/>
+            <field name="mark">won</field>
+            <field name="tags" ref="sf_reorder_tag"/>
+        </record>
+
+
+        <record id="sf_lost_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Lost</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead5"/>
+            <field name="mark">lost</field>
+        </record>
+
+        <record id="sf_budgetary_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Budgetary</field>
+            <field name="sf_crm_stage" ref="crm.stage_lead3"/>
+            <field name="tags" ref="sf_budgetary_tag"/>
+        </record>
+
+        <record id="sf_comparison_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Comparison</field>
+            <field name="sf_crm_stage" ref="crm.stage_lead3"/>
+            <field name="tags" ref="sf_comparison_tag"/>
+        </record>
+
+        <record id="sf_on_hold_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">On Hold</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead6"/>
+            <field name="mark">won</field>
+        </record>
+
+        <record id="sf_pending_order_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Pending Order</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead5"/>
+        </record>
+
+        <record id="sf_completed_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Completed</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead7"/>
+            <field name="mark">won</field>
+        </record>
+
+        <record id="sf_adjustment_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Adjustment</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead7"/>
+        </record>
+
+        <record id="sf_feedback_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Feedback</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead5"/>
+            <field name="tags" ref="sf_feedback_tag"/>
+        </record>
+
+        <record id="sf_please_follow_up_stage" model="sf.stages.mapping">
+            <field name="sf_stage_name">Please Follow up</field>
+            <field name="sf_crm_stage" ref="mcl_crm.stage_lead5"/>
+            <field name="tags" ref="sf_follow_up_tag"/>
+        </record>
+
+
+    </data>
+</odoo>
