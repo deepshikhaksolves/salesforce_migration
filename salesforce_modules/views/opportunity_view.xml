@@ -2337,28 +2337,28 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Informações para Contrato" name="contract_information">
-                                <group>
-                                    <group>
-                                        <field name="contract_origin"/>
-                                        <field name="brokerage_transfer"/>
-                                        <field name="income_type"/>
-                                        <field name="income_type"/>
-                                        <field name="Tax_Type"/>
-                                        <field name="grace_period"/>
-                                    </group>
-                                    <group>
-                                        <field name="periodicity_renewal"/>
-                                        <field name="contributory"/>
-                                        <field name="contributory_value"/>
-                                        <field name="contributory_description"/>
-                                        <field name="has_dps"/>
-                                        <field name="charge_rate"/>
-                                        <field name="administration_tax"/>
-                                        <field name="output_rate"/>
-                                    </group>
-                                </group>
-                            </page>
+<!--                            <page string="Informações para Contrato" name="contract_information">-->
+<!--                                <group>-->
+<!--                                    <group>-->
+<!--                                        <field name="contract_origin"/>-->
+<!--                                        <field name="brokerage_transfer"/>-->
+<!--                                        <field name="income_type"/>-->
+<!--                                        <field name="income_type"/>-->
+<!--                                        <field name="Tax_Type"/>-->
+<!--                                        <field name="grace_period"/>-->
+<!--                                    </group>-->
+<!--                                    <group>-->
+<!--                                        <field name="periodicity_renewal"/>-->
+<!--                                        <field name="contributory"/>-->
+<!--                                        <field name="contributory_value"/>-->
+<!--                                        <field name="contributory_description"/>-->
+<!--                                        <field name="has_dps"/>-->
+<!--                                        <field name="charge_rate"/>-->
+<!--                                        <field name="administration_tax"/>-->
+<!--                                        <field name="output_rate"/>-->
+<!--                                    </group>-->
+<!--                                </group>-->
+<!--                            </page>-->
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines" >
@@ -2513,7 +2513,7 @@
                                         <field name="rebate"/>
                                         <field name="availability_fee"/>
                                         <field name="monthly_average_value"/>
-                                        <field name="payment_mode"/>
+<!--                                        <field name="payment_mode"/>-->
                                         <field name="cut_off_date"/>
                                         <field name="credit_start"/>
                                     </group>
