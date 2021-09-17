@@ -12,9 +12,8 @@ class SalesforceLead(models.Model):
          ('November', 'November'), ('December', 'December')], 'Actual Birth Policy')
 
     actual_carrier__c = fields.Many2one('account.account', string='Actual Carrier')
-    # actual_invoice__c       = fields.Many2one('res.currency', string='Actual Invoice', default=lambda self: self.env.user.company_id.currency_id.id)
 
-    actual_invoice__c = fields.Float('Actual Invoice', digits=(16, 5))
+    actual_invoice__c = fields.Float('Actual Invoice', digits=(16, 2))
     actual_lifes__c = fields.Float('Actual Lifes', digits=(18, 0))
 
     street = fields.Char()
@@ -27,12 +26,12 @@ class SalesforceLead(models.Model):
 
     actual_birth_policy_order__c = fields.Text('Current Order Policy Anniversary')
     # AnnualRevenue           = fields.Many2one('res.currency', string='Annual Revenue', default=lambda self: self.env.user.company_id.currency_id.id)
-    AnnualRevenue = fields.Float('Actual Invoice', digits=(18, 0))
+    AnnualRevenue = fields.Float('Annual Revenue', digits=(18, 0))
 
     Business_Name__c = fields.Char('Business Name', size=255)
     CNAE__c = fields.Many2one('model_cnae', string='NINE')
     CNPJ__c = fields.Char('CNPJ', size=18)
-    Company = fields.Char('Company', size=255)
+    Company = fields.Char('Company', size=255, required=True)
 
     Company_Segmentation__c = fields.Selection(
         [('Small', 'Recipe <40k'), ('Small_Large', 'Revenue between 40k and 100k'),

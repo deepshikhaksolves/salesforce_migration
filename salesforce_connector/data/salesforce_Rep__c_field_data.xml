@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="sf_rep__c" model="sf.model.mapping">
+            <field name="o_model" search="[('model','=','sf.rep__c')]" model="ir.model"/>
+            <field name="sf_model">Rep__c</field>
+        </record>
+
+        <record id="sf_rep__c_id" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','sf.rep__c'),('name','=','sf_id')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Id</field>
+            <field name="type">integer</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_rep__c"/>
+        </record>
+
+        <record id="sf_rep__c_name" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','sf.rep__c'),('name','=','sf_rep_name')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Name</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_rep__c"/>
+        </record>
+
+        <record id="sf_rep__c_phone__c" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','sf.rep__c'),('name','=','sf_rep_phone')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Phone__c</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_rep__c"/>
+        </record>
+
+        <record id="sf_rep__c_email__c" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','sf.rep__c'),('name','=','sf_rep_email')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Email__c</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_rep__c"/>
+        </record>
+
+        <record id="sf_rep__c_website__c" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','sf.rep__c'),('name','=','sf_rep_website')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Website__c</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_rep__c"/>
+        </record>
+
+        <record id="sf_rep__c_isdeleted" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','sf.rep__c'),('name','=','sf_rep_is_deleted')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">IsDeleted</field>
+            <field name="type">boolean</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_rep__c"/>
+        </record>
+
+        <record id="sf_rep__c_address__c" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','sf.rep__c'),('name','=','sf_rep_address')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Address__c</field>
+            <field name="type">text</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_rep__c"/>
+        </record>
+        <record id="sf_repc_created_date" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','sf.rep__c'),('name','=','sf_created_date')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">CreatedDate</field>
+            <field name="type">datetime</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_rep__c"/>
+        </record>
+        <record id="sf_repc_modified_date" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','sf.rep__c'),('name','=','sf_last_modified_date')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">LastModifiedDate</field>
+            <field name="type">datetime</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_rep__c"/>
+        </record>
+<!--        <record id="sf_rep__c_connectionsentId" model="sf.columns.mapping">-->
+<!--            <field name="odoo_field" search="[('model','=','sf.rep__c'),('name','=','sf_rep_conn_sent_id')]"-->
+<!--                   model="ir.model.fields"/>-->
+<!--            <field name="sf_field">ConnectionSentId</field>-->
+<!--            <field name="type">many2one</field>-->
+<!--            <field name="sf_relational_model">PartnerNetworkConnection</field>-->
+<!--            <field name="main_field_map" ref="salesforce_connector.sf_rep__c"/>-->
+<!--        </record>-->
+
+<!--        <record id="sf_rep__c_connectionreceivedid" model="sf.columns.mapping">-->
+<!--            <field name="odoo_field" search="[('model','=','sf.rep__c'),('name','=','sf_rep_conn_received_id')]"-->
+<!--                   model="ir.model.fields"/>-->
+<!--            <field name="sf_field">ConnectionReceivedId</field>-->
+<!--            <field name="type">many2one</field>-->
+<!--            <field name="sf_relational_model">PartnerNetworkConnection</field>-->
+<!--            <field name="main_field_map" ref="salesforce_connector.sf_rep__c"/>-->
+<!--        </record>-->
+    </data>
+</odoo>

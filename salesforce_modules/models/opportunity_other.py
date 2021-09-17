@@ -5,7 +5,7 @@ class SalesforceOpportunityContactRole(models.Model):
     _name = 'crm.lead.contact.role'
     _description = 'Salesforce Opportunity Contact Role'
 
-    contact_id = fields.Many2one('res.user', string="Contact ID")
+    contacts_id = fields.Many2one('res.partner', string="Contact")
     user_id = fields.Many2one('res.users', string="Created By")
     last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
     opportunity_id = fields.Many2one('crm.lead', string="Opportunity")

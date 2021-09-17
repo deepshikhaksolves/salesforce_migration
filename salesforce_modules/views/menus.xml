@@ -7,7 +7,7 @@
         <!-- Menu For Lead -->
             <menuitem name="Lead" id="lead_parent_action_menu" parent='salesforce_menu_root' sequence='1'/>
 
-                <menuitem name="Master" id="broker_lead_layout_menu" parent='lead_parent_action_menu' action="lead_layout_action" sequence="1" />
+                <menuitem name="Lead Layout" id="broker_lead_layout_menu" parent='lead_parent_action_menu' action="lead_layout_action" sequence="1" />
 
                 <menuitem name="Broker Lead Layout PF" id="broker_lead_layout_pf_menu" parent='lead_parent_action_menu' action="broker_lead_layout_pf_action" sequence="2" />
 
@@ -18,7 +18,7 @@
         <!-- Menu For Task -->
             <menuitem name="Task" id="task_parent_action_menu" parent='salesforce_menu_root' sequence='2'/>
 
-                <menuitem name="Master" id="broker_task_layout_menu" parent='task_parent_action_menu' action="broker_task_layout_action" sequence="1" />
+                <menuitem name="Broker Task Layout" id="broker_task_layout_menu" parent='task_parent_action_menu' action="broker_task_layout_action" sequence="1" />
 
                 <menuitem name="Deployment Talk" id="deployment_talk_menu" parent='task_parent_action_menu' action="deployement_talk_layout_action" sequence="2" />
 
@@ -178,6 +178,7 @@
         <!--Menu for Opportunity Product-->
         <menuitem name="Opportunity Product" id="opportunity_product_parent_action_menu" parent='salesforce_menu_root' sequence='37'/>
             <menuitem name="Opportunity Product Layout" id="opportunity_product_menu" parent='opportunity_product_parent_action_menu' action="opportunity_product_c_action" sequence="1" />
+            <menuitem name="Opportunity Layout - Medicine Product" id="opportunity_product_medicine_c_menu" parent='opportunity_product_parent_action_menu' action="opportunity_product_medicine_c_action" sequence="2" />
 
         <!--Menu for Opportunity Stage Parameter-->
         <menuitem name="Opportunity Stage Parameter" id="opportunity_stage_parameter_parent_action_menu" parent='salesforce_menu_root' sequence='38'/>

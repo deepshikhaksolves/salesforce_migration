@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="sf_individual" model="sf.model.mapping">
+            <field name="o_model" search="[('model','=','res.partner')]" model="ir.model"/>
+            <field name="sf_model">Individual</field>
+        </record>
+
+        <record id="sf_individual_birthdate" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_birth_date')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">BirthDate</field>
+            <field name="type">date</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_canstorepiielsewhere" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_can_store_pii_elsewhere')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">CanStorePiiElsewhere</field>
+            <field name="type">boolean</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_childrencount" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_children_count')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">ChildrenCount</field>
+            <field name="type">integer</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_consumercreditscore" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_consume_credit_score')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">ConsumerCreditScore</field>
+            <field name="type">integer</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_consumercreditscoreprovidername" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_ccs_povider_name')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">ConsumerCreditScoreProviderName</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_convictionscount" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_convictions_count')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">ConvictionsCount</field>
+            <field name="type">integer</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_deathdate" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_death_date')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">DeathDate</field>
+            <field name="type">date</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_firstname" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_first_name')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">FirstName</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_hasoptedoutgeotracking" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_hasoptedoutgeo_track')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">HasOptedOutGeoTracking</field>
+            <field name="type">boolean</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_hasoptedoutprocessing" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_hasoptedout_processing')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">HasOptedOutProcessing</field>
+            <field name="type">boolean</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_hasoptedoutprofiling" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_hasoptedout_profiling')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">HasOptedOutProfiling</field>
+            <field name="type">boolean</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_hasoptedoutsolicit" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_hasoptedout_solicit')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">HasOptedOutSolicit</field>
+            <field name="type">boolean</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_hasoptedouttracking" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_hasoptedout_trac')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">HasOptedOutTracking</field>
+            <field name="type">boolean</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <!--        <record id="sf_individual_accountid" model="sf.columns.mapping">-->
+        <!--            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_related_account_id')]"-->
+        <!--                   model="ir.model.fields"/>-->
+        <!--            <field name="sf_field">AccountId</field>-->
+        <!--            <field name="type">many2one</field>-->
+        <!--            <field name="sf_relational_model">Account</field>-->
+        <!--            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>-->
+        <!--        </record>-->
+
+        <record id="sf_individual_id" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_individual_id')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Id</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_individualsage" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_individual_age')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">IndividualsAge</field>
+            <field name="type">selection</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_influencerrating" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_influencer_rating')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">InfluencerRating</field>
+            <field name="type">integer</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_isdeleted" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_is_deleted')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">IsDeleted</field>
+            <field name="type">boolean</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_ishomeowner" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_is_home_own')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">IsHomeOwner</field>
+            <field name="type">boolean</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_lastname" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_last_name')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">LastName</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <!--        <record id="sf_individual_masterrecordId" model="sf.columns.mapping">-->
+        <!--            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_id')]"-->
+        <!--                   model="ir.model.fields"/>-->
+        <!--            <field name="sf_field">MasterRecordId</field>-->
+        <!--            <field name="type">many2one</field>-->
+        <!--            <field name="sf_relational_model">Individual</field>-->
+        <!--            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>-->
+        <!--        </record>-->
+
+        <record id="sf_individual_user_id" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_salesperson_id')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">OwnerId</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_created_by__id" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_created_by_id')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">CreatedById</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_last_modified_by_id" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_last_modified_by_id')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">LastModifiedById</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_militaryservice" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_military_service')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">MilitaryService</field>
+            <field name="type">selection</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_name" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','name')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Name</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_occupation" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_occupation')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Occupation</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <!--        <record id="sf_individual_salutation" model="sf.columns.mapping">-->
+        <!--            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_salutation')]"-->
+        <!--                   model="ir.model.fields"/>-->
+        <!--            <field name="sf_field">Salutation</field>-->
+        <!--            <field name="type">selection</field>-->
+        <!--            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>-->
+        <!--        </record>-->
+
+        <record id="sf_individual_sendindividualdata" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_sendindividualdata')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">SendIndividualData</field>
+            <field name="type">boolean</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_shouldforget" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_should_forget')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">ShouldForget</field>
+            <field name="type">boolean</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_website" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','website')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Website</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_created_date" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_created_date')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">CreatedDate</field>
+            <field name="type">datetime</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+        <record id="sf_individual_modified_date" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_last_modified_date')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">LastModifiedDate</field>
+            <field name="type">datetime</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_individual"/>
+        </record>
+
+    </data>
+</odoo>

@@ -138,7 +138,7 @@ class SalesforceOpprtunity(models.Model):
         ('Commit','Confirmação'),
         ('Closed','Fechado'),
     ], string="Forecast Category")
-    frequency = fields.Many2one('periodicity', string='Frequency') #New Model hence removed
+    frequency = fields.Many2one('model.periodicity', string='Frequency') #New Model hence removed
     employee = fields.Integer('Funcionários',size=18)
     funeral_assistance = fields.Boolean('Funeral Assistance')
     funeral_assistance_value = fields.Float('Funeral Assistance Value',digits=(16,2))
@@ -176,7 +176,7 @@ class SalesforceOpprtunity(models.Model):
     life_contract = fields.Integer('Life Contract',size=18)
     lost_comment = fields.Char('Lost Comment',size=255)
     mainly_carrier = fields.Char('Mainly Carrier',size=255)
-    brand = fields.Char('Marca')
+    brand = fields.Char('Brand')
     max_capital_limit = fields.Float('Max Capital Limit',digits=(16,2))
     medical_appointment = fields.Char('Medical Appointment',size=255)
     min_capital_limit = fields.Float('Min Capital Limit',digits=(16,2))
@@ -261,7 +261,7 @@ class SalesforceOpprtunity(models.Model):
     retired = fields.Integer('Retired',size=6)
     returned_reason = fields.Char('Returned Reason',size=255)
     revenue = fields.Float('Revenue')
-    revenue_politic = fields.Float('Revenue Politic',digits=(16,2))
+    revenue_politic = fields.Float('Revenue Policy',digits=(16,2))
     roi_analysis_completed = fields.Boolean('ROI Analysis Completed')
     service_supplier = fields.Integer('Service Supplier',size=6)
     simple_test = fields.Char('Simple Test',size=255)

@@ -11,7 +11,7 @@ class Sensus_Management_Document_C(models.Model):
 
     Contract_id = fields.Many2one('hr.contract',string='Contract')
 
-    #document_id = fields.Many2one('record',string='Document')
+    document_id = fields.Many2one('ir.attachment',string='Document')
     # Field is related to record object which is not define
 
     Degree_of_Kinship = fields.Selection([('Spouse','Spouse'),('Companion','Companion'),('Son (a)','Son (a)'),('Stepson','Stepson'),('Aggregate','Aggregate')],string='Degree of kinship')

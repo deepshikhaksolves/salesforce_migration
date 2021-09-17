@@ -9,7 +9,7 @@
                     <sheet>
                         <group>
                             <group>
-<!--                                <field name="document_id"/> Document id not define-->
+                                <field name="document_id"/>
                                 <field name="Type_of_Beneficiary"/>
                                 <field name="Degree_of_Kinship"/>
                             </group>

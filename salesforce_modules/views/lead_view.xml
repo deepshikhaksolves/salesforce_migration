@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 	<data>
-        <!-- Broker Lead Layout form view -->
+        <!-- Broker Lead Layout PF form view -->
         <record id="broker_lead_layout_pf_form" model="ir.ui.view">
             <field name="name">broker_lead Layout</field>
             <field name="model">crm.lead</field>
@@ -10,7 +10,7 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="name" string="Name"/>
+                                <field name="name" string="Name" required='1'/>
                                 <field name="cpf__c" />
                                 <field name="phone"/>
                                 <field name="extension_number__c" />
@@ -35,8 +35,8 @@
                             </group>
                             <group>
                                 <field name="team_id" invisible='1'/>
-                                <field name="telemarketing__c"/>
-                                <field name="stage_id" string='Lead Status'/>
+                                <field name="telemarketing__c" required='1'/>
+                                <field name="stage_id" string='Lead Status' required='1'/>
                                 <field name="Sales_Channel__c"/>
                                 <field name="actual_carrier__c" options="{'no_create': True, 'no_create_edit':True, 'no_open': True}"/>
                                 <field name="actual_invoice__c"/>
@@ -113,7 +113,7 @@
                         <group>
                             <group>
                                 <field name="team_id" invisible='1'/>
-                                <field name="stage_id" string="Lead Status"/>
+                                <field name="stage_id" string="Lead Status" required='1'/>
                                 <field name="Company" />
                                 <field name="CNPJ__c"/>
                                 <field name="Business_Name__c" />

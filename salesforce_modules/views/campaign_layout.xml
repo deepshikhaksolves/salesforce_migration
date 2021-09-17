@@ -10,7 +10,7 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="Name" />
+                                <field name="Name" required='1'/>
                                 <field name="IsActive"/>
                                 <field name="Type"/>
                                 <field name="Released_to_Work__c"/>

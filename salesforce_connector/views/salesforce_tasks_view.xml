@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="sf_tasks_form_view">
+            <field name="name">sf.task.form</field>
+            <field name="model">salesforce.tasks</field>
+            <field name="arch" type="xml">
+                <form string="Salesforce Tasks">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="sf_id"/>
+                                <field name="Subject"/>
+                                <field name="Name"/>
+                                <field name="who_Type"/>
+                                <field name="What"/>
+                                <field name="what_Type"/>
+                                <field name="related_opportunity"
+                                       attrs="{'invisible':[('what_Type','=','Account')]}"/>
+                                <field name="related_account"
+                                       attrs="{'invisible':[('what_Type','=','Opportunity')]}"/>
+                                <field name="Subject"/>
+                                <field name="Type"/>
+                                <field name="Status"/>
+                            </group>
+                            <group>
+                                <field name="user_id"/>
+                                <field name="create_uid"/>
+                                <field name="write_uid"/>
+                                <field name="CallDurationInSeconds"/>
+                                <field name="CallObject"/>
+                                <field name="CallDisposition"/>
+                                <field name="CallType"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="IsRecurrence"/>
+                            <field name="create_date"/>
+                            <field name="ActivityDate"/>
+                            <field name="CompletedDateTime"/>
+                            <field name="TaskSubtype"/>
+                            <field name="Description"/>
+                        </group>
+                        <group>
+                            <field name="is_converted"/>
+                            <field name="conversion_status"/>
+                            <field name="activity_id" readonly="1"/>
+                            <field name="activity_message_id" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sf_tasks_tree_view">
+            <field name="name">sf.task.form.tree</field>
+            <field name="model">salesforce.tasks</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="create_date"/>
+                    <field name="user_id"/>
+                    <field name="Subject"/>
+                    <field name="Type"/>
+                    <field name="Status"/>
+                    <field name="ActivityDate"/>
+                    <field name="CompletedDateTime"/>
+                    <field name="conversion_status"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+
+
+    <record model="ir.ui.view" id="sf_tasks_search_view">
+        <field name="name">sf.tasks.search.view</field>
+        <field name="model">salesforce.tasks</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="is_converted" string="Task Converted"
+                        domain="[('is_converted','=', uid)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Task Status" name="task_status_group_by" domain="[]" context="{'group_by':'Status'}"/>
+                </group>
+                <group expand="0" string="Group By">
+                    <filter string="Conversion Status" name="conversion_status" domain="[]" context="{'group_by':'conversion_status'}"/>
+                </group>
+                <group expand="0" string="Group By">
+                    <filter string="Activity Date" name="ActivityDate" domain="[]" context="{'group_by':'ActivityDate'}"/>
+                </group>
+                <group expand="0" string="Group By">
+                    <filter string="Task Type" name="Type" domain="[]" context="{'group_by':'Type'}"/>
+                </group>
+                <group expand="0" string="Group By">
+                    <filter string="Related Record" name="what_Type" domain="[]" context="{'group_by':'what_Type'}"/>
+                </group>
+                <field name="create_date"/>
+                <field name="user_id"/>
+                <field name="Subject"/>
+                <field name="Status"/>
+                <field name="Type"/>
+                <field name="What"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="convert_salesforce_task_action" model="ir.actions.server">
+        <field name="name">Convert to activity</field>
+        <field name="model_id" ref="salesforce_connector.model_salesforce_tasks"/>
+        <field name="binding_model_id" ref="salesforce_connector.model_salesforce_tasks"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.convert_tasks_on_form_action()
+        </field>
+    </record>
+</odoo>
