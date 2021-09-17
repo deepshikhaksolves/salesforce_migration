@@ -51,3 +51,4 @@ class SalesforcePeriodicity(models.Model):
         ('Ano', 'Ano'),
     ], string="Padrão")
     service_lines = fields.One2many('model_service_c', 'periodicity_id', string="Service Lines")
+    opportunity_lines = fields.One2many('crm.lead','frequency',string="Opportunity Lines")

@@ -119,7 +119,7 @@
                                 <field name="Priority"/>
                                 <field name="CreatedDate"/>
                                 <field name="ClosedDate"/>
-                                <field name="IsStopped"/>
+<!--                                <field name="IsStopped"/>-->
                                 <field name="Cancelation_Reason"/>
                                 <field name="opportunity_id"/>
                                 <field name="quote_id"/>
