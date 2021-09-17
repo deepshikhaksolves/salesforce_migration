@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model="ir.ui.view" id="sf_queue_jobs_form_view">
+        <field name="name">sf.queue.jobs.form.view</field>
+        <field name="model">sf.queue.jobs</field>
+        <field name="arch" type="xml">
+            <form string="Salesforce Queue jobs" create="0" edit="0">
+                <header>
+                    <field name="state" widget="statusbar" nolabel="1" readonly="1"/>
+                    <button name="process_queue_jobs" string="Process Record" type="object" states="new,failed"
+                            class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <group name="instance_info">
+                        <group>
+                            <field name="create_date"/>
+                            <field name="sf_model"/>
+                            <field name="odoo_model" />
+                        </group>
+                        <group>
+                            <field name="from_date"/>
+                            <field name="to_date"/>
+                            <field name="include_custm"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="record_count"/>
+                        <field name="processed_rec_count"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="sf_queue_jobs_tree_view">
+        <field name="name">sf.queue.jobs.tree.view</field>
+        <field name="model">sf.queue.jobs</field>
+        <field name="arch" type="xml">
+            <tree create="0" edit="0" decoration-success="state=='done'" decoration-info="state=='progress'"
+                  decoration-danger="state=='failed',import_status=='not_imported'" decoration-warning="state=='new'"
+            >
+                <field name="create_date"/>
+                <field name="from_date"/>
+                <field name="to_date"/>
+                <field name="odoo_model"/>
+                <field name="sf_model"/>
+                <field name="state"/>
+                <field name="import_status"/>
+                <field name="record_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="process_failed_records_action" model="ir.actions.server">
+        <field name="name">Process Failed Records</field>
+        <field name="model_id" ref="salesforce_connector.model_sf_queue_jobs"/>
+        <field name="binding_model_id" ref="salesforce_connector.model_sf_queue_jobs"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.process_failed_records()
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="sf_queue_jobs_search_view">
+        <field name="name">sf.queue.jobs.search.view</field>
+        <field name="model">sf.queue.jobs</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="0" string="Group By">
+                    <filter string="Import Status" name="import_status_group_by" domain="[]" context="{'group_by':'import_status'}"/>
+                </group>
+                <group expand="0" string="Group By">
+                    <filter string="From Date" name="from_date_group_by" domain="[]" context="{'group_by':'from_date'}"/>
+                </group>
+                <field name="create_date"/>
+                <field name="odoo_model"/>
+                <field name="sf_model"/>
+                <field name="state"/>
+                <field name="import_status"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="ks_queue_jobs_action">
+        <field name="name">Salesforce Queue Jobs</field>
+        <field name="res_model">sf.queue.jobs</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="sf_queue_jobs_menu"
+              name="Queue Jobs"
+              parent="main_salesforce_menu"
+              sequence="5"
+              action="ks_queue_jobs_action"
+    />
+
+</odoo>

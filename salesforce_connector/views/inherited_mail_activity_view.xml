@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="salesforce_inherited_mail_activity_view_form_popup" model="ir.ui.view">
+            <field name="name">salesforce.mail.activity.view.form.popup</field>
+            <field name="inherit_id" ref="mail.mail_activity_view_form_popup"/>
+            <field name="model">mail.activity</field>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='activity_type_id']" position="after">
+                    <field name="activity_reason"
+                           attrs="{'invisible':[('is_activity_call_type','=',True)]}"/>
+                    <field name="call_direction" attrs="{'invisible':[('is_activity_call_type','=',False)]}"/>
+                    <field name="call_result" attrs="{'invisible':[('is_activity_call_type','=',False)]}"/>
+                    <field name="call_disposition" attrs="{'invisible':[('is_activity_call_type','=',False)]}"/>
+                    <field name="is_activity_call_type" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="salesforce_inherited_mail_activity_report_view_form" model="ir.ui.view">
+            <field name="name">salesforce.mail.activity.view.form.report</field>
+            <field name="inherit_id" ref="mcl_crm.activities_report_mail_activities_view_form"/>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group[2]" position="after">
+                    <group>
+                        <field name="activity_reason" attrs="{'invisible':[('is_activity_call_type','=',True)]}"/>
+                        <field name="call_direction" attrs="{'invisible':[('is_activity_call_type','=',False)]}"/>
+                        <field name="call_result" attrs="{'invisible':[('is_activity_call_type','=',False)]}"/>
+                        <field name="call_disposition" attrs="{'invisible':[('is_activity_call_type','=',False)]}"/>
+                        <field name="is_activity_call_type" invisible="1"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="sf_contact" model="sf.model.mapping">
+            <field name="o_model" search="[('model','=','res.partner')]" model="ir.model"/>
+            <field name="sf_model">Contact</field>
+        </record>
+
+        <record id="sf_contact_accountid" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_related_account_id')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">AccountId</field>
+            <field name="type">many2one</field>
+            <field name="sf_relational_model">Account</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+
+        <record id="sf_contact_user_id" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_salesperson_id')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">OwnerId</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_created_by__id" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_created_by_id')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">CreatedById</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_last_modified_by_id" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_last_modified_by_id')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">LastModifiedById</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_assistantphone" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_asst_phone')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">AssistantPhone</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_assistantname" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_asst_name')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">AssistantName</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_created_date" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_created_date')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">CreatedDate</field>
+            <field name="type">datetime</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_modified_date" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_last_modified_date')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">LastModifiedDate</field>
+            <field name="type">datetime</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_birthdate" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_birth_date')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Birthdate</field>
+            <field name="type">date</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+<!--        <record id="sf_contact_connectionreceivedId" model="sf.columns.mapping">-->
+<!--            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_connection_rcv_id')]"-->
+<!--                   model="ir.model.fields"/>-->
+<!--            <field name="sf_field">ConnectionReceivedId</field>-->
+<!--            <field name="type">many2one</field>-->
+<!--            <field name="sf_relational_model">PartnerNetworkConnection</field>-->
+<!--            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>-->
+<!--        </record>-->
+
+<!--        <record id="sf_contact_connectionsentId" model="sf.columns.mapping">-->
+<!--            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_connection_snt_id')]"-->
+<!--                   model="ir.model.fields"/>-->
+<!--            <field name="sf_field">ConnectionSentId</field>-->
+<!--            <field name="type">many2one</field>-->
+<!--            <field name="sf_relational_model">PartnerNetworkConnection</field>-->
+<!--            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>-->
+<!--        </record>-->
+
+        <record id="sf_contact_department" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_department')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Department</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_description" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_description')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Description</field>
+            <field name="type">text</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_email" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','email')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Email</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_emailbounceddate" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_email_bounce_date')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">EmailBouncedDate</field>
+            <field name="type">datetime</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_emailbouncedreason" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_email_bounce_rsn')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">EmailBouncedReason</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_fax" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','fax_number')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Fax</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_firstname" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_first_name')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">FirstName</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_id" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_contact_id')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Id</field>
+            <field name="type">integer</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_individual_id" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_individual_rel_id')]"
+                   model="ir.model.fields"/>
+            <field name="type">many2one</field>
+            <field name="sf_field">IndividualId</field>
+            <field name="sf_relational_model">Individual</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_isdeleted" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_is_deleted')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">IsDeleted</field>
+            <field name="type">boolean</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+        <record id="sf_contact_isemailbounced" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_is_mail_bounced')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">IsEmailBounced</field>
+            <field name="type">boolean</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_lastname" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_last_name')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">LastName</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_lastreferenceddate" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_lst_ref_data')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">LastReferencedDate</field>
+            <field name="type">datetime</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_leadsource" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_lead_source')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">LeadSource</field>
+            <field name="type">selection</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+<!--        <record id="sf_contact_mailingaddress" model="sf.columns.mapping">-->
+<!--            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','child_ids')]"-->
+<!--                   model="ir.model.fields"/>-->
+<!--            <field name="sf_field">MailingAddress</field>-->
+<!--            <field name="type">one2many</field>-->
+<!--            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>-->
+<!--        </record>-->
+
+        <record id="sf_contact_masterrecordId" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_master_rec_id')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">MasterRecordId</field>
+            <field name="type">many2one</field>
+            <field name="sf_relational_model">Contact</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_mobilephone" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','mobile')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">MobilePhone</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_name" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','name')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Name</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+<!--        <record id="sf_contact_otheraddress" model="sf.columns.mapping">-->
+<!--            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_id')]"-->
+<!--                   model="ir.model.fields"/>-->
+<!--            <field name="sf_field">OtherAddress</field>-->
+<!--            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>-->
+<!--        </record>-->
+
+        <record id="sf_contact_phone" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','phone')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Phone</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_photourl" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_photo_url')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">PhotoUrl</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_reportstoid" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_reports_to')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">ReportsToId</field>
+            <field name="type">many2one</field>
+            <field name="sf_relational_model">Contact</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_salutation" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_salutation')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Salutation</field>
+            <field name="type">selection</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_title" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_title')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">Title</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_contact_sf_jigsaw_contact_id" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_jigsaw_contact_id')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">JigsawContactId</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_mailingcity" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_mailing_city')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">MailingCity</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_mailingcountry" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_mailing_country')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">MailingCountry</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_mailing_ga" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_mailing_geocode_accuracy')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">MailingGeocodeAccuracy</field>
+            <field name="type">selection</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_mailing_lat" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_mailing_latitude')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">MailingLatitude</field>
+            <field name="type">float</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_mailing_long" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_mailing_longitude')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">MailingLongitude</field>
+            <field name="type">float</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_mailing_g_pc" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_mailing_postalcode')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">MailingPostalCode</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_mailing_state" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_mailing_state')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">MailingState</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_mailing_street" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_mailing_street')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">MailingStreet</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_othercity" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_other_city')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">OtherCity</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_othercountry" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_other_country')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">OtherCountry</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_other_ga" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_other_geocode_accuracy')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">OtherGeocodeAccuracy</field>
+            <field name="type">selection</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_other_lat" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_other_latitude')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">OtherLatitude</field>
+            <field name="type">float</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_other_long" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_other_longitude')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">OtherLongitude</field>
+            <field name="type">float</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_other_g_pc" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_other_postalcode')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">OtherPostalCode</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_other_state" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_other_state')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">OtherState</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+        <record id="sf_account_other_street" model="sf.columns.mapping">
+            <field name="odoo_field" search="[('model','=','res.partner'),('name','=','sf_other_street')]"
+                   model="ir.model.fields"/>
+            <field name="sf_field">OtherStreet</field>
+            <field name="type">char</field>
+            <field name="main_field_map" ref="salesforce_connector.sf_contact"/>
+        </record>
+
+    </data>
+</odoo>

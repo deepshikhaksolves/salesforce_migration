@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sf_USA" model="sf.country.map">
+            <field name="sf_country_name">USA</field>
+            <field name="sf_our_matched_country" ref="base.us"/>
+        </record>
+        <record id="sf_US" model="sf.country.map">
+            <field name="sf_country_name">US</field>
+            <field name="sf_our_matched_country" ref="base.us"/>
+        </record>
+        <record id="sf_columbia" model="sf.country.map">
+            <field name="sf_country_name">Columbia</field>
+            <field name="sf_our_matched_country" ref="base.co"/>
+        </record>
+        <record id="sf_england" model="sf.country.map">
+            <field name="sf_country_name">England</field>
+            <field name="sf_our_matched_country" ref="base.uk"/>
+        </record>
+        <record id="sf_uk" model="sf.country.map">
+            <field name="sf_country_name">UK</field>
+            <field name="sf_our_matched_country" ref="base.uk"/>
+        </record>
+        <record id="sf_pa" model="sf.country.map">
+            <field name="sf_country_name">PA</field>
+            <field name="sf_our_matched_country" ref="base.pa"/>
+        </record>
+    </data>
+</odoo>
