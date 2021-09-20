@@ -75,7 +75,7 @@ class SalesforceOpprtunity(models.Model):
     account_cnpj = fields.Text('CNPJ da Conta')
     commision = fields.Float('Comission (%)',digits=(16,2))
     commision_value = fields.Float('Comission Value',digits=(16,2))
-    complex_test = fields.Char('Complex Test',size=255)
+    complex_tests = fields.Char('Complex Test',size=255)
     additional_driver = fields.Many2one('account.account', string='Condutor Adicional')
     contract_id = fields.Many2one('hr.contract', 'Contract')
     contrib_devol_paid_by_broker = fields.Selection([
@@ -84,7 +84,7 @@ class SalesforceOpprtunity(models.Model):
         ('Por Percentual','Por Percentual'),
         ('Por Modelo','Por Modelo'),
     ], string="Contribuition/Devol. Paid By Broker")
-    contributory_description = fields.Char('Contributory Description',size=255)
+    contributory_descriptions = fields.Char('Contributory Description',size=255)
     contributory_value = fields.Float('Contributory Value',digits=(5,2))
     contributory = fields.Selection([
         ('Por Faixa Salarial','Por Faixa Salarial'),
@@ -118,9 +118,9 @@ class SalesforceOpprtunity(models.Model):
         ('Brasil','Brasil'),
     ], string="Destino")
     discovery_completed = fields.Boolean('Discovery Completed')
-    emergency_room_appointment = fields.Char('Emergency Room Appointment',size=255)
+    emergency_room_appointments = fields.Char('Emergency Room Appointment',size=255)
     expected_revenue = fields.Float('Expected Revenue',digits=(16,2))
-    external_id = fields.Char('External Id',size=255)
+    externals_id = fields.Char('External Id',size=255)
     moderator_variable = fields.Selection([
         ('Sem Fator Moderador','Sem Fator Moderador'),
         ('Coparticipacao_Revertida_Empresa','Revertida para Empresa'),
