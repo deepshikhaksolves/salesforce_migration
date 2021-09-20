@@ -28,3 +28,4 @@ class Attachment(models.Model):
     # document_use               = fields.Selection([('Implantation','Implantation'),('Internal deployment','Internal deployment'),('Movement','Movement'),('Administered','Administered')],'Use of Documents')
     # financial_contract_id    =   fields.Many2one('financial_contract', string="Financial Contract ID")
     opportunity_id = fields.Many2one('crm.lead', string="Opportunity")
+    portal_access_id = fields.Many2one('portal.access', string="Opportunity")

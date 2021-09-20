@@ -188,7 +188,7 @@ class SalesforceOpprtunity(models.Model):
         ('Small','Small'),
         ('Rebate','Rebate'),
     ],string="Model")
-    modelo_id = fields.Many2one('Modelo',string="Modelo")  #model not created yet
+    modelo_id = fields.Many2one('ir.model',string="Modelo")  #model not created yet
     moderator_variable_value = fields.Float('Moderator Variable Value',digits=(5,2))
     motive_of_gain = fields.Selection([
         ('Expertise','Expertise'),
@@ -265,7 +265,7 @@ class SalesforceOpprtunity(models.Model):
     roi_analysis_completed = fields.Boolean('ROI Analysis Completed')
     service_supplier = fields.Integer('Service Supplier',size=6)
     simple_test = fields.Char('Simple Test',size=255)
-    sons_capital_limit = fields.Boolean('Sons Capital Limit',digits=(16,2))
+    sons_capital_limit = fields.Float('Sons Capital Limit',digits=(16,2))
     special_condition = fields.Char('Special Condition',size=131072)
     stage_name = fields.Selection([
         ('Aberto','Aberto'),

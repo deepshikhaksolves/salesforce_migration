@@ -119,18 +119,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
@@ -324,18 +324,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
@@ -512,18 +512,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
@@ -698,18 +698,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
@@ -882,18 +882,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
@@ -1073,18 +1073,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
@@ -1277,18 +1277,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
@@ -1465,18 +1465,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
@@ -1679,18 +1679,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
@@ -1884,18 +1884,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
@@ -2049,18 +2049,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
@@ -2225,18 +2225,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
@@ -2380,18 +2380,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
@@ -2572,18 +2572,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
@@ -2768,18 +2768,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
@@ -2976,18 +2976,18 @@
                                 </group>
                             </page>
                             <page string="Quotes" name="quotes">
-                                <group>
+<!--                                <group>-->
                                     <field name="quote_lines" >
                                         <tree string="Quotes" editable="bottom">
                                              <field name="id"/>
-                                             <field name="Name"/>
+                                             <field name="Name" stye="width:100px;" />
                                              <field name="Quotation_Reason"/>
                                              <field name="OwnerId"/>
                                              <field name="Status"/>
                                              <field name="creation_date"/>
                                         </tree>
                                     </field>
-                                </group>
+<!--                                </group>-->
                             </page>
                             <page string="Competitors" name="competitors">
                                 <group>
