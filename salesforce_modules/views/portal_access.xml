@@ -9,7 +9,7 @@
                     <group>
                         <group>
                             <field name="OwnerId"/>
-                            <field name="carrier__c"/>
+                            <field name="carrier_id"/>
                             <field name="administrator__c"/>
                             <field name="financial_group_id"/>
                             <field name="contract__c"/>
@@ -30,6 +30,8 @@
                             <field name="attachment_lines" >
                                 <tree string="Attachment" editable="bottom">
                                      <field name="id"/>
+                                    <field name="name"/>
+                                    <field name="type"/>
                                      <field name="document_use"/>
                                      <field name="financial_contract_id"/>
                                 </tree>

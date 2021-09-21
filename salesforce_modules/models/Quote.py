@@ -18,7 +18,7 @@ class Quote(models.Model):
     carrier = fields.Char(string="Carrier")
     Case =  fields.Many2one('model_case',string="Case")
     cc_email = fields.Char(string="CC Email")
-    CNPJ = fields.Char(string="CNPJ")
+    CNPJ = fields.Char(string="CNPJ", size=18)
     ContactId = fields.Many2one('res.partner',string="Contact Name")
     ContractId = fields.Many2one('hr.contract', string="Contract")
     cpf = fields.Char(string="CPF", size=14)

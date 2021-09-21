@@ -17,7 +17,7 @@
                                 <field name="create_uid"/>
                             </group>
                             <group>
-                                <field name="product_family__c"/>
+                                <field name="Family"/>
                                 <field name="IsActive"/>
                                 <field name="write_uid" string='Last Modified By'/>
                             </group>
@@ -247,7 +247,7 @@
                                 <field name="Description"/>
                             </group>
                             <group>
-                                <field name="product_family__c"/>
+                                <field name="Family"/>
                                 <field name="IsActive"/>
                             </group>
                         </group>

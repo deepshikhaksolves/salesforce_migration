@@ -108,7 +108,7 @@ class SalesforceOpportunityTeamMember(models.Model):
         ('indication', 'Indicação'),
         ('Pre-Sales Consultant', 'Pré-Consultor'),
         ('Executive Sponsor', 'Sponsor'),
-    ], string="Team Role")
+    ], string="Member Role")
 
 
 class SalesforceOpportunityStageParameter(models.Model):

@@ -13,9 +13,9 @@ class SalesforceContractPartner(models.Model):
     role = fields.Selection([
         ('Corretor Estratégico', 'Corretor Estratégico'),
         ('Parceiro Estratégico', 'Parceiro Estratégico'),
-    ], string="Role")
+    ], string="Occupation")
     last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
-    partner_id = fields.Many2one('account.account', string='Partner Account')
+    partner_id = fields.Many2one('account.account', string='Partner')
     owner_id = fields.Many2one('account.account', string='Owner')
     name = fields.Char('Parceiro do Contrato')
     opportunity_id = fields.Many2one('crm.lead', string="Opportunity")

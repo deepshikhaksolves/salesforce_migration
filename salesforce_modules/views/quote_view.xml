@@ -593,7 +593,7 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="QuoteNumber"/>
+                                <field name="Name"/>
                                 <field name="OpportunityId"/>
                                 <field name="AccountId"/>
                                 <field name="CNPJ"/>
