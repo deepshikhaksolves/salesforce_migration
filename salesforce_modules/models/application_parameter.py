@@ -7,9 +7,9 @@ class ApplicationParameter(models.Model):
     _description = 'Salesforce Application Parameter'
     _rec_name = 'Name'
 
-    appCode = fields.Char(string="appCode", size=50)
-    Name = fields.Char(string="Application Parameters", size=80)
+    appCode = fields.Char(string="appCode", size=50, track_visibility='onchange')
+    Name = fields.Char(string="Application Parameters", size=80, track_visibility='onchange')
     # CreatedById already in odoo
     # LastModifiedById already in odoo
-    OwnerId = fields.Many2one('res.users', string="Owner")
-    Value = fields.Char(string="Value", size=255)
+    OwnerId = fields.Many2one('res.users', string="Owner", track_visibility='onchange')
+    Value = fields.Char(string="Value", size=255, track_visibility='onchange')

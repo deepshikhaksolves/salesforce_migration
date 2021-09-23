@@ -159,6 +159,7 @@
         'views/contract_readjust.xml',
         'views/contract_service.xml',
         'views/hr_contract.xml',
+        'views/beneficiary_contracted_plan.xml',
         'views/menus.xml',
 
 

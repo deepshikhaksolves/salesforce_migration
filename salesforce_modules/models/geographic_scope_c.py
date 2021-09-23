@@ -18,3 +18,5 @@ class GeographicScope(models.Model):
 
     product_ids = fields.One2many('product.template', 'geo_scope_id', string='Product IDS')
     address_ids = fields.One2many('model_address', 'geo_scope_id', string='Address Ids')
+    city_ids = fields.One2many('model_city_c', 'Geographic_Scope_id', string='City Ids')
+    state_ids = fields.One2many('res.country.state', 'Geographic_Scope_id', string='State Ids')

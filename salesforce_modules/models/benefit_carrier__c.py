@@ -27,9 +27,9 @@ class BeneficiaryCarrier(models.Model):
         ('Vaccine', 'Vaccine'),
         ('I_protected', 'I Protected'),
         ('Fee', 'Fee')
-    ], string="Benefit")
-    Name = fields.Char(string="Operator Benefit", size=80)
+    ], string="Benefit", track_visibility='onchange')
+    Name = fields.Char(string="Operator Benefit", size=80, track_visibility='onchange')
     # CreatedById already in odoo
     # LastModifiedById already in odoo
-    carrier_id = fields.Many2one('account.account', string="Operator")
-    OwnerId = fields.Many2one('res.users', string='Owner')
+    carrier_id = fields.Many2one('account.account', string="Operator", track_visibility='onchange')
+    OwnerId = fields.Many2one('res.users', string='Owner', track_visibility='onchange')

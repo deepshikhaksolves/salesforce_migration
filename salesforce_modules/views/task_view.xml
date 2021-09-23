@@ -111,7 +111,7 @@
                             </group>
                         </group>
                             <group>
-                                <field name="description"/>
+                                <field name="description" string='Comments'/>
                             </group>
                         <notebook>
                             <page string="Reminder">

@@ -31,7 +31,12 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Contracted Plans"></page>
+                            <page string="Contracted Plans">
+                                <!-- <field name="contract_plan_ids">
+                                    <tree>
+                                    </tree>
+                                </fields> -->
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -216,20 +221,20 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="Name"/>
-                                <field name="Benefits"/>
-                                <field name="carrier_2_id"/>
-                                <field name="Effective_time_at_current_carrier"/>
-                                <field name="Contract_End"/>
-                                <field name="Contract_Type"/>
-                                <field name="Provider_id"/>
-                                <field name="Use_Product"/>
-                                <field name="Offer"/>
-                                <field name="Competitor"/>
-                                <field name="Monthly_Bill"/>
-                                <field name="Comission"/>
-                                <field name="Revenue"/>
-                                <field name="OwnerId"/>
-                                <field name="How_c"/>
+                    <field name="Benefits"/>
+                    <field name="carrier_2_id"/>
+                    <field name="Effective_time_at_current_carrier"/>
+                    <field name="Contract_End"/>
+                    <field name="Contract_Type"/>
+                    <field name="Provider_id"/>
+                    <field name="Use_Product"/>
+                    <field name="Offer"/>
+                    <field name="Competitor"/>
+                    <field name="Monthly_Bill"/>
+                    <field name="Comission"/>
+                    <field name="Revenue"/>
+                    <field name="OwnerId"/>
+                    <field name="How_c"/>
                 </tree>
             </field>
         </record>
@@ -300,21 +305,21 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="Name"/>
-                                <field name="Benefits"/>
-                                <field name="carrier_2_id"/>
-                                <field name="Effective_time_at_current_carrier"/>
-                                <field name="Contract_End"/>
-                                <field name="Contract_Type"/>
-                                <field name="Type_of_Revenue"/>
-                                <field name="Number_of_Installments"/>
-                                <field name="Use_Product"/>
-                                <field name="Offer"/>
-                                <field name="Competitor"/>
-                                <field name="Monthly_Bill"/>
-                                <field name="Comission"/>
-                                <field name="Revenue"/>
-                                <field name="OwnerId"/>
-                                <field name="How_c"/>
+                    <field name="Benefits"/>
+                    <field name="carrier_2_id"/>
+                    <field name="Effective_time_at_current_carrier"/>
+                    <field name="Contract_End"/>
+                    <field name="Contract_Type"/>
+                    <field name="Type_of_Revenue"/>
+                    <field name="Number_of_Installments"/>
+                    <field name="Use_Product"/>
+                    <field name="Offer"/>
+                    <field name="Competitor"/>
+                    <field name="Monthly_Bill"/>
+                    <field name="Comission"/>
+                    <field name="Revenue"/>
+                    <field name="OwnerId"/>
+                    <field name="How_c"/>
                 </tree>
             </field>
         </record>
@@ -381,19 +386,19 @@
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <tree>
-                                <field name="Name"/>
-                                <field name="Benefits"/>
-                                <field name="carrier_2_id"/>
-                                <field name="Effective_time_at_current_carrier"/>
-                                <field name="Contract_End"/>
-                                <field name="Contract_Type"/>
-                                <field name="Use_Product"/>
-                                <field name="Offer"/>
-                                <field name="Competitor"/>
-                                <field name="Monthly_Bill"/>
-                                <field name="Revenue"/>
-                                <field name="OwnerId"/>
-                                <field name="How_c"/>
+                    <field name="Name"/>
+                    <field name="Benefits"/>
+                    <field name="carrier_2_id"/>
+                    <field name="Effective_time_at_current_carrier"/>
+                    <field name="Contract_End"/>
+                    <field name="Contract_Type"/>
+                    <field name="Use_Product"/>
+                    <field name="Offer"/>
+                    <field name="Competitor"/>
+                    <field name="Monthly_Bill"/>
+                    <field name="Revenue"/>
+                    <field name="OwnerId"/>
+                    <field name="How_c"/>
                 </tree>
             </field>
         </record>
@@ -463,22 +468,22 @@
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <tree>
-                                <field name="Name"/>
-                                <field name="Benefits"/>
-                                <field name="carrier_2_id"/>
-                                <field name="Effective_time_at_current_carrier"/>
-                                <field name="Contract_End"/>
-                                <field name="Contract_Type"/>
-                                <field name="Payment_Method"/>
-                                <field name="Competitor"/>
-                                <field name="Total_Capital"/>
-                                <field name="Use_Product"/>
-                                <field name="Offer"/>
-                                <field name="Monthly_Bill"/>
-                                <field name="Comission"/>
-                                <field name="Revenue"/>
-                                <field name="OwnerId"/>
-                                <field name="How_c"/>
+                    <field name="Name"/>
+                    <field name="Benefits"/>
+                    <field name="carrier_2_id"/>
+                    <field name="Effective_time_at_current_carrier"/>
+                    <field name="Contract_End"/>
+                    <field name="Contract_Type"/>
+                    <field name="Payment_Method"/>
+                    <field name="Competitor"/>
+                    <field name="Total_Capital"/>
+                    <field name="Use_Product"/>
+                    <field name="Offer"/>
+                    <field name="Monthly_Bill"/>
+                    <field name="Comission"/>
+                    <field name="Revenue"/>
+                    <field name="OwnerId"/>
+                    <field name="How_c"/>
                 </tree>
             </field>
         </record>
@@ -557,31 +562,31 @@
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <tree>
-                                <field name="Name"/>
-                                <field name="Benefits"/>
-                                <field name="carrier_2_id"/>
-                                <field name="Effective_time_at_current_carrier"/>
-                                <field name="Contract_End"/>
-                                <field name="Moderator_Variable"/>
-                                <field name="Moderator_Variable_Value"/>
-                                <field name="Contributory"/>
-                                <field name="Contributory_Value"/>
-                                <field name="Purchase_Limit"/>
-                                <field name="Coverage_Limit_Value"/>
-                                <field name="Purchase_Limit_Value"/>
-                                <field name="Use_Product"/>
-                                <field name="Offer"/>
-                                <field name="Competitor"/>
-                                <field name="Contract_Type"/>
-                                <field name="Payment_Method"/>
-                                <field name="Performing_Index"/>
-                                <field name="Life"/>
-                                <field name="Monthly_Bill"/>
-                                <field name="Average_invoice"/>
-                                <field name="Comission"/>
-                                <field name="Revenue"/>
-                                <field name="OwnerId"/>
-                                <field name="How_c"/>
+                    <field name="Name"/>
+                    <field name="Benefits"/>
+                    <field name="carrier_2_id"/>
+                    <field name="Effective_time_at_current_carrier"/>
+                    <field name="Contract_End"/>
+                    <field name="Moderator_Variable"/>
+                    <field name="Moderator_Variable_Value"/>
+                    <field name="Contributory"/>
+                    <field name="Contributory_Value"/>
+                    <field name="Purchase_Limit"/>
+                    <field name="Coverage_Limit_Value"/>
+                    <field name="Purchase_Limit_Value"/>
+                    <field name="Use_Product"/>
+                    <field name="Offer"/>
+                    <field name="Competitor"/>
+                    <field name="Contract_Type"/>
+                    <field name="Payment_Method"/>
+                    <field name="Performing_Index"/>
+                    <field name="Life"/>
+                    <field name="Monthly_Bill"/>
+                    <field name="Average_invoice"/>
+                    <field name="Comission"/>
+                    <field name="Revenue"/>
+                    <field name="OwnerId"/>
+                    <field name="How_c"/>
                 </tree>
             </field>
         </record>
@@ -648,20 +653,20 @@
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <tree>
-                                <field name="Name"/>
-                                <field name="Benefits"/>
-                                <field name="carrier_2_id"/>
-                                <field name="Effective_time_at_current_carrier"/>
-                                <field name="Contract_End"/>
-                                <field name="Contract_Type"/>
-                                <field name="Places"/>
-                                <field name="Use_Product"/>
-                                <field name="Offer"/>
-                                <field name="Competitor"/>
-                                <field name="Monthly_Bill"/>
-                                <field name="Revenue"/>
-                                <field name="OwnerId"/>
-                                <field name="How_c"/>
+                    <field name="Name"/>
+                    <field name="Benefits"/>
+                    <field name="carrier_2_id"/>
+                    <field name="Effective_time_at_current_carrier"/>
+                    <field name="Contract_End"/>
+                    <field name="Contract_Type"/>
+                    <field name="Places"/>
+                    <field name="Use_Product"/>
+                    <field name="Offer"/>
+                    <field name="Competitor"/>
+                    <field name="Monthly_Bill"/>
+                    <field name="Revenue"/>
+                    <field name="OwnerId"/>
+                    <field name="How_c"/>
                 </tree>
             </field>
         </record>
@@ -735,26 +740,26 @@
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <tree>
-                            <field name="Name"/>
-                                <field name="Benefits"/>
-                                <field name="carrier_2_id"/>
-                                <field name="Effective_time_at_current_carrier"/>
-                                <field name="Contract_End"/>
-                                <field name="Contract_Type"/>
-                                <field name="Payment_Method"/>
-                                <field name="Contributory"/>
-                                <field name="Contributory_Value"/>
-                                <field name="OwnerId"/>
-                                <field name="Use_Product"/>
-                                <field name="Offer"/>
-                                <field name="Competitor"/>
-                                <field name="Availability_Fee"/>
-                                <field name="Monthly_Average_Value"/>
-                                <field name="Life"/>
-                                <field name="Monthly_Bill"/>
-                                <field name="Comission"/>
-                                <field name="Revenue"/>
-                                <field name="How_c"/>
+                    <field name="Name"/>
+                    <field name="Benefits"/>
+                    <field name="carrier_2_id"/>
+                    <field name="Effective_time_at_current_carrier"/>
+                    <field name="Contract_End"/>
+                    <field name="Contract_Type"/>
+                    <field name="Payment_Method"/>
+                    <field name="Contributory"/>
+                    <field name="Contributory_Value"/>
+                    <field name="OwnerId"/>
+                    <field name="Use_Product"/>
+                    <field name="Offer"/>
+                    <field name="Competitor"/>
+                    <field name="Availability_Fee"/>
+                    <field name="Monthly_Average_Value"/>
+                    <field name="Life"/>
+                    <field name="Monthly_Bill"/>
+                    <field name="Comission"/>
+                    <field name="Revenue"/>
+                    <field name="How_c"/>
                 </tree>
             </field>
         </record>
@@ -835,33 +840,33 @@
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <tree>
-                            <field name="Name"/>
-                                <field name="Benefits"/>
-                                <field name="carrier_2_id"/>
-                                <field name="Contract_End"/>
-                                <field name="Contract_Type"/>
-                                <field name="Payment_Method"/>
-                                <field name="Income_Type"/>
-                                <field name="Contributory"/>
-                                <field name="Contributory_Value"/>
-                                <field name="Tax_Type"/>
-                                <field name="Grace_Period"/>
-                                <field name="Charge_Rate"/>
-                                <field name="Type_of_Pension"/>
-                                <field name="Pension_Mode"/>
-                                <field name="Use_Product"/>
-                                <field name="Offer"/>
-                                <field name="Competitor"/>
-                                <field name="Effective_time_at_current_carrier"/>
-                                <field name="Administration_Tax"/>
-                                <field name="Output_Rate"/>
-                                <field name="Life"/>
-                                <field name="Monthly_Bill"/>
-                                <field name="Average_invoice"/>
-                                <field name="Comission"/>
-                                <field name="Revenue"/>
-                                <field name="OwnerId"/>
-                                <field name="How_c"/>
+                    <field name="Name"/>
+                    <field name="Benefits"/>
+                    <field name="carrier_2_id"/>
+                    <field name="Contract_End"/>
+                    <field name="Contract_Type"/>
+                    <field name="Payment_Method"/>
+                    <field name="Income_Type"/>
+                    <field name="Contributory"/>
+                    <field name="Contributory_Value"/>
+                    <field name="Tax_Type"/>
+                    <field name="Grace_Period"/>
+                    <field name="Charge_Rate"/>
+                    <field name="Type_of_Pension"/>
+                    <field name="Pension_Mode"/>
+                    <field name="Use_Product"/>
+                    <field name="Offer"/>
+                    <field name="Competitor"/>
+                    <field name="Effective_time_at_current_carrier"/>
+                    <field name="Administration_Tax"/>
+                    <field name="Output_Rate"/>
+                    <field name="Life"/>
+                    <field name="Monthly_Bill"/>
+                    <field name="Average_invoice"/>
+                    <field name="Comission"/>
+                    <field name="Revenue"/>
+                    <field name="OwnerId"/>
+                    <field name="How_c"/>
                 </tree>
             </field>
         </record>
@@ -940,31 +945,31 @@
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <tree>
-                            <field name="Name"/>
-                                <field name="Benefits"/>
-                                <field name="carrier_2_id"/>
-                                <field name="Effective_time_at_current_carrier"/>
-                                <field name="Contract_End"/>
-                                <field name="Contract_Type"/>
-                                <field name="Payment_Method"/>
-                                <field name="Moderator_Variable"/>
-                                <field name="Moderator_Variable_Value"/>
-                                <field name="Contributory"/>
-                                <field name="Contributory_Value"/>
-                                <field name="has_Checkup"/>
-                                <field name="How_c"/>
-                                <field name="Use_Product"/>
-                                <field name="Offer"/>
-                                <field name="Competitor"/>
-                                <field name="Performing_Index"/>
-                                <field name="Life"/>
-                                <field name="Monthly_Bill"/>
-                                <field name="Average_invoice"/>
-                                <field name="Comission"/>
-                                <field name="Revenue"/>
-                                <field name="OwnerId"/>
-                                <field name="Lead_id"/>
-                                <field name="Account_id"/>
+                    <field name="Name"/>
+                    <field name="Benefits"/>
+                    <field name="carrier_2_id"/>
+                    <field name="Effective_time_at_current_carrier"/>
+                    <field name="Contract_End"/>
+                    <field name="Contract_Type"/>
+                    <field name="Payment_Method"/>
+                    <field name="Moderator_Variable"/>
+                    <field name="Moderator_Variable_Value"/>
+                    <field name="Contributory"/>
+                    <field name="Contributory_Value"/>
+                    <field name="has_Checkup"/>
+                    <field name="How_c"/>
+                    <field name="Use_Product"/>
+                    <field name="Offer"/>
+                    <field name="Competitor"/>
+                    <field name="Performing_Index"/>
+                    <field name="Life"/>
+                    <field name="Monthly_Bill"/>
+                    <field name="Average_invoice"/>
+                    <field name="Comission"/>
+                    <field name="Revenue"/>
+                    <field name="OwnerId"/>
+                    <field name="Lead_id"/>
+                    <field name="Account_id"/>
                 </tree>
             </field>
         </record>
@@ -1038,26 +1043,26 @@
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <tree>
-                            <field name="Name"/>
-                                <field name="Benefits"/>
-                                <field name="carrier_2_id"/>
-                                <field name="Effective_time_at_current_carrier"/>
-                                <field name="Contract_End"/>
-                                <field name="Contract_Type"/>
-                                <field name="Payment_Method"/>
-                                <field name="Contributory"/>
-                                <field name="Contributory_Value"/>
-                                <field name="OwnerId"/>
-                                <field name="How_c"/>
-                                <field name="Use_Product"/>
-                                <field name="Offer"/>
-                                <field name="Competitor"/>
-                                <field name="Availability_Fee"/>
-                                <field name="Monthly_Average_Value"/>
-                                <field name="Life"/>
-                                <field name="Monthly_Bill"/>
-                                <field name="Comission"/>
-                                <field name="Revenue"/>
+                    <field name="Name"/>
+                    <field name="Benefits"/>
+                    <field name="carrier_2_id"/>
+                    <field name="Effective_time_at_current_carrier"/>
+                    <field name="Contract_End"/>
+                    <field name="Contract_Type"/>
+                    <field name="Payment_Method"/>
+                    <field name="Contributory"/>
+                    <field name="Contributory_Value"/>
+                    <field name="OwnerId"/>
+                    <field name="How_c"/>
+                    <field name="Use_Product"/>
+                    <field name="Offer"/>
+                    <field name="Competitor"/>
+                    <field name="Availability_Fee"/>
+                    <field name="Monthly_Average_Value"/>
+                    <field name="Life"/>
+                    <field name="Monthly_Bill"/>
+                    <field name="Comission"/>
+                    <field name="Revenue"/>
                 </tree>
             </field>
         </record>
@@ -1127,22 +1132,22 @@
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <tree>
-                            <field name="Name"/>
-                                <field name="Benefits"/>
-                                <field name="carrier_2_id"/>
-                                <field name="Effective_time_at_current_carrier"/>
-                                <field name="Contract_End"/>
-                                <field name="Contract_Type"/>
-                                <field name="Destination"/>
-                                <field name="Payment_Method"/>
-                                <field name="Use_Product"/>
-                                <field name="Offer"/>
-                                <field name="Competitor"/>
-                                <field name="Monthly_Bill"/>
-                                <field name="Comission"/>
-                                <field name="Revenue"/>
-                                <field name="OwnerId"/>
-                                <field name="How_c"/>
+                    <field name="Name"/>
+                    <field name="Benefits"/>
+                    <field name="carrier_2_id"/>
+                    <field name="Effective_time_at_current_carrier"/>
+                    <field name="Contract_End"/>
+                    <field name="Contract_Type"/>
+                    <field name="Destination"/>
+                    <field name="Payment_Method"/>
+                    <field name="Use_Product"/>
+                    <field name="Offer"/>
+                    <field name="Competitor"/>
+                    <field name="Monthly_Bill"/>
+                    <field name="Comission"/>
+                    <field name="Revenue"/>
+                    <field name="OwnerId"/>
+                    <field name="How_c"/>
                 </tree>
             </field>
         </record>
@@ -1221,32 +1226,32 @@
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <tree>
-                           <field name="Name"/>
-                                <field name="Benefits"/>
-                                <field name="carrier_2_id"/>
-                                <field name="Effective_time_at_current_carrier"/>
-                                <field name="Contract_End"/>
-                                <field name="Contract_Type"/>
-                                <field name="Payment_Method"/>
-                                <field name="Contributory"/>
-                                <field name="Contributory_Value"/>
-                                <field name="Capital"/>
-                                <field name="Min_Capital_Limit"/>
-                                <field name="Max_Capital_Limit"/>
-                                <field name="Sons_Capital_Limit"/>
-                                <field name="Total_Capital"/>
-                                <field name="Use_Product"/>
-                                <field name="Offer"/>
-                                <field name="Competitor"/>
-                                <field name="Life"/>
-                                <field name="Actual_Tax"/>
-                                <field name="Monthly_Bill"/>
-                                <field name="Funeral_Assistance"/>
-                                <field name="Funeral_Assistance_Value"/>
-                                <field name="Comission"/>
-                                <field name="Revenue"/>
-                                <field name="OwnerId"/>
-                                <field name="How_c"/>
+                    <field name="Name"/>
+                    <field name="Benefits"/>
+                    <field name="carrier_2_id"/>
+                    <field name="Effective_time_at_current_carrier"/>
+                    <field name="Contract_End"/>
+                    <field name="Contract_Type"/>
+                    <field name="Payment_Method"/>
+                    <field name="Contributory"/>
+                    <field name="Contributory_Value"/>
+                    <field name="Capital"/>
+                    <field name="Min_Capital_Limit"/>
+                    <field name="Max_Capital_Limit"/>
+                    <field name="Sons_Capital_Limit"/>
+                    <field name="Total_Capital"/>
+                    <field name="Use_Product"/>
+                    <field name="Offer"/>
+                    <field name="Competitor"/>
+                    <field name="Life"/>
+                    <field name="Actual_Tax"/>
+                    <field name="Monthly_Bill"/>
+                    <field name="Funeral_Assistance"/>
+                    <field name="Funeral_Assistance_Value"/>
+                    <field name="Comission"/>
+                    <field name="Revenue"/>
+                    <field name="OwnerId"/>
+                    <field name="How_c"/>
                 </tree>
             </field>
         </record>

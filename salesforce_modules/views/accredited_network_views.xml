@@ -28,10 +28,10 @@
                                 </field>
                             </page>
                             <page string="Products Networks">
-                                <field name="network_provider_ids">
+                                <field name="product_network_ids">
                                     <tree>
-                                        <field name="Name"/>
-                                        <field name="product2__c" string='Product'/>
+                                        <field name="name"/>
+                                        <field name="product_id" string='Product'/>
                                     </tree>
                                 </field>
                             </page>
