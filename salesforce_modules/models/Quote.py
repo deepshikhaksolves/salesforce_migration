@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 
-class Quote(models.Model):
+class ModelQuote(models.Model):
     _name = 'model_quote'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Salesforce Quote'
@@ -142,5 +142,12 @@ class Quote(models.Model):
 
 
 
-
+    @api.model
+    def create(self, vals):
+        if vals['OpportunityId']:
+            get_quotes_for_same_opportunity = self.env['model_quote'].sudo().search([('OpportunityId','=',vals['OpportunityId'])])
+            if not get_quotes_for_same_opportunity:
+                vals['first_quote'] = True
+        record = super(ModelQuote, self).create(vals)
+        return record
 
