@@ -3,13 +3,14 @@ from odoo import models, fields, api
 
 class SalesforceOpportunityContactRole(models.Model):
     _name = 'crm.lead.contact.role'
+    _inherit = 'mail.thread'
     _description = 'Salesforce Opportunity Contact Role'
 
-    contacts_id = fields.Many2one('res.partner', string="Contact")
-    user_id = fields.Many2one('res.users', string="Created By")
-    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
-    opportunity_id = fields.Many2one('crm.lead', string="Opportunity")
-    is_primary = fields.Boolean('Primary')
+    contacts_id = fields.Many2one('res.partner', string="Contact",track_visibility='onchange')
+    user_id = fields.Many2one('res.users', string="Created By",track_visibility='onchange')
+    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By",track_visibility='onchange')
+    opportunity_id = fields.Many2one('crm.lead', string="Opportunity",track_visibility='onchange')
+    is_primary = fields.Boolean('Primary',track_visibility='onchange')
     role = fields.Selection([
         ('Analista Senior de RH', 'Analista Senior de RH'),
         ('evaluator', 'Avaliador'),
@@ -23,46 +24,48 @@ class SalesforceOpportunityContactRole(models.Model):
         ('Executive Sponsor', 'Sponsor'),
         ('Business User', 'Usuário'),
         ('Other', 'Outros'),
-    ], string="Role")
+    ], string="Role",track_visibility='onchange')
 
 
 class SalesforceOpportunityCompetitor(models.Model):
     _name = 'crm.lead.competitor'
+    _inherit = 'mail.thread'
     _description = 'Salesforce Opportunity Competitor'
 
-    created_date = fields.Datetime(string="Created Date")
-    last_modified_date = fields.Datetime(string="Last Modified Date")
-    user_id = fields.Many2one('res.users', string="Created By")
-    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
-    opportunity_id = fields.Many2one('crm.lead', string="Opportunity")
-    is_deleted = fields.Boolean('Deleted')
+    created_date = fields.Datetime(string="Created Date",track_visibility='onchange')
+    last_modified_date = fields.Datetime(string="Last Modified Date",track_visibility='onchange')
+    user_id = fields.Many2one('res.users', string="Created By",track_visibility='onchange')
+    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By",track_visibility='onchange')
+    opportunity_id = fields.Many2one('crm.lead', string="Opportunity",track_visibility='onchange')
+    is_deleted = fields.Boolean('Deleted',track_visibility='onchange')
     competitor_name = fields.Selection([
         ('',''),
-    ],string="Competitor Name")
-    strengths = fields.Char('Strengths',size=1000)
-    weaknesses = fields.Char('Weaknesses',size=1000)
-    system_mod_stamp = fields.Datetime('System Modstamp')
+    ],string="Competitor Name",track_visibility='onchange')
+    strengths = fields.Char('Strengths',size=1000,track_visibility='onchange')
+    weaknesses = fields.Char('Weaknesses',size=1000,track_visibility='onchange')
+    system_mod_stamp = fields.Datetime('System Modstamp',track_visibility='onchange')
 
 
 class SalesforceOpportunityLineItem(models.Model):
     _name = 'crm.lead.lineitem'
+    _inherit = 'mail.thread'
     _description = 'Salesforce Opportunity Product'
 
-    service_date = fields.Date(string="Date")
-    user_id = fields.Many2one('res.users', string="Created By")
-    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
-    opportunity_id = fields.Many2one('crm.lead', string="Opportunity")
-    discount = fields.Float('Discount',digits=(3,2))
-    quantity = fields.Float('Quantity', digits=(10, 2))
-    unit_price = fields.Float('Sales Price', digits=(16, 2))
-    Subtotal = fields.Float('Subtotal', digits=(16, 2))
-    TotalPrice = fields.Float('TotalPrice', digits=(16, 2))
-    list_price = fields.Float('List Price', digits=(16, 2))
-    description = fields.Char('Line Description',size=255)
-    carrier = fields.Char('Operadora')
-    name = fields.Char('Opportunity Product Name',size=376)
-    product2Id = fields.Many2one('product.product', string="Product")
-    product_code = fields.Char('Product Code',size=255)
+    service_date = fields.Date(string="Date",track_visibility='onchange')
+    user_id = fields.Many2one('res.users', string="Created By",track_visibility='onchange')
+    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By",track_visibility='onchange')
+    opportunity_id = fields.Many2one('crm.lead', string="Opportunity",track_visibility='onchange')
+    discount = fields.Float('Discount',digits=(3,2),track_visibility='onchange')
+    quantity = fields.Float('Quantity', digits=(10, 2),track_visibility='onchange')
+    unit_price = fields.Float('Sales Price', digits=(16, 2),track_visibility='onchange')
+    Subtotal = fields.Float('Subtotal', digits=(16, 2),track_visibility='onchange')
+    TotalPrice = fields.Float('TotalPrice', digits=(16, 2),track_visibility='onchange')
+    list_price = fields.Float('List Price', digits=(16, 2),track_visibility='onchange')
+    description = fields.Char('Line Description',size=255,track_visibility='onchange')
+    carrier = fields.Char('Operadora',track_visibility='onchange')
+    name = fields.Char('Opportunity Product Name',size=376,track_visibility='onchange')
+    product2Id = fields.Many2one('product.product', string="Product",track_visibility='onchange')
+    product_code = fields.Char('Product Code',size=255,track_visibility='onchange')
 
 
 class SalesforceOpportunityProduct(models.Model):
@@ -70,33 +73,34 @@ class SalesforceOpportunityProduct(models.Model):
     _inherit = 'mail.thread'
     _description = 'Salesforce Opportunity Product'
 
-    user_id = fields.Many2one('res.users', string="Created By")
-    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
-    opportunity_id = fields.Many2one('crm.lead', string="Opportunity")
-    carrier = fields.Char('Operadora')
-    name = fields.Char('Opportunity Product Name')
-    product = fields.Many2one('product.product', string="Product")
-    winner = fields.Boolean('Ganhou')
+    user_id = fields.Many2one('res.users', string="Created By",track_visibility='onchange')
+    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By",track_visibility='onchange')
+    opportunity_id = fields.Many2one('crm.lead', string="Opportunity",track_visibility='onchange')
+    carrier = fields.Char('Operadora',track_visibility='onchange')
+    name = fields.Char('Opportunity Product Name',track_visibility='onchange')
+    product = fields.Many2one('product.product', string="Product",track_visibility='onchange')
+    winner = fields.Boolean('Ganhou',track_visibility='onchange')
     reimbursement_value_type = fields.Selection([
         ('Fixed','Fixed'),
         ('Percentage','Percentage'),
-    ],string="Reimbursement Value Type")
-    life = fields.Integer('Vidas',size=18)
-    reimbursement_value = fields.Float('Reimbursement Value',digits=(3,2))
-    consultation_reimbursement = fields.Float('Consultation Reimbursement')
+    ],string="Reimbursement Value Type",track_visibility='onchange')
+    life = fields.Integer('Vidas',size=18,track_visibility='onchange')
+    reimbursement_value = fields.Float('Reimbursement Value',digits=(3,2),track_visibility='onchange')
+    consultation_reimbursement = fields.Float('Consultation Reimbursement',track_visibility='onchange')
 
 
 class SalesforceOpportunityTeamMember(models.Model):
     _name = 'crm.lead.team_member'
+    _inherit = 'mail.thread'
     _description = 'Salesforce Opportunity Team Member'
 
-    user_id = fields.Many2one('res.users', string="User")
-    created_by_id = fields.Many2one('res.users', string="Created By")
-    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
-    opportunity_id = fields.Many2one('crm.lead', string="Opportunity")
+    user_id = fields.Many2one('res.users', string="User",track_visibility='onchange')
+    created_by_id = fields.Many2one('res.users', string="Created By",track_visibility='onchange')
+    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By",track_visibility='onchange')
+    opportunity_id = fields.Many2one('crm.lead', string="Opportunity",track_visibility='onchange')
     opportunity_access_level = fields.Selection([
         ('', ''),
-    ], string="Opportunity Access")
+    ], string="Opportunity Access",track_visibility='onchange')
     team_role = fields.Selection([
         ('Analista de Cotação', 'Analista de Cotação'),
         ('Analista de Implantação', 'Analista de Implantação'),
@@ -108,19 +112,20 @@ class SalesforceOpportunityTeamMember(models.Model):
         ('indication', 'Indicação'),
         ('Pre-Sales Consultant', 'Pré-Consultor'),
         ('Executive Sponsor', 'Sponsor'),
-    ], string="Member Role")
+    ], string="Member Role",track_visibility='onchange')
 
 
 class SalesforceOpportunityStageParameter(models.Model):
     _name = 'crm.lead.stage.parameter'
+    _inherit = 'mail.thread'
     _description = 'Salesforce Opportunity StageParameter'
 
-    user_id = fields.Many2one('res.users', string="User")
-    developer_name = fields.Char('Custom Metadata Record Name',size=40)
-    master_label = fields.Char('Label',size=40)
-    namespace_prefix = fields.Char('Namespace Prefix')
-    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
-    is_protected = fields.Boolean('Protected Component')
+    user_id = fields.Many2one('res.users', string="User",track_visibility='onchange')
+    developer_name = fields.Char('Custom Metadata Record Name',size=40,track_visibility='onchange')
+    master_label = fields.Char('Label',size=40,track_visibility='onchange')
+    namespace_prefix = fields.Char('Namespace Prefix',track_visibility='onchange')
+    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By",track_visibility='onchange')
+    is_protected = fields.Boolean('Protected Component',track_visibility='onchange')
     opportunity_stage = fields.Selection([
         ('Aberto','Aberto'),
         ('Visita','Visita'),
@@ -134,19 +139,20 @@ class SalesforceOpportunityStageParameter(models.Model):
         ('Crítica','Crítica'),
         ('Fechada','Fechada'),
         ('Perdida','Perdida'),
-    ],string="Opportunity Stage")
-    process = fields.Char('Process',size=255)
+    ],string="Opportunity Stage",track_visibility='onchange')
+    process = fields.Char('Process',size=255,track_visibility='onchange')
 
 
 class SalesforceOpportunityStagePath(models.Model):
     _name = 'crm.lead.stage.path'
+    _inherit = 'mail.thread'
     _description = 'Salesforce Opportunity StagePath'
 
-    user_id = fields.Many2one('res.users', string="User")
-    developer_name = fields.Char('Custom Metadata Record Name',size=40)
-    master_label = fields.Char('Label',size=40)
-    namespace_prefix = fields.Char('Namespace Prefix')
-    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
-    is_protected = fields.Boolean('Protected Component')
-    current_stage = fields.Char('Current Stage',size=255)
-    next_stage = fields.Char('Next Stage',size=255)
+    user_id = fields.Many2one('res.users', string="User",track_visibility='onchange')
+    developer_name = fields.Char('Custom Metadata Record Name',size=40,track_visibility='onchange')
+    master_label = fields.Char('Label',size=40,track_visibility='onchange')
+    namespace_prefix = fields.Char('Namespace Prefix',track_visibility='onchange')
+    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By",track_visibility='onchange')
+    is_protected = fields.Boolean('Protected Component',track_visibility='onchange')
+    current_stage = fields.Char('Current Stage',size=255,track_visibility='onchange')
+    next_stage = fields.Char('Next Stage',size=255,track_visibility='onchange')

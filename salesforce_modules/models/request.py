@@ -10,8 +10,8 @@ class Request(models.Model):
     # CreatedById  already in odoo
     # Entitlement_id     = fields.Many2one('model_entitlement', string='Entitlement')
     # LastModifiedById already in odoo
-    Name = fields.Char('Name', size=80)
-    OwnerId = fields.Many2one('res.users', string='Owner')
+    Name = fields.Char('Name', size=80,track_visibility='onchange')
+    OwnerId = fields.Many2one('res.users', string='Owner',track_visibility='onchange')
 
-    Case_Priority = fields.Selection([('Low', 'Low'), ('Average', 'Average'), ('High', 'High')], 'Priority of Service')
-    Status = fields.Selection([('Active', 'Active'), ('Called off', 'Called off')], 'Status')
+    Case_Priority = fields.Selection([('Low', 'Low'), ('Average', 'Average'), ('High', 'High')], 'Priority of Service',track_visibility='onchange')
+    Status = fields.Selection([('Active', 'Active'), ('Called off', 'Called off')], 'Status',track_visibility='onchange')

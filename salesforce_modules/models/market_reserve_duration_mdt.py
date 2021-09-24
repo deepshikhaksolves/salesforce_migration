@@ -9,8 +9,8 @@ class Market_Reserve_Duration_MDT(models.Model):
     # CreatedById  already in odoo
     # LastModifiedById already in odoo
 
-    DeveloperName = fields.Char(string='Custom Metadata Record Name',size=40)
-    MasterLabel = fields.Char(string='Label', size=40)
-    NamespacePrefix = fields.Text(string='Namespace Prefix')
-    IsProtected = fields.Boolean(string='Protected Component')
-    Duration = fields.Float(string='Duration',digits=(18,0))
+    DeveloperName = fields.Char(string='Custom Metadata Record Name',size=40,track_visibility='onchange')
+    MasterLabel = fields.Char(string='Label', size=40,track_visibility='onchange')
+    NamespacePrefix = fields.Text(string='Namespace Prefix',track_visibility='onchange')
+    IsProtected = fields.Boolean(string='Protected Component',track_visibility='onchange')
+    Duration = fields.Float(string='Duration',digits=(18,0),track_visibility='onchange')

@@ -10,8 +10,9 @@ class Subject_C(models.Model):
     # CreatedById already in odoo
     # LastModifiedById already in odoo
 
-    Name = fields.Char(string='Name', size=80)
-    OwnerId = fields.Many2one('res.users', string='Owner')
+    Name = fields.Char(string='Name', size=80,track_visibility='onchange')
+    OwnerId = fields.Many2one('res.users', string='Owner',track_visibility='onchange')
     Status = fields.Selection(
         [('Open', 'Open'), ('In Progress', 'In Progress'), ('Closed', 'Closed'), ('Called Off', 'Called Off')],
-        string='Status')
+        string='Status',track_visibility='onchange')
+

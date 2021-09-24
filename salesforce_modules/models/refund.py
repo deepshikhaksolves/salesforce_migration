@@ -10,7 +10,7 @@ class Refund(models.Model):
     _rec_name = 'Name'
 
     # CreatedById already in odoo
-    end_date = fields.Date(string="End Date")
+    end_date = fields.Date(string="End Date",track_visibility='onchange')
     Event_c = fields.Selection([
         ('Query', 'Elective Consultation'),
         ('query_ps', 'Emergency Room Consultation'),
@@ -31,11 +31,11 @@ class Refund(models.Model):
         ('Therapies', 'Therapies'),
         ('Therapy', 'Simple Therapy'),
         ('Non-Medical Therapies', 'Non-Medical Therapies')
-    ], string="Event")
+    ], string="Event",track_visibility='onchange')
     # LastModifiedById already in odoo
-    OwnerId = fields.Many2one('res.users', string="Owner")
-    Product_id = fields.Many2one('product.template', string="Product")
-    Name = fields.Char(string="Refund")
-    start_date = fields.Date(string="Start Date")
-    value = fields.Float(string="Value")
+    OwnerId = fields.Many2one('res.users', string="Owner",track_visibility='onchange')
+    Product_id = fields.Many2one('product.template', string="Product",track_visibility='onchange')
+    Name = fields.Char(string="Refund",track_visibility='onchange')
+    start_date = fields.Date(string="Start Date",track_visibility='onchange')
+    value = fields.Float(string="Value",track_visibility='onchange')
 
