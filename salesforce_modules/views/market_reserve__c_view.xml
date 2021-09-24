@@ -23,12 +23,6 @@
 
                             </group>
                         </group>
-                        <notebook>
-                            <page string="Market Reserve History">
-
-                            </page>
-
-                        </notebook>
                     </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers"/>

@@ -9,7 +9,7 @@ class Subject_Case_Model_C(models.Model):
     # CreatedById  already in odoo
     # LastModifiedById already in odoo
 
-    Subject_id = fields.Many2one('model_subject_c',string='Subject')
-    Name = fields.Char(string='Code')
-    Case_Model_id = fields.Many2one('model_service_c',string='Service Model')
-    OwnerId = fields.Many2one('res.users',string='Owner')
+    Subject_id = fields.Many2one('model_subject_c',string='Subject',track_visibility='onchange')
+    Name = fields.Char(string='Code',track_visibility='onchange')
+    Case_Model_id = fields.Many2one('model_service_c',string='Service Model',track_visibility='onchange')
+    OwnerId = fields.Many2one('res.users',string='Owner',track_visibility='onchange')

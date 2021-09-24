@@ -9,8 +9,8 @@ class SLA_Carrier_Benefit_Reason_C(models.Model):
     # CreatedById  already in odoo
     # LastModifiedById already in odoo
 
-    Name = fields.Char(string='Code')
-    carrier_id = fields.Many2one('account.account',string='Operator')
-    OwnerId = fields.Many2one('res.users', string='Owner')
+    Name = fields.Char(string='Code',track_visibility='onchange')
+    carrier_id = fields.Many2one('account.account',string='Operator',track_visibility='onchange')
+    OwnerId = fields.Many2one('res.users', string='Owner',track_visibility='onchange')
     #Case_Request_SLA_id = fields.Many2one('request_deadline',string='Request Deadline')
     #Field is related to request_deadline object which is not define
