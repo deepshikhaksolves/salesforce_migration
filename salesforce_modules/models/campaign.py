@@ -62,3 +62,5 @@ class Campaign(models.Model):
     HierarchyNumberOfWonOpportunities = fields.Integer('Won Opportunities in Hierarchy', track_visibility='onchange')
 
     attachment_ids = fields.One2many('ir.attachment', 'campaign_id', string='Attachment IDS')
+    opportunity_ids = fields.One2many('crm.lead', 'campaigns_id', string='Campaign IDS')
+    campaign_member_ids = fields.One2many('model_campaignmember', 'CampaignId', string='Campaign Member IDS')

@@ -77,21 +77,32 @@
                                 </field>
                             </page>
                             <page string="Cases">
-                                <group>
-                                    
-                                </group>
+                                <field name="case_ids">
+                                    <tree>
+                                        <field name="ContactId"/>
+                                        <field name="Subject"/>
+                                        <field name="Priority"/>
+                                        <field name="CreatedDate"/>
+                                        <field name="Status"/>
+                                        <field name="OwnerId"/>
+                                    </tree>
+                                </field>
                             </page>
-                            <page string="Notes &amp; Attachments">
+                            <!-- <page string="Notes &amp; Attachments">
                                 <field name="attachment_ids">
                                     <tree>
                                         <field name="name" string='Attachment Name'/>
                                     </tree>
                                 </field>
-                            </page>
+                            </page> -->
                             <page string="Partners">
-                                <group>
-                                    
-                                </group>
+                                <field name="contract_partner_ids">
+                                    <tree>
+                                        <field name="partner_id"/>
+                                        <field name="opportunity_id"/>
+                                        <field name="role"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Bills">
                                 <group>
@@ -109,9 +120,15 @@
                                 </field>
                             </page>
                             <page string="Benefit Policies">
-                                <group>
-                                    
-                                </group>
+                                <field name="benefit_politic_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Revenue"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Account Team">
                                 <group>
@@ -193,34 +210,34 @@
                                 <field name="NumberOfEmployees"/>
                             </group>
                         </group>
-                    </sheet>
-                    <notebook>
-                        <page string="Account Summary">
-                            
-                        </page>
-                        <page string="Address Information">
+                        <group string="Account Summary">
                             <group>
-                                <group>
-                                    <field name="BillingAddress"/>
-                                </group>
-                                <group>
-                                    <field name="ShippingAddress"/>
-                                </group>
+                                
                             </group>
-                        </page>
-                        <page string="System Information">
+                        </group>
+                        <group string="Address Information">
+                            <group>
+                                <field name="BillingAddress"/>
+                            </group>
+                            <group>
+                                <field name="ShippingAddress"/>
+                            </group>
+                        </group>
+                        <group string="System Information">
                             <group>
                                 <field name="create_uid"/>
                             </group>
                             <group>
                                 <field name="write_uid" string='Last Modified By'/>
                             </group>
-                        </page>
-                        <page string="Custom Links">
+                        </group>
+                        <group string="Custom Links">
                             <group>
                                 
                             </group>
-                        </page>
+                        </group>
+                    </sheet>
+                    <notebook>
                         <page string="Related Contacts">
                             <field name="partner_ids">
                                 <tree>
@@ -242,9 +259,16 @@
                             </field>
                         </page>
                         <page string="Cases">
-                            
+                            <field name="case_ids">
+                                <tree>
+                                    <field name="ContactId"/>
+                                    <field name="Status"/>
+                                    <field name="CreatedDate"/>
+                                    <field name="Subject"/>
+                                </tree>
+                            </field>
                         </page>
-                        <page string="Notes">
+                        <!-- <page string="Notes">
                             <field name="attachment_ids">
                                 <tree>
                                     <field name="name" string='Attachment Name'/>
@@ -259,7 +283,7 @@
                                     <field name="create_uid" />
                                 </tree>
                             </field>
-                        </page>
+                        </page> -->
                         <page string="Account Team">
                             <group>
                                 
@@ -348,17 +372,24 @@
                         </group>
                     </sheet>
                     <notebook>
-                        <page string="Address">
-                            <field name="partner_ids">
+                        <page string="Adresses">
+                            <field name="address_ids">
                                 <tree>
-                                    <field name="city"/>
-                                    <field name="state_id"/>
-                                    <field name="type"/>
+                                    <field name="City"/>
+                                    <field name="State__id"/>
+                                    <field name="Address_Type"/>
                                 </tree>
                             </field>
                         </page>
                         <page string="Contacts">
-                            
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
                         </page>
                         <page string="Benefits">
                             <group>
@@ -391,13 +422,13 @@
                             </field>                            
                         </page>
 
-                        <page string="Notes &amp; Attachments">
+                        <!-- <page string="Notes &amp; Attachments">
                             <field name="attachment_ids">
                                 <tree>
                                     <field name="name" string='Attachment Name'/>
                                 </tree>
                             </field>
-                        </page>
+                        </page> -->
                         
                         <page string="Portals and Accesses">
                             <field name="portal_access_ids">
@@ -509,10 +540,24 @@
                             </field>
                         </page>
                         <page string="Contacts">
-                            
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
                         </page>
                         <page string="Related Contacts">
-                            
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
                         </page>
                         <page string="Opportunities">
                             <field name="opportunity_ids">
@@ -539,15 +584,25 @@
                         </page>
 
                         <page string="Benefit Policies">
-                            <group>
-                                
-                            </group>
+                            <field name="benefit_politic_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                    <field name="Contract_End"/>
+                                    <field name="Life"/>
+                                    <field name="Monthly_Bill"/>
+                                    <field name="Revenue"/>
+                                </tree>
+                            </field>
                         </page>
 
                         <page string="Partners">
-                            <group>
-                                
-                            </group>
+                            <field name="contract_partner_ids">
+                                <tree>
+                                    <field name="partner_id"/>
+                                    <field name="opportunity_id"/>
+                                    <field name="role"/>
+                                </tree>
+                            </field>
                         </page>
 
                         <page string="Bank accounts">
@@ -558,26 +613,33 @@
                             </field>                            
                         </page>
 
-                        <page string="Notes &amp; Attachments">
+                        <!-- <page string="Notes &amp; Attachments">
                             <field name="attachment_ids">
                                 <tree>
                                     <field name="name" string='Attachment Name'/>
                                 </tree>
                             </field>
-                        </page>
+                        </page> -->
 
                         <page string="Cases">
-                            <group>
-                                
-                            </group>
+                            <field name="case_ids">
+                                <tree>
+                                    <field name="ContactId"/>
+                                    <field name="Subject"/>
+                                    <field name="Priority"/>
+                                    <field name="CreatedDate"/>
+                                    <field name="Status"/>
+                                    <field name="OwnerId" string='Owner'/>
+                                </tree>
+                            </field>
                         </page>
-                        <page string="Notes">
+                        <!-- <page string="Notes">
                             <field name="attachment_ids">
                                 <tree>
                                     <field name="name" string='Attachment Name'/>
                                 </tree>
                             </field>
-                        </page>
+                        </page> -->
                         
                         <page string="Portals and Accesses (Administrator)">
                             <field name="portal_access_ids">
@@ -677,7 +739,14 @@
                             </field>
                         </page>
                         <page string="Contacts">
-                            
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
                         </page>
                         <page string="Benefits">
                             <group>
@@ -710,13 +779,13 @@
                             </field>                            
                         </page>
 
-                        <page string="Notes &amp; Attachments">
+                        <!-- <page string="Notes &amp; Attachments">
                             <field name="attachment_ids">
                                 <tree>
                                     <field name="name" string='Attachment Name'/>
                                 </tree>
                             </field>
-                        </page>
+                        </page> -->
                         
                         <page string="Portals and Accesses">
                             <field name="portal_access_ids">
@@ -829,10 +898,24 @@
                             </field>
                         </page>
                         <page string="Contacts">
-                            
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
                         </page>
                         <page string="Related Contacts">
-                            
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
                         </page>
                         <page string="Opportunities">
                             <field name="opportunity_ids">
@@ -859,15 +942,25 @@
                         </page>
 
                         <page string="Benefit Policies">
-                            <group>
-                                
-                            </group>
+                            <field name="benefit_politic_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                    <field name="Contract_End"/>
+                                    <field name="Life"/>
+                                    <field name="Monthly_Bill"/>
+                                    <field name="Revenue"/>
+                                </tree>
+                            </field>
                         </page>
 
                         <page string="Partners">
-                            <group>
-                                
-                            </group>
+                            <field name="contract_partner_ids">
+                                <tree>
+                                    <field name="partner_id"/>
+                                    <field name="opportunity_id"/>
+                                    <field name="role"/>
+                                </tree>
+                            </field>
                         </page>
 
                         <page string="Bank accounts">
@@ -878,30 +971,37 @@
                             </field>                            
                         </page>
 
-                        <page string="Notes &amp; Attachments">
+                        <!-- <page string="Notes &amp; Attachments">
                             <field name="attachment_ids">
                                 <tree>
                                     <field name="name" string='Attachment Name'/>
                                 </tree>
                             </field>
-                        </page>
+                        </page> -->
 
                         <page string="Cases">
-                            <group>
-                                
-                            </group>
+                            <field name="case_ids">
+                                <tree>
+                                    <field name="ContactId"/>
+                                    <field name="Subject"/>
+                                    <field name="Priority"/>
+                                    <field name="CreatedDate"/>
+                                    <field name="Status"/>
+                                    <field name="OwnerId" string='Owner'/>
+                                </tree>
+                            </field>
                         </page>
-                        <page string="Notes">
+                        <!-- <page string="Notes">
                             <field name="attachment_ids">
                                 <tree>
                                     <field name="name" string='Attachment Name'/>
                                 </tree>
                             </field>
-                        </page>
+                        </page> -->
 
-                        <page string="Account History">
+                        <!-- <page string="Account History">
                             
-                        </page>
+                        </page> -->
                         
                         <page string="Portals and Accesses (Administrator)">
                             <field name="portal_access_ids">
@@ -1171,10 +1271,24 @@
                             </field>
                         </page>
                         <page string="Contacts">
-                            
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
                         </page>
                         <page string="Related Contacts">
-                            
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
                         </page>
                         <page string="Opportunities">
                             <field name="opportunity_ids">
@@ -1201,15 +1315,25 @@
                         </page>
 
                         <page string="Benefit Policies">
-                            <group>
-                                
-                            </group>
+                            <field name="benefit_politic_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                    <field name="Contract_End"/>
+                                    <field name="Life"/>
+                                    <field name="Monthly_Bill"/>
+                                    <field name="Revenue"/>
+                                </tree>
+                            </field>
                         </page>
 
                         <page string="Partners">
-                            <group>
-                                
-                            </group>
+                            <field name="contract_partner_ids">
+                                <tree>
+                                    <field name="partner_id"/>
+                                    <field name="opportunity_id"/>
+                                    <field name="role"/>
+                                </tree>
+                            </field>
                         </page>
 
                         <page string="Bank accounts">
@@ -1220,29 +1344,42 @@
                             </field>                            
                         </page>
 
-                        <page string="Notes &amp; Attachments">
+                        <!-- <page string="Notes &amp; Attachments">
                             <field name="attachment_ids">
                                 <tree>
                                     <field name="name" string='Attachment Name'/>
                                 </tree>
                             </field>
-                        </page>
+                        </page> -->
 
                         <page string="Cases">
-                            <group>
-                                
-                            </group>
+                            <field name="case_ids">
+                                <tree>
+                                    <field name="ContactId"/>
+                                    <field name="Subject"/>
+                                    <field name="Priority"/>
+                                    <field name="CreatedDate"/>
+                                    <field name="Status"/>
+                                    <field name="OwnerId" string='Owner'/>
+                                </tree>
+                            </field>
                         </page>
-                        <page string="Notes">
+                        <!-- <page string="Notes">
                             <field name="attachment_ids">
                                 <tree>
                                     <field name="name" string='Attachment Name'/>
                                 </tree>
                             </field>
-                        </page>
+                        </page> -->
 
                         <page string="Opportunities (Partnership)">
-                            
+                            <field name="opportunity_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="account_id"/>
+                                    <field name="close_date"/>
+                                </tree>
+                            </field>
                         </page>
                         
                         <page string="Portals and Accesses (Administrator)">
@@ -1355,17 +1492,24 @@
                                 </field>
                             </page>
                             <page string="Cases">
-                                <group>
-                                    
-                                </group>
+                                <field name="case_ids">
+                                    <tree>
+                                        <field name="ContactId"/>
+                                        <field name="Subject"/>
+                                        <field name="Priority"/>
+                                        <field name="CreatedDate"/>
+                                        <field name="Status"/>
+                                        <field name="OwnerId" string='Owner'/>
+                                    </tree>
+                                </field>
                             </page>
-                            <page string="Notes &amp; Attachments">
+                            <!-- <page string="Notes &amp; Attachments">
                                 <field name="attachment_ids">
                                     <tree>
                                         <field name="name" string='Attachment Name'/>
                                     </tree>
                                 </field>
-                            </page>
+                            </page> -->
                             
                             <page string="Bank accounts">
                                 <field name="bank_account_ids">
@@ -1375,9 +1519,15 @@
                                 </field>
                             </page>
                             <page string="Benefit Policies">
-                                <group>
-                                    
-                                </group>
+                                <field name="benefit_politic_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Revenue"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Account Team">
                                 <group>

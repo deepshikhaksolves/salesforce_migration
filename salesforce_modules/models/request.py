@@ -15,3 +15,4 @@ class Request(models.Model):
 
     Case_Priority = fields.Selection([('Low', 'Low'), ('Average', 'Average'), ('High', 'High')], 'Priority of Service',track_visibility='onchange')
     Status = fields.Selection([('Active', 'Active'), ('Called off', 'Called off')], 'Status',track_visibility='onchange')
+    case_ids = fields.One2many('model_case','Request_old_id',string="Request Id")
