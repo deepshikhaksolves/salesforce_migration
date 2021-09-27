@@ -4,7 +4,11 @@
     <menuitem name="Dashboard Ninja" id="d_ninja_parent_menu" parent='exe_broker_menu_root' sequence='1'/>
     <menuitem name="Campaign" id="campaign_parent_menu" parent='exe_broker_menu_root' action='salesforce_modules.campaign_layout_action' sequence='2'/>
     <menuitem name="Leads" id="lead_parent_menu" parent='exe_broker_menu_root' action='salesforce_modules.broker_lead_layout_pf_action' sequence='3'/>
-    <menuitem name="Consult Reserve" id="consult_reserve_parent_menu" parent='exe_broker_menu_root' action='salesforce_modules.market_reserve_c_action' sequence='4'/>
+    <menuitem name="Consult Reserve" id="consult_reserve_parent_menu" parent='exe_broker_menu_root' sequence='4'/>
+      <menuitem name="Contract" id="contract_child_menu" parent='consult_reserve_parent_menu' action='hr_contract.act_hr_employee_2_hr_contract' sequence='1'/>
+      <menuitem name="Quote " id="quote_child_menu" parent='consult_reserve_parent_menu' action='salesforce_modules.quote_broker_benchmarking_layout_action' sequence='2'/>
+      <menuitem name="Opportunity" id="opportunity_child_menu" parent='consult_reserve_parent_menu' action='salesforce_modules.opportunity_pab_action' sequence='3'/>
+      <menuitem name="Market Reserve" id="market_reserve_child_menu" parent='consult_reserve_parent_menu' action='salesforce_modules.market_reserve_c_action' sequence='4'/>
     <menuitem name="Opportunity" id="opportunity_parent_menu" parent='exe_broker_menu_root' action='salesforce_modules.opportunity_pab_action' sequence='5'/>
     <menuitem name="Dashboard" id="dashboard_parent_menu" parent='exe_broker_menu_root' sequence='6'/>
     <menuitem name="Reports" id="quote_parent_menu" parent='exe_broker_menu_root' sequence='7'/>
