@@ -7,8 +7,8 @@ class CoastCenter(models.Model):
     _description = "Salesforce Cost Center"
     _rec_name = 'name'
 
-    beneficiary_id = fields.Many2one('comodel_name', string='Recipient')
-    beneficiary_card_id = fields.Many2one('comodel_name', string='Beneficiary Card')
+    beneficiary_id = fields.Many2one('model_beneficiary', string='Recipient')
+    beneficiary_card_id = fields.Many2one('model_beneficiary_card', string='Beneficiary Card')
     cost_center = fields.Char('Cost center', size=255)
     name = fields.Char('Cost Center ID')
     contract_id = fields.Many2one('hr.contract', string='Contract')

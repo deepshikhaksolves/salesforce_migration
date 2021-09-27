@@ -13,26 +13,19 @@
                             <field name="Start"/>
                             <field name="End"/>
                             <field name="Segmentation"/>
-                            <!-- <field name="createdBy"/> -->
+                            <field name="create_uid"/>
                         </group>
                         <group>
                             <field name="OwnerId"/>
-                            <!-- <field name="nama_kolom"/> -->
+                            <field name="Broker"/>
                             <field name="Name"/>
-                            <!-- <field name="lastModifyedBy"/> -->
+                            <field name="write_uid" string='Last Modified By'/>
                         </group>
                     </group>
-                    <notebook>
-                        <page string="Open Activities">
-                            <!-- <field name="line_ids"/> -->
-                        </page>
-                        <page string="Activity History">
-                            <!-- <field name="line_ids"/> -->
-                        </page>
-                    </notebook>
                 </sheet>
                 <div class="oe_chatter">
                     <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
                     <field name="message_ids" widget="mail_thread"/>
                 </div>
             </form>

@@ -6,7 +6,7 @@ class SalesforcePlanCoverage(models.Model):
     _inherit = 'mail.thread'
     _description = 'Salesforce Plan Coverage'
 
-    name = fields.Char('Coverage', size=80)
+    name = fields.Char('Coverage', size=80,track_visibility='onchange')
     coverage = fields.Selection([
         ('Consulta','Consulta'),
         ('Exame','Exame'),
@@ -38,12 +38,12 @@ class SalesforcePlanCoverage(models.Model):
         ('Dependentes','Dependentes'),
         ('Acidente de trabalho','Acidente de trabalho'),
         ('Rede de atendimento','Rede de atendimento'),
-    ],string="Coverage")
-    condition = fields.Char('Condition',size=255)
-    user_id = fields.Many2one('res.users', string="Created By")
-    operator_description = fields.Char('Description in the Operator',size=255)
-    start_of_coverage = fields.Date('Start of Coverage')
-    end_of_coverage = fields.Date('End of Coverage')
-    plan_id = fields.Many2one('product.product', 'Plano')
-    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By")
-    owner_id = fields.Many2one('account.account', string='Owner')
+    ],string="Coverage",track_visibility='onchange')
+    condition = fields.Char('Condition',size=255,track_visibility='onchange')
+    user_id = fields.Many2one('res.users', string="Created By",track_visibility='onchange')
+    operator_description = fields.Char('Description in the Operator',size=255,track_visibility='onchange')
+    start_of_coverage = fields.Date('Start of Coverage',track_visibility='onchange')
+    end_of_coverage = fields.Date('End of Coverage',track_visibility='onchange')
+    plan_id = fields.Many2one('product.product', 'Plano',track_visibility='onchange')
+    last_modified_by_id = fields.Many2one('res.users', string="Last Modified By",track_visibility='onchange')
+    owner_id = fields.Many2one('account.account', string='Owner',track_visibility='onchange')

@@ -416,25 +416,11 @@
             <menuitem name="SLA Carrier Benefit Reason " id="sla_carrier_benefit_reason_c_menu" parent='salesforce_menu_root' action="sla_carrier_benefit_reason_c_action" sequence='114'/>
 
         <!-- Salesforce Dim Beneficiario X -->
-            <menuitem name="Salesforce Dim Beneficiario " id="salesforce_dim_beneficiario_x_menu" parent='salesforce_menu_root' action="salesforce_dim_beneficiario_x_action" sequence='115'/>
+            <menuitem name="Salesforce Dim Beneficiario" id="salesforce_dim_beneficiario_x_menu" parent='salesforce_menu_root' action="salesforce_dim_beneficiario_x_action" sequence='115'/>
 
+        <!-- Beneficiary Contracted Plan -->
+            <menuitem name="Beneficiary Contracted Plan" id="beneficiary_contracted_plan_menu" parent='salesforce_menu_root' action="beneficiary_contracted_plan_layout_action" sequence='116'/>
 
-        <!--Revenue Provisioning Menu-->
-            <menuitem name="Revenue Provisioning" id="revenue_provisioning_menu" parent='salesforce_menu_root' action="revenue_provisioning_layout_action" sequence='116'/>
-        <!--Revenue Compensation Menu-->
-            <menuitem name="Revenue Compensation" id="revenue_compensation_menu" parent='salesforce_menu_root' action="revenue_compensation_layout_action" sequence='117'/>
-
-        <!--Accommodation Menu-->
-            <menuitem name="Accommodation" id="accommodation_menu" parent='salesforce_menu_root' action="accommodation_layout_action" sequence='118'/>
-        <!--Additional Parameter Menu-->
-            <menuitem name="Additional Parameter" id="additional_parameter_menu" parent='salesforce_menu_root' action="additional_parameter_layout_action" sequence='119'/>
-        <!--Address Menu-->
-            <menuitem name="Address" id="address_menu" parent='salesforce_menu_root' action="address_layout_action" sequence='120'/>
-        <!--Application Parameter Menu-->
-            <menuitem name="Application Parameter" id="application_parameter_menu" parent='salesforce_menu_root' action="application_parameter_layout_action" sequence='121'/>
-
-        <!--Bank Account Menu-->
-            <menuitem name="Bank Account" id="bank_account_menu" parent='salesforce_menu_root' action="bank_account_layout_action" sequence='122'/>
 	    <!--Beneficiary Menu-->
             <menuitem name="Beneficiary" id="beneficiary_menu" parent='salesforce_menu_root' action="beneficiary_layout_action" sequence='123'/>
         <!--Beneficiary Card Menu-->

@@ -8,8 +8,8 @@ class PriceXRegion(models.Model):
     _rec_name = 'Name'
 
     # CreatedById already in odoo
-    Name = fields.Char(string="Identification")
+    Name = fields.Char(string="Identification",track_visibility='onchange')
     # LastModifiedById already in odoo
-    product_price_id = fields.Many2one('product.product', string="Product Price")
-    region_id = fields.Many2one('model_region', string="Region")
-    model_product_price_id = fields.Many2one('product_price', string='Product Price Id')
+    product_price_id = fields.Many2one('product.product', string="Product Price",track_visibility='onchange')
+    region_id = fields.Many2one('model_region', string="Region",track_visibility='onchange')
+    model_product_price_id = fields.Many2one('product_price', string='Product Price Id',track_visibility='onchange')

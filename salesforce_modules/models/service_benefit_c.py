@@ -16,7 +16,7 @@ class Service_Benefit_C(models.Model):
                                  ('Travel','Travel'),('Car_Fleet','Fleet'),('Car','Car'),
                                  ('Fuel','Fuel'),('Occupational_Health','Occupational_Health'),
                                  ('Checkup','Check-up'),('Vaccine','Vaccine'),('I_Protected','I_Protected'),
-                                 ('Fee','Fee')],string='Benefit')
-    OwnerId = fields.Many2one('res.users',string='Owner')
-    service_id = fields.Many2one('model_service_c',string='Service')
-    Name = fields.Char(string='Service Benefit',size=80)
+                                 ('Fee','Fee')],string='Benefit',track_visibility='onchange')
+    OwnerId = fields.Many2one('res.users',string='Owner',track_visibility='onchange')
+    service_id = fields.Many2one('model_service_c',string='Service',track_visibility='onchange')
+    Name = fields.Char(string='Service Benefit',size=80,track_visibility='onchange')

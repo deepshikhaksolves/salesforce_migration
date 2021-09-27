@@ -54,7 +54,8 @@ access_model_region_state,salesforce_model_region_state,model_model_region_state
 access_model_request,salesforce_model_request,model_model_request,base.group_user,1,1,1,1
 access_service_reason_config,salesforce_service_reason_config,model_service_reason_config,base.group_user,1,1,1,1
 access_request_config,salesforce_request_config,model_request_config,base.group_user,1,1,1,1
-access_broker_rating,access_broker_rating,model_broker,base.group_user,1,1,1,1
+access_broker,access_broker,model_broker,base.group_user,1,1,1,1
+access_broker_rating,access_broker_rating,model_broker_rating,base.group_user,1,1,1,1
 access_compensation,access_compensation,model_compensation,base.group_user,1,1,1,1
 access_condition,access_condition,model_condition,base.group_user,1,1,1,1
 access_contract_contribution,access_contract_contribution,model_contract_contribution,base.group_user,1,1,1,1
@@ -147,4 +148,6 @@ access_comercial_agent_c,salesforce_comercial_agent_c,model_model_comercial_agen
 access_comercial_structure_c,salesforce_comercial_structure_c,model_model_comercial_structure_c,base.group_user,1,1,1,1
 access_comments_c,salesforce_comments_c,model_model_comments_c,base.group_user,1,1,1,1
 access_company_parameter_c,salesforce_company_parameter_c,model_model_company_parameter_c,base.group_user,1,1,1,1
+
+access_beneficiary_contract_plan,salesforce_beneficiary_contract_plan,model_beneficiary_contract_plan,base.group_user,1,1,1,1
 

@@ -7,8 +7,8 @@ class StudyConfigurationPriceTable(models.Model):
     _description = "Salesforce Study Configuration Price Table"
     _rec_name = 'Name'
 
-    study_configuration_id = fields.Many2one('study_configuration', string="Study Setup")
+    study_configuration_id = fields.Many2one('study_configuration', string="Study Setup",track_visibility='onchange')
     # CreatedById already in odoo
     # LastModifiedById already in odoo
-    Name = fields.Char(string="Name")
+    Name = fields.Char(string="Name",track_visibility='onchange')
     # price_table_id = fields.Many2one('price_schedule',string="Price list") #Model Not Found

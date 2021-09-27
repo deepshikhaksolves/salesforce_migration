@@ -27,17 +27,17 @@ class QuoteProducts(models.Model):
         ('Checkup', 'Checkup'),
         ('Vaccine', 'Vaccine'),
         ('I_protected', 'I Protected'),
-        ('Fee', 'Fee')], string="Benefit")
-    Quote_id = fields.Many2one('model_quote', string="Price")
+        ('Fee', 'Fee')], string="Benefit",track_visibility='onchange')
+    Quote_id = fields.Many2one('model_quote', string="Price",track_visibility='onchange')
     # CreatedById already in odoo
-    OwnerId = fields.Many2one('res.users', string="Owner")
-    Product_id = fields.Many2one('product.template', string="Product")
-    Name = fields.Char(string="Quotation Products")
+    OwnerId = fields.Many2one('res.users', string="Owner",track_visibility='onchange')
+    Product_id = fields.Many2one('product.template', string="Product",track_visibility='onchange')
+    Name = fields.Char(string="Quotation Products",track_visibility='onchange')
     Cost_Type = fields.Selection([
         ('Average cost', 'Average cost'),
         ('age group', 'Age group')
-    ], string="Cost Type")
-    Value = fields.Float(string="Value")
+    ], string="Cost Type",track_visibility='onchange')
+    Value = fields.Float(string="Value",track_visibility='onchange')
     # LastModifiedById already in odoo
 
 

@@ -25,37 +25,45 @@
                         <group>
                             <field name="Description"/>
                         </group>
+                        <group string="Planning">
+                            <group>
+                                <field name="NumberSent" />
+                                <field name="ExpectedResponse"/>
+                            </group>
+                            <group>
+                                <field name="ExpectedRevenue"/>
+                            </group>
+                        </group>
                         <notebook>
-                            <page string="Planning">
-                                <group>
-                                    <field name="NumberSent" />
-                                    <field name="ExpectedResponse"/>
-                                </group>
-                                <group>
-                                    <field name="ExpectedRevenue"/>
-                                </group>
-                            </page>
-                            <page string="Campaign Field History">
-                                <group>
-                                    
-                                </group>
-                            </page>
                             <page string="Influenced Opportunities">
-                                <group>
-                                    
-                                </group>
+                                <field name="opportunity_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="revenue" string='Revenue Share'/>
+                                        <field name="amount"/>
+                                        <field name="stage_name"/>
+                                        <field name="close_date"/>
+                                        <field name="owner_id"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Campaign Members">
-                                <group>
-                                    
-                                </group>
+                                <field name="campaign_member_ids">
+                                    <tree>
+                                        <field name="Status"/>
+                                        <field name="Title"/>
+                                        <field name="FirstName"/>
+                                        <field name="LastName"/>
+                                        <field name="CompanyOrAccount" string='Company'/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Campaign Member Statuses">
                                 <group>
                                     
                                 </group>
                             </page>
-                            <page string="Notes">
+                            <!-- <page string="Notes">
                                 <field name="attachment_ids">
                                     <tree>
                                         <field name="name" string='Attachment Name'/>
@@ -70,7 +78,7 @@
                                         <field name="name" string='Attachment Name'/>
                                     </tree>
                                 </field>
-                            </page>
+                            </page> -->
                             <page string="Groups">
                                 <group>
 

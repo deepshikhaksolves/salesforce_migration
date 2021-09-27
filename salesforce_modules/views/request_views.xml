@@ -22,9 +22,14 @@
                         </group>
                         <notebook>
                             <page string="Cases">
-                                <group>
-                                    
-                                </group>
+                                <field name="case_ids">
+                                    <tree>
+                                        <field name="CaseNumber"/>
+                                        <field name="Subject"/>
+                                        <field name="CreatedDate"/>
+                                        <field name="Priority"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>

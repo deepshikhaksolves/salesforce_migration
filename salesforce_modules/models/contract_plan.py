@@ -35,3 +35,5 @@ class ContractPlan(models.Model):
     Plan_Value = fields.Float('Plan Value', digits=(16, 2))
 
     product_price_ids = fields.One2many('product_price', 'contract_product__c', 'Product Price IDS')
+
+    benifit_politic_id = fields.Many2one('model_benfit_politic', string='Benifit Politic Id')

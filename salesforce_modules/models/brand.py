@@ -9,5 +9,5 @@ class BrandC(models.Model):
 
     # CreatedById already in odoo
     # LastModifiedById already in odoo
-    Name = fields.Char(string="Mark", size=80)
-    OwnerId = fields.Many2one('res.users', string='Owner')
+    Name = fields.Char(string="Mark", size=80, track_visibility='onchange')
+    OwnerId = fields.Many2one('res.users', string='Owner', track_visibility='onchange')

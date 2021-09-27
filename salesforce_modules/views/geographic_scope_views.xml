@@ -32,16 +32,16 @@
                             </field>
                         </page>
                         <page string="Cities">
-                            <field name="address_ids">
+                            <field name="city_ids">
                                 <tree>
-                                    <field name="City" string="City"/>
+                                    <field name="Name" string="City"/>
                                 </tree>
                             </field>
                         </page>
                         <page string="State">
-                            <field name="address_ids">
+                            <field name="state_ids">
                                 <tree>
-                                    <field name="State__id"/>
+                                    <field name="name" string='State'/>
                                 </tree>
                             </field>
                         </page>
