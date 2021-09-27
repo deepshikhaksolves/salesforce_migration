@@ -39,7 +39,6 @@ class Account(models.Model):
     allow_create_accredited_net_case__c = fields.Boolean(string="Allow Create Accredited Net Case", track_visibility='onchange')
     allow_create_reimbursement_case__c = fields.Boolean(string="Allow Create Reimbursement Case", track_visibility='onchange')
     allow_direct_mail__pc = fields.Boolean(string="Allow Direct Mail", track_visibility='onchange')
-    # AnnualRevenue         = fields.Many2one('res.currency', string='Annual Revenue', default=lambda self: self.env.user.company_id.currency_id.id)
     AnnualRevenue = fields.Float('Annual Revenue', digits=(18, 0), track_visibility='onchange')
 
     ans_start__c = fields.Date('YEARS Start', track_visibility='onchange')

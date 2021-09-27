@@ -25,7 +25,6 @@ class SalesforceLead(models.Model):
     country_id = fields.Many2one('res.country', string='Country', ondelete='restrict',track_visibility='onchange')
 
     actual_birth_policy_order__c = fields.Text('Current Order Policy Anniversary',track_visibility='onchange')
-    # AnnualRevenue           = fields.Many2one('res.currency', string='Annual Revenue', default=lambda self: self.env.user.company_id.currency_id.id)
     AnnualRevenue = fields.Float('Annual Revenue', digits=(18, 0),track_visibility='onchange')
 
     Business_Name__c = fields.Char('Business Name', size=255,track_visibility='onchange')
