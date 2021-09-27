@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pit_help_desk_agent_pit_help_desk_agent,pit_help_desk_agent.pit_help_desk_agent,model_pit_help_desk_agent_pit_help_desk_agent,base.group_user,1,1,1,1

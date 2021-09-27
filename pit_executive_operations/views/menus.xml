@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <menuitem name="PIT Executive: Operations" web_icon="salesforce_modules,static/description/salesforce_migration_logo.png" id="salesforce_executive_operations_menu_root" />
+    
+      <!-- <menuitem name="Inicial" id="inicial_action_menu" parent='salesforce_executive_operations_menu_root' sequence='1'/>
+      <menuitem name="Contracts" id="contracts_action_menu" parent='salesforce_executive_operations_menu_root' sequence='2'/> -->
+      
+      <menuitem name="Cases" id="sf_operations_cases_action_menu" parent='salesforce_executive_operations_menu_root' action='salesforce_modules.case_risk_management_action' sequence='3'/>
+
+      <menuitem name="User company contract permissions" id="sf_operations_user_company_contract_permissions_action_menu" parent='salesforce_executive_operations_menu_root' action="salesforce_modules.User_company_contract_permissions_layout_action" sequence='4'/>
+      <!-- <menuitem name="Reports" id="reports_action_menu" parent='salesforce_executive_operations_menu_root' sequence='5'/>
+      <menuitem name="Dashboards" id="dashboards_action_menu" parent='salesforce_executive_operations_menu_root' sequence='6'/> -->
+  </data>
+</odoo>

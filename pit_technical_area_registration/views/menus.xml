@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <menuitem name="PIT: Technical Area Registration" web_icon="salesforce_modules,static/description/salesforce_migration_logo.png" id="salesforce_tar_menu_root" />
+
+      <menuitem name="Accounts" id="sf_tar_accounts_action_menu" parent='salesforce_tar_menu_root' action='salesforce_modules.account_layout_old_action' sequence='1'/>
+
+      <menuitem name="Products family" id="sf_tar_product_family_action_menu" parent='salesforce_tar_menu_root' action='salesforce_modules.product_family_action' sequence='2'/>
+
+      <menuitem name="Price Table" id="sf_tar_price_table_action_menu" parent='salesforce_tar_menu_root' action='salesforce_modules.study_configuration_price_table_action' sequence='3'/>
+      
+      <menuitem name="Products Price" id="sf_tar_product_price_action_menu" parent='salesforce_tar_menu_root' action='salesforce_modules.product_age_group_action' sequence='4'/>
+
+      <menuitem name="Network Provider" id="sf_tar_network_provider_action_menu" parent='salesforce_tar_menu_root' action='salesforce_modules.network_provider_layout_action' sequence='5'/>
+
+      <menuitem name="Quote" id="sf_tar_quote_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.quote_layout_action" sequence='6'/>
+
+      <menuitem name="Company Parameter" id="sf_tar_company_parameter_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.company_parameter_c_action" sequence='7'/>
+
+      <menuitem name="Geographic Scope" id="sf_tar_geo_scope_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.geographic_scope_layout_action" sequence='8'/>
+
+      <menuitem name="Accommodation" id="sf_tar_accommodation_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.accommodation_layout_action" sequence='9'/>
+
+      <menuitem name="Carrier Type" id="sf_tar_carrier_type_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.carrier_type_c_action" sequence='10'/>
+
+      <menuitem name="Regions" id="sf_tar_regions_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.region_layout_action" sequence='11'/>
+
+      <menuitem name="Accredited Network" id="sf_tar_accredited_network_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.accredited_network_layout_action" sequence='12'/>
+
+      <menuitem name="Products" id="sf_tar_products_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.broker_product_layout_action" sequence='13'/>
+
+      <menuitem name="Quote" id="sf_tar_quote2_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.quote_layout_action" sequence='14'/>
+
+      <menuitem name="Nifi Integrations" id="sf_tar_nifi_integration_action_menu" parent='salesforce_tar_menu_root' action="" sequence='15'/>
+
+      <menuitem name="Consult Reserve" id="sf_tar_consult_reserve_action_menu" parent='salesforce_tar_menu_root' action="" sequence='16'/>
+
+      <menuitem name="Benefits" id="sf_tar_benifit_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.benefit_carrier_layout_action" sequence='17'/>
+
+      <menuitem name="Publications Apps" id="sf_tar_publications_apps_action_menu" parent='salesforce_tar_menu_root' action="" sequence='18'/>
+
+  </data>
+</odoo>
