@@ -21,9 +21,6 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Files">
-                            </page>
-
                             <page string="Notes &amp; Attachments">
                                 <field name="attachment_ids">
                                     <tree editable="bottom">

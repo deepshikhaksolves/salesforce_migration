@@ -29,14 +29,6 @@
                             <!-- <field name="lastmodifyedBY"/> -->
                         </group>
                     </group>
-                    <notebook>
-                        <page string="Notes">
-                            <!-- <field name="line_ids"/> -->
-                        </page>
-                        <page string="Cases">
-                            <!-- <field name="line_ids"/> -->
-                        </page>
-                    </notebook>
                 </sheet>
                 <div class="oe_chatter">
                     <field name="message_follower_ids" widget="mail_followers"/>
