@@ -1,0 +1,12 @@
+<odoo>
+  <data>
+   <menuitem name="PIT Executive: Broker" web_icon="salesforce_modules,static/description/salesforce_migration_logo.png" id="exe_broker_menu_root" />
+    <menuitem name="Dashboard Ninja" id="d_ninja_parent_menu" parent='exe_broker_menu_root' sequence='1'/>
+    <menuitem name="Campaign" id="campaign_parent_menu" parent='exe_broker_menu_root' action='salesforce_modules.campaign_layout_action' sequence='2'/>
+    <menuitem name="Leads" id="lead_parent_menu" parent='exe_broker_menu_root' action='salesforce_modules.broker_lead_layout_pf_action' sequence='3'/>
+    <menuitem name="Consult Reserve" id="consult_reserve_parent_menu" parent='exe_broker_menu_root' action='salesforce_modules.market_reserve_c_action' sequence='4'/>
+    <menuitem name="Opportunity" id="opportunity_parent_menu" parent='exe_broker_menu_root' action='salesforce_modules.opportunity_pab_action' sequence='5'/>
+    <menuitem name="Dashboard" id="dashboard_parent_menu" parent='exe_broker_menu_root' sequence='6'/>
+    <menuitem name="Reports" id="quote_parent_menu" parent='exe_broker_menu_root' sequence='7'/>
+  </data>
+</odoo>

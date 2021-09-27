@@ -52,10 +52,30 @@
             </form>
         </field>
     </record>
-
+    <record id="broker_view_tree" model="ir.ui.view">
+            <field name="name">Broker View Layout Tree</field>
+            <field name="model">broker</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Broker_Type"/>
+                    <field name="Account"/>
+                    <field name="Name"/>
+                    <field name="Logo"/>
+                </tree>
+            </field>
+        </record>
     <record id="broker_action" model="ir.actions.act_window">
         <field name="name">broker</field>
+        <field name="type">ir.actions.act_window</field>
         <field name="res_model">broker</field>
-        <field name="view_mode">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('broker_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('broker_view_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
     </record>
 </odoo>
