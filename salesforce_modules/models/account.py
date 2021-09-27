@@ -309,3 +309,4 @@ class Account(models.Model):
     case_ids = fields.One2many('model_case', 'AccountId', string='Account IDS')
     benefit_politic_ids = fields.One2many('model_benfit_politic', 'Account_id', string='Benefit Politic IDS')
     contract_partner_ids = fields.One2many('contract.partner', 'partner_id', string='Partner IDS')
+    partner_id = fields.Many2one('res.partner', string='partner Name')

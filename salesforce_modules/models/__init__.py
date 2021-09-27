@@ -61,3 +61,4 @@ from . import comercial_structure_c
 from . import comments_c
 from . import company_parameter_c
 from . import beneficiary_contract_plan
+from . import res_partner

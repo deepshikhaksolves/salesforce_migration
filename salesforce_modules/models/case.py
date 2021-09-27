@@ -181,7 +181,7 @@ class Case(models.Model):
     SuppliedName = fields.Char(string='Web Name',size=80)
     SuppliedPhone = fields.Char(string='Web Phone',size=40)
     attachment_ids = fields.One2many('ir.attachment','case_id',string="Attachment")
-
+    partner_id = fields.Many2one('res.partner', string='partner Name')
 
 
 
