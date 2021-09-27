@@ -20,11 +20,7 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Contract Financial Data History">
-                                <group>
 
-                                </group>
-                            </page>
                             <page string="Notes &amp; Attachments">
                                 <field name="attachment_ids"/>
                             </page>

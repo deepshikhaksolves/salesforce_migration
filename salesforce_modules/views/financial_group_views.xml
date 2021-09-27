@@ -85,11 +85,6 @@
                                         </tree>
                                     </field>
                             </page>
-                            <page string="Financial Group History">
-                                <group>
-                                    <!-- <field name=""/> -->
-                                </group>
-                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">

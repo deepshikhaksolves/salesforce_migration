@@ -24,14 +24,6 @@
                             <field name="OwnerId"/>
                         </group>
                     </group>
-                    <notebook>
-                        <page string="Open Activities">
-                            <!-- <field name="line_ids"/> -->
-                        </page>
-                        <page string="Activity History">
-                            <!-- <field name="line_ids"/> -->
-                        </page>
-                    </notebook>
                 </sheet>
             </form>
         </field>
