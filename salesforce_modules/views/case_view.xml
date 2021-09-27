@@ -232,7 +232,6 @@
                                 <field name="Contract_id"/>
                                 <field name="Priority"/>
 
-                                <field name="Status"/>
                                 <field name="SuppliedEmail"/>
                                 <field name="Description"/>
                                 <field name="Origin"/>
