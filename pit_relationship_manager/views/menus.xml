@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <menuitem name="PIT: Relationship Manager" web_icon="salesforce_modules,static/description/salesforce_migration_logo.png" id="salesforce_relationship_manager_menu_root" />
+      <!-- <menuitem name="Inicial" id="sf_inicial_action_menu" parent='salesforce_relationship_manager_menu_root' sequence='1'/> -->
+      <menuitem name="Accounts" id="sf_rm_accounts_action_menu" parent='salesforce_relationship_manager_menu_root' action='salesforce_modules.account_layout_old_action' sequence='2'/>
+
+      <menuitem name="Contracts" id="sf_rm_contracts_action_menu" parent='salesforce_relationship_manager_menu_root' action='hr_contract.action_hr_contract' sequence='3'/>
+
+      <menuitem name="Cases" id="sf_rm_cases_action_menu" parent='salesforce_relationship_manager_menu_root' action='salesforce_modules.case_risk_management_action' sequence='4'/>
+
+      <menuitem name="User company contract permissions" id="sf_rm_user_company_contract_permission_action_menu" parent='salesforce_relationship_manager_menu_root' action="salesforce_modules.User_company_contract_permissions_layout_action" sequence='5'/>
+
+      <!-- <menuitem name="Dashboards" id="sf_rm_dashboard_action_menu" parent='salesforce_relationship_manager_menu_root' action="" sequence='6'/> -->
+
+      <!-- <menuitem name="Reports" id="sf_rm_reports_action_menu" parent='salesforce_relationship_manager_menu_root' action="" sequence='7'/> -->
+  </data>
+</odoo>
