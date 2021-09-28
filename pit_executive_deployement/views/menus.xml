@@ -5,7 +5,7 @@
     <menuitem name="Opportunity" id="opportunity_parent_menu" parent='exe_deploy_menu_root' action='salesforce_modules.opportunity_pab_action' sequence='2'/>
     <menuitem name="Accounts" id="account_parent_menu" parent='exe_deploy_menu_root' action='salesforce_modules.account_layout_action' sequence='3'/>
     <menuitem name="Contact" id="contact_parent_menu" parent='exe_deploy_menu_root'  sequence='4'/>
-    <menuitem name="Contract" id="contract_parent_menu" parent='exe_deploy_menu_root' action = 'hr_contract.act_hr_employee_2_hr_contract' sequence='5'/>
+    <menuitem name="Contract" id="contract_parent_menu" parent='exe_deploy_menu_root' action = 'hr_contract.action_hr_contract' sequence='5'/>
     <menuitem name="Dashboard " id="dashboard_parent_menu" parent='exe_deploy_menu_root' sequence='6'/>
     <menuitem name="Cases" id="case_parent_menu" parent='exe_deploy_menu_root' action='salesforce_modules.case_risk_management_action' sequence='7'/>
   <menuitem name="Document" id="document_parent_menu" parent='exe_deploy_menu_root' action='salesforce_modules.attachment_layout_action' sequence='8'/>

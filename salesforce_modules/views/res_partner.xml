@@ -4,7 +4,7 @@
         <field name="name">res.partner.view.form</field>
         <field name="model">res.partner</field>
         <field name="arch" type="xml">
-            <form string="">
+            <form string="Contact Form">
                 <sheet>
                     <group string="Contact Information">
                         <group>
@@ -135,10 +135,31 @@
         </field>
     </record>
 
+    <record id="res_partner_view_tree" model="ir.ui.view">
+            <field name="name">Contact Tree</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="treatment_name"/>
+                    <field name="cpf"/>
+                    <field name="Birthdate"/>
+                    <field name="marital_status"/>
+                    <field name="spouse_name"/>
+                    <field name="spouse_gender"/>
+                    <field name="spouse_birth_date"/>
+                    <field name="cid"/>
+                    <field name="Active"/>
+                </tree>
+            </field>
+        </record>
+
     <record id="salres_partner_action" model="ir.actions.act_window">
-        <field name="name">res.partner</field>
+        <field name="name">Contact</field>
         <field name="res_model">res.partner</field>
         <field name="view_mode">form</field>
-        <field name="view_id" ref="res_partner_view_form"/>
+        <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('res_partner_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('res_partner_view_form')})]"/>
     </record>
 </odoo>
