@@ -7,7 +7,7 @@
 
       <menuitem name="Products family" id="sf_tar_product_family_action_menu" parent='salesforce_tar_menu_root' action='salesforce_modules.product_family_action' sequence='2'/>
 
-      <menuitem name="Price Table" id="sf_tar_price_table_action_menu" parent='salesforce_tar_menu_root' action='salesforce_modules.study_configuration_price_table_action' sequence='3'/>
+      <!-- <menuitem name="Price Table" id="sf_tar_price_table_action_menu" parent='salesforce_tar_menu_root' action='salesforce_modules.study_configuration_price_table_action' sequence='3'/> -->
       
       <menuitem name="Products Price" id="sf_tar_product_price_action_menu" parent='salesforce_tar_menu_root' action='salesforce_modules.product_age_group_action' sequence='4'/>
 
@@ -21,7 +21,7 @@
 
       <menuitem name="Accommodation" id="sf_tar_accommodation_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.accommodation_layout_action" sequence='9'/>
 
-      <menuitem name="Carrier Type" id="sf_tar_carrier_type_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.carrier_type_c_action" sequence='10'/>
+      <!-- <menuitem name="Carrier Type" id="sf_tar_carrier_type_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.carrier_type_c_action" sequence='10'/> -->
 
       <menuitem name="Regions" id="sf_tar_regions_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.region_layout_action" sequence='11'/>
 

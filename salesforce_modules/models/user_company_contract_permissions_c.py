@@ -15,7 +15,7 @@ class UserAgreement(models.Model):
     _description = "Salesforce Corporate User Agreement Jurisdiction"
     _rec_name = 'id__c'
 
-    contract__c = fields.Many2one('hr.contract', string='Contract',track_visibility='onchange')
+    contract__c = fields.Many2one('hr.contract', string='Contract', track_visibility='onchange')
     # CreatedById  already in odoo
     financial_group__c = fields.Many2one('financial_group', string='Financial Group',track_visibility='onchange')
     id__c = fields.Char(string='ID',track_visibility='onchange')
