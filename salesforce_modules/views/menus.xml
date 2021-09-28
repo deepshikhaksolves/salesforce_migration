@@ -496,6 +496,7 @@
         <!-- Menu for Contact -->
         <menuitem name="Contact" id="contact_parent_action_menu" parent='salesforce_menu_root'/>
 
-                <menuitem name="Contact" id="broker_lead_layout_menu" parent='contact_parent_action_menu' action="salres_partner_action"/>
+                <menuitem name="Contact" id="res_partner_layout_menu" parent='contact_parent_action_menu' action="salres_partner_action"/>
+                <menuitem name="Contact Old" id="res_partner_old_layout_menu" parent='contact_parent_action_menu' action="salres_partner_old_action"/>
     </data>
 </odoo>
