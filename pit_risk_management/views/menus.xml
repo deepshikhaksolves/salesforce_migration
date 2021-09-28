@@ -4,7 +4,7 @@
     <menuitem name="PIT: Risk Management" web_icon="salesforce_modules,static/description/salesforce_migration_logo.png" id="salesforce_risk_management_menu_root" />
       <!-- <menuitem name="Inicial" id="sf_risk_management_inicial_action_menu" parent='salesforce_risk_management_menu_root' sequence='1'/> -->
 
-      <menuitem name="Contracts" id="sf_risk_management_contracts_action_menu" parent='salesforce_risk_management_menu_root' action='hr_contract.action_hr_contract' sequence='2'/>
+      <!-- <menuitem name="Contracts" id="sf_risk_management_contracts_action_menu" parent='salesforce_risk_management_menu_root' action='hr_contract.action_hr_contract' sequence='2'/> -->
 
       <menuitem name="Accounts" id="sf_risk_management_accounts_action_menu" parent='salesforce_risk_management_menu_root' action='salesforce_modules.account_layout_old_action' sequence='3'/>
 
