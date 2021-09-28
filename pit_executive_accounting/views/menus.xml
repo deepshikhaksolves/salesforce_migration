@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <menuitem name="PIT Executive: Accounting" web_icon="salesforce_modules,static/description/salesforce_migration_logo.png" id="salesforce_executive_accounting_menu_root" />
+  </data>
+</odoo>
