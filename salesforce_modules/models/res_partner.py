@@ -2,7 +2,8 @@ from odoo import models, fields, api, _
 from odoo.exceptions import UserError
 
 class ResPartner(models.Model):
-    _inherit = ['res.partner']
+    _name = 'res.partner'
+    _inherit = ['res.partner', 'mail.thread', 'mail.activity.mixin']
 
     ABC_Analysis = fields.Selection([
         ('A', 'A'), ('B', 'B'), ('C', 'C')
