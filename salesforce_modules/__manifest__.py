@@ -160,6 +160,7 @@
         'views/contract_service.xml',
         'views/hr_contract.xml',
         'views/beneficiary_contracted_plan.xml',
+        'views/res_partner.xml',
         'views/menus.xml',
 
 

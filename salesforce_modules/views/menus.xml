@@ -493,5 +493,9 @@
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='199'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
+        <!-- Menu for Contact -->
+        <menuitem name="Contact" id="contact_parent_action_menu" parent='salesforce_menu_root'/>
+
+                <menuitem name="Contact" id="broker_lead_layout_menu" parent='contact_parent_action_menu' action="salres_partner_action"/>
     </data>
 </odoo>
