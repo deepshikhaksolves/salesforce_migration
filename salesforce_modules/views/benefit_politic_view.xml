@@ -530,9 +530,9 @@
                             <group>
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
-                                <field name="Competitor"/>
                                 <field name="Contract_Type"/>
                                 <field name="Payment_Method"/>
+                                <field name="Competitor"/>
                                 <field name="Performing_Index"/>
                                 <field name="Life"/>
                                 <field name="Monthly_Bill"/>
@@ -928,6 +928,7 @@
                          </group>
                         <notebook>
                             <page string="Contracted Plans"></page>
+                            <page string="Benefit Policy History"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">

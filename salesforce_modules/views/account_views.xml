@@ -16,8 +16,7 @@
                                 <field name="financial_group__c" />
                                 <field name="CNPJ__c"/>
                                 <field name="Social_Reason__c"/>
-                                <field name="name"/>
-                                <!-- <field name="Name"/> -->
+                                <field name="name" string="Revenue"/>
                                 <field name="State_Registration__c"/>
                                 <field name="Municipal_Registration__c"/>
                                 <field name="CNAE__c" string="NINE"/>
