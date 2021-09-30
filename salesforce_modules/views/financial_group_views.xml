@@ -10,7 +10,7 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="name"/>
+                                <field name="name" required="1"/>
                                 <field name="company_classification" />
                                 <field name="profile" /> <!--widget='checkbox'-->
                                 <field name="active" />
@@ -19,46 +19,43 @@
                                 <field name="cost_center"/>
                             </group>
                         </group>
-                        <notebook>
-                            <page string="Drive">
-                                <group>
-                                    <group>
-                                        <field name="storage_code"/>
-                                        <field name="folder_template"/>
-                                        <field name="general_rule_group_backoffice_id"/>
-                                    </group>
-                                    <group>
-                                        <field name="started"/>
-                                        <field name="drive_path"/>
-                                        <field name="general_rule_group_company_id"/>
-                                    </group>
-                                </group>
-                            </page>
-                            <page string="HR Protected">
-                                <group>
-                                    <field name="rh_protected"/>
-                                </group>
-                            </page>
-                            <page string="I Protected">
-                                <group>
-                                    <group>
-                                        <field name="I_protected"/>
-                                        <field name="domain"/>
-                                        <field name="approval_connection"/>
-                                    </group>
-                                    <group>
-                                        <field name="trail_code"/>
-                                        <field name="screening_code"/>
-                                        <field name="covid"/>
-                                    </group>
-                                </group>
-                            </page>
-                            <page string="Protected Dr">
-                                <group>
-                                    <field name="dr_protected"/>
-                                </group>
-                            </page>
+                        <group string="Drive">
+                            <group>
+                                <field name="storage_code"/>
+                                <field name="folder_template"/>
+                                <field name="general_rule_group_backoffice_id"/>
+                            </group>
+                            <group>
+                                <field name="started"/>
+                                <field name="drive_path"/>
+                                <field name="general_rule_group_company_id"/>
+                            </group>
+                        </group>
+                        <group string="HR Protected">
+                            <group>
+                                <field name="rh_protected"/>
+                            </group>
+                        </group>
 
+                        <group string="I Protected">
+                            <group>
+                                <field name="I_protected"/>
+                                <field name="domain"/>
+                                <field name="approval_connection"/>
+                            </group>
+                            <group>
+                                <field name="trail_code"/>
+                                <field name="screening_code"/>
+                                <field name="covid"/>
+                            </group>
+                        </group>
+                        <group string="Protected Dr">
+                            <group>
+                                <field name="dr_protected"/>
+                            </group>
+                        </group>
+
+                        <notebook>
                             <page string="Accounts">
                                     <field name="account_ids">
                                         <tree>
@@ -71,7 +68,7 @@
                             <page string="cost centers">
                                     <field name="cost_center_ids">
                                         <tree>
-                                            <field name="name" string='Cost Center ID'/>
+                                            <field name="cost_center" />
                                         </tree>
                                     </field>
                             </page>

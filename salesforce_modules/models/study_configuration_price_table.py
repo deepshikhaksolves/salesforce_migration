@@ -11,4 +11,4 @@ class StudyConfigurationPriceTable(models.Model):
     # CreatedById already in odoo
     # LastModifiedById already in odoo
     Name = fields.Char(string="Name",track_visibility='onchange')
-    # price_table_id = fields.Many2one('price_schedule',string="Price list") #Model Not Found
+    price_table_id = fields.Many2one('model_price_list',string="Price list")

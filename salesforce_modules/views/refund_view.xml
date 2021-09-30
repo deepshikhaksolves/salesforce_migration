@@ -11,12 +11,12 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="Event_c"/>
-                                <field name="start_date"/>
+                                <field name="Event_c" required="1"/>
+                                <field name="start_date" required="1"/>
                             </group>
                             <group>
                                 <field name="Product_id"/>
-                                <field name="value"/>
+                                <field name="value" required="1"/>
                                 <field name="end_date"/>
                             </group>
                         </group>

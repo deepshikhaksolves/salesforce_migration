@@ -9,7 +9,7 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="region"/>
+                                <field name="region_id"/>
                                 <field name="user_id"/>
                             </group>
                             <group>
@@ -31,7 +31,7 @@
             <field name="model">product.region</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="region"/>
+                    <field name="region_id"/>
                     <field name="user_id"/>
                     <field name="product_id"/>
                     <field name="last_modified_by_id"/>

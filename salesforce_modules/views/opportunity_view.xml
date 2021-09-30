@@ -12,8 +12,8 @@
                             <group>
                                 <field name="name"/>
                                 <field name="account_id"/>
-                                <field name="close_date"/>
-                                <field name="forecast_category_name"/>
+                                <field name="close_date" required="1"/>
+                                <field name="forecast_category_name" required="1"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
                                 <field name="campaigns_id"/>
@@ -28,7 +28,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <field name="stage_name" required="1"/>
                                 <field name="lead_source"/>
                                 <field name="sons_capital_limit"/>
                                 <field name="mailing_origin"/>
@@ -58,7 +58,7 @@
                         </group>
                         <group string="Financeiro" name="financial">
                             <group>
-                                <field name="payment_mode"/>
+                                <field name="payment_mode" required="1"/>
                                 <field name="broker_schedule_start"/>
                                 <field name="broking"/>
                                 <field name="broker_number_benefit"/>
@@ -115,7 +115,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>

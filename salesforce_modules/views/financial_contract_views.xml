@@ -11,7 +11,7 @@
                             <group>
                                 <field name="contract_id"/>
                                 <field name="Type_of_Revenue"/>
-                                <field name="Value"/>
+                                <field name="Value" required="1"/>
                             </group>
                             <group>
                                 <field name="Start_Date"/>
