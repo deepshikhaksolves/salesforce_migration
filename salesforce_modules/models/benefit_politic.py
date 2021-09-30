@@ -46,7 +46,7 @@ class BenefitPolitic(models.Model):
         ('Vaccine', 'Vaccine'),
         ('I_protected', 'I Protected'),
         ('Fee', 'Fee')
-    ], string="Benefit", track_visibility='onchange')
+    ], string="Benefit", track_visibility='onchange', required=True)
     Brokerage_Transfer = fields.Boolean(string="Brokerage Transfer", track_visibility='onchange')
     Capital = fields.Selection([
         ('Uniform', 'Uniform'),
@@ -118,7 +118,7 @@ class BenefitPolitic(models.Model):
         ('Instituted_Plan', 'Instituted Plan')
     ], string="Pension Mode", track_visibility='onchange')
     Places = fields.Char(string="Places", size=32768, track_visibility='onchange')
-    Name = fields.Char(string="Benefit Policy", size=80, track_visibility='onchange')
+    Name = fields.Char(string="Benefit Politic", size=80, track_visibility='onchange', required=True)
     Provider_id = fields.Many2one('account.account', string="Provider", track_visibility='onchange')
     Purchase_Limit = fields.Selection([
         ('Fixed_value', 'Fixed value'),
@@ -151,3 +151,4 @@ class BenefitPolitic(models.Model):
     lead_id = fields.Many2one('crm.lead', string='Lead Id', track_visibility='onchange')
 
     contract_plan_ids = fields.One2many('model_contract_plan','benifit_politic_id', string='Contract Plan IDS')
+    politic_bill_ids = fields.One2many('politic.bill','benefit_politic_id', string='Contracted Plan')

@@ -14,3 +14,5 @@ class State(models.Model):
     # LastModifiedById already in odoo
     # Country__c alreay in odoo
     State_Initials = fields.Char(string="State acronym", size=2,track_visibility='onchange')
+    city_ids = fields.One2many('model_city_c','State_id',string="City")
+    state_region_ids = fields.One2many('model_region_state','state_id',string="State Of Region")

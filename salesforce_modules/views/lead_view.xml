@@ -35,6 +35,7 @@
 
                                 <field name="rescue_date__c"/>
                                 <field name="loss_comment__c"/>
+                                <field name="CNAE__c" string='CNAE'/>
                             </group>
                             <group>
                                 <field name="team_id" invisible='1'/>
@@ -49,17 +50,15 @@
                                 <field name="Mailing_Origin__c"/>
                             </group>
                         </group>
-                        <notebook>
+                        <!-- <notebook>
                             <page string="Notes">
-                                <group>
-                                    <field name="attachment_ids">
-                                        <tree>
-                                            <field name="name" string='Attachment Name'/>
-                                        </tree>
-                                    </field>
-                                </group>
+                                <field name="attachment_ids">
+                                    <tree>
+                                        <field name="name" string='Attachment Name'/>
+                                    </tree>
+                                </field>
                             </page>
-                        </notebook>
+                        </notebook> -->
                     </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers"/>
@@ -118,7 +117,7 @@
                                 <field name="Business_Name__c"/>
                                 <field name="Financial_Group__c"/>
                                 <field name="Industry"/>
-                                <field name="CNAE__c"/>
+                                <field name="CNAE__c" string='CNAE'/>
                                 <field name="name" string="Name"/>
                                 <field name="Title"/>
                                 <field name="phone"/>
@@ -130,8 +129,6 @@
                                 <field name="Date_of_Birth__c"/>
                                 <field name="rescue_date__c"/>
                                 <field name="loss_comment__c"/>
-
-
                             </group>
                             <group>
                                 <field name="NumberOfEmployees"/>
@@ -162,7 +159,9 @@
                             </group>
                         </group>
                         <group string="System Information">
-
+                            <group>
+                                <field name="type" string='Lead Record Type'/>
+                            </group>
                         </group>
                         <notebook>
                             <page string="Data Integration Rules">
@@ -170,23 +169,21 @@
 
                                 </group>
                             </page>
-                            <page string="Notes">
-                                <group>
-                                    <field name="attachment_ids">
-                                        <tree string="Attachment" editable="bottom">
-                                            <field name="id"/>
-                                            <field name="name"/>
-                                            <field name="type"/>
-                                            <field name="document_use"/>
-                                            <field name="financial_contract_id"/>
-                                        </tree>
-                                    </field>
-                                </group>
-                            </page>
-                            <page string="Benefits Policy">
+                            <!-- <page string="Notes">
+                                <field name="attachment_ids">
+                                    <tree string="Attachment" editable="bottom">
+                                        <field name="id"/>
+                                        <field name="name"/>
+                                        <field name="type"/>
+                                        <field name="document_use"/>
+                                        <field name="financial_contract_id"/>
+                                    </tree>
+                                </field>
+                            </page> -->
+                            <page string="Benefits Politic">
                                 <field name="benifit_ids">
                                     <tree>
-                                        <field name="Name" string='Benefit Policy'/>
+                                        <field name="Name" string='Benefit Politic'/>
                                         <field name="Contract_End" string='Policy Anniversary'/>
                                         <field name="Life"/>
                                         <field name="Monthly_Bill"/>
@@ -412,7 +409,7 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Benefits Policy">
+                            <page string="Benefits Politic">
                                 <field name="benifit_ids">
                                     <tree>
                                         <field name="Name" string='Benefit Policy'/>
@@ -425,13 +422,13 @@
                                     </tree>
                                 </field>
                             </page>
-                            <page string="Notes">
+                            <!-- <page string="Notes">
                                 <field name="attachment_ids">
                                     <tree>
                                         <field name="name" string='Attachment Name'/>
                                     </tree>
                                 </field>
-                            </page>
+                            </page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">

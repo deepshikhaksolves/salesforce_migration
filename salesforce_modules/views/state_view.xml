@@ -23,8 +23,18 @@
                         </group>
                         <notebook>
                             <page string="Cities">
+                                <field name="city_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="Region States">
+                                <field name="state_region_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
