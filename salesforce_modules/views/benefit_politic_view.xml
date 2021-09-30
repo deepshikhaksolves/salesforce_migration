@@ -1209,7 +1209,15 @@
                             </group>
                          </group>
                         <notebook>
-                            <page string="Contracted Plans"></page>
+                            <page string="Contracted Plans">
+                                <field name="politic_bill_ids">
+                                    <tree>
+                                        <field name="plan_id"/>
+                                        <field name="life"/>
+                                        <field name="unitary_value"/>
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
