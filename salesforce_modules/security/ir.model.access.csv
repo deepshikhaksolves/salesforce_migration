@@ -17,8 +17,6 @@ access_lead_sort_colums_in_capaign,salesforce_lead_sort_colums_in_capaign,model_
 
 access_model_campaign,salesforce_model_campaign,model_model_campaign,base.group_user,1,1,1,1
 
-access_model_brand,salesforce_model_brand,model_model_brand,base.group_user,1,1,1,1
-
 access_model_pathology,salesforce_model_pathology,model_model_pathology,base.group_user,1,1,1,1
 access_model_region,salesforce_model_region,model_model_region,base.group_user,1,1,1,1
 access_accredited_network,salesforce_accredited_network,model_accredited_network,base.group_user,1,1,1,1

@@ -14,12 +14,12 @@
                                 <field name="Manager__c" />
                                 <field name="Add_Approvers__c"/>
                                 <field name="Status__c"/>
-                                <!-- <field name="Cost_Center__c"/> -->
+                                <field name="Cost_Center__c"/>
                                 <field name="create_uid"/>
                                 <field name="OwnerId"/>
                             </group>
                             <group>
-                                <field name="name"/>
+                                <field name="name" required='1'/>
                                 <field name="Paid__c"/>
                                 <field name="Internal_Channel__c"/>
                                 <field name="Allows_Multiple_Reservations__c"/>

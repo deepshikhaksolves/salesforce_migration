@@ -16,3 +16,4 @@ class Subject_C(models.Model):
         [('Open', 'Open'), ('In Progress', 'In Progress'), ('Closed', 'Closed'), ('Called Off', 'Called Off')],
         string='Status',track_visibility='onchange')
 
+    case_ids = fields.One2many('model_case','Subject_old_id', string="Case")

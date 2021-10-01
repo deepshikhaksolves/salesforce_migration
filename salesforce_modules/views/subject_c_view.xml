@@ -9,7 +9,7 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="Name"/>
+                                <field name="Name" required='1'/>
                                 <field name="create_uid" string="Created By"/>
                             </group>
                             <group>
@@ -19,6 +19,14 @@
                         </group>
                         <notebook>
                             <page string="Cases">
+                                <field name="case_ids">
+                                    <tree>
+                                        <field name="CaseNumber"/>
+                                        <field name="Subject"/>
+                                        <field name="CreatedDate"/>
+                                        <field name="Priority"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>

@@ -10,7 +10,7 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="Name"/>
+                                <field name="Name" required='1'/>
                                 <field name="active__c"/>
                                 <field name="create_uid"/>
                             </group>

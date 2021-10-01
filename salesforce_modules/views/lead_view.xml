@@ -7,6 +7,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="broker_lead Layout">
+                    <header>
+                        <field name="stage_id" widget='statusbar'/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -40,7 +43,7 @@
                             <group>
                                 <field name="team_id" invisible='1'/>
                                 <field name="telemarketing__c" required='1'/>
-                                <field name="stage_id" string='Lead Status' required='1'/>
+                                <!-- <field name="stage_id" string='Lead Status' required='1'/> -->
                                 <field name="Sales_Channel__c"/>
                                 <field name="actual_carrier__c"
                                        options="{'no_create': True, 'no_create_edit':True, 'no_open': True}"/>
@@ -107,12 +110,15 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="broker_lead Layout PJ">
+                    <header>
+                        <field name="stage_id" widget='statusbar'/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
                                 <field name="team_id" invisible='1'/>
-                                <field name="stage_id" string="Lead Status" required='1'/>
-                                <field name="Company"/>
+                                <!-- <field name="stage_id" string="Lead Status" required='1'/> -->
+                                <field name="Company" required='1'/>
                                 <field name="CNPJ__c"/>
                                 <field name="Business_Name__c"/>
                                 <field name="Financial_Group__c"/>
@@ -243,11 +249,14 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Lead Layout">
+                    <header>
+                        <field name="stage_id" widget='statusbar'/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
                                 <field name="team_id" invisible='1'/>
-                                <field name="stage_id" string="Lead Status"/>
+                                <!-- <field name="stage_id" string="Lead Status"/> -->
                                 <field name="name" string="Name"/>
                                 <field name="Title"/>
                                 <field name="email_from"/>
@@ -263,7 +272,7 @@
                             <group>
                                 <field name="OwnerId"/>
                                 <field name="Website"/>
-                                <field name="Company"/>
+                                <field name="Company" required='1'/>
                                 <field name="Industry"/>
                                 <field name="NumberOfEmployees"/>
                                 <field name="LeadSource"/>
@@ -353,10 +362,13 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Small Lead Layout">
+                    <header>
+                        <field name="stage_id" widget='statusbar'/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
-                                <field name="Company"/>
+                                <field name="Company" required='1'/>
                                 <field name="CNPJ__c"/>
                                 <field name="Business_Name__c"/>
                                 <field name="Financial_Group__c"/>
@@ -390,7 +402,7 @@
                             </group>
                             <group>
                                 <field name="team_id" invisible='1'/>
-                                <field name="stage_id" string='Lead Status'/>
+                                <!-- <field name="stage_id" string='Lead Status'/> -->
                                 <field name="telemarketing__c"/>
                                 <field name="NumberOfEmployees"/>
                                 <field name="NumberofLocations__c"/>
