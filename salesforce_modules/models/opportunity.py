@@ -240,7 +240,7 @@ class SalesforceOpprtunity(models.Model):
     tag = fields.Char('Placa',size=7,track_visibility='onchange')
     places = fields.Text('Places',size=32768,track_visibility='onchange')
     has_dps = fields.Boolean('Possui DPS',track_visibility='onchange')
-    main_competitors = fields.Char('Principais Concorrentes',size=100,track_visibility='onchange')
+    main_competitors = fields.Char(string='Principais Concorrentes',size=100,track_visibility='onchange')
     is_private = fields.Boolean('Private',track_visibility='onchange')
     probability = fields.Float('Probability (%)',digits=(3,2),track_visibility='onchange')
     prosthesis = fields.Char('Prosthesis',size=255,track_visibility='onchange')
