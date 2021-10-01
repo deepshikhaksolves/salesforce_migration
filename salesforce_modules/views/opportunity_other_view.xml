@@ -8,8 +8,8 @@
                 <form string="Opportunity Contact Role Layout">
                     <sheet>
                         <group>
-                            <field name="opportunity_id"/>
-                            <field name="contacts_id"/>
+                            <field name="opportunity_id" required="1"/>
+                            <field name="contacts_id" required="1"/>
                             <field name="role"/>
                             <field name="is_primary"/>
                         </group>

@@ -1643,6 +1643,8 @@
                                     </field>
                                 </group>
                             </page>
+
+
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
