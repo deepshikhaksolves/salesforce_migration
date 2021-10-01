@@ -32,10 +32,13 @@
                         </group>
                         <notebook>
                             <page string="Contracted Plans">
-                                <!-- <field name="contract_plan_ids">
+                                <field name="politic_bill_ids">
                                     <tree>
+                                        <field name="plan_id"/>
+                                        <field name="life"/>
+                                        <field name="unitary_value"/>
                                     </tree>
-                                </fields> -->
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
@@ -119,7 +122,15 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Contracted Plans"></page>
+                            <page string="Contracted Plans">
+                                <field name="politic_bill_ids">
+                                    <tree>
+                                        <field name="plan_id"/>
+                                        <field name="life"/>
+                                        <field name="unitary_value"/>
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -202,7 +213,15 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Contracted Plans"></page>
+                            <page string="Contracted Plans">
+                                <field name="politic_bill_ids">
+                                    <tree>
+                                        <field name="plan_id"/>
+                                        <field name="life"/>
+                                        <field name="unitary_value"/>
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -286,7 +305,15 @@
                             </group>
                          </group>
                         <notebook>
-                            <page string="Contracted Plans"></page>
+                            <page string="Contracted Plans">
+                                <field name="politic_bill_ids">
+                                    <tree>
+                                        <field name="plan_id"/>
+                                        <field name="life"/>
+                                        <field name="unitary_value"/>
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -368,7 +395,15 @@
                             </group>
                          </group>
                         <notebook>
-                            <page string="Contracted Plans"></page>
+                            <page string="Contracted Plans">
+                                <field name="politic_bill_ids">
+                                    <tree>
+                                        <field name="plan_id"/>
+                                        <field name="life"/>
+                                        <field name="unitary_value"/>
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -450,7 +485,15 @@
                             </group>
                          </group>
                         <notebook>
-                            <page string="Contracted Plans"></page>
+                            <page string="Contracted Plans">
+                                <field name="politic_bill_ids">
+                                    <tree>
+                                        <field name="plan_id"/>
+                                        <field name="life"/>
+                                        <field name="unitary_value"/>
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -544,7 +587,15 @@
                             </group>
                          </group>
                         <notebook>
-                            <page string="Contracted Plans"></page>
+                            <page string="Contracted Plans">
+                                <field name="politic_bill_ids">
+                                    <tree>
+                                        <field name="plan_id"/>
+                                        <field name="life"/>
+                                        <field name="unitary_value"/>
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -635,7 +686,15 @@
                             </group>
                          </group>
                         <notebook>
-                            <page string="Contracted Plans"></page>
+                            <page string="Contracted Plans">
+                                <field name="politic_bill_ids">
+                                    <tree>
+                                        <field name="plan_id"/>
+                                        <field name="life"/>
+                                        <field name="unitary_value"/>
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -722,7 +781,15 @@
                             </group>
                          </group>
                         <notebook>
-                            <page string="Contracted Plans"></page>
+                            <page string="Contracted Plans">
+                                <field name="politic_bill_ids">
+                                    <tree>
+                                        <field name="plan_id"/>
+                                        <field name="life"/>
+                                        <field name="unitary_value"/>
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -822,7 +889,15 @@
                             </group>
                          </group>
                         <notebook>
-                            <page string="Contracted Plans"></page>
+                            <page string="Contracted Plans">
+                                <field name="politic_bill_ids">
+                                    <tree>
+                                        <field name="plan_id"/>
+                                        <field name="life"/>
+                                        <field name="unitary_value"/>
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -927,7 +1002,15 @@
                             </group>
                          </group>
                         <notebook>
-                            <page string="Contracted Plans"></page>
+                            <page string="Contracted Plans">
+                                <field name="politic_bill_ids">
+                                    <tree>
+                                        <field name="plan_id"/>
+                                        <field name="life"/>
+                                        <field name="unitary_value"/>
+                                    </tree>
+                                </field>
+                            </page>
                             <page string="Benefit Policy History"></page>
                         </notebook>
                     </sheet>
@@ -1026,7 +1109,15 @@
                             </group>
                          </group>
                         <notebook>
-                            <page string="Contracted Plans"></page>
+                            <page string="Contracted Plans">
+                                <field name="politic_bill_ids">
+                                    <tree>
+                                        <field name="plan_id"/>
+                                        <field name="life"/>
+                                        <field name="unitary_value"/>
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -1115,7 +1206,15 @@
                             </group>
                          </group>
                         <notebook>
-                            <page string="Contracted Plans"></page>
+                            <page string="Contracted Plans">
+                                <field name="politic_bill_ids">
+                                    <tree>
+                                        <field name="plan_id"/>
+                                        <field name="life"/>
+                                        <field name="unitary_value"/>
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
