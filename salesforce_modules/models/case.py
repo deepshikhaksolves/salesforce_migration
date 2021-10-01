@@ -182,6 +182,7 @@ class Case(models.Model):
     SuppliedPhone = fields.Char(string='Web Phone',size=40, track_visibility='onchange')
     attachment_ids = fields.One2many('ir.attachment','case_id',string="Attachment", track_visibility='onchange')
     partner_id = fields.Many2one('res.partner', string='partner Name', track_visibility='onchange')
+    case_quote_id = fields.Many2one('model_quote', string='Case Quote')
 
 
 

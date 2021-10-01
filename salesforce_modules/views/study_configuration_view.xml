@@ -10,10 +10,10 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="Name"/>
+                                <field name="Name" required="1"/>
                                 <field name="minimum_lives"/>
                                 <field name="maximum_lives"/>
-                                <field name="validity_of_the_proposal"/>
+                                <field name="validity_of_the_proposal" required="1"/>
                                 <field name="report_key"/>
                                 <field name="default_owner_id"/>
                                 <field name="staging"/>

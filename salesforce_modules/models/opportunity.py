@@ -340,3 +340,4 @@ class SalesforceOpprtunity(models.Model):
     attachment_lines = fields.One2many('ir.attachment','opportunity_id',string="Attachment Lines")
     product_lines = fields.One2many('crm.lead.product','opportunity_id',string="Product Lines")
     case_lines = fields.One2many('model_case','opportunity_id',string="Case Lines")
+    opportunity_quote_id = fields.Many2one('model_quote', string='Opportunity Quote')

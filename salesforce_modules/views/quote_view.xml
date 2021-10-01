@@ -24,11 +24,37 @@
                             <page string="Notes/Attachments">
                                 <field name="attachment_ids"/>
                             </page>
-                            <page string="Quotation Products"></page>
-                            <page string="Opportunities"></page>
-                            <page string="Notes"></page>
+                            <page string="Quotation Products">
+                                <field name="quote_product_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="Product_id"/>
+                                        <field name="Cost_Type"/>
+                                        <field name="Value"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page string="Opportunities">
+                                <field name="opportunity_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="close_date"/>
+                                        <field name="stage_name"/>
+                                    </tree>
+                                </field>
+                            </page>
                             <page string="Reissues"></page>
-                            <page string="Cases"></page>
+                            <page string="Cases">
+                                <field name="case_ids">
+                                    <tree>
+                                        <field name="CaseNumber"/>
+                                        <field name="Subject"/>
+                                        <field name="CreatedDate"/>
+                                        <field name="Priority"/>
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -510,7 +536,7 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="QuoteNumber"/>
+                                <field name="QuoteNumber" required="1"/>
                                 <field name="Name"/>
                                 <field name="OpportunityId"/>
                                 <field name="AccountId"/>
