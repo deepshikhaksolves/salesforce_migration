@@ -14,5 +14,5 @@ class ContractService(models.Model):
     # LastModifiedById created by default
     OwnerId = fields.Many2one('res.users', string='Owner')
     Periodicity	 = fields.Many2one('model.periodicity', string='Frequency')
-    Service = fields.Many2one('contract.service', string='Service')
+    Service = fields.Many2one('model_service_c', string='Service')
     Name = fields.Char(string='Contract ID Service') 

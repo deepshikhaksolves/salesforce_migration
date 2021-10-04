@@ -11,7 +11,7 @@ class ProductFamily(models.Model):
     # LastModifiedById  already in odoo
     Name = fields.Char('Name',size=80,track_visibility='onchange')
 
-    carrier__c = fields.Many2many(string='Operator', comodel_name='account.account', relation='carrier_account_rel',track_visibility='onchange')
+    carrier__c = fields.Many2many(string='Carrier', comodel_name='account.account', relation='carrier_account_rel',track_visibility='onchange')
 
     account_id = fields.Many2one('account.account', string='Account Id',track_visibility='onchange')
     product_ids = fields.One2many('product.template', 'product_family_id', string='Product Family IDS')

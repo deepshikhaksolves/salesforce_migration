@@ -20,3 +20,5 @@ class SalesforcePoliticBill(models.Model):
         ('Percentage', 'Percentage'),
     ], string="Reimbursement Value Type",track_visibility='onchange')
     rule_note = fields.Char('Rule note',size=200,track_visibility='onchange')
+
+    benefit_politic_id = fields.Many2one('model_benfit_politic', string='Benefit Politic Id', track_visibility='onchange')

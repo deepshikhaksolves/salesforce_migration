@@ -6,14 +6,17 @@
             <field name="name">Opportunity Personal Accident Broker View Layout</field>
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
-                <form string="Broker Saúde e Odonto PF">
+                <form string="Broker Personal Accident Broker">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
                                 <field name="name"/>
                                 <field name="account_id"/>
-                                <field name="close_date"/>
-                                <field name="forecast_category_name"/>
+                                <field name="close_date" required="1"/>
+                                <field name="forecast_category_name" required="1"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
                                 <field name="campaigns_id"/>
@@ -28,7 +31,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name" required="1"/> -->
                                 <field name="lead_source"/>
                                 <field name="sons_capital_limit"/>
                                 <field name="mailing_origin"/>
@@ -58,7 +61,7 @@
                         </group>
                         <group string="Financeiro" name="financial">
                             <group>
-                                <field name="payment_mode"/>
+                                <field name="payment_mode" required="1"/>
                                 <field name="broker_schedule_start"/>
                                 <field name="broking"/>
                                 <field name="broker_number_benefit"/>
@@ -85,7 +88,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -95,7 +98,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -105,7 +108,7 @@
                             <page string="Partners" name="partners">
                                 <group>
                                     <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" editable="bottom">
+                                        <tree string="Contract Partner" >
                                             <field name="partner_id"/>
                                             <field name="role"/>
                                         </tree>
@@ -115,7 +118,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -129,7 +132,7 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
@@ -139,7 +142,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -152,7 +155,7 @@
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -165,7 +168,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -203,6 +206,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Automóvel">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -220,7 +226,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="mailing_origin"/>
@@ -282,7 +288,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -292,7 +298,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -302,7 +308,7 @@
                             <page string="Partners" name="partners">
                                 <group>
                                     <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" editable="bottom">
+                                        <tree string="Contract Partner" >
                                             <field name="partner_id"/>
                                             <field name="role"/>
                                         </tree>
@@ -312,7 +318,7 @@
                             <page string="Quotes" name="quotes">
 
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -326,7 +332,7 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
@@ -336,7 +342,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -349,7 +355,7 @@
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -362,7 +368,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -400,6 +406,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Checkup Vaccine">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -418,7 +427,8 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
+                                <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="mailing_origin"/>
@@ -464,7 +474,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -474,7 +484,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -484,7 +494,7 @@
                             <page string="Partners" name="partners">
                                 <group>
                                     <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" editable="bottom">
+                                        <tree string="Contract Partner" >
                                             <field name="partner_id"/>
                                             <field name="role"/>
                                         </tree>
@@ -494,7 +504,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -508,7 +518,7 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
@@ -518,7 +528,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -528,10 +538,13 @@
                                     </field>
                                 </group>
                             </page>
+                            <page string="Products">
+                                <field name="product_ids"/>
+                            </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -544,7 +557,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -582,6 +595,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Consultoria">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -599,7 +615,8 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
+                                <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="mailing_origin"/>
@@ -644,7 +661,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -654,7 +671,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -664,7 +681,7 @@
                             <page string="Partners" name="partners">
                                 <group>
                                     <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" editable="bottom">
+                                        <tree string="Contract Partner" >
                                             <field name="partner_id"/>
                                             <field name="role"/>
                                         </tree>
@@ -674,7 +691,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -688,7 +705,7 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
@@ -698,7 +715,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -708,10 +725,13 @@
                                     </field>
                                 </group>
                             </page>
+                            <page string="Products">
+                                <field name="product_ids"/>
+                            </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -724,7 +744,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -762,6 +782,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Fee">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -778,7 +801,8 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
+                                <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="mailing_origin"/>
@@ -822,7 +846,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -832,7 +856,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -842,7 +866,7 @@
                             <page string="Partners" name="partners">
                                 <group>
                                     <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" editable="bottom">
+                                        <tree string="Contract Partner" >
                                             <field name="partner_id"/>
                                             <field name="role"/>
                                         </tree>
@@ -852,7 +876,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -866,7 +890,7 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
@@ -876,7 +900,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -886,10 +910,13 @@
                                     </field>
                                 </group>
                             </page>
+                            <page string="Products">
+                                <field name="product_ids"/>
+                            </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -902,7 +929,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -940,13 +967,16 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Frota">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
                                 <field name="name"/>
                                 <field name="account_id"/>
-                                <field name="close_date"/>
-                                <field name="forecast_category_name"/>
+                                <field name="close_date" required='1'/>
+                                <field name="forecast_category_name" required='1'/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
                                 <field name="campaigns_id"/>
@@ -957,7 +987,8 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name" required='1'/> -->
+                                <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="mailing_origin"/>
@@ -1007,7 +1038,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -1017,7 +1048,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -1027,7 +1058,7 @@
                             <page string="Partners" name="partners">
                                 <group>
                                     <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" editable="bottom">
+                                        <tree string="Contract Partner" >
                                             <field name="partner_id"/>
                                             <field name="role"/>
                                         </tree>
@@ -1037,7 +1068,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -1051,7 +1082,7 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
@@ -1061,7 +1092,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -1074,7 +1105,7 @@
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -1087,7 +1118,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -1125,13 +1156,16 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Medicamento">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
                                 <field name="name"/>
                                 <field name="account_id"/>
-                                <field name="close_date"/>
-                                <field name="forecast_category_name"/>
+                                <field name="close_date" required='1'/>
+                                <field name="forecast_category_name" required='1'/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
                                 <field name="campaigns_id"/>
@@ -1143,7 +1177,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name" required='1'/> -->
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="employee"/>
@@ -1205,7 +1239,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -1215,7 +1249,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -1225,7 +1259,7 @@
                             <page string="Partners" name="partners">
                                 <group>
                                     <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" editable="bottom">
+                                        <tree string="Contract Partner" >
                                             <field name="partner_id"/>
                                             <field name="role"/>
                                         </tree>
@@ -1235,7 +1269,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -1249,7 +1283,7 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
@@ -1259,7 +1293,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -1269,10 +1303,15 @@
                                     </field>
                                 </group>
                             </page>
+
+                            <page string="Products">
+                                <field name="product_ids"/>
+                            </page>
+
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -1285,7 +1324,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -1323,6 +1362,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Occupational Health">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -1341,7 +1383,8 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
+                                <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="mailing_origin"/>
@@ -1387,7 +1430,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -1397,7 +1440,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -1407,7 +1450,7 @@
                             <page string="Partners" name="partners">
                                 <group>
                                     <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" editable="bottom">
+                                        <tree string="Contract Partner" >
                                             <field name="partner_id"/>
                                             <field name="role"/>
                                         </tree>
@@ -1417,7 +1460,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -1431,7 +1474,7 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
@@ -1441,7 +1484,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -1451,10 +1494,13 @@
                                     </field>
                                 </group>
                             </page>
+                            <page string="Products">
+                                <field name="product_ids"/>
+                            </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -1467,7 +1513,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -1505,6 +1551,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker PAT">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -1523,7 +1572,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="employee"/>
@@ -1592,7 +1641,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -1602,7 +1651,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -1612,7 +1661,7 @@
                             <page string="Partners" name="partners">
                                 <group>
                                     <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" editable="bottom">
+                                        <tree string="Contract Partner" >
                                             <field name="partner_id"/>
                                             <field name="role"/>
                                         </tree>
@@ -1622,7 +1671,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -1636,17 +1685,19 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
                                     </field>
                                 </group>
                             </page>
+
+
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -1656,10 +1707,13 @@
                                     </field>
                                 </group>
                             </page>
+                            <page string="Products">
+                                <field name="product_ids"/>
+                            </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -1672,7 +1726,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -1710,13 +1764,16 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Previdência">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
                                 <field name="name"/>
                                 <field name="account_id"/>
-                                <field name="close_date"/>
-                                <field name="forecast_category_name"/>
+                                <field name="close_date" required='1'/>
+                                <field name="forecast_category_name" required='1'/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
                                 <field name="campaigns_id"/>
@@ -1730,7 +1787,8 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name" required='1'/> -->
+                                <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="employee"/>
@@ -1791,7 +1849,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -1801,7 +1859,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -1811,7 +1869,7 @@
                             <page string="Partners" name="partners">
                                 <group>
                                     <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" editable="bottom">
+                                        <tree string="Contract Partner" >
                                             <field name="partner_id"/>
                                             <field name="role"/>
                                         </tree>
@@ -1821,7 +1879,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -1835,7 +1893,7 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
@@ -1845,7 +1903,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -1855,10 +1913,13 @@
                                     </field>
                                 </group>
                             </page>
+                            <page string="Products">
+                                <field name="product_ids"/>
+                            </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -1871,7 +1932,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -1909,6 +1970,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Opportunity Layout">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -1939,7 +2003,7 @@
                                 <field name="loss_reason"/>
                                 <field name="lost_comment"/>
                                 <field name="owner_id"/>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="probability"/>
                                 <field name="amount"/>
                             </group>
@@ -1962,7 +2026,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -1972,7 +2036,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -1982,7 +2046,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -1998,7 +2062,7 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
@@ -2008,7 +2072,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -2021,7 +2085,7 @@
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -2034,7 +2098,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -2076,6 +2140,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Saúde e Odonto">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -2091,8 +2158,9 @@
                                 <field name="life"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="amount"/>
+                                <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="employee"/>
@@ -2131,7 +2199,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -2141,7 +2209,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -2151,7 +2219,7 @@
                             <page string="Partners" name="partners">
                                 <group>
                                     <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" editable="bottom">
+                                        <tree string="Contract Partner" >
                                             <field name="partner_id"/>
                                             <field name="role"/>
                                         </tree>
@@ -2161,7 +2229,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -2175,7 +2243,7 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
@@ -2185,7 +2253,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -2198,7 +2266,7 @@
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -2211,7 +2279,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -2249,6 +2317,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Saúde e Odonto PF">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -2262,7 +2333,7 @@
                                 <field name="life_contract"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="benefits"/>
                                 <field name="amount"/>
 <!--                                <field name="employee"/>-->
@@ -2296,7 +2367,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -2306,7 +2377,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -2316,7 +2387,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -2330,7 +2401,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -2343,7 +2414,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -2383,13 +2454,16 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Transporte">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
                                 <field name="name"/>
                                 <field name="account_id"/>
-                                <field name="close_date"/>
-                                <field name="forecast_category_name"/>
+                                <field name="close_date" required='1'/>
+                                <field name="forecast_category_name" required='1'/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
                                 <field name="campaigns_id"/>
@@ -2401,7 +2475,8 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name" required='1'/> -->
+                                <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="employee"/>
@@ -2470,7 +2545,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -2480,7 +2555,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -2490,7 +2565,7 @@
                             <page string="Partners" name="partners">
                                 <group>
                                     <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" editable="bottom">
+                                        <tree string="Contract Partner" >
                                             <field name="partner_id"/>
                                             <field name="role"/>
                                         </tree>
@@ -2500,7 +2575,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -2514,7 +2589,7 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
@@ -2524,7 +2599,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -2537,7 +2612,7 @@
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -2550,7 +2625,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -2590,6 +2665,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Viagem">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -2608,7 +2686,8 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
+                                <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <!--                                <field name="employee"/>-->
@@ -2660,7 +2739,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -2670,7 +2749,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -2680,7 +2759,7 @@
                             <page string="Partners" name="partners">
                                 <group>
                                     <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" editable="bottom">
+                                        <tree string="Contract Partner" >
                                             <field name="partner_id"/>
                                             <field name="role"/>
                                         </tree>
@@ -2690,7 +2769,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -2704,7 +2783,7 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
@@ -2714,7 +2793,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -2724,10 +2803,13 @@
                                     </field>
                                 </group>
                             </page>
+                            <page string="Products">
+                                <field name="product_ids"/>
+                            </page>
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -2740,7 +2822,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>
@@ -2780,13 +2862,16 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Vida">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
                                 <field name="name"/>
                                 <field name="account_id"/>
-                                <field name="close_date"/>
-                                <field name="forecast_category_name"/>
+                                <field name="close_date" required='1'/>
+                                <field name="forecast_category_name" required='1'/>
                                 <field name="contract_id"/>
                                 <field name="probability"/>
                                 <field name="main_competitors"/>
@@ -2799,7 +2884,8 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name" required='1'/> -->
+                                <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="employee"/>
@@ -2862,7 +2948,7 @@
                             <page string="Contact Roles" name="contact_roles">
                                 <group>
                                     <field name="contact_role_lines">
-                                        <tree string="Contact Roles" editable="bottom">
+                                        <tree string="Contact Roles" >
                                             <field name="is_primary"/>
                                             <field name="role"/>
                                         </tree>
@@ -2872,7 +2958,7 @@
                             <page string="Opportunity Team" name="opportunity_team">
                                 <group>
                                     <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" editable="bottom">
+                                        <tree string="Opportunity Team" >
                                             <field name="id"/>
                                             <field name="team_role"/>
                                         </tree>
@@ -2882,7 +2968,7 @@
                             <page string="Partners" name="partners">
                                 <group>
                                     <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" editable="bottom">
+                                        <tree string="Contract Partner" >
                                             <field name="partner_id"/>
                                             <field name="role"/>
                                         </tree>
@@ -2892,7 +2978,7 @@
                             <page string="Quotes" name="quotes">
                                 <!--                                <group>-->
                                 <field name="quote_lines">
-                                    <tree string="Quotes" editable="bottom">
+                                    <tree string="Quotes" >
                                         <field name="id"/>
                                         <field name="Name" stye="width:100px;"/>
                                         <field name="Quotation_Reason"/>
@@ -2906,7 +2992,7 @@
                             <page string="Competitors" name="competitors">
                                 <group>
                                     <field name="competitor_lines">
-                                        <tree string="Competitor" editable="bottom">
+                                        <tree string="Competitor" >
                                             <field name="id"/>
                                             <field name="competitor_name"/>
                                         </tree>
@@ -2916,7 +3002,7 @@
                             <page string="Notes / Attachments" name="notes_attachments">
                                 <group>
                                     <field name="attachment_lines">
-                                        <tree string="Attachment" editable="bottom">
+                                        <tree string="Attachment" >
                                             <field name="id"/>
                                             <field name="name"/>
                                             <field name="type"/>
@@ -2929,7 +3015,7 @@
                             <page string="Produtos da Oportunidade" name="opportunity_products">
                                 <group>
                                     <field name="product_lines">
-                                        <tree string="Opportunity Product" editable="bottom">
+                                        <tree string="Opportunity Product" >
                                             <field name="name"/>
                                             <field name="carrier"/>
                                             <field name="product"/>
@@ -2942,7 +3028,7 @@
                             <page string="Cases" name="cases">
                                 <group>
                                     <field name="case_lines">
-                                        <tree string="Cases" editable="bottom">
+                                        <tree string="Cases" >
                                             <field name="CaseNumber"/>
                                             <field name="Subject"/>
                                             <field name="CreatedDate"/>

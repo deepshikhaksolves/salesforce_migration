@@ -11,9 +11,9 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="holder_quantity__c"/>
-                                <field name="dependent_quantity__c"/>
-                                <field name="others_quantity__c"/>
+                                <field name="holder_quantity__c" required="1"/>
+                                <field name="dependent_quantity__c" required="1"/>
+                                <field name="others_quantity__c" required="1"/>
                                 <field name="create_uid"/>
                             </group>
                             <group>

@@ -30,7 +30,7 @@ class SalesforceLead(models.Model):
     Business_Name__c = fields.Char('Business Name', size=255,track_visibility='onchange')
     CNAE__c = fields.Many2one('model_cnae', string='NINE',track_visibility='onchange')
     CNPJ__c = fields.Char('CNPJ', size=18,track_visibility='onchange')
-    Company = fields.Char('Company', size=255, required=True,track_visibility='onchange')
+    Company = fields.Char('Company', size=255, track_visibility='onchange')
 
     Company_Segmentation__c = fields.Selection(
         [('Small', 'Recipe <40k'), ('Small_Large', 'Revenue between 40k and 100k'),
@@ -123,4 +123,4 @@ class SalesforceLead(models.Model):
 
     attachment_ids = fields.One2many('ir.attachment', 'lead_id', string='Attachment IDS')
 
-    benifit_ids = fields.One2many('model_benfit_politic', 'lead_id', string='Benifit IDS')
+    benifit_ids = fields.One2many('model_benfit_politic', 'lead_id', string='Benefit Politic')

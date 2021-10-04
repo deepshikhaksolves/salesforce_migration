@@ -10,7 +10,7 @@
                         <group>
                             <field name="Broker_Type"/>
                             <field name="Account"/>
-                            <field name="Name"/>
+                            <field name="Name" required='1'/>
                             <field name="Logo"/>
                         </group>
                         <group>

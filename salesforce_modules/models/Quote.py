@@ -140,6 +140,10 @@ class ModelQuote(models.Model):
     last_quote = fields.Boolean(string="Last quote")
     attachment_ids = fields.One2many('ir.attachment', 'quote_id', string="Attachment IDS")
 
+    opportunity_ids = fields.One2many('crm.lead','opportunity_quote_id',string='Opportunity')
+    case_ids = fields.One2many('model_case','case_quote_id', string='Case')
+    quote_product_ids = fields.One2many('model_quote_products', 'quote_product_id', string='Quotation Product')
+
 
 
     @api.model
@@ -150,4 +154,13 @@ class ModelQuote(models.Model):
                 vals['first_quote'] = True
         record = super(ModelQuote, self).create(vals)
         return record
+
+
+
+
+
+
+
+
+
 

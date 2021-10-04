@@ -10,8 +10,8 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="Name"/>
-                                <field name="Value"/>
+                                <field name="Name" required='1'/>
+                                <field name="Value" required='1'/>
                                 <field name="appCode"/>
                                 <field name="create_uid" string='Created By'/>
                             </group>

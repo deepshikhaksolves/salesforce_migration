@@ -13,11 +13,13 @@
                                 <field name="Name" />
                                 <field name="Abbreviation__c" />
                                 <field name="create_uid" />
+                                <field name="create_date"/>
                             </group>
                             <group>
                                 <field name="Geographic_Scope_ID__c"/>
                                 <field name="Geographic_Scope_tnk__c"/>
                                 <field name="write_uid" string='Last Modified By'/>
+                                <field name="write_date" string='Last Modified On'/>
                             </group>
                         </group>
                     </sheet>

@@ -12,7 +12,7 @@
                             <group>
                                 <field name="name"/>
                                 <field name="model"/>
-                                <field name="Brand__c"/>
+                                <field name="Brand__c" required='1'/>
                                 <field name="create_uid"/>
                             </group>
                             <group>

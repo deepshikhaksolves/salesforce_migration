@@ -21,6 +21,13 @@
                         </group>
                         <notebook>
                             <page string="Contract Services">
+                                <field name="contract_service_ids">
+                                    <tree>
+                                        <field name="Service_Start"/>
+                                        <field name="Service_End"/>
+                                        <field name="accountable"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>

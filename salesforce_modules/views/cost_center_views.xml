@@ -11,8 +11,8 @@
                         <group>
                             <group>
                                 <field name="cost_center" />
-                                <field name="beneficiary_id" />
-                                <field name="beneficiary_card_id"/>
+                                <field name="beneficiary_id" string='Beneficiary'/>
+                                <!-- <field name="beneficiary_card_id"/> -->
                                 <field name="home_term"/>
                                 <field name="end_term"/>
                                 <field name="status"/>

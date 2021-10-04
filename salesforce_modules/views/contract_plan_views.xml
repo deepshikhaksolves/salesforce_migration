@@ -10,7 +10,7 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="Name"/>
+                                <field name="Name" required="1"/>
                                 <field name="Product_Family"/>
                                 <field name="Product_id"/>
                                 <field name="Coverage"/>
@@ -20,7 +20,7 @@
                                 <field name="End_Date"/>
                                 <field name="upgrade_condition"/>
                                 <field name="downgrade_condition"/>
-                                <field name="beneficiary_type"/>
+                                <field name="beneficiary_type" required="1"/>
                             </group>
                         </group>
                         <notebook>

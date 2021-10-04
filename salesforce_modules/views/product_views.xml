@@ -12,7 +12,7 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="ProductCode"/>
+                                <field name="ProductCode" required="1"/>
                                 <field name="name" string='Product Name'/>
                                 <field name="create_uid"/>
                             </group>
@@ -25,15 +25,10 @@
                         <notebook>
                             <page string="Standard Price">
                                 <group>
-                                    
+
                                 </group>
                             </page>
                             <page string="Price Books">
-                                <group>
-                                    
-                                </group>
-                            </page>
-                            <page string="Entitlement Templates">
                                 <group>
                                     
                                 </group>
@@ -107,37 +102,37 @@
                         <group>
                             <group>
                                 <field name="carrier__c"/>
-                                <field name="ProductCode"/>
+                                <field name="ProductCode" required="1"/>
                                 <field name="name" string='Product Name'/>
-                                <field name="Segmentation__c"/>
+                                <field name="Segmentation__c" required="1"/>
                                 <field name="ans_code_no_copay__c"/>
                                 <field name="ans_code_with_copay__c"/>
-                                <field name="Minimum_Lives__c"/>
-                                <field name="maximum_lives__c"/>
+                                <field name="Minimum_Lives__c" required="1"/>
+                                <field name="maximum_lives__c" required="1"/>
                                 <field name="integration_product_code__c"/>
-                                <field name="Geographic_Scope__c"/>
+                                <field name="Geographic_Scope__c" required="1"/>
                                 <field name="Geographic_Scope_tnk__c"/>
                             </group>
                             <group>
-                                <field name="Family"/>
+                                <field name="Family" required="1"/>
                                 <field name="Internal_Code__c"/>
-                                <field name="Description"/>
-                                <field name="Charge_Mode__c"/>
-                                <field name="Product_Classification__c"/>
+                                <field name="Description" required="1"/>
+                                <field name="Charge_Mode__c" required="1"/>
+                                <field name="Product_Classification__c" required="1"/>
                                 <field name="accommodation__c"/>
                                 <field name="upgrade__c"/>
                                 <field name="Downgrade__c"/>
-                                <field name="priority__c"/>
+                                <field name="priority__c" required="1"/>
                                 <field name="IsActive"/>
                             </group>
                         </group>
+                        <group>
+                            <group string="System Information">
+                                <field name="create_uid"/>
+                                <field name="write_uid" string="Last Modified By"/>
+                            </group>
+                        </group>
                         <notebook>
-                            <page string="System Information">
-                                <group>
-                                    <field name="create_uid"/>
-                                    <field name="write_uid" string="Last Modified By"/>
-                                </group>
-                            </page>
                             <page string="Product Regions">
                                 <field name="product_region_ids">
                                     <tree>
@@ -161,11 +156,6 @@
                                         <field name="accredited_network__c"/>
                                     </tree>
                                 </field>
-                            </page>
-                            <page string="Standard Price">
-                                <group>
-                                    
-                                </group>
                             </page>
                             <page string="Product Prices">
                                 <field name="product_price_ids">
@@ -251,22 +241,13 @@
                                 <field name="IsActive"/>
                             </group>
                         </group>
+                        <group>
+                            <group string="System Information">
+                                <field name="create_uid"/>
+                                <field name="write_uid" string="Last Modified By"/>
+                            </group>
+                        </group>
                         <notebook>
-                            <page string="System Information">
-                                <group>
-                                    <group>
-                                        <field name="create_uid" string="Created By"/>
-                                    </group>
-                                    <group>
-                                        <field name="write_uid" string="Last Modified By"/>
-                                    </group>
-                                </group>
-                            </page>
-                            <page string="Standard Price">
-                                <group>
-                                    
-                                </group>
-                            </page>
                             <page string="Price Books">
                                 <group>
                                     

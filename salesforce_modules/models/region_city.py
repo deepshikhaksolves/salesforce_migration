@@ -13,4 +13,4 @@ class RegionCity(models.Model):
     # LastModifiedById already in odoo
     priority = fields.Float('Priority', digits=(1, 0),track_visibility='onchange')
     region = fields.Many2one('model_region', string='Region',track_visibility='onchange')
-    state__c = fields.Char('State',track_visibility='onchange')
+    state__c = fields.Many2one('res.country.state', string='State', track_visibility='onchange')

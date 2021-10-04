@@ -38,6 +38,8 @@ class QuoteProducts(models.Model):
         ('age group', 'Age group')
     ], string="Cost Type",track_visibility='onchange')
     Value = fields.Float(string="Value",track_visibility='onchange')
+
+    quote_product_id = fields.Many2one('model_quote', string='Quote Product')
     # LastModifiedById already in odoo
 
 

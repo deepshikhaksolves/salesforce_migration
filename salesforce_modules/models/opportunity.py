@@ -240,7 +240,7 @@ class SalesforceOpprtunity(models.Model):
     tag = fields.Char('Placa',size=7,track_visibility='onchange')
     places = fields.Text('Places',size=32768,track_visibility='onchange')
     has_dps = fields.Boolean('Possui DPS',track_visibility='onchange')
-    main_competitors = fields.Char('Principais Concorrentes',size=100,track_visibility='onchange')
+    main_competitors = fields.Char(string='Principais Concorrentes',size=100,track_visibility='onchange')
     is_private = fields.Boolean('Private',track_visibility='onchange')
     probability = fields.Float('Probability (%)',digits=(3,2),track_visibility='onchange')
     prosthesis = fields.Char('Prosthesis',size=255,track_visibility='onchange')
@@ -261,7 +261,7 @@ class SalesforceOpprtunity(models.Model):
     retired = fields.Integer('Retired',size=6,track_visibility='onchange')
     returned_reason = fields.Char('Returned Reason',size=255,track_visibility='onchange')
     revenue = fields.Float('Revenue',track_visibility='onchange')
-    revenue_politic = fields.Float('Revenue Policy',digits=(16,2),track_visibility='onchange')
+    revenue_politic = fields.Float('Revenue Politic',digits=(16,2),track_visibility='onchange')
     roi_analysis_completed = fields.Boolean('ROI Analysis Completed',track_visibility='onchange')
     service_supplier = fields.Integer('Service Supplier',size=6,track_visibility='onchange')
     simple_test = fields.Char('Simple Test',size=255,track_visibility='onchange')
@@ -340,3 +340,12 @@ class SalesforceOpprtunity(models.Model):
     attachment_lines = fields.One2many('ir.attachment','opportunity_id',string="Attachment Lines")
     product_lines = fields.One2many('crm.lead.product','opportunity_id',string="Product Lines")
     case_lines = fields.One2many('model_case','opportunity_id',string="Case Lines")
+    opportunity_quote_id = fields.Many2one('model_quote', string='Opportunity Quote')
+    product_ids = fields.One2many('product.product', 'opportunity_id', string='Product Id')
+
+
+class Product(models.Model):
+    _inherit = 'product.product'
+    _description = "Salesforce Product"
+
+    opportunity_id = fields.Many2one('crm.lead', string='Opportunity Id')
