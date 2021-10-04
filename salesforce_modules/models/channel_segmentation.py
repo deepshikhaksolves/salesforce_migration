@@ -10,7 +10,7 @@ class ChannelSegmentation(models.Model):
     Add_Approvers__c = fields.Many2one('res.users', string='Additional Approvers',track_visibility='onchange')
     Internal_Channel__c = fields.Boolean('Internal Channel',track_visibility='onchange')
     Parent_Channel__c = fields.Many2one('channel_segmentation',string='Parent Channel',track_visibility='onchange')
-    Cost_Center__c = fields.Many2one('model_cost_center',string='Cost center',track_visibility='onchange')
+    Cost_Center__c = fields.Many2one('model_cost_center',string='Cost Center',track_visibility='onchange')
     code__c = fields.Char('Code', size=20,track_visibility='onchange')
     # CreatedById         already in odoo
     Manager__c = fields.Many2one('res.users', string='Manager',track_visibility='onchange')
