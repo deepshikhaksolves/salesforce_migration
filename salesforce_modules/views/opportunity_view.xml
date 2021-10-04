@@ -6,7 +6,10 @@
             <field name="name">Opportunity Personal Accident Broker View Layout</field>
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
-                <form string="Broker Saúde e Odonto PF">
+                <form string="Broker Personal Accident Broker">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -28,7 +31,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name" required="1"/>
+                                <!-- <field name="stage_name" required="1"/> -->
                                 <field name="lead_source"/>
                                 <field name="sons_capital_limit"/>
                                 <field name="mailing_origin"/>
@@ -203,6 +206,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Automóvel">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -220,7 +226,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="mailing_origin"/>
@@ -400,6 +406,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Checkup Vaccine">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -418,7 +427,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
@@ -586,6 +595,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Consultoria">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -603,7 +615,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
@@ -770,6 +782,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Fee">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -786,7 +801,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
@@ -952,6 +967,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Frota">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -969,7 +987,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name" required='1'/>
+                                <!-- <field name="stage_name" required='1'/> -->
                                 <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
@@ -1138,6 +1156,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Medicamento">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -1156,7 +1177,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name" required='1'/>
+                                <!-- <field name="stage_name" required='1'/> -->
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="employee"/>
@@ -1341,6 +1362,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Occupational Health">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -1359,7 +1383,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
@@ -1527,6 +1551,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker PAT">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -1545,7 +1572,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
                                 <field name="employee"/>
@@ -1737,6 +1764,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Previdência">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -1757,7 +1787,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name" required='1'/>
+                                <!-- <field name="stage_name" required='1'/> -->
                                 <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
@@ -1940,6 +1970,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Opportunity Layout">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -1970,7 +2003,7 @@
                                 <field name="loss_reason"/>
                                 <field name="lost_comment"/>
                                 <field name="owner_id"/>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="probability"/>
                                 <field name="amount"/>
                             </group>
@@ -2107,6 +2140,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Saúde e Odonto">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -2122,7 +2158,7 @@
                                 <field name="life"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="amount"/>
                                 <field name="channel_id"/>
                                 <field name="lead_source"/>
@@ -2281,6 +2317,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Saúde e Odonto PF">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -2294,7 +2333,7 @@
                                 <field name="life_contract"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="benefits"/>
                                 <field name="amount"/>
 <!--                                <field name="employee"/>-->
@@ -2415,6 +2454,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Transporte">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -2433,7 +2475,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name" required='1'/>
+                                <!-- <field name="stage_name" required='1'/> -->
                                 <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
@@ -2623,6 +2665,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Viagem">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -2641,7 +2686,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name"/>
+                                <!-- <field name="stage_name"/> -->
                                 <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
@@ -2817,6 +2862,9 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Broker Vida">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -2836,7 +2884,7 @@
                                 <field name="partnership"/>
                             </group>
                             <group>
-                                <field name="stage_name" required='1'/>
+                                <!-- <field name="stage_name" required='1'/> -->
                                 <field name="channel_id"/>
                                 <field name="lead_source"/>
                                 <field name="benefits"/>
