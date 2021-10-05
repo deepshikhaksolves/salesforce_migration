@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="form view assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/business_rule_views/static/src/buisness_rule_view.js"/>
+        </xpath>
+    </template>
+</odoo>

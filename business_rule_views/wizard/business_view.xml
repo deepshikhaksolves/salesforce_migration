@@ -1,0 +1,30 @@
+<odoo>
+    <record id="buisness_rule_view_form" model="ir.ui.view">
+        <field name="name">buisness_rule_view_form</field>
+        <field name="model">buisness.rule.view</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+
+                            <field name="buisness_rule_view_get" widget="radio">
+                            </field>
+
+                    </group>
+                </sheet>
+                <footer>
+                <button name="open_business_view" type="object" string="Next" class="oe_highlight"/>
+                <button string="Discard" class="btn btn-secondary" special="cancel" />
+          </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_buisness_rule_view" model="ir.actions.act_window">
+        <field name="name">Buisness Rule View</field>
+        <field name="res_model">buisness.rule.view</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="business_rule_views.buisness_rule_view_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>
