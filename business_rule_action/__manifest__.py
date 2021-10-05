@@ -13,12 +13,14 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','base_setup'],
 
     # always loaded
     'data': [
+        # 'data/business_rule_model_data.xml',
         'security/ir.model.access.csv',
         'views/configuration_to_open_view.xml',
+        'views/res_config_settings_views.xml',
         'views/assets.xml',
     ],
 }
