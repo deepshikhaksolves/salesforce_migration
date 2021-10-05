@@ -373,8 +373,8 @@
                                 <field name="Business_Name__c"/>
                                 <field name="Financial_Group__c"/>
                                 <field name="Industry"/>
-                                <field name="CNAE__c"/>
-                                <field name="name" string="Name"/>
+                                <field name="CNAE__c" string='CNAE'/>
+                                <field name="name" string="Full Name"/>
                                 <field name="Title"/>
                                 <field name="phone"/>
                                 <field name="extension_number__c"/>
