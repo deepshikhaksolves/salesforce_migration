@@ -41,7 +41,8 @@ class BuisnessViewWizard(models.TransientModel):
         ctx = dict(self.env.context)
         ctx.update({
             'business_rule_domain': safe_eval(business_domain) if business_domain else safe_eval('False'),
-            'business_rule_view':self.buisness_rule_view_get
+            'business_rule_view':self.buisness_rule_view_get,
+            'business_context_value': rec.context
         })
         action={
             'res_model':self.env.context.get('active_model'),
