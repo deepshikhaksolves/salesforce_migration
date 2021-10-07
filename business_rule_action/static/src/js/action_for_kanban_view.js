@@ -15,7 +15,7 @@ kanban.include({
         }
         var editMode = this.$el.hasClass('oe_kanban_global_click_edit');
 
-        if (this.getParent() && this.getParent().business_rule_action) {
+        if (this.getParent() && this.getParent().business_rule_action.lenght>1) {
             if(this.getParent() && this.getParent().getParent() && this.getParent().getParent().model && typeof(this.getParent().getParent().model)!=="string") {
                 var record = this.getParent().getParent().model.get(this.db_id, {raw: true});
                 var match = this.getParent().business_rule_action.filter((x) => { return x['res_ids'].includes(record.res_id)});

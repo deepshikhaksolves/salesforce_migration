@@ -26,20 +26,4 @@
         <field name="target">new</field>
     </record>
 
-    <record id="action_customer_details_report" model="ir.actions.act_window">
-        <field name="name">Allowed Models</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">business.allowed.models</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-    <menuitem id="business_rule_get_views"
-      parent="business_rule_action.menu_business_rules"
-      name=" Configuration"
-      />
-
-     <menuitem id="business_rule_get_models"
-      parent="business_rule_get_views"
-      name="Allowed Models" sequence="1"
-      action="action_customer_details_report"/>
 </odoo>

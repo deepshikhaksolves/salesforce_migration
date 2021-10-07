@@ -23,12 +23,18 @@ class salesforce_open_view(models.Model):
         rec_set = self.env['config.open.view'].search([('ir_model.model', '=', model_name)])
 
         data = []
+        if rec_set:
+            data.append({
+                'model': rec_set.ir_model.model,
+                'show_popup': rec_set.show_popup,
+                'res_ids': []
+            })
         sorted_data = rec_set.configuration_ids.sorted(key=lambda conf: conf.sequence)
         for rec in sorted_data:
             data_dict = {
                 'model': rec_set.ir_model.model,
                 'view_id': rec.ir_view.id,
-                'domain': safe_eval(rec.domain),
+                'domain': safe_eval(rec.domain) if rec.domain else safe_eval('False'),
                 'context': safe_eval(rec.context),
                 'res_ids': []
             }

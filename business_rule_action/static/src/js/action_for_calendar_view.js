@@ -20,7 +20,7 @@ calendar.include({
                 method: "get_record_according_to_domain",
                 args: ['', modelName,[id]],
             }).then(function (result) {
-                if(result){
+                if(result.length > 1){
                     var match = result.filter((x) => { return x['res_ids'].includes(id)});
                     if(match && match.length){
                     return self.do_action({
