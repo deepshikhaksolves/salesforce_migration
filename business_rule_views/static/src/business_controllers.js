@@ -1,16 +1,16 @@
-odoo.define('business_rule_views.buisness_rule_view.js', function(require) {
+odoo.define('business_rule_views.business_controllers.js', function(require) {
     'use strict';
 
-    var ListController = require('web.ListController')
+    var KanbanController = require('web.KanbanController');
 
-    ListController.include({
-        _onCreateRecord: function(ev) {
+    KanbanController.include({
+        _onButtonNew: function(ev) {
             // we prevent the event propagation because we don't want this event to
             // trigger a click on the main bus, which would be then caught by the
             // list editable renderer and would unselect the newly created row
             var self = this;
             var super_method = self._super;
-            if ($(ev.currentTarget).hasClass('o_list_button_add')){
+            if ($(ev.currentTarget).hasClass('o-kanban-button-new')){
                 this._rpc({
                 model: 'buisness.rule.view',
                 method: "get_buisness_action",
@@ -34,5 +34,5 @@ odoo.define('business_rule_views.buisness_rule_view.js', function(require) {
             }
         },
     });
-    return ListController
-});
+    return KanbanController
+  });

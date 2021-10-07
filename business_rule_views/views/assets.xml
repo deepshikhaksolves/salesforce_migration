@@ -3,6 +3,8 @@
     <template id="assets_backend" name="form view assets" inherit_id="web.assets_backend">
         <xpath expr="." position="inside">
             <script type="text/javascript" src="/business_rule_views/static/src/buisness_rule_view.js"/>
+            <script type="text/javascript" src="/business_rule_views/static/src/business_rule_save.js"/>
+            <script type="text/javascript" src="/business_rule_views/static/src/business_controllers.js"/>
         </xpath>
     </template>
 </odoo>

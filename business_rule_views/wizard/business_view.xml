@@ -6,16 +6,14 @@
             <form>
                 <sheet>
                     <group>
-
-                            <field name="buisness_rule_view_get" widget="radio">
-                            </field>
-
+                        <field name="buisness_rule_view_get" widget="radio">
+                        </field>
                     </group>
                 </sheet>
                 <footer>
-                <button name="open_business_view" type="object" string="Next" class="oe_highlight"/>
-                <button string="Discard" class="btn btn-secondary" special="cancel" />
-          </footer>
+                    <button name="open_business_view" type="object" string="Next" class="oe_highlight"/>
+                    <button string="Discard" class="btn btn-secondary" special="cancel"/>
+                </footer>
             </form>
         </field>
     </record>
@@ -27,4 +25,21 @@
         <field name="view_id" ref="business_rule_views.buisness_rule_view_form"/>
         <field name="target">new</field>
     </record>
+
+    <record id="action_customer_details_report" model="ir.actions.act_window">
+        <field name="name">Allowed Models</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">business.allowed.models</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="business_rule_get_views"
+      parent="business_rule_action.menu_business_rules"
+      name=" Configuration"
+      />
+
+     <menuitem id="business_rule_get_models"
+      parent="business_rule_get_views"
+      name="Allowed Models" sequence="1"
+      action="action_customer_details_report"/>
 </odoo>
