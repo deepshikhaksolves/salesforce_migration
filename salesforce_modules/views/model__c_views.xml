@@ -4,14 +4,14 @@
         <!-- model form view -->
         <record id="model_view_form" model="ir.ui.view">
             <field name="name">Model View Layout</field>
-            <field name="model">ir.model</field>
+            <field name="model">salesforce.model_c</field>
             <field name="arch" type="xml">
                 <form string="Model View">
                     <sheet>
                         <group>
                             <group>
                                 <field name="name"/>
-                                <field name="model"/>
+                                <!-- <field name="model"/> -->
                                 <field name="Brand__c" required='1'/>
                                 <field name="create_uid"/>
                             </group>
@@ -51,7 +51,7 @@
         <!-- model tree view -->
         <record id="model_view_tree" model="ir.ui.view">
             <field name="name">Model Layout Tree</field>
-            <field name="model">ir.model</field>
+            <field name="model">salesforce.model_c</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="name" />
@@ -67,7 +67,7 @@
         <record id="model_action" model="ir.actions.act_window">
             <field name="name">Model</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">ir.model</field>
+            <field name="res_model">salesforce.model_c</field>
             <field name="view_mode">tree,form</field>
             <field name="view_ids" eval="[(5, 0, 0), 
                 (0, 0, {'view_mode': 'tree', 'view_id': ref('model_view_tree')}),

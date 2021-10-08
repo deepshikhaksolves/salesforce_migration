@@ -3287,5 +3287,124 @@
                 </p>
             </field>
         </record>
+
+        <!-- Health PJ Layout -->
+        <record id="health_pj_layout_form" model="ir.ui.view">
+            <field name="name">Health Layout</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <form string="Health PJ Layout">
+                    <header>
+                        <field name="stage_name" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <!-- <field name="close_date"/> -->
+                                <field name="probability"/>
+                                <field name="owner_id"/>
+                                <field name="reserve"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <notebook>
+                        <page string='Details'>
+                            <group string="Opportunity Details">
+                                <group>
+                                    <field name="name"/>
+                                    <field name="account_id"/>
+                                    <field name="close_date" required='1'/>
+                                    <field name="periodicity_renewal"/>
+                                    <field name="forecast_category_name"/>
+                                    <field name="nominative"/>
+                                    <field name="employee"/>
+                                    <field name="life_contract"/>
+                                    <field name="campaigns_id"/>
+                                    <field name="main_competitors"/>
+                                    <field name="opportunity_event_source"/>
+                                    <field name="motive_of_gain"/>
+                                    <field name="revenue"/>
+                                    <field name="moderator_variable"/>
+                                    <field name="wage_limit_for_coparticipation"/>
+                                    <field name="wage_limit_amount"/>
+                                    <field name="special_condition"/>
+                                </group>
+                                <group>
+                                    <field name="probability"/>
+                                    <field name="channel_id"/>
+                                    <field name="contract_origin"/>
+                                    <field name="mainly_carrier"/>
+                                    <field name="benefits"/>
+                                    <field name="administrator_id"/>
+                                    <field name="revenue_politic"/>
+                                    <field name="payment_mode"/>
+                                    <field name="claim_limit"/>
+                                    <field name="lead_source"/>
+                                    <field name="mailing_origin"/>
+                                    <field name="cancel_information"/>
+                                    <field name="loss_reason"/>
+                                    <!-- <field name="Taxpayer"/> -->
+                                    <field name="contributory_descriptions"/>
+                                </group>
+                            </group>
+                            <group string="System Information">
+                                <group>
+                                    <field name="create_uid"/>
+                                    <field name="reserve"/>
+                                    <field name="workflow_configuration"/>
+                                    <field name="lead_source"/>
+                                    <field name="mailing_origin"/>
+                                </group>
+                                <group>
+                                    <field name='write_uid' string="Last Modified By"/>
+                                    <field name="expected_revenue"/>
+                                    <field name="amount"/>
+                                    <field name="status_change_date"/>
+                                    <field name="campaigns_id"/>
+                                </group>
+                            </group>
+                            <group string='Events Control'>
+
+                            </group>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Health PJ Layout tree view -->
+        <record id="health_pj_layout_tree" model="ir.ui.view">
+            <field name="name">Health PJ Layout Tree</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="account_id"/>
+                    <field name="stage_name"/>
+                    <field name="close_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Health PJ Layout action window -->
+        <record id="health_pj_layout_action" model="ir.actions.act_window">
+            <field name="name">Health PJ Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('health_pj_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('health_pj_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
     </data>
 </odoo>

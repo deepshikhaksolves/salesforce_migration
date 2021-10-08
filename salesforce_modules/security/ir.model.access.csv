@@ -149,3 +149,4 @@ access_company_parameter_c,salesforce_company_parameter_c,model_model_company_pa
 
 access_beneficiary_contract_plan,salesforce_beneficiary_contract_plan,model_beneficiary_contract_plan,base.group_user,1,1,1,1
 
+access_salesforce.model_c,salesforce_salesforce.model_c,model_salesforce_model_c,base.group_user,1,1,1,1

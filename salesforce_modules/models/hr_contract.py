@@ -142,7 +142,7 @@ class HrContract(models.Model):
     fee_model = fields.Selection([
         ('small', 'Small'), ('rebate', 'Rebate')
     ], string='Model')
-    Model = fields.Many2one('ir.model', string='Model')
+    Model = fields.Many2one('salesforce.model_c', string='Model')
     moderator_variable = fields.Selection([
         ('no_moderating_factor', 'No Moderating Factor'), ('coparticipation_reverted_company', 'Reverted to'), ('coparticipation_reverted_to_operator', 'Reverted to Operator'),
     ], string='Moderator Variable')

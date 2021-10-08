@@ -188,7 +188,7 @@ class SalesforceOpprtunity(models.Model):
         ('Small','Small'),
         ('Rebate','Rebate'),
     ],string="Model",track_visibility='onchange')
-    modelo_id = fields.Many2one('ir.model',string="Modelo",track_visibility='onchange')  #model not created yet
+    modelo_id = fields.Many2one('salesforce.model_c',string="Modelo",track_visibility='onchange')  #model not created yet
     moderator_variable_value = fields.Float('Moderator Variable Value',digits=(5,2),track_visibility='onchange')
     motive_of_gain = fields.Selection([
         ('Expertise','Expertise'),
@@ -327,8 +327,8 @@ class SalesforceOpprtunity(models.Model):
     ],string="Wage Limit For Coparticipation",track_visibility='onchange')
     workflow_configuration = fields.Many2one('workflow_configuration', string="Workflow Configuration",track_visibility='onchange')
     campaigns_id = fields.Many2one('model_campaign',string ='Primary Campaign Source',ondelete='cascade',track_visibility='onchange')
-    model_id   = fields.Many2one('ir.model', string='Model ID',track_visibility='onchange')
-    channel_id = fields.Many2one('channel_segmentation', string='Channel Id',track_visibility='onchange')
+    model_id   = fields.Many2one('salesforce.model_c', string='Model ID',track_visibility='onchange')
+    channel_id = fields.Many2one('channel_segmentation', string='Channel Segmentation',track_visibility='onchange')
 
     quotation = fields.Many2one('model_quote', string='Quotation',track_visibility='onchange')
     synced_quote_id = fields.Many2one('model_quote', string='Synced Quote',track_visibility='onchange')
