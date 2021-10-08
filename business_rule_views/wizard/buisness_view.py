@@ -15,7 +15,7 @@ class BuisnessViewWizard(models.TransientModel):
             ls.append((model.ir_view.xml_id, model.ir_view.name))
         return ls
 
-    buisness_rule_view_get = fields.Selection(get_all_views,string='Buisness rule view get')
+    buisness_rule_view_get = fields.Selection(get_all_views,string='Business rule view get')
 
     def get_buisness_action(self,model_name):
         get_models = self.env['config.open.view'].search([('ir_model', '=', model_name)])
@@ -34,6 +34,7 @@ class BuisnessViewWizard(models.TransientModel):
 
     def open_business_view(self):
         record = self.env['config.open.view'].search([('ir_model', '=', self._context.get('active_model'))],limit=1)
+        business_domain=[]
         for rec in record.configuration_ids:
             if rec.ir_view.xml_id == self.buisness_rule_view_get:
                 business_domain = rec.domain
@@ -44,12 +45,15 @@ class BuisnessViewWizard(models.TransientModel):
             'business_rule_view':self.buisness_rule_view_get,
             'business_context_value': rec.context
         })
-        action={
-            'res_model':self.env.context.get('active_model'),
-            'type': "ir.actions.act_window",
-            'views': [[self.env.ref(self.buisness_rule_view_get).id, 'form']],
-            'target': "current",
-            'context': ctx
-        }
+        if self.buisness_rule_view_get:
+            action={
+                'res_model':self.env.context.get('active_model'),
+                'type': "ir.actions.act_window",
+                'views': [[self.env.ref(self.buisness_rule_view_get).id, 'form']],
+                'target': "current",
+                'context': ctx
+            }
+        else:
+            action = {}
         return action
 

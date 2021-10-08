@@ -57,8 +57,8 @@ odoo.define('business_rule_views.business_rule_save.js', function(require) {
         _businesRuleModifiers : function(element,business_domain){
             var evaluated = true;
             const mod = business_domain;
-                var evalContext = this.model._getEvalContext(element);
-                evaluated = new Domain(mod, evalContext).compute(evalContext);
+            var evalContext = this.model._getEvalContext(element);
+            evaluated = new Domain(mod, evalContext).compute(evalContext);
             return evaluated
         },
         });
