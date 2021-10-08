@@ -5,7 +5,7 @@
     <menuitem name="Quote" id="quote_parent_menu" parent='quote_menu_root' action='salesforce_modules.quote_broker_benchmarking_layout_action' sequence='2'/>
     <menuitem name="Quote Products" id="quote_products_parent_menu" parent='quote_menu_root' action='salesforce_modules.quote_product_layout_action' sequence='3'/>
     <menuitem name="Opportunity" id="opportunity_parent_menu" parent='quote_menu_root' action='salesforce_modules.opportunity_pab_action' sequence='5'/>
-    <!-- <menuitem name="Contract" id="contract_parent_menu" parent='quote_menu_root' action = 'hr_contract.action_hr_contract' sequence='6'/> -->
+    <menuitem name="Contract" id="contract_parent_menu" parent='quote_menu_root' action = 'hr_contract.action_hr_contract' sequence='6'/>
     <menuitem name="Quotation" id="quotation_parent_menu" parent='quote_menu_root' action='salesforce_modules.quotation_item_price_action' sequence='7'/>
 
   </data>

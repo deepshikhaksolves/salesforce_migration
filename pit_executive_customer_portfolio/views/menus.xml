@@ -5,9 +5,9 @@
       <!-- <menuitem name="Inicial" id="sf_ecp_inicial_action_menu" parent='salesforce_executive_cp_menu_root' sequence='1'/> -->
       <menuitem name="Accounts" id="sf_ecp_accounts_action_menu" parent='salesforce_executive_cp_menu_root' action='salesforce_modules.account_layout_old_action' sequence='2'/>
 
-      <!-- <menuitem name="Contacts" id="sf_ecp_contacts_action_menu" parent='salesforce_executive_cp_menu_root' action='salesforce_modules.salres_partner_action' sequence='3'/> -->
+      <menuitem name="Contacts" id="sf_ecp_contacts_action_menu" parent='salesforce_executive_cp_menu_root' action='salesforce_modules.salres_partner_action' sequence='3'/>
 
-      <!-- <menuitem name="Contracts" id="sf_ecp_contracts_action_menu" parent='salesforce_executive_cp_menu_root' action='hr_contract.action_hr_contract' sequence='4'/> -->
+      <menuitem name="Contracts" id="sf_ecp_contracts_action_menu" parent='salesforce_executive_cp_menu_root' action='hr_contract.action_hr_contract' sequence='4'/>
 
       <menuitem name="Cases" id="sf_ecp_cases_action_menu" parent='salesforce_executive_cp_menu_root' action='salesforce_modules.case_risk_management_action' sequence='5'/>
 

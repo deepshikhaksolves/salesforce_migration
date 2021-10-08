@@ -46,7 +46,7 @@ class BenefitPolitic(models.Model):
         ('Vaccine', 'Vaccine'),
         ('I_protected', 'I Protected'),
         ('Fee', 'Fee')
-    ], string="Benefit", track_visibility='onchange', required=True)
+    ], string="Benefit", track_visibility='onchange')
     Brokerage_Transfer = fields.Boolean(string="Brokerage Transfer", track_visibility='onchange')
     Capital = fields.Selection([
         ('Uniform', 'Uniform'),

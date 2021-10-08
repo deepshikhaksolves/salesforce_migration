@@ -162,6 +162,8 @@
                                            options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
                                 </div>
 
+                                <field name="OwnerId"/>
+
                             </group>
                         </group>
                         <group string="System Information">
@@ -170,11 +172,11 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Data Integration Rules">
+                            <!-- <page string="Data Integration Rules">
                                 <group>
 
                                 </group>
-                            </page>
+                            </page> -->
                             <!-- <page string="Notes">
                                 <field name="attachment_ids">
                                     <tree string="Attachment" editable="bottom">

@@ -4,7 +4,7 @@
     <menuitem name="PIT Executive: Relationship" web_icon="salesforce_modules,static/description/salesforce_migration_logo.png" id="salesforce_executive_relationship_menu_root" />
       <!-- <menuitem name="Inicial" id="sf_inicial_action_menu" parent='salesforce_executive_relationship_menu_root' sequence='1'/> -->
 
-      <!-- <menuitem name="Contracts" id="sf_er_contracts_action_menu" parent='salesforce_executive_relationship_menu_root' action='hr_contract.action_hr_contract' sequence='2'/> -->
+      <menuitem name="Contracts" id="sf_er_contracts_action_menu" parent='salesforce_executive_relationship_menu_root' action='hr_contract.action_hr_contract' sequence='2'/>
 
       <menuitem name="Cases" id="sf_er_cases_action_menu" parent='salesforce_executive_relationship_menu_root' action='salesforce_modules.case_risk_management_action' sequence='3'/>
 

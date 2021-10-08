@@ -17,16 +17,24 @@
                                 <field name="Competitor"/>
                                 <field name="Performing_Index"/>
                                 <field name="How_c"/>
+                                <field name="Benefits" required='1'/>
+                                <field name="Effective_time_at_current_carrier"/>
+                                <field name="Moderator_Variable_Value"/>
+                                <field name="Contributory"/>
+                                <field name="Contributory_Value"/>
+                                <field name="has_Checkup"/>
+                                <field name="Account_id"/>
+                                <field name="Lead_id"/>
                             </group>
                             <group>
-                                <field name="Brokerage_Transfer"/>
+                                <!-- <field name="Brokerage_Transfer"/> -->
                                 <field name="Use_Product"/>
                                 <field name="Offer"/>
                                 <field name="Life"/>
                                 <field name="Monthly_Bill"/>
                                 <field name="Average_invoice"/>
                                 <field name="Comission"/>
-                                <field name="Revenue"/>
+                                <!-- <field name="Revenue"/> -->
                                 <field name="OwnerId"/>
                             </group>
                         </group>
@@ -103,7 +111,7 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="Benefits"/>
+                                <field name="Benefits" required='1'/>
                                 <field name="carrier_2_id"/>
                                 <field name="Effective_time_at_current_carrier"/>
                                 <field name="Contract_End"/>
@@ -194,7 +202,7 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="Benefits"/>
+                                <field name="Benefits" required='1'/>
                                 <field name="carrier_2_id"/>
                                 <field name="Effective_time_at_current_carrier"/>
                                 <field name="Contract_End"/>
@@ -285,7 +293,7 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="Benefits"/>
+                                <field name="Benefits" required='1'/>
                                 <field name="carrier_2_id"/>
                                 <field name="Effective_time_at_current_carrier"/>
                                 <field name="Contract_End"/>
@@ -378,7 +386,7 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="Benefits"/>
+                                <field name="Benefits" required='1'/>
                                 <field name="carrier_2_id"/>
                                 <field name="Effective_time_at_current_carrier"/>
                                 <field name="Contract_End"/>
@@ -465,7 +473,7 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="Benefits"/>
+                                <field name="Benefits" required='1'/>
                                 <field name="carrier_2_id"/>
                                 <field name="Effective_time_at_current_carrier"/>
                                 <field name="Contract_End"/>
@@ -558,7 +566,7 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="Benefits"/>
+                                <field name="Benefits" required='1'/>
                                 <field name="carrier_2_id"/>
                                 <field name="Effective_time_at_current_carrier"/>
                                 <field name="Contract_End"/>
@@ -668,7 +676,7 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="Benefits"/>
+                                <field name="Benefits" required='1'/>
                                 <field name="carrier_2_id"/>
                                 <field name="Effective_time_at_current_carrier"/>
                                 <field name="Contract_End"/>
@@ -757,7 +765,7 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="Benefits"/>
+                                <field name="Benefits" required='1'/>
                                 <field name="carrier_2_id"/>
                                 <field name="Effective_time_at_current_carrier"/>
                                 <field name="Contract_End"/>
@@ -858,7 +866,7 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="Benefits"/>
+                                <field name="Benefits" required='1'/>
                                 <field name="carrier_2_id"/>
                                 <field name="Contract_End"/>
                                 <field name="Contract_Type"/>
@@ -973,7 +981,7 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="Benefits"/>
+                                <field name="Benefits" required='1'/>
                                 <field name="carrier_2_id"/>
                                 <field name="Effective_time_at_current_carrier"/>
                                 <field name="Contract_End"/>
@@ -1085,7 +1093,7 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="Benefits"/>
+                                <field name="Benefits" required='1'/>
                                 <field name="carrier_2_id"/>
                                 <field name="Effective_time_at_current_carrier"/>
                                 <field name="Contract_End"/>
@@ -1186,7 +1194,7 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="Benefits"/>
+                                <field name="Benefits" required='1'/>
                                 <field name="carrier_2_id"/>
                                 <field name="Effective_time_at_current_carrier"/>
                                 <field name="Contract_End"/>
@@ -1278,7 +1286,7 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="Benefits"/>
+                                <field name="Benefits" required='1'/>
                                 <field name="carrier_2_id"/>
                                 <field name="Effective_time_at_current_carrier"/>
                                 <field name="Contract_End"/>

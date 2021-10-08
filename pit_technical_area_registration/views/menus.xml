@@ -7,7 +7,7 @@
 
       <menuitem name="Products family" id="sf_tar_product_family_action_menu" parent='salesforce_tar_menu_root' action='salesforce_modules.product_family_action' sequence='2'/>
 
-      <!-- <menuitem name="Price Table" id="sf_tar_price_table_action_menu" parent='salesforce_tar_menu_root' action='salesforce_modules.study_configuration_price_table_action' sequence='3'/> -->
+      <menuitem name="Price Table" id="sf_tar_price_table_action_menu" parent='salesforce_tar_menu_root' action='salesforce_modules.study_configuration_price_table_action' sequence='3'/>
       
       <menuitem name="Products Price" id="sf_tar_product_price_action_menu" parent='salesforce_tar_menu_root' action='salesforce_modules.product_age_group_action' sequence='4'/>
 
@@ -21,7 +21,7 @@
 
       <menuitem name="Accommodation" id="sf_tar_accommodation_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.accommodation_layout_action" sequence='9'/>
 
-      <!-- <menuitem name="Carrier Type" id="sf_tar_carrier_type_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.carrier_type_c_action" sequence='10'/> -->
+      <menuitem name="Carrier Type" id="sf_tar_carrier_type_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.carrier_type_c_action" sequence='10'/>
 
       <menuitem name="Regions" id="sf_tar_regions_action_menu" parent='salesforce_tar_menu_root' action="salesforce_modules.region_layout_action" sequence='11'/>
 
@@ -35,7 +35,7 @@
 
       <menuitem name="Consult Reserve" id="sf_tar_consult_reserve_action_menu" parent='salesforce_tar_menu_root' sequence='16'/>
 
-        <!-- <menuitem name="Contract" id="sf_cr_contract_action_menu" parent='sf_tar_consult_reserve_action_menu' action="" sequence='1'/> -->
+        <menuitem name="Contract" id="sf_cr_contract_action_menu" parent='sf_tar_consult_reserve_action_menu' action="" sequence='1'/>
         <menuitem name="Quote" id="sf_cr_quote_action_menu" parent='sf_tar_consult_reserve_action_menu' action="salesforce_modules.quote_layout_action" sequence='2'/>
         <menuitem name="Opportunity" id="sf_cr_opportunity_action_menu" parent='sf_tar_consult_reserve_action_menu' action="salesforce_modules.opportunity_pab_action" sequence='3'/>
         <menuitem name="Market Reserve" id="sf_cr_market_reserve_action_menu" parent='sf_tar_consult_reserve_action_menu' action="salesforce_modules.market_reserve_c_action" sequence='4'/>
