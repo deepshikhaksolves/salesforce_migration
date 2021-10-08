@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <odoo>
+    <data>
+       <record id="politic_bill_form" model="ir.ui.view">
+            <field name="name">Layout de Política Faturamento Form</field>
+            <field name="model">politic.bill</field>
+            <field name="arch" type="xml">
+                <form string="Layout de Política Faturamento">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="plan_id"/>
+                                <field name="life"/>
+                                <field name="rule_note"/>
+                            </group>
+                            <group>
+                                <field name="unitary_value"/>
+                                <field name="consultation_reimbursement"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                      <field name="message_follower_ids"/>
+                      <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+       <record id="politic_bill_tree" model="ir.ui.view">
+            <field name="name">Layout de Política Faturamento Tree</field>
+            <field name="model">politic.bill</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="plan_id"/>
+                    <field name="life"/>
+                    <field name="rule_note"/>
+                    <field name="unitary_value"/>
+                    <field name="consultation_reimbursement"/>
+                </tree>
+            </field>
+        </record>
+       <record id="politic_bill_action" model="ir.actions.act_window">
+        <field name="name">Layout de Política Faturamento</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">politic.bill</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('politic_bill_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('politic_bill_form')})]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No records available.
+            </p>
+        </field>
+    </record>
+    </data>
+</odoo>

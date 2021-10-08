@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Revenue Provisioning Layout Start -->
+        <record id="revenue_provisioning_layout_form" model="ir.ui.view">
+            <field name="name">Revenue Provisioning Layout</field>
+            <field name="model">model_revenue_provisioning</field>
+            <field name="arch" type="xml">
+                <form string="Revenue Provisioning Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Compensation_Type"/>
+                                <field name="Number_Of_Installments"/>
+                                <field name="Periodicity_id"/>
+                                <field name="Compensation_Value"/>
+                                <field name="First_Month"/>
+                                <field name="Last_Month"/>
+                                <field name="First_Month_Due"/>
+                                <field name="create_uid" string='Created By'/>
+                            </group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="Contract_id"/>
+                                <field name="OwnerId"/>
+                                <field name="Description"/>
+                                <field name="Revenue_id"/>
+                                <field name="Status"/>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Revenue Provisioning Layout tree view -->
+        <record id="revenue_provisioning_layout_tree" model="ir.ui.view">
+            <field name="name">Revenue Provisioning Layout Tree</field>
+            <field name="model">model_revenue_provisioning</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Compensation_Type"/>
+                    <field name="Number_Of_Installments"/>
+                    <field name="Periodicity_id"/>
+                    <field name="Compensation_Value"/>
+                    <field name="First_Month"/>
+                    <field name="Last_Month"/>
+                    <field name="First_Month_Due"/>
+                    <field name="create_uid" string='Created By'/>
+                    <field name="Name"/>
+                    <field name="Contract_id"/>
+                    <field name="OwnerId"/>
+                    <field name="Description"/>
+                    <field name="Revenue_id"/>
+                    <field name="Status"/>
+                    <field name="write_uid" string='Last Modified By'/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Revenue Provisioning Layout action window -->
+        <record id="revenue_provisioning_layout_action" model="ir.actions.act_window">
+            <field name="name">Revenue Provisioning Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_revenue_provisioning</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('revenue_provisioning_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('revenue_provisioning_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,62 @@
+<odoo>
+    <data>
+        <!--SLA Carrier Benefit Reason C Layout form view -->
+        <record id="sla_carrier_benefit_reason_c_form" model="ir.ui.view">
+            <field name="name"> SLA Carrier Benefit Reason C Layout</field>
+            <field name="model">model_sla_carrier_benefit_reason_c</field>
+            <field name="arch" type="xml">
+                <form string="SLA Carrier Benefit Reason C Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+<!--                                <field name="Case_Request_SLA_id"/> field is not define-->
+                                <field name="carrier_id"/>
+                                <field name="create_uid" string="Created By"/>
+                            </group>
+                            <group>
+                                <field name="OwnerId"/>
+                                <field name="write_uid" string="Last Modified By"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- SLA Carrier Benefit Reason C Layout tree view -->
+        <record id="sla_carrier_benefit_reason_c_tree" model="ir.ui.view">
+            <field name="name">SLA Carrier Benefit Reason C Tree</field>
+            <field name="model">model_sla_carrier_benefit_reason_c</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="carrier_id"/>
+                    <field name="OwnerId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- SLA Carrier Benefit Reason C Layout action window -->
+        <record id="sla_carrier_benefit_reason_c_action" model="ir.actions.act_window">
+            <field name="name">SLA Carrier Benefit Reason C Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_sla_carrier_benefit_reason_c</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('sla_carrier_benefit_reason_c_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('sla_carrier_benefit_reason_c_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

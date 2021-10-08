@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Broker Benchmarking Layout Start -->
+        <record id="quote_broker_benchmarking_layout_form" model="ir.ui.view">
+            <field name="name">Broker Benchmarking Quote Form</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <form string="Broker Benchmarking Quote">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="OpportunityId"/>
+                                <field name="Quotation_Reason"/>
+                            </group>
+                            <group>
+                                <field name="QuoteNumber"/>
+                                <field name="AccountId"/>
+                                <field name="RecordTypeId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Notes/Attachments">
+                                <field name="attachment_ids"/>
+                            </page>
+                            <page string="Quotation Products">
+                                <field name="quote_product_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="Product_id"/>
+                                        <field name="Cost_Type"/>
+                                        <field name="Value"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page string="Opportunities">
+                                <field name="opportunity_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="close_date"/>
+                                        <field name="stage_name"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Reissues"></page>
+                            <page string="Cases">
+                                <field name="case_ids">
+                                    <tree>
+                                        <field name="CaseNumber"/>
+                                        <field name="Subject"/>
+                                        <field name="CreatedDate"/>
+                                        <field name="Priority"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Broker Benchmarking Layout tree view -->
+        <record id="quote_broker_benchmarking_layout_tree" model="ir.ui.view">
+            <field name="name">Broker Benchmarking Quote Tree</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="OpportunityId"/>
+                    <field name="Quotation_Reason"/>
+                    <field name="QuoteNumber"/>
+                    <field name="AccountId"/>
+                    <field name="RecordTypeId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Broker Benchmarking Layout action window -->
+        <record id="quote_broker_benchmarking_layout_action" model="ir.actions.act_window">
+            <field name="name">Broker Benchmarking Quote Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_quote</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('quote_broker_benchmarking_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('quote_broker_benchmarking_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--Broker Competition Layout Start-->
+        <record id="quote_broker_competition_layout_form" model="ir.ui.view">
+            <field name="name">Broker Competition Quote Form</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <form string="Broker Competition Quote">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="OpportunityId"/>
+                                <field name="Quotation_Reason"/>
+                            </group>
+                            <group>
+                                <field name="QuoteNumber"/>
+                                <field name="AccountId"/>
+                                <field name="RecordTypeId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Notes/Attachments">
+                                <field name="attachment_ids"/>
+                            </page>
+                            <page string="Quotation Products"></page>
+                            <page string="Opportunities"></page>
+                            <page string="Notes"></page>
+                            <page string="Reissues"></page>
+                            <page string="Cases"></page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Broker Competition Layout tree view -->
+        <record id="quote_broker_competition_layout_tree" model="ir.ui.view">
+            <field name="name">Broker Competition Quote Tree</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="OpportunityId"/>
+                    <field name="Quotation_Reason"/>
+                    <field name="QuoteNumber"/>
+                    <field name="AccountId"/>
+                    <field name="RecordTypeId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Broker Competition Layout action window -->
+        <record id="quote_broker_competition_layout_action" model="ir.actions.act_window">
+            <field name="name">Broker competition Quote Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_quote</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('quote_broker_competition_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('quote_broker_competition_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--Broker Quote Layout Start-->
+        <record id="quote_broker_quote_layout_form" model="ir.ui.view">
+            <field name="name">Broker Quote Form</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <form string="Broker Quote">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="OpportunityId"/>
+                                <field name="Quotation_Reason"/>
+                            </group>
+                            <group>
+                                <field name="OwnerId"/>
+                                <field name="QuoteNumber"/>
+                                <field name="AccountId"/>
+                                <field name="RecordTypeId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Notes/Attachments">
+                                <field name="attachment_ids"/>
+                            </page>
+                            <page string="Quote Line Item"></page>
+                            <page string="Opportunities"></page>
+                            <page string="Notes"></page>
+                            <page string="Reissues"></page>
+                            <page string="Cases"></page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Broker Quote Layout tree view -->
+        <record id="quote_broker_quote_layout_tree" model="ir.ui.view">
+            <field name="name">Broker Quote Tree</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="OpportunityId"/>
+                    <field name="Quotation_Reason"/>
+                    <field name="OwnerId"/>
+                    <field name="QuoteNumber"/>
+                    <field name="AccountId"/>
+                    <field name="RecordTypeId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Broker Quote Layout action window -->
+        <record id="quote_broker_quote_layout_action" model="ir.actions.act_window">
+            <field name="name">Broker Quote Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_quote</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('quote_broker_quote_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('quote_broker_quote_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--Broker Binding Layout Start-->
+        <record id="quote_broker_binding_layout_form" model="ir.ui.view">
+            <field name="name">Broker Biding Form</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <form string="Broker Binding">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="OpportunityId"/>
+                                <field name="Quotation_Reason"/>
+                            </group>
+                            <group>
+                                <field name="QuoteNumber"/>
+                                <field name="AccountId"/>
+                                <field name="RecordTypeId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Notes/Attachments">
+                                <field name="attachment_ids"/>
+                            </page>
+                            <page string="Quote Line Item"></page>
+                            <page string="Opportunities"></page>
+                            <page string="Notes"></page>
+                            <page string="Reissues"></page>
+                            <page string="Cases"></page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Broker Binding Layout tree view -->
+        <record id="quote_broker_binding_layout_tree" model="ir.ui.view">
+            <field name="name">Broker Bidding Tree</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="OpportunityId"/>
+                    <field name="Quotation_Reason"/>
+                    <field name="OwnerId"/>
+                    <field name="QuoteNumber"/>
+                    <field name="AccountId"/>
+                    <field name="RecordTypeId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Broker Binding Layout action window -->
+        <record id="quote_broker_binding_layout_action" model="ir.actions.act_window">
+            <field name="name">Broker Bidding Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_quote</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('quote_broker_binding_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('quote_broker_binding_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--Broker Project Layout Start-->
+        <record id="quote_broker_project_layout_form" model="ir.ui.view">
+            <field name="name">Broker Project Form</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <form string="Broker Binding">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="OpportunityId"/>
+                                <field name="Quotation_Reason"/>
+                            </group>
+                            <group>
+                                <field name="QuoteNumber"/>
+                                <field name="AccountId"/>
+                                <field name="RecordTypeId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Notes/Attachments">
+                                <field name="attachment_ids"/>
+                            </page>
+                            <page string="Quotation Product"></page>
+                            <page string="Opportunities"></page>
+                            <page string="Notes"></page>
+                            <page string="Reissues"></page>
+                            <page string="Cases"></page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Broker Project Layout tree view -->
+        <record id="quote_broker_project_layout_tree" model="ir.ui.view">
+            <field name="name">Broker Project Tree</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="OpportunityId"/>
+                    <field name="Quotation_Reason"/>
+                    <field name="QuoteNumber"/>
+                    <field name="AccountId"/>
+                    <field name="RecordTypeId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Broker Project Layout action window -->
+        <record id="quote_broker_project_layout_action" model="ir.actions.act_window">
+            <field name="name">Broker Project Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_quote</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('quote_broker_project_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('quote_broker_project_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--Broker Technical Praposal Layout Start-->
+        <record id="quote_broker_technical_praposal_layout_form" model="ir.ui.view">
+            <field name="name">Broker Technocal Praposal Form</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <form string="Broker Technical Praposal">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="OpportunityId"/>
+                                <field name="Quotation_Reason"/>
+                            </group>
+                            <group>
+                                <field name="QuoteNumber"/>
+                                <field name="AccountId"/>
+                                <field name="RecordTypeId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Notes/Attachments">
+                                <field name="attachment_ids"/>
+                            </page>
+                            <page string="Quotation Product"></page>
+                            <page string="Opportunities"></page>
+                            <page string="Notes"></page>
+                            <page string="Reissues"></page>
+                            <page string="Cases"></page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Broker Project Layout tree view -->
+        <record id="quote_broker_technical_praposal_layout_tree" model="ir.ui.view">
+            <field name="name">Broker Technical Praposal Tree</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="OpportunityId"/>
+                    <field name="Quotation_Reason"/>
+                    <field name="QuoteNumber"/>
+                    <field name="AccountId"/>
+                    <field name="RecordTypeId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Broker Project Layout action window -->
+        <record id="quote_broker_technical_praposal_layout_action" model="ir.actions.act_window">
+            <field name="name">Broker Technical Praposal Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_quote</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('quote_broker_technical_praposal_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('quote_broker_technical_praposal_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--Broker Rede Layout Start-->
+        <record id="quote_broker_rede_layout_form" model="ir.ui.view">
+            <field name="name">Broker Rede Form</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <form string="Broker Rede">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="OpportunityId"/>
+                                <field name="Quotation_Reason"/>
+                            </group>
+                            <group>
+                                <field name="QuoteNumber"/>
+                                <field name="AccountId"/>
+                                <field name="RecordTypeId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Notes/Attachments">
+                                <field name="attachment_ids"/>
+                            </page>
+                            <page string="Quotation Product"></page>
+                            <page string="Opportunities"></page>
+                            <page string="Notes"></page>
+                            <page string="Reissues"></page>
+                            <page string="Cases"></page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Broker Rede Layout tree view -->
+        <record id="quote_broker_rede_layout_tree" model="ir.ui.view">
+            <field name="name">Broker rede Tree</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="OpportunityId"/>
+                    <field name="Quotation_Reason"/>
+                    <field name="QuoteNumber"/>
+                    <field name="AccountId"/>
+                    <field name="RecordTypeId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Broker Project Layout action window -->
+        <record id="quote_broker_rede_layout_action" model="ir.actions.act_window">
+            <field name="name">Broker rede Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_quote</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('quote_broker_rede_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('quote_broker_rede_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--Quote Layout Start-->
+        <record id="quote_layout_form" model="ir.ui.view">
+            <field name="name">Quote Layout Form</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <form string="Quote Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="QuoteNumber" required="1"/>
+                                <field name="Name"/>
+                                <field name="OpportunityId"/>
+                                <field name="AccountId"/>
+                                <field name="Motive_Of_Gain"/>
+                                <field name="Loss_Reason"/>
+                                <field name="parent_quote_id"/>
+                            </group>
+                            <group>
+                                <field name="ExpirationDate"/>
+                                <field name="IsSyncing"/>
+                                <field name="Status"/>
+                                <field name="Description"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Totals"></page>
+                            <page string="Prepared For"></page>
+                            <page string="Address Information"></page>
+                            <page string="System Information"></page>
+                            <page string="Quote Line Items"></page>
+                            <page string="Quote PDFs"></page>
+                            <page string="Notes"></page>
+                            <page string="Files"></page>
+                            <page string="Reissues"/>
+                            <page string="Cases"/>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Quote Layout tree view -->
+        <record id="quote_layout_tree" model="ir.ui.view">
+            <field name="name">Quote Layout Tree</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="QuoteNumber"/>
+                    <field name="Name"/>
+                    <field name="OpportunityId"/>
+                    <field name="AccountId"/>
+                    <field name="Motive_Of_Gain"/>
+                    <field name="Loss_Reason"/>
+                    <field name="parent_quote_id"/>
+                    <field name="ExpirationDate"/>
+                    <field name="IsSyncing"/>
+                    <field name="Status"/>
+                    <field name="Description"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Quote Layout action window -->
+        <record id="quote_layout_action" model="ir.actions.act_window">
+            <field name="name">Quote Layout Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_quote</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('quote_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('quote_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--Small Quote Layout Start-->
+        <record id="small_quote_layout_form" model="ir.ui.view">
+            <field name="name">Small Quote Layout Form</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <form string="Small Quote Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="OpportunityId"/>
+                                <field name="AccountId"/>
+                                <field name="CNPJ"/>
+                                <field name="cpf"/>
+                                <field name="ContactId"/>
+                                <field name="phone"/>
+                                <field name="Email"/>
+                                <field name="cc_email"/>
+                                <field name="parent_quote_id"/>
+                                <field name="Status"/>
+                                <field name="returned_reason"/>
+                                <field name="proposal_number"/>
+                            </group>
+                            <group>
+                                <field name="QuoteNumber"/>
+                                <field name="study_configuration_id"/>
+                                <field name="RecordTypeId"/>
+                                <field name="lead_source"/>
+                                <field name="Mailing_Font"/>
+                                <field name="verified_partnership"/>
+                                <field name="estimated_revenue"/>
+                                <field name="admin_proposal"/>
+                                <field name="admin_proposal_date"/>
+                                <field name="Motive_Of_Gain"/>
+                                <field name="Loss_Reason"/>
+                                <field name="OwnerId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="System Information"></page>
+                            <page string="Quote Line Items"></page>
+                            <page string="Notes/Attachments">
+                                <field name="attachment_ids"/>
+                            </page>
+                            <page string="Reissues"/>
+                            <page string="Cases"/>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Small Quote Layout tree view -->
+        <record id="small_quote_layout_tree" model="ir.ui.view">
+            <field name="name">Small Quote Layout Tree</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="QuoteNumber"/>
+                                <field name="OpportunityId"/>
+                                <field name="AccountId"/>
+                                <field name="CNPJ"/>
+                                <field name="cpf"/>
+                                <field name="ContactId"/>
+                                <field name="phone"/>
+                                <field name="Email"/>
+                                <field name="cc_email"/>
+                                <field name="parent_quote_id"/>
+                                <field name="Status"/>
+                                <field name="returned_reason"/>
+                                <field name="proposal_number"/>
+                                <field name="QuoteNumber"/>
+                                <field name="study_configuration_id"/>
+                                <field name="RecordTypeId"/>
+                                <field name="lead_source"/>
+                                <field name="Mailing_Font"/>
+                                <field name="verified_partnership"/>
+                                <field name="estimated_revenue"/>
+                                <field name="admin_proposal"/>
+                                <field name="admin_proposal_date"/>
+                                <field name="Motive_Of_Gain"/>
+                                <field name="Loss_Reason"/>
+                                <field name="OwnerId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Small Quote Layout action window -->
+        <record id="small_quote_layout_action" model="ir.actions.act_window">
+            <field name="name">Small Quote Layout Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_quote</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('small_quote_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('small_quote_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

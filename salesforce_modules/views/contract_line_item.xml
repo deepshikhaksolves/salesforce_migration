@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="contract_line_item_view_form" model="ir.ui.view">
+        <field name="name">contract.line.item.view.form</field>
+        <field name="model">contract.line.item</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <!-- <field name="line_item_number"/> -->
+                            <field name="Product2Id"/>
+                            <field name="ServiceContractId"/>
+                            <field name="description"/>
+                            
+                        </group>
+                        <group>
+                            <!-- <field name="Status"/> -->
+                            <field name="StartDate"/>
+                            <field name="end_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Pricing">
+                            <group>
+                                <group>
+                                    <field name="list_price"/>
+                                    <field name="UnitPrice"/>
+                                    <field name="Quantity"/>
+                                </group>
+                                <group>
+                                    <field name="Subtotal"/>
+                                    <field name="discount"/>
+                                    <field name="TotalPrice"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Covered Asset">
+                            <!-- <field name="asset_id"/> -->
+                        </page>
+                        <page string="System Information">
+                            <!-- <field name="createdBy"/> -->
+                            <!-- <field name="lastModifyedBy"/> -->
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="contract_line_item_action" model="ir.actions.act_window">
+        <field name="name">contract.line.item</field>
+        <field name="res_model">contract.line.item</field>
+        <field name="view_mode">form</field>
+    </record>
+</odoo>

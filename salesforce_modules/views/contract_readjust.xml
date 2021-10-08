@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="contract_readjust_view_form" model="ir.ui.view">
+        <field name="name">contract.readjust.view.form</field>
+        <field name="model">contract.readjust</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="Caculation_Start"/>
+                            <field name="Calculated_Financial_Readjustment_Index"/>
+                            <field name="Calculated_Composite_Readjustment_Index"/>
+                            <field name="Applied_Readjustment_Index"/>
+                            <field name="Negotiated_Date"/>
+                            <field name="Applied_Month"/>
+                            <field name="Comment"/>
+                            <!-- <field name="createdBy"/> -->
+                        </group>
+                        <group>
+                            <field name="Calculation_End"/>
+                            <field name="Calculated_Claim_Readjustment_Index"/>
+                            <field name="Calculated_Financial_Support"/>
+                            <field name="Applied_Financial_Support_Value"/>
+                            <field name="Readjustment_Applied"/>
+                            <field name="readjustment_base_date"/>
+                            <field name="Status"/>
+                            <!-- <field name="lastmodifyedBY"/> -->
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="contract_readjust_action" model="ir.actions.act_window">
+        <field name="name">contract.readjust</field>
+        <field name="res_model">contract.readjust</field>
+        <field name="view_mode">form</field>
+    </record>
+</odoo>

@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+        <!--Checklist C Layout form view -->
+        <record id="checklist_c_form" model="ir.ui.view">
+            <field name="name">Checklist C Layout</field>
+            <field name="model">model_checklist_c</field>
+            <field name="arch" type="xml">
+                <form string="Checklist C Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+<!--                                <field name="Document_id"/>Field Is not Define-->
+                            </group>
+                            <group>
+                                <field name="Status"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Notes">
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Checklist C Layout tree view -->
+        <record id="checklist_c_tree" model="ir.ui.view">
+            <field name="name">Checklist C Tree</field>
+            <field name="model">model_checklist_c</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="Status"/>
+                </tree>
+            </field>
+        </record>
+
+         <!-- Checklist C Layout action window -->
+        <record id="checklist_c_action" model="ir.actions.act_window">
+            <field name="name">Checklist C Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_checklist_c</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('checklist_c_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('checklist_c_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

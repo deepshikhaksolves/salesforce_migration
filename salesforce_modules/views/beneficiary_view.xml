@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Beneficiary Layout Start -->
+        <record id="beneficiary_layout_form" model="ir.ui.view">
+            <field name="name">Beneficiary Layout</field>
+            <field name="model">model_beneficiary</field>
+            <field name="arch" type="xml">
+                <form string="Beneficiary Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="client_id"/>
+                                <field name="description"/>
+                                <field name="holder"/>
+                                <field name="contract_id"/>
+                                <field name="cost_center_id"/>
+                                <field name="suspension_start"/>
+                                <field name="temporary_contract_id"/>
+                                <field name="degree_of_kinship"/>
+                                <field name="balance"/>
+                                <field name="registration"/>
+                                <field name="retain_billing"/>
+                                <field name="contact"/>
+                                <field name="currency"/>
+                                <field name="additional_salary"/>
+                                <field name="end_suspension"/>
+                                <field name="Limit"/>
+                                <field name="admission_date"/>
+                                <field name="resignation_date"/>
+                                <field name="date_of_departure"/>
+                                <field name="return_date"/>
+                                <field name="has_liminal"/>
+                                <field name="status"/>
+                                <field name="code_eligibility"/>
+                                <field name="create_uid" string='Created By'/>
+                            </group>
+                            <group>
+                                <field name="OwnerId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Cost Centers"></page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Beneficiary Layout Start -->
+        <record id="beneficiary_layout_tree" model="ir.ui.view">
+            <field name="name">Beneficiary Layout Tree</field>
+            <field name="model">model_beneficiary</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="client_id"/>
+                    <field name="description"/>
+                    <field name="holder"/>
+                    <field name="contract_id"/>
+                    <field name="suspension_start"/>
+                    <field name="temporary_contract_id"/>
+                    <field name="degree_of_kinship"/>
+                    <field name="balance"/>
+                    <field name="registration"/>
+                    <field name="retain_billing"/>
+                    <field name="contact"/>
+                    <field name="currency"/>
+                    <field name="additional_salary"/>
+                    <field name="end_suspension"/>
+                    <field name="Limit"/>
+                    <field name="admission_date"/>
+                    <field name="resignation_date"/>
+                    <field name="date_of_departure"/>
+                    <field name="return_date"/>
+                    <field name="has_liminal"/>
+                    <field name="status"/>
+                    <field name="code_eligibility"/>
+                    <field name="create_uid" string='Created By'/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Beneficiary Layout action window -->
+        <record id="beneficiary_layout_action" model="ir.actions.act_window">
+            <field name="name">Beneficiary Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_beneficiary</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('beneficiary_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('beneficiary_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

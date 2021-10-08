@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- model_pathology Layout form view -->
+        <record id="pathology_layout_form" model="ir.ui.view">
+            <field name="name">Pathology Layout</field>
+            <field name="model">model_pathology</field>
+            <field name="arch" type="xml">
+                <form string="Pathology Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                <field name="OwnerId"/>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- model_pathology tree view -->
+        <record id="pathology_layout_tree" model="ir.ui.view">
+            <field name="name">Pathology Layout Tree</field>
+            <field name="model">model_pathology</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name" />
+                    <field name="OwnerId"/>
+                    <field name="create_uid" />
+                    <field name="write_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- model_pathology action window -->
+        <record id="pathology_layout_action" model="ir.actions.act_window">
+            <field name="name">Pathology Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_pathology</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('pathology_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('pathology_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- price x region layout Start -->
+        <record id="price_x_region_layout_form" model="ir.ui.view">
+            <field name="name">Price X Region Layout Form</field>
+            <field name="model">model_price_x_region</field>
+            <field name="arch" type="xml">
+                <form string="Price X Region Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="product_price_id"/>
+                                <field name="create_uid" string='Created By'/>
+                            </group>
+                            <group>
+                                <field name="region_id"/>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- price x region layout tree view -->
+        <record id="price_x_region_layout_tree" model="ir.ui.view">
+            <field name="name">Price X Region Layout Tree</field>
+            <field name="model">model_price_x_region</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="product_price_id"/>
+                    <field name="create_uid" string='Created By'/>
+                    <field name="region_id"/>
+                    <field name="write_uid" string='Last Modified By'/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- price x region layout action window -->
+        <record id="price_x_region_layout_action" model="ir.actions.act_window">
+            <field name="name">Price X Region Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_price_x_region</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('price_x_region_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('price_x_region_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

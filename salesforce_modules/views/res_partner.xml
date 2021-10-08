@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_partner_view_form" model="ir.ui.view">
+        <field name="name">res.partner.view.form</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <form string="Contact Form">
+                <sheet>
+                    <group string="Contact Information">
+                        <group>
+                            <field name="Name"/>
+                            <field name="treatment_name"/>
+                            <field name="cpf"/>
+                            <field name="Birthdate"/>
+                            <field name="marital_status"/>
+                            <field name="spouse_name"/>
+                            <field name="spouse_gender"/>
+                            <field name="spouse_birth_date"/>
+                            <field name="cid"/>
+                            <field name="Active"/>
+                        </group>
+                        <group>
+                            <field name="Email"/>
+                            <field name="Phone"/>
+                            <field name="assistant_extension_number"/>
+                            <field name="MobilePhone"/>
+                            <field name="secondary_mobile_phone"/>
+                            <field name="HomePhone"/>
+                            <field name="number_of_children"/>
+                            <field name="parent"/>
+                            <field name="wedding_date"/>
+                        </group>
+                    </group>
+                    <group string="Corporate Information">
+                        <group>
+                            <field name="title"/>
+                            <field name="title_description"/>
+                            <field name="Level"/>
+                            <field name="ReportsToId"/>
+                            <field name="allow_direct_mail"/>
+                        </group>
+                        <group>
+                            <field name="Department"/>
+                            <field name="department_description"/>
+                            <field name="ABC_Analysis"/>
+                            <field name="has_gift_compliance"/>
+                            <field name="Legal_Representative"/>
+                        </group>
+                    </group>
+                    <group string="CRM">
+                        <group>
+                            <field name="sport_practice"/>
+                            <field name="matters_of_interest"/>
+                            <field name="Hobby"/>
+                            <field name="matters_of_interest"/>
+                        </group>
+                        <group>
+                            <field name="soccer_team"/>
+                            <field name="Favorite_Cuisine"/>
+                            <field name="place_to_go"/>
+                            <field name="Movies"/>
+                        </group>
+                    </group>
+                    <group string="Assistant">
+                        <group>
+                            <field name="AssistantName"/>
+                            <field name="AssistantPhone"/>
+                            <field name="assistant_extension_number"/>                        
+                        </group>
+                        <group>
+                            <field name="assistant_email"/>
+                            <field name="assistant_mobile_phone"/>
+                        </group>
+                    </group>
+                    <group string="Additional data">
+                        <group>
+                            <field name="MailingAddress"/>
+                            <field name="Description"/>
+                            <field name="assistant_extension_number"/>                        
+                        </group>
+                        <group>
+                            <field name="AccountId"/>                        
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Sons">
+                            <!-- <field name="line_ids"/> -->
+                        </page>
+                        <page string="related Accounts">
+                            <field name="account_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <!-- <field name=""/> -->
+                                    <field name="role__c"/>
+                                    <field name="PersonMobilePhone"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Notes &amp; Attachments">
+                            <field name="attachment_ids"/>
+                        </page>
+                        <page string="Opportunities">
+                            <field name="opportunity_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="stage_name"/>
+                                    <field name="amount"/>
+                                    <field name="close_date"/>
+                                </tree>
+                            </field>
+
+                        </page>
+                        <page string="Cases">
+                            <field name="case_ids">
+                                <tree>
+                                    <field name="CaseNumber"/>
+                                    <field name="Subject"/>
+                                    <field name="Priority"/>
+                                    <field name="CreatedDate"/>
+                                    <field name="Status"/>
+                                    <field name="OwnerId"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="HTML Email Status">
+                            <!-- <field name="line_ids"/> -->
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="res_partner_old_view_form" model="ir.ui.view">
+        <field name="name">res.partner.view.form</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="AccountId"/>
+                            <field name="Email"/>
+                            <field name="MobilePhone"/>
+                            <field name="secondary_mobile_phone"/>
+                            <!-- <field name="MotherName"/> -->
+                            <field name="RG"/>
+                            <!-- <field name="Issuancedate"/> -->
+                            <field name="issuing_body_rg"/>
+                            <field name="cid"/>
+                            <field name="Active"/>
+                        </group>
+                        <group>
+                            <field name="OwnerId"/>
+                            <!-- <field name="nama_kolom"/> -->
+                            <field name="ReportsToId"/>
+                            <field name="Department"/>
+                            <field name="Fax"/>
+                            <field name="Phone"/>
+                        </group>
+                    </group>
+                    <group string="Address Information">
+                        <group>
+                            <field name="MailingAddress"/>
+                            <field name="Description"/>
+                        </group>
+                    </group>
+                    <group string="System Information">
+                        <group>
+                            <field name="create_uid"/>
+                            <!-- <field name="customer link"/> -->
+                        </group>
+                        <group>
+                            <field name="write_uid"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Sons">
+                            <!-- <field name="line_ids"/> -->
+                        </page>
+                        <page string="related Accounts">
+                            <field name="account_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <!-- <field name=""/> -->
+                                    <field name="role__c"/>
+                                    <field name="PersonMobilePhone"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Notes &amp; Attachments">
+                            <field name="attachment_ids"/>
+                        </page>
+                        <page string="Opportunities">
+                            <field name="opportunity_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="stage_name"/>
+                                    <field name="amount"/>
+                                    <field name="close_date"/>
+                                </tree>
+                            </field>
+
+                        </page>
+                        <page string="Cases">
+                            <field name="case_ids">
+                                <tree>
+                                    <field name="CaseNumber"/>
+                                    <field name="Subject"/>
+                                    <field name="Priority"/>
+                                    <field name="CreatedDate"/>
+                                    <field name="Status"/>
+                                    <field name="OwnerId"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="HTML Email Status">
+                            <!-- <field name="line_ids"/> -->
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="res_partner_view_tree" model="ir.ui.view">
+            <field name="name">Contact Tree</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="treatment_name"/>
+                    <field name="cpf"/>
+                    <field name="Birthdate"/>
+                    <field name="marital_status"/>
+                    <field name="spouse_name"/>
+                    <field name="spouse_gender"/>
+                    <field name="spouse_birth_date"/>
+                    <field name="cid"/>
+                    <field name="Active"/>
+                </tree>
+            </field>
+        </record>
+
+    <record id="salres_partner_action" model="ir.actions.act_window">
+        <field name="name">Contact</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">form</field>
+        <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('res_partner_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('res_partner_view_form')})]"/>
+    </record>
+    <record id="salres_partner_old_action" model="ir.actions.act_window">
+        <field name="name">res.partner</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="res_partner_old_view_form"/>
+    </record>
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+<!--        <record id="lead" model="res.config.settings">-->
+<!--            <field name="buisness_rules_views">Lead</field>-->
+<!--        </record>-->
+    </data>
+</odoo>

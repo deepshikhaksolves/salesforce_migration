@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- product_family form view -->
+        <record id="product_family_view_form" model="ir.ui.view">
+            <field name="name">Product Family View Layout</field>
+            <field name="model">product_family</field>
+            <field name="arch" type="xml">
+                <form string="Product Family View">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name" required="1" />
+                                <field name="benefit__c" required="1"/>
+                                <field name="carrier__c" widget='many2many_tags' required="1"/>
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                <field name="write_uid" string="Last Modified By"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Products">
+                                <field name="product_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="ProductCode"/>
+                                        <field name="Description"/>
+                                        <field name="Minimum_Lives__c" string='Minimum Lives'/>
+                                        <field name="maximum_lives__c"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- product_family tree view -->
+        <record id="product_family_view_tree" model="ir.ui.view">
+            <field name="name">product_family Layout Tree</field>
+            <field name="model">product_family</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name" />
+                    <field name="benefit__c"/>
+                    <field name="carrier__c" widget='many2many_tags'/>
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- product_family action window -->
+        <record id="product_family_action" model="ir.actions.act_window">
+            <field name="name">Product Family</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product_family</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('product_family_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('product_family_view_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

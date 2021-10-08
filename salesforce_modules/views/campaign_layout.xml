@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- Campaign Layout form view -->
+        <record id="campaign_layout_view_form" model="ir.ui.view">
+            <field name="name">campaign Layout</field>
+            <field name="model">model_campaign</field>
+            <field name="arch" type="xml">
+                <form string="Campaign View">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name" required='1'/>
+                                <field name="IsActive"/>
+                                <field name="Type"/>
+                                <field name="Released_to_Work__c"/>
+                            </group>
+                            <group>
+                                <field name="OwnerId" />
+                                <field name="Status"/>
+                                <field name="StartDate"/>
+                                <field name="EndDate"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="Description"/>
+                        </group>
+                        <group string="Planning">
+                            <group>
+                                <field name="NumberSent" />
+                                <field name="ExpectedResponse"/>
+                            </group>
+                            <group>
+                                <field name="ExpectedRevenue"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Influenced Opportunities">
+                                <field name="opportunity_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="revenue" string='Revenue Share'/>
+                                        <field name="amount"/>
+                                        <field name="stage_name"/>
+                                        <field name="close_date"/>
+                                        <field name="owner_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Campaign Members">
+                                <field name="campaign_member_ids">
+                                    <tree>
+                                        <field name="Status"/>
+                                        <field name="Title"/>
+                                        <field name="FirstName"/>
+                                        <field name="LastName"/>
+                                        <field name="CompanyOrAccount" string='Company'/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Campaign Member Statuses">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <!-- <page string="Notes">
+                                <field name="attachment_ids">
+                                    <tree>
+                                        <field name="name" string='Attachment Name'/>
+                                        <field name="write_uid" string='Last Modified'/>
+                                        <field name="create_uid" />
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Files">
+                                <field name="CampaignImageId">
+                                    <tree>
+                                        <field name="name" string='Attachment Name'/>
+                                    </tree>
+                                </field>
+                            </page> -->
+                            <page string="Groups">
+                                <group>
+
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Campaign Layout tree view -->
+        <record id="campaign_layout_view_tree" model="ir.ui.view">
+            <field name="name">Campaign Layout Tree</field>
+            <field name="model">model_campaign</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name" />
+                    <field name="IsActive"/>
+                    <field name="Type"/>
+                    <field name="Released_to_Work__c"/>
+                    <field name="OwnerId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Campaign Layout action window -->
+        <record id="campaign_layout_action" model="ir.actions.act_window">
+            <field name="name">Campaign</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_campaign</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('campaign_layout_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('campaign_layout_view_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

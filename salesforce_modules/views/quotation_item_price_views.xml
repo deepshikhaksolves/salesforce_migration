@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- quotation item price layout form view -->
+        <record id="quotation_item_price_form" model="ir.ui.view">
+            <field name="name">quotation item price Layout form</field>
+            <field name="model">quotation_item_price</field>
+            <field name="arch" type="xml">
+                <form string="quotation item price Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name"/>
+                                <field name="holder_quantity__c" required="1"/>
+                                <field name="dependent_quantity__c" required="1"/>
+                                <field name="others_quantity__c" required="1"/>
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                <field name="quote_line_item__c"/>
+                                <field name="product_price__c"/>
+                                <field name="line_price__c"/>
+                                <field name="write_uid" string="Last Modified By"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- quotation item price layout tree view -->
+        <record id="quotation_item_price_tree" model="ir.ui.view">
+            <field name="name">quotation item price Layout Tree</field>
+            <field name="model">quotation_item_price</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="holder_quantity__c"/>
+                    <field name="dependent_quantity__c"/>
+                    <field name="others_quantity__c"/>
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- quotation item price layout action window -->
+        <record id="quotation_item_price_action" model="ir.actions.act_window">
+            <field name="name">Quotation Item Price Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">quotation_item_price</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('quotation_item_price_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('quotation_item_price_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

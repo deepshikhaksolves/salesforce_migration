@@ -1,0 +1,1586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!--Acccount Layout form view -->
+        <record id="account_layout_form" model="ir.ui.view">
+            <field name="name">Account Layout</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="account Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="user_type_id" string='Account Record Type'/>
+                                <field name="ParentId" />
+                                <field name="financial_group__c" />
+                                <field name="CNPJ__c"/>
+                                <field name="Social_Reason__c"/>
+                                <field name="name" string="Revenue"/>
+                                <field name="State_Registration__c"/>
+                                <field name="Municipal_Registration__c"/>
+                                <field name="CNAE__c" string="NINE"/>
+                                <field name="Risk_Level__c"/>
+                                <field name="Foundation_Date__c"/>
+                                <field name="Account__c" />
+                                <field name="Broker__c"/>
+                                <field name="Company_Classification__c"/>
+                                <field name="Company_Origin__c"/>
+                                <field name="create_uid" string='Created By'/>
+                                <field name="create_date"/>
+                                <field name="Description"/>
+                            </group>
+                            <group>
+                                <field name="Start_in_Broker__c"/>
+                                <field name="Type"/>
+                                <field name="NumberOfEmployees"/>
+                                <field name="AnnualRevenue"/>
+                                <field name="Website"/>
+                                <field name="Email__c"/>
+                                <field name="phone"/>
+                                <field name="Ownership"/>
+                                <field name="Score__c"/>
+                                <field name="write_uid" string="Last Modified By"/>
+                                <field name="write_date" string='Last Modified On'/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Adresses">
+                                <field name="address_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="City"/>
+                                        <field name="State__id"/>
+                                        <field name="Address_Type"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Contacts">
+                                <field name="partner_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="title"/>
+                                        <field name="email"/>
+                                        <field name="phone"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Opportunities">
+                                <field name="opportunity_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="lead_source"/>
+                                        <field name="write_date" string="Last Modified Date"/>
+                                        <field name="stage_name"/>
+                                        <field name="amount"/>
+                                        <field name="close_date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Cases">
+                                <field name="case_ids">
+                                    <tree>
+                                        <field name="ContactId"/>
+                                        <field name="Subject"/>
+                                        <field name="Priority"/>
+                                        <field name="CreatedDate"/>
+                                        <field name="Status"/>
+                                        <field name="OwnerId"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <!-- <page string="Notes &amp; Attachments">
+                                <field name="attachment_ids">
+                                    <tree>
+                                        <field name="name" string='Attachment Name'/>
+                                    </tree>
+                                </field>
+                            </page> -->
+                            <page string="Partners">
+                                <field name="contract_partner_ids">
+                                    <tree>
+                                        <field name="partner_id"/>
+                                        <field name="opportunity_id"/>
+                                        <field name="role"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Bills">
+                                <group>
+                                    <field name="name" string="Account Name"/>
+                                    <field name="CNPJ__c"/>
+                                    <field name="Social_Reason__c"/>
+                                    <field name="financial_group__c"/>
+                                </group>
+                            </page>
+                            <page string="Bank accounts">
+                                <field name="bank_account_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Benefit Policies">
+                                <field name="benefit_politic_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Revenue"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Account Team">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Portals and Accesses (Administrator)">
+                                <field name="portal_access_ids">
+                                    <tree>
+                                        <field name="access_code__c" string='Access Number'/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- model.name tree view -->
+        <record id="account_layout_tree" model="ir.ui.view">
+            <field name="name">Account Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="Account__c"/>
+                    <field name="ParentId"/>
+                    <field name="create_uid" />
+                    <field name="write_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- account_layout action window -->
+        <record id="account_layout_action" model="ir.actions.act_window">
+            <field name="name">Account Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('account_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('account_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Account Layout Old View start -->
+
+        <record id="account_layout_old_form" model="ir.ui.view">
+            <field name="name">Account Layout Old</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="account Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" />
+                                <field name="code"/>
+                                <field name="user_type_id"/>
+                                <!-- <field name="Type" /> -->
+                                <field name="Website" />
+                                <field name="Description"/>
+                                <field name="AnnualRevenue"/>
+                            </group>
+                            <group>
+                                <field name="OwnerId" string='Account Owner'/>
+                                <field name="ParentId"/>
+                                <field name="phone"/>
+                                <field name="Industry"/>
+                                <field name="NumberOfEmployees"/>
+                            </group>
+                        </group>
+                        <group string="Account Summary">
+                            <group>
+                                
+                            </group>
+                        </group>
+                        <group string="Address Information">
+                            <group>
+                                <field name="BillingAddress"/>
+                            </group>
+                            <group>
+                                <field name="ShippingAddress"/>
+                            </group>
+                        </group>
+                        <group string="System Information">
+                            <group>
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </group>
+                        <group string="Custom Links">
+                            <group>
+                                
+                            </group>
+                        </group>
+                    </sheet>
+                    <notebook>
+                        <page string="Related Contacts">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Opportunities">
+                            <field name="opportunity_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="stage_name"/>
+                                    <field name="amount"/>
+                                    <field name="close_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Cases">
+                            <field name="case_ids">
+                                <tree>
+                                    <field name="ContactId"/>
+                                    <field name="Status"/>
+                                    <field name="CreatedDate"/>
+                                    <field name="Subject"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <!-- <page string="Notes">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Files">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                    <field name="write_uid" string='Last Modified By'/>
+                                    <field name="create_uid" />
+                                </tree>
+                            </field>
+                        </page> -->
+                        <page string="Account Team">
+                            <group>
+                                
+                            </group>
+                        </page>
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--account layout old tree view -->
+        <record id="account_layout_old_tree" model="ir.ui.view">
+            <field name="name">Account Layout Old Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="Type"/>
+                    <field name="Website"/>
+                    <field name="AnnualRevenue" />
+                    <field name="OwnerId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- account_layout old action window -->
+        <record id="account_layout_old_action" model="ir.actions.act_window">
+            <field name="name">account Layout Old</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('account_layout_old_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('account_layout_old_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Account Layout Old View End -->
+
+        <!-- Administrator Account Layout start -->
+
+        <record id="administrator_account_layout_form" model="ir.ui.view">
+            <field name="name">Administrator Account Layout</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="administrator account Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="CNPJ__c" />
+                                <field name="Social_Reason__c" />
+                                <field name="comercial_name__c"/>
+                                <field name="name"/>
+                                <field name="code"/>
+                                <field name="user_type_id"/>
+                                <field name="State_Registration__c"/>
+                                <field name="Municipal_Registration__c"/>
+                                <field name="Website"/>
+                                <field name="benefits__c"/>
+                                <field name="ParentId"/>
+                            </group>
+                            <group>
+                                <field name="carrier_type__c"/>
+                                <field name="ans_code__c"/>
+                                <field name="ans_start__c"/>
+                                <field name="app_address__c"/>
+                                <field name="has_reimbursement_app__c"/>
+                                <field name="customer_service_center__c"/>
+                                <field name="broker_call_center__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <notebook>
+                        <page string="Adresses">
+                            <field name="address_ids">
+                                <tree>
+                                    <field name="City"/>
+                                    <field name="State__id"/>
+                                    <field name="Address_Type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Contacts">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Benefits">
+                            <group>
+                                <field name="benificiaty_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Product Family">
+                            <field name="product_family_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Price Tables">
+                            <field name="price_list_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Bank accounts">
+                            <field name="bank_account_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>                            
+                        </page>
+
+                        <!-- <page string="Notes &amp; Attachments">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page> -->
+                        
+                        <page string="Portals and Accesses">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                    <field name="contract_summary__c"/>
+                                    <field name="financial_group_id"/>
+                                    <field name="access_type__c"/>
+                                    <field name="access_users__c"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--administrator account layout tree view -->
+        <record id="administrator_account_layout_tree" model="ir.ui.view">
+            <field name="name">Administrator Account Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="CNPJ__c"/>
+                    <field name="Social_Reason__c"/>
+                    <field name="name"/>
+                    <field name="comercial_name__c" />
+                    <field name="State_Registration__c"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- administrator account layout action window -->
+        <record id="administrator_account_layout_action" model="ir.actions.act_window">
+            <field name="name">Administrator account Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('administrator_account_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('administrator_account_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Administrator Account Layout End -->
+
+        <!-- Broker Legal Entity Layout start -->
+
+        <record id="broker_legal_entity_layout_form" model="ir.ui.view">
+            <field name="name">Broker Legal Entity Layout</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="Broker Legal Entity Layout Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="CNPJ__c" />
+                                <field name="name" />
+                                <field name="code"/>
+                                <field name="user_type_id"/>
+                                <field name="Social_Reason__c"/>
+                                <field name="CNAE__c"/>
+                                <field name="Risk_Level__c"/>
+                                <field name="Foundation_Date__c"/>
+                                <field name="Company_Segmentation__c"/>
+                                <field name="NumberOfEmployees"/>
+                                <field name="NumberofLocations__c"/>
+                                <field name="Locations__c"/>
+                                <field name="BillingAddress"/>
+                                <field name="Description"/>
+                            </group>
+                            <group>
+                                <field name="State_Registration__c"/>
+                                <field name="Municipal_Registration__c"/>
+                                <field name="Website"/>
+                                <field name="Industry"/>
+                                <field name="Email__c"/>
+                                <field name="phone"/>
+                                <field name="financial_group__c"/>
+                                <field name="ParentId"/>
+                                <field name="Start_in_Broker__c"/>
+                                <field name="Image__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <notebook>
+                        <page string="Address">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="city"/>
+                                    <field name="state_id"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Contacts">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Related Contacts">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Opportunities">
+                            <field name="opportunity_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="stage_name"/>
+                                    <field name="amount"/>
+                                    <field name="close_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Account Team">
+                            <group>
+                                
+                            </group>
+                        </page>
+                        <page string="Bills">
+                            <group>
+                                <field name="name" string="Account Name"/>
+                                <field name="CNPJ__c"/>
+                                <field name="Social_Reason__c"/>
+                                <field name="financial_group__c"/>
+                            </group>
+                        </page>
+
+                        <page string="Benefit Policies">
+                            <field name="benefit_politic_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                    <field name="Contract_End"/>
+                                    <field name="Life"/>
+                                    <field name="Monthly_Bill"/>
+                                    <field name="Revenue"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Partners">
+                            <field name="contract_partner_ids">
+                                <tree>
+                                    <field name="partner_id"/>
+                                    <field name="opportunity_id"/>
+                                    <field name="role"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Bank accounts">
+                            <field name="bank_account_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>                            
+                        </page>
+
+                        <!-- <page string="Notes &amp; Attachments">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page> -->
+
+                        <page string="Cases">
+                            <field name="case_ids">
+                                <tree>
+                                    <field name="ContactId"/>
+                                    <field name="Subject"/>
+                                    <field name="Priority"/>
+                                    <field name="CreatedDate"/>
+                                    <field name="Status"/>
+                                    <field name="OwnerId" string='Owner'/>
+                                </tree>
+                            </field>
+                        </page>
+                        <!-- <page string="Notes">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page> -->
+                        
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--Broker Legal Entity tree view -->
+        <record id="broker_legal_entity_layout_tree" model="ir.ui.view">
+            <field name="name">Broker Legal Entity Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="CNPJ__c"/>
+                    <field name="name"/>
+                    <field name="Social_Reason__c"/>
+                    <field name="CNAE__c" />
+                    <field name="Risk_Level__c"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Broker Legal Entity layout action window -->
+        <record id="broker_legal_entity_layout_action" model="ir.actions.act_window">
+            <field name="name">Broker Legal Entity Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('broker_legal_entity_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('broker_legal_entity_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Broker Legal Entity Layout End -->
+
+        <!-- Carrier Account Layout start -->
+
+        <record id="carrer_account_layout_form" model="ir.ui.view">
+            <field name="name">Carrier Account Layout</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="Carrier Account Layout Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="CNPJ__c" />
+                                <field name="Social_Reason__c" />
+                                <field name="name" />
+                                <field name="code"/>
+                                <field name="user_type_id"/>
+                                <field name="comercial_name__c"/>
+                                <field name="State_Registration__c"/>
+                                <field name="Municipal_Registration__c"/>
+                                <field name="Website"/>
+                                <field name="benefits__c"/>
+                                <field name="customer_service_center__c"/>
+                                <field name="ParentId"/>
+                                <field name="card_image__c"/>
+                                <field name="card_template__c"/>
+                            </group>
+                            <group>
+                                <field name="carrier_type__c"/>
+                                <field name="ans_code__c"/>
+                                <field name="ans_start__c"/>
+                                <field name="app_address__c"/>
+                                <field name="has_reimbursement_app__c"/>
+                                <field name="allow_create_reimbursement_case__c"/>
+                                <field name="has_telemedicine_app__c"/>
+                                <field name="allow_create_accredited_net_case__c"/>
+                                <field name="broker_call_center__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <notebook>
+                        <page string="Address">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="city"/>
+                                    <field name="state_id"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Contacts">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Benefits">
+                            <group>
+                                <field name="benificiaty_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Product Family">
+                            <field name="product_family_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Price Tables">
+                            <field name="price_list_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Bank accounts">
+                            <field name="bank_account_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>                            
+                        </page>
+
+                        <!-- <page string="Notes &amp; Attachments">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page> -->
+                        
+                        <page string="Portals and Accesses">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                    <field name="contract_summary__c"/>
+                                    <field name="financial_group_id"/>
+                                    <field name="access_type__c"/>
+                                    <field name="access_users__c"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--Carrier Account Layout tree view -->
+        <record id="carrer_account_layout_tree" model="ir.ui.view">
+            <field name="name">Carrier Account Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="CNPJ__c"/>
+                    <field name="name"/>
+                    <field name="Social_Reason__c"/>
+                    <field name="CNAE__c" />
+                    <field name="Risk_Level__c"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Carrier Account Layout action window -->
+        <record id="carrer_account_layout_action" model="ir.actions.act_window">
+            <field name="name">Carrier Account Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('carrer_account_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('carrer_account_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Carrier Account Layout End -->
+
+
+        <!-- Legal Entity Customer Layout start -->
+
+        <record id="customer_legal_entity_layout_form" model="ir.ui.view">
+            <field name="name">Legal Entity Customer Layout</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="Legal Entity Customer Layout Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="CNPJ__c" />
+                                <field name="name" />
+                                <field name="code"/>
+                                <field name="user_type_id"/>
+                                <field name="Social_Reason__c"/>
+                                <field name="CNAE__c"/>
+                                <field name="Risk_Level__c"/>
+                                <field name="Foundation_Date__c"/>
+                                <field name="Company_Segmentation__c"/>
+                                <field name="NumberOfEmployees"/>
+                                <field name="NumberofLocations__c"/>
+                                <field name="Locations__c"/>
+                                <field name="BillingAddress"/>
+                                <field name="Description"/>
+                            </group>
+                            <group>
+                                <field name="State_Registration__c"/>
+                                <field name="Municipal_Registration__c"/>
+                                <field name="Website"/>
+                                <field name="Industry"/>
+                                <field name="Email__c"/>
+                                <field name="phone"/>
+                                <field name="financial_group__c"/>
+                                <field name="ParentId"/>
+                                <field name="Start_in_Broker__c"/>
+                                <field name="Image__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <notebook>
+                        <page string="Address">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="city"/>
+                                    <field name="state_id"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Contacts">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Related Contacts">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Opportunities">
+                            <field name="opportunity_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="stage_name"/>
+                                    <field name="amount"/>
+                                    <field name="close_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Account Team">
+                            <group>
+                                
+                            </group>
+                        </page>
+                        <page string="Bills">
+                            <group>
+                                <field name="name" string="Account Name"/>
+                                <field name="CNPJ__c"/>
+                                <field name="Social_Reason__c"/>
+                                <field name="financial_group__c"/>
+                            </group>
+                        </page>
+
+                        <page string="Benefit Policies">
+                            <field name="benefit_politic_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                    <field name="Contract_End"/>
+                                    <field name="Life"/>
+                                    <field name="Monthly_Bill"/>
+                                    <field name="Revenue"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Partners">
+                            <field name="contract_partner_ids">
+                                <tree>
+                                    <field name="partner_id"/>
+                                    <field name="opportunity_id"/>
+                                    <field name="role"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Bank accounts">
+                            <field name="bank_account_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>                            
+                        </page>
+
+                        <!-- <page string="Notes &amp; Attachments">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page> -->
+
+                        <page string="Cases">
+                            <field name="case_ids">
+                                <tree>
+                                    <field name="ContactId"/>
+                                    <field name="Subject"/>
+                                    <field name="Priority"/>
+                                    <field name="CreatedDate"/>
+                                    <field name="Status"/>
+                                    <field name="OwnerId" string='Owner'/>
+                                </tree>
+                            </field>
+                        </page>
+                        <!-- <page string="Notes">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page> -->
+
+                        <!-- <page string="Account History">
+                            
+                        </page> -->
+                        
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--Legal Entity Customer tree view -->
+        <record id="customer_legal_entity_layout_tree" model="ir.ui.view">
+            <field name="name">Legal Entity Customer Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="CNPJ__c"/>
+                    <field name="name"/>
+                    <field name="Social_Reason__c"/>
+                    <field name="CNAE__c" />
+                    <field name="Risk_Level__c"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Legal Entity Customer action window -->
+        <record id="customer_legal_entity_layout_action" model="ir.actions.act_window">
+            <field name="name">Legal Entity Customer Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('customer_legal_entity_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('customer_legal_entity_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Legal Entity Customer Layout End -->
+
+
+        <!-- Hospital Layout start -->
+
+        <record id="hospital_layout_form" model="ir.ui.view">
+            <field name="name">Hospital Layout Form</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="Hospital Layout Form View">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" />
+                                <field name="code"/>
+                                <field name="user_type_id"/>
+                                <field name="ParentId"/>
+                            </group>
+                            <group>
+                                <field name="CNPJ__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <notebook>
+                        <page string="Address">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="city"/>
+                                    <field name="state_id"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Network Providers">
+                            <field name="network_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--Hospital Layout tree view -->
+        <record id="hospital_layout_tree" model="ir.ui.view">
+            <field name="name">Hospital Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="ParentId"/>
+                    <field name="CNPJ__c"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Hospital Layout action window -->
+        <record id="hospital_layout_action" model="ir.actions.act_window">
+            <field name="name">Hospital Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('hospital_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('hospital_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Hospital Layout End -->
+
+        <!-- Laboratory Layout start -->
+
+        <record id="laboratory_layout_form" model="ir.ui.view">
+            <field name="name">Laboratory Layout Form</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="Laboratory Layout Form View">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" />
+                                <field name="code"/>
+                                <field name="user_type_id"/>
+                                <field name="ParentId"/>
+                            </group>
+                            <group>
+                                <field name="CNPJ__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <notebook>
+                        <page string="Address">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="city"/>
+                                    <field name="state_id"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Network Providers">
+                            <field name="network_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--Laboratory Layout tree view -->
+        <record id="laboratory_layout_tree" model="ir.ui.view">
+            <field name="name">Laboratory Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="ParentId"/>
+                    <field name="CNPJ__c"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Laboratory Layout action window -->
+        <record id="laboratory_layout_action" model="ir.actions.act_window">
+            <field name="name">Laboratory Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('laboratory_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('laboratory_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Laboratory Layout End -->
+
+        <!-- Partner Layout start -->
+
+        <record id="partner_layout_form" model="ir.ui.view">
+            <field name="name">Partner Layout</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="Partner Layout Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="CNPJ__c" />
+                                <field name="name" />
+                                <field name="code"/>
+                                <field name="user_type_id"/>
+                                <field name="Social_Reason__c"/>
+                                <field name="comercial_name__c"/>
+                                <field name="CNAE__c"/>
+                                <field name="Risk_Level__c"/>
+                                <field name="Foundation_Date__c"/>
+                                <field name="Locations__c"/>
+                                <field name="role__c"/>
+                                <field name="BillingAddress"/>
+                                <field name="Description"/>
+                                
+                            </group>
+                            <group>
+                                <field name="service_type__c"/>
+                                <field name="State_Registration__c"/>
+                                <field name="Municipal_Registration__c"/>
+                                <field name="Website"/>
+                                <field name="Industry"/>
+                                <field name="Email__c"/>
+                                <field name="phone"/>
+                                <field name="ParentId"/>
+                                <field name="Start_in_Broker__c"/>
+                                <field name="Image__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <notebook>
+                        <page string="Address">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="city"/>
+                                    <field name="state_id"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Contacts">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Related Contacts">
+                            <field name="partner_ids">
+                                <tree>
+                                    <field name="name" string="Contact Name"/>
+                                    <field name="title"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Opportunities">
+                            <field name="opportunity_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="stage_name"/>
+                                    <field name="amount"/>
+                                    <field name="close_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Account Team">
+                            <group>
+                                
+                            </group>
+                        </page>
+                        <page string="Bills">
+                            <group>
+                                <field name="name" string="Account Name"/>
+                                <field name="CNPJ__c"/>
+                                <field name="Social_Reason__c"/>
+                                <field name="financial_group__c"/>
+                            </group>
+                        </page>
+
+                        <page string="Benefit Policies">
+                            <field name="benefit_politic_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                    <field name="Contract_End"/>
+                                    <field name="Life"/>
+                                    <field name="Monthly_Bill"/>
+                                    <field name="Revenue"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Partners">
+                            <field name="contract_partner_ids">
+                                <tree>
+                                    <field name="partner_id"/>
+                                    <field name="opportunity_id"/>
+                                    <field name="role"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Bank accounts">
+                            <field name="bank_account_ids">
+                                <tree>
+                                    <field name="Name"/>
+                                </tree>
+                            </field>                            
+                        </page>
+
+                        <!-- <page string="Notes &amp; Attachments">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page> -->
+
+                        <page string="Cases">
+                            <field name="case_ids">
+                                <tree>
+                                    <field name="ContactId"/>
+                                    <field name="Subject"/>
+                                    <field name="Priority"/>
+                                    <field name="CreatedDate"/>
+                                    <field name="Status"/>
+                                    <field name="OwnerId" string='Owner'/>
+                                </tree>
+                            </field>
+                        </page>
+                        <!-- <page string="Notes">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="name" string='Attachment Name'/>
+                                </tree>
+                            </field>
+                        </page> -->
+
+                        <page string="Opportunities (Partnership)">
+                            <field name="opportunity_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="account_id"/>
+                                    <field name="close_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                        
+                        <page string="Portals and Accesses (Administrator)">
+                            <field name="portal_access_ids">
+                                <tree>
+                                    <field name="access_code__c" string='Access Number'/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--Partner layout tree view -->
+        <record id="partner_layout_tree" model="ir.ui.view">
+            <field name="name">Partner Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="CNPJ__c"/>
+                    <field name="name"/>
+                    <field name="Social_Reason__c"/>
+                    <field name="comercial_name__c" />
+                    <field name="Risk_Level__c"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Partner layout action window -->
+        <record id="partner_layout_action" model="ir.actions.act_window">
+            <field name="name">Partner Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('partner_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('partner_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Partner Layout End -->
+
+
+        <!-- Physical person Layout start -->
+
+        <record id="physical_person_layout_form" model="ir.ui.view">
+            <field name="name">Physical person Layout Form</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <form string="Physical person Layout Form View">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="CPF__c" />
+                                <field name="Email__c"/>
+                                <field name="phone"/>
+                                <field name="CNS__c"/>
+                                <field name="ParentId"/>
+                            </group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code"/>
+                                <field name="user_type_id"/>
+                                <field name="Gender__c"/>
+                                <field name="Marital_Status__c"/>
+                                <field name="Start_in_Broker__c"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <notebook>
+                            <page string="Adresses">
+                                <field name="address_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="City"/>
+                                        <field name="State__id"/>
+                                        <field name="Address_Type"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Contacts">
+                                <field name="partner_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="title"/>
+                                        <field name="email"/>
+                                        <field name="phone"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Opportunities">
+                                <field name="opportunity_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="lead_source"/>
+                                        <field name="write_date" string="Last Modified Date"/>
+                                        <field name="stage_name"/>
+                                        <field name="amount"/>
+                                        <field name="close_date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Cases">
+                                <field name="case_ids">
+                                    <tree>
+                                        <field name="ContactId"/>
+                                        <field name="Subject"/>
+                                        <field name="Priority"/>
+                                        <field name="CreatedDate"/>
+                                        <field name="Status"/>
+                                        <field name="OwnerId" string='Owner'/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <!-- <page string="Notes &amp; Attachments">
+                                <field name="attachment_ids">
+                                    <tree>
+                                        <field name="name" string='Attachment Name'/>
+                                    </tree>
+                                </field>
+                            </page> -->
+                            
+                            <page string="Bank accounts">
+                                <field name="bank_account_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Benefit Policies">
+                                <field name="benefit_politic_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Revenue"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Account Team">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Portals and Accesses (Administrator)">
+                                <field name="portal_access_ids">
+                                    <tree>
+                                        <field name="access_code__c" string='Access Number'/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--Physical person Layout tree view -->
+        <record id="physical_person_layout_tree" model="ir.ui.view">
+            <field name="name">Physical person Layout Tree</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="CPF__c"/>
+                    <field name="Email__c"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Physical person Layout action window -->
+        <record id="physical_person_layout_action" model="ir.actions.act_window">
+            <field name="name">Physical person Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('physical_person_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('physical_person_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Physical person Layout End -->
+
+    </data>
+</odoo>

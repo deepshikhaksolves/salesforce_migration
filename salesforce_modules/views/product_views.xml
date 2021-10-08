@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- Broker product layout Start -->
+
+        <!-- broker product Layout form view -->
+        <record id="broker_product_form" model="ir.ui.view">
+            <field name="name">Broker Product Layout</field>
+            <field name="model">product.template</field>
+            <field name="arch" type="xml">
+                <form string="Broker Product Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="ProductCode" required="1"/>
+                                <field name="name" string='Product Name'/>
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                <field name="Family"/>
+                                <field name="IsActive"/>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Standard Price">
+                                <group>
+
+                                </group>
+                            </page>
+                            <page string="Price Books">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Product Regions">
+                                <field name="product_region_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="region"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Products Networks">
+                                <field name="product_network_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="region"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- broker product tree view -->
+        <record id="broker_product_layout_tree" model="ir.ui.view">
+            <field name="name">Broker Product Layout Tree</field>
+            <field name="model">product.template</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ProductCode"/>
+                    <field name="name"/>
+                    <field name="product_family__c"/>
+                    <field name="create_uid"/>
+                    <field name="write_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Broker Product action window -->
+        <record id="broker_product_layout_action" model="ir.actions.act_window">
+            <field name="name">Broker Product Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('broker_product_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('broker_product_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Broker product layout end -->
+
+        <!-- carrier layout Start -->
+        <record id="carrer_layout_form" model="ir.ui.view">
+            <field name="name">Carrier Layout</field>
+            <field name="model">product.template</field>
+            <field name="arch" type="xml">
+                <form string="Broker Product Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="carrier__c"/>
+                                <field name="ProductCode" required="1"/>
+                                <field name="name" string='Product Name'/>
+                                <field name="Segmentation__c" required="1"/>
+                                <field name="ans_code_no_copay__c"/>
+                                <field name="ans_code_with_copay__c"/>
+                                <field name="Minimum_Lives__c" required="1"/>
+                                <field name="maximum_lives__c" required="1"/>
+                                <field name="integration_product_code__c"/>
+                                <field name="Geographic_Scope__c" required="1"/>
+                                <field name="Geographic_Scope_tnk__c"/>
+                            </group>
+                            <group>
+                                <field name="Family" required="1"/>
+                                <field name="Internal_Code__c"/>
+                                <field name="Description" required="1"/>
+                                <field name="Charge_Mode__c" required="1"/>
+                                <field name="Product_Classification__c" required="1"/>
+                                <field name="accommodation__c"/>
+                                <field name="upgrade__c"/>
+                                <field name="Downgrade__c"/>
+                                <field name="priority__c" required="1"/>
+                                <field name="IsActive"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="System Information">
+                                <field name="create_uid"/>
+                                <field name="write_uid" string="Last Modified By"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Product Regions">
+                                <field name="product_region_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="region"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Products Networks">
+                                <field name="product_network_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="region"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Network Providers">
+                                <field name="network_provider_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="accredited_network__c"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Product Prices">
+                                <field name="product_price_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="Price_Table__c"/>
+                                        <field name="age_range__c"/>
+                                        <field name="holder_value__c"/>
+                                        <field name="holder_value_copay__c"/>
+                                        <field name="others_value_copay__c"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Refunds">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Price Books">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- carrier tree view -->
+        <record id="carrier_layout_tree" model="ir.ui.view">
+            <field name="name">Carrier Layout Tree</field>
+            <field name="model">product.template</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="carrier__c"/>
+                    <field name="ProductCode"/>
+                    <field name="name"/>
+                    <field name="Segmentation__c"/>
+                    <field name="ans_code_no_copay__c"/>
+                    <field name="ans_code_with_copay__c"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Carrier action window -->
+        <record id="carrier_layout_action" model="ir.actions.act_window">
+            <field name="name">Carrier Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('carrier_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('carrer_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- Carrier layout end -->
+
+        <!-- product layout Start -->
+        <record id="product_layout_form" model="ir.ui.view">
+            <field name="name">Product Layout</field>
+            <field name="model">product.template</field>
+            <field name="arch" type="xml">
+                <form string="Product Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" string='Product Name'/>
+                                <field name="ProductCode"/>
+                                <field name="Description"/>
+                            </group>
+                            <group>
+                                <field name="Family"/>
+                                <field name="IsActive"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="System Information">
+                                <field name="create_uid"/>
+                                <field name="write_uid" string="Last Modified By"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Price Books">
+                                <group>
+                                    
+                                </group>
+                            </page>
+                            <page string="Notes">
+                                <field name="attachment_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="active"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Files">
+                                <field name="attachment_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="active"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Product Regions">
+                                <field name="product_region_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="region"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Products Networks">
+                                <field name="product_network_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="region"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- product layout tree view -->
+        <record id="product_layout_tree" model="ir.ui.view">
+            <field name="name">Product Layout Tree</field>
+            <field name="model">product.template</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="ProductCode"/>
+                    <field name="Description"/>
+                    <field name="create_uid"/>
+                    <field name="write_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Product Layout action window -->
+        <record id="product_layout_action" model="ir.actions.act_window">
+            <field name="name">Product Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('product_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('product_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        <!-- product layout end -->
+
+    </data>
+</odoo>

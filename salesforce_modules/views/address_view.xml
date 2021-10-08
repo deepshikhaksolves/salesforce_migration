@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Address Layout Start -->
+        <record id="address_layout_form" model="ir.ui.view">
+            <field name="name">Address Layout</field>
+            <field name="model">model_address</field>
+            <field name="arch" type="xml">
+                <form string="Address Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Zip_Code"/>
+                                <field name="Name" required='1'/>
+                                <field name="Number"/>
+                                <field name="Complement"/>
+                                <field name="Address_Type"/>
+                            </group>
+                            <group>
+                                <field name="Landmark"/>
+                                <field name="District" string='District'/>
+                                <field name="City"/>
+                                <field name="State__id"/>
+                                <field name="Coordinates"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Address Layout tree view -->
+        <record id="address_layout_tree" model="ir.ui.view">
+            <field name="name">Address Layout Tree</field>
+            <field name="model">model_address</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Zip_Code"/>
+                    <field name="Name"/>
+                    <field name="Number"/>
+                    <field name="Complement"/>
+                    <field name="Address_Type"/>
+                    <field name="Coordinates"/>
+                    <field name="Landmark"/>
+                    <field name="District"/>
+                    <field name="City"/>
+                    <field name="State__id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Address Layout action window -->
+        <record id="address_layout_action" model="ir.actions.act_window">
+            <field name="name">Address Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_address</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('address_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('address_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

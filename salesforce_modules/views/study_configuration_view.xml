@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Study Setup Layout Start -->
+        <record id="study_setup_layout_form" model="ir.ui.view">
+            <field name="name">Study Setup Layout</field>
+            <field name="model">study_configuration</field>
+            <field name="arch" type="xml">
+                <form string="Study Setup Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Name" required="1"/>
+                                <field name="minimum_lives"/>
+                                <field name="maximum_lives"/>
+                                <field name="validity_of_the_proposal" required="1"/>
+                                <field name="report_key"/>
+                                <field name="default_owner_id"/>
+                                <field name="staging"/>
+                            </group>
+                            <group>
+                                <field name="partnership_id"/>
+                                <field name="person_type"/>
+                                <field name="Show_Aggregate"/>
+                                <field name="priority"/>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Study Requests"></page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Study Setup tree view -->
+        <record id="study_setup_layout_view_tree" model="ir.ui.view">
+            <field name="name">Study SEtup Layout Tree</field>
+            <field name="model">study_configuration</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="minimum_lives"/>
+                    <field name="maximum_lives"/>
+                    <field name="validity_of_the_proposal"/>
+                    <field name="report_key"/>
+                    <field name="default_owner_id"/>
+                    <field name="staging"/>
+                    <field name="partnership_id"/>
+                    <field name="person_type"/>
+                    <field name="Show_Aggregate"/>
+                    <field name="priority"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Study Setup Layout action window -->
+        <record id="study_setup_layout_action" model="ir.actions.act_window">
+            <field name="name">Study Setup</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">study_configuration</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('study_setup_layout_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('study_setup_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+        <!--Market Reserve Duration MDT Layout form view -->
+        <record id="market_reserve_duration_mdt_form" model="ir.ui.view">
+            <field name="name">Market Reserve Duration MDT Form Layout</field>
+            <field name="model">model_market_reserve_duration_mdt</field>
+            <field name="arch" type="xml">
+                <form string="Market Reserve Duration MDT Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="MasterLabel"/>
+                                <field name="DeveloperName"/>
+                                <field name="Duration"/>
+                            </group>
+                            <group>
+                                <field name="IsProtected"/>
+                                <field name="NamespacePrefix"/>
+                                <field name="create_uid" string="Created By"/>
+                                <field name="write_uid" string="Last Modified By"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Market Reserve Duration MDT Layout tree view -->
+        <record id="market_reserve_duration_mdt_tree" model="ir.ui.view">
+            <field name="name">Market Reserve Duration MDT</field>
+            <field name="model">model_market_reserve_duration_mdt</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="MasterLabel"/>
+                    <field name="DeveloperName"/>
+                    <field name="Duration"/>
+                    <field name="IsProtected"/>
+                    <field name="NamespacePrefix"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Market Reserve Duration MDT action window -->
+        <record id="market_reserve_duration_mdt_action" model="ir.actions.act_window">
+            <field name="name">Market Reserve Duration MDT Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_market_reserve_duration_mdt</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('market_reserve_duration_mdt_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('market_reserve_duration_mdt_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

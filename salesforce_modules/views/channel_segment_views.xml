@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- channel segment Layout form view -->
+        <record id="channel_segmentation_layout_form" model="ir.ui.view">
+            <field name="name">channel_segmentation Layout</field>
+            <field name="model">channel_segmentation</field>
+            <field name="arch" type="xml">
+                <form string="Channel Segmentation Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Parent_Channel__c"/>
+                                <field name="Manager__c" />
+                                <field name="Add_Approvers__c"/>
+                                <field name="Status__c"/>
+                                <field name="Cost_Center__c"/>
+                                <field name="create_uid"/>
+                                <field name="OwnerId"/>
+                            </group>
+                            <group>
+                                <field name="name" required='1'/>
+                                <field name="Paid__c"/>
+                                <field name="Internal_Channel__c"/>
+                                <field name="Allows_Multiple_Reservations__c"/>
+                                <field name="write_uid" string='Last Modified By'/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Opportunities">
+                                <field name="opportunity_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="account_id"/>
+                                        <field name="close_date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- channel_segmentation tree view -->
+        <record id="channel_segmentation_layout_tree" model="ir.ui.view">
+            <field name="name">channel_segmentation Layout Tree</field>
+            <field name="model">channel_segmentation</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Parent_Channel__c"/>
+                    <field name="Manager__c" />
+                    <field name="Add_Approvers__c"/>
+                    <field name="Status__c"/>
+                    <field name="name"/>
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- recipe_type_layout action window -->
+        <record id="channel_segmentation_layout_action" model="ir.actions.act_window">
+            <field name="name">Channel Segmentation Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">channel_segmentation</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('channel_segmentation_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('channel_segmentation_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>
