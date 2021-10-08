@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_pit_help_desk_pit_help_desk,pit_help_desk.pit_help_desk,model_pit_help_desk_pit_help_desk,base.group_user,1,1,1,1

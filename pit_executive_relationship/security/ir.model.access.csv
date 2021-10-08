@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_pit_executive_relationship_pit_executive_relationship,pit_executive_relationship.pit_executive_relationship,model_pit_executive_relationship_pit_executive_relationship,base.group_user,1,1,1,1
