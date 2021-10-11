@@ -3,7 +3,6 @@ import json
 from odoo import http,_
 from odoo.http import request
 from odoo.addons.web.controllers.main import DataSet
-from odoo.tools.safe_eval import safe_eval
 from odoo.osv import expression
 from odoo.exceptions import ValidationError
 

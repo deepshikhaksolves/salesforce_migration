@@ -11,7 +11,7 @@
                     </group>
                 </sheet>
                 <footer>
-                    <button name="open_business_view" type="object" string="Next" class="oe_highlight"/>
+                    <button name="open_business_view" type="object" string="Next" class="oe_highlight next_clicked"/>
                     <button string="Discard" class="btn btn-secondary" special="cancel"/>
                 </footer>
             </form>

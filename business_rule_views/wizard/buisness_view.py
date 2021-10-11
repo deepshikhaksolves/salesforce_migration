@@ -1,5 +1,6 @@
-from odoo import api, models,fields
+from odoo import api, models,fields,_
 from odoo.tools.safe_eval import safe_eval
+from odoo.exceptions import ValidationError
 
 
 
@@ -54,6 +55,6 @@ class BuisnessViewWizard(models.TransientModel):
                 'context': ctx
             }
         else:
-            action = {}
+            raise ValidationError(_("Please Select the View"))
         return action
 
