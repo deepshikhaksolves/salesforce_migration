@@ -11,7 +11,7 @@ class BusinessController(DataSet, http.Controller):
 
     @http.route(['/web/dataset/call_kw', '/web/dataset/call_kw/<path:path>'], type='json', auth="user")
     def call_kw(self, model, method, args, kwargs, path=None):
-        if (method == "create" or method == 'write') and kwargs.get('context',{}).get('business_rule_domain',False):
+        if method == "create" and kwargs.get('context',{}).get('business_rule_domain',False):
             record = request.env[model].create(args)
             busines_domain = kwargs.get('context', {}).get('business_rule_domain', False)
             res = self.is_failing(busines_domain ,record)
