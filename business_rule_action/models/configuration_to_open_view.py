@@ -26,7 +26,6 @@ class salesforce_open_view(models.Model):
         if rec_set:
             data.append({
                 'model': rec_set.ir_model.model,
-                'show_popup': rec_set.show_popup,
                 'res_ids': []
             })
         sorted_data = rec_set.configuration_ids.sorted(key=lambda conf: conf.sequence)

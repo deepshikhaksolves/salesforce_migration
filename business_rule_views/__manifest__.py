@@ -20,12 +20,13 @@
     'version': '14.0.0.2',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','business_rule_action'],
+    'depends': ['base','business_rule_action','sale'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
+        # 'views/sale_ineherit.xml',
         'views/assets.xml',
         'wizard/business_view.xml',
     ],
