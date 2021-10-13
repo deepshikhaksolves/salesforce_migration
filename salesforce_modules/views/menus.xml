@@ -15,6 +15,13 @@
 
                 <menuitem name="Small Lead Layout" id="small_lead_layout_menu" parent='lead_parent_action_menu' action="small_lead_layout_action" sequence="4" />
 
+                <menuitem name="Record Type Layout" id="record_lead_parent_action_menu" parent='lead_parent_action_menu'/>
+
+                <menuitem name="Physical Person" id="physical_person_lead_layout_menu" parent='record_lead_parent_action_menu' action="lead_physical_person_layout_action" sequence="1" />
+
+                <menuitem name="Legal Person" id="legal_person_lead_layout_menu" parent='record_lead_parent_action_menu' action="legal_person_layout_action" sequence="2" />
+
+
         <!-- Menu For Task -->
             <menuitem name="Task" id="task_parent_action_menu" parent='salesforce_menu_root' sequence='2'/>
 
@@ -59,6 +66,18 @@
                     <menuitem name="Laboratory Layout" id="laboratory_layout_menu" parent='extra_menu' action="laboratory_layout_action" sequence="4" />
                     <menuitem name="Partner Layout" id="partner_layout_menu" parent='extra_menu' action="partner_layout_action" sequence="5"/>
                     <menuitem name="Physical Person Layout" id="physical_person_layout_menu" parent='extra_menu' action="physical_person_layout_action" sequence="6"/>
+
+                <menuitem name="Account RecordType" id="account_recordtype_menu" parent='account_parent_action_menu'/>
+                    <menuitem name="Administrator" id="recordtype_administrator_account_layout_menu" parent='account_recordtype_menu' action="administrator_layout_action" sequence="1"/>
+                    <menuitem name="Legal Entry Customer" id="recordtype_legal_entry_customer_layout_menu" parent='account_recordtype_menu' action="account_legal_entry_customer_layout_action" sequence="2" />
+                    <menuitem name="Laboratory" id="recordtype_laboratory_layout_menu" parent='account_recordtype_menu' action="account_laboratory_layout_action" sequence="3" />
+                    <menuitem name="Operator" id="recordtype_operator_layout_menu" parent='account_recordtype_menu' action="account_operator_layout_action" sequence="4" />
+                    <menuitem name="Partner" id="recordtype_partner_layout_menu" parent='account_recordtype_menu' action="account_partner_layout_action" sequence="5" />
+
+
+
+
+
 
         <!-- Menu for User -->
             <menuitem name="User" id="user_parent_action_menu" parent='salesforce_menu_root' sequence='7'/>
@@ -435,6 +454,13 @@
             <menuitem name="Brand" id="brand_menu" parent='salesforce_menu_root' action="brand_layout_action" sequence='127'/>
         <!--Benefit Policy Layout Menu-->
             <menuitem name="Benefit Policy" id="benefit_menu" parent='salesforce_menu_root' action="benefit_policy_layout_action" sequence='128'/>
+        <!--Benefit Policy Health type        -->
+            <menuitem name="Benefit Policy Health" id="health_benefit_policy_menu" parent='salesforce_menu_root' action="benefit_politic_health_action"/>
+        <!--Benefit Policy Dental type        -->
+            <menuitem name="Benefit Policy Dental" id="dental_benefit_policy_menu" parent='salesforce_menu_root' action="benefit_politic_dental_action"/>
+        <!--Benefit Policy Pension type        -->
+            <menuitem name="Benefit Policy Pension" id="dental_benefit_pension_menu" parent='salesforce_menu_root' action="pension_benefit_politic_action"/>
+
         <!--Policy Auto Layout Menu-->
             <menuitem name="Policy Auto" id="politica_auto_menu" parent='salesforce_menu_root' action="policy_layout_action" sequence='129'/>
          <!--Policy Checkup Vaccine Layout Menu-->
@@ -500,5 +526,6 @@
 
                 <menuitem name="Contact" id="res_partner_layout_menu" parent='contact_parent_action_menu' action="salres_partner_action"/>
                 <menuitem name="Contact Old" id="res_partner_old_layout_menu" parent='contact_parent_action_menu' action="salres_partner_old_action"/>
+
     </data>
 </odoo>

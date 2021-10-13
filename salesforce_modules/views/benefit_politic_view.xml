@@ -175,7 +175,7 @@
             </field>
         </record>
 
-         <!-- Policy Auto Layout action window -->
+        <!-- Policy Auto Layout action window -->
         <record id="policy_layout_action" model="ir.actions.act_window">
             <field name="name">Policy Auto Layout</field>
             <field name="type">ir.actions.act_window</field>
@@ -214,7 +214,7 @@
                                 <field name="Offer"/>
                                 <field name="Competitor"/>
                                 <field name="Monthly_Bill"/>
-<!--                                <field name="Comission"/>-->
+                                <!--                                <field name="Comission"/>-->
                                 <field name="Revenue"/>
                                 <field name="OwnerId"/>
                                 <field name="How_c"/>
@@ -258,7 +258,7 @@
                     <field name="Offer"/>
                     <field name="Competitor"/>
                     <field name="Monthly_Bill"/>
-<!--                    <field name="Comission"/>-->
+                    <!--                    <field name="Comission"/>-->
                     <field name="Revenue"/>
                     <field name="OwnerId"/>
                     <field name="How_c"/>
@@ -266,7 +266,7 @@
             </field>
         </record>
 
-         <!-- Policy Checkup Vaccine Layout action window -->
+        <!-- Policy Checkup Vaccine Layout action window -->
         <record id="policy_checkup_vaccine_action" model="ir.actions.act_window">
             <field name="name">Policy Checkup Vaccine Layout</field>
             <field name="type">ir.actions.act_window</field>
@@ -311,7 +311,7 @@
                                 <field name="OwnerId"/>
                                 <field name="How_c"/>
                             </group>
-                         </group>
+                        </group>
                         <notebook>
                             <page string="Contracted Plans">
                                 <field name="politic_bill_ids">
@@ -359,7 +359,7 @@
             </field>
         </record>
 
-         <!-- Policy Consulting Layout action window -->
+        <!-- Policy Consulting Layout action window -->
         <record id="policy_consulting_action" model="ir.actions.act_window">
             <field name="name">Policy Consulting Layout</field>
             <field name="type">ir.actions.act_window</field>
@@ -401,7 +401,7 @@
                                 <field name="OwnerId"/>
                                 <field name="How_c"/>
                             </group>
-                         </group>
+                        </group>
                         <notebook>
                             <page string="Contracted Plans">
                                 <field name="politic_bill_ids">
@@ -446,7 +446,7 @@
             </field>
         </record>
 
-         <!-- Policy Fee Layout action window -->
+        <!-- Policy Fee Layout action window -->
         <record id="policy_fee_action" model="ir.actions.act_window">
             <field name="name">Policy Fee Layout</field>
             <field name="type">ir.actions.act_window</field>
@@ -491,7 +491,7 @@
                                 <field name="OwnerId"/>
                                 <field name="How_c"/>
                             </group>
-                         </group>
+                        </group>
                         <notebook>
                             <page string="Contracted Plans">
                                 <field name="politic_bill_ids">
@@ -539,7 +539,7 @@
             </field>
         </record>
 
-         <!-- Policy Fleet Layout action window -->
+        <!-- Policy Fleet Layout action window -->
         <record id="policy_fleet_action" model="ir.actions.act_window">
             <field name="name">Policy Fleet Layout</field>
             <field name="type">ir.actions.act_window</field>
@@ -593,7 +593,7 @@
                                 <field name="OwnerId"/>
                                 <field name="How_c"/>
                             </group>
-                         </group>
+                        </group>
                         <notebook>
                             <page string="Contracted Plans">
                                 <field name="politic_bill_ids">
@@ -650,7 +650,7 @@
             </field>
         </record>
 
-         <!-- Policy Medication Layout action window -->
+        <!-- Policy Medication Layout action window -->
         <record id="policy_medication_action" model="ir.actions.act_window">
             <field name="name">Policy Medication Layout</field>
             <field name="type">ir.actions.act_window</field>
@@ -692,7 +692,7 @@
                                 <field name="OwnerId"/>
                                 <field name="How_c"/>
                             </group>
-                         </group>
+                        </group>
                         <notebook>
                             <page string="Contracted Plans">
                                 <field name="politic_bill_ids">
@@ -738,7 +738,7 @@
             </field>
         </record>
 
-         <!-- Policy Occupational Health Layout action window -->
+        <!-- Policy Occupational Health Layout action window -->
         <record id="policy_occupational_health_action" model="ir.actions.act_window">
             <field name="name">Policy Occupational Health Layout</field>
             <field name="type">ir.actions.act_window</field>
@@ -787,7 +787,7 @@
                                 <field name="Revenue"/>
                                 <field name="How_c"/>
                             </group>
-                         </group>
+                        </group>
                         <notebook>
                             <page string="Contracted Plans">
                                 <field name="politic_bill_ids">
@@ -839,7 +839,7 @@
             </field>
         </record>
 
-         <!-- Policy PAT Layout action window -->
+        <!-- Policy PAT Layout action window -->
         <record id="policy_pat_action" model="ir.actions.act_window">
             <field name="name">Policy PAT Layout</field>
             <field name="type">ir.actions.act_window</field>
@@ -895,7 +895,7 @@
                                 <field name="OwnerId"/>
                                 <field name="How_c"/>
                             </group>
-                         </group>
+                        </group>
                         <notebook>
                             <page string="Contracted Plans">
                                 <field name="politic_bill_ids">
@@ -954,7 +954,7 @@
             </field>
         </record>
 
-         <!-- Policy Pension Layout action window -->
+        <!-- Policy Pension Layout action window -->
         <record id="policy_pension_action" model="ir.actions.act_window">
             <field name="name">Policy Pension Layout</field>
             <field name="type">ir.actions.act_window</field>
@@ -1008,7 +1008,7 @@
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                             </group>
-                         </group>
+                        </group>
                         <notebook>
                             <page string="Contracted Plans">
                                 <field name="politic_bill_ids">
@@ -1066,7 +1066,7 @@
             </field>
         </record>
 
-         <!-- Policy Health Dental Medical Layout action window -->
+        <!-- Policy Health Dental Medical Layout action window -->
         <record id="policy_health_dental_medical_action" model="ir.actions.act_window">
             <field name="name">Policy Health Dental Medical Layout</field>
             <field name="type">ir.actions.act_window</field>
@@ -1115,7 +1115,7 @@
                                 <field name="Comission"/>
                                 <field name="Revenue"/>
                             </group>
-                         </group>
+                        </group>
                         <notebook>
                             <page string="Contracted Plans">
                                 <field name="politic_bill_ids">
@@ -1167,7 +1167,7 @@
             </field>
         </record>
 
-         <!-- Policy Transport Layout action window -->
+        <!-- Policy Transport Layout action window -->
         <record id="policy_transport_action" model="ir.actions.act_window">
             <field name="name">Policy Transport Layout</field>
             <field name="type">ir.actions.act_window</field>
@@ -1212,7 +1212,7 @@
                                 <field name="OwnerId"/>
                                 <field name="How_c"/>
                             </group>
-                         </group>
+                        </group>
                         <notebook>
                             <page string="Contracted Plans">
                                 <field name="politic_bill_ids">
@@ -1260,7 +1260,7 @@
             </field>
         </record>
 
-         <!-- Policy Travel Layout action window -->
+        <!-- Policy Travel Layout action window -->
         <record id="policy_travel_action" model="ir.actions.act_window">
             <field name="name">Policy Travel Layout</field>
             <field name="type">ir.actions.act_window</field>
@@ -1314,7 +1314,7 @@
                                 <field name="OwnerId"/>
                                 <field name="How_c"/>
                             </group>
-                         </group>
+                        </group>
                         <notebook>
                             <page string="Contracted Plans">
                                 <field name="politic_bill_ids">
@@ -1372,7 +1372,7 @@
             </field>
         </record>
 
-         <!-- Policy Lofe Layout action window -->
+        <!-- Policy Lofe Layout action window -->
         <record id="policy_life_action" model="ir.actions.act_window">
             <field name="name">Policy Life Layout</field>
             <field name="type">ir.actions.act_window</field>
@@ -1388,6 +1388,274 @@
             </field>
         </record>
 
+        <!--        Benefit politic Health form-->
+        <record id="benefit_politic_health_form" model="ir.ui.view">
+            <field name="name">Benefit Politic Health Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic Health Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy"/>
+                                        <field name="Benefits"/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Payment_Method"/>
+                                        <field name="Moderator_Variable"/>
+                                        <field name="Moderator_Variable_Value"/>
+                                        <field name="Contributory"/>
+                                        <field name="Contributory_Value"/>
+                                        <field name="has_Checkup"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Performing_Index"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Average_invoice"/>
+                                        <field name="Comission"/>
+                                        <field name="Revenue"/>
+                                        <field name="OwnerId"/>
+                                        <field name="Lead_id"/>
+                                        <field name="Account_id"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
 
+        <!--        Benefit politic Health tree-->
+        <record id="benefit_politic_health_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic Health Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic Health Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic action        -->
+        <record id="benefit_politic_health_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic Health Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_politic_health_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_health_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+        <!--        Benefit politic Dental form-->
+        <record id="benefit_politic_dental_form" model="ir.ui.view">
+            <field name="name">Benefit Politic dental Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic Dental Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy"/>
+                                        <field name="Benefits"/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Payment_Method"/>
+                                        <field name="Moderator_Variable"/>
+                                        <field name="Moderator_Variable_Value"/>
+                                        <field name="Contributory"/>
+                                        <field name="Contributory_Value"/>
+                                        <field name="has_Checkup"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Performing_Index"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Average_invoice"/>
+                                        <field name="Comission"/>
+                                        <field name="Revenue"/>
+                                        <field name="OwnerId"/>
+                                        <field name="Lead_id"/>
+                                        <field name="Account_id"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--        Benefit politic Dental tree-->
+        <record id="benefit_politic_dental_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic Dental Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic Dental Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic Dental action        -->
+        <record id="benefit_politic_dental_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic Dental Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_politic_dental_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_dental_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
+        <!--        pension Benefit politic form-->
+        <record id="pension_benefit_politic_form" model="ir.ui.view">
+            <field name="name">Benefit Politic Pension Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic Pension Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy"/>
+                                        <field name="Benefits"/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Payment_Method"/>
+                                        <field name="Income_Type"/>
+                                        <field name="Contributory"/>
+                                        <field name="Contributory_Value"/>
+                                        <field name="Tax_Type"/>
+                                        <field name="Grace_Period"/>
+                                        <field name="Charge_Rate"/>
+                                        <field name="Type_of_Pension"/>
+                                        <field name="Pension_Mode"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Administration_Tax"/>
+                                        <field name="Output_Rate"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Average_invoice"/>
+                                        <field name="Comission"/>
+                                        <field name="Revenue"/>
+                                        <field name="OwnerId"/>
+                                        <field name="Account_id"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--         Pension Benefit politic tree-->
+        <record id="pension_benefit_politic_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic Pension Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic Pension Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic Dental action        -->
+        <record id="pension_benefit_politic_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic Pension Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('pension_benefit_politic_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('pension_benefit_politic_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
     </data>
 </odoo>
