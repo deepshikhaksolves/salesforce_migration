@@ -487,5 +487,278 @@
         </record>
         <!-- Small Lead Layout End -->
 
+        <!--Physical Person form view  -->
+        <record id="lead_physical_person_layout_form" model="ir.ui.view">
+            <field name="name">Lead Physical Person Layout</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <form string="Lead Physical Person Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="phone"/>
+                                <field name="LeadSource"/>
+                                <field name="OwnerId"/>
+                                <field name="type"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="actual_carrier__c"/>
+                                        <field name="actual_invoice__c"/>
+                                        <field name="phone"/>
+                                        <field name="extension_number__c"/>
+                                        <field name="mobile"/>
+                                        <field name="Date_of_Birth__c"/>
+                                        <field name="cpf__c"/>
+                                        <field name="city"/>
+                                        <field name="zip"/>
+                                        <field name="telemarketing__c"/>
+                                    </group>
+                                    <group>
+                                        <field name="Sales_Channel__c"/>
+                                        <field name="actual_lifes__c"/>
+                                        <field name="actual_birth_policy__c"/>
+                                        <field name="LeadSource"/>
+                                        <field name="Mailing_Origin__c"/>
+                                        <field name="secondary_mobile_phone__c"/>
+                                        <field name="email_from"/>
+                                        <field name="street"/>
+                                        <field name="state_id"/>
+                                        <field name="country_id"/>
+                                    </group>
+                                </group>
+                                <group string="System Information">
+                                        <group>
+                                            <field name="create_uid"/>
+                                            <field name="write_uid" string='Last Modified By'/>
+                                            <label for="street" string="Address"/>
+                                            <div class="o_address_format">
+                                                <field name="street" placeholder="Street..." class="o_address_street"/>
+                                                <field name="street2" placeholder="Street 2..."
+                                                       class="o_address_street"/>
+                                                <field name="city" placeholder="City" class="o_address_city"/>
+                                                <field name="state_id" class="o_address_state" placeholder="State"
+                                                       options='{"no_open": True}'/>
+                                                <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                                <field name="country_id" placeholder="Country" class="o_address_country"
+                                                       options='{"no_open": True, "no_create": True}'/>
+                                            </div>
+                                            <field name="mailing_file_name__c"/>
+                                            <field name="cpf__c"/>
+                                        </group>
+                                        <group>
+                                            <field name="LastTransferDate"/>
+                                            <field name="Workflow_Configuration__c"/>
+                                            <field name="Description"/>
+                                            <field name="Lead__c"/>
+                                            <field name="CNPJ__c"/>
+                                            <field name="Company"/>
+                                        </group>
+                                    </group>
+
+                            </page>
+                            <page string="Benefits Policy"></page>
+                            <page string="Related"></page>
+                            <page string="Market Place"></page>
+                            <page string="Opportunities/Contracts"></page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--Physical Person Tree view        -->
+        <record id="lead_physical_person_layout_tree" model="ir.ui.view">
+            <field name="name">Lead Physical Person Tree Layout</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <tree string="Lead Physical Person Layout">
+                    <field name="name"/>
+                    <field name="Company"/>
+                    <field name="type"/>
+                    <field name="CNPJ__c"/>
+                    <field name="cpf__c"/>
+                    <field name="stage_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Physical Person action        -->
+        <record id="lead_physical_person_layout_action" model="ir.actions.act_window">
+            <field name="name">Lead Person Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('lead_physical_person_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('lead_physical_person_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--       Leagal Person Layout -->
+        <record id="legal_person_layout_form" model="ir.ui.view">
+            <field name="name">Legal Person Layout</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <form string="Legal Person Layout">
+                    <header>
+                        <field name="team_id" invisible="1"/>
+                        <field name="stage_id" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Company"/>
+                                <field name="Title"/>
+                                <field name="phone"/>
+                                <field name="NumberOfEmployees"/>
+                                <field name="OwnerId"/>
+                                <field name="type"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Detalis">
+                                <group>
+                                    <group>
+                                        <field name="Company"/>
+                                        <field name="CNPJ__c"/>
+                                        <field name="Business_Name__c"/>
+                                        <field name="Financial_Group__c"/>
+                                        <field name="Industry"/>
+                                        <field name="CNAE__c"/>
+                                        <field name="name"/>
+                                        <field name="Title"/>
+                                        <field name="phone"/>
+                                        <field name="extension_number__c"/>
+                                        <field name="mobile"/>
+                                        <field name="LeadSource"/>
+                                        <field name="Date_of_Birth__c"/>
+                                        <field name="street"/>
+                                        <field name="state_id"/>
+                                        <field name="Rating"/>
+                                    </group>
+                                    <group>
+                                        <field name="NumberOfEmployees"/>
+                                        <field name="NumberofLocations__c"/>
+                                        <field name="Locations__c"/>
+                                        <field name="Company_Origin__c"/>
+                                        <field name="Company_Segmentation__c"/>
+                                        <field name="actual_birth_policy__c"/>
+                                        <field name="Sales_Channel__c"/>
+                                        <field name="Nominative__c"/>
+                                        <field name="secondary_phone__c"/>
+                                        <field name="Mailing_Origin__c"/>
+                                        <field name="secondary_mobile_phone__c"/>
+                                        <field name="email_from"/>
+                                        <field name="zip"/>
+                                        <field name="city"/>
+                                        <field name="country_id"/>
+                                    </group>
+                                </group>
+
+                                    <group string="System Information">
+                                        <group>
+                                            <field name="create_uid"/>
+                                            <field name="write_uid" string='Last Modified By'/>
+                                            <label for="street" string="Address"/>
+                                            <div class="o_address_format">
+                                                <field name="street" placeholder="Street..." class="o_address_street"/>
+                                                <field name="street2" placeholder="Street 2..."
+                                                       class="o_address_street"/>
+                                                <field name="city" placeholder="City" class="o_address_city"/>
+                                                <field name="state_id" class="o_address_state" placeholder="State"
+                                                       options='{"no_open": True}'/>
+                                                <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                                <field name="country_id" placeholder="Country" class="o_address_country"
+                                                       options='{"no_open": True, "no_create": True}'/>
+                                            </div>
+                                            <field name="mailing_file_name__c"/>
+                                            <field name="cpf__c"/>
+                                            <!--                                        <field name="won_status"/>-->
+
+
+                                        </group>
+                                        <group>
+                                            <field name="LastTransferDate"/>
+                                            <field name="Workflow_Configuration__c"/>
+                                            <field name="Description"/>
+                                            <field name="Lead__c"/>
+                                            <field name="CNPJ__c"/>
+                                            <field name="Company"/>
+                                        </group>
+                                    </group>
+
+                            </page>
+                            <page string="Benefit Policy">
+                                <field name="benifit_ids" widget="one2many">
+                                    <tree>
+                                        <field name="Name" string="Benefit Policy"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Revenue"/>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Related"></page>
+                            <page string="Market Place"></page>
+                            <page string="Opportunities/Contracts"></page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--Legal Person tree view        -->
+        <record id="legal_person_layout_tree" model="ir.ui.view">
+            <field name="name">Legal Person Layout</field>
+            <field name="model">crm.lead</field>
+            <field name="arch" type="xml">
+                <tree string="Legal Person Layout">
+                    <field name="name"/>
+                    <field name="Company"/>
+                    <field name="type"/>
+                    <field name="CNPJ__c"/>
+                    <field name="cpf__c"/>
+                    <!--                    <field name="stage_id"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <!--Legal Person action        -->
+        <record id="legal_person_layout_action" model="ir.actions.act_window">
+            <field name="name">Legal Person Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('legal_person_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('legal_person_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
     </data>
 </odoo>
