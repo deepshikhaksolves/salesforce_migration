@@ -3300,13 +3300,12 @@
                     <sheet>
                         <group>
                             <group>
-                                <!-- <field name="close_date"/> -->
+                                <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
                         </group>
-                    </sheet>
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Details">
@@ -3343,7 +3342,7 @@
                                     <field name="mailing_origin"/>
                                     <field name="cancel_information"/>
                                     <field name="loss_reason"/>
-                                    <!-- <field name="Taxpayer"/> -->
+                                    <!-- <field name="Taxpayer"/> This field is not found --> 
                                     <field name="contributory_descriptions"/>
                                 </group>
                             </group>
@@ -3367,7 +3366,187 @@
 
                             </group>
                         </page>
+                        <page string="Benefit Policy">
+                            <group>
+                                
+                            </group>
+                        </page>
+
+                        <page string="Proposed">
+                            <field name="quote_lines">
+                                <tree string="Quotes" >
+                                    <field name="QuoteNumber"/>
+                                    <field name="Name" stye="width:100px;"/>
+                                    <field name="Quotation_Reason"/>
+                                    <field name="OwnerId"/>
+                                    <field name="Status"/>
+                                    <field name="create_date" string='Creation Date'/>
+                                </tree>
+                            </field>
+                            <group string='Contract Financial Data'>
+
+                            </group>
+                        </page>
+
+                        <page string="Related">
+                            <group string='Contacts For Parent Account'>
+                                
+                            </group>
+
+                            <group string='Contact Roles'>
+                                <field name="contact_role_lines">
+                                    <tree string="Contact Roles" >
+                                        <field name="is_primary"/>
+                                        <field name="role"/>
+                                    </tree>
+                                </field>
+                            </group>
+
+                            <group string='Market Reserves'>
+                                <field name="market_reserve_ids">
+                                    <tree string="Market Reserve" >
+                                        <field name="Name"/>
+                                        <field name="Seller__c"/>
+                                        <field name="Start__c"/>
+                                        <!-- <field name="Datafim"/> This field is not available -->
+                                    </tree>
+                                </field>
+                            </group>
+
+                            <group string='Restricted Data'>
+                                <group>
+                                    <field name="quotation" />
+                                    <field name="contract_id"/>
+                                    <field name="market_reserve"/>
+                                    <field name="loss_reason"/>
+                                </group>
+                                <group>
+                                    <field name="stage_name"/>
+                                    <field name="mailing_origin"/>
+                                    <!-- <field name="market_reserve_ids" widget=''/> -->
+                                    <field name="motive_of_gain"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <page string="Closure">
+
+                            <group string='Opportunity Team'>
+                                <group>
+                                    <field name="opportunity_team_lines">
+                                        <tree string="Opportunity Team" >
+                                            <field name="id"/>
+                                            <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+
+                            <group string='Partners'>
+                                <group>
+                                    <field name="contact_partner_lines">
+                                        <tree string="Contract Partner" >
+                                            <field name="partner_id"/>
+                                            <field name="role"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                            <group string='Contract Data'>
+                                <group>
+                                    <field name="name"/>
+                                    <field name="account_id"/>
+                                    <field name="close_date" required='1'/>
+                                    <field name="periodicity_renewal"/>
+                                    <field name="forecast_category_name"/>
+                                    <field name="nominative"/>
+                                    <field name="employee"/>
+                                    <field name="life_contract"/>
+                                    <field name="campaigns_id"/>
+                                    <field name="main_competitors"/>
+                                    <field name="opportunity_event_source"/>
+                                    <field name="motive_of_gain"/>
+                                    <field name="revenue"/>
+                                    <field name="moderator_variable"/>
+                                    <field name="wage_limit_for_coparticipation"/>
+                                    <field name="wage_limit_amount"/>
+                                    <field name="special_condition"/>
+                                </group>
+                                <group>
+                                    <field name="probability"/>
+                                    <field name="channel_id"/>
+                                    <field name="contract_origin"/>
+                                    <field name="mainly_carrier"/>
+                                    <field name="benefits"/>
+                                    <field name="administrator_id"/>
+                                    <field name="revenue_politic"/>
+                                    <field name="payment_mode"/>
+                                    <field name="claim_limit"/>
+                                    <field name="lead_source"/>
+                                    <field name="mailing_origin"/>
+                                    <field name="cancel_information"/>
+                                    <field name="loss_reason"/>
+                                    <field name="contributory_descriptions"/>
+                                </group>
+                            </group>
+                            <group string='Contract Information'>
+                                <group>
+                                    <field name="life_contract"/>
+                                    <field name="close_date"/>
+                                    <field name="brokerage_transfer"/>
+                                    <field name="deployment_talk"/>
+                                    <field name="loss_reason"/>
+                                </group>
+                                <group>
+                                    <field name="contract_carrier"/>
+                                    <field name="periodicity_renewal"/>
+                                    <field name="has_dps"/>
+                                    <field name="motive_of_gain"/>
+                                </group>
+                            </group>
+
+                            <group string='Special Beneficiaries'>
+                                <group>
+                                    <field name="household"/>
+                                    <field name="fired"/>
+                                    <field name="retired"/>
+                                    <field name="absence"/>
+                                    <field name="interns"/>
+                                </group>
+                                <group>
+                                    <field name="service_supplier"/>
+                                    <field name="redeemed"/>
+                                    <field name="home_care"/>
+                                    <field name="child_with_disability"/>
+                                </group>
+                            </group>
+
+                            <group string='Financial'>
+                                <group>
+                                    <field name="payment_mode"/>
+                                    <!-- <field name="Home Scheduling"/> This field is not available -->
+                                    <field name="broking"/>
+                                    <field name="broker_number_benefit"/>
+                                    <field name="broker_value"/>
+                                    <field name="amount"/>
+                                    <field name="contributory_value"/>
+                                    <field name="fee_model"/>
+                                    <field name="calculation_basis"/>
+                                </group>
+                                <group>
+                                    <field name="invoice"/>
+                                    <field name="comission_schedule_start"/>
+                                    <field name="commision"/>
+                                    <field name="comission_number_benefit"/>
+                                    <field name="commision_value"/>
+                                    <field name="frequency"/>
+                                    <field name="amount"/>
+                                </group>
+                            </group>
+                        </page>
+
                     </notebook>
+                    </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers"/>
                         <field name="activity_ids" widget="mail_activity"/>

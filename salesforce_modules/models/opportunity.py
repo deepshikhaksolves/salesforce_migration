@@ -343,6 +343,8 @@ class SalesforceOpprtunity(models.Model):
     opportunity_quote_id = fields.Many2one('model_quote', string='Opportunity Quote')
     product_ids = fields.One2many('product.product', 'opportunity_id', string='Product Id')
 
+    market_reserve_ids = fields.One2many('model_market_reserve__c', 'Opportunity__c', string='Market Reserve')
+
 
 class Product(models.Model):
     _inherit = 'product.product'

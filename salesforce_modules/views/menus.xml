@@ -166,6 +166,8 @@
             <menuitem name="Broker Viagem" id="opportunity_bv_menu" parent='opportunity_parent_action_menu' action="opportunity_bv_action" sequence="14" />
             <menuitem name="Broker Vida" id="opportunity_b_vida_menu" parent='opportunity_parent_action_menu' action="opportunity_b_vida_action" sequence="15" />
             <menuitem name="Opportunity Layout" id="opportunity_layout_menu" parent='opportunity_parent_action_menu' action="opportunity_layout_action" sequence="16" />
+            <menuitem name="Record Type" id="record_type_opportunity_layout_menu" parent='opportunity_parent_action_menu' sequence="17" />
+                <menuitem name="Health PJ Layout" id="record_type_health_pj_layout_menu" parent='record_type_opportunity_layout_menu' action="health_pj_layout_action" sequence="1" />
 
         <!--Menu for Opportunity Contact Role-->
         <menuitem name="Opportunity Contact Role" id="opportunity_cr_parent_action_menu" parent='salesforce_menu_root' sequence='35'/>
