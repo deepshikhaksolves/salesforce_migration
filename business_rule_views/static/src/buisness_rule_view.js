@@ -17,8 +17,8 @@ odoo.define('business_rule_views.buisness_rule_view.js', function(require) {
                 args: ['', this.modelName],
             }).then((result)=>{
                 if(result){
-                     var state = this.model.get(this.handle, {raw: true});
-                if (this.renderer.business_rule_action.length > 0 && this.renderer.business_rule_action[0].show_popup && !(this.editable && !state.groupedBy.length)){
+                     var state = self.model.get(self.handle, {raw: true});
+                if (self.renderer.business_rule_action.length > 0 && self.renderer.business_rule_action[0].show_popup && !(self.editable && !state.groupedBy.length)){
                     self.do_action(result);
                 }else{
                     super_method.apply(self,arguments);
