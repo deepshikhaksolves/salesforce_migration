@@ -17,10 +17,8 @@
 
     # always loaded
     'data': [
-        # 'data/business_rule_model_data.xml',
         'security/ir.model.access.csv',
         'views/configuration_to_open_view.xml',
-        'views/res_config_settings_views.xml',
         'views/assets.xml',
     ],
 }
