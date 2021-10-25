@@ -388,6 +388,13 @@
             <menuitem name="Help Desk Layout Agent" id="help_desk_layout_agent_menu" parent='case_parent_action_menu' action="help_desk_layout_agent_action" />
             <menuitem name="New Contract Process Layout" id="new_contract_process_layout_menu" parent='case_parent_action_menu' action="new_contract_process_layout_action" />
             <menuitem name="Readjustment Layout" id="readjustment_layout_menu" parent='case_parent_action_menu' action="readjustment_layout_action" />
+            <menuitem name="Record Type Case" id="recordtype_case_parent_action_menu" parent="case_parent_action_menu"/>
+                <menuitem name="General Case" id="recordtype_general_case" parent="recordtype_case_parent_action_menu" action="case_recordtype_general_case_layout_action"/>
+                <menuitem name="Risk Management" id="recordtype_risk_management" parent="recordtype_case_parent_action_menu" action="case_recordtype_risk_management_layout_action"/>
+                <menuitem name="Help Desk" id="recordtype_helpdesk" parent="recordtype_case_parent_action_menu" action="case_recordtype_helpdesk_layout_action"/>
+                <menuitem name="Implamentation Request" id="recordtype_implamentation" parent="recordtype_case_parent_action_menu" action="case_recordtype_implamentation_layout_action"/>
+                <menuitem name="New Contract Process" id="recordtype_new_contract_process" parent="recordtype_case_parent_action_menu" action="case_recordtype_new_contract_process_layout_action"/>
+                <menuitem name="Readjustment" id="recordtype_readjustment" parent="recordtype_case_parent_action_menu" action="case_recordtype_readjustment_action"/>
 
         <!-- Case Model C -->
             <menuitem name="Case Model" id="case_model_c_menu" parent='salesforce_menu_root' action="case_model_c_action" sequence='100'/>
@@ -524,6 +531,28 @@
 
                 <menuitem name="Contact" id="res_partner_layout_menu" parent='contact_parent_action_menu' action="salres_partner_action"/>
                 <menuitem name="Contact Old" id="res_partner_old_layout_menu" parent='contact_parent_action_menu' action="salres_partner_old_action"/>
+
+        <!-- Record Type Contract -->
+        <menuitem name="RecordType Contract" id="recordtype_contract_action_menu" parent='salesforce_menu_root'/>
+               <menuitem name="Contract Health" id="contract_health_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_health_layout_action"/>
+               <menuitem name="Contract Dental" id="contract_dental_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_dental_layout_action"/>
+               <menuitem name="Contract Life" id="contract_life_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_life_layout_action"/>
+               <menuitem name="Contract Personal Accident" id="contract_personal_accident_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_accident_layout_action"/>
+               <menuitem name="Contract Medicine" id="contract_medicine_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_medicine_layout_action"/>
+               <menuitem name="Contract Consulting" id="contract_consulting_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_consulting_layout_action"/>
+               <menuitem name="Contract Medical Consulting" id="contract_medical_consulting_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_medical_consulting_layout_action"/>
+               <menuitem name="Contract Fee" id="contract_fee_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_fee_layout_action"/>
+               <menuitem name="Contract Meal" id="contract_meal_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_meal_layout_action"/>
+               <menuitem name="Contract Food" id="contract_food_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_food_layout_action"/>
+               <menuitem name="Contract Transportation" id="contract_transportation_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_transportation_layout_action"/>
+               <menuitem name="Contract Pension" id="contract_pension_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_pension_layout_action"/>
+               <menuitem name="Contract Car Fleet" id="contract_car_fleet_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_car_fleet_layout_action"/>
+               <menuitem name="Contract Car" id="contract_car_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_car_layout_action"/>
+               <menuitem name="Contract Fuel" id="contract_fuel_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_fuel_layout_action"/>
+               <menuitem name="Contract Occupational Health" id="contract_occupational_health_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_occupational_health_layout_action"/>
+               <menuitem name="Contract Checkup" id="contract_checkup_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_checkup_layout_action"/>
+               <menuitem name="Contract Vaccine" id="contract_vaccine_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_vaccine_layout_action"/>
+               <menuitem name="Contract I Protected" id="contract_iprotected_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_iprotected_layout_action"/>
 
     </data>
 </odoo>
