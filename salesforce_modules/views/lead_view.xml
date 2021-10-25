@@ -493,20 +493,24 @@
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <form string="Lead Physical Person Layout">
+                    <header>
+                        <field name="team_id" invisible="1"/>
+                        <field name="stage_id" widget='statusbar'/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
                                 <field name="phone"/>
                                 <field name="LeadSource"/>
                                 <field name="OwnerId"/>
-                                <field name="type"/>
+                                <field name="RecordTypeId"/>
                             </group>
                         </group>
                         <notebook>
                             <page string="Details">
                                 <group>
                                     <group>
-                                        <field name="name"/>
+                                        <field name="name" string='Full Name'/>
                                         <field name="actual_carrier__c"/>
                                         <field name="actual_invoice__c"/>
                                         <field name="phone"/>
@@ -594,7 +598,7 @@
 
         <!--Physical Person action        -->
         <record id="lead_physical_person_layout_action" model="ir.actions.act_window">
-            <field name="name">Lead Person Layout</field>
+            <field name="name">Physical Person Layout</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">crm.lead</field>
             <field name="view_mode">tree,form</field>
@@ -626,7 +630,7 @@
                                 <field name="phone"/>
                                 <field name="NumberOfEmployees"/>
                                 <field name="OwnerId"/>
-                                <field name="type"/>
+                                <field name="RecordTypeId"/>
                             </group>
                         </group>
                         <notebook>
@@ -638,8 +642,8 @@
                                         <field name="Business_Name__c"/>
                                         <field name="Financial_Group__c"/>
                                         <field name="Industry"/>
-                                        <field name="CNAE__c"/>
-                                        <field name="name"/>
+                                        <field name="CNAE__c" string='NINE'/>
+                                        <field name="name" string="Full Name"/>
                                         <field name="Title"/>
                                         <field name="phone"/>
                                         <field name="extension_number__c"/>
@@ -715,9 +719,9 @@
                                     </tree>
                                 </field>
                             </page>
-                            <page string="Related"></page>
-                            <page string="Market Place"></page>
-                            <page string="Opportunities/Contracts"></page>
+                            <!-- <page string="Related"></page> -->
+                            <!-- <page string="Market Place"></page> -->
+                            <!-- <page string="Opportunities/Contracts"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -740,12 +744,11 @@
                     <field name="type"/>
                     <field name="CNPJ__c"/>
                     <field name="cpf__c"/>
-                    <!--                    <field name="stage_id"/>-->
                 </tree>
             </field>
         </record>
 
-        <!--Legal Person action        -->
+        <!--Legal Person action-->
         <record id="legal_person_layout_action" model="ir.actions.act_window">
             <field name="name">Legal Person Layout</field>
             <field name="type">ir.actions.act_window</field>
