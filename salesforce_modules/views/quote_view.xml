@@ -933,7 +933,7 @@
 
         <!-- Quote technical_offer Layout action window -->
         <record id="quote_technical_offer_layout_action" model="ir.actions.act_window">
-            <field name="name">Quote technical_offer Layout Action</field>
+            <field name="name">Quote Technical Offer Layout Action</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>
             <field name="view_mode">tree,form</field>
@@ -1068,7 +1068,7 @@
 
         <!-- small business quotation Layout action window -->
         <record id="small_business_quotation_layout_action" model="ir.actions.act_window">
-            <field name="name">small business quotation Layout Action</field>
+            <field name="name">Small Business Quotation Layout Action</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>
             <field name="view_mode">tree,form</field>
@@ -1203,7 +1203,7 @@
 
         <!-- small pf quotation Layout action window -->
         <record id="small_pf_quotation_layout_action" model="ir.actions.act_window">
-            <field name="name">small pf quotation Layout Action</field>
+            <field name="name">Small PF Quotation Layout Action</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>
             <field name="view_mode">tree,form</field>

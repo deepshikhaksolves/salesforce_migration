@@ -1437,6 +1437,15 @@
                                 </group>
                             </page>
                             <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -1526,7 +1535,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -1618,7 +1635,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -1707,13 +1732,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -1803,13 +1830,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -1899,13 +1928,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -1983,13 +2014,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -2067,13 +2100,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -2157,13 +2192,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -2248,13 +2285,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -2339,13 +2378,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -2426,13 +2467,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -2513,13 +2556,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -2599,13 +2644,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -2690,13 +2737,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -2775,13 +2824,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -2860,13 +2911,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -2945,13 +2998,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="politic_bill_ids">
-                                    <tree>
-                                        <field name="plan_id"/>
-                                        <field name="life"/>
-                                        <field name="unitary_value"/>
-                                    </tree>
-                                </field>
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
