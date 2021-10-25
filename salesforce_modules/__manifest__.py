@@ -161,6 +161,8 @@
         'views/hr_contract.xml',
         'views/beneficiary_contracted_plan.xml',
         'views/res_partner.xml',
+        'views/recordtype_contract.xml',
+        'views/recordtype_cases.xml',
         'views/menus.xml',
 
 

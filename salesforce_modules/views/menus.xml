@@ -203,7 +203,7 @@
                 <menuitem name="Occupational Health Layout" id="record_type_occupational_health_layout_menu" parent='record_type_opportunity_layout_menu' action="occupational_health_layout_action" sequence="15" />
                 <menuitem name="checkup Layout" id="record_type_checkup_layout_menu" parent='record_type_opportunity_layout_menu' action="checkup_layout_action" sequence="16" />
                 <menuitem name="vaccine Layout" id="record_type_vaccine_layout_menu" parent='record_type_opportunity_layout_menu' action="vaccine_layout_action" sequence="17" />
-                
+
 
         <!--Menu for Opportunity Contact Role-->
         <menuitem name="Opportunity Contact Role" id="opportunity_cr_parent_action_menu" parent='salesforce_menu_root' sequence='35'/>
@@ -409,6 +409,14 @@
             <menuitem name="Readjustment Layout" id="readjustment_layout_menu" parent='case_parent_action_menu' action="readjustment_layout_action" /> -->
 
             <menuitem name="Case Email Layout" id="caseemail_lightning_layout_menu" parent='case_parent_action_menu' action="case_email_lightning_layout_action" sequence='1'/>
+            <menuitem name="Readjustment Layout" id="readjustment_layout_menu" parent='case_parent_action_menu' action="readjustment_layout_action" />
+            <menuitem name="Record Type Case" id="recordtype_case_parent_action_menu" parent="case_parent_action_menu"/>
+                <menuitem name="General Case" id="recordtype_general_case" parent="recordtype_case_parent_action_menu" action="case_recordtype_general_case_layout_action"/>
+                <menuitem name="Risk Management" id="recordtype_risk_management" parent="recordtype_case_parent_action_menu" action="case_recordtype_risk_management_layout_action"/>
+                <menuitem name="Help Desk" id="recordtype_helpdesk" parent="recordtype_case_parent_action_menu" action="case_recordtype_helpdesk_layout_action"/>
+                <menuitem name="Implamentation Request" id="recordtype_implamentation" parent="recordtype_case_parent_action_menu" action="case_recordtype_implamentation_layout_action"/>
+                <menuitem name="New Contract Process" id="recordtype_new_contract_process" parent="recordtype_case_parent_action_menu" action="case_recordtype_new_contract_process_layout_action"/>
+                <menuitem name="Readjustment" id="recordtype_readjustment" parent="recordtype_case_parent_action_menu" action="case_recordtype_readjustment_action"/>
 
         <!-- Case Model C -->
             <menuitem name="Case Model" id="case_model_c_menu" parent='salesforce_menu_root' action="case_model_c_action" sequence='100'/>
@@ -494,7 +502,7 @@
 
             <menuitem name="Benefit Policy Vaccine" id="benefit_policy_vaccine_menu" parent='benefit_policy_parent_menu' action="benefit_politic_vaccine_action"/>
 
-            
+
 
         <!--Policy Auto Layout Menu-->
             <menuitem name="Policy Auto" id="politica_auto_menu" parent='salesforce_menu_root' action="policy_layout_action" sequence='129'/>
@@ -561,6 +569,28 @@
 
                 <menuitem name="Contact" id="res_partner_layout_menu" parent='contact_parent_action_menu' action="salres_partner_action"/>
                 <menuitem name="Contact Old" id="res_partner_old_layout_menu" parent='contact_parent_action_menu' action="salres_partner_old_action"/>
+
+        <!-- Record Type Contract -->
+        <menuitem name="RecordType Contract" id="recordtype_contract_action_menu" parent='salesforce_menu_root'/>
+               <menuitem name="Contract Health" id="contract_health_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_health_layout_action"/>
+               <menuitem name="Contract Dental" id="contract_dental_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_dental_layout_action"/>
+               <menuitem name="Contract Life" id="contract_life_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_life_layout_action"/>
+               <menuitem name="Contract Personal Accident" id="contract_personal_accident_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_accident_layout_action"/>
+               <menuitem name="Contract Medicine" id="contract_medicine_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_medicine_layout_action"/>
+               <menuitem name="Contract Consulting" id="contract_consulting_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_consulting_layout_action"/>
+               <menuitem name="Contract Medical Consulting" id="contract_medical_consulting_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_medical_consulting_layout_action"/>
+               <menuitem name="Contract Fee" id="contract_fee_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_fee_layout_action"/>
+               <menuitem name="Contract Meal" id="contract_meal_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_meal_layout_action"/>
+               <menuitem name="Contract Food" id="contract_food_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_food_layout_action"/>
+               <menuitem name="Contract Transportation" id="contract_transportation_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_transportation_layout_action"/>
+               <menuitem name="Contract Pension" id="contract_pension_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_pension_layout_action"/>
+               <menuitem name="Contract Car Fleet" id="contract_car_fleet_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_car_fleet_layout_action"/>
+               <menuitem name="Contract Car" id="contract_car_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_car_layout_action"/>
+               <menuitem name="Contract Fuel" id="contract_fuel_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_fuel_layout_action"/>
+               <menuitem name="Contract Occupational Health" id="contract_occupational_health_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_occupational_health_layout_action"/>
+               <menuitem name="Contract Checkup" id="contract_checkup_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_checkup_layout_action"/>
+               <menuitem name="Contract Vaccine" id="contract_vaccine_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_vaccine_layout_action"/>
+               <menuitem name="Contract I Protected" id="contract_iprotected_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_iprotected_layout_action"/>
 
     </data>
 </odoo>
