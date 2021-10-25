@@ -1,25 +1,4 @@
 # -*- coding: utf-8 -*-
-# from odoo import http
-
-
-# class SalesforceModules(http.Controller):
-#     @http.route('/salesforce_modules/salesforce_modules/', auth='public')
-#     def index(self, **kw):
-#         return "Hello, world"
-
-#     @http.route('/salesforce_modules/salesforce_modules/objects/', auth='public')
-#     def list(self, **kw):
-#         return http.request.render('salesforce_modules.listing', {
-#             'root': '/salesforce_modules/salesforce_modules',
-#             'objects': http.request.env['salesforce_modules.salesforce_modules'].search([]),
-#         })
-
-#     @http.route('/salesforce_modules/salesforce_modules/objects/<model("salesforce_modules.salesforce_modules"):obj>/', auth='public')
-#     def object(self, obj, **kw):
-#         return http.request.render('salesforce_modules.object', {
-#             'object': obj
-#         })
-
 from odoo import http, api
 from odoo.http import request
 import json
@@ -29,16 +8,30 @@ class SalesforceAPI(http.Controller):
 
     @http.route('/acommodation', type="http", auth='public')
     def acomodation_search(self):
-        data = {}
-        # data = json.dumps({"data": "API Called Sucessfully"})
-        # print('Data========', data)
-        geo_rec = request.env['model_geographic_scope']
-        # geo_fields = request.env['ir.model.fields'].sudo().search([('model','=','model_geographic_scope')]).mapped('name')
-        print('user_data===>>>>',geo_rec.fields_get())
-
-        # fields_list = user_data.field_id.filtered(lambda r: r.model == 'account.analytic.account').mapped('name')
-        # print('fields====', fields_list)
-        # for rec in user_data:
-        #     print('rec========', rec)
-        # print('Data====', data)
-        # return json.dumps(data)
+        main_dict = {}
+        data_dict = {}
+        model_rec = request.env['ir.model'].sudo().search([])
+        geo_recs = request.env['model_geographic_scope'].sudo().search([])
+        field_ids = model_rec.field_id.filtered(lambda r: r.model == 'model_geographic_scope')
+        # fields_list = model_rec.field_id.filtered(lambda r: r.model == 'model_geographic_scope').mapped('name')
+        # print("Fields list======>>>>>", fields_list)
+        count = 0
+        for rec in geo_recs:
+            main_dict[str(rec.id)] = {}
+            for fields_rec in field_ids:
+                field_value = ''
+                if fields_rec.ttype in ['char', 'integer', 'date', 'datetime', 'selection', 'boolean']:
+                    field_value = str(rec[str(fields_rec.name)])
+                elif fields_rec.ttype == 'many2one':
+                    field_value = str(rec[str(fields_rec.name)].id)
+                elif fields_rec.ttype == 'one2many':
+                    field_value = rec[str(fields_rec.name)].ids
+                elif fields_rec.ttype == 'many2many':
+                    field_value = rec[str(fields_rec.name)].ids
+                if count <= len(field_ids):
+                    data_dict[str(fields_rec.name)] = field_value
+                    count + 1
+            main_dict[str(rec.id)].update(data_dict)
+        final_data = json.dumps(main_dict)
+        print('Final data========', final_data)
+        return final_data

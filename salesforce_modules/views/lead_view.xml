@@ -561,10 +561,10 @@
                                     </group>
 
                             </page>
-                            <page string="Benefits Policy"></page>
+                            <!-- <page string="Benefits Policy"></page>
                             <page string="Related"></page>
                             <page string="Market Place"></page>
-                            <page string="Opportunities/Contracts"></page>
+                            <page string="Opportunities/Contracts"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
