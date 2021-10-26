@@ -26,6 +26,7 @@
                                 <group string="Contract Information">
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -41,7 +42,7 @@
                                         <field name="cancellation_notice"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>
@@ -227,6 +228,7 @@
                                 <group string="Contract Information">
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -242,7 +244,7 @@
                                         <field name="cancellation_notice"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>
@@ -427,6 +429,7 @@
                                 <group string="Contract Information">
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -442,7 +445,7 @@
                                         <field name="cancellation_notice"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>
@@ -621,6 +624,7 @@
                                 <group string="Contract Information">
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -636,7 +640,7 @@
                                         <field name="cancellation_notice"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>
@@ -816,6 +820,7 @@
                                 <group string="Contract Information">
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -831,7 +836,7 @@
                                         <field name="cancellation_notice"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>
@@ -1017,6 +1022,7 @@
                                 <group string="Contract Information">
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -1032,7 +1038,7 @@
                                         <field name="cancellation_notice"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>
@@ -1199,6 +1205,7 @@
                                 <group string="Contract Information">
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -1213,7 +1220,7 @@
                                         <field name="adjustment_negotiation_notification"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
 <!--                                        <field name="carrier_2"/>-->
@@ -1381,6 +1388,7 @@
                                 <group string="Contract Information">
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -1395,7 +1403,7 @@
                                         <field name="adjustment_negotiation_notification"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
 <!--                                        <field name="carrier_2"/>-->
@@ -1563,6 +1571,7 @@
                                 <group string="Contract Information">
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -1578,7 +1587,7 @@
                                         <field name="cancellation_notice"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="pat_registration"/>
                                         <field name="benefits"/>
@@ -1763,6 +1772,7 @@
                                 <group string="Contract Information">
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -1778,7 +1788,7 @@
                                         <field name="cancellation_notice"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="pat_registration"/>
                                         <field name="benefits"/>
@@ -1963,6 +1973,7 @@
                                 <group string="Contract Information">
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -1978,7 +1989,7 @@
                                         <field name="cancellation_notice"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>
@@ -2161,6 +2172,7 @@
                                 <group string="Contract Information">
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -2176,7 +2188,7 @@
                                         <field name="cancellation_notice"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>
@@ -2351,6 +2363,7 @@
                                 <group string="Contract Information">
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -2364,7 +2377,7 @@
                                         <field name="adjustment_negotiation_notification"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>
@@ -2530,6 +2543,7 @@
                                 <group>
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -2543,7 +2557,7 @@
                                         <field name="adjustment_negotiation_notification"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>
@@ -2712,6 +2726,7 @@
                                 <group>
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -2727,7 +2742,7 @@
                                         <field name="cancellation_notice"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>
@@ -2909,6 +2924,7 @@
                                 <group>
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -2922,7 +2938,7 @@
                                         <field name="adjustment_negotiation_notification"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>
@@ -3090,6 +3106,7 @@
                                 <group>
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -3103,7 +3120,7 @@
                                         <field name="adjustment_negotiation_notification"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>
@@ -3273,6 +3290,7 @@
                                 <group>
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -3286,7 +3304,7 @@
                                         <field name="adjustment_negotiation_notification"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>
@@ -3456,6 +3474,7 @@
                                 <group>
                                     <group>
                                         <field name="financial_group"/>
+                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
                                         <field name="Account_id"/>
@@ -3471,7 +3490,7 @@
                                         <field name="cancellation_notice"/>
                                     </group>
                                     <group>
-                                        <field name="state"/>
+<!--                                        <field name="state"/>-->
                                         <field name="policy"/>
                                         <field name="benefits"/>
                                         <field name="carrier_2"/>

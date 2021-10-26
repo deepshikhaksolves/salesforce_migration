@@ -723,45 +723,37 @@
                                 <group string='Case Details'>
                                     <group>
                                         <field name="Subject"/>
+                                        <field name="Origin"/>
                                         <field name="Type"/>
+                                        <field name="Reason"/>
                                         <field name="Request"/>
                                         <field name="Priority"/>
                                         <field name="CreatedDate"/>
                                         <field name="ClosedDate"/>
-                                        <field name="SuppliedName"/>
-                                        <field name="SuppliedEmail"/>
                                         <field name="Cancelation_Reason"/>
-                                        <!-- <field name="entitlement name not found"/> -->
+                                        <field name="opportunity_id"/>
+                                        <field name="quote_id"/>
+                                        <field name="Stage"/>
+                                        <field name="beneficiary_id"/>
+                                        <field name="client_view_permission"/>
+                                        <field name="SuppliedEmail"/>
+                                        <field name="Description"/>
                                     </group>
                                     <group>
                                         <field name="AccountId"/>
                                         <field name="Contract_id"/>
                                         <field name="Contract_New"/>
                                         <field name="ContactId"/>
-                                        <field name="Origin"/>
-                                        <field name="client_view_permission"/>
-                                        <field name="Reopening"/>
-                                        <field name="Visible_to_the_Customer"/>
-                                        <field name="ParentId"/>
                                     </group>
                                 </group>
                             </page>
 
-                            <page string="Request">
-                                <group string='Customer Request'>
-                                    <group>
-                                        <field name="attendee_name"/>
-                                        <field name="Description"/>
-                                    </group>
-                                </group>
+                            <page string="Related">
+
                             </page>
 
-                            <page string="Related Services">
-                                <group string='Related Cases'>
-                                    <group>
-                                        <field name="ParentId"/>
-                                    </group>
-                                </group>
+                            <page string="Recipients">
+
                             </page>
                         </notebook>
                     </sheet>

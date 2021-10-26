@@ -3342,7 +3342,8 @@
                                     <field name="mailing_origin"/>
                                     <field name="cancel_information"/>
                                     <field name="loss_reason"/>
-                                    <!-- <field name="Taxpayer"/> This field is not found --> 
+                                    <field name="contributory"/>
+
                                     <field name="contributory_descriptions"/>
                                 </group>
                             </group>
@@ -3547,7 +3548,7 @@
                             <group string='Financial'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- <field name="Home Scheduling"/> This field is not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -3862,7 +3863,7 @@
                             <group string='Financial'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- <field name="Home Scheduling"/> This field is not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -3987,7 +3988,7 @@
                                     <field name="brokerage_transfer"/>
                                 </group>
                                 <group>
-                                    <!-- Taxpayer field is not available -->
+                                    <field name="contributory"/>
                                     <field name='contributory_descriptions'/>
                                     <field name="periodicity_renewal"/>
                                     <field name="has_dps"/>
@@ -3997,7 +3998,7 @@
                             <group string='Financial'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- <field name="Home Scheduling"/> This field is not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -4307,7 +4308,7 @@
                                     <field name="brokerage_transfer"/>
                                 </group>
                                 <group>
-                                    <!-- Taxpayer field is not available -->
+
                                     <field name='contributory_descriptions'/>
                                     <field name="periodicity_renewal"/>
                                     <field name="has_dps"/>
@@ -4317,7 +4318,8 @@
                             <group string='Financial'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- <field name="Home Scheduling"/> This field is not available -->
+                                    <field name="broker_schedule_start"/>
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -4524,7 +4526,7 @@
                             <group string='Financial'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- <field name="Home Scheduling"/> This field is not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -4617,10 +4619,11 @@
                                     <field name="campaigns_id"/>
                                     <field name="nominative"/>
                                     <field name="opportunity_event_source"/>
-                                    <field name="capital"/>
-                                    <field name="total_capital"/>
-                                    <field name="min_capital_limit"/>
+<!--                                    <field name="capital"/>-->
+<!--                                    <field name="total_capital"/>-->
+<!--                                    <field name="min_capital_limit"/>-->
                                     <field name="life"/>
+                                    <field name="mainly_carrier"/>
                                     <field name="contract_carrier"/>
                                     <field name="partnership"/>
                                 </group>
@@ -4653,7 +4656,7 @@
                                     <field name="wage_limit_for_coparticipation"/>
                                     <field name="wage_limit_amount"/>
                                     <field name="moderator_variable_value"/>
-                                    <!-- Taxpayer field is not available -->
+                                   <field name="contributory"/>
                                     <field name="contributory_descriptions"/>
                                     <field name="contributory_value"/>
                                     <field name="periodicity_renewal"/>
@@ -4664,7 +4667,7 @@
                             <group string='Financial'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- <field name="Home Scheduling"/> This field is not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -4953,7 +4956,7 @@
                                     <field name="mailing_origin"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="comission_number_benefit"/>
-                                    <!-- home scheduling - scheduling missing -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="comission_schedule_start"/>
                                     <field name="broker_first_installment_value"/>
                                     <field name="comission_first_installment_value"/>
@@ -4996,7 +4999,7 @@
                                     <field name="wage_limit_for_coparticipation"/>
                                     <field name="wage_limit_amount"/>
                                     <field name="moderator_variable_value"/>
-                                    <!-- Taxpayer field is not available -->
+                                    <field name="contributory"/>
                                     <field name="contributory_descriptions"/>
                                     <field name="contributory_value"/>
                                     <field name="periodicity_renewal"/>
@@ -5007,7 +5010,7 @@
                             <group string='Financial'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- <field name="Home Scheduling"/> This field is not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -5058,7 +5061,7 @@
                             <group string='Contract Financial Data'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- home scheduling not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -5286,7 +5289,7 @@
                                     <field name="mailing_origin"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="comission_number_benefit"/>
-                                    <!-- home scheduling - scheduling missing -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="comission_schedule_start"/>
                                     <field name="broker_first_installment_value"/>
                                     <field name="comission_first_installment_value"/>
@@ -5366,7 +5369,7 @@
                             <group string='Contract Financial Data'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- home scheduling not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -5636,7 +5639,7 @@
                                     <field name="invoice"/>
                                 </group>
                                 <group>
-                                    <!-- <field name="Home Scheduling"/> This field is not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -5708,7 +5711,7 @@
                             <group string='Contract Financial Data'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- home scheduling not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -5978,7 +5981,7 @@
                                     <field name="invoice"/>
                                 </group>
                                 <group>
-                                    <!-- <field name="Home Scheduling"/> This field is not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -6050,7 +6053,7 @@
                             <group string='Contract Financial Data'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- home scheduling not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -6317,7 +6320,7 @@
                                     <field name="invoice"/>
                                 </group>
                                 <group>
-                                    <!-- <field name="Home Scheduling"/> This field is not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -6389,7 +6392,7 @@
                             <group string='Contract Financial Data'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- home scheduling not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -6614,6 +6617,9 @@
                                     <field name="main_competitors"/>
                                     <field name="campaigns_id"/>
                                     <field name="opportunity_event_source"/>
+                                    <field name="type_of_pension"/>
+                                    <field name="pension_mode"/>
+                                    <field name="revenue_politic"/>
                                     <field name="deployment_talk"/>
                                     <field name="contract_carrier"/>
                                     <field name="partnership"/>
@@ -6657,7 +6663,7 @@
                             <group string='Financial'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- <field name="Home Scheduling"/> This field is not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -6722,7 +6728,7 @@
                             <group string='Contract Financial Data'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- home scheduling not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -6946,8 +6952,9 @@
                                     <field name="probability"/>
                                     <field name="main_competitors"/>
                                     <field name="campaigns_id"/>
-                                    <field name="opportunity_event_source"/>
-                                    <field name="deployment_talk"/>
+                                    <field name="nominative"/>
+                                    <field name="motive_of_gain"/>
+                                    <field name="mainly_carrier"/>
                                     <field name="contract_carrier"/>
                                     <field name="partnership"/>
                                 </group>
@@ -6958,6 +6965,7 @@
                                     <field name="benefits"/>
                                     <field name="mailing_origin"/>
                                     <field name="cancel_information"/>
+                                    <field name="opportunity_event_source"/>
                                     <field name="loss_reason"/>
                                     <field name="lost_comment"/>
                                     <field name="revenue_politic"/>
@@ -6977,7 +6985,7 @@
                             <group string='Financial'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- <field name="Home Scheduling"/> This field is not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -7042,7 +7050,7 @@
                             <group string='Contract Financial Data'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- home scheduling not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -7270,7 +7278,7 @@
                                     <field name="mailing_origin"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="comission_number_benefit"/>
-                                    <!-- home scheduling not found -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="comission_schedule_start"/>
                                     <field name="broker_first_installment_value"/>
                                     <field name="comission_first_installment_value"/>
@@ -7350,7 +7358,7 @@
                             <group string='Contract Financial Data'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- home scheduling not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -7576,6 +7584,7 @@
                                     <field name="campaigns_id"/>
                                     <field name="nominative"/>
                                     <field name="opportunity_event_source"/>
+                                    <field name="mainly_carrier"/>
                                     <field name="deployment_talk"/>
                                     <field name="contract_carrier"/>
                                     <field name="partnership"/>
@@ -7616,7 +7625,7 @@
                                     <field name="invoice"/>
                                 </group>
                                 <group>
-                                    <!-- <field name="Home Scheduling"/> This field is not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -7659,19 +7668,19 @@
                             </group>
                         </page>
 
-                        <page string="Current Policy">
-                            <group>
-                                <field name="benefit_politic_ids">
-                                    <tree>
-                                        <field name="Name"/>
-                                        <field name="Contract_End"/>
-                                        <field name="Life"/>
-                                        <field name="Monthly_Bill"/>
-                                        <field name="Revenue"/>
-                                    </tree>
-                                </field>
-                            </group>
-                        </page>
+<!--                        <page string="Current Policy">-->
+<!--                            <group>-->
+<!--                                <field name="benefit_politic_ids">-->
+<!--                                    <tree>-->
+<!--                                        <field name="Name"/>-->
+<!--                                        <field name="Contract_End"/>-->
+<!--                                        <field name="Life"/>-->
+<!--                                        <field name="Monthly_Bill"/>-->
+<!--                                        <field name="Revenue"/>-->
+<!--                                    </tree>-->
+<!--                                </field>-->
+<!--                            </group>-->
+<!--                        </page>-->
 
                         <page string="Proposed">
                             <group string="Quotes">
@@ -7689,7 +7698,7 @@
                             <group string='Contract Financial Data'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- home scheduling not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -8008,7 +8017,7 @@
                             <group string='Contract Financial Data'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- home scheduling not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -8327,7 +8336,7 @@
                             <group string='Contract Financial Data'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- home scheduling not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
@@ -8578,7 +8587,7 @@
                                 </group>
                                 <group>
                                     <field name="periodicity_renewal"/>
-                                    <field name="provider"/>
+                                    <field name="places"/>
                                 </group>
                             </group>
 
@@ -8646,7 +8655,7 @@
                             <group string='Contract Financial Data'>
                                 <group>
                                     <field name="payment_mode"/>
-                                    <!-- home scheduling not available -->
+                                    <field name="broker_schedule_start"/>
                                     <field name="broking"/>
                                     <field name="broker_number_benefit"/>
                                     <field name="broker_value"/>
