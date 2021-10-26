@@ -4,7 +4,7 @@
     <menuitem name="PIT: Help Desk Agent" web_icon="salesforce_modules,static/description/salesforce_migration_logo.png" id="salesforce_help_desk_agent_menu_root" />
       <!-- <menuitem name="Inicial" id="sf_help_desk_agent_inicial_action_menu" parent='salesforce_help_desk_agent_menu_root' sequence='1'/> -->
 
-      <menuitem name="Cases" id="sf_help_desk_agent_cases_action_menu" parent='salesforce_help_desk_agent_menu_root' action='salesforce_modules.case_risk_management_action' sequence='2'/>
+      <menuitem name="Cases" id="sf_help_desk_agent_cases_action_menu" parent='salesforce_help_desk_agent_menu_root' action='salesforce_modules.case_recordtype_general_case_layout_action' sequence='2'/>
 
       <menuitem name="Publications Apps" id="sf_help_desk_agent_publications_apps_action_menu" parent='salesforce_help_desk_agent_menu_root' action='' sequence='3'/>
 
