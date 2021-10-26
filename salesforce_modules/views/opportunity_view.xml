@@ -3365,15 +3365,15 @@
                                     <field name="campaigns_id"/>
                                 </group>
                             </group>
-                            <group string='Events Control'>
+                            <!-- <group string='Events Control'>
 
-                            </group>
+                            </group> -->
                         </page>
-                        <page string="Benefit Policy">
+                        <!-- <page string="Benefit Policy">
                             <group>
                                 
                             </group>
-                        </page>
+                        </page> -->
 
                         <page string="Proposed">
                             <group string="Quotes">
@@ -8184,7 +8184,7 @@
 
         <!-- occupational_health Lightning Layout tree view -->
         <record id="occupational_health_layout_tree" model="ir.ui.view">
-            <field name="name">occupational_health Layout Tree</field>
+            <field name="name">Occupational Health Layout Tree</field>
             <field name="model">crm.lead</field>
             <field name="arch" type="xml">
                 <tree>
@@ -8198,7 +8198,7 @@
 
         <!-- occupational_health Layout action window -->
         <record id="occupational_health_layout_action" model="ir.actions.act_window">
-            <field name="name">occupational_health Layout</field>
+            <field name="name">Occupational Health Layout</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">crm.lead</field>
             <field name="view_mode">tree,form</field>
