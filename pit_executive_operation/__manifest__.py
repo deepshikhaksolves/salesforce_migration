@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "PIT Executive: Operations",
+    'name': "PIT Executive: Operation",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
