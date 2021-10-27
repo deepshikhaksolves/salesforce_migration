@@ -3,8 +3,8 @@
     <menuitem name="PIT: Executive Channels" web_icon="salesforce_modules,static/description/salesforce_migration_logo.png" id="pit_exe_channel_menu_root" />
     <menuitem name="Dashboard Ninja" id="d_ninja_parent_menu" parent='pit_exe_channel_menu_root' sequence='1'/>
     <menuitem name="Brokers" id="broker_parent_menu" parent='pit_exe_channel_menu_root' action='salesforce_modules.broker_action' sequence='2'/>
-    <menuitem name="Leads" id="lead_parent_menu" parent='pit_exe_channel_menu_root' action='salesforce_modules.broker_lead_layout_pf_action' sequence='3'/>
-    <menuitem name="Opportunity" id="opportunity_parent_menu" parent='pit_exe_channel_menu_root' action='salesforce_modules.opportunity_pab_action' sequence='4'/>
-    <menuitem name="Quote " id="quote_parent_menu" parent='pit_exe_channel_menu_root' action='salesforce_modules.quote_broker_benchmarking_layout_action' sequence='5'/>
+    <menuitem name="Leads" id="lead_parent_menu" parent='pit_exe_channel_menu_root' action='salesforce_modules.lead_physical_person_layout_action' sequence='3'/>
+    <menuitem name="Opportunity" id="opportunity_parent_menu" parent='pit_exe_channel_menu_root' action='salesforce_modules.health_pj_layout_action' sequence='4'/>
+    <menuitem name="Quote " id="quote_parent_menu" parent='pit_exe_channel_menu_root' action='salesforce_modules.quote_price_layout_action' sequence='5'/>
   </data>
 </odoo>
