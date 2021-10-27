@@ -259,7 +259,13 @@ class Account(models.Model):
          ('Fortaleza CE', 'Fortaleza CE'), ('Goiás GO', 'Goiás GO'), ('Bahia BA', 'Bahia BA'),
          ('Vasco da Gama RJ', 'Vasco da Gama RJ'), ('Atlético MG', 'Atlético MG'), ('Fluminense RJ', 'Fluminense RJ'),
          ('Botafogo RJ', 'Botafogo RJ'), ('Ceará CE', 'Ceará CE'), ('Cruzeiro MG', 'Cruzeiro MG'), ('CSA AL', 'CSA AL'),
-         ('Chapecoense SC', 'Chapecoense SC'), ('Avaí SC', 'Avaí SC')], 'Sport Practice', track_visibility='onchange')
+         ('Chapecoense SC', 'Chapecoense SC'), ('Avaí SC', 'Avaí SC')], 'Soccer Team', track_visibility='onchange')
+
+    sport_practice__pc = fields.Selection(
+        [('Futebol', 'Futebol'), ('Basquetebol', 'Basquetebol'), ('Surf', 'Surf'),
+         ('Golf', 'Golf'), ('Tênis', 'Tênis'), ('Corrida', 'Corrida'),
+         ('Voleibol', 'Voleibol'), ('Equitação', 'Equitação'),
+         ('Alpinismo', 'Alpinismo'), ('Iatismo', 'Iatismo')], 'Sport Practice', track_visibility='onchange')
 
     spouse_birth_date__pc = fields.Date('Spouse Birth Date', track_visibility='onchange')
     spouse_gender__pc = fields.Selection([('Female', 'Female'), ('Male', 'Male')], 'Spouse Gender', track_visibility='onchange')

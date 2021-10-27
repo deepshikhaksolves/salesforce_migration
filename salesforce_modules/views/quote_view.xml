@@ -718,5 +718,618 @@
             </field>
         </record>
 
+        <!--Quote price lightning Layout Start-->
+        <record id="quote_price_layout_form" model="ir.ui.view">
+            <field name="name">Quote Price Layout Form</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <form string="Quote Price Layout">
+                    <header>
+                        <field name="Status" widget='statusbar'/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <!-- Ringing field not found -->
+                                <field name="OpportunityId"/>
+                                <field name="request_date"/>
+                                <field name="OwnerId"/>
+                                <field name="RecordTypeId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name"/>
+                                        <field name="OpportunityId"/>
+                                        <field name="Quotation_Reason"/>
+                                    </group>
+                                    <group>
+                                        <field name="OwnerId"/>
+                                        <field name="QuoteNumber"/>
+                                        <field name="AccountId"/>
+                                        <field name="RecordTypeId"/>
+                                    </group>
+                                </group>
+
+                                <group string='System Information'>
+                                    <group>
+                                        <field name="create_uid"/>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                        <field name="cpf"/>
+                                        <field name="CNPJ"/>
+                                        <field name="email_from"/>
+                                        <field name="send_email"/>
+                                        <field name="last_quote"/>
+                                        <field name="account_owner"/>
+                                        <field name="status_change_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="create_date" string='Creation Date'/>
+                                        <field name="request_date"/>
+                                        <field name="Case"/>
+                                        <field name="ExpirationDate"/>
+                                        <field name="opportunity_current_user"/>
+                                        <field name="owner_current_user"/>
+                                        <field name="opportunity_owner"/>
+                                        <field name="estimated_revenue"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="additional_parameter_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                            <field name="type"/>
+                                            <field name="value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Quote Price Layout tree view -->
+        <record id="quote_price_layout_tree" model="ir.ui.view">
+            <field name="name">Quote Price Layout Tree</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="QuoteNumber"/>
+                    <field name="OpportunityId"/>
+                    <field name="AccountId"/>
+                    <field name="CNPJ"/>
+                    <field name="cpf"/>
+                    <field name="ContactId"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Quote Price Layout action window -->
+        <record id="quote_price_layout_action" model="ir.actions.act_window">
+            <field name="name">Quote Price Layout Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_quote</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('quote_price_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('quote_price_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--Quote Technical Offer lightning Layout Start-->
+        <record id="quote_technical_offer_layout_form" model="ir.ui.view">
+            <field name="name">Quote Technical Offer Layout Form</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <form string="Quote Technical Offer Layout">
+                    <header>
+                        <field name="Status" widget='statusbar'/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <!-- Ringing field not found -->
+                                <field name="OpportunityId"/>
+                                <field name="request_date"/>
+                                <field name="OwnerId"/>
+                                <field name="RecordTypeId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name"/>
+                                        <field name="OpportunityId"/>
+                                        <field name="Quotation_Reason"/>
+                                    </group>
+                                    <group>
+                                        <field name="QuoteNumber"/>
+                                        <field name="AccountId"/>
+                                        <field name="RecordTypeId"/>
+                                    </group>
+                                </group>
+
+                                <group string='System Information'>
+                                    <group>
+                                        <field name="create_uid"/>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                        <field name="cpf"/>
+                                        <field name="CNPJ"/>
+                                        <field name="email_from"/>
+                                        <field name="send_email"/>
+                                        <field name="last_quote"/>
+                                        <field name="account_owner"/>
+                                        <field name="status_change_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="create_date" string='Creation Date'/>
+                                        <field name="request_date"/>
+                                        <field name="Case"/>
+                                        <field name="ExpirationDate"/>
+                                        <field name="opportunity_current_user"/>
+                                        <field name="owner_current_user"/>
+                                        <field name="opportunity_owner"/>
+                                        <field name="estimated_revenue"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="additional_parameter_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                            <field name="type"/>
+                                            <field name="value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Quote technical_offer Layout tree view -->
+        <record id="quote_technical_offer_layout_tree" model="ir.ui.view">
+            <field name="name">Quote technical_offer Layout Tree</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="QuoteNumber"/>
+                    <field name="OpportunityId"/>
+                    <field name="AccountId"/>
+                    <field name="CNPJ"/>
+                    <field name="cpf"/>
+                    <field name="ContactId"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Quote technical_offer Layout action window -->
+        <record id="quote_technical_offer_layout_action" model="ir.actions.act_window">
+            <field name="name">Quote Technical Offer Layout Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_quote</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('quote_technical_offer_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('quote_technical_offer_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--small business quotation lightning Layout Start-->
+        <record id="small_business_quotation_layout_form" model="ir.ui.view">
+            <field name="name">small business quotation Layout Form</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <form string="small business quotation Layout">
+                    <header>
+                        <field name="Status" widget='statusbar'/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <!-- Ringing field not found -->
+                                <field name="AccountId"/>
+                                <field name="ExpirationDate"/>
+                                <field name="OwnerId"/>
+                                <field name="phone"/>
+                                <field name="RecordTypeId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name"/>
+                                        <field name="OpportunityId"/>
+                                        <field name="AccountId"/>
+                                        <field name="CNPJ"/>
+                                         <field name="cpf"/>
+                                         <field name="ContactId"/>
+                                         <field name="phone"/>
+                                         <field name="Email"/>
+                                         <field name="cc_email"/>
+                                         <field name="parent_quote_id"/>
+                                         <field name="returned_reason"/>
+                                         <field name="proposal_number"/>
+                                        <field name="Original_Quote_Number"/>
+                                    </group>
+                                    <group>
+                                        <field name="QuoteNumber"/>
+                                        <field name="study_configuration_id"/>
+                                        <field name="RecordTypeId"/>
+                                        <field name="lead_source"/>
+                                        <field name="Mailing_Font"/>
+                                        <field name="verified_partnership"/>
+                                        <field name="estimated_revenue"/>
+                                        <field name="admin_proposal"/>
+                                        <field name="admin_proposal_date"/>
+                                        <field name="Motive_Of_Gain"/>
+                                        <field name="Loss_Reason"/>
+                                        <field name="OwnerId"/>
+                                        <field name="made_by"/>
+                                    </group>
+                                </group>
+
+                                <group string='System Information'>
+                                    <group>
+                                        <field name="create_uid"/>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                        <field name="cpf"/>
+                                        <field name="CNPJ"/>
+                                        <field name="email_from"/>
+                                        <field name="send_email"/>
+                                        <field name="last_quote"/>
+                                        <field name="account_owner"/>
+                                        <field name="status_change_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="create_date" string='Creation Date'/>
+                                        <field name="request_date"/>
+                                        <field name="Case"/>
+                                        <field name="ExpirationDate"/>
+                                        <field name="opportunity_current_user"/>
+                                        <field name="owner_current_user"/>
+                                        <field name="opportunity_owner"/>
+                                        <field name="estimated_revenue"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="additional_parameter_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                            <field name="type"/>
+                                            <field name="value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- small business quotation Layout tree view -->
+        <record id="small_business_quotation_layout_tree" model="ir.ui.view">
+            <field name="name">small business quotation Layout Tree</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="QuoteNumber"/>
+                    <field name="OpportunityId"/>
+                    <field name="AccountId"/>
+                    <field name="CNPJ"/>
+                    <field name="cpf"/>
+                    <field name="ContactId"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- small business quotation Layout action window -->
+        <record id="small_business_quotation_layout_action" model="ir.actions.act_window">
+            <field name="name">Small Business Quotation Layout Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_quote</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('small_business_quotation_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('small_business_quotation_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--small pf quotation lightning Layout Start-->
+        <record id="small_pf_quotation_layout_form" model="ir.ui.view">
+            <field name="name">small pf quotation Layout Form</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <form string="small pf quotation Layout">
+                    <header>
+                        <field name="Status" widget='statusbar'/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <!-- Ringing field not found -->
+                                <field name="AccountId"/>
+                                <field name="ExpirationDate"/>
+                                <field name="OwnerId"/>
+                                <field name="phone"/>
+                                <field name="RecordTypeId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name"/>
+                                        <field name="OpportunityId"/>
+                                        <field name="AccountId"/>
+                                        <field name="CNPJ"/>
+                                         <field name="cpf"/>
+                                         <field name="ContactId"/>
+                                         <field name="phone"/>
+                                         <field name="Email"/>
+                                         <field name="cc_email"/>
+                                         <field name="parent_quote_id"/>
+                                         <field name="returned_reason"/>
+                                         <field name="proposal_number"/>
+                                        <field name="Original_Quote_Number"/>
+                                    </group>
+                                    <group>
+                                        <field name="QuoteNumber"/>
+                                        <field name="study_configuration_id"/>
+                                        <field name="RecordTypeId"/>
+                                        <field name="lead_source"/>
+                                        <field name="Mailing_Font"/>
+                                        <field name="verified_partnership"/>
+                                        <field name="estimated_revenue"/>
+                                        <field name="admin_proposal"/>
+                                        <field name="admin_proposal_date"/>
+                                        <field name="Motive_Of_Gain"/>
+                                        <field name="Loss_Reason"/>
+                                        <field name="OwnerId"/>
+                                        <field name="made_by"/>
+                                    </group>
+                                </group>
+
+                                <group string='System Information'>
+                                    <group>
+                                        <field name="create_uid"/>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                        <field name="cpf"/>
+                                        <field name="CNPJ"/>
+                                        <field name="email_from"/>
+                                        <field name="send_email"/>
+                                        <field name="last_quote"/>
+                                        <field name="account_owner"/>
+                                        <field name="status_change_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="create_date" string='Creation Date'/>
+                                        <field name="request_date"/>
+                                        <field name="Case"/>
+                                        <field name="ExpirationDate"/>
+                                        <field name="opportunity_current_user"/>
+                                        <field name="owner_current_user"/>
+                                        <field name="opportunity_owner"/>
+                                        <field name="estimated_revenue"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="additional_parameter_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                            <field name="type"/>
+                                            <field name="value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- small pf quotation Layout tree view -->
+        <record id="small_pf_quotation_layout_tree" model="ir.ui.view">
+            <field name="name">small pf quotation Layout Tree</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="QuoteNumber"/>
+                    <field name="OpportunityId"/>
+                    <field name="AccountId"/>
+                    <field name="CNPJ"/>
+                    <field name="cpf"/>
+                    <field name="ContactId"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- small pf quotation Layout action window -->
+        <record id="small_pf_quotation_layout_action" model="ir.actions.act_window">
+            <field name="name">Small PF Quotation Layout Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_quote</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('small_pf_quotation_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('small_pf_quotation_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--benchmarking lightning Layout Start-->
+        <record id="benchmarking_layout_form" model="ir.ui.view">
+            <field name="name">benchmarking Layout Form</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <form string="benchmarking Layout">
+                    <header>
+                        <field name="Status" widget='statusbar'/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <!-- Ringing field not found -->
+                                <field name="AccountId"/>
+                                <field name="ExpirationDate"/>
+                                <field name="OwnerId"/>
+                                <field name="phone"/>
+                                <field name="RecordTypeId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name"/>
+                                        <field name="OpportunityId"/>
+                                        <field name="Quotation_Reason"/>
+                                    </group>
+                                    <group>
+                                        <field name="QuoteNumber"/>
+                                        <field name="AccountId"/>
+                                        <field name="RecordTypeId"/>
+                                    </group>
+                                </group>
+
+                                <group string='System Information'>
+                                    <group>
+                                        <field name="create_uid"/>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                        <field name="cpf"/>
+                                        <field name="CNPJ"/>
+                                        <field name="email_from"/>
+                                        <field name="send_email"/>
+                                        <field name="last_quote"/>
+                                        <field name="account_owner"/>
+                                        <field name="status_change_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="create_date" string='Creation Date'/>
+                                        <field name="request_date"/>
+                                        <field name="Case"/>
+                                        <field name="ExpirationDate"/>
+                                        <field name="opportunity_current_user"/>
+                                        <field name="owner_current_user"/>
+                                        <field name="opportunity_owner"/>
+                                        <field name="estimated_revenue"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="additional_parameter_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                            <field name="type"/>
+                                            <field name="value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- benchmarking Layout tree view -->
+        <record id="benchmarking_layout_tree" model="ir.ui.view">
+            <field name="name">benchmarking Layout Tree</field>
+            <field name="model">model_quote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="QuoteNumber"/>
+                    <field name="OpportunityId"/>
+                    <field name="AccountId"/>
+                    <field name="CNPJ"/>
+                    <field name="cpf"/>
+                    <field name="ContactId"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- benchmarking Layout action window -->
+        <record id="benchmarking_layout_action" model="ir.actions.act_window">
+            <field name="name">Benchmarking Layout Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_quote</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benchmarking_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benchmarking_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
     </data>
 </odoo>

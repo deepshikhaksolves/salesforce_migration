@@ -143,6 +143,7 @@ class ModelQuote(models.Model):
     opportunity_ids = fields.One2many('crm.lead','opportunity_quote_id',string='Opportunity')
     case_ids = fields.One2many('model_case','case_quote_id', string='Case')
     quote_product_ids = fields.One2many('model_quote_products', 'quote_product_id', string='Quotation Product')
+    additional_parameter_ids = fields.One2many('model_additional_parameter', 'quote_id', string='Additional Parameter')
 
 
 

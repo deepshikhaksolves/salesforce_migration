@@ -699,5 +699,101 @@
             </field>
         </record>
 
+        <!--case lightning Layout form view -->
+        <record id="case_lightning_layout_form" model="ir.ui.view">
+            <field name="name">case Layout</field>
+            <field name="model">model_case</field>
+            <field name="arch" type="xml">
+                <form string="case Layout">
+                <header>
+                    <field name="Status" widget="statusbar"/>
+                </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="CaseNumber"/>
+                                <field name="Type"/>
+                                <field name="Request"/>
+                                <field name="Priority"/>
+                                <field name="OwnerId"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group string='Case Details'>
+                                    <group>
+                                        <field name="Subject"/>
+                                        <field name="Origin"/>
+                                        <field name="Type"/>
+                                        <field name="Reason"/>
+                                        <field name="Request"/>
+                                        <field name="Priority"/>
+                                        <field name="CreatedDate"/>
+                                        <field name="ClosedDate"/>
+                                        <field name="Cancelation_Reason"/>
+                                        <field name="opportunity_id"/>
+                                        <field name="quote_id"/>
+                                        <field name="Stage"/>
+                                        <field name="beneficiary_id"/>
+                                        <field name="client_view_permission"/>
+                                        <field name="SuppliedEmail"/>
+                                        <field name="Description"/>
+                                    </group>
+                                    <group>
+                                        <field name="AccountId"/>
+                                        <field name="Contract_id"/>
+                                        <field name="Contract_New"/>
+                                        <field name="ContactId"/>
+                                    </group>
+                                </group>
+                            </page>
+
+                            <page string="Related">
+
+                            </page>
+
+                            <page string="Recipients">
+
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- case Layout tree view -->
+        <record id="case_lightning_layout_tree" model="ir.ui.view">
+            <field name="name">case Layout Tree</field>
+            <field name="model">model_case</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Type"/>
+                    <field name="Subject"/>
+                    <field name="Description"/>
+                    <field name="AccountId"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- case Layout action window -->
+        <record id="case_email_lightning_layout_action" model="ir.actions.act_window">
+            <field name="name">case lightning Layout Action Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_case</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('case_lightning_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('case_lightning_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
     </data>
 </odoo>

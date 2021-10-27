@@ -74,6 +74,7 @@ class SalesforceLead(models.Model):
     Lead__c = fields.Char('Lead',track_visibility='onchange')
     OwnerId = fields.Many2one('res.users', string='Lead Owner',track_visibility='onchange')
     # RecordTypeId already in odoo i.e(type)
+    RecordTypeId = fields.Char(string='Record Type', track_visibility='onchange')
 
     LeadSource = fields.Selection(
         [('Quotator', 'Quotator'), ('Customer Event', 'Customer Event'), ('Exposure', 'Exposure'),

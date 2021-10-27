@@ -1406,8 +1406,8 @@
                             <page string="Details">
                                 <group>
                                     <group>
-                                        <field name="Name" string="Benefit Policy"/>
-                                        <field name="Benefits"/>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
                                         <field name="carrier_2_id"/>
                                         <field name="Effective_time_at_current_carrier"/>
                                         <field name="Contract_End"/>
@@ -1437,6 +1437,15 @@
                                 </group>
                             </page>
                             <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -1495,8 +1504,8 @@
                             <page string="Details">
                                 <group>
                                     <group>
-                                        <field name="Name" string="Benefit Policy"/>
-                                        <field name="Benefits"/>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
                                         <field name="carrier_2_id"/>
                                         <field name="Effective_time_at_current_carrier"/>
                                         <field name="Contract_End"/>
@@ -1526,7 +1535,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -1585,8 +1602,8 @@
                             <page string="Details">
                                 <group>
                                     <group>
-                                        <field name="Name" string="Benefit Policy"/>
-                                        <field name="Benefits"/>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
                                         <field name="carrier_2_id"/>
                                         <field name="Contract_End"/>
                                         <field name="Contract_Type"/>
@@ -1618,7 +1635,15 @@
                                 </group>
                             </page>
                             <page string="Related">
-
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -1651,6 +1676,1370 @@
             <field name="view_ids" eval="[(5, 0, 0),
                 (0, 0, {'view_mode': 'tree', 'view_id': ref('pension_benefit_politic_tree')}),
                 (0, 0, {'view_mode': 'form', 'view_id': ref('pension_benefit_politic_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+        
+        <!-- Benefit policy Life lightning view -->
+        <record id="benefit_politic_life_form" model="ir.ui.view">
+            <field name="name">Benefit Politic Life Pension Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic Life Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Payment_Method"/>
+                                        <field name="Contributory"/>
+                                        <field name="Contributory_Value"/>
+                                        <field name="Capital"/>
+                                        <field name="Min_Capital_Limit"/>
+                                        <field name="Max_Capital_Limit"/>
+                                        <field name="Sons_Capital_Limit"/>
+                                        <field name="Total_Capital"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Life"/>
+                                        <field name="Actual_Tax"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Funeral_Assistance"/>
+                                        <field name="Funeral_Assistance_Value"/>
+                                        <field name="Comission"/>
+                                        <field name="Revenue"/>
+                                        <field name="OwnerId"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--life Benefit politic tree-->
+        <record id="life_benefit_politic_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic Pension Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic Life Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic Life action-->
+        <record id="life_benefit_politic_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic Life Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('life_benefit_politic_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_life_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Benefit policy personal accident lightning view -->
+        <record id="benefit_politic_personal_accident_form" model="ir.ui.view">
+            <field name="name">Benefit Politic personal accident Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic personal_accident Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Payment_Method"/>
+                                        <field name="Contributory"/>
+                                        <field name="Contributory_Value"/>
+                                        <field name="Capital"/>
+                                        <field name="Min_Capital_Limit"/>
+                                        <field name="Max_Capital_Limit"/>
+                                        <field name="Sons_Capital_Limit"/>
+                                        <field name="Total_Capital"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Life"/>
+                                        <field name="Actual_Tax"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Funeral_Assistance"/>
+                                        <field name="Funeral_Assistance_Value"/>
+                                        <field name="Comission"/>
+                                        <field name="Revenue"/>
+                                        <field name="OwnerId"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--personal_accident Benefit politic tree-->
+        <record id="personal_accident_benefit_politic_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic personal_accident Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic personal_accident Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic personal_accident action-->
+        <record id="personal_accident_benefit_politic_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic personal_accident Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('personal_accident_benefit_politic_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_personal_accident_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Benefit policy medicine lightning view -->
+        <record id="benefit_politic_medicine_form" model="ir.ui.view">
+            <field name="name">Benefit Politic medicine Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic medicine Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Moderator_Variable"/>
+                                        <field name="Moderator_Variable_Value"/>
+                                        <field name="Contributory"/>
+                                        <field name="Contributory_Value"/>
+                                        <field name="Purchase_Limit"/>
+                                        <field name="Coverage_Limit_Value"/>
+                                        <field name="Purchase_Limit_Value"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Payment_Method"/>
+                                        <field name="Competitor"/>
+                                        <field name="Performing_Index"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Average_invoice"/>
+                                        <field name="Comission"/>
+                                        <field name="Revenue"/>
+                                        <field name="OwnerId"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--medicine Benefit politic tree-->
+        <record id="medicine_benefit_politic_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic medicine Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic medicine Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic medicine action-->
+        <record id="medicine_benefit_politic_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic medicine Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('medicine_benefit_politic_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_medicine_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Benefit policy consulting lightning view -->
+        <record id="benefit_politic_consulting_form" model="ir.ui.view">
+            <field name="name">Benefit Politic consulting Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic consulting Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Revenue"/>
+                                        <field name="OwnerId"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Benefit politic consulting tree-->
+        <record id="benefit_politic_consulting_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic consulting Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic consulting Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic consulting action-->
+        <record id="benefit_politic_consulting_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic consulting Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_politic_consulting_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_consulting_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+    <!-- Benefit policy medical consulting lightning view -->
+        <record id="benefit_politic_medical_consulting_form" model="ir.ui.view">
+            <field name="name">Benefit Politic medical consulting Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic medical_consulting Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Revenue"/>
+                                        <field name="OwnerId"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Benefit politic medical_consulting tree-->
+        <record id="benefit_politic_medical_consulting_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic medical_consulting Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic medical_consulting Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic medical_consulting action-->
+        <record id="benefit_politic_medical_consulting_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic medical_consulting Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_politic_medical_consulting_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_medical_consulting_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Benefit policy meal lightning view -->
+        <record id="benefit_politic_meal_form" model="ir.ui.view">
+            <field name="name">Benefit Politic meal Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic meal Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Payment_Method"/>
+                                        <field name="Contributory"/>
+                                        <field name="Contributory_Value"/>
+                                        <field name="OwnerId"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Availability_Fee"/>
+                                        <field name="Monthly_Average_Value"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Comission"/>
+                                        <field name="Revenue"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Benefit politic meal tree-->
+        <record id="benefit_politic_meal_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic meal Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic meal Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic meal action-->
+        <record id="benefit_politic_meal_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic meal Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_politic_meal_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_meal_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Benefit policy food lightning view -->
+        <record id="benefit_politic_food_form" model="ir.ui.view">
+            <field name="name">Benefit Politic food Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic food Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Payment_Method"/>
+                                        <field name="Contributory"/>
+                                        <field name="Contributory_Value"/>
+                                        <field name="OwnerId"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Availability_Fee"/>
+                                        <field name="Monthly_Average_Value"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Comission"/>
+                                        <field name="Revenue"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Benefit politic food tree-->
+        <record id="benefit_politic_food_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic food Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic food Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic food action-->
+        <record id="benefit_politic_food_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic food Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_politic_food_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_food_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Benefit policy transport lightning view -->
+        <record id="benefit_politic_transport_form" model="ir.ui.view">
+            <field name="name">Benefit Politic transport Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic transport Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Payment_Method"/>
+                                        <field name="Contributory"/>
+                                        <field name="Contributory_Value"/>
+                                        <field name="OwnerId"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Availability_Fee"/>
+                                        <field name="Monthly_Average_Value"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Comission"/>
+                                        <field name="Revenue"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Benefit politic transport tree-->
+        <record id="benefit_politic_transport_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic transport Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic transport Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic transport action-->
+        <record id="benefit_politic_transport_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic transport Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_politic_transport_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_transport_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Benefit policy travel lightning view -->
+        <record id="benefit_politic_travel_form" model="ir.ui.view">
+            <field name="name">Benefit Politic travel Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic travel Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Destination"/>
+                                        <field name="Payment_Method"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Comission"/>
+                                        <field name="Revenue"/>
+                                        <field name="OwnerId"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Benefit politic travel tree-->
+        <record id="benefit_politic_travel_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic travel Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic travel Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic travel action-->
+        <record id="benefit_politic_travel_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic travel Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_politic_travel_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_travel_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Benefit policy fleet lightning view -->
+        <record id="benefit_politic_fleet_form" model="ir.ui.view">
+            <field name="name">Benefit Politic fleet Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic fleet Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Payment_Method"/>
+                                        <field name="Total_Capital"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Comission"/>
+                                        <field name="Revenue"/>
+                                        <field name="OwnerId"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Benefit politic fleet tree-->
+        <record id="benefit_politic_fleet_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic fleet Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic fleet Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic fleet action-->
+        <record id="benefit_politic_fleet_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic fleet Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_politic_fleet_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_fleet_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Benefit policy automobile lightning view -->
+        <record id="benefit_politic_automobile_form" model="ir.ui.view">
+            <field name="name">Benefit Politic automobile Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic automobile Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Payment_Method"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Comission"/>
+                                        <field name="Revenue"/>
+                                        <field name="OwnerId"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Benefit politic automobile tree-->
+        <record id="benefit_politic_automobile_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic automobile Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic automobile Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic automobile action-->
+        <record id="benefit_politic_automobile_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic automobile Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_politic_automobile_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_automobile_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Benefit policy fuel lightning view -->
+        <record id="benefit_politic_fuel_form" model="ir.ui.view">
+            <field name="name">Benefit Politic fuel Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic fuel Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Payment_Method"/>
+                                        <field name="Contributory"/>
+                                        <field name="Contributory_Value"/>
+                                        <field name="OwnerId"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Availability_Fee"/>
+                                        <field name="Monthly_Average_Value"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Comission"/>
+                                        <field name="Revenue"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Benefit politic fuel tree-->
+        <record id="benefit_politic_fuel_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic fuel Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic fuel Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic fuel action-->
+        <record id="benefit_politic_fuel_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic fuel Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_politic_fuel_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_fuel_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Benefit policy Occupational Health lightning view -->
+        <record id="benefit_politic_occupational_health_form" model="ir.ui.view">
+            <field name="name">Benefit Politic occupational_health Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic occupational_health Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Places"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Revenue"/>
+                                        <field name="OwnerId"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Benefit politic occupational_health tree-->
+        <record id="benefit_politic_occupational_health_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic occupational_health Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic occupational_health Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic occupational_health action-->
+        <record id="benefit_politic_occupational_health_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic occupational_health Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_politic_occupational_health_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_occupational_health_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Benefit policy checkup lightning view -->
+        <record id="benefit_politic_checkup_form" model="ir.ui.view">
+            <field name="name">Benefit Politic checkup Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic checkup Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Provider_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Revenue"/>
+                                        <field name="OwnerId"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Benefit politic checkup tree-->
+        <record id="benefit_politic_checkup_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic checkup Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic checkup Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic checkup action-->
+        <record id="benefit_politic_checkup_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic checkup Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_politic_checkup_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_checkup_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!-- Benefit policy vaccine lightning view -->
+        <record id="benefit_politic_vaccine_form" model="ir.ui.view">
+            <field name="name">Benefit Politic vaccine Layout Form</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <form string="Benefit Politic vaccine Layout">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="Lead_id"/>
+                                <field name="Account_id"/>
+                                <field name="Life"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" string="Benefit Policy" required='1'/>
+                                        <field name="Benefits" required='1'/>
+                                        <field name="carrier_2_id"/>
+                                        <field name="Effective_time_at_current_carrier"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Contract_Type"/>
+                                        <field name="Provider_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                        <field name="Competitor"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Revenue"/>
+                                        <field name="OwnerId"/>
+                                        <field name="How_c"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group>
+                                    <field name="politic_bill_ids">
+                                        <tree>
+                                            <field name="plan_id"/>
+                                            <field name="life"/>
+                                            <field name="unitary_value"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Benefit politic vaccine tree-->
+        <record id="benefit_politic_vaccine_tree" model="ir.ui.view">
+            <field name="name">Benefit Politic vaccine Layout Tree</field>
+            <field name="model">model_benfit_politic</field>
+            <field name="arch" type="xml">
+                <tree string="Benefit Politic vaccine Layout">
+                    <field name="Name" string="Benefit Policy"/>
+                    <field name="Benefits"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Benefit Politic vaccine action-->
+        <record id="benefit_politic_vaccine_action" model="ir.actions.act_window">
+            <field name="name">Benefit Politic vaccine Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_benfit_politic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('benefit_politic_vaccine_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('benefit_politic_vaccine_form')})]"/>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     No records available.

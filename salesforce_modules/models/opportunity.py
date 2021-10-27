@@ -344,6 +344,9 @@ class SalesforceOpprtunity(models.Model):
     product_ids = fields.One2many('product.product', 'opportunity_id', string='Product Id')
 
     market_reserve_ids = fields.One2many('model_market_reserve__c', 'Opportunity__c', string='Market Reserve')
+    event_control_ids = fields.One2many('event_control', 'Opportunity_ID', string='Event Control')
+    # contact_role_ids = fields.One2many('res.partner', 'related field name', string='Contact Role')
+    benefit_politic_ids = fields.One2many('model_benfit_politic', 'lead_id', string='Benefit Politic')
 
 
 class Product(models.Model):
