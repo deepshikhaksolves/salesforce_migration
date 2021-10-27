@@ -44,7 +44,7 @@
                                     </tree>
                                 </field>
                             </page>
-                            <page string="Reissues"></page>
+                            <!-- <page string="Reissues"></page> -->
                             <page string="Cases">
                                 <field name="case_ids">
                                     <tree>

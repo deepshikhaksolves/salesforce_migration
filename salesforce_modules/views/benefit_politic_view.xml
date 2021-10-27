@@ -1019,7 +1019,7 @@
                                     </tree>
                                 </field>
                             </page>
-                            <page string="Benefit Policy History"></page>
+                            <!-- <page string="Benefit Policy History"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">

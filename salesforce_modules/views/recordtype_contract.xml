@@ -134,10 +134,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -152,13 +152,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -335,10 +335,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -353,13 +353,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -531,10 +531,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -549,13 +549,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -726,10 +726,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -744,13 +744,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -928,10 +928,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -946,13 +946,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -1112,10 +1112,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -1130,13 +1130,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -1294,10 +1294,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -1312,13 +1312,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -1477,10 +1477,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -1495,13 +1495,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -1678,10 +1678,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -1696,13 +1696,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -1879,10 +1879,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -1897,13 +1897,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -2078,10 +2078,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -2096,13 +2096,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -2269,10 +2269,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -2287,13 +2287,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -2449,10 +2449,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -2467,13 +2467,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -2632,10 +2632,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -2650,13 +2650,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -2831,10 +2831,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -2849,13 +2849,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -3013,10 +3013,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -3031,13 +3031,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -3196,10 +3196,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -3214,13 +3214,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -3380,10 +3380,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -3398,13 +3398,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -3565,10 +3565,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Contact Details"></page>
+                            <!-- <page string="Contact Details"></page>
                             <page string="Contract"></page>
                             <page string="Plan Data"></page>
-                            <page string="Eligibility"></page>
+                            <page string="Eligibility"></page> -->
                             <page string="Financial">
                                 <group string="Financial Data">
                                     <group>
@@ -3583,13 +3583,13 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page>
                             <page string="Deployement checklists"></page>
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page>
+                            <page string="App setting"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">

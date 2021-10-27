@@ -51,8 +51,8 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Related"></page>
-                            <page string="Recipient"></page>
+                            <!-- <page string="Related"></page>
+                            <page string="Recipient"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -148,8 +148,8 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Related"></page>
-                            <page string="Recipient"></page>
+                            <!-- <page string="Related"></page>
+                            <page string="Recipient"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -247,8 +247,8 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Related"></page>
-                            <page string="Recipient"></page>
+                            <!-- <page string="Related"></page>
+                            <page string="Recipient"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -346,8 +346,8 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Related"></page>
-                            <page string="Recipient"></page>
+                            <!-- <page string="Related"></page>
+                            <page string="Recipient"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -447,9 +447,9 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Related">
+                            <!-- <page string="Related">
                             </page>
-                            <page string="Recipient"></page>
+                            <page string="Recipient"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -538,9 +538,9 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Related">
+                            <!-- <page string="Related">
                             </page>
-                            <page string="Recipient"></page>
+                            <page string="Recipient"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
