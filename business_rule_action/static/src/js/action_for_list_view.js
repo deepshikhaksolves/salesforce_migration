@@ -13,7 +13,7 @@ ListRenderer.include({
             var id = $(ev.currentTarget).data('id');
 
             if (id) {
-                if (this.business_rule_action) {
+                if (this.business_rule_action && this.business_rule_action.length>1) {
                     if(this.getParent() && this.getParent().model && typeof(this.getParent().model)!=="string") {
                         var record = this.getParent().model.get(id, {raw: true});
                         var match = this.business_rule_action.filter((x) => { return x['res_ids'].includes(record.res_id)});
@@ -26,14 +26,14 @@ ListRenderer.include({
                                 views: [[match[0]['view_id'], 'form']],
                                 target: "current",
                             });
-                        } else{
-                            this.trigger_up('open_record', { id: id, target: ev.target });
+                        } else {
+                            this._super.apply(this, arguments);
                         }
                     } else {
-                        this.trigger_up('open_record', { id: id, target: ev.target });
+                        this._super.apply(this, arguments);
                     }
                 } else {
-                    this.trigger_up('open_record', { id: id, target: ev.target });
+                    this._super.apply(this, arguments);
                 }
 
             }

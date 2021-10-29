@@ -20,31 +20,26 @@ calendar.include({
                 method: "get_record_according_to_domain",
                 args: ['', modelName,[id]],
             }).then(function (result) {
-                if(result){
+                if(result.length > 1) {
                     var match = result.filter((x) => { return x['res_ids'].includes(id)});
                     if(match && match.length){
-                    return self.do_action({
-                        type: "ir.actions.act_window",
-                        res_model: match[0]['model'],
-                        res_id: id,
-                        context:match[0]['context'],
-                        views: [[match[0]['view_id'], 'form']],
-                        target: "current",
-                    });
-                } else{
-                    self.trigger_up('openEvent', {
-                        _id: self.cal_event.data.id,
-                        title: self.cal_event.data.title,
-                    });
-                }
+                        return self.do_action({
+                            type: "ir.actions.act_window",
+                            res_model: match[0]['model'],
+                            res_id: id,
+                            context:match[0]['context'],
+                            views: [[match[0]['view_id'], 'form']],
+                            target: "current",
+                        });
+                    } else {
+                        self._super.apply(this, arguments);
+                    }
+                } else {
+                    self._super.apply(this, arguments);
                 }
             })
-
         } else {
-            this.trigger_up('openEvent', {
-                _id: event.data.id,
-                title: event.data.title,
-            });
+            self._super.apply(this, arguments);
         }
     },
 })
