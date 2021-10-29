@@ -123,12 +123,10 @@
                 <page string="services">
                     <!-- <field name="line_ids"/> -->
                 </page>
-                <page string="Special conditions">
-                    <!-- <field name="line_ids"/> -->
-                </page>
-                <page string="Special conditions">
-                    <!-- <field name="line_ids"/> -->
-                </page>
+                <!-- <page string="Special conditions">
+                </page> -->
+                <!-- <page string="Special conditions">
+                </page> -->
                 <page string="Checklists">
                     <!-- <field name="line_ids"/> -->
                 </page>

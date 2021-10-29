@@ -24,11 +24,11 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Special conditions">
+                            <!-- <page string="Special conditions">
                                 <group>
                                     
                                 </group>
-                            </page>
+                            </page> -->
                             <page string="Product Prices">
                                 <field name="product_price_ids">
                                     <tree>
