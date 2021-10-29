@@ -27,13 +27,13 @@ ListRenderer.include({
                                 target: "current",
                             });
                         } else{
-                            this.trigger_up('open_record', { id: id, target: ev.target });
+                            this._super.apply(this, arguments);
                         }
                     } else {
-                        this.trigger_up('open_record', { id: id, target: ev.target });
+                        this._super.apply(this, arguments);
                     }
                 } else {
-                    this.trigger_up('open_record', { id: id, target: ev.target });
+                    this._super.apply(this, arguments);
                 }
 
             }
