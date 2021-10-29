@@ -26,7 +26,7 @@ ListRenderer.include({
                                 views: [[match[0]['view_id'], 'form']],
                                 target: "current",
                             });
-                        } else{
+                        } else {
                             this._super.apply(this, arguments);
                         }
                     } else {

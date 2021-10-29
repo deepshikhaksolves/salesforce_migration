@@ -8,6 +8,7 @@ var rpc = require('web.rpc');
 kanban.include({
 
     _openRecord: function () {
+        var self = this;
         if (this.$el.hasClass('o_currently_dragged')) {
             // this record is currently being dragged and dropped, so we do not
             // want to open it.
@@ -15,7 +16,7 @@ kanban.include({
         }
         var editMode = this.$el.hasClass('oe_kanban_global_click_edit');
 
-        if (this.getParent() && this.getParent().business_rule_action.lenght>1) {
+        if (this.getParent() && this.getParent().business_rule_action.length>1) {
             if(this.getParent() && this.getParent().getParent() && this.getParent().getParent().model && typeof(this.getParent().getParent().model)!=="string") {
                 var record = this.getParent().getParent().model.get(this.db_id, {raw: true});
                 var match = this.getParent().business_rule_action.filter((x) => { return x['res_ids'].includes(record.res_id)});
@@ -28,25 +29,15 @@ kanban.include({
                         views: [[match[0]['view_id'], 'form']],
                         target: "current",
                     });
-                } else{
-                    this.trigger_up('open_record', {
-                        id: this.db_id,
-                        mode: editMode ? 'edit' : 'readonly',
-                    });
+                } else {
+                    self._super.apply(this, arguments);
                 }
             } else {
-                this.trigger_up('open_record', {
-                    id: this.db_id,
-                    mode: editMode ? 'edit' : 'readonly',
-                });
+                self._super.apply(this, arguments);
             }
         } else {
-            this.trigger_up('open_record', {
-                id: this.db_id,
-                mode: editMode ? 'edit' : 'readonly',
-            });
+            self._super.apply(this, arguments);
         }
-
     },
 
 });
