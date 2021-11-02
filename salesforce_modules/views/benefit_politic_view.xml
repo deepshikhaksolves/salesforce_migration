@@ -1395,13 +1395,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic Health Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -1493,13 +1493,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic Dental Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -1591,13 +1591,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic Pension Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -1690,13 +1690,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic Life Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -1788,13 +1788,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic personal_accident Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -1886,13 +1886,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic medicine Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -1984,13 +1984,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic consulting Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -2070,13 +2070,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic medical_consulting Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -2156,13 +2156,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic meal Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -2248,13 +2248,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic food Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -2341,13 +2341,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic transport Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -2434,13 +2434,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic travel Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -2523,13 +2523,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic fleet Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -2612,13 +2612,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic automobile Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -2700,13 +2700,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic fuel Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -2793,13 +2793,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic occupational_health Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -2880,13 +2880,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic checkup Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -2967,13 +2967,13 @@
             <field name="arch" type="xml">
                 <form string="Benefit Politic vaccine Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Lead_id"/>
                                 <field name="Account_id"/>
                                 <field name="Life"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>

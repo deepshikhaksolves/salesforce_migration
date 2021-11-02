@@ -24,3 +24,4 @@ class Service_C(models.Model):
     Name = fields.Char(string='Service', size=80,track_visibility='onchange')
     type = fields.Selection([('Request', 'Request'), ('Assignment', 'Assignment')], string='Type',track_visibility='onchange')
     contract_service_ids = fields.One2many('contract.service','Service', string='Contract Service')
+    contract_id = fields.Many2one('hr.contract',string='Contract',track_visibility='onchange')

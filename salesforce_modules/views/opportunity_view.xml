@@ -3298,14 +3298,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Details">
@@ -3365,15 +3365,33 @@
                                     <field name="campaigns_id"/>
                                 </group>
                             </group>
-                            <!-- <group string='Events Control'>
-
-                            </group> -->
-                        </page>
-                        <!-- <page string="Benefit Policy">
-                            <group>
-                                
+                            <group string='Events Control'>
+                                <field name="event_control_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="Event_ID"/>
+                                        <field name="Start_Date"/>
+                                        <field name="Assign_ID"/>
+                                        <field name="Rescheduled"/>
+                                        <field name="cancelled"/>
+                                        <field name="pre_consultant"/>
+                                    </tree>
+                                </field>
                             </group>
-                        </page> -->
+                        </page>
+                        <page string="Benefit Policy">
+                            <group>
+                                <field name="benefit_politic_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Revenue"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
 
                         <page string="Proposed">
                             <group string="Quotes">
@@ -3412,9 +3430,16 @@
                             </group>
                         </page>
 
-                        <page string="Related">
+                        <page string="Related To Opportunity">
                             <group string='Contacts For Parent Account'>
-                                
+                                <field name="contact_role_ids">
+                                    <tree>
+                                        <field name="Name" string='Contact Name'/>
+                                        <field name="Title__c"/>
+                                        <field name="Email"/>
+                                        <field name="Phone"/>
+                                    </tree>
+                                </field>
                             </group>
 
                             <group string='Contact Roles'>
@@ -3620,14 +3645,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Details">
@@ -3691,11 +3716,19 @@
                                 </field>
                             </group>
                         </page>
-                        <!-- <page string="Current Policy">
+                        <page string="Current Policy">
                             <group>
-                                
+                                <field name="benefit_politic_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Revenue"/>
+                                    </tree>
+                                </field>
                             </group>
-                        </page> -->
+                        </page>
 
                         <page string="Proposed">
                             <group string="Quotes">
@@ -3935,14 +3968,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Details">
@@ -4255,14 +4288,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Details">
@@ -4598,14 +4631,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Details">
@@ -4933,14 +4966,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Details">
@@ -5266,14 +5299,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Details">
@@ -5574,14 +5607,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Details">
@@ -5916,14 +5949,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Details">
@@ -6258,14 +6291,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Details">
@@ -6597,14 +6630,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Details">
@@ -6933,14 +6966,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Information">
@@ -7255,14 +7288,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Information">
@@ -7563,14 +7596,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Information">
@@ -7903,14 +7936,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Information">
@@ -8222,14 +8255,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Information">
@@ -8541,14 +8574,14 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="close_date"/>
                                 <field name="probability"/>
                                 <field name="owner_id"/>
                                 <field name="reserve"/>
                             </group>
-                        </group>
+                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Information">

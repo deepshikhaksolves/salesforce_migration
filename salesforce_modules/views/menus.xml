@@ -417,6 +417,7 @@
             <!-- <menuitem name="Case Email Layout" id="caseemail_lightning_layout_menu" parent='case_parent_action_menu' action="case_email_lightning_layout_action" sequence='1'/> -->
             <!-- <menuitem name="Readjustment Layout" id="readjustment_layout_menu" parent='case_parent_action_menu' action="readjustment_layout_action" /> -->
             <menuitem name="Record Type Case" id="recordtype_case_parent_action_menu" parent="case_parent_action_menu"/>
+                <menuitem name="Case Email Layout" id="caseemail_lightning_layout_menu" parent='case_parent_action_menu' action="case_email_lightning_layout_action"/>
                 <menuitem name="General Case" id="recordtype_general_case" parent="recordtype_case_parent_action_menu" action="case_recordtype_general_case_layout_action"/>
                 <menuitem name="Risk Management" id="recordtype_risk_management" parent="recordtype_case_parent_action_menu" action="case_recordtype_risk_management_layout_action"/>
                 <menuitem name="Help Desk" id="recordtype_helpdesk" parent="recordtype_case_parent_action_menu" action="case_recordtype_helpdesk_layout_action"/>

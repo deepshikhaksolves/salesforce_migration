@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <form string="account Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="code"/>
                                 <field name="user_type_id" string='Account Record Type'/>
@@ -43,7 +43,7 @@
                                 <field name="write_uid" string="Last Modified By"/>
                                 <field name="write_date" string='Last Modified On'/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Adresses">
                                 <field name="address_ids">
@@ -198,7 +198,6 @@
                                 <field name="name"/>
                                 <field name="code"/>
                                 <field name="user_type_id"/>
-                                <!-- <field name="Type" /> -->
                                 <field name="Website"/>
                                 <field name="Description"/>
                                 <field name="AnnualRevenue"/>
@@ -347,7 +346,7 @@
             <field name="arch" type="xml">
                 <form string="administrator account Layout">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CNPJ__c"/>
                                 <field name="Social_Reason__c"/>
@@ -370,7 +369,7 @@
                                 <field name="customer_service_center__c"/>
                                 <field name="broker_call_center__c"/>
                             </group>
-                        </group>
+                        </group> -->
                     </sheet>
                     <notebook>
                         <page string="Adresses">
@@ -499,7 +498,7 @@
             <field name="arch" type="xml">
                 <form string="Broker Legal Entity Layout Form">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CNPJ__c"/>
                                 <field name="name"/>
@@ -528,7 +527,7 @@
                                 <field name="Start_in_Broker__c"/>
                                 <field name="Image__c"/>
                             </group>
-                        </group>
+                        </group> -->
                     </sheet>
                     <notebook>
                         <page string="Address">
@@ -699,7 +698,7 @@
             <field name="arch" type="xml">
                 <form string="Carrier Account Layout Form">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CNPJ__c"/>
                                 <field name="Social_Reason__c"/>
@@ -727,7 +726,7 @@
                                 <field name="allow_create_accredited_net_case__c"/>
                                 <field name="broker_call_center__c"/>
                             </group>
-                        </group>
+                        </group> -->
                     </sheet>
                     <notebook>
                         <page string="Address">
@@ -857,7 +856,7 @@
             <field name="arch" type="xml">
                 <form string="Legal Entity Customer Layout Form">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CNPJ__c"/>
                                 <field name="name"/>
@@ -886,7 +885,7 @@
                                 <field name="Start_in_Broker__c"/>
                                 <field name="Image__c"/>
                             </group>
-                        </group>
+                        </group> -->
                     </sheet>
                     <notebook>
                         <page string="Address">
@@ -1062,7 +1061,7 @@
             <field name="arch" type="xml">
                 <form string="Hospital Layout Form View">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="name"/>
                                 <field name="code"/>
@@ -1072,7 +1071,7 @@
                             <group>
                                 <field name="CNPJ__c"/>
                             </group>
-                        </group>
+                        </group> -->
                     </sheet>
                     <notebook>
                         <page string="Address">
@@ -1146,7 +1145,7 @@
             <field name="arch" type="xml">
                 <form string="Laboratory Layout Form View">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="name"/>
                                 <field name="code"/>
@@ -1156,7 +1155,7 @@
                             <group>
                                 <field name="CNPJ__c"/>
                             </group>
-                        </group>
+                        </group> -->
                     </sheet>
                     <notebook>
                         <page string="Address">
@@ -1230,7 +1229,7 @@
             <field name="arch" type="xml">
                 <form string="Partner Layout Form">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CNPJ__c"/>
                                 <field name="name"/>
@@ -1259,7 +1258,7 @@
                                 <field name="Start_in_Broker__c"/>
                                 <field name="Image__c"/>
                             </group>
-                        </group>
+                        </group> -->
                     </sheet>
                     <notebook>
                         <page string="Address">
@@ -1441,7 +1440,7 @@
             <field name="arch" type="xml">
                 <form string="Physical person Layout Form View">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CPF__c"/>
                                 <field name="Email__c"/>
@@ -1457,7 +1456,7 @@
                                 <field name="Marital_Status__c"/>
                                 <field name="Start_in_Broker__c"/>
                             </group>
-                        </group>
+                        </group> -->
                     </sheet>
                     <notebook>
                         <page string="Adresses">
@@ -1589,14 +1588,14 @@
             <field name="arch" type="xml">
                 <form string="Administrator Layout From View">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CNPJ__c"/>
                                 <field name="Company_Origin__c"/>
                                 <field name="OwnerId"/>
                                 <field name="RecordTypeId" string="Account Record Type"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -1672,7 +1671,7 @@
             <field name="arch" type="xml">
                 <form string="Legal Entry Customer Layout From View">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CNPJ__c"/>
                                 <field name="Industry"/>
@@ -1680,7 +1679,7 @@
                                 <field name="OwnerId"/>
                                 <field name="RecordTypeId" string="Account Record Type"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -1782,7 +1781,7 @@
             <field name="arch" type="xml">
                 <form string="Account Laboratory From View">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CNPJ__c"/>
                                 <field name="Industry"/>
@@ -1791,7 +1790,7 @@
                                 <field name="RecordTypeId"/>
                             </group>
                             <group></group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -1876,7 +1875,7 @@
             <field name="arch" type="xml">
                 <form string="Account Operator From View">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CNPJ__c"/>
                                 <field name="ans_code__c"/>
@@ -1884,7 +1883,7 @@
                                 <field name="RecordTypeId"/>
                             </group>
                             <group></group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -1964,7 +1963,7 @@
             <field name="arch" type="xml">
                 <form string="Account Partner From View">
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CNPJ__c"/>
                                 <field name="Industry"/>
@@ -1973,7 +1972,7 @@
                                 <field name="RecordTypeId"/>
                             </group>
                             <group></group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>

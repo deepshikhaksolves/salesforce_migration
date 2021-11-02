@@ -728,15 +728,14 @@
                         <field name="Status" widget='statusbar'/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
-                                <!-- Ringing field not found -->
                                 <field name="OpportunityId"/>
                                 <field name="request_date"/>
                                 <field name="OwnerId"/>
                                 <field name="RecordTypeId"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -843,15 +842,14 @@
                         <field name="Status" widget='statusbar'/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
-                                <!-- Ringing field not found -->
                                 <field name="OpportunityId"/>
                                 <field name="request_date"/>
                                 <field name="OwnerId"/>
                                 <field name="RecordTypeId"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -957,16 +955,15 @@
                         <field name="Status" widget='statusbar'/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
-                                <!-- Ringing field not found -->
                                 <field name="AccountId"/>
                                 <field name="ExpirationDate"/>
                                 <field name="OwnerId"/>
                                 <field name="phone"/>
                                 <field name="RecordTypeId"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -1092,16 +1089,15 @@
                         <field name="Status" widget='statusbar'/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
-                                <!-- Ringing field not found -->
                                 <field name="AccountId"/>
                                 <field name="ExpirationDate"/>
                                 <field name="OwnerId"/>
                                 <field name="phone"/>
                                 <field name="RecordTypeId"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -1227,16 +1223,15 @@
                         <field name="Status" widget='statusbar'/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
-                                <!-- Ringing field not found -->
                                 <field name="AccountId"/>
                                 <field name="ExpirationDate"/>
                                 <field name="OwnerId"/>
                                 <field name="phone"/>
                                 <field name="RecordTypeId"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>

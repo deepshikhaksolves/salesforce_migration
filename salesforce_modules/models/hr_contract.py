@@ -29,6 +29,9 @@ class HrContract(models.Model):
     business_name = fields.Char(string='Business Name', size=255)
     channel_segmentation = fields.Many2one('channel_segmentation', string='Sales channel')
     cancellation_notice = fields.Text(string='Cancellation Notice')
+    cancellation_requester = fields.Selection([
+        ('Cliente', 'Cliente'),('Operadora', 'Operadora')
+    ], string='Cancellation Requester')
     capital = fields.Selection([
         ('uniform', 'Uniform'),('multiple', 'Multiple'),('staggered', 'Staggered'),('free_choice', 'Free Choice'),('global', 'Global')
     ], string='Capital')
@@ -52,10 +55,10 @@ class HrContract(models.Model):
     seller_consulting = fields.Many2one('res.users', string='Sales consultant')
     # EndDate created in default with name End date
     # name created in default with name name 
-    contact_number = fields.Char(string='Contact Number')
+    contract_number = fields.Char(string='Contract Number')
     Owner_id = fields.Many2one('res.users', string='Contract Owner')
     record_type = fields.Char(string='Contract Record Type')
-    # StartDate created in default with name start date
+    # StartDate created in default with name date_start
     # contract_summary created in default with name Notes
     contract_term = fields.Integer(string='Contract Term (months)')
     contrib_devol_paid_by_broker = fields.Selection([
@@ -76,6 +79,7 @@ class HrContract(models.Model):
     broker_start_date = fields.Date(string='Start date at brokerage')
     broker_end_date = fields.Date(string='End date at brokerage')
     date_of_issue_copay = fields.Float(string='Date of Issue - Copay')
+    Date_of_Issue_Invoice = fields.Float(string='Date of Issue - Invoice')
     decline_notice = fields.Text(string='Decline Notice')
     decline_reason = fields.Selection([
         ('none', 'None'), ('high_risk', 'High risk'), ('CNAE_not_marketed ', 'CNAE not marketed '), ('out_of_coverage_area', 'Out of Coverage Area'), ('outside_the_trading_area', 'Outside the Trading Area'), ('outside_acceptance_rule', 'Outside Acceptance Rule'), ('does_not_have_a_minimum_amount_of_lives_required', 'Does not have a minimum amount of lives required'), ('due_to_the_decline_of_the_medical_area', 'Due to the decline of the Medical Area'), ('due_to_operator_decline', 'Due to Operator Decline'), ('by_company_request', 'By Company Request'), ('other', 'Other')
@@ -165,14 +169,14 @@ class HrContract(models.Model):
     pension_mode = fields.Selection([
         ('Endorsed_Plan', 'Endorsed Plan'), ('plan_instituted', 'Plan Instituted')
     ], string='Pension Mode')
-    # frequency not clear
-    # Periodicity_Card not clear
+    frequency = fields.Many2one('model.periodicity', string='Frequency')
+    Periodicity_Card = fields.Many2one('model.periodicity', string='Frequency of Card Renewal')
     grace_period = fields.Float(string='Grace period')
     tag = fields.Char(string='Board')
     places = fields.Text(string='Places')
     Has_dps = fields.Boolean(string='Has DPS')
     payment_deadline = fields.Float(string='Payment Term')
-    # Previous_Broker = fields.Many2one('Corretora', string='Previous Broker') model not found
+    Previous_Broker = fields.Many2one('broker', string='Previous Broker')
     previous_policy = fields.Many2one('hr.contract', string='Previous Policy')
     # Pricebook2Id not clear
     First_Bill = fields.Float(string='First Invoice')
@@ -184,6 +188,7 @@ class HrContract(models.Model):
     ], string='Project Type')
     provider = fields.Many2one('account.account', string='Project Type')
     number_of_installments = fields.Float(string='Number of installments')
+    readjustment_base_date = fields.Date(string='Readjustment Base Date')
     rebate = fields.Date(string='Rebate')
     relationship_director = fields.Many2one('res.users', string='Relationship Director')
     relationship_manager = fields.Many2one('res.users', string='Relationship Manager')
@@ -193,7 +198,7 @@ class HrContract(models.Model):
     hr_site = fields.Char(string='Site Hr')
     sons_capital_limit = fields.Float(string='Sons Capital Limit')
     special_terms = fields.Text(string='Special Terms')
-    # status created by default
+    # status in odoo named as state
     sub_deployed_next_to_the_contract = fields.Boolean(string='Sub Deployed Next to the Contract')
     subcontract = fields.Boolean(string='Subcontract')
     subcontract_description = fields.Text(string='Subcontract Description', size=255, )
@@ -239,7 +244,22 @@ class HrContract(models.Model):
     monthly_average_value = fields.Float(string='Average Monthly Value')
     lifes = fields.Float(string='Lives')
     which_index = fields.Char(string='Which Index?', size=100, )
+    address_ids = fields.One2many('model_address', 'Contract_id', string='Address')
+    contact_ids = fields.One2many('res.partner', 'contract_id', string='Contacts')
+    contract_team_ids = fields.One2many('contract_team', 'contract_id', string='Contract Teams')
+    user_company_contract_permissions_ids = fields.One2many('user_company_contract_permissions__c', 'contract__c', string='Contract Teams')
 
+    contract_ids = fields.One2many('hr.contract', 'parent_contract', string='Sub Contract')
+    service_ids = fields.One2many('model_service_c', 'contract_id', string='Service')
+    sensus_management_ids = fields.One2many('model_sensus_management_document_c', 'Contract_id', string='Sensus Management Documents')
+    readjustment_ids = fields.One2many('contract.readjust', 'Contracts', string='Readjustment')
+    cost_center_ids = fields.One2many('model_cost_center', 'contract_id', string='Cost Center')
+    plan_ids = fields.One2many('model_contract_plan', 'Contract_id', string='Contract Plan')
+    contract_partner_ids = fields.One2many('contract.partner', 'contract_id', string='Contract Partner')
+    contribution_ids = fields.One2many('contract.contribution', 'contract_id', string='Contributions')
+    contract_elegibility_ids = fields.One2many('contract_eligibility', 'contract_id', string='Contract Elegibilities')
+    contract_financial_ids = fields.One2many('financial_contract', 'contract_id', string='Contract Financial Data')
+    checklist_ids = fields.One2many('model_checklist_c', 'Contract_id', string='Checklist')
 
 
 

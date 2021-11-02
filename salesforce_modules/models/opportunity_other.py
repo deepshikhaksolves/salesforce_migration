@@ -26,6 +26,8 @@ class SalesforceOpportunityContactRole(models.Model):
         ('Other', 'Outros'),
     ], string="Role",track_visibility='onchange')
 
+    case_id = fields.Many2one('model_case', string='Case Id')
+
 
 class SalesforceOpportunityCompetitor(models.Model):
     _name = 'crm.lead.competitor'

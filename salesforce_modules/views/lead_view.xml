@@ -498,14 +498,14 @@
                         <field name="stage_id" widget='statusbar'/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="phone"/>
                                 <field name="LeadSource"/>
                                 <field name="OwnerId"/>
                                 <field name="RecordTypeId"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -623,7 +623,7 @@
                         <field name="stage_id" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Company"/>
                                 <field name="Title"/>
@@ -632,7 +632,7 @@
                                 <field name="OwnerId"/>
                                 <field name="RecordTypeId"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Detalis">
                                 <group>

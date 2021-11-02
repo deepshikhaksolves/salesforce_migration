@@ -709,7 +709,7 @@
                     <field name="Status" widget="statusbar"/>
                 </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CaseNumber"/>
                                 <field name="Type"/>
@@ -717,7 +717,7 @@
                                 <field name="Priority"/>
                                 <field name="OwnerId"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group string='Case Details'>
@@ -748,13 +748,13 @@
                                 </group>
                             </page>
 
-                            <page string="Related">
+                            <!-- <page string="Related">
 
                             </page>
 
                             <page string="Recipients">
 
-                            </page>
+                            </page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">

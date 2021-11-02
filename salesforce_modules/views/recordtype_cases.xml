@@ -11,16 +11,15 @@
                         <field name="Status" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CaseNumber"/>
                                 <field name="AccountId"/>
                                 <field name="Type"/>
                                 <field name="Request"/>
-<!--                                <field name="Status"/>-->
                                 <field name="OwnerId"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group string="Customer Data">
@@ -47,12 +46,15 @@
                                         <field name="Contract_id"/>
                                         <field name="Contract_New"/>
                                         <field name="ContactId"/>
-<!--                                        <field name="Status"/>-->
                                     </group>
                                 </group>
                             </page>
-                            <!-- <page string="Related"></page>
-                            <page string="Recipient"></page> -->
+                            <page string="Related">
+                                <group string="Related Cases">
+                                    <field name="case_ids"/>
+                                </group>
+                            </page>
+                            <!-- <page string="Recipient"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -106,16 +108,15 @@
                         <field name="Status" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CaseNumber"/>
                                 <field name="Type"/>
                                 <field name="Request"/>
                                 <field name="Priority"/>
                                 <field name="OwnerId"/>
-<!--                                <field name="Status"/>-->
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group string="Customer Data">
@@ -148,8 +149,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <!-- <page string="Related"></page>
-                            <page string="Recipient"></page> -->
+                            <page string="Related">
+                                <field name="contact_role_lines"/>
+                            </page>
+                            <!-- <page string="Recipient"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -172,7 +175,6 @@
                     <field name="Request"/>
                     <field name="Priority"/>
                     <field name="OwnerId"/>
-<!--                    <field name="Status"/>-->
                 </tree>
             </field>
         </record>
@@ -204,16 +206,15 @@
                     <field name="Status" widget="statusbar"/>
                 </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CaseNumber"/>
                                 <field name="Type"/>
                                 <field name="Request"/>
                                 <field name="Priority"/>
                                 <field name="attendee_by_id"/>
-<!--                                <field name="Status"/>-->
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group string="Customer Data">
@@ -229,7 +230,6 @@
                                     </group>
                                     <group>
                                         <field name="attendee_by_id"/>
-<!--                                        <field name="Status"/>-->
                                         <field name="Priority"/>
                                         <field name="Description"/>
                                         <field name="Cancelation_Reason"/>
@@ -247,8 +247,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <!-- <page string="Related"></page>
-                            <page string="Recipient"></page> -->
+                            <page string="Related">
+                                <field name="contact_role_lines"/>
+                            </page>
+                            <!-- <page string="Recipient"></page>  -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -302,16 +304,15 @@
                     <field name="Status" widget="statusbar"/>
                 </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CaseNumber"/>
                                 <field name="Type"/>
                                 <field name="Request"/>
                                 <field name="Priority"/>
                                 <field name="OwnerId"/>
-<!--                                <field name="Status"/>-->
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group string="Customer Data">
@@ -346,8 +347,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <!-- <page string="Related"></page>
-                            <page string="Recipient"></page> -->
+                            <page string="Related">
+                                <field name="contact_role_lines"/>
+                            </page>
+                            <!-- <page string="Recipient"></page>  -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -402,16 +405,15 @@
                     <field name="Status" widget="statusbar"/>
                 </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="CaseNumber"/>
                                 <field name="Type"/>
                                 <field name="Request"/>
                                 <field name="Priority"/>
                                 <field name="OwnerId"/>
-<!--                                <field name="Status"/>-->
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group string="Customer Data">
@@ -447,9 +449,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <!-- <page string="Related">
+                            <page string="Related">
+                                <field name="contact_role_lines"/>
                             </page>
-                            <page string="Recipient"></page> -->
+                            <!-- <page string="Recipient"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -505,15 +508,14 @@
                     <field name="Status" widget="statusbar"/>
                 </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
                                 <field name="Subject"/>
                                 <field name="Priority"/>
                                 <field name="OwnerId"/>
-<!--                                <field name="Status"/>-->
                                 <field name="RecordTypeId"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group string="Customer Data">
@@ -538,9 +540,10 @@
                                     </group>
                                 </group>
                             </page>
-                            <!-- <page string="Related">
+                            <page string="Related">
+                                <field name="contact_role_lines"/>
                             </page>
-                            <page string="Recipient"></page> -->
+                            <!-- <page string="Recipient"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
