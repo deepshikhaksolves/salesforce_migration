@@ -709,52 +709,47 @@
                     <field name="Status" widget="statusbar"/>
                 </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="CaseNumber"/>
-                                <field name="Type"/>
-                                <field name="Request"/>
-                                <field name="Priority"/>
-                                <field name="OwnerId"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group string='Case Details'>
                                     <group>
                                         <field name="Subject"/>
-                                        <field name="Origin"/>
                                         <field name="Type"/>
-                                        <field name="Reason"/>
                                         <field name="Request"/>
                                         <field name="Priority"/>
                                         <field name="CreatedDate"/>
                                         <field name="ClosedDate"/>
-                                        <field name="Cancelation_Reason"/>
-                                        <field name="opportunity_id"/>
-                                        <field name="quote_id"/>
-                                        <field name="Stage"/>
-                                        <field name="beneficiary_id"/>
-                                        <field name="client_view_permission"/>
+                                        <field name="SuppliedName"/>
                                         <field name="SuppliedEmail"/>
-                                        <field name="Description"/>
+                                        <field name="Cancelation_Reason"/>
+                                        <!-- entitlement object is not developed -->
                                     </group>
                                     <group>
                                         <field name="AccountId"/>
                                         <field name="Contract_id"/>
                                         <field name="Contract_New"/>
                                         <field name="ContactId"/>
+                                        <field name="Origin"/>
+                                        <field name="client_view_permission"/>
+                                        <field name="Reopening"/>
+                                        <field name="Visible_to_the_Customer"/>
+                                        <field name="ParentId"/>
                                     </group>
                                 </group>
                             </page>
 
-                            <!-- <page string="Related">
-
+                            <page string="Request">
+                                <group>
+                                    <field name="attendee_name"/>
+                                    <field name="Description"/>
+                                </group>
                             </page>
 
-                            <page string="Recipients">
-
-                            </page> -->
+                            <page string="Related Services">
+                                <group>
+                                    <field name="case_ids"/>
+                                </group>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -782,7 +777,7 @@
 
         <!-- case Layout action window -->
         <record id="case_email_lightning_layout_action" model="ir.actions.act_window">
-            <field name="name">case lightning Layout Action Layout</field>
+            <field name="name">Case</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_case</field>
             <field name="view_mode">tree,form</field>

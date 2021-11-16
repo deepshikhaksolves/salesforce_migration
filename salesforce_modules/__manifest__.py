@@ -163,6 +163,7 @@
         'views/res_partner.xml',
         'views/recordtype_contract.xml',
         'views/recordtype_cases.xml',
+        'views/campaign_influence_view.xml',
         'views/menus.xml',
 
 

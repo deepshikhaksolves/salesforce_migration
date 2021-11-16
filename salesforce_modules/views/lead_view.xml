@@ -563,11 +563,22 @@
                                             <field name="Company"/>
                                         </group>
                                     </group>
-
                             </page>
-                            <!-- <page string="Benefits Policy"></page>
-                            <page string="Related"></page>
+                            <page string="Benefits Policy">
+                                <field name="benifit_ids" widget="one2many">
+                                    <tree>
+                                        <field name="Name" string="Benefit Policy"/>
+                                        <field name="Contract_End"/>
+                                        <field name="Life"/>
+                                        <field name="Monthly_Bill"/>
+                                        <field name="Revenue"/>
+                                        <field name="Use_Product"/>
+                                        <field name="Offer"/>
+                                    </tree>
+                                </field>
+                            </page>
                             <page string="Market Place"></page>
+                            <!-- <page string="Related"></page>
                             <page string="Opportunities/Contracts"></page> -->
                         </notebook>
                     </sheet>
@@ -598,7 +609,7 @@
 
         <!--Physical Person action        -->
         <record id="lead_physical_person_layout_action" model="ir.actions.act_window">
-            <field name="name">Physical Person Layout</field>
+            <field name="name">Lead</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">crm.lead</field>
             <field name="view_mode">tree,form</field>
@@ -719,8 +730,8 @@
                                     </tree>
                                 </field>
                             </page>
+                            <page string="Market Place"></page>
                             <!-- <page string="Related"></page> -->
-                            <!-- <page string="Market Place"></page> -->
                             <!-- <page string="Opportunities/Contracts"></page> -->
                         </notebook>
                     </sheet>
@@ -750,7 +761,7 @@
 
         <!--Legal Person action-->
         <record id="legal_person_layout_action" model="ir.actions.act_window">
-            <field name="name">Legal Person Layout</field>
+            <field name="name">Lead</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">crm.lead</field>
             <field name="view_mode">tree,form</field>

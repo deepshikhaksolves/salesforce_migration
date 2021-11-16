@@ -298,6 +298,7 @@
                                 <field name="Effective_time_at_current_carrier"/>
                                 <field name="Contract_End"/>
                                 <field name="Contract_Type"/>
+
                                 <field name="Type_of_Revenue"/>
                                 <field name="Number_of_Installments"/>
                             </group>
@@ -306,7 +307,6 @@
                                 <field name="Offer"/>
                                 <field name="Competitor"/>
                                 <field name="Monthly_Bill"/>
-                                <field name="Comission"/>
                                 <field name="Revenue"/>
                                 <field name="OwnerId"/>
                                 <field name="How_c"/>

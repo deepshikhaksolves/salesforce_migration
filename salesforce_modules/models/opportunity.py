@@ -257,6 +257,7 @@ class SalesforceOpprtunity(models.Model):
     renavam = fields.Integer('RENAVAM',size=11,track_visibility='onchange')
     reserve = fields.Char('Reserva',track_visibility='onchange')
     market_reserve = fields.Char('Reserva de Mercado',size=28,track_visibility='onchange')
+    Market_Reserve_ID = fields.Many2one('model_market_reserve__c', string='Market Reserve ID')
     reserve_days = fields.Integer('Reserve - Days',track_visibility='onchange')
     retired = fields.Integer('Retired',size=6,track_visibility='onchange')
     returned_reason = fields.Char('Returned Reason',size=255,track_visibility='onchange')
@@ -347,6 +348,7 @@ class SalesforceOpprtunity(models.Model):
     event_control_ids = fields.One2many('event_control', 'Opportunity_ID', string='Event Control')
     contact_role_ids = fields.One2many('res.partner', 'opportunity_ids', string='Contacts')
     benefit_politic_ids = fields.One2many('model_benfit_politic', 'lead_id', string='Benefit Politic')
+    campaign_influence_ids = fields.One2many('campaign.influence', 'OpportunityId', string='Campaign')
 
 
 class Product(models.Model):

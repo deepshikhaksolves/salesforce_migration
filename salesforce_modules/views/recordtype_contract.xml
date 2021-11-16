@@ -11,16 +11,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -289,6 +279,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -305,12 +296,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -340,7 +331,7 @@
 
         <!--health action        -->
         <record id="contract_recordtype_health_layout_action" model="ir.actions.act_window">
-            <field name="name">Contract Health Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -637,6 +628,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -653,12 +645,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -686,9 +678,9 @@
             </field>
         </record>
 
-        <!--dental action        -->
+        <!--dental action-->
         <record id="contract_recordtype_dental_layout_action" model="ir.actions.act_window">
-            <field name="name">Contract Dental Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -703,7 +695,7 @@
         </record>
 
 
-        <!--Contract recordtype life layout start        -->
+        <!--Contract recordtype life layout start-->
         <record id="contract_recordtype_life_layout_form" model="ir.ui.view">
             <field name="name">Life Layout</field>
             <field name="model">hr.contract</field>
@@ -985,6 +977,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -1001,12 +994,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -1034,9 +1027,9 @@
             </field>
         </record>
 
-        <!--Life action        -->
+        <!--Life action-->
         <record id="contract_recordtype_life_layout_action" model="ir.actions.act_window">
-            <field name="name">Contract Life Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -1332,6 +1325,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -1348,12 +1342,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -1383,7 +1377,7 @@
 
         <!--Accident action        -->
         <record id="contract_recordtype_accident_layout_action" model="ir.actions.act_window">
-            <field name="name">Accident Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -1680,6 +1674,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -1696,12 +1691,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -1731,7 +1726,7 @@
 
         <!--Medicine action        -->
         <record id="contract_recordtype_medicine_layout_action" model="ir.actions.act_window">
-            <field name="name">Medicine Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -2028,6 +2023,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -2044,12 +2040,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -2079,7 +2075,7 @@
 
         <!--consulting action        -->
         <record id="contract_recordtype_consulting_layout_action" model="ir.actions.act_window">
-            <field name="name">Consulting Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -2118,9 +2114,9 @@
                                 <group string="Contract Information">
                                     <group>
                                         <field name="financial_group"/>
-                                        <field name="wage"/>
                                         <field name="cnpj"/>
                                         <field name="business_name"/>
+                                        <!-- <field name="wage"/> -->
                                         <field name="Account_id"/>
                                         <field name="project_type"/>
                                         <field name="Previous_Broker"/>
@@ -2132,24 +2128,24 @@
                                         <field name="approval"/>
                                         <field name="adjustment_negotiation_notification"/>
                                         <field name="readjustment_base_date"/>
-                                        <field name="cancellation_reason"/>
-                                        <field name="cancellation_notice"/>
                                         <field name="cancellation_requester"/>
                                     </group>
                                     <group>
                                         <field name="policy"/>
                                         <field name="benefits"/>
-                                        <field name="carrier_2"/>
-                                        <field name="administrator"/>
+                                        <field name="consulting"/>
                                         <field name="Owner_id"/>
+                                        <!-- <field name="administrator"/> -->
                                         <field name="executive_manager"/>
                                         <field name="relationship_director"/>
                                         <field name="channel_segmentation"/>
                                         <field name="opportunity"/>
-                                        <field name="decline_reason"/>
-                                        <field name="decline_notice"/>
+                                        <field name="cancellation_reason"/>
+                                        <field name="cancellation_notice"/>
                                         <field name="give_up_reason"/>
                                         <field name="give_up_notice"/>
+                                        <field name="decline_reason"/>
+                                        <field name="decline_notice"/>
                                     </group>
                                 </group>
                                 
@@ -2158,40 +2154,22 @@
                                         <field name="contract_type"/>
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
-                                        <field name="payment_mode"/>
-                                        <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
-                                        <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="payment_mode"/>
+                                        <field name="company_classification"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
+                                        <field name="number_of_installments"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
                                         <field name="transfer_method_in"/>
                                         <field name="transfer_method_out"/>
-                                    </group>
-                                </group>
-                                <group string="Card">
-                                    <group>
-                                        <field name="card_type"/>
-                                        <field name="Periodicity_Card"/>
-                                    </group>
-                                    <group>
-                                        <field name="issuance_cost"/>
-                                        <field name="renewal_fee"/>
-                                        <field name="replace_fee"/>
+                                        <field name="Value"/>
                                     </group>
                                 </group>
                                 <group string="Implantation">
@@ -2375,6 +2353,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -2391,12 +2370,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -2426,7 +2405,7 @@
 
         <!--medical consulting action        -->
         <record id="contract_recordtype_medical_consulting_layout_action" model="ir.actions.act_window">
-            <field name="name">Medical Consulting Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -2723,6 +2702,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -2739,12 +2719,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -2774,7 +2754,7 @@
 
         <!--fee action        -->
         <record id="contract_recordtype_fee_layout_action" model="ir.actions.act_window">
-            <field name="name">Fee Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -3071,6 +3051,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -3087,12 +3068,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -3122,7 +3103,7 @@
 
         <!--meal action        -->
         <record id="contract_recordtype_meal_layout_action" model="ir.actions.act_window">
-            <field name="name">Meal Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -3419,6 +3400,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -3435,12 +3417,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -3470,7 +3452,7 @@
 
         <!--food action        -->
         <record id="contract_recordtype_food_layout_action" model="ir.actions.act_window">
-            <field name="name">Food Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -3767,6 +3749,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -3783,12 +3766,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -3818,13 +3801,351 @@
 
         <!--Transportation action        -->
         <record id="contract_recordtype_transportation_layout_action" model="ir.actions.act_window">
-            <field name="name">Transportation Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
             <field name="view_ids" eval="[(5, 0, 0),
                 (0, 0, {'view_mode': 'tree', 'view_id': ref('contract_recordtype_transportation_layout_tree')}),
                 (0, 0, {'view_mode': 'form', 'view_id': ref('contract_recordtype_transportation_layout_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--contract Travel layout start        -->
+        <record id="contract_recordtype_travel_layout_form" model="ir.ui.view">
+            <field name="name">Travel Layout</field>
+            <field name="model">hr.contract</field>
+            <field name="arch" type="xml">
+                <form string="Travel Layout">
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <notebook>
+                            <page string="General Data">
+                                <group string="Contract Information">
+                                    <group>
+                                        <field name="financial_group"/>
+                                        <field name="wage"/>
+                                        <field name="cnpj"/>
+                                        <field name="business_name"/>
+                                        <field name="Account_id"/>
+                                        <field name="project_type"/>
+                                        <field name="Previous_Broker"/>
+                                        <field name="date_start"/>
+                                        <field name="broker_start_date"/>
+                                        <field name="contract_term"/>
+                                        <field name="carrier_data_cancelation"/>
+                                        <field name="broker_end_date"/>
+                                        <field name="approval"/>
+                                        <field name="adjustment_negotiation_notification"/>
+                                        <field name="readjustment_base_date"/>
+                                        <field name="cancellation_reason"/>
+                                        <field name="cancellation_notice"/>
+                                        <field name="cancellation_requester"/>
+                                    </group>
+                                    <group>
+                                        <field name="policy"/>
+                                        <field name="benefits"/>
+                                        <field name="carrier_2"/>
+                                        <field name="administrator"/>
+                                        <field name="Owner_id"/>
+                                        <field name="executive_manager"/>
+                                        <field name="relationship_director"/>
+                                        <field name="channel_segmentation"/>
+                                        <field name="opportunity"/>
+                                        <field name="decline_reason"/>
+                                        <field name="decline_notice"/>
+                                        <field name="give_up_reason"/>
+                                        <field name="give_up_notice"/>
+                                    </group>
+                                </group>
+                                
+                                <group string="Contractual Rules">
+                                    <group>
+                                        <field name="contract_type"/>
+                                        <field name="contract_origin"/>
+                                        <field name="previous_policy"/>
+                                        <field name="payment_mode"/>
+                                        <field name="company_classification"/>
+                                    </group>
+                                    <group>
+                                        <field name="claim_limit"/>
+                                        <field name="financial_index"/>
+                                        <field name="moderator_variable"/>
+                                        <field name="insurance_deductible"/>
+                                        <field name="taxpayer" string="Taxpayer"/>
+                                    </group>
+                                </group>
+                                <group string="Invoice">
+                                    <group>
+                                        <field name="Date_of_Issue_Invoice"/>
+                                        <field name="date_of_issue_copay"/>
+                                        <field name="due_date_invoice"/>
+                                        <field name="due_date_copay"/>
+                                    </group>
+                                    <group>
+                                        <field name="cut_off_date"/>
+                                        <field name="recruiter_code"/>
+                                        <field name="transfer_method_in"/>
+                                        <field name="transfer_method_out"/>
+                                    </group>
+                                </group>
+                                <group string="Card">
+                                    <group>
+                                        <field name="card_type"/>
+                                        <field name="Periodicity_Card"/>
+                                    </group>
+                                    <group>
+                                        <field name="issuance_cost"/>
+                                        <field name="renewal_fee"/>
+                                        <field name="replace_fee"/>
+                                    </group>
+                                </group>
+                                <group string="Implantation">
+                                    <group>
+                                        <field name="lifes"/>
+                                    </group>
+                                    <group>
+                                        <field name="First_Bill"/>
+                                        <field name="deployment_talk"/>
+                                    </group>
+                                </group>
+                                <group string="System Information">
+                                    <group>
+                                        <field name="create_uid"/>
+                                        <field name="activity_user_id"/>
+                                        <field name="subcontract"/>
+                                        <field name="subcontract_description"/>
+                                        <field name="relationship_manager"/>
+                                        <field name="relationship_director"/>
+                                        <field name="contract_type"/>
+                                        <field name="benefits"/>
+                                        <field name="financial_group"/>
+                                        <field name="in_approval_contract_cancelation"/>
+                                        <field name="in_approval_adjustment_negotiation"/>
+                                    </group>
+                                    <group>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="activated_date"/>
+                                        <field name="Account_id"/>
+                                        <field name="name"/>
+                                        <field name="type_of_subcontract"/>
+                                        <field name="subcontract_number"/>
+                                        <field name="executive_manager"/>
+                                        <field name="flag_readjustment_notif_manager"/>
+                                        <field name="moderator_variable"/>
+                                        <field name="sub_deployed_next_to_the_contract"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Contact Details">
+                                <group string='Addresses for Parent Account'>
+                                    <field name="address_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                            <field name="City"/>
+                                            <field name="State__id"/>
+                                            <field name="Address_Type"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string='Contacts for Parent Account'>
+                                    <field name="contact_ids">
+                                        <tree>
+                                            <field name="Name" string='Contact Name'/>
+                                            <field name="Title__c"/>
+                                            <field name="Email"/>
+                                            <field name="Phone"/>
+                                            <field name="Department"/>
+                                            <field name="Level"/>
+                                            <field name="OwnerId" string='Owner First Name'/>
+                                        </tree>
+                                    </field>
+                                </group>
+
+                                <group string='Related Contacts for Parent Account'>
+                                    <field name="contact_ids">
+                                        <tree>
+                                            <field name="Name" string='Contact Name'/>
+                                            <field name="Title__c"/>
+                                            <field name="Phone"/>
+                                            <field name="Email"/>
+                                            <field name="AccountId"/>
+                                        </tree>
+                                    </field>
+                                </group>
+
+                                <group string='Contact Roles'>
+                                    <field name="contact_ids">
+                                        <tree>
+                                            <field name="Name" string='Contact Name'/>
+                                            <field name="Title__c"/>
+                                            <field name="Phone"/>
+                                            <field name="Email"/>
+                                            <field name="AccountId"/>
+                                        </tree>
+                                    </field>
+                                </group>
+
+                                <group string='Contract Teams'>
+                                    <field name="contract_team_ids">
+                                        <tree>
+                                            <field name="user_id"/>
+                                            <field name="team_role"/>
+                                        </tree>
+                                    </field>
+                                </group>
+
+                                <group string='Corporate User Agreement Permissions'>
+                                    <field name="user_company_contract_permissions_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                            <!-- <field name="Record Id"/> Not found -->
+                                            <field name="id__c"/>
+                                            <field name="RecordTypeId"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Contract">
+                                <group string="Sub Contracts">
+                                    <field name="contract_ids">
+                                        <tree>
+                                            <field name="contract_number"/>
+                                            <field name="subcontract_number"/>
+                                            <field name="Account_id"/>
+                                            <field name="subcontract_description"/>
+                                            <field name="date_start"/>
+                                            <!-- <field name="state"/> -->
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Services">
+                                    <field name="service_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="Name"/>
+                                            <field name="accountable"/>
+                                            <field name="Client_Profile"/>
+                                        </tree>
+                                    </field>
+                                </group>
+
+                                <group string="Readjustment">
+                                    <field name="readjustment_ids">
+                                        <tree>
+                                            <field name="Contracts" string='Readjustment Of Contract Id'/>
+                                            <field name="Caculation_Start"/>
+                                            <field name="Calculation_End"/>
+                                            <field name="Calculated_Financial_Readjustment_Index"/>
+                                            <field name="Calculated_Claim_Readjustment_Index"/>
+                                            <field name="Calculated_Composite_Readjustment_Index"/>
+                                            <field name="Applied_Financial_Support_Value"/>
+                                            <field name="Calculated_Financial_Support"/>
+                                            <field name="Applied_Month"/>
+                                            <field name="Status"/>
+                                        </tree>
+                                    </field>
+                                </group>
+
+                                <group string="Sensus Management Documents">
+                                    <field name="sensus_management_ids"/>
+                                </group>
+
+                                <group string="Cost Center">
+                                    <field name="cost_center_ids"/>
+                                </group>
+                            </page>
+                            <page string="Plan Data">
+                                <group string="Contract Plans">
+                                    <field name="plan_ids"/>
+                                </group>
+                                <group string="Partnerships">
+                                    <field name="contract_partner_ids"/>
+                                </group>
+                                <group string="Contributions">
+                                    <field name="contribution_ids"/>
+                                </group>
+                                <group string="Elegibilities Contract">
+                                    <field name="contract_elegibility_ids"/>
+                                </group>
+                            </page>
+                            <!-- <page string="Eligibility">
+                            </page> -->
+                            <page string="Financial">
+                                <group string="Financial Data">
+                                    <group>
+                                        <field name="payment_code"/>
+                                        <field name="fee_model"/>
+                                        <field name="calculation_basis"/>
+                                        <field name="Value"/>
+                                    </group>
+                                    <group>
+                                        <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
+                                        <field name="contrib_devol_paid_by_broker"/>
+                                    </group>
+                                </group>
+                                <group string="Contract Partners">
+                                    <field name="contract_partner_ids"/>
+                                </group>
+
+                                <group string="Contract Financial Data">
+                                    <field name="contract_financial_ids"/>
+                                </group>
+                            </page>
+                            <page string="Deployement checklists">
+                                <group string="Checklists">
+                                    <field name="checklist_ids"/>
+                                </group>
+                            </page>
+                            <!-- <page string="Digitized Contracts"></page> -->
+                            <page string="Drive"></page>
+                            <page string="Drive Setting"></page>
+                            <page string="Drive Local"></page>
+                            <page string="Local Drive Setting"></page>
+                            <page string="App setting"></page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--travel tree view        -->
+        <record id="contract_recordtype_travel_layout_tree" model="ir.ui.view">
+            <field name="name">travel Layout</field>
+            <field name="model">hr.contract</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="policy"/>
+                    <field name="benefits"/>
+                    <field name="carrier_2"/>
+                    <field name="date_start"/>
+                    <field name="has_partner"/>
+                    <field name="Owner_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--travel action        -->
+        <record id="contract_recordtype_travel_layout_action" model="ir.actions.act_window">
+            <field name="name">Contract</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.contract</field>
+            <field name="view_mode">form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('contract_recordtype_travel_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('contract_recordtype_travel_layout_form')})]"/>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     No records available.
@@ -4115,6 +4436,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -4131,12 +4453,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -4166,7 +4488,7 @@
 
         <!--Pension action        -->
         <record id="contract_recordtype_pension_layout_action" model="ir.actions.act_window">
-            <field name="name">Pension Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -4463,6 +4785,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -4479,12 +4802,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -4514,7 +4837,7 @@
 
         <!--car fleet action        -->
         <record id="contract_recordtype_car_fleet_layout_action" model="ir.actions.act_window">
-            <field name="name">Car Fleet Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -4811,6 +5134,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -4827,12 +5151,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -4862,7 +5186,7 @@
 
         <!--car action        -->
         <record id="contract_recordtype_car_layout_action" model="ir.actions.act_window">
-            <field name="name">Car Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -5159,6 +5483,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -5175,12 +5500,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -5210,7 +5535,7 @@
 
         <!--fuel action        -->
         <record id="contract_recordtype_fuel_layout_action" model="ir.actions.act_window">
-            <field name="name">Fuel Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -5506,6 +5831,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -5522,12 +5848,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -5557,7 +5883,7 @@
 
         <!--occupational health action        -->
         <record id="contract_recordtype_occupational_health_layout_action" model="ir.actions.act_window">
-            <field name="name">Occupational Health Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -5853,6 +6179,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -5869,12 +6196,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -5904,7 +6231,7 @@
 
         <!--checkup action        -->
         <record id="contract_recordtype_checkup_layout_action" model="ir.actions.act_window">
-            <field name="name">Checkup Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -6201,6 +6528,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -6217,12 +6545,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -6252,7 +6580,7 @@
 
         <!--vaccine action        -->
         <record id="contract_recordtype_vaccine_layout_action" model="ir.actions.act_window">
-            <field name="name">Vaccine Layout</field>
+            <field name="name">Contract</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.contract</field>
             <field name="view_mode">form</field>
@@ -6549,6 +6877,7 @@
                                     </group>
                                     <group>
                                         <field name="due_date"/>
+                                        <field name="Periodicity_Card" string='Frequency'/>
                                         <field name="contrib_devol_paid_by_broker"/>
                                     </group>
                                 </group>
@@ -6565,12 +6894,12 @@
                                     <field name="checklist_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Digitized Contracts"></page>
+                            <!-- <page string="Digitized Contracts"></page> -->
                             <page string="Drive"></page>
                             <page string="Drive Setting"></page>
                             <page string="Drive Local"></page>
                             <page string="Local Drive Setting"></page>
-                            <page string="App setting"></page> -->
+                            <page string="App setting"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">

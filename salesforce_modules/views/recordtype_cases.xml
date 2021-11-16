@@ -11,41 +11,32 @@
                         <field name="Status" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="CaseNumber"/>
-                                <field name="AccountId"/>
-                                <field name="Type"/>
-                                <field name="Request"/>
-                                <field name="OwnerId"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="Details">
-                                <group string="Customer Data">
+                                <group>
                                     <group>
                                         <field name="Subject"/>
-                                        <field name="Origin"/>
                                         <field name="Type"/>
-                                        <field name="Reason"/>
                                         <field name="Request"/>
                                         <field name="Priority"/>
                                         <field name="CreatedDate"/>
                                         <field name="ClosedDate"/>
-                                        <field name="Cancelation_Reason"/>
-                                        <field name="opportunity_id"/>
-                                        <field name="quote_id"/>
-                                        <field name="Stage"/>
-                                        <field name="beneficiary_id"/>
-                                        <field name="client_view_permission"/>
+                                        <field name="SuppliedName"/>
                                         <field name="SuppliedEmail"/>
-                                        <field name="Description"/>
+                                        <field name="Reason"/>
+                                        <field name="Stage"/>
+                                        <!-- Entitlement object is not developed -->
                                     </group>
                                     <group>
                                         <field name="AccountId"/>
                                         <field name="Contract_id"/>
                                         <field name="Contract_New"/>
                                         <field name="ContactId"/>
+                                        <field name="Origin"/>
+                                        <field name="client_view_permission"/>
+                                        <field name="Reopening"/>
+                                        <field name="Visible_to_the_Customer"/>
+                                        <field name="ParentId"/>
                                     </group>
                                 </group>
                             </page>
@@ -54,7 +45,6 @@
                                     <field name="case_ids"/>
                                 </group>
                             </page>
-                            <!-- <page string="Recipient"></page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -66,7 +56,7 @@
             </field>
         </record>
 
-        <!--general case tree view        -->
+        <!--general case tree view-->
         <record id="case_recordtype_general_case_layout_tree" model="ir.ui.view">
             <field name="name">General Case Layout</field>
             <field name="model">model_case</field>
@@ -76,15 +66,14 @@
                     <field name="AccountId"/>
                     <field name="Type"/>
                     <field name="Request"/>
-<!--                    <field name="Status"/>-->
                     <field name="OwnerId"/>
                 </tree>
             </field>
         </record>
 
-        <!--General Case action        -->
+        <!--General Case action-->
         <record id="case_recordtype_general_case_layout_action" model="ir.actions.act_window">
-            <field name="name">General Case Layout</field>
+            <field name="name">Case</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_case</field>
             <field name="view_mode">form</field>
@@ -108,15 +97,6 @@
                         <field name="Status" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="CaseNumber"/>
-                                <field name="Type"/>
-                                <field name="Request"/>
-                                <field name="Priority"/>
-                                <field name="OwnerId"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group string="Customer Data">
@@ -134,12 +114,12 @@
                                         <field name="opportunity_id"/>
                                         <field name="quote_id"/>
                                         <field name="Stage"/>
+                                        <!-- Subject Request object is not developed -->
                                     </group>
                                     <group>
                                         <field name="AccountId"/>
                                         <field name="Contract_id"/>
                                         <field name="ContactId"/>
-<!--                                        <field name="Status"/>-->
                                         <field name="ParentId"/>
                                         <field name="IsEscalated"/>
                                         <field name="Reopening"/>
@@ -150,7 +130,12 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="contact_role_lines"/>
+                                <group>
+                                    <field name="contact_role_lines"/>
+                                </group>
+                                <group string="Related Cases">
+                                    <field name="case_ids"/>
+                                </group>
                             </page>
                             <!-- <page string="Recipient"></page> -->
                         </notebook>
@@ -181,7 +166,7 @@
 
         <!--risk management action        -->
         <record id="case_recordtype_risk_management_layout_action" model="ir.actions.act_window">
-            <field name="name">Risk Management Layout</field>
+            <field name="name">Case</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_case</field>
             <field name="view_mode">form</field>
@@ -206,15 +191,6 @@
                     <field name="Status" widget="statusbar"/>
                 </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="CaseNumber"/>
-                                <field name="Type"/>
-                                <field name="Request"/>
-                                <field name="Priority"/>
-                                <field name="attendee_by_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group string="Customer Data">
@@ -243,12 +219,19 @@
                                     </group>
                                     <group>
                                         <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string="Last Modified On"/>
                                         <field name="create_uid"/>
+                                        <field name="create_date"/>
                                     </group>
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="contact_role_lines"/>
+                                <group>
+                                    <field name="contact_role_lines"/>
+                                </group>
+                                <group string="Related Cases">
+                                    <field name="case_ids"/>
+                                </group>
                             </page>
                             <!-- <page string="Recipient"></page>  -->
                         </notebook>
@@ -280,7 +263,7 @@
 
         <!--helpdesk action        -->
         <record id="case_recordtype_helpdesk_layout_action" model="ir.actions.act_window">
-            <field name="name">Help Desk Layout</field>
+            <field name="name">Case</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_case</field>
             <field name="view_mode">form</field>
@@ -331,6 +314,7 @@
                                         <field name="opportunity_id"/>
                                         <field name="quote_id"/>
                                         <field name="Stage"/>
+                                        <!-- Subject request not found -->
                                         <field name="SuppliedEmail"/>
                                         <field name="Description"/>
                                     </group>
@@ -339,16 +323,21 @@
                                         <field name="Contract_id"/>
                                         <field name="Contract_New"/>
                                         <field name="ContactId"/>
-<!--                                        <field name="Status"/>-->
                                         <field name="RecordTypeId"/>
                                         <field name="ParentId"/>
                                         <field name="IsEscalated"/>
                                         <field name="Reopening"/>
+                                        <field name="SuppliedName"/>
                                     </group>
                                 </group>
                             </page>
                             <page string="Related">
-                                <field name="contact_role_lines"/>
+                                <group>
+                                    <field name="contact_role_lines"/>
+                                </group>
+                                <group string="Related Cases">
+                                    <field name="case_ids"/>
+                                </group>
                             </page>
                             <!-- <page string="Recipient"></page>  -->
                         </notebook>
@@ -381,7 +370,7 @@
 
         <!--implamentation action        -->
         <record id="case_recordtype_implamentation_layout_action" model="ir.actions.act_window">
-            <field name="name">Implamentation Request Layout</field>
+            <field name="name">Case</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_case</field>
             <field name="view_mode">form</field>
@@ -405,15 +394,6 @@
                     <field name="Status" widget="statusbar"/>
                 </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="CaseNumber"/>
-                                <field name="Type"/>
-                                <field name="Request"/>
-                                <field name="Priority"/>
-                                <field name="OwnerId"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group string="Customer Data">
@@ -440,7 +420,6 @@
                                         <field name="Contract_id"/>
                                         <field name="Contract_New"/>
                                         <field name="ContactId"/>
-<!--                                        <field name="Status"/>-->
                                         <field name="RecordTypeId"/>
                                         <field name="ParentId"/>
                                         <field name="IsEscalated"/>
@@ -483,7 +462,7 @@
 
         <!--new contract process action        -->
         <record id="case_recordtype_new_contract_process_layout_action" model="ir.actions.act_window">
-            <field name="name">New Contract Process Layout</field>
+            <field name="name">Case</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_case</field>
             <field name="view_mode">form</field>
@@ -530,7 +509,6 @@
                                         <field name="Stage"/>
                                     </group>
                                     <group>
-<!--                                        <field name="Status"/>-->
                                         <field name="Origin"/>
                                         <field name="Priority"/>
                                         <field name="OwnerId"/>
@@ -572,7 +550,7 @@
 
         <!--readjustment action        -->
         <record id="case_recordtype_readjustment_action" model="ir.actions.act_window">
-            <field name="name">Readjustment Layout</field>
+            <field name="name">Case</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_case</field>
             <field name="view_mode">form</field>
