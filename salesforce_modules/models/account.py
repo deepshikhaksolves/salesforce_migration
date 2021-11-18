@@ -288,6 +288,9 @@ class Account(models.Model):
     wedding_date__pc = fields.Date('Wedding Date', track_visibility='onchange')
     issuing_body_rg__pc = fields.Char('Issuing Agency RG', size=10, track_visibility='onchange')
 
+    broker_id = fields.Many2one('broker', string='Broker', track_visibility='onchange')
+
+
     # ============== Fields For Revenue start ===========================
     # CreatedById  already in odoo
     # LastModifiedById already in odoo

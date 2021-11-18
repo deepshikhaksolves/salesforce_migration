@@ -11,3 +11,4 @@ class OperatorChecklist(models.Model):
     # LastModifiedById already in odoo
     Name = fields.Char('Name Operator Checklist', size=80,track_visibility='onchange')
     operator__c = fields.Many2one('account.account', string='Operator',track_visibility='onchange')
+    operator_document_id = fields.Many2one('operator_document', string='Operator Document',track_visibility='onchange')

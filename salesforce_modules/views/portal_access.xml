@@ -63,4 +63,67 @@
         <field name="res_model">portal.access</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+    <!-- Lightning Layout -->
+    <record id="portal_access_lightning_view_form" model="ir.ui.view">
+        <field name="name">portal_access_lightning_view.form</field>
+        <field name="model">portal.access</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <notebook>
+                        <page string="Details">
+                            <group>
+                                <group>
+                                    <field name="OwnerId"/>
+                                    <field name="carrier_id"/>
+                                    <field name="administrator__c"/>
+                                    <field name="financial_group_id"/>
+                                    <field name="contract__c"/>
+                                    <field name="registered_email__c"/>
+                                    <field name="access_users__c"/>
+                                </group>
+                                <group>
+                                    <field name="site__c"/>
+                                    <field name="login__c"/>
+                                    <field name="access_code__c"/>
+                                    <field name="password__c"/>
+                                    <field name="access_type__c"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                  <field name="message_follower_ids"/>
+                  <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="portal_access_lightning_view_tree" model="ir.ui.view">
+        <field name="name">portal_access_lightning.view.tree</field>
+        <field name="model">portal.access</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="login__c"/>
+                <field name="password__c"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="portal_access_lightning_action" model="ir.actions.act_window">
+        <field name="name">Portal Access</field>
+        <field name="res_model">portal.access</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('portal_access_lightning_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('portal_access_lightning_view_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+    </record>
 </odoo>

@@ -126,3 +126,6 @@ class SalesforceLead(models.Model):
 
     benifit_ids = fields.One2many('model_benfit_politic', 'lead_id', string='Benefit Politic')
     event_control_ids = fields.One2many('event_control', 'Opportunity_ID', string='Event Control Id')
+
+    broker_id = fields.Many2one('broker', string='Broker',track_visibility='onchange')
+

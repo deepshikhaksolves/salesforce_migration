@@ -7,26 +7,34 @@
             <field name="arch" type="xml">
                 <form string="Subject C Layout">
                     <sheet>
-                        <group>
-                            <group>
-                                <field name="Name" required='1'/>
-                                <field name="create_uid" string="Created By"/>
-                            </group>
-                            <group>
-                                <field name="Status"/>
-                                <field name="write_uid" string="Last Modified By"/>
-                            </group>
-                        </group>
+                        <header>
+                            <field name="Status" widget="statusbar"/>
+                        </header>
                         <notebook>
-                            <page string="Cases">
-                                <field name="case_ids">
-                                    <tree>
-                                        <field name="CaseNumber"/>
-                                        <field name="Subject"/>
-                                        <field name="CreatedDate"/>
-                                        <field name="Priority"/>
-                                    </tree>
-                                </field>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" required='1'/>
+                                        <field name="create_uid" string="Created By"/>
+                                        <field name="create_date" string="Created On"/>
+                                    </group>
+                                    <group>
+                                        <field name="write_uid" string="Last Modified By"/>
+                                        <field name="write_date" string="Last Modified On"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group string="Cases">
+                                    <field name="case_ids">
+                                        <tree>
+                                            <field name="CaseNumber"/>
+                                            <field name="Subject"/>
+                                            <field name="CreatedDate"/>
+                                            <field name="Priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -55,7 +63,7 @@
 
         <!-- Subject C Layout action window -->
         <record id="subject_c_action" model="ir.actions.act_window">
-            <field name="name">Subject C Action Layout</field>
+            <field name="name">Subject</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_subject_c</field>
             <field name="view_mode">tree,form</field>

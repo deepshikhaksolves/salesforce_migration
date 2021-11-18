@@ -47,3 +47,4 @@ class SalesforcePlanCoverage(models.Model):
     plan_id = fields.Many2one('product.product', 'Plano',track_visibility='onchange')
     last_modified_by_id = fields.Many2one('res.users', string="Last Modified By",track_visibility='onchange')
     owner_id = fields.Many2one('account.account', string='Owner',track_visibility='onchange')
+    contract_plan_id = fields.Many2one('model_contract_plan', string='Contract Plan',track_visibility='onchange')

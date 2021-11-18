@@ -8,18 +8,37 @@
             <field name="arch" type="xml">
                 <form string="BrandLayout">
                     <sheet>
-                        <group>
-                            <group>
-                                <field name="Name" required='1'/>
-                                <field name="create_uid" string='Created By'/>
-                            </group>
-                            <group>
-                                <field name="OwnerId"/>
-                                <field name="write_uid" string='Last Modified By'/>
-                            </group>
-                        </group>
                         <notebook>
-                            <page string="Fleets"></page>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" required='1'/>
+                                        <field name="create_uid" string='Created By'/>
+                                        <field name="create_date" string='Created On'/>
+                                    </group>
+                                    <group>
+                                        <field name="OwnerId"/>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group string="Models">
+                                    <field name="model_ids">
+                                        <tree>
+                                            <field name="name"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Fleet">
+                                    <field name="fleet_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -47,7 +66,7 @@
 
         <!-- Brand Layout action window -->
         <record id="brand_layout_action" model="ir.actions.act_window">
-            <field name="name">Brand Layout</field>
+            <field name="name">Brand</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_brand_c</field>
             <field name="view_mode">tree,form</field>

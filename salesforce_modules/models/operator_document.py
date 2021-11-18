@@ -12,3 +12,6 @@ class OperatorDocument(models.Model):
     document_id = fields.Many2one('ir.attachment', string='Document')
     # LastModifiedById already in odoo
     name = fields.Char(string="Carrier's Document Name")
+
+    operator_checklist_ids = fields.One2many('model_operator_checklist', 'operator_document_id', string='Operator Document Id')
+
