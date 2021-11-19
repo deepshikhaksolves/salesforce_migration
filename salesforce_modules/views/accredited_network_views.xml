@@ -4,6 +4,7 @@
         <!-- Accredited Network Layout form view -->
         <record id="accredited_network_layout_form" model="ir.ui.view">
             <field name="name">Accredited Network Layout Form</field>
+            <field eval="99" name="priority"/>
             <field name="model">accredited_network</field>
             <field name="arch" type="xml">
                 <form string="Accredited Network Layout">

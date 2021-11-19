@@ -4,6 +4,7 @@
         <!-- model form view -->
         <record id="model_view_form" model="ir.ui.view">
             <field name="name">Model View Layout</field>
+            <field eval="99" name="priority"/>
             <field name="model">salesforce.model_c</field>
             <field name="arch" type="xml">
                 <form string="Model View">
@@ -93,10 +94,12 @@
                                         <field name="name"/>
                                         <field name="Brand__c"/>
                                         <field name="create_uid" string="Created By"/>
+                                        <field name="create_date" string="Created On"/>
                                     </group>
                                     <group>
                                         <field name="OwnerId"/>
                                         <field name="write_uid" string="Last Modified By"/>
+                                        <field name="write_date" string="Last Modified On"/>
                                     </group>
                                 </group>
                             </page>

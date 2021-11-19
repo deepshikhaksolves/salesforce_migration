@@ -87,7 +87,7 @@
                 <form string="Channel Segmentation">
                     <sheet>
                         <notebook>
-                            <page string="Detail">
+                            <page string="Details">
                                 <group>
                                     <group>
                                         <field name="Parent_Channel__c"/>

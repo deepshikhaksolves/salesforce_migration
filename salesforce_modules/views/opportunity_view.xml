@@ -4850,7 +4850,7 @@
                                     <field name="loss_reason"/>
                                 </group>
                                 <group>
-                                    <field name="stage_name"/>
+                                    <!-- <field name="stage_name"/> -->
                                     <field name="mailing_origin"/>
                                     <field name="Market_Reserve_ID"/>
                                     <field name="motive_of_gain"/>

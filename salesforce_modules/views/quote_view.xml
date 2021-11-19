@@ -4,6 +4,7 @@
         <!-- Broker Benchmarking Layout Start -->
         <record id="quote_broker_benchmarking_layout_form" model="ir.ui.view">
             <field name="name">Broker Benchmarking Quote Form</field>
+            <field eval="99" name="priority"/>
             <field name="model">model_quote</field>
             <field name="arch" type="xml">
                 <form string="Broker Benchmarking Quote">

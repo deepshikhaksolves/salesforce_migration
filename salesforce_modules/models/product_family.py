@@ -14,4 +14,4 @@ class ProductFamily(models.Model):
     carrier__c = fields.Many2many(string='Operator', comodel_name='account.account', relation='carrier_account_rel',track_visibility='onchange')
 
     account_id = fields.Many2one('account.account', string='Account Id',track_visibility='onchange')
-    product_ids = fields.One2many('product.template', 'product_family_id', string='Product Family IDS')
+    product_ids = fields.One2many('product.template', 'product_family_id', string='Product Family')

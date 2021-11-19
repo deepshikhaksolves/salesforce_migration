@@ -2,6 +2,7 @@
 <odoo>
     <record id="model_name_view_form" model="ir.ui.view">
         <field name="name">portal.access.view.form</field>
+        <field eval="99" name="priority"/>
         <field name="model">portal.access</field>
         <field name="arch" type="xml">
             <form string="">

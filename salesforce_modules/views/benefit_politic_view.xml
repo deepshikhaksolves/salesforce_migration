@@ -4,6 +4,7 @@
         <!-- Benefit Policy Layout Form -->
         <record id="benefit_policy_layout_form" model="ir.ui.view">
             <field name="name">Benefit Policy Layout Form</field>
+            <field eval="99" name="priority"/>
             <field name="model">model_benfit_politic</field>
             <field name="arch" type="xml">
                 <form string="Benefit Policy Layout">
