@@ -3584,15 +3584,6 @@
                                     <field name="motive_of_gain"/>
                                     <field name="loss_reason"/>
                                     <field name="amount"/>
-
-                                    <field name="periodicity_renewal"/>
-                                    <field name="life_contract"/>
-                                    <field name="campaigns_id"/>
-                                    <field name="revenue"/>
-                                    <field name="moderator_variable"/>
-                                    <field name="wage_limit_for_coparticipation"/>
-                                    <field name="wage_limit_amount"/>
-                                    <field name="special_condition"/>
                                 </group>
                                 <group>
                                     <field name="channel_id"/>
