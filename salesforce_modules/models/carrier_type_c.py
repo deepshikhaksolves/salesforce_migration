@@ -13,3 +13,6 @@ class Carrier_Type_C(models.Model):
     Initials = fields.Char(string='Initials', size=20)
     Name = fields.Char(string='Operator Type',size=80)
     Carrier_Type = fields.Char(string='Type of Carrier ID')
+    account_ids = fields.One2many('account.account','carrier_id')
+
+

@@ -71,5 +71,83 @@
                 </p>
             </field>
         </record>
+
+        <!--product family lightning form view        -->
+        <record id="product_family_lightning_view_form" model="ir.ui.view">
+            <field name="name">Product Family</field>
+            <field name="model">product_family</field>
+            <field name="arch" type="xml">
+                <form string="Product Family">
+                    <sheet>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="benefit__c"/>
+                                        <field name="carrier__c" widget="many2many_tags"/>
+                                        <field name="create_uid" string="Created By"/>
+                                    </group>
+                                    <group>
+                                        <field name="write_uid" string="Last Modified By"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group string="Products">
+                                    <field name="product_ids">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="ProductCode"/>
+                                            <field name="Description"/>
+                                            <field name="Minimum_Lives__c"/>
+                                            <field name="maximum_lives__c"/>
+                                        </tree>
+                                    </field>
+
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--Product Family lightning tree view        -->
+        <record id="product_family_lightning_tree" model="ir.ui.view">
+            <field name="name">product_family</field>
+            <field name="model">product_family</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="benefit__c"/>
+                    <field name="carrier__c" widget='many2many_tags'/>
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--product family lightning action        -->
+        <record id="product_family_lightning_action" model="ir.actions.act_window">
+            <field name="name">Product Family</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product_family</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('product_family_lightning_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('product_family_lightning_view_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+
     </data>
 </odoo>

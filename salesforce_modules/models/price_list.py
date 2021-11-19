@@ -24,3 +24,4 @@ class PriceList(models.Model):
     origin_table_c = fields.Many2one('model_price_list', string='source table',track_visibility='onchange')
     account_id = fields.Many2one('account.account', string='Account Id',track_visibility='onchange')
     product_price_ids = fields.One2many('product_price', 'price_list_id', 'Product Price IDS',track_visibility='onchange')
+    study_configuration_price_table_ids = fields.One2many('model_study_configuration_price_table','price_table_id')

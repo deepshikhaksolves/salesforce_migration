@@ -34,3 +34,4 @@ class ExpenceProvisioning(models.Model):
     Compensation_Value = fields.Float(string='Remunerated Value', digits=(16, 2))
     First_Month_Due = fields.Date('First Month Expiration')
     Last_Month = fields.Date('Last month')
+    expense_compensation_ids = fields.One2many('hr.expense','Expense_Provisioning_id')

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-       <record id="periodicity_form" model="ir.ui.view">
+        <record id="periodicity_form" model="ir.ui.view">
             <field name="name">Periodicity Layout Form</field>
             <field name="model">model.periodicity</field>
             <field name="arch" type="xml">
                 <form string="Opportunity Contact Role Layout">
                     <sheet>
-                       <group>
+                        <group>
                             <group>
                                 <field name="name" required='1'/>
                                 <field name="every"/>
@@ -22,12 +22,12 @@
                                 <field name="recurrence"/>
                                 <field name="order"/>
                                 <field name="last_modified_by_id"/>
+                            </group>
                         </group>
-                       </group>
                         <notebook>
                             <page string="Serviços" name="services">
                                 <group>
-                                    <field name="service_lines" />
+                                    <field name="service_lines"/>
                                 </group>
                             </page>
                         </notebook>
@@ -39,7 +39,7 @@
                 </form>
             </field>
         </record>
-       <record id="periodicity_tree" model="ir.ui.view">
+        <record id="periodicity_tree" model="ir.ui.view">
             <field name="name">Periodicity Layout Tree</field>
             <field name="model">model.periodicity</field>
             <field name="arch" type="xml">
@@ -53,19 +53,119 @@
                 </tree>
             </field>
         </record>
-       <record id="periodicity_action" model="ir.actions.act_window">
-        <field name="name">Periodicity Layout</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">model.periodicity</field>
-        <field name="view_mode">tree,form</field>
-        <field name="view_ids" eval="[(5, 0, 0),
+        <record id="periodicity_action" model="ir.actions.act_window">
+            <field name="name">Periodicity Layout</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model.periodicity</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
             (0, 0, {'view_mode': 'tree', 'view_id': ref('periodicity_tree')}),
             (0, 0, {'view_mode': 'form', 'view_id': ref('periodicity_form')})]"/>
-        <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">
-                No records available.
-            </p>
-        </field>
-    </record>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
+        <!--perodicity lightning form view        -->
+        <record id="periodicity_form_lightning_form" model="ir.ui.view">
+            <field name="name">Periodicity Layout</field>
+            <field name="model">model.periodicity</field>
+            <field name="arch" type="xml">
+                <form string="Periodicity">
+                    <sheet>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="every"/>
+                                        <field name="pattern"/>
+                                        <field name="day_of_the_week"/>
+                                        <field name="month"/>
+                                        <field name="create_uid"/>
+                                    </group>
+                                    <group>
+                                        <field name="start"/>
+                                        <field name="end"/>
+                                        <field name="recurrence"/>
+                                        <field name="order"/>
+                                        <field name="write_uid" string="Last Modified By"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group string="Expense Provisions">
+                                    <field name="expense_provisions_ids">
+                                        <tree>
+                                            <field name="name"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Revenue Provisions">
+                                    <field name="revenue_provisions_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Broker">
+                                    <field name="broker_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Services">
+                                    <field name="service_ids">
+                                        <tree>
+                                            <field name="periodicity_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--Periodicity lightning tree view        -->
+        <record id="periodicity_lightning_tree" model="ir.ui.view">
+            <field name="name">Periodicity Layout</field>
+            <field name="model">model.periodicity</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="every"/>
+                    <field name="pattern"/>
+                    <field name="day_of_the_week"/>
+                    <field name="month"/>
+                    <field name="user_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Periodicity lightning action        -->
+        <record id="periodicity_lightning_action" model="ir.actions.act_window">
+            <field name="name">Periodicity</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model.periodicity</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('periodicity_lightning_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('periodicity_form_lightning_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+
     </data>
 </odoo>
