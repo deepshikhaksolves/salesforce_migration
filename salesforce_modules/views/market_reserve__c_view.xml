@@ -7,22 +7,31 @@
             <field name="model">model_market_reserve__c</field>
             <field name="arch" type="xml">
                 <form string="Market Reserve C Layout">
+                    <header>
+                        <field name="Status__c" widget='statusbar'/>
+                    </header>
                     <sheet>
-                        <group>
-                            <group>
-                                <field name="Name" required='1'/>
-                                <field name="Seller__c"/>
-                                <field name="Start__c"/>
-                                <field name="How_c"/>
-                                <field name="Account__c" required='1'/>
-                            </group>
-                            <group>
-                                <field name="OwnerId"/>
-                                <field name="Reason__c"/>
-                                <field name="End__c"/>
-
-                            </group>
-                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" required='1'/>
+                                        <field name="Seller__c"/>
+                                        <field name="Start__c"/>
+                                        <field name="How_c"/>
+                                        <field name="Account__c" required='1'/>
+                                    </group>
+                                    <group>
+                                        <field name="OwnerId"/>
+                                        <field name="Reason__c"/>
+                                        <field name="End__c"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <!-- <page string="Related">
+                                
+                            </page> -->
+                        </notebook>
                     </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers"/>
@@ -48,7 +57,7 @@
         </record>
 
         <record id="market_reserve_c_action" model="ir.actions.act_window">
-            <field name="name">Market Reserve C Action Layout</field>
+            <field name="name">Market Reserve</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_market_reserve__c</field>
             <field name="view_mode">tree,form</field>

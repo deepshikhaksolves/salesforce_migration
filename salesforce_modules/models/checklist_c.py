@@ -20,8 +20,7 @@ class Checklist_C(models.Model):
                                  ('ERASURE','ERASURE'),('NOT SIGNED BY THE HOLDER','NOT SIGNED BY THE HOLDER')],
                                 string='Review')
     regularization_date = fields.Date(string='Regularization Date')
-    # Document_id = fields.Many2one('model_record',string='Document')
-    # Document_id is related to model_record which is not define
+    Document_id = fields.Many2one('ir.attachment',string='Document')
     OwnerId = fields.Many2one('res.users',string='Owner')
     Status = fields.Selection([('Pending','Pending'),('Analysis','Analysis'),('critical','critical'),
                                ('Scanning','Scanning'),('Concluded','Concluded')],string='Status')

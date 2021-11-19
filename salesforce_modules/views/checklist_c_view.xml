@@ -6,19 +6,24 @@
             <field name="model">model_checklist_c</field>
             <field name="arch" type="xml">
                 <form string="Checklist C Layout">
+                    <header>
+                        <field name="Status" widget='statusbar'/>
+                    </header>
                     <sheet>
-                        <group>
-                            <group>
-                                <field name="Name"/>
-<!--                                <field name="Document_id"/>Field Is not Define-->
-                            </group>
-                            <group>
-                                <field name="Status"/>
-                            </group>
-                        </group>
                         <notebook>
-                            <page string="Notes">
+                            <page string='Details'>
+                                <group>
+                                    <group>
+                                        <field name="Name"/>
+                                        <field name="Document_id"/>
+                                    </group>
+                                </group>
                             </page>
+                            <!-- <page string='Related'>
+                                <group>
+                                    <field name="name"/>
+                                </group>
+                            </page> -->
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">

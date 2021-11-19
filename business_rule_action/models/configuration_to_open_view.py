@@ -14,17 +14,26 @@ class salesforce_open_view(models.Model):
     model_name = fields.Char(related='ir_model.model', string='Model Name')
     configuration_ids = fields.One2many('config.open.view.configurations', 'config_parent_id', 'Business Model '
                                                                                                'Configuration')
+    _sql_constraints = [
+        # Partial constraint, complemented by a python constraint (see below).
+        ('model_key', 'unique (ir_model)', 'You can not have two record with same model!'),
+    ]
 
     def get_record_according_to_domain(self, model_name,res_ids):
         rec_set = self.env['config.open.view'].search([('ir_model.model', '=', model_name)])
 
         data = []
+        if rec_set:
+            data.append({
+                'model': rec_set.ir_model.model,
+                'res_ids': []
+            })
         sorted_data = rec_set.configuration_ids.sorted(key=lambda conf: conf.sequence)
         for rec in sorted_data:
             data_dict = {
                 'model': rec_set.ir_model.model,
                 'view_id': rec.ir_view.id,
-                'domain': safe_eval(rec.domain),
+                'domain': safe_eval(rec.domain) if rec.domain else safe_eval('False'),
                 'context': safe_eval(rec.context),
                 'res_ids': []
             }

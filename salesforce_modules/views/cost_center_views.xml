@@ -7,15 +7,17 @@
             <field name="model">model_cost_center</field>
             <field name="arch" type="xml">
                 <form string="Cost Center Form">
+                    <header>
+                        <field name="status" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
                                 <field name="cost_center" />
-                                <field name="beneficiary_id" string='Beneficiary'/>
-                                <!-- <field name="beneficiary_card_id"/> -->
+                                <field name="beneficiary_id"/>
+                                <field name="beneficiary_card_id"/>
                                 <field name="home_term"/>
                                 <field name="end_term"/>
-                                <field name="status"/>
                             </group>
                         </group>
                     </sheet>

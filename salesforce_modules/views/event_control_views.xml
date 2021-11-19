@@ -7,24 +7,31 @@
             <field name="arch" type="xml">
                 <form string="Event Control">
                     <sheet>
-                        <group>
-                            <group>
-                                <field name="name"/>
-                                <field name="Event_ID"/>
-                                <field name="Opportunity_ID"/>
-                                <field name="Assign_ID"/>
-                                <field name="pre_consultant"/>
-                                <field name="Visit"/>
-                                <field name="pre_consultant_current_user"/>
-                                <field name="create_uid"/>
-                            </group>
-                            <group>
-                                <field name="Start_Date"/>
-                                <field name="Rescheduled"/>
-                                <field name="cancelled"/>
-                                <field name="write_uid" string='Last Modified By'/>
-                            </group>
-                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="Event_ID"/>
+                                        <field name="Opportunity_ID"/>
+                                        <field name="Assign_ID"/>
+                                        <field name="pre_consultant"/>
+                                        <field name="Visit"/>
+                                        <field name="pre_consultant_current_user"/>
+                                        <field name="create_uid"/>
+                                        <field name="create_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="Start_Date"/>
+                                        <field name="Rescheduled"/>
+                                        <field name="cancelled"/>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related"></page>
+                        </notebook>
                     </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers"/>
@@ -51,7 +58,7 @@
             </field>
         </record>
        <record id="event_control_action" model="ir.actions.act_window">
-        <field name="name">Event Control Layout</field>
+        <field name="name">Event Control</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">event_control</field>
         <field name="view_mode">form</field>

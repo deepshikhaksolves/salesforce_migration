@@ -8,58 +8,64 @@
             <field name="arch" type="xml">
                 <form string="Region Layout">
                     <sheet>
-                        <group>
-                            <group>
-                                <field name="Name" required='1'/>
-                                <field name="active__c"/>
-                                <field name="create_uid"/>
-                            </group>
-                            <group>
-                                <field name="OwnerId"/>
-                                <field name="write_uid" string='Last Modified By'/>
-                            </group>
-                        </group>
                         <notebook>
-                            <page string="Region States">
-                                <field name="region_state_ids">
-                                    <tree>
-                                        <field name="Name"/>
-                                        <field name="state_id"/>
-                                    </tree>
-                                </field>
-                            </page>
-                            <page string="Region Cities">
-                                <field name="region_city_ids">
-                                    <tree>
-                                        <field name="Name"/>
-                                        <field name="city__c"/>
-                                        <field name="priority"/>
-                                    </tree>
-                                </field>
-                            </page>
-                            <page string="Product Regions">
-                                <field name="product_region_ids">
-                                    <tree>
-                                        <field name="name"/>
-                                        <field name="product_id"/>
-                                    </tree>
-                                </field>
-                            </page>
-                            <page string="Prices x Regions">
-                                <field name="price_x_region_ids">
-                                    <tree>
-                                        <field name="Name"/>
-                                        <field name="product_price_id"/>
-                                    </tree>
-                                </field>
-                            </page>
-                            <page string="Accredited Networks">
-                                <field name="accredited_network_ids">
-                                    <tree>
-                                        <field name="Name"/>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" required='1'/>
                                         <field name="active__c"/>
-                                    </tree>
-                                </field>
+                                        <field name="create_uid"/>
+                                        <field name="create_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="OwnerId"/>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string='Related'>
+                                <group string="Region States">
+                                    <field name="region_state_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                            <field name="state_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Region Cities">
+                                    <field name="region_city_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                            <field name="city__c"/>
+                                            <field name="priority"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Product Regions">
+                                    <field name="product_region_ids">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="product_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Prices x Regions">
+                                    <field name="price_x_region_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                            <field name="product_price_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Accredited Networks">
+                                    <field name="accredited_network_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                            <field name="active__c"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -89,7 +95,7 @@
 
         <!-- region action window -->
         <record id="region_layout_action" model="ir.actions.act_window">
-            <field name="name">Region Layout</field>
+            <field name="name">Region</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_region</field>
             <field name="view_mode">tree,form</field>

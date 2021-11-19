@@ -288,6 +288,9 @@ class Account(models.Model):
     wedding_date__pc = fields.Date('Wedding Date', track_visibility='onchange')
     issuing_body_rg__pc = fields.Char('Issuing Agency RG', size=10, track_visibility='onchange')
 
+    broker_id = fields.Many2one('broker', string='Broker', track_visibility='onchange')
+
+
     # ============== Fields For Revenue start ===========================
     # CreatedById  already in odoo
     # LastModifiedById already in odoo
@@ -299,20 +302,21 @@ class Account(models.Model):
 
     financial_group_id = fields.Many2one('model_financial_group', string="Financial Group ID", track_visibility='onchange')
 
-    portal_access_ids = fields.One2many('portal.access', 'account_id', string='Portal Access IDS')
-    bank_account_ids = fields.One2many('account.setup.bank.manual.config', 'Account_id', string='Bank Account IDS')
-    attachment_ids = fields.One2many('ir.attachment', 'account_id', string='Attachment IDS')
-    opportunity_ids = fields.One2many('crm.lead', 'account_id', string='Opportunity IDS')
+    portal_access_ids = fields.One2many('portal.access', 'account_id', string='Portal Access')
+    bank_account_ids = fields.One2many('account.setup.bank.manual.config', 'Account_id', string='Bank Account')
+    attachment_ids = fields.One2many('ir.attachment', 'account_id', string='Attachment')
+    opportunity_ids = fields.One2many('crm.lead', 'account_id', string='Opportunity')
 
-    partner_ids = fields.Many2many(string='Partner IDS', comodel_name='res.partner', relation='account_partner_rel')
+    partner_ids = fields.Many2many(string='Partner', comodel_name='res.partner', relation='account_partner_rel')
 
-    address_ids = fields.One2many('model_address', 'Account_id', string='Address IDS')
-    benificiaty_ids = fields.One2many('model_beneficiary_carrier', 'carrier_id', string='Benificiary IDS')
+    address_ids = fields.One2many('model_address', 'Account_id', string='Address')
+    benificiaty_ids = fields.One2many('model_beneficiary_carrier', 'carrier_id', string='Benificiary')
 
-    product_family_ids = fields.One2many('product_family', 'account_id', string='Product Family IDS')
-    price_list_ids = fields.One2many('model_price_list', 'account_id', string='Price List IDS')
-    network_ids = fields.One2many('accredited_network', 'account_id', string='Network IDS')
-    case_ids = fields.One2many('model_case', 'AccountId', string='Account IDS')
-    benefit_politic_ids = fields.One2many('model_benfit_politic', 'Account_id', string='Benefit Politic IDS')
-    contract_partner_ids = fields.One2many('contract.partner', 'partner_id', string='Partner IDS')
+    product_family_ids = fields.One2many('product_family', 'account_id', string='Product Family')
+    price_list_ids = fields.One2many('model_price_list', 'account_id', string='Price List')
+    network_ids = fields.One2many('accredited_network', 'account_id', string='Network')
+    case_ids = fields.One2many('model_case', 'AccountId', string='Account')
+    benefit_politic_ids = fields.One2many('model_benfit_politic', 'Account_id', string='Benefit Politic')
+    contract_partner_ids = fields.One2many('contract.partner', 'partner_id', string='Partner')
     partner_id = fields.Many2one('res.partner', string='partner Name')
+    carrier_id =  fields.Many2one('model_carrier_type_c')

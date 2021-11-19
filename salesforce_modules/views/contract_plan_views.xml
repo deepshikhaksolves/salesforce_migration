@@ -24,11 +24,11 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Special conditions">
+                            <!-- <page string="Special conditions">
                                 <group>
                                     
                                 </group>
-                            </page>
+                            </page> -->
                             <page string="Product Prices">
                                 <field name="product_price_ids">
                                     <tree>
@@ -158,5 +158,110 @@
             </field>
         </record>
         <!-- Contract Product Layout-Medicine End -->
+
+        <!-- Contract Plan Lightning View -->
+        <record id="contract_plan_lightning_view_form" model="ir.ui.view">
+            <field name="name">Contract Plan Lightning Layout</field>
+            <field name="model">model_contract_plan</field>
+            <field name="arch" type="xml">
+                <form string="Contract Product View">
+                    <sheet>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name" required="1"/>
+                                        <field name="Product_Family"/>
+                                        <field name="Product_id"/>
+                                        <field name="Coverage"/>
+                                    </group>
+                                    <group>
+                                        <field name="Start_Date"/>
+                                        <field name="End_Date"/>
+                                        <field name="upgrade_condition"/>
+                                        <field name="downgrade_condition"/>
+                                        <field name="beneficiary_type" required="1"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group string='Plan Covers For Parent Product'>
+                                    <field name="plan_coverage_ids">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="start_of_coverage"/>
+                                            <field name="end_of_coverage"/>
+                                            <field name="condition"/>
+                                            <field name="operator_description"/>
+                                        </tree>
+                                    </field>
+                                </group>
+
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Product Prices">
+                                    <field name="product_price_ids"/>
+                                </group>
+
+                                <group string="Contract Copayments">
+                                    <field name="contract_copayment_ids"/>
+                                </group>
+
+                                <group string="Contract Contributories">
+                                    <field name="contract_contributory_ids"/>
+                                </group>
+                                <group string="Contract Eligibility">
+                                    <field name="contract_eligibility_ids"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- contract_plan lightning tree view -->
+        <record id="contract_plan_lightning_view_tree" model="ir.ui.view">
+            <field name="name">contract_plan lightning Layout Tree</field>
+            <field name="model">model_contract_plan</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Name"/>
+                    <field name="Product_Family"/>
+                    <field name="Product_id"/>
+                    <field name="Coverage"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- contract_plan lightning action window -->
+        <record id="contract_plan_lightning_action" model="ir.actions.act_window">
+            <field name="name">Contract Plan</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model_contract_plan</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('contract_plan_lightning_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('contract_plan_lightning_view_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
     </data>
 </odoo>

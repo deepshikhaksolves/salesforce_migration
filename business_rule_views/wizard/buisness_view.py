@@ -35,7 +35,9 @@ class BuisnessViewWizard(models.TransientModel):
 
     def open_business_view(self):
         record = self.env['config.open.view'].search([('ir_model', '=', self._context.get('active_model'))],limit=1)
-        business_domain=[]
+
+        business_domain = []
+        business_context = None
         for rec in record.configuration_ids:
             if rec.ir_view.xml_id == self.buisness_rule_view_get:
                 business_domain = rec.domain
@@ -44,9 +46,13 @@ class BuisnessViewWizard(models.TransientModel):
         ctx = dict(self.env.context)
         ctx.update({
             'business_rule_domain': safe_eval(business_domain) if business_domain else safe_eval('False'),
-            'business_rule_view':self.buisness_rule_view_get
+
+            'business_rule_view': self.buisness_rule_view_get
         })
-        ctx.update(business_context)
+
+        if business_context:
+            ctx.update(business_context)
+
         if self.buisness_rule_view_get:
             action={
                 'res_model':self.env.context.get('active_model'),

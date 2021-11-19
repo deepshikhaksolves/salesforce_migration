@@ -72,5 +72,91 @@
             </p>
         </field>
     </record>
+
+    <!--Expense Provisioning lightning form view        -->
+        <record id="expence_provisioning_lightning_form_view" model="ir.ui.view">
+            <field name="name">expence_provisioning</field>
+            <field name="model">expence_provisioning</field>
+            <field name="arch" type="xml">
+                <form string="Expence Provisioning">
+                    <sheet>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Compensation_Type"/>
+                                        <field name="Number_Of_Installments"/>
+                                        <field name="Periodicity_id"/>
+                                        <field name="Compensation_Value"/>
+                                        <field name="Commission_Amount"/>
+                                        <field name="Income_id"/>
+                                        <field name="Paid_About" string="Paid On"/>
+                                        <field name="First_Month"/>
+                                        <field name="Last_Month"/>
+                                        <field name="create_uid"/>
+                                    </group>
+                                    <group>
+                                        <field name="Status"/>
+                                        <field name="contract_id"/>
+                                        <field name="Revenue_Provisioning_id"/>
+                                        <field name="name"/>
+                                        <field name="OwnerId"/>
+                                        <field name="Participation"/>
+                                        <field name="Person_id"/>
+                                        <field name="user_id"/>
+                                        <field name="Number_Of_Days_After_Billing"/>
+                                        <field name="First_Month_Due"/>
+                                        <field name="write_uid" string="Last Modified By"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group string="Expense compensation">
+                                    <field name="expense_compensation_ids"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--Expense Provisioning tree view        -->
+        <record id="expence_provisioning_lightning_tree" model="ir.ui.view">
+            <field name="name">expence provisioning</field>
+            <field name="model">expence_provisioning</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Compensation_Type"/>
+                    <field name="Number_Of_Installments"/>
+                    <field name="Periodicity_id"/>
+                    <field name="Compensation_Value"/>
+                    <field name="Commission_Amount"/>
+                    <field name="Income_id"/>
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Expense Provisioning Action        -->
+        <record id="lightning_expence_provisioning_action" model="ir.actions.act_window">
+        <field name="name">Expence Provisioning</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">expence_provisioning</field>
+        <field name="view_mode">form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('expence_provisioning_lightning_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('expence_provisioning_lightning_form_view')})]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No records available.
+            </p>
+        </field>
+    </record>
     </data>
 </odoo>

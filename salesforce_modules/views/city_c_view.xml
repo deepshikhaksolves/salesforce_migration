@@ -7,15 +7,24 @@
             <field name="arch" type="xml">
                 <form string="City C Layout">
                     <sheet>
-                        <group>
-                            <field name="Name"/>
-                            <field name="City_Code"/>
-                            <field name="State_id"/>
-                            <field name="create_uid" string="Created By"/>
-                            <field name="write_uid" string="Last Modified By"/>
-                        </group>
                         <notebook>
-                            <page string="Region Cities">
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name"/>
+                                        <field name="City_Code"/>
+                                        <field name="State_id"/>
+                                        <field name="create_uid" string="Created By"/>
+                                        <field name="create_date" string="Created On"/>
+                                        <field name="write_uid" string="Last Modified By"/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string='Related'>
+                                <group string="Region Cities">
+                                    <field name="region_city_ids"/>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -43,7 +52,7 @@
 
         <!-- City C Layout action window -->
         <record id="city_c_action" model="ir.actions.act_window">
-            <field name="name">City C Action Layout</field>
+            <field name="name">City</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_city_c</field>
             <field name="view_mode">tree,form</field>

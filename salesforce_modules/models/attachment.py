@@ -24,7 +24,7 @@ class Attachment(models.Model):
     product_id = fields.Many2one('product.template', string='Product Id')
 
     legal_pending_matter_id = fields.Many2one('model_legal_pending_matter', string="Legal Pending Matter ID")
-    quote_id = fields.Many2one('quote', string="Quote ID")
+    quote_id = fields.Many2one('model_quote', string="Quote ID")
     # document_use               = fields.Selection([('Implantation','Implantation'),('Internal deployment','Internal deployment'),('Movement','Movement'),('Administered','Administered')],'Use of Documents')
     # financial_contract_id    =   fields.Many2one('financial_contract', string="Financial Contract ID")
     opportunity_id = fields.Many2one('crm.lead', string="Opportunity")

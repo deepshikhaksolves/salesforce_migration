@@ -15,7 +15,7 @@
                         <!-- <field name="nama_kolom"/> -->
                         <field name="Account_id"/>
                         <field name="project_type"/>
-                        <!-- <field name="Previous_Broker"/> -->
+                        <field name="Previous_Broker"/>
                         <!-- <field name="startDate"/> -->
                         <field name="broker_start_date"/>
                         <field name="contract_term"/>
@@ -23,7 +23,7 @@
                         <field name="broker_end_date"/>
                         <field name="approval"/>
                         <field name="adjustment_negotiation_notification"/>
-                        <!-- <field name="readjustment base date"/> -->
+                        <field name="readjustment_base_date"/>
                     </group>
                     <group>
                         <!-- <field name="Status"/> -->
@@ -123,12 +123,10 @@
                 <page string="services">
                     <!-- <field name="line_ids"/> -->
                 </page>
-                <page string="Special conditions">
-                    <!-- <field name="line_ids"/> -->
-                </page>
-                <page string="Special conditions">
-                    <!-- <field name="line_ids"/> -->
-                </page>
+                <!-- <page string="Special conditions">
+                </page> -->
+                <!-- <page string="Special conditions">
+                </page> -->
                 <page string="Checklists">
                     <!-- <field name="line_ids"/> -->
                 </page>

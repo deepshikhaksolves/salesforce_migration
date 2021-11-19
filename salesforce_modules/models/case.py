@@ -183,6 +183,9 @@ class Case(models.Model):
     attachment_ids = fields.One2many('ir.attachment','case_id',string="Attachment", track_visibility='onchange')
     partner_id = fields.Many2one('res.partner', string='partner Name', track_visibility='onchange')
     case_quote_id = fields.Many2one('model_quote', string='Case Quote')
+    case_ids = fields.One2many('model_case','ParentId',string="Related Cases", track_visibility='onchange')
+    contact_role_lines = fields.One2many('crm.lead.contact.role','case_id',string="Contact Role")
+
 
 
 

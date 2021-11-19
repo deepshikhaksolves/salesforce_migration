@@ -24,7 +24,7 @@ class ContractReadjust(models.Model):
         ('readjusted', 'readjusted'), ('Contribution', 'Contribution'), ('Discount', 'Discount'), ('Postponed', 'Postponed')
     ], string='Status')
     Applied_Financial_Support_Value = fields.Float(string='Applied Financial Support', digits=(9, 2))
-    Calculated_Financial_Support = fields.Float(string='Calculated Financial Support	', digits=(9, 2))
+    Calculated_Financial_Support = fields.Float(string='Calculated Financial Support', digits=(9, 2))
     Calculated_Composite_Readjustment_Index = fields.Float(string='Composite Adjustment Calculated Index', digits=(4, 2))
     Applied_Readjustment_Index = fields.Float(string='Applied Adjustment Index', digits=(4, 2))
     Calculated_Financial_Readjustment_Index = fields.Float(string='Calculated Financial Readjustment Ratio', digits=(4, 2))

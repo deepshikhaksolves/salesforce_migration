@@ -3,7 +3,7 @@ from odoo import models, fields, api
 class ContractContribution(models.Model):
     _name = 'contract.contribution'
 
-    coments = fields.Char(string='Coments', size=255, )
+    coments = fields.Char(string='Comments', size=255, )
     name = fields.Char(string='Contract Contributory')
     contract_id = fields.Many2one('hr.contract', string='Contract')
     # CreatedById created by default

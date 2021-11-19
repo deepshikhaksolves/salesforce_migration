@@ -257,6 +257,7 @@ class SalesforceOpprtunity(models.Model):
     renavam = fields.Integer('RENAVAM',size=11,track_visibility='onchange')
     reserve = fields.Char('Reserva',track_visibility='onchange')
     market_reserve = fields.Char('Reserva de Mercado',size=28,track_visibility='onchange')
+    Market_Reserve_ID = fields.Many2one('model_market_reserve__c', string='Market Reserve ID')
     reserve_days = fields.Integer('Reserve - Days',track_visibility='onchange')
     retired = fields.Integer('Retired',size=6,track_visibility='onchange')
     returned_reason = fields.Char('Returned Reason',size=255,track_visibility='onchange')
@@ -333,7 +334,7 @@ class SalesforceOpprtunity(models.Model):
     quotation = fields.Many2one('model_quote', string='Quotation',track_visibility='onchange')
     synced_quote_id = fields.Many2one('model_quote', string='Synced Quote',track_visibility='onchange')
     opportunity_team_lines = fields.One2many('crm.lead.team_member','opportunity_id', string="Opportunity Team Lines")
-    contact_role_lines = fields.One2many('crm.lead.contact.role','opportunity_id',string="Contact Role Lines")
+    contact_role_lines = fields.One2many('crm.lead.contact.role','opportunity_id',string="Contact Role")
     contact_partner_lines = fields.One2many('contract.partner','opportunity_id',string="Contact Partner Lines")
     quote_lines = fields.One2many('model_quote','OpportunityId',string="Quotes Lines")
     competitor_lines = fields.One2many('crm.lead.competitor','opportunity_id',string="Competitor Lines")
@@ -345,8 +346,9 @@ class SalesforceOpprtunity(models.Model):
 
     market_reserve_ids = fields.One2many('model_market_reserve__c', 'Opportunity__c', string='Market Reserve')
     event_control_ids = fields.One2many('event_control', 'Opportunity_ID', string='Event Control')
-    # contact_role_ids = fields.One2many('res.partner', 'related field name', string='Contact Role')
+    contact_role_ids = fields.One2many('res.partner', 'opportunity_ids', string='Contacts')
     benefit_politic_ids = fields.One2many('model_benfit_politic', 'lead_id', string='Benefit Politic')
+    campaign_influence_ids = fields.One2many('campaign.influence', 'OpportunityId', string='Campaign')
 
 
 class Product(models.Model):

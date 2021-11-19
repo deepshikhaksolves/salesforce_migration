@@ -4,6 +4,7 @@
         <!-- Broker Benchmarking Layout Start -->
         <record id="quote_broker_benchmarking_layout_form" model="ir.ui.view">
             <field name="name">Broker Benchmarking Quote Form</field>
+            <field eval="99" name="priority"/>
             <field name="model">model_quote</field>
             <field name="arch" type="xml">
                 <form string="Broker Benchmarking Quote">
@@ -44,7 +45,7 @@
                                     </tree>
                                 </field>
                             </page>
-                            <page string="Reissues"></page>
+                            <!-- <page string="Reissues"></page> -->
                             <page string="Cases">
                                 <field name="case_ids">
                                     <tree>
@@ -242,34 +243,74 @@
             </field>
         </record>
 
-        <!--Broker Binding Layout Start-->
-        <record id="quote_broker_binding_layout_form" model="ir.ui.view">
+        <!--Broker Bidding Layout Start-->
+        <record id="quote_broker_bidding_layout_form" model="ir.ui.view">
             <field name="name">Broker Biding Form</field>
             <field name="model">model_quote</field>
             <field name="arch" type="xml">
                 <form string="Broker Binding">
                     <sheet>
-                        <group>
-                            <group>
-                                <field name="Name"/>
-                                <field name="OpportunityId"/>
-                                <field name="Quotation_Reason"/>
-                            </group>
-                            <group>
-                                <field name="QuoteNumber"/>
-                                <field name="AccountId"/>
-                                <field name="RecordTypeId"/>
-                            </group>
-                        </group>
                         <notebook>
-                            <page string="Notes/Attachments">
-                                <field name="attachment_ids"/>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name"/>
+                                        <field name="OpportunityId"/>
+                                        <field name="Quotation_Reason"/>
+                                    </group>
+                                    <group>
+                                        <field name="QuoteNumber"/>
+                                        <field name="AccountId"/>
+                                        <field name="RecordTypeId"/>
+                                    </group>
+                                </group>
+                                <group string='System Information'>
+                                    <group>
+                                        <field name="create_uid"/>
+                                        <field name="create_date"/>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                        <field name="cpf"/>
+                                        <field name="CNPJ"/>
+                                        <field name="email_from"/>
+                                        <field name="send_email"/>
+                                        <field name="last_quote"/>
+                                        <field name="account_owner"/>
+                                        <field name="status_change_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="create_date" string='Creation Date'/>
+                                        <field name="request_date"/>
+                                        <field name="Case"/>
+                                        <field name="ExpirationDate"/>
+                                        <field name="opportunity_current_user"/>
+                                        <field name="owner_current_user"/>
+                                        <field name="opportunity_owner"/>
+                                        <field name="estimated_revenue"/>
+                                    </group>
+                                </group>
                             </page>
-                            <page string="Quote Line Item"></page>
-                            <page string="Opportunities"></page>
-                            <page string="Notes"></page>
-                            <page string="Reissues"></page>
-                            <page string="Cases"></page>
+                            <!-- <page string="Notes/Attachments">
+                                <field name="attachment_ids"/>
+                            </page> -->
+                            <page string="Related">
+                                <group string='Quotation Products'>
+                                    <field name="quote_product_ids"/>
+                                </group>
+                                <group string="Opportunities">
+                                    <field name="opportunity_ids"/>
+                                </group>
+                                <group string="Additional Parameters">
+                                    <field name="additional_parameter_ids"/>
+                                </group>
+                                <group string="Reissues">
+                                    <field name="quote_ids"/>
+                                </group>
+                                <group string="Cases">
+                                    <field name="case_ids"/>
+                                </group>
+                            </page>
+                            <page string="Quoter"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -281,8 +322,8 @@
             </field>
         </record>
 
-        <!-- Broker Binding Layout tree view -->
-        <record id="quote_broker_binding_layout_tree" model="ir.ui.view">
+        <!-- Broker Bidding Layout tree view -->
+        <record id="quote_broker_bidding_layout_tree" model="ir.ui.view">
             <field name="name">Broker Bidding Tree</field>
             <field name="model">model_quote</field>
             <field name="arch" type="xml">
@@ -300,13 +341,13 @@
 
         <!-- Broker Binding Layout action window -->
         <record id="quote_broker_binding_layout_action" model="ir.actions.act_window">
-            <field name="name">Broker Bidding Action</field>
+            <field name="name">Quote</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>
             <field name="view_mode">tree,form</field>
             <field name="view_ids" eval="[(5, 0, 0),
-                (0, 0, {'view_mode': 'tree', 'view_id': ref('quote_broker_binding_layout_tree')}),
-                (0, 0, {'view_mode': 'form', 'view_id': ref('quote_broker_binding_layout_form')})]"/>
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('quote_broker_bidding_layout_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('quote_broker_bidding_layout_form')})]"/>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     No records available.
@@ -321,27 +362,67 @@
             <field name="arch" type="xml">
                 <form string="Broker Binding">
                     <sheet>
-                        <group>
-                            <group>
-                                <field name="Name"/>
-                                <field name="OpportunityId"/>
-                                <field name="Quotation_Reason"/>
-                            </group>
-                            <group>
-                                <field name="QuoteNumber"/>
-                                <field name="AccountId"/>
-                                <field name="RecordTypeId"/>
-                            </group>
-                        </group>
                         <notebook>
-                            <page string="Notes/Attachments">
-                                <field name="attachment_ids"/>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name"/>
+                                        <field name="OpportunityId"/>
+                                        <field name="Quotation_Reason"/>
+                                    </group>
+                                    <group>
+                                        <field name="QuoteNumber"/>
+                                        <field name="AccountId"/>
+                                        <field name="RecordTypeId"/>
+                                    </group>
+                                </group>
+                                <group string='System Information'>
+                                    <group>
+                                        <field name="create_uid"/>
+                                        <field name="create_date"/>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                        <field name="cpf"/>
+                                        <field name="CNPJ"/>
+                                        <field name="email_from"/>
+                                        <field name="send_email"/>
+                                        <field name="last_quote"/>
+                                        <field name="account_owner"/>
+                                        <field name="status_change_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="create_date" string='Creation Date'/>
+                                        <field name="request_date"/>
+                                        <field name="Case"/>
+                                        <field name="ExpirationDate"/>
+                                        <field name="opportunity_current_user"/>
+                                        <field name="owner_current_user"/>
+                                        <field name="opportunity_owner"/>
+                                        <field name="estimated_revenue"/>
+                                    </group>
+                                </group>
                             </page>
-                            <page string="Quotation Product"></page>
-                            <page string="Opportunities"></page>
-                            <page string="Notes"></page>
-                            <page string="Reissues"></page>
-                            <page string="Cases"></page>
+                            <!-- <page string="Notes/Attachments">
+                                <field name="attachment_ids"/>
+                            </page> -->
+                            <page string="Related">
+                                <group string='Quotation Products'>
+                                    <field name="quote_product_ids"/>
+                                </group>
+                                <group string="Opportunities">
+                                    <field name="opportunity_ids"/>
+                                </group>
+                                <group string="Additional Parameters">
+                                    <field name="additional_parameter_ids"/>
+                                </group>
+                                <group string="Reissues">
+                                    <field name="quote_ids"/>
+                                </group>
+                                <group string="Cases">
+                                    <field name="case_ids"/>
+                                </group>
+                            </page>
+                            <page string="Quoter"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -371,7 +452,7 @@
 
         <!-- Broker Project Layout action window -->
         <record id="quote_broker_project_layout_action" model="ir.actions.act_window">
-            <field name="name">Broker Project Action</field>
+            <field name="name">Quote</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>
             <field name="view_mode">tree,form</field>
@@ -424,7 +505,7 @@
             </field>
         </record>
 
-        <!-- Broker Project Layout tree view -->
+        <!-- Broker tech proposal Layout tree view -->
         <record id="quote_broker_technical_praposal_layout_tree" model="ir.ui.view">
             <field name="name">Broker Technical Praposal Tree</field>
             <field name="model">model_quote</field>
@@ -440,7 +521,7 @@
             </field>
         </record>
 
-        <!-- Broker Project Layout action window -->
+        <!-- Broker tech proposal Layout action window -->
         <record id="quote_broker_technical_praposal_layout_action" model="ir.actions.act_window">
             <field name="name">Broker Technical Praposal Action</field>
             <field name="type">ir.actions.act_window</field>
@@ -463,27 +544,67 @@
             <field name="arch" type="xml">
                 <form string="Broker Rede">
                     <sheet>
-                        <group>
-                            <group>
-                                <field name="Name"/>
-                                <field name="OpportunityId"/>
-                                <field name="Quotation_Reason"/>
-                            </group>
-                            <group>
-                                <field name="QuoteNumber"/>
-                                <field name="AccountId"/>
-                                <field name="RecordTypeId"/>
-                            </group>
-                        </group>
                         <notebook>
-                            <page string="Notes/Attachments">
-                                <field name="attachment_ids"/>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name"/>
+                                        <field name="OpportunityId"/>
+                                        <field name="Quotation_Reason"/>
+                                    </group>
+                                    <group>
+                                        <field name="QuoteNumber"/>
+                                        <field name="AccountId"/>
+                                        <field name="RecordTypeId"/>
+                                    </group>
+                                </group>
+                                <group string='System Information'>
+                                    <group>
+                                        <field name="create_uid"/>
+                                        <field name="create_date"/>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                        <field name="cpf"/>
+                                        <field name="CNPJ"/>
+                                        <field name="email_from"/>
+                                        <field name="send_email"/>
+                                        <field name="last_quote"/>
+                                        <field name="account_owner"/>
+                                        <field name="status_change_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="create_date" string='Creation Date'/>
+                                        <field name="request_date"/>
+                                        <field name="Case"/>
+                                        <field name="ExpirationDate"/>
+                                        <field name="opportunity_current_user"/>
+                                        <field name="owner_current_user"/>
+                                        <field name="opportunity_owner"/>
+                                        <field name="estimated_revenue"/>
+                                    </group>
+                                </group>
                             </page>
-                            <page string="Quotation Product"></page>
-                            <page string="Opportunities"></page>
-                            <page string="Notes"></page>
-                            <page string="Reissues"></page>
-                            <page string="Cases"></page>
+                            <!-- <page string="Notes/Attachments">
+                                <field name="attachment_ids"/>
+                            </page> -->
+                            <page string="Related">
+                                <group string='Quotation Products'>
+                                    <field name="quote_product_ids"/>
+                                </group>
+                                <group string="Opportunities">
+                                    <field name="opportunity_ids"/>
+                                </group>
+                                <group string="Additional Parameters">
+                                    <field name="additional_parameter_ids"/>
+                                </group>
+                                <group string="Reissues">
+                                    <field name="quote_ids"/>
+                                </group>
+                                <group string="Cases">
+                                    <field name="case_ids"/>
+                                </group>
+                            </page>
+                            <page string="Quoter"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -511,9 +632,9 @@
             </field>
         </record>
 
-        <!-- Broker Project Layout action window -->
+        <!-- Broker rede Layout action window -->
         <record id="quote_broker_rede_layout_action" model="ir.actions.act_window">
-            <field name="name">Broker rede Action</field>
+            <field name="name">Quote</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>
             <field name="view_mode">tree,form</field>
@@ -617,45 +738,75 @@
             <field name="arch" type="xml">
                 <form string="Small Quote Layout">
                     <sheet>
-                        <group>
-                            <group>
-                                <field name="Name"/>
-                                <field name="OpportunityId"/>
-                                <field name="AccountId"/>
-                                <field name="CNPJ"/>
-                                <field name="cpf"/>
-                                <field name="ContactId"/>
-                                <field name="phone"/>
-                                <field name="Email"/>
-                                <field name="cc_email"/>
-                                <field name="parent_quote_id"/>
-                                <field name="Status"/>
-                                <field name="returned_reason"/>
-                                <field name="proposal_number"/>
-                            </group>
-                            <group>
-                                <field name="QuoteNumber"/>
-                                <field name="study_configuration_id"/>
-                                <field name="RecordTypeId"/>
-                                <field name="lead_source"/>
-                                <field name="Mailing_Font"/>
-                                <field name="verified_partnership"/>
-                                <field name="estimated_revenue"/>
-                                <field name="admin_proposal"/>
-                                <field name="admin_proposal_date"/>
-                                <field name="Motive_Of_Gain"/>
-                                <field name="Loss_Reason"/>
-                                <field name="OwnerId"/>
-                            </group>
-                        </group>
                         <notebook>
-                            <page string="System Information"></page>
-                            <page string="Quote Line Items"></page>
-                            <page string="Notes/Attachments">
-                                <field name="attachment_ids"/>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="Name"/>
+                                        <field name="OpportunityId"/>
+                                        <field name="AccountId"/>
+                                        <field name="CNPJ"/>
+                                        <field name="cpf"/>
+                                        <field name="ContactId"/>
+                                        <field name="phone"/>
+                                        <field name="Email"/>
+                                        <field name="cc_email"/>
+                                        <field name="parent_quote_id"/>
+                                        <field name="Status"/>
+                                        <field name="returned_reason"/>
+                                        <field name="proposal_number"/>
+                                    </group>
+                                    <group>
+                                        <field name="QuoteNumber"/>
+                                        <field name="study_configuration_id"/>
+                                        <field name="RecordTypeId"/>
+                                        <field name="lead_source"/>
+                                        <field name="Mailing_Font"/>
+                                        <field name="verified_partnership"/>
+                                        <field name="estimated_revenue"/>
+                                        <field name="admin_proposal"/>
+                                        <field name="admin_proposal_date"/>
+                                        <field name="Motive_Of_Gain"/>
+                                        <field name="Loss_Reason"/>
+                                        <field name="OwnerId"/>
+                                    </group>
+                                </group>
+                                <group string='System Information'>
+                                    <group>
+                                        <field name="Original_Quote_Number"/>
+                                        <field name="create_uid"/>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                        <field name="cpf"/>
+                                        <field name="CNPJ"/>
+                                        <field name="email_from"/>
+                                        <field name="send_email"/>
+                                        <field name="last_quote"/>
+                                        <field name="account_owner"/>
+                                        <field name="status_change_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="made_by"/>
+                                        <field name="create_date" string='Creation Date'/>
+                                        <field name="request_date"/>
+                                        <field name="Case"/>
+                                        <field name="ExpirationDate"/>
+                                        <field name="opportunity_current_user"/>
+                                        <field name="owner_current_user"/>
+                                        <field name="opportunity_owner"/>
+                                        <field name="estimated_revenue"/>
+                                    </group>
+                                </group>
                             </page>
-                            <page string="Reissues"/>
-                            <page string="Cases"/>
+                            <page string="Related">
+                                <group string="Reissues">
+                                    <field name="quote_product_ids"/>
+                                </group>
+                                <group string="Additional Parameters">
+                                    <field name="additional_parameter_ids"/>
+                                </group>
+                            </page>
+                            <page string="Market Place"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -674,37 +825,37 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="QuoteNumber"/>
-                                <field name="OpportunityId"/>
-                                <field name="AccountId"/>
-                                <field name="CNPJ"/>
-                                <field name="cpf"/>
-                                <field name="ContactId"/>
-                                <field name="phone"/>
-                                <field name="Email"/>
-                                <field name="cc_email"/>
-                                <field name="parent_quote_id"/>
-                                <field name="Status"/>
-                                <field name="returned_reason"/>
-                                <field name="proposal_number"/>
-                                <field name="QuoteNumber"/>
-                                <field name="study_configuration_id"/>
-                                <field name="RecordTypeId"/>
-                                <field name="lead_source"/>
-                                <field name="Mailing_Font"/>
-                                <field name="verified_partnership"/>
-                                <field name="estimated_revenue"/>
-                                <field name="admin_proposal"/>
-                                <field name="admin_proposal_date"/>
-                                <field name="Motive_Of_Gain"/>
-                                <field name="Loss_Reason"/>
-                                <field name="OwnerId"/>
+                    <field name="OpportunityId"/>
+                    <field name="AccountId"/>
+                    <field name="CNPJ"/>
+                    <field name="cpf"/>
+                    <field name="ContactId"/>
+                    <field name="phone"/>
+                    <field name="Email"/>
+                    <field name="cc_email"/>
+                    <field name="parent_quote_id"/>
+                    <field name="Status"/>
+                    <field name="returned_reason"/>
+                    <field name="proposal_number"/>
+                    <field name="QuoteNumber"/>
+                    <field name="study_configuration_id"/>
+                    <field name="RecordTypeId"/>
+                    <field name="lead_source"/>
+                    <field name="Mailing_Font"/>
+                    <field name="verified_partnership"/>
+                    <field name="estimated_revenue"/>
+                    <field name="admin_proposal"/>
+                    <field name="admin_proposal_date"/>
+                    <field name="Motive_Of_Gain"/>
+                    <field name="Loss_Reason"/>
+                    <field name="OwnerId"/>
                 </tree>
             </field>
         </record>
 
         <!-- Small Quote Layout action window -->
         <record id="small_quote_layout_action" model="ir.actions.act_window">
-            <field name="name">Small Quote Layout Action</field>
+            <field name="name">Quote</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>
             <field name="view_mode">tree,form</field>
@@ -728,15 +879,6 @@
                         <field name="Status" widget='statusbar'/>
                     </header>
                     <sheet>
-                        <group>
-                            <group>
-                                <!-- Ringing field not found -->
-                                <field name="OpportunityId"/>
-                                <field name="request_date"/>
-                                <field name="OwnerId"/>
-                                <field name="RecordTypeId"/>
-                            </group>
-                        </group>
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -746,16 +888,15 @@
                                         <field name="Quotation_Reason"/>
                                     </group>
                                     <group>
-                                        <field name="OwnerId"/>
                                         <field name="QuoteNumber"/>
                                         <field name="AccountId"/>
                                         <field name="RecordTypeId"/>
                                     </group>
                                 </group>
-
                                 <group string='System Information'>
                                     <group>
                                         <field name="create_uid"/>
+                                        <field name="create_date"/>
                                         <field name="write_uid" string='Last Modified By'/>
                                         <field name="write_date" string='Last Modified On'/>
                                         <field name="cpf"/>
@@ -778,17 +919,27 @@
                                     </group>
                                 </group>
                             </page>
+                            <!-- <page string="Notes/Attachments">
+                                <field name="attachment_ids"/>
+                            </page> -->
                             <page string="Related">
-                                <group>
-                                    <field name="additional_parameter_ids">
-                                        <tree>
-                                            <field name="Name"/>
-                                            <field name="type"/>
-                                            <field name="value"/>
-                                        </tree>
-                                    </field>
+                                <group string='Quotation Products'>
+                                    <field name="quote_product_ids"/>
+                                </group>
+                                <group string="Opportunities">
+                                    <field name="opportunity_ids"/>
+                                </group>
+                                <group string="Additional Parameters">
+                                    <field name="additional_parameter_ids"/>
+                                </group>
+                                <group string="Reissues">
+                                    <field name="quote_ids"/>
+                                </group>
+                                <group string="Cases">
+                                    <field name="case_ids"/>
                                 </group>
                             </page>
+                            <page string="Quoter"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -819,7 +970,7 @@
 
         <!-- Quote Price Layout action window -->
         <record id="quote_price_layout_action" model="ir.actions.act_window">
-            <field name="name">Quote Price Layout Action</field>
+            <field name="name">Quote</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>
             <field name="view_mode">tree,form</field>
@@ -843,15 +994,6 @@
                         <field name="Status" widget='statusbar'/>
                     </header>
                     <sheet>
-                        <group>
-                            <group>
-                                <!-- Ringing field not found -->
-                                <field name="OpportunityId"/>
-                                <field name="request_date"/>
-                                <field name="OwnerId"/>
-                                <field name="RecordTypeId"/>
-                            </group>
-                        </group>
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -866,10 +1008,10 @@
                                         <field name="RecordTypeId"/>
                                     </group>
                                 </group>
-
                                 <group string='System Information'>
                                     <group>
                                         <field name="create_uid"/>
+                                        <field name="create_date"/>
                                         <field name="write_uid" string='Last Modified By'/>
                                         <field name="write_date" string='Last Modified On'/>
                                         <field name="cpf"/>
@@ -892,17 +1034,27 @@
                                     </group>
                                 </group>
                             </page>
+                            <!-- <page string="Notes/Attachments">
+                                <field name="attachment_ids"/>
+                            </page> -->
                             <page string="Related">
-                                <group>
-                                    <field name="additional_parameter_ids">
-                                        <tree>
-                                            <field name="Name"/>
-                                            <field name="type"/>
-                                            <field name="value"/>
-                                        </tree>
-                                    </field>
+                                <group string='Quotation Products'>
+                                    <field name="quote_product_ids"/>
+                                </group>
+                                <group string="Opportunities">
+                                    <field name="opportunity_ids"/>
+                                </group>
+                                <group string="Additional Parameters">
+                                    <field name="additional_parameter_ids"/>
+                                </group>
+                                <group string="Reissues">
+                                    <field name="quote_ids"/>
+                                </group>
+                                <group string="Cases">
+                                    <field name="case_ids"/>
                                 </group>
                             </page>
+                            <page string="Quoter"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -933,7 +1085,7 @@
 
         <!-- Quote technical_offer Layout action window -->
         <record id="quote_technical_offer_layout_action" model="ir.actions.act_window">
-            <field name="name">Quote Technical Offer Layout Action</field>
+            <field name="name">Quote</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>
             <field name="view_mode">tree,form</field>
@@ -957,16 +1109,6 @@
                         <field name="Status" widget='statusbar'/>
                     </header>
                     <sheet>
-                        <group>
-                            <group>
-                                <!-- Ringing field not found -->
-                                <field name="AccountId"/>
-                                <field name="ExpirationDate"/>
-                                <field name="OwnerId"/>
-                                <field name="phone"/>
-                                <field name="RecordTypeId"/>
-                            </group>
-                        </group>
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -975,15 +1117,15 @@
                                         <field name="OpportunityId"/>
                                         <field name="AccountId"/>
                                         <field name="CNPJ"/>
-                                         <field name="cpf"/>
-                                         <field name="ContactId"/>
-                                         <field name="phone"/>
-                                         <field name="Email"/>
-                                         <field name="cc_email"/>
-                                         <field name="parent_quote_id"/>
-                                         <field name="returned_reason"/>
-                                         <field name="proposal_number"/>
-                                        <field name="Original_Quote_Number"/>
+                                        <field name="cpf"/>
+                                        <field name="ContactId"/>
+                                        <field name="phone"/>
+                                        <field name="Email"/>
+                                        <field name="cc_email"/>
+                                        <field name="parent_quote_id"/>
+                                        <field name="Status"/>
+                                        <field name="returned_reason"/>
+                                        <field name="proposal_number"/>
                                     </group>
                                     <group>
                                         <field name="QuoteNumber"/>
@@ -998,12 +1140,11 @@
                                         <field name="Motive_Of_Gain"/>
                                         <field name="Loss_Reason"/>
                                         <field name="OwnerId"/>
-                                        <field name="made_by"/>
                                     </group>
                                 </group>
-
                                 <group string='System Information'>
                                     <group>
+                                        <field name="Original_Quote_Number"/>
                                         <field name="create_uid"/>
                                         <field name="write_uid" string='Last Modified By'/>
                                         <field name="write_date" string='Last Modified On'/>
@@ -1016,6 +1157,7 @@
                                         <field name="status_change_date"/>
                                     </group>
                                     <group>
+                                        <field name="made_by"/>
                                         <field name="create_date" string='Creation Date'/>
                                         <field name="request_date"/>
                                         <field name="Case"/>
@@ -1028,16 +1170,14 @@
                                 </group>
                             </page>
                             <page string="Related">
-                                <group>
-                                    <field name="additional_parameter_ids">
-                                        <tree>
-                                            <field name="Name"/>
-                                            <field name="type"/>
-                                            <field name="value"/>
-                                        </tree>
-                                    </field>
+                                <group string="Reissues">
+                                    <field name="quote_product_ids"/>
+                                </group>
+                                <group string="Additional Parameters">
+                                    <field name="additional_parameter_ids"/>
                                 </group>
                             </page>
+                            <page string="Market Place"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -1068,7 +1208,7 @@
 
         <!-- small business quotation Layout action window -->
         <record id="small_business_quotation_layout_action" model="ir.actions.act_window">
-            <field name="name">Small Business Quotation Layout Action</field>
+            <field name="name">Quote</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>
             <field name="view_mode">tree,form</field>
@@ -1092,16 +1232,15 @@
                         <field name="Status" widget='statusbar'/>
                     </header>
                     <sheet>
-                        <group>
+                        <!-- <group>
                             <group>
-                                <!-- Ringing field not found -->
                                 <field name="AccountId"/>
                                 <field name="ExpirationDate"/>
                                 <field name="OwnerId"/>
                                 <field name="phone"/>
                                 <field name="RecordTypeId"/>
                             </group>
-                        </group>
+                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -1227,16 +1366,6 @@
                         <field name="Status" widget='statusbar'/>
                     </header>
                     <sheet>
-                        <group>
-                            <group>
-                                <!-- Ringing field not found -->
-                                <field name="AccountId"/>
-                                <field name="ExpirationDate"/>
-                                <field name="OwnerId"/>
-                                <field name="phone"/>
-                                <field name="RecordTypeId"/>
-                            </group>
-                        </group>
                         <notebook>
                             <page string="Details">
                                 <group>
@@ -1251,10 +1380,10 @@
                                         <field name="RecordTypeId"/>
                                     </group>
                                 </group>
-
                                 <group string='System Information'>
                                     <group>
                                         <field name="create_uid"/>
+                                        <field name="create_date"/>
                                         <field name="write_uid" string='Last Modified By'/>
                                         <field name="write_date" string='Last Modified On'/>
                                         <field name="cpf"/>
@@ -1277,17 +1406,27 @@
                                     </group>
                                 </group>
                             </page>
+                            <!-- <page string="Notes/Attachments">
+                                <field name="attachment_ids"/>
+                            </page> -->
                             <page string="Related">
-                                <group>
-                                    <field name="additional_parameter_ids">
-                                        <tree>
-                                            <field name="Name"/>
-                                            <field name="type"/>
-                                            <field name="value"/>
-                                        </tree>
-                                    </field>
+                                <group string='Quotation Products'>
+                                    <field name="quote_product_ids"/>
+                                </group>
+                                <group string="Opportunities">
+                                    <field name="opportunity_ids"/>
+                                </group>
+                                <group string="Additional Parameters">
+                                    <field name="additional_parameter_ids"/>
+                                </group>
+                                <group string="Reissues">
+                                    <field name="quote_product_ids"/>
+                                </group>
+                                <group string="Cases">
+                                    <field name="case_ids"/>
                                 </group>
                             </page>
+                            <page string="Quoter"></page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
@@ -1318,7 +1457,7 @@
 
         <!-- benchmarking Layout action window -->
         <record id="benchmarking_layout_action" model="ir.actions.act_window">
-            <field name="name">Benchmarking Layout Action</field>
+            <field name="name">Quote</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">model_quote</field>
             <field name="view_mode">tree,form</field>

@@ -4,6 +4,7 @@
         <!-- Price Layout by Product Age Group Start -->
         <record id="product_age_group_view_form" model="ir.ui.view">
             <field name="name">Product Age group View Layout</field>
+            <field eval="99" name="priority"/>
             <field name="model">product_price</field>
             <field name="arch" type="xml">
                 <form string="Product Age Group View">

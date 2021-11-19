@@ -92,7 +92,7 @@ class ModelQuote(models.Model):
         ('Network Improvement','Network Improvement'),
         ('Plan Redesign','Plan Redesign')
     ],string="Quotation Reason",track_visibility='onchange')
-    Name = fields.Char(string="Quote Name", size=255,track_visibility='onchange')
+    Name = fields.Char(string="Quote Name", size=255, track_visibility='onchange', required=True)
     QuoteNumber = fields.Char(string="Quote Number",track_visibility='onchange')
     RecordTypeId =fields.Char(string="Quote Record Type",track_visibility='onchange')
     QuoteToAddress = fields.Text(string="Quote To",track_visibility='onchange')
@@ -144,17 +144,18 @@ class ModelQuote(models.Model):
     case_ids = fields.One2many('model_case','case_quote_id', string='Case')
     quote_product_ids = fields.One2many('model_quote_products', 'quote_product_id', string='Quotation Product')
     additional_parameter_ids = fields.One2many('model_additional_parameter', 'quote_id', string='Additional Parameter')
+    quote_ids = fields.One2many('model_quote', 'parent_quote_id', string='Quotes')
 
 
 
-    @api.model
-    def create(self, vals):
-        if vals['OpportunityId']:
-            get_quotes_for_same_opportunity = self.env['model_quote'].sudo().search([('OpportunityId','=',vals['OpportunityId'])])
-            if not get_quotes_for_same_opportunity:
-                vals['first_quote'] = True
-        record = super(ModelQuote, self).create(vals)
-        return record
+    # @api.model
+    # def create(self, vals):
+    #     if vals['OpportunityId']:
+    #         get_quotes_for_same_opportunity = self.env['model_quote'].sudo().search([('OpportunityId','=',vals['OpportunityId'])])
+    #         if not get_quotes_for_same_opportunity:
+    #             vals['first_quote'] = True
+    #     record = super(ModelQuote, self).create(vals)
+    #     return record
 
 
 

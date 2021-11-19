@@ -32,9 +32,30 @@
         </field>
     </record>
 
+    <record id="record_type_broker_rating_view_tree" model="ir.ui.view">
+        <field name="name">Broker rating Layout Tree</field>
+        <field name="model">broker.rating</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="Rating"/>
+                <field name="Start"/>
+                <field name="End"/>
+                <field name="Segmentation"/>
+            </tree>
+        </field>
+    </record>
+
     <record id="broker_rating_action" model="ir.actions.act_window">
-        <field name="name">broker.rating</field>
+        <field name="name">Broker Rating</field>
         <field name="res_model">broker.rating</field>
         <field name="view_mode">form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('record_type_broker_rating_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('broker_rating_view_form')})]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No records available.
+            </p>
+        </field>
     </record>
 </odoo>

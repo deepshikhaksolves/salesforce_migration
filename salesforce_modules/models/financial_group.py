@@ -46,3 +46,7 @@ class FinancialGroup(models.Model):
     account_ids = fields.One2many('account.account', 'financial_group_id', string='Account IDS')
     cost_center_ids = fields.One2many('model_cost_center', 'financial_group_id', string='Cost Center IDS')
     portal_access_ids = fields.One2many('portal.access', 'financial_group_id', string='Portal Access IDS')
+    contract_ids =  fields.One2many('hr.contract', 'financial_group')
+    financial_group_master_users_ids = fields.One2many('financial_group_master_user','financial_group_id')
+    user_company_contract_permission_ids = fields.One2many('user_company_contract_permissions__c','financial_group__c')
+    financial_group_doctor_ids =  fields.One2many('financial_doctor','financial_group_id')

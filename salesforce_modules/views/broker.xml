@@ -2,6 +2,7 @@
 <odoo>
     <record id="broker_view_form" model="ir.ui.view">
         <field name="name">broker.view.form</field>
+        <field eval="99" name="priority"/>
         <field name="model">broker</field>
         <field name="arch" type="xml">
             <form string="">
@@ -72,6 +73,108 @@
         <field name="view_ids" eval="[(5, 0, 0),
                 (0, 0, {'view_mode': 'tree', 'view_id': ref('broker_view_tree')}),
                 (0, 0, {'view_mode': 'form', 'view_id': ref('broker_view_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+    </record>
+    <!-- Record type Broker -->
+    <record id="record_type_broker_view_form" model="ir.ui.view">
+        <field name="name">broker.view.form</field>
+        <field name="model">broker</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <notebook>
+                        <page string="Details">
+                            <group>
+                                <group>
+                                    <field name="Broker_Type" string="Type Of Broker"/>
+                                    <field name="Account"/>
+                                    <field name="Name"/>
+                                    <field name="Logo"/>
+                                </group>
+                                <group>
+                                    <field name="OwnerId"/>
+                                    <field name="Portfolio_Segmentation"/>
+                                    <field name="SUSEp_Code"/>
+                                </group>
+                            </group>
+                            <group string='Payment Rule'>
+                                <group>
+                                    <field name="Payment_Period"/>
+                                    <field name="create_uid"/>
+                                    <field name="create_date"/>
+                                </group>
+                                <group>
+                                    <field name="Minimum_Payment"/>
+                                    <field name="write_uid" string="Last Modified By"/>
+                                    <field name="write_date"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Related">
+                            <group string='Broker Ratings'>
+                                <field name="broker_rating_ids">
+                                    <tree>
+                                        <field name="Rating"/>
+                                        <field name="Start"/>
+                                        <field name="End"/>
+                                        <field name="Segmentation"/>
+                                    </tree>
+                                </field>
+                            </group>
+                            <group string='Bills'>
+                                <field name="account_ids"/>
+                            </group>
+                            <group string='Benefit Policies'>
+                                <field name="benifit_politic_ids">
+                                    <tree>
+                                        <field name="Name"/>
+                                    </tree>
+                                </field>
+                            </group>
+                            <group string='Leads'>
+                                <field name="lead_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="Company"/>
+                                        <field name="phone"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="record_type_broker_view_tree" model="ir.ui.view">
+            <field name="name">Broker recordtype Layout Tree</field>
+            <field name="model">broker</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Broker_Type"/>
+                    <field name="Account"/>
+                    <field name="Name"/>
+                    <field name="Logo"/>
+                </tree>
+            </field>
+        </record>
+    <record id="record_type_broker_action" model="ir.actions.act_window">
+        <field name="name">Broker</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">broker</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('record_type_broker_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('record_type_broker_view_form')})]"/>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     No records available.

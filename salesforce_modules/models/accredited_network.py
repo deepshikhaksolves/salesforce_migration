@@ -14,7 +14,7 @@ class AccreditedNetwork(models.Model):
     # LastModifiedById already in odoo
     region__c = fields.Many2one('model_region', string='Region', track_visibility='onchange')
     account_id = fields.Many2one('account.account', string='Account Id', track_visibility='onchange')
-    network_provider_ids = fields.One2many('model_network_provider', 'accredited_network__c', string='Network Provider IDS')
-    quote_line_item_ids = fields.One2many('quote_line_item', 'accredited_network__c', string='Network Provider IDS')
+    network_provider_ids = fields.One2many('model_network_provider', 'accredited_network__c', string='Network Providers')
+    quote_line_item_ids = fields.One2many('quote_line_item', 'accredited_network__c', string='Quote Line Items')
 
-    product_network_ids = fields.One2many('product.network', 'accredited_network_id', string='Product Network IDS')
+    product_network_ids = fields.One2many('product.network', 'accredited_network_id', string='Product Networks')

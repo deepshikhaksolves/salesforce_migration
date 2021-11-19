@@ -8,33 +8,39 @@
             <field name="arch" type="xml">
                 <form string="State Layout">
                     <sheet>
-                        <group>
-                            <group>
-                                <field name="name"/>
-                                <field name="State_Initials"/>
-                                <field name="Geographic_Scope_id"/>
-                                <field name="create_uid" string='Created By'/>
-                            </group>
-                            <group>
-                                <field name="code"/>
-                                <field name="country_id"/>
-                                <field name="write_uid" string='Last Modified By'/>
-                            </group>
-                        </group>
                         <notebook>
-                            <page string="Cities">
-                                <field name="city_ids">
-                                    <tree>
-                                        <field name="Name"/>
-                                    </tree>
-                                </field>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="State_Initials"/>
+                                        <field name="Geographic_Scope_id"/>
+                                        <field name="create_uid" string='Created By'/>
+                                        <field name="create_date" string='Created On'/>
+                                    </group>
+                                    <group>
+                                        <field name="code"/>
+                                        <field name="country_id"/>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                    </group>
+                                </group>
                             </page>
-                            <page string="Region States">
-                                <field name="state_region_ids">
-                                    <tree>
-                                        <field name="Name"/>
-                                    </tree>
-                                </field>
+                            <page string="Related">
+                                <group string="Cities">
+                                    <field name="city_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Region States">
+                                    <field name="state_region_ids">
+                                        <tree>
+                                            <field name="Name"/>
+                                        </tree>
+                                    </field>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>

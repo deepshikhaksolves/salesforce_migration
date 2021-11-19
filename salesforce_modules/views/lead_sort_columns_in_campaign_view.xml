@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <form string="Lead Sort Columns View">
                     <sheet>
-                        <group>
+                        <group string="Information">
                             <group>
                                 <field name="Field__c" />
                                 <field name="SortOrder__c"/>

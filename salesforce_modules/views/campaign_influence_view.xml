@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        <!-- Campaign Influence Layout form view -->
+        <record id="campaign_influence_layout_view_form" model="ir.ui.view">
+            <field name="name">Campaign Influence Layout</field>
+            <field name="model">campaign.influence</field>
+            <field name="arch" type="xml">
+                <form string="Campaign Influence View">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="CampaignId" required='1'/>
+                                <field name="Influence"/>
+                            </group>
+                            <group>
+                                <field name="OpportunityId" required='1'/>
+                                <field name="ContactId"/>
+                                <field name="RevenueShare"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Campaign Influence Layout tree view -->
+        <record id="campaign_influence_layout_view_tree" model="ir.ui.view">
+            <field name="name">Campaign Influence Layout Tree</field>
+            <field name="model">campaign.influence</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="CampaignId" />
+                    <field name="Influence"/>
+                    <field name="OpportunityId"/>
+                    <field name="ContactId"/>
+                    <field name="RevenueShare"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Campaign Influence Layout action window -->
+        <record id="campaign_influence_layout_action" model="ir.actions.act_window">
+            <field name="name">Campaign Influence</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">campaign.influence</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('campaign_influence_layout_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('campaign_influence_layout_view_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No records available.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>
