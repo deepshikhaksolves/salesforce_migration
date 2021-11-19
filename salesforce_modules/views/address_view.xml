@@ -20,7 +20,7 @@
                                 <field name="Landmark"/>
                                 <field name="District" string='District'/>
                                 <field name="City"/>
-                                <field name="State__id"/>
+                                <field name="State_id"/>
                                 <field name="Coordinates"/>
                             </group>
                         </group>
@@ -49,7 +49,7 @@
                     <field name="Landmark"/>
                     <field name="District"/>
                     <field name="City"/>
-                    <field name="State__id"/>
+                    <field name="State_id"/>
                 </tree>
             </field>
         </record>

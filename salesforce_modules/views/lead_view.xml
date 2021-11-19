@@ -14,13 +14,13 @@
                         <group>
                             <group>
                                 <field name="name" string="Name" required='1'/>
-                                <field name="cpf__c"/>
+                                <field name="cpf_c"/>
                                 <field name="phone"/>
-                                <field name="extension_number__c"/>
+                                <field name="extension_number_c"/>
                                 <field name="mobile"/>
-                                <field name="secondary_mobile_phone__c"/>
+                                <field name="secondary_mobile_phone_c"/>
                                 <field name="email_from" string='Email'/>
-                                <field name="Date_of_Birth__c"/>
+                                <field name="Date_of_Birth_c"/>
                                 <field name="LeadSource"/>
 
                                 <label for="street" string="Address"/>
@@ -36,21 +36,21 @@
                                            options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
                                 </div>
 
-                                <field name="rescue_date__c"/>
-                                <field name="loss_comment__c"/>
-                                <field name="CNAE__c" string='CNAE'/>
+                                <field name="rescue_date_c"/>
+                                <field name="loss_comment_c"/>
+                                <field name="CNAE_c" string='CNAE'/>
                             </group>
                             <group>
                                 <field name="team_id" invisible='1'/>
-                                <field name="telemarketing__c" required='1'/>
+                                <field name="telemarketing_c" required='1'/>
                                 <!-- <field name="stage_id" string='Lead Status' required='1'/> -->
-                                <field name="Sales_Channel__c"/>
-                                <field name="actual_carrier__c"
+                                <field name="Sales_Channel_c"/>
+                                <field name="actual_carrier_c"
                                        options="{'no_create': True, 'no_create_edit':True, 'no_open': True}"/>
-                                <field name="actual_invoice__c"/>
-                                <field name="actual_lifes__c"/>
-                                <field name="actual_birth_policy__c"/>
-                                <field name="Mailing_Origin__c"/>
+                                <field name="actual_invoice_c"/>
+                                <field name="actual_lifes_c"/>
+                                <field name="actual_birth_policy_c"/>
+                                <field name="Mailing_Origin_c"/>
                             </group>
                         </group>
                         <!-- <notebook>
@@ -79,11 +79,11 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
-                    <field name="cpf__c"/>
+                    <field name="cpf_c"/>
                     <field name="phone"/>
-                    <field name="extension_number__c"/>
+                    <field name="extension_number_c"/>
                     <field name="mobile"/>
-                    <field name="secondary_mobile_phone__c"/>
+                    <field name="secondary_mobile_phone_c"/>
                 </tree>
             </field>
         </record>
@@ -119,35 +119,35 @@
                                 <field name="team_id" invisible='1'/>
                                 <!-- <field name="stage_id" string="Lead Status" required='1'/> -->
                                 <field name="Company" required='1'/>
-                                <field name="CNPJ__c"/>
-                                <field name="Business_Name__c"/>
-                                <field name="Financial_Group__c"/>
+                                <field name="CNPJ_c"/>
+                                <field name="Business_Name_c"/>
+                                <field name="Financial_Group_c"/>
                                 <field name="Industry"/>
-                                <field name="CNAE__c" string='CNAE'/>
+                                <field name="CNAE_c" string='CNAE'/>
                                 <field name="name" string="Name"/>
                                 <field name="Title"/>
                                 <field name="phone"/>
-                                <field name="extension_number__c"/>
-                                <field name="secondary_phone__c"/>
+                                <field name="extension_number_c"/>
+                                <field name="secondary_phone_c"/>
                                 <field name="mobile"/>
-                                <field name="secondary_mobile_phone__c"/>
+                                <field name="secondary_mobile_phone_c"/>
                                 <field name="email_from"/>
-                                <field name="Date_of_Birth__c"/>
-                                <field name="rescue_date__c"/>
-                                <field name="loss_comment__c"/>
+                                <field name="Date_of_Birth_c"/>
+                                <field name="rescue_date_c"/>
+                                <field name="loss_comment_c"/>
                             </group>
                             <group>
                                 <field name="NumberOfEmployees"/>
-                                <field name="NumberofLocations__c"/>
-                                <field name="Locations__c"/>
-                                <field name="Company_Origin__c"/>
-                                <field name="Company_Segmentation__c"/>
-                                <field name="Sales_Channel__c"/>
-                                <field name="Nominative__c"/>
+                                <field name="NumberofLocations_c"/>
+                                <field name="Locations_c"/>
+                                <field name="Company_Origin_c"/>
+                                <field name="Company_Segmentation_c"/>
+                                <field name="Sales_Channel_c"/>
+                                <field name="Nominative_c"/>
                                 <field name="Rating"/>
-                                <field name="Mailing_Origin__c"/>
+                                <field name="Mailing_Origin_c"/>
                                 <field name="LeadSource"/>
-                                <field name="actual_birth_policy__c"/>
+                                <field name="actual_birth_policy_c"/>
 
                                 <label for="street" string="Address"/>
                                 <div class="o_address_format">
@@ -219,11 +219,11 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="Company"/>
-                    <field name="CNPJ__c"/>
-                    <field name="Business_Name__c"/>
-                    <field name="Financial_Group__c"/>
+                    <field name="CNPJ_c"/>
+                    <field name="Business_Name_c"/>
+                    <field name="Financial_Group_c"/>
                     <field name="Industry"/>
-                    <field name="CNAE__c"/>
+                    <field name="CNAE_c"/>
                 </tree>
             </field>
         </record>
@@ -264,12 +264,12 @@
                                 <field name="email_from"/>
                                 <field name="phone"/>
                                 <field name="mobile"/>
-                                <field name="secondary_mobile_phone__c"/>
+                                <field name="secondary_mobile_phone_c"/>
                                 <field name="Rating"/>
-                                <field name="Lead__c"/>
-                                <field name="CNPJ__c"/>
-                                <field name="rescue_date__c"/>
-                                <field name="loss_comment__c"/>
+                                <field name="Lead_c"/>
+                                <field name="CNPJ_c"/>
+                                <field name="rescue_date_c"/>
+                                <field name="loss_comment_c"/>
                             </group>
                             <group>
                                 <field name="OwnerId"/>
@@ -278,7 +278,7 @@
                                 <field name="Industry"/>
                                 <field name="NumberOfEmployees"/>
                                 <field name="LeadSource"/>
-                                <field name="mailing_file_name__c"/>
+                                <field name="mailing_file_name_c"/>
                             </group>
                         </group>
                         <group string="Address Information">
@@ -371,20 +371,20 @@
                         <group>
                             <group>
                                 <field name="Company" required='1'/>
-                                <field name="CNPJ__c"/>
-                                <field name="Business_Name__c"/>
-                                <field name="Financial_Group__c"/>
+                                <field name="CNPJ_c"/>
+                                <field name="Business_Name_c"/>
+                                <field name="Financial_Group_c"/>
                                 <field name="Industry"/>
-                                <field name="CNAE__c" string='CNAE'/>
+                                <field name="CNAE_c" string='CNAE'/>
                                 <field name="name" string="Full Name"/>
                                 <field name="Title"/>
                                 <field name="phone"/>
-                                <field name="extension_number__c"/>
-                                <field name="secondary_phone__c"/>
+                                <field name="extension_number_c"/>
+                                <field name="secondary_phone_c"/>
                                 <field name="mobile"/>
-                                <field name="secondary_mobile_phone__c"/>
+                                <field name="secondary_mobile_phone_c"/>
                                 <field name="email_from"/>
-                                <field name="Date_of_Birth__c"/>
+                                <field name="Date_of_Birth_c"/>
 
                                 <label for="street" string="Address"/>
                                 <div class="o_address_format">
@@ -399,27 +399,27 @@
                                            options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
                                 </div>
 
-                                <field name="rescue_date__c"/>
-                                <field name="loss_comment__c"/>
+                                <field name="rescue_date_c"/>
+                                <field name="loss_comment_c"/>
                             </group>
                             <group>
                                 <field name="team_id" invisible='1'/>
                                 <!-- <field name="stage_id" string='Lead Status'/> -->
-                                <field name="telemarketing__c"/>
+                                <field name="telemarketing_c"/>
                                 <field name="NumberOfEmployees"/>
-                                <field name="NumberofLocations__c"/>
-                                <field name="Locations__c"/>
-                                <field name="Company_Origin__c"/>
-                                <field name="Company_Segmentation__c"/>
-                                <field name="actual_carrier__c"
+                                <field name="NumberofLocations_c"/>
+                                <field name="Locations_c"/>
+                                <field name="Company_Origin_c"/>
+                                <field name="Company_Segmentation_c"/>
+                                <field name="actual_carrier_c"
                                        options="{'no_create': True, 'no_create_edit':True, 'no_open': True}"/>
-                                <field name="actual_invoice__c"/>
-                                <field name="actual_lifes__c"/>
-                                <field name="actual_birth_policy__c"/>
-                                <field name="Sales_Channel__c"/>
+                                <field name="actual_invoice_c"/>
+                                <field name="actual_lifes_c"/>
+                                <field name="actual_birth_policy_c"/>
+                                <field name="Sales_Channel_c"/>
                                 <field name="Rating"/>
                                 <field name="LeadSource"/>
-                                <field name="Mailing_Origin__c"/>
+                                <field name="Mailing_Origin_c"/>
                             </group>
                         </group>
                         <notebook>
@@ -461,11 +461,11 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="Company"/>
-                    <field name="CNPJ__c"/>
-                    <field name="Business_Name__c"/>
-                    <field name="Financial_Group__c"/>
+                    <field name="CNPJ_c"/>
+                    <field name="Business_Name_c"/>
+                    <field name="Financial_Group_c"/>
                     <field name="Industry"/>
-                    <field name="CNAE__c"/>
+                    <field name="CNAE_c"/>
                 </tree>
             </field>
         </record>
@@ -511,24 +511,24 @@
                                 <group>
                                     <group>
                                         <field name="name" string='Full Name'/>
-                                        <field name="actual_carrier__c"/>
-                                        <field name="actual_invoice__c"/>
+                                        <field name="actual_carrier_c"/>
+                                        <field name="actual_invoice_c"/>
                                         <field name="phone"/>
-                                        <field name="extension_number__c"/>
+                                        <field name="extension_number_c"/>
                                         <field name="mobile"/>
-                                        <field name="Date_of_Birth__c"/>
-                                        <field name="cpf__c"/>
+                                        <field name="Date_of_Birth_c"/>
+                                        <field name="cpf_c"/>
                                         <field name="city"/>
                                         <field name="zip"/>
-                                        <field name="telemarketing__c"/>
+                                        <field name="telemarketing_c"/>
                                     </group>
                                     <group>
-                                        <field name="Sales_Channel__c"/>
-                                        <field name="actual_lifes__c"/>
-                                        <field name="actual_birth_policy__c"/>
+                                        <field name="Sales_Channel_c"/>
+                                        <field name="actual_lifes_c"/>
+                                        <field name="actual_birth_policy_c"/>
                                         <field name="LeadSource"/>
-                                        <field name="Mailing_Origin__c"/>
-                                        <field name="secondary_mobile_phone__c"/>
+                                        <field name="Mailing_Origin_c"/>
+                                        <field name="secondary_mobile_phone_c"/>
                                         <field name="email_from"/>
                                         <field name="street"/>
                                         <field name="state_id"/>
@@ -551,15 +551,15 @@
                                                 <field name="country_id" placeholder="Country" class="o_address_country"
                                                        options='{"no_open": True, "no_create": True}'/>
                                             </div>
-                                            <field name="mailing_file_name__c"/>
-                                            <field name="cpf__c"/>
+                                            <field name="mailing_file_name_c"/>
+                                            <field name="cpf_c"/>
                                         </group>
                                         <group>
                                             <field name="LastTransferDate"/>
-                                            <field name="Workflow_Configuration__c"/>
+                                            <field name="Workflow_Configuration_c"/>
                                             <field name="Description"/>
-                                            <field name="Lead__c"/>
-                                            <field name="CNPJ__c"/>
+                                            <field name="Lead_c"/>
+                                            <field name="CNPJ_c"/>
                                             <field name="Company"/>
                                         </group>
                                     </group>
@@ -600,8 +600,8 @@
                     <field name="name"/>
                     <field name="Company"/>
                     <field name="type"/>
-                    <field name="CNPJ__c"/>
-                    <field name="cpf__c"/>
+                    <field name="CNPJ_c"/>
+                    <field name="cpf_c"/>
                     <field name="stage_id"/>
                 </tree>
             </field>
@@ -649,34 +649,34 @@
                                 <group>
                                     <group>
                                         <field name="Company"/>
-                                        <field name="CNPJ__c"/>
-                                        <field name="Business_Name__c"/>
-                                        <field name="Financial_Group__c"/>
+                                        <field name="CNPJ_c"/>
+                                        <field name="Business_Name_c"/>
+                                        <field name="Financial_Group_c"/>
                                         <field name="Industry"/>
-                                        <field name="CNAE__c" string='NINE'/>
+                                        <field name="CNAE_c" string='NINE'/>
                                         <field name="name" string="Full Name"/>
                                         <field name="Title"/>
                                         <field name="phone"/>
-                                        <field name="extension_number__c"/>
+                                        <field name="extension_number_c"/>
                                         <field name="mobile"/>
                                         <field name="LeadSource"/>
-                                        <field name="Date_of_Birth__c"/>
+                                        <field name="Date_of_Birth_c"/>
                                         <field name="street"/>
                                         <field name="state_id"/>
                                         <field name="Rating"/>
                                     </group>
                                     <group>
                                         <field name="NumberOfEmployees"/>
-                                        <field name="NumberofLocations__c"/>
-                                        <field name="Locations__c"/>
-                                        <field name="Company_Origin__c"/>
-                                        <field name="Company_Segmentation__c"/>
-                                        <field name="actual_birth_policy__c"/>
-                                        <field name="Sales_Channel__c"/>
-                                        <field name="Nominative__c"/>
-                                        <field name="secondary_phone__c"/>
-                                        <field name="Mailing_Origin__c"/>
-                                        <field name="secondary_mobile_phone__c"/>
+                                        <field name="NumberofLocations_c"/>
+                                        <field name="Locations_c"/>
+                                        <field name="Company_Origin_c"/>
+                                        <field name="Company_Segmentation_c"/>
+                                        <field name="actual_birth_policy_c"/>
+                                        <field name="Sales_Channel_c"/>
+                                        <field name="Nominative_c"/>
+                                        <field name="secondary_phone_c"/>
+                                        <field name="Mailing_Origin_c"/>
+                                        <field name="secondary_mobile_phone_c"/>
                                         <field name="email_from"/>
                                         <field name="zip"/>
                                         <field name="city"/>
@@ -700,18 +700,18 @@
                                                 <field name="country_id" placeholder="Country" class="o_address_country"
                                                        options='{"no_open": True, "no_create": True}'/>
                                             </div>
-                                            <field name="mailing_file_name__c"/>
-                                            <field name="cpf__c"/>
+                                            <field name="mailing_file_name_c"/>
+                                            <field name="cpf_c"/>
                                             <!--                                        <field name="won_status"/>-->
 
 
                                         </group>
                                         <group>
                                             <field name="LastTransferDate"/>
-                                            <field name="Workflow_Configuration__c"/>
+                                            <field name="Workflow_Configuration_c"/>
                                             <field name="Description"/>
-                                            <field name="Lead__c"/>
-                                            <field name="CNPJ__c"/>
+                                            <field name="Lead_c"/>
+                                            <field name="CNPJ_c"/>
                                             <field name="Company"/>
                                         </group>
                                     </group>
@@ -753,8 +753,8 @@
                     <field name="name"/>
                     <field name="Company"/>
                     <field name="type"/>
-                    <field name="CNPJ__c"/>
-                    <field name="cpf__c"/>
+                    <field name="CNPJ_c"/>
+                    <field name="cpf_c"/>
                 </tree>
             </field>
         </record>

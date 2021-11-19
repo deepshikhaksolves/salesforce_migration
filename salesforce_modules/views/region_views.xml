@@ -13,7 +13,7 @@
                                 <group>
                                     <group>
                                         <field name="Name" required='1'/>
-                                        <field name="active__c"/>
+                                        <field name="active_c"/>
                                         <field name="create_uid"/>
                                         <field name="create_date"/>
                                     </group>
@@ -37,7 +37,7 @@
                                     <field name="region_city_ids">
                                         <tree>
                                             <field name="Name"/>
-                                            <field name="city__c"/>
+                                            <field name="city_c"/>
                                             <field name="priority"/>
                                         </tree>
                                     </field>
@@ -62,7 +62,7 @@
                                     <field name="accredited_network_ids">
                                         <tree>
                                             <field name="Name"/>
-                                            <field name="active__c"/>
+                                            <field name="active_c"/>
                                         </tree>
                                     </field>
                                 </group>
@@ -85,7 +85,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="Name" />
-                    <field name="active__c"/>
+                    <field name="active_c"/>
                     <field name="OwnerId"/>
                     <field name="create_uid" />
                     <field name="write_uid"/>

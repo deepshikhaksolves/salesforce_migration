@@ -68,7 +68,7 @@
                 <tree>
                     <field name="ProductCode"/>
                     <field name="name"/>
-                    <field name="product_family__c"/>
+                    <field name="product_family_c"/>
                     <field name="create_uid"/>
                     <field name="write_uid"/>
                 </tree>
@@ -101,28 +101,28 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="carrier__c"/>
+                                <field name="carrier_c"/>
                                 <field name="ProductCode" required="1"/>
                                 <field name="name" string='Product Name'/>
-                                <field name="Segmentation__c" required="1"/>
-                                <field name="ans_code_no_copay__c"/>
-                                <field name="ans_code_with_copay__c"/>
-                                <field name="Minimum_Lives__c" required="1"/>
-                                <field name="maximum_lives__c" required="1"/>
-                                <field name="integration_product_code__c"/>
-                                <field name="Geographic_Scope__c" required="1"/>
-                                <field name="Geographic_Scope_tnk__c"/>
+                                <field name="Segmentation_c" required="1"/>
+                                <field name="ans_code_no_copay_c"/>
+                                <field name="ans_code_with_copay_c"/>
+                                <field name="Minimum_Lives_c" required="1"/>
+                                <field name="maximum_lives_c" required="1"/>
+                                <field name="integration_product_code_c"/>
+                                <field name="Geographic_Scope_c" required="1"/>
+                                <field name="Geographic_Scope_tnk_c"/>
                             </group>
                             <group>
                                 <field name="Family" required="1"/>
-                                <field name="Internal_Code__c"/>
+                                <field name="Internal_Code_c"/>
                                 <field name="Description" required="1"/>
-                                <field name="Charge_Mode__c" required="1"/>
-                                <field name="Product_Classification__c" required="1"/>
-                                <field name="accommodation__c"/>
-                                <field name="upgrade__c"/>
-                                <field name="Downgrade__c"/>
-                                <field name="priority__c" required="1"/>
+                                <field name="Charge_Mode_c" required="1"/>
+                                <field name="Product_Classification_c" required="1"/>
+                                <field name="accommodation_c"/>
+                                <field name="upgrade_c"/>
+                                <field name="Downgrade_c"/>
+                                <field name="priority_c" required="1"/>
                                 <field name="IsActive"/>
                             </group>
                         </group>
@@ -153,7 +153,7 @@
                                 <field name="network_provider_ids">
                                     <tree>
                                         <field name="Name"/>
-                                        <field name="accredited_network__c"/>
+                                        <field name="accredited_network_c"/>
                                     </tree>
                                 </field>
                             </page>
@@ -161,11 +161,11 @@
                                 <field name="product_price_ids">
                                     <tree>
                                         <field name="Name"/>
-                                        <field name="Price_Table__c"/>
-                                        <field name="age_range__c"/>
-                                        <field name="holder_value__c"/>
-                                        <field name="holder_value_copay__c"/>
-                                        <field name="others_value_copay__c"/>
+                                        <field name="Price_Table_c"/>
+                                        <field name="age_range_c"/>
+                                        <field name="holder_value_c"/>
+                                        <field name="holder_value_copay_c"/>
+                                        <field name="others_value_copay_c"/>
                                     </tree>
                                 </field>
                             </page>
@@ -196,12 +196,12 @@
             <field name="model">product.template</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="carrier__c"/>
+                    <field name="carrier_c"/>
                     <field name="ProductCode"/>
                     <field name="name"/>
-                    <field name="Segmentation__c"/>
-                    <field name="ans_code_no_copay__c"/>
-                    <field name="ans_code_with_copay__c"/>
+                    <field name="Segmentation_c"/>
+                    <field name="ans_code_no_copay_c"/>
+                    <field name="ans_code_with_copay_c"/>
                 </tree>
             </field>
         </record>

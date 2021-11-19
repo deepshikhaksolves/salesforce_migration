@@ -97,7 +97,7 @@ class ResPartner(models.Model):
     title = fields.Selection([
         ('President', 'President'), ('Vice President', 'Vice President'), ('CEO', 'CEO'), ('Director', 'Director'), ('Superintendent', 'Superintendent'), ('Manager', 'Manager'), ('Coordinator', 'Coordinator'), ('Analyst', 'Analyst')
     ], string='Title')
-    Title__c = fields.Char(string='Title', size=128)
+    Title_c = fields.Char(string='Title', size=128)
     title_description = fields.Char(string='Title Description', size=255)
     treatment_name = fields.Char(string='Treatment Name', size=255)
     wedding_date = fields.Date(string='Wedding Date')

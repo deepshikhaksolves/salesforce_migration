@@ -97,7 +97,7 @@ class ModelQuote(models.Model):
     RecordTypeId =fields.Char(string="Quote Record Type",track_visibility='onchange')
     QuoteToAddress = fields.Text(string="Quote To",track_visibility='onchange')
     QuoteToName = fields.Char(string="Quote To Name", size=255,track_visibility='onchange')
-    quote_type__c = fields.Selection([
+    quote_type_c = fields.Selection([
         ('Price','Price'),('Benchmarking','Benchmarking')
     ],string="Quote Type",track_visibility='onchange')
     quote_won =  fields.Char(string="Quote Won", size=255,track_visibility='onchange')
@@ -107,7 +107,7 @@ class ModelQuote(models.Model):
     ShippingAddress = fields.Text(string="Ship To",track_visibility='onchange')
     ShippingName =  fields.Char(string="Ship To Name", size=255)
     ShippingHandling = fields.Float(string="Shipping and Handling")
-    Quote__c = fields.Char(string="Study request")
+    Quote_c = fields.Char(string="Study request")
     parent_quote_id = fields.Many2one('model_quote', string="Parent Study Request" )
     Status = fields.Selection([
         ('Draft','In filling'),

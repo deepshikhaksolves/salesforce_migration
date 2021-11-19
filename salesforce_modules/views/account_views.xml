@@ -13,33 +13,33 @@
                                 <field name="code"/>
                                 <field name="user_type_id" string='Account Record Type'/>
                                 <field name="ParentId"/>
-                                <field name="financial_group__c"/>
-                                <field name="CNPJ__c"/>
-                                <field name="Social_Reason__c"/>
+                                <field name="financial_group_c"/>
+                                <field name="CNPJ_c"/>
+                                <field name="Social_Reason_c"/>
                                 <field name="name" string="Revenue"/>
-                                <field name="State_Registration__c"/>
-                                <field name="Municipal_Registration__c"/>
-                                <field name="CNAE__c" string="NINE"/>
-                                <field name="Risk_Level__c"/>
-                                <field name="Foundation_Date__c"/>
-                                <field name="Account__c"/>
-                                <field name="Broker__c"/>
-                                <field name="Company_Classification__c"/>
-                                <field name="Company_Origin__c"/>
+                                <field name="State_Registration_c"/>
+                                <field name="Municipal_Registration_c"/>
+                                <field name="CNAE_c" string="NINE"/>
+                                <field name="Risk_Level_c"/>
+                                <field name="Foundation_Date_c"/>
+                                <field name="Account_c"/>
+                                <field name="Broker_c"/>
+                                <field name="Company_Classification_c"/>
+                                <field name="Company_Origin_c"/>
                                 <field name="create_uid" string='Created By'/>
                                 <field name="create_date"/>
                                 <field name="Description"/>
                             </group>
                             <group>
-                                <field name="Start_in_Broker__c"/>
+                                <field name="Start_in_Broker_c"/>
                                 <field name="Type"/>
                                 <field name="NumberOfEmployees"/>
                                 <field name="AnnualRevenue"/>
                                 <field name="Website"/>
-                                <field name="Email__c"/>
+                                <field name="Email_c"/>
                                 <field name="phone"/>
                                 <field name="Ownership"/>
-                                <field name="Score__c"/>
+                                <field name="Score_c"/>
                                 <field name="write_uid" string="Last Modified By"/>
                                 <field name="write_date" string='Last Modified On'/>
                             </group>
@@ -50,7 +50,7 @@
                                     <tree>
                                         <field name="Name"/>
                                         <field name="City"/>
-                                        <field name="State__id"/>
+                                        <field name="State_id"/>
                                         <field name="Address_Type"/>
                                     </tree>
                                 </field>
@@ -108,9 +108,9 @@
                             <page string="Bills">
                                 <group>
                                     <field name="name" string="Account Name"/>
-                                    <field name="CNPJ__c"/>
-                                    <field name="Social_Reason__c"/>
-                                    <field name="financial_group__c"/>
+                                    <field name="CNPJ_c"/>
+                                    <field name="Social_Reason_c"/>
+                                    <field name="financial_group_c"/>
                                 </group>
                             </page>
                             <page string="Bank accounts">
@@ -139,7 +139,7 @@
                             <page string="Portals and Accesses (Administrator)">
                                 <field name="portal_access_ids">
                                     <tree>
-                                        <field name="access_code__c" string='Access Number'/>
+                                        <field name="access_code_c" string='Access Number'/>
                                     </tree>
                                 </field>
                             </page>
@@ -161,7 +161,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
-                    <field name="Account__c"/>
+                    <field name="Account_c"/>
                     <field name="ParentId"/>
                     <field name="create_uid"/>
                     <field name="write_uid"/>
@@ -292,7 +292,7 @@
                         <page string="Portals and Accesses (Administrator)">
                             <field name="portal_access_ids">
                                 <tree>
-                                    <field name="access_code__c" string='Access Number'/>
+                                    <field name="access_code_c" string='Access Number'/>
                                 </tree>
                             </field>
                         </page>
@@ -348,26 +348,26 @@
                     <sheet>
                         <!-- <group>
                             <group>
-                                <field name="CNPJ__c"/>
-                                <field name="Social_Reason__c"/>
-                                <field name="comercial_name__c"/>
+                                <field name="CNPJ_c"/>
+                                <field name="Social_Reason_c"/>
+                                <field name="comercial_name_c"/>
                                 <field name="name"/>
                                 <field name="code"/>
                                 <field name="user_type_id"/>
-                                <field name="State_Registration__c"/>
-                                <field name="Municipal_Registration__c"/>
+                                <field name="State_Registration_c"/>
+                                <field name="Municipal_Registration_c"/>
                                 <field name="Website"/>
-                                <field name="benefits__c"/>
+                                <field name="benefits_c"/>
                                 <field name="ParentId"/>
                             </group>
                             <group>
-                                <field name="carrier_type__c"/>
-                                <field name="ans_code__c"/>
-                                <field name="ans_start__c"/>
-                                <field name="app_address__c"/>
-                                <field name="has_reimbursement_app__c"/>
-                                <field name="customer_service_center__c"/>
-                                <field name="broker_call_center__c"/>
+                                <field name="carrier_type_c"/>
+                                <field name="ans_code_c"/>
+                                <field name="ans_start_c"/>
+                                <field name="app_address_c"/>
+                                <field name="has_reimbursement_app_c"/>
+                                <field name="customer_service_center_c"/>
+                                <field name="broker_call_center_c"/>
                             </group>
                         </group> -->
                     </sheet>
@@ -376,7 +376,7 @@
                             <field name="address_ids">
                                 <tree>
                                     <field name="City"/>
-                                    <field name="State__id"/>
+                                    <field name="State_id"/>
                                     <field name="Address_Type"/>
                                 </tree>
                             </field>
@@ -433,18 +433,18 @@
                         <page string="Portals and Accesses">
                             <field name="portal_access_ids">
                                 <tree>
-                                    <field name="access_code__c" string='Access Number'/>
-                                    <field name="contract_summary__c"/>
+                                    <field name="access_code_c" string='Access Number'/>
+                                    <field name="contract_summary_c"/>
                                     <field name="financial_group_id"/>
-                                    <field name="access_type__c"/>
-                                    <field name="access_users__c"/>
+                                    <field name="access_type_c"/>
+                                    <field name="access_users_c"/>
                                 </tree>
                             </field>
                         </page>
                         <page string="Portals and Accesses (Administrator)">
                             <field name="portal_access_ids">
                                 <tree>
-                                    <field name="access_code__c" string='Access Number'/>
+                                    <field name="access_code_c" string='Access Number'/>
                                 </tree>
                             </field>
                         </page>
@@ -464,11 +464,11 @@
             <field name="model">account.account</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="CNPJ__c"/>
-                    <field name="Social_Reason__c"/>
+                    <field name="CNPJ_c"/>
+                    <field name="Social_Reason_c"/>
                     <field name="name"/>
-                    <field name="comercial_name__c"/>
-                    <field name="State_Registration__c"/>
+                    <field name="comercial_name_c"/>
+                    <field name="State_Registration_c"/>
                 </tree>
             </field>
         </record>
@@ -500,32 +500,32 @@
                     <sheet>
                         <!-- <group>
                             <group>
-                                <field name="CNPJ__c"/>
+                                <field name="CNPJ_c"/>
                                 <field name="name"/>
                                 <field name="code"/>
                                 <field name="user_type_id"/>
-                                <field name="Social_Reason__c"/>
-                                <field name="CNAE__c"/>
-                                <field name="Risk_Level__c"/>
-                                <field name="Foundation_Date__c"/>
-                                <field name="Company_Segmentation__c"/>
+                                <field name="Social_Reason_c"/>
+                                <field name="CNAE_c"/>
+                                <field name="Risk_Level_c"/>
+                                <field name="Foundation_Date_c"/>
+                                <field name="Company_Segmentation_c"/>
                                 <field name="NumberOfEmployees"/>
-                                <field name="NumberofLocations__c"/>
-                                <field name="Locations__c"/>
+                                <field name="NumberofLocations_c"/>
+                                <field name="Locations_c"/>
                                 <field name="BillingAddress"/>
                                 <field name="Description"/>
                             </group>
                             <group>
-                                <field name="State_Registration__c"/>
-                                <field name="Municipal_Registration__c"/>
+                                <field name="State_Registration_c"/>
+                                <field name="Municipal_Registration_c"/>
                                 <field name="Website"/>
                                 <field name="Industry"/>
-                                <field name="Email__c"/>
+                                <field name="Email_c"/>
                                 <field name="phone"/>
-                                <field name="financial_group__c"/>
+                                <field name="financial_group_c"/>
                                 <field name="ParentId"/>
-                                <field name="Start_in_Broker__c"/>
-                                <field name="Image__c"/>
+                                <field name="Start_in_Broker_c"/>
+                                <field name="Image_c"/>
                             </group>
                         </group> -->
                     </sheet>
@@ -577,9 +577,9 @@
                         <page string="Bills">
                             <group>
                                 <field name="name" string="Account Name"/>
-                                <field name="CNPJ__c"/>
-                                <field name="Social_Reason__c"/>
-                                <field name="financial_group__c"/>
+                                <field name="CNPJ_c"/>
+                                <field name="Social_Reason_c"/>
+                                <field name="financial_group_c"/>
                             </group>
                         </page>
 
@@ -644,7 +644,7 @@
                         <page string="Portals and Accesses (Administrator)">
                             <field name="portal_access_ids">
                                 <tree>
-                                    <field name="access_code__c" string='Access Number'/>
+                                    <field name="access_code_c" string='Access Number'/>
                                 </tree>
                             </field>
                         </page>
@@ -664,11 +664,11 @@
             <field name="model">account.account</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="CNPJ__c"/>
+                    <field name="CNPJ_c"/>
                     <field name="name"/>
-                    <field name="Social_Reason__c"/>
-                    <field name="CNAE__c"/>
-                    <field name="Risk_Level__c"/>
+                    <field name="Social_Reason_c"/>
+                    <field name="CNAE_c"/>
+                    <field name="Risk_Level_c"/>
                 </tree>
             </field>
         </record>
@@ -700,31 +700,31 @@
                     <sheet>
                         <!-- <group>
                             <group>
-                                <field name="CNPJ__c"/>
-                                <field name="Social_Reason__c"/>
+                                <field name="CNPJ_c"/>
+                                <field name="Social_Reason_c"/>
                                 <field name="name"/>
                                 <field name="code"/>
                                 <field name="user_type_id"/>
-                                <field name="comercial_name__c"/>
-                                <field name="State_Registration__c"/>
-                                <field name="Municipal_Registration__c"/>
+                                <field name="comercial_name_c"/>
+                                <field name="State_Registration_c"/>
+                                <field name="Municipal_Registration_c"/>
                                 <field name="Website"/>
-                                <field name="benefits__c"/>
-                                <field name="customer_service_center__c"/>
+                                <field name="benefits_c"/>
+                                <field name="customer_service_center_c"/>
                                 <field name="ParentId"/>
-                                <field name="card_image__c"/>
-                                <field name="card_template__c"/>
+                                <field name="card_image_c"/>
+                                <field name="card_template_c"/>
                             </group>
                             <group>
-                                <field name="carrier_type__c"/>
-                                <field name="ans_code__c"/>
-                                <field name="ans_start__c"/>
-                                <field name="app_address__c"/>
-                                <field name="has_reimbursement_app__c"/>
-                                <field name="allow_create_reimbursement_case__c"/>
-                                <field name="has_telemedicine_app__c"/>
-                                <field name="allow_create_accredited_net_case__c"/>
-                                <field name="broker_call_center__c"/>
+                                <field name="carrier_type_c"/>
+                                <field name="ans_code_c"/>
+                                <field name="ans_start_c"/>
+                                <field name="app_address_c"/>
+                                <field name="has_reimbursement_app_c"/>
+                                <field name="allow_create_reimbursement_case_c"/>
+                                <field name="has_telemedicine_app_c"/>
+                                <field name="allow_create_accredited_net_case_c"/>
+                                <field name="broker_call_center_c"/>
                             </group>
                         </group> -->
                     </sheet>
@@ -790,18 +790,18 @@
                         <page string="Portals and Accesses">
                             <field name="portal_access_ids">
                                 <tree>
-                                    <field name="access_code__c" string='Access Number'/>
-                                    <field name="contract_summary__c"/>
+                                    <field name="access_code_c" string='Access Number'/>
+                                    <field name="contract_summary_c"/>
                                     <field name="financial_group_id"/>
-                                    <field name="access_type__c"/>
-                                    <field name="access_users__c"/>
+                                    <field name="access_type_c"/>
+                                    <field name="access_users_c"/>
                                 </tree>
                             </field>
                         </page>
                         <page string="Portals and Accesses (Administrator)">
                             <field name="portal_access_ids">
                                 <tree>
-                                    <field name="access_code__c" string='Access Number'/>
+                                    <field name="access_code_c" string='Access Number'/>
                                 </tree>
                             </field>
                         </page>
@@ -821,11 +821,11 @@
             <field name="model">account.account</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="CNPJ__c"/>
+                    <field name="CNPJ_c"/>
                     <field name="name"/>
-                    <field name="Social_Reason__c"/>
-                    <field name="CNAE__c"/>
-                    <field name="Risk_Level__c"/>
+                    <field name="Social_Reason_c"/>
+                    <field name="CNAE_c"/>
+                    <field name="Risk_Level_c"/>
                 </tree>
             </field>
         </record>
@@ -858,32 +858,32 @@
                     <sheet>
                         <!-- <group>
                             <group>
-                                <field name="CNPJ__c"/>
+                                <field name="CNPJ_c"/>
                                 <field name="name"/>
                                 <field name="code"/>
                                 <field name="user_type_id"/>
-                                <field name="Social_Reason__c"/>
-                                <field name="CNAE__c"/>
-                                <field name="Risk_Level__c"/>
-                                <field name="Foundation_Date__c"/>
-                                <field name="Company_Segmentation__c"/>
+                                <field name="Social_Reason_c"/>
+                                <field name="CNAE_c"/>
+                                <field name="Risk_Level_c"/>
+                                <field name="Foundation_Date_c"/>
+                                <field name="Company_Segmentation_c"/>
                                 <field name="NumberOfEmployees"/>
-                                <field name="NumberofLocations__c"/>
-                                <field name="Locations__c"/>
+                                <field name="NumberofLocations_c"/>
+                                <field name="Locations_c"/>
                                 <field name="BillingAddress"/>
                                 <field name="Description"/>
                             </group>
                             <group>
-                                <field name="State_Registration__c"/>
-                                <field name="Municipal_Registration__c"/>
+                                <field name="State_Registration_c"/>
+                                <field name="Municipal_Registration_c"/>
                                 <field name="Website"/>
                                 <field name="Industry"/>
-                                <field name="Email__c"/>
+                                <field name="Email_c"/>
                                 <field name="phone"/>
-                                <field name="financial_group__c"/>
+                                <field name="financial_group_c"/>
                                 <field name="ParentId"/>
-                                <field name="Start_in_Broker__c"/>
-                                <field name="Image__c"/>
+                                <field name="Start_in_Broker_c"/>
+                                <field name="Image_c"/>
                             </group>
                         </group> -->
                     </sheet>
@@ -935,9 +935,9 @@
                         <page string="Bills">
                             <group>
                                 <field name="name" string="Account Name"/>
-                                <field name="CNPJ__c"/>
-                                <field name="Social_Reason__c"/>
-                                <field name="financial_group__c"/>
+                                <field name="CNPJ_c"/>
+                                <field name="Social_Reason_c"/>
+                                <field name="financial_group_c"/>
                             </group>
                         </page>
 
@@ -1006,7 +1006,7 @@
                         <page string="Portals and Accesses (Administrator)">
                             <field name="portal_access_ids">
                                 <tree>
-                                    <field name="access_code__c" string='Access Number'/>
+                                    <field name="access_code_c" string='Access Number'/>
                                 </tree>
                             </field>
                         </page>
@@ -1026,11 +1026,11 @@
             <field name="model">account.account</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="CNPJ__c"/>
+                    <field name="CNPJ_c"/>
                     <field name="name"/>
-                    <field name="Social_Reason__c"/>
-                    <field name="CNAE__c"/>
-                    <field name="Risk_Level__c"/>
+                    <field name="Social_Reason_c"/>
+                    <field name="CNAE_c"/>
+                    <field name="Risk_Level_c"/>
                 </tree>
             </field>
         </record>
@@ -1069,7 +1069,7 @@
                                 <field name="ParentId"/>
                             </group>
                             <group>
-                                <field name="CNPJ__c"/>
+                                <field name="CNPJ_c"/>
                             </group>
                         </group> -->
                     </sheet>
@@ -1093,7 +1093,7 @@
                         <page string="Portals and Accesses (Administrator)">
                             <field name="portal_access_ids">
                                 <tree>
-                                    <field name="access_code__c" string='Access Number'/>
+                                    <field name="access_code_c" string='Access Number'/>
                                 </tree>
                             </field>
                         </page>
@@ -1115,7 +1115,7 @@
                 <tree>
                     <field name="name"/>
                     <field name="ParentId"/>
-                    <field name="CNPJ__c"/>
+                    <field name="CNPJ_c"/>
                 </tree>
             </field>
         </record>
@@ -1153,7 +1153,7 @@
                                 <field name="ParentId"/>
                             </group>
                             <group>
-                                <field name="CNPJ__c"/>
+                                <field name="CNPJ_c"/>
                             </group>
                         </group> -->
                     </sheet>
@@ -1177,7 +1177,7 @@
                         <page string="Portals and Accesses (Administrator)">
                             <field name="portal_access_ids">
                                 <tree>
-                                    <field name="access_code__c" string='Access Number'/>
+                                    <field name="access_code_c" string='Access Number'/>
                                 </tree>
                             </field>
                         </page>
@@ -1199,7 +1199,7 @@
                 <tree>
                     <field name="name"/>
                     <field name="ParentId"/>
-                    <field name="CNPJ__c"/>
+                    <field name="CNPJ_c"/>
                 </tree>
             </field>
         </record>
@@ -1231,32 +1231,32 @@
                     <sheet>
                         <!-- <group>
                             <group>
-                                <field name="CNPJ__c"/>
+                                <field name="CNPJ_c"/>
                                 <field name="name"/>
                                 <field name="code"/>
                                 <field name="user_type_id"/>
-                                <field name="Social_Reason__c"/>
-                                <field name="comercial_name__c"/>
-                                <field name="CNAE__c"/>
-                                <field name="Risk_Level__c"/>
-                                <field name="Foundation_Date__c"/>
-                                <field name="Locations__c"/>
-                                <field name="role__c"/>
+                                <field name="Social_Reason_c"/>
+                                <field name="comercial_name_c"/>
+                                <field name="CNAE_c"/>
+                                <field name="Risk_Level_c"/>
+                                <field name="Foundation_Date_c"/>
+                                <field name="Locations_c"/>
+                                <field name="role_c"/>
                                 <field name="BillingAddress"/>
                                 <field name="Description"/>
 
                             </group>
                             <group>
-                                <field name="service_type__c"/>
-                                <field name="State_Registration__c"/>
-                                <field name="Municipal_Registration__c"/>
+                                <field name="service_type_c"/>
+                                <field name="State_Registration_c"/>
+                                <field name="Municipal_Registration_c"/>
                                 <field name="Website"/>
                                 <field name="Industry"/>
-                                <field name="Email__c"/>
+                                <field name="Email_c"/>
                                 <field name="phone"/>
                                 <field name="ParentId"/>
-                                <field name="Start_in_Broker__c"/>
-                                <field name="Image__c"/>
+                                <field name="Start_in_Broker_c"/>
+                                <field name="Image_c"/>
                             </group>
                         </group> -->
                     </sheet>
@@ -1308,9 +1308,9 @@
                         <page string="Bills">
                             <group>
                                 <field name="name" string="Account Name"/>
-                                <field name="CNPJ__c"/>
-                                <field name="Social_Reason__c"/>
-                                <field name="financial_group__c"/>
+                                <field name="CNPJ_c"/>
+                                <field name="Social_Reason_c"/>
+                                <field name="financial_group_c"/>
                             </group>
                         </page>
 
@@ -1385,7 +1385,7 @@
                         <page string="Portals and Accesses (Administrator)">
                             <field name="portal_access_ids">
                                 <tree>
-                                    <field name="access_code__c" string='Access Number'/>
+                                    <field name="access_code_c" string='Access Number'/>
                                 </tree>
                             </field>
                         </page>
@@ -1405,11 +1405,11 @@
             <field name="model">account.account</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="CNPJ__c"/>
+                    <field name="CNPJ_c"/>
                     <field name="name"/>
-                    <field name="Social_Reason__c"/>
-                    <field name="comercial_name__c"/>
-                    <field name="Risk_Level__c"/>
+                    <field name="Social_Reason_c"/>
+                    <field name="comercial_name_c"/>
+                    <field name="Risk_Level_c"/>
                 </tree>
             </field>
         </record>
@@ -1442,19 +1442,19 @@
                     <sheet>
                         <!-- <group>
                             <group>
-                                <field name="CPF__c"/>
-                                <field name="Email__c"/>
+                                <field name="CPF_c"/>
+                                <field name="Email_c"/>
                                 <field name="phone"/>
-                                <field name="CNS__c"/>
+                                <field name="CNS_c"/>
                                 <field name="ParentId"/>
                             </group>
                             <group>
                                 <field name="name"/>
                                 <field name="code"/>
                                 <field name="user_type_id"/>
-                                <field name="Gender__c"/>
-                                <field name="Marital_Status__c"/>
-                                <field name="Start_in_Broker__c"/>
+                                <field name="Gender_c"/>
+                                <field name="Marital_Status_c"/>
+                                <field name="Start_in_Broker_c"/>
                             </group>
                         </group> -->
                     </sheet>
@@ -1464,7 +1464,7 @@
                                 <tree>
                                     <field name="Name"/>
                                     <field name="City"/>
-                                    <field name="State__id"/>
+                                    <field name="State_id"/>
                                     <field name="Address_Type"/>
                                 </tree>
                             </field>
@@ -1537,7 +1537,7 @@
                         <page string="Portals and Accesses (Administrator)">
                             <field name="portal_access_ids">
                                 <tree>
-                                    <field name="access_code__c" string='Access Number'/>
+                                    <field name="access_code_c" string='Access Number'/>
                                 </tree>
                             </field>
                         </page>
@@ -1557,8 +1557,8 @@
             <field name="model">account.account</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="CPF__c"/>
-                    <field name="Email__c"/>
+                    <field name="CPF_c"/>
+                    <field name="Email_c"/>
                     <field name="phone"/>
                 </tree>
             </field>
@@ -1590,8 +1590,8 @@
                     <sheet>
                         <!-- <group>
                             <group>
-                                <field name="CNPJ__c"/>
-                                <field name="Company_Origin__c"/>
+                                <field name="CNPJ_c"/>
+                                <field name="Company_Origin_c"/>
                                 <field name="OwnerId"/>
                                 <field name="RecordTypeId" string="Account Record Type"/>
                             </group>
@@ -1600,22 +1600,22 @@
                             <page string="Details">
                                 <group>
                                     <group>
-                                        <field name="CNPJ__c"/>
-                                        <field name="Social_Reason__c"/>
+                                        <field name="CNPJ_c"/>
+                                        <field name="Social_Reason_c"/>
                                         <field name="name"/>
-                                        <field name="State_Registration__c"/>
-                                        <field name="Municipal_Registration__c"/>
-                                        <field name="customer_service_center__c"/>
+                                        <field name="State_Registration_c"/>
+                                        <field name="Municipal_Registration_c"/>
+                                        <field name="customer_service_center_c"/>
                                         <field name="Website"/>
                                     </group>
                                     <group>
-                                        <field name="carrier_type__c"/>
-                                        <field name="ans_code__c"/>
-                                        <field name="ans_start__c"/>
-                                        <field name="app_address__c"/>
-                                        <field name="has_reimbursement_app__c"/>
-                                        <field name="broker_call_center__c"/>
-                                        <field name="benefits__c"/>
+                                        <field name="carrier_type_c"/>
+                                        <field name="ans_code_c"/>
+                                        <field name="ans_start_c"/>
+                                        <field name="app_address_c"/>
+                                        <field name="has_reimbursement_app_c"/>
+                                        <field name="broker_call_center_c"/>
+                                        <field name="benefits_c"/>
                                     </group>
                                 </group>
 
@@ -1656,8 +1656,8 @@
             <field name="model">account.account</field>
             <field name="arch" type="xml">
                 <tree string="Administrator Layout Tree View">
-                    <field name="CNPJ__c"/>
-                    <field name="Company_Origin__c"/>
+                    <field name="CNPJ_c"/>
+                    <field name="Company_Origin_c"/>
                     <field name="OwnerId"/>
                     <field name="RecordTypeId" string="Account Record Type"/>
                 </tree>
@@ -1690,9 +1690,9 @@
                     <sheet>
                         <!-- <group>
                             <group>
-                                <field name="CNPJ__c"/>
+                                <field name="CNPJ_c"/>
                                 <field name="Industry"/>
-                                <field name="Company_Origin__c"/>
+                                <field name="Company_Origin_c"/>
                                 <field name="OwnerId"/>
                                 <field name="RecordTypeId" string="Account Record Type"/>
                             </group>
@@ -1701,44 +1701,44 @@
                             <page string="Details">
                                 <group>
                                     <group>
-                                        <field name="CNPJ__c"/>
-                                        <field name="Social_Reason__c"/>
-                                        <field name="CNAE__c"/>
-                                        <field name="Risk_Level__c"/>
-                                        <field name="Foundation_Date__c"/>
-                                        <field name="Company_Segmentation__c"/>
+                                        <field name="CNPJ_c"/>
+                                        <field name="Social_Reason_c"/>
+                                        <field name="CNAE_c"/>
+                                        <field name="Risk_Level_c"/>
+                                        <field name="Foundation_Date_c"/>
+                                        <field name="Company_Segmentation_c"/>
                                         <field name="NumberOfEmployees"/>
-                                        <field name="NumberofLocations__c"/>
-                                        <field name="Locations__c"/>
+                                        <field name="NumberofLocations_c"/>
+                                        <field name="Locations_c"/>
                                         <field name="BillingAddress"/>
                                         <field name="Description"/>
                                     </group>
                                     <group>
-                                        <field name="State_Registration__c"/>
-                                        <field name="Municipal_Registration__c"/>
+                                        <field name="State_Registration_c"/>
+                                        <field name="Municipal_Registration_c"/>
                                         <field name="Website"/>
                                         <field name="Industry"/>
-                                        <field name="Email__c"/>
+                                        <field name="Email_c"/>
                                         <field name="phone"/>
                                         <field name="financial_group_id"/>
                                         <field name="ParentId"/>
-                                        <field name="Start_in_Broker__c"/>
-                                        <field name="Image__c"/>
+                                        <field name="Start_in_Broker_c"/>
+                                        <field name="Image_c"/>
                                     </group>
                                 </group>
                                 <group string="System Information">
                                     <group>
                                         <field name="create_uid" string='Created By'/>
-                                        <field name="Life__c"/>
-                                        <field name="market_reserve__c"/>
-                                        <field name="CNPJ__c"/>
-                                        <field name="Social_Reason__c"/>
+                                        <field name="Life_c"/>
+                                        <field name="market_reserve_c"/>
+                                        <field name="CNPJ_c"/>
+                                        <field name="Social_Reason_c"/>
                                     </group>
                                     <group>
                                         <field name="write_uid" string="Last Modified By"/>
                                         <field name="Type"/>
-                                        <field name="Mainly_Carrier__c"/>
-                                        <field name="CPF__c"/>
+                                        <field name="Mainly_Carrier_c"/>
+                                        <field name="CPF_c"/>
                                     </group>
                                 </group>
                             </page>
@@ -1766,9 +1766,9 @@
             <field name="model">account.account</field>
             <field name="arch" type="xml">
                 <tree string="Legal Entry Customer Layout Tree View">
-                    <field name="CNPJ__c"/>
+                    <field name="CNPJ_c"/>
                     <field name="Industry"/>
-                    <field name="Company_Origin__c"/>
+                    <field name="Company_Origin_c"/>
                     <field name="OwnerId"/>
                     <field name="RecordTypeId" string="Account Record Type"/>
                 </tree>
@@ -1800,9 +1800,9 @@
                     <sheet>
                         <!-- <group>
                             <group>
-                                <field name="CNPJ__c"/>
+                                <field name="CNPJ_c"/>
                                 <field name="Industry"/>
-                                <field name="Company_Origin__c"/>
+                                <field name="Company_Origin_c"/>
                                 <field name="OwnerId"/>
                                 <field name="RecordTypeId"/>
                             </group>
@@ -1815,21 +1815,21 @@
                                         <field name="ParentId"/>
                                     </group>
                                     <group>
-                                        <field name="CNPJ__c"/>
+                                        <field name="CNPJ_c"/>
                                     </group>
                                 </group>
                                 <group string="System Information">
                                     <group>
                                         <field name="create_uid" string='Created By'/>
-                                        <field name="Life__c"/>
-                                        <field name="Reserva_de_Mercado__c"/>
-                                        <field name="CNPJ__c"/>
+                                        <field name="Life_c"/>
+                                        <field name="Reserva_de_Mercado_c"/>
+                                        <field name="CNPJ_c"/>
                                     </group>
                                     <group>
                                         <field name="write_uid" string="Last Modified By"/>
                                         <field name="Type"/>
-                                        <field name="Mainly_Carrier__c"/>
-                                        <field name="CPF__c"/>
+                                        <field name="Mainly_Carrier_c"/>
+                                        <field name="CPF_c"/>
                                     </group>
                                 </group>
                             </page>
@@ -1859,9 +1859,9 @@
             <field name="model">account.account</field>
             <field name="arch" type="xml">
                 <tree string="Account Laboratory Tree View">
-                    <field name="CNPJ__c"/>
+                    <field name="CNPJ_c"/>
                     <field name="Industry"/>
-                    <field name="Company_Origin__c"/>
+                    <field name="Company_Origin_c"/>
                     <field name="OwnerId"/>
                     <field name="RecordTypeId"/>
                 </tree>
@@ -1894,8 +1894,8 @@
                     <sheet>
                         <!-- <group>
                             <group>
-                                <field name="CNPJ__c"/>
-                                <field name="ans_code__c"/>
+                                <field name="CNPJ_c"/>
+                                <field name="ans_code_c"/>
                                 <field name="phone"/>
                                 <field name="RecordTypeId"/>
                             </group>
@@ -1905,24 +1905,24 @@
                             <page string="Details">
                                 <group>
                                     <group>
-                                        <field name="CNPJ__c"/>
-                                        <field name="Social_Reason__c"/>
-                                        <field name="State_Registration__c"/>
-                                        <field name="Municipal_Registration__c"/>
-                                        <field name="customer_service_center__c"/>
+                                        <field name="CNPJ_c"/>
+                                        <field name="Social_Reason_c"/>
+                                        <field name="State_Registration_c"/>
+                                        <field name="Municipal_Registration_c"/>
+                                        <field name="customer_service_center_c"/>
                                         <field name="Website"/>
-                                        <field name="benefits__c"/>
+                                        <field name="benefits_c"/>
                                     </group>
                                     <group>
-                                        <field name="carrier_type__c"/>
-                                        <field name="ans_code__c"/>
-                                        <field name="ans_start__c"/>
-                                        <field name="app_address__c"/>
-                                        <field name="has_reimbursement_app__c"/>
-                                        <field name="allow_create_reimbursement_case__c"/>
-                                        <field name="has_telemedicine_app__c"/>
-                                        <field name="allow_create_accredited_net_case__c"/>
-                                        <field name="broker_call_center__c"/>
+                                        <field name="carrier_type_c"/>
+                                        <field name="ans_code_c"/>
+                                        <field name="ans_start_c"/>
+                                        <field name="app_address_c"/>
+                                        <field name="has_reimbursement_app_c"/>
+                                        <field name="allow_create_reimbursement_case_c"/>
+                                        <field name="has_telemedicine_app_c"/>
+                                        <field name="allow_create_accredited_net_case_c"/>
+                                        <field name="broker_call_center_c"/>
                                     </group>
                                 </group>
                             </page>
@@ -1948,8 +1948,8 @@
             <field name="model">account.account</field>
             <field name="arch" type="xml">
                 <tree string="Account Operator Tree View">
-                    <field name="CNPJ__c"/>
-                    <field name="ans_code__c"/>
+                    <field name="CNPJ_c"/>
+                    <field name="ans_code_c"/>
                     <field name="phone"/>
                     <field name="RecordTypeId"/>
                 </tree>
@@ -1982,9 +1982,9 @@
                     <sheet>
                         <!-- <group>
                             <group>
-                                <field name="CNPJ__c"/>
+                                <field name="CNPJ_c"/>
                                 <field name="Industry"/>
-                                <field name="Company_Origin__c"/>
+                                <field name="Company_Origin_c"/>
                                 <field name="OwnerId"/>
                                 <field name="RecordTypeId"/>
                             </group>
@@ -1994,42 +1994,42 @@
                             <page string="Details">
                                 <group>
                                     <group>
-                                        <field name="CNPJ__c"/>
-                                        <field name="Social_Reason__c"/>
-                                        <field name="CNAE__c"/>
-                                        <field name="Risk_Level__c"/>
-                                        <field name="Foundation_Date__c"/>
-                                        <field name="Locations__c"/>
-                                        <field name="role__c"/>
+                                        <field name="CNPJ_c"/>
+                                        <field name="Social_Reason_c"/>
+                                        <field name="CNAE_c"/>
+                                        <field name="Risk_Level_c"/>
+                                        <field name="Foundation_Date_c"/>
+                                        <field name="Locations_c"/>
+                                        <field name="role_c"/>
                                         <field name="BillingAddress"/>
-                                        <field name="description__pc"/>
+                                        <field name="description_pc"/>
                                     </group>
                                     <group>
-                                        <field name="service_type__c"/>
-                                        <field name="State_Registration__c"/>
-                                        <field name="Municipal_Registration__c"/>
+                                        <field name="service_type_c"/>
+                                        <field name="State_Registration_c"/>
+                                        <field name="Municipal_Registration_c"/>
                                         <field name="Website"/>
                                         <field name="Industry"/>
-                                        <field name="Email__c"/>
-                                        <field name="phone__c"/>
+                                        <field name="Email_c"/>
+                                        <field name="phone_c"/>
                                         <field name="ParentId"/>
-                                        <field name="Start_in_Broker__c"/>
-                                        <field name="Image__c"/>
+                                        <field name="Start_in_Broker_c"/>
+                                        <field name="Image_c"/>
                                     </group>
                                 </group>
                                 <group string="System Information">
                                     <group>
                                         <field name="create_uid" string='Created By'/>
-                                        <field name="Life__c"/>
-                                        <field name="Reserva_de_Mercado__c"/>
-                                        <field name="CNPJ__c"/>
-                                        <field name="Social_Reason__c"/>
+                                        <field name="Life_c"/>
+                                        <field name="Reserva_de_Mercado_c"/>
+                                        <field name="CNPJ_c"/>
+                                        <field name="Social_Reason_c"/>
                                     </group>
                                     <group>
                                         <field name="write_uid" string="Last Modified By"/>
                                         <field name="Type"/>
-                                        <field name="Mainly_Carrier__c"/>
-                                        <field name="CPF__c"/>
+                                        <field name="Mainly_Carrier_c"/>
+                                        <field name="CPF_c"/>
                                     </group>
                                 </group>
                             </page>
@@ -2058,9 +2058,9 @@
             <field name="model">account.account</field>
             <field name="arch" type="xml">
                 <tree string="Account Operator Tree View">
-                    <field name="CNPJ__c"/>
+                    <field name="CNPJ_c"/>
                     <field name="Industry"/>
-                    <field name="Company_Origin__c"/>
+                    <field name="Company_Origin_c"/>
                     <field name="OwnerId"/>
                     <field name="RecordTypeId"/>
                 </tree>

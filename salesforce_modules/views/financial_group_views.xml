@@ -60,8 +60,8 @@
                                     <field name="account_ids">
                                         <tree>
                                             <field name="name"/>
-                                            <field name="Social_Reason__c"/>
-                                            <field name="CNPJ__c"/>
+                                            <field name="Social_Reason_c"/>
+                                            <field name="CNPJ_c"/>
                                         </tree>
                                     </field>
                             </page>
@@ -75,10 +75,10 @@
                             <page string="Portals and Accesses">
                                     <field name="portal_access_ids">
                                         <tree>
-                                            <field name="access_code__c" string='Access Number'/>
-                                            <field name="contract_summary__c"/>
-                                            <field name="access_type__c"/>
-                                            <field name="access_users__c"/>
+                                            <field name="access_code_c" string='Access Number'/>
+                                            <field name="contract_summary_c"/>
+                                            <field name="access_type_c"/>
+                                            <field name="access_users_c"/>
                                         </tree>
                                     </field>
                             </page>
@@ -190,11 +190,11 @@
                                 <group string="Portals and Accesses">
                                     <field name="portal_access_ids">
                                         <tree>
-                                            <field name="access_code__c" string='Access Number'/>
-                                            <field name="contract__c"/>
-                                            <field name="contract_summary__c"/>
-                                            <field name="access_type__c"/>
-                                            <field name="access_users__c"/>
+                                            <field name="access_code_c" string='Access Number'/>
+                                            <field name="contract_c"/>
+                                            <field name="contract_summary_c"/>
+                                            <field name="access_type_c"/>
+                                            <field name="access_users_c"/>
                                         </tree>
                                     </field>
                                 </group>
@@ -202,8 +202,8 @@
                                     <field name="account_ids">
                                         <tree>
                                             <field name="name"/>
-                                            <field name="Social_Reason__c"/>
-                                            <field name="CNPJ__c"/>
+                                            <field name="Social_Reason_c"/>
+                                            <field name="CNPJ_c"/>
                                         </tree>
                                     </field>
                                 </group>

@@ -247,7 +247,7 @@ class HrContract(models.Model):
     address_ids = fields.One2many('model_address', 'Contract_id', string='Address')
     contact_ids = fields.One2many('res.partner', 'contract_id', string='Contacts')
     contract_team_ids = fields.One2many('contract_team', 'contract_id', string='Contract Teams')
-    user_company_contract_permissions_ids = fields.One2many('user_company_contract_permissions__c', 'contract__c', string='Contract Teams')
+    user_company_contract_permissions_ids = fields.One2many('user_company_contract_permissions__c', 'contract_c', string='Contract Teams')
 
     contract_ids = fields.One2many('hr.contract', 'parent_contract', string='Sub Contract')
     service_ids = fields.One2many('model_service_c', 'contract_id', string='Service')

@@ -11,6 +11,6 @@ class BrandC(models.Model):
     # LastModifiedById already in odoo
     Name = fields.Char(string="Mark", size=80, track_visibility='onchange')
     OwnerId = fields.Many2one('res.users', string='Owner', track_visibility='onchange')
-    model_ids = fields.One2many('salesforce.model_c', 'Brand__c', string='Model')
+    model_ids = fields.One2many('salesforce.model_c', 'Brand_c', string='Model')
     fleet_ids = fields.One2many('model_car_fleet_c', 'Brand_id', string='Fleet')
 

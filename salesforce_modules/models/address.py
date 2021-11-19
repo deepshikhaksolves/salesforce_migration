@@ -16,7 +16,7 @@ class Address(models.Model):
     # LastModifiedById already in odoo
     Name = fields.Char(string="Address", size=80, track_visibility='onchange')
     Address = fields.Char(string="Address ID", track_visibility='onchange')
-    State__id = fields.Many2one('res.country.state', string="State", track_visibility='onchange')
+    State_id = fields.Many2one('res.country.state', string="State", track_visibility='onchange')
     Coordinates = fields.Float(string="Geolocation", track_visibility='onchange')
     Number = fields.Char(string="Number", size=100, track_visibility='onchange')
     Account_id = fields.Many2one('account.account', string="Legal person", track_visibility='onchange')

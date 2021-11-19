@@ -11,15 +11,15 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="holder_quantity__c" required="1"/>
-                                <field name="dependent_quantity__c" required="1"/>
-                                <field name="others_quantity__c" required="1"/>
+                                <field name="holder_quantity_c" required="1"/>
+                                <field name="dependent_quantity_c" required="1"/>
+                                <field name="others_quantity_c" required="1"/>
                                 <field name="create_uid"/>
                             </group>
                             <group>
-                                <field name="quote_line_item__c"/>
-                                <field name="product_price__c"/>
-                                <field name="line_price__c"/>
+                                <field name="quote_line_item_c"/>
+                                <field name="product_price_c"/>
+                                <field name="line_price_c"/>
                                 <field name="write_uid" string="Last Modified By"/>
                             </group>
                         </group>
@@ -40,9 +40,9 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="Name"/>
-                    <field name="holder_quantity__c"/>
-                    <field name="dependent_quantity__c"/>
-                    <field name="others_quantity__c"/>
+                    <field name="holder_quantity_c"/>
+                    <field name="dependent_quantity_c"/>
+                    <field name="others_quantity_c"/>
                     <field name="create_uid"/>
                 </tree>
             </field>

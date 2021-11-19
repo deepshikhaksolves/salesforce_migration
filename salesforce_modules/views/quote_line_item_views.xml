@@ -16,15 +16,15 @@
                                 <field name="ListPrice"/>
                                 <field name="UnitPrice"/>
                                 <field name="Quantity"/>
-                                <field name="requested_proposal__c"/>
-                                <field name="accredited_network__c"/>
+                                <field name="requested_proposal_c"/>
+                                <field name="accredited_network_c"/>
                             </group>
                             <group>
                                 <field name="Subtotal"/>
                                 <field name="Discount"/>
                                 <field name="TotalPrice"/>
                                 <field name="Description"/>
-                                <field name="copay__c"/>
+                                <field name="copay_c"/>
                             </group>
                         </group>
                         <group string="System Information">

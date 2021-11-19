@@ -36,8 +36,8 @@ class Campaign(models.Model):
     NumberOfOpportunities = fields.Integer('Opportunities in Campaign', track_visibility='onchange')
     HierarchyNumberOfOpportunities = fields.Integer('Opportunities in Hierarchy', track_visibility='onchange')
     ParentId = fields.Many2one('model_campaign', string='Parent Campaign', track_visibility='onchange')
-    Released_to_Work__c = fields.Boolean('Released to Work', track_visibility='onchange')
-    Report_Used__c = fields.Char('Report Used (API)', size=100, track_visibility='onchange')
+    Released_to_Work_c = fields.Boolean('Released to Work', track_visibility='onchange')
+    Report_Used_c = fields.Char('Report Used (API)', size=100, track_visibility='onchange')
     NumberOfResponses = fields.Integer('Responses in Campaign', track_visibility='onchange')
     HierarchyNumberOfResponses = fields.Integer('Responses in Hierarchy', track_visibility='onchange')
     StartDate = fields.Date('Start Date', track_visibility='onchange')
@@ -57,7 +57,7 @@ class Campaign(models.Model):
                                           track_visibility='onchange')
     HierarchyAmountWonOpportunities = fields.Float('Value Won Opportunities in Hierarchy', digits=(18, 0),
                                                    track_visibility='onchange')
-    current__c = fields.Char('in force', track_visibility='onchange')
+    current_c = fields.Char('in force', track_visibility='onchange')
     NumberOfWonOpportunities = fields.Integer('Won Opportunities in Campaign', track_visibility='onchange')
     HierarchyNumberOfWonOpportunities = fields.Integer('Won Opportunities in Hierarchy', track_visibility='onchange')
 

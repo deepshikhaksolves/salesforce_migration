@@ -44,16 +44,16 @@ class salesforce_user(models.Model):
     forecast_enabled = fields.Boolean(string="Allow Forecasting",track_visibility='onchange')
     # banner photo is already present in odoo
     CallCenterId = fields.Many2one('model_call_center', string="Call Center",track_visibility='onchange')
-    CEO__c = fields.Char('CEO',track_visibility='onchange')
+    CEO_c = fields.Char('CEO',track_visibility='onchange')
     DigestFrequency = fields.Selection([('1', '1')], 'Chatter Email Highlights Frequency',track_visibility='onchange')
     # CompanyName already present in odoo
     ContactId = fields.Many2one('res.partner', string='Contact',track_visibility='onchange')
-    customer__c = fields.Selection([('Savoy', 'Savoy')], 'Customer',track_visibility='onchange')
+    customer_c = fields.Selection([('Savoy', 'Savoy')], 'Customer',track_visibility='onchange')
     DefaultGroupNotificationFrequency = fields.Selection([('1', '1')],
                                                          'Default Notification Frequency when Joining Groups',track_visibility='onchange')
     DelegatedApproverId = fields.Many2one('res.users', string='Delegated Approver',track_visibility='onchange')
     Department = fields.Many2one('hr.department', string='Department',track_visibility='onchange')
-    diretor_comercial__c = fields.Many2one('res.users', string='Diretor Comercial',track_visibility='onchange')
+    diretor_comercial_c = fields.Many2one('res.users', string='Diretor Comercial',track_visibility='onchange')
     Division = fields.Many2one('hr.department', string='Division',track_visibility='onchange')
     EmailEncodingKey = fields.Selection([('1', '1')], 'Email Encoding',track_visibility='onchange')
     # SenderEmail = fields.Char('Email Sender Address') already in odoo i.e (login)
@@ -81,7 +81,7 @@ class salesforce_user(models.Model):
     Phone = fields.Char('Phone',track_visibility='onchange')
     PortalRole = fields.Selection([('1', '1'), ('2', '2')], 'Portal Role Level',track_visibility='onchange')
     ProfileId = fields.Many2one('Profile',track_visibility='onchange')
-    reservations_to_vencer__c = fields.Char('reserves to expire', size=32768,track_visibility='onchange')
+    reservations_to_vencer_c = fields.Char('reserves to expire', size=32768,track_visibility='onchange')
     UserRoleId = fields.Many2one('res.users', string='Role',track_visibility='onchange')
     FederationIdentifier = fields.Char('SAML Federation ID', size=512,track_visibility='onchange')
     IsExtIndicatorVisible = fields.Boolean('Show external indicator',track_visibility='onchange')
@@ -89,7 +89,7 @@ class salesforce_user(models.Model):
     StayInTouchNote = fields.Char('Stay-in-Touch Email Note', size=512,track_visibility='onchange')
     StayInTouchSignature = fields.Char('Stay-in-Touch Email Signature', size=512,track_visibility='onchange')
     StayInTouchSubject = fields.Char('Stay-in-Touch Email Subject', size=512,track_visibility='onchange')
-    heads__c = fields.Text('test',track_visibility='onchange')
+    heads_c = fields.Text('test',track_visibility='onchange')
     TimeZoneSidKey = fields.Selection([('1', '1'), ('2', '2')], 'Time Zone',track_visibility='onchange')
     Title = fields.Char('Title', size=80,track_visibility='onchange')
     MediumBannerPhotoUrl = fields.Char('Url for Android banner photo',track_visibility='onchange')
@@ -97,4 +97,4 @@ class salesforce_user(models.Model):
     SmallBannerPhotoUrl = fields.Char('Url for IOS banner photo',track_visibility='onchange')
     MediumPhotoUrl = fields.Char('Url for medium profile photo',track_visibility='onchange')
     # Username    = Already present in odoo
-    Working_Capacity__c = fields.Integer('Working Capacity',track_visibility='onchange')
+    Working_Capacity_c = fields.Integer('Working Capacity',track_visibility='onchange')

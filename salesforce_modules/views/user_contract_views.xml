@@ -10,13 +10,13 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="id__c" />
-                                <field name="contract__c" />
+                                <field name="id_c" />
+                                <field name="contract_c" />
                                 <field name="RecordTypeId"/>
                                 <field name="create_uid" />
                             </group>
                             <group>
-                                <field name="status__c"/>
+                                <field name="status_c"/>
                                 <field name="Name"/>
                                 <field name="OwnerId"/>
                                 <field name="write_uid" string='Last Modified By'/>
@@ -38,8 +38,8 @@
             <field name="model">user_company_contract_permissions__c</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="id__c"/>
-                    <field name="contract__c"/>
+                    <field name="id_c"/>
+                    <field name="contract_c"/>
                     <field name="RecordTypeId"/>
                     <field name="create_uid" />
                     <field name="write_uid"/>
@@ -73,13 +73,13 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="id__c" />
-                                <field name="financial_group__c" />
+                                <field name="id_c" />
+                                <field name="financial_group_c" />
                                 <field name="RecordTypeId"/>
                                 <field name="create_uid" />
                             </group>
                             <group>
-                                <field name="status__c"/>
+                                <field name="status_c"/>
                                 <field name="Name"/>
                                 <field name="OwnerId"/>
                                 <field name="write_uid" string='Last Modified By'/>
@@ -101,8 +101,8 @@
             <field name="model">user_company_contract_permissions__c</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="id__c"/>
-                    <field name="financial_group__c"/>
+                    <field name="id_c"/>
+                    <field name="financial_group_c"/>
                     <field name="RecordTypeId"/>
                     <field name="create_uid" />
                     <field name="write_uid"/>
@@ -137,12 +137,12 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="id__c" />
+                                <field name="id_c" />
                                 <field name="RecordTypeId"/>
                                 <field name="create_uid" />
                             </group>
                             <group>
-                                <field name="status__c"/>
+                                <field name="status_c"/>
                                 <field name="Name"/>
                                 <field name="OwnerId"/>
                                 <field name="write_uid" string='Last Modified By'/>
@@ -164,10 +164,10 @@
             <field name="model">user_company_contract_permissions__c</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="id__c"/>
+                    <field name="id_c"/>
                     <field name="RecordTypeId"/>
                     <field name="Name"/>
-                    <field name="status__c"/>
+                    <field name="status_c"/>
                     <field name="create_uid" />
                     <field name="write_uid"/>
                 </tree>
@@ -200,13 +200,13 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="id__c" />
-                                <field name="financial_group__c" />
-                                <field name="contract__c"/>
+                                <field name="id_c" />
+                                <field name="financial_group_c" />
+                                <field name="contract_c"/>
                                 <field name="create_uid" />
                             </group>
                             <group>
-                                <field name="status__c"/>
+                                <field name="status_c"/>
                                 <field name="RecordTypeId"/>
                                 <field name="Name"/>
                                 <field name="OwnerId"/>
@@ -229,10 +229,10 @@
             <field name="model">user_company_contract_permissions__c</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="id__c"/>
-                    <field name="financial_group__c"/>
-                    <field name="contract__c"/>
-                    <field name="status__c"/>
+                    <field name="id_c"/>
+                    <field name="financial_group_c"/>
+                    <field name="contract_c"/>
+                    <field name="status_c"/>
                     <field name="create_uid" />
                     <field name="write_uid"/>
                 </tree>
