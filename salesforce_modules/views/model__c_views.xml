@@ -13,7 +13,7 @@
                             <group>
                                 <field name="name"/>
                                 <!-- <field name="model"/> -->
-                                <field name="Brand__c" required='1'/>
+                                <field name="Brand_c" required='1'/>
                                 <field name="create_uid"/>
                             </group>
                             <group>
@@ -56,7 +56,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name" />
-                    <field name="Brand__c"/>
+                    <field name="Brand_c"/>
                     <field name="OwnerId"/>
                     <field name="create_uid"/>
                     <field name="write_uid"/>
@@ -92,7 +92,7 @@
                                 <group>
                                     <group>
                                         <field name="name"/>
-                                        <field name="Brand__c"/>
+                                        <field name="Brand_c"/>
                                         <field name="create_uid" string="Created By"/>
                                         <field name="create_date" string="Created On"/>
                                     </group>
@@ -148,7 +148,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name" />
-                    <field name="Brand__c"/>
+                    <field name="Brand_c"/>
                     <field name="OwnerId"/>
                     <field name="create_uid"/>
                     <field name="write_uid"/>

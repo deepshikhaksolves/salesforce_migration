@@ -7,10 +7,10 @@ class LeadSortColumns(models.Model):
     _description = "Salesforce Lead Sort Columns"
     _rec_name = 'Name'
 
-    Campaign__c = fields.Many2one('model_campaign', string='Campaign',track_visibility='onchange')
+    Campaign_c = fields.Many2one('model_campaign', string='Campaign',track_visibility='onchange')
     # CreatedById already in odoo
     Name = fields.Char('Code',track_visibility='onchange')
-    Field__c = fields.Selection(
+    Field_c = fields.Selection(
         [('AnnualRevenue', 'Annual Revenue'), ('Broker__c', 'Broker'), ('Business_Name__c', 'Business Name'),
          ('CNAE__c', 'CNAE'), ('CNPJ__c', 'CNPJ'), ('Company', 'Company'),
          ('Company_Origin__c', 'Company Segmentation'), ('Contact_Origin__c', 'Contact Origin'),
@@ -23,7 +23,7 @@ class LeadSortColumns(models.Model):
          ('Rating', 'Rating'), ('Sales_Channel__c', 'Sales Channel'), ('SICCode__c', 'SIC Code'), ('Status', 'Status'),
          ('Title', 'Title'), ('Address', 'Address')], 'Field',track_visibility='onchange')
 
-    Field_of_Lead__c = fields.Char('Field of Lead',track_visibility='onchange')
+    Field_of_Lead_c = fields.Char('Field of Lead',track_visibility='onchange')
     # LastModifiedById already in odoo
     OwnerId = fields.Many2one('res.users', string='Owner',track_visibility='onchange')
-    SortOrder__c = fields.Selection([('ASC', 'ASC'), ('DESC', 'DESC')], 'SortOrder',track_visibility='onchange')
+    SortOrder_c = fields.Selection([('ASC', 'ASC'), ('DESC', 'DESC')], 'SortOrder',track_visibility='onchange')

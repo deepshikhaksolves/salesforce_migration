@@ -8,13 +8,13 @@ class AccreditedNetwork(models.Model):
     _rec_name = 'Name'
 
     Name = fields.Char(string='Accredited Network', size=80, track_visibility='onchange')
-    active__c = fields.Boolean('Active', track_visibility='onchange')
+    active_c = fields.Boolean('Active', track_visibility='onchange')
 
     # CreatedById  already in odoo
     # LastModifiedById already in odoo
-    region__c = fields.Many2one('model_region', string='Region', track_visibility='onchange')
+    region_c = fields.Many2one('model_region', string='Region', track_visibility='onchange')
     account_id = fields.Many2one('account.account', string='Account Id', track_visibility='onchange')
-    network_provider_ids = fields.One2many('model_network_provider', 'accredited_network__c', string='Network Providers')
-    quote_line_item_ids = fields.One2many('quote_line_item', 'accredited_network__c', string='Quote Line Items')
+    network_provider_ids = fields.One2many('model_network_provider', 'accredited_network_c', string='Network Providers')
+    quote_line_item_ids = fields.One2many('quote_line_item', 'accredited_network_c', string='Quote Line Items')
 
     product_network_ids = fields.One2many('product.network', 'accredited_network_id', string='Product Networks')

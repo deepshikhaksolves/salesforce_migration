@@ -11,14 +11,14 @@
                         <group>
                             <group>
                                 <field name="Name"/>
-                                <field name="RecordTypeId__c"/>
-                                <field name="RecordType__c"/>
-                                <field name="Object__c"/>
-                                <field name="Initial_Status__c"/>
-                                <field name="ObjectStatusField__c"/>
-                                <field name="Initial_Status__c"/>
-                                <field name="Description__c"/>
-                                <field name="Workflow_Standard_of_Object__c"/>
+                                <field name="RecordTypeId_c"/>
+                                <field name="RecordType_c"/>
+                                <field name="Object_c"/>
+                                <field name="Initial_Status_c"/>
+                                <field name="ObjectStatusField_c"/>
+                                <field name="Initial_Status_c"/>
+                                <field name="Description_c"/>
+                                <field name="Workflow_Standard_of_Object_c"/>
                                 <field name="create_uid"/>
                             </group>
                             <group>
@@ -38,14 +38,14 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="Name"/>
-                    <field name="RecordTypeId__c"/>
-                    <field name="RecordType__c"/>
-                    <field name="Object__c"/>
-                    <field name="Initial_Status__c"/>
-                    <field name="ObjectStatusField__c"/>
-                    <field name="Initial_Status__c"/>
-                    <field name="Description__c"/>
-                    <field name="Workflow_Standard_of_Object__c"/>
+                    <field name="RecordTypeId_c"/>
+                    <field name="RecordType_c"/>
+                    <field name="Object_c"/>
+                    <field name="Initial_Status_c"/>
+                    <field name="ObjectStatusField_c"/>
+                    <field name="Initial_Status_c"/>
+                    <field name="Description_c"/>
+                    <field name="Workflow_Standard_of_Object_c"/>
                     <field name="create_uid"/>
                 </tree>
             </field>

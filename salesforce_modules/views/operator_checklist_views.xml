@@ -15,7 +15,7 @@
                                 <field name="Name"/>
                             </group>
                             <group>
-                                <field name="operator__c"/>
+                                <field name="operator_c"/>
                             </group>
                         </group>
                     </sheet>
@@ -35,7 +35,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="Name"/>
-                    <field name="operator__c"/>
+                    <field name="operator_c"/>
                     <field name="create_uid" />
                     <field name="write_uid"/>
                 </tree>
