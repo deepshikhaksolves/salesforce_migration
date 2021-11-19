@@ -7936,8 +7936,6 @@
                                 </group>
                                 
                                 <group>
-                                    <field name="contract_carrier"/>
-                                    <field name="partnership"/>
                                     <field name="probability"/>
                                     <field name="channel_id"/>
                                     <field name="contract_origin"/>
@@ -7953,15 +7951,17 @@
                                     <field name="loss_reason"/>
                                     <field name="contributory"/>
                                     <field name="contributory_descriptions"/>
+                                    <!-- <field name="contract_carrier"/>
+                                    <field name="partnership"/> -->
                                 </group>
                             </group>
                             <group string="Contract Information">
                                 <group>
                                     <field name="contract_origin"/>
-                                    <field name="destination"/>
+                                    <field name="brokerage_transfer"/>
                                 </group>
                                 <group>
-                                    <!-- Prazo de Contrato field not found -->
+                                    <field name="periodicity_renewal"/>
                                 </group>
                             </group>
 
@@ -7975,6 +7975,7 @@
                                     <field name="amount"/>
                                     <field name="contrib_devol_paid_by_broker"/>
                                     <field name="modelo_id"/>
+                                    <field name="calculation_basis"/>
                                 </group>
                                 <group>
                                     <field name="invoice"/>
@@ -7982,6 +7983,8 @@
                                     <field name="commision"/>
                                     <field name="comission_number_benefit"/>
                                     <field name="commision_value"/>
+                                    <field name="frequency"/>
+                                    <field name="amount"/>
                                 </group>
                             </group>
                         </page>

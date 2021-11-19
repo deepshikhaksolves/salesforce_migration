@@ -80,15 +80,15 @@
                                     <field name="administrator__c"/>
                                     <field name="financial_group_id"/>
                                     <field name="contract__c"/>
-                                    <field name="registered_email__c"/>
-                                    <field name="access_users__c"/>
+                                    <field name="registered_email__c" required='1'/>
+                                    <field name="access_users__c" required='1'/>
                                 </group>
                                 <group>
-                                    <field name="site__c"/>
+                                    <field name="site__c" required='1'/>
                                     <field name="login__c"/>
                                     <field name="access_code__c"/>
                                     <field name="password__c"/>
-                                    <field name="access_type__c"/>
+                                    <field name="access_type__c" required='1'/>
                                 </group>
                             </group>
                         </page>
@@ -114,7 +114,7 @@
     </record>
 
     <record id="portal_access_lightning_action" model="ir.actions.act_window">
-        <field name="name">Portal Access</field>
+        <field name="name">Portal And Access</field>
         <field name="res_model">portal.access</field>
         <field name="view_mode">tree,form</field>
         <field name="view_ids" eval="[(5, 0, 0), 
