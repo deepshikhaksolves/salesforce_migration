@@ -52,3 +52,7 @@ class SalesforcePeriodicity(models.Model):
     ], string="Padrão",track_visibility='onchange')
     service_lines = fields.One2many('model_service_c', 'periodicity_id', string="Service Lines")
     opportunity_lines = fields.One2many('crm.lead','frequency',string="Opportunity Lines")
+    expense_provisions_ids = fields.One2many('expence_provisioning','Periodicity_id')
+    revenue_provisions_ids = fields.One2many('model_revenue_provisioning','Name')
+    broker_ids =  fields.One2many('broker','Payment_Period')
+    service_ids =  fields.One2many('model_service_c','periodicity_id')

@@ -13,3 +13,4 @@ class ModelObject(models.Model):
     OwnerId = fields.Many2one('res.users', string='Owner',track_visibility='onchange')
     fleet_ids = fields.One2many('model_car_fleet_c', 'Model_id', string='Fleet IDS',track_visibility='onchange')
     opportunity_ids = fields.One2many('crm.lead', 'model_id', string='Opportunity IDS',track_visibility='onchange')
+    contract_ids = fields.One2many('hr.contract','Model')

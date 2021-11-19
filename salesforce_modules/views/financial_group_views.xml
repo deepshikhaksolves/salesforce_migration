@@ -122,5 +122,166 @@
                 </p>
             </field>
         </record>
+    <!--financial group lightning form view        -->
+        <record id="financial_group_lightning_form" model="ir.ui.view">
+            <field name="name">Financial Group Layout</field>
+            <field name="model">model_financial_group</field>
+            <field name="arch" type="xml">
+                <form string="Financial Group Layout">
+                    <sheet>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="company_classification"/>
+                                        <field name="profile"/>
+                                        <field name="active"/>
+                                    </group>
+                                    <group>
+                                        <field name="cost_center"/>
+                                    </group>
+                                </group>
+                                <group string="Drive">
+                                    <group>
+                                        <field name="storage_code"/>
+                                        <field name="folder_template"/>
+                                        <field name="general_rule_group_backoffice_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="started"/>
+                                        <field name="drive_path"/>
+                                        <field name="general_rule_group_company_id"/>
+                                    </group>
+                                </group>
+                                <group string="HR Protected">
+                                    <group>
+                                        <field name="rh_protected"/>
+                                    </group>
+                                </group>
+                                <group string="I Protected">
+                                    <group>
+                                        <field name="I_protected"/>
+                                        <field name="domain"/>
+                                        <field name="approval_connection"/>
+                                    </group>
+                                    <group>
+                                        <field name="trail_code"/>
+                                        <field name="screening_code"/>
+                                        <field name="covid"/>
+                                    </group>
+                                </group>
+                                <group string="Protected Dr">
+                                    <group>
+                                        <field name="dr_protected"/>
+                                    </group>
+                                    <group></group>
+                                </group>
+                                <group string="System Information">
+                                    <group>
+                                        <field name="create_uid"/>
+                                    </group>
+                                    <group>
+                                        <field name="write_uid" string="Last Modified By"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Related">
+                                <group string="Portals and Accesses">
+                                    <field name="portal_access_ids">
+                                        <tree>
+                                            <field name="access_code__c" string='Access Number'/>
+                                            <field name="contract__c"/>
+                                            <field name="contract_summary__c"/>
+                                            <field name="access_type__c"/>
+                                            <field name="access_users__c"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Accounts">
+                                    <field name="account_ids">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="Social_Reason__c"/>
+                                            <field name="CNPJ__c"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Cost Centers">
+                                    <field name="cost_center_ids">
+                                        <tree>
+                                            <field name="cost_center" />
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Contracts">
+                                    <field name="contract_ids">
+                                        <tree>
+                                            <field name="contract_number"/>
+                                            <field name="policy"/>
+                                            <field name="cnpj"/>
+                                            <field name="benefits"/>
+                                            <field name="carrier_2"/>
+                                            <field name="subcontract"/>
+                                            <field name="state"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Financial Group Master Users">
+                                    <field name="financial_group_master_users_ids">
+
+                                    </field>
+                                </group>
+                                <group string="Corporate User Agreement Permission">
+                                    <field name="user_company_contract_permission_ids">
+
+                                    </field>
+                                </group>
+                                <group string="Medical Users Of The Financial Group">
+                                    <field name="financial_group_doctor_ids">
+
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="SDI Overview"></page>
+                            <page string="Collector"></page>
+                            <page string="Import Layout"></page>
+                            <page string="Collector X Layout"></page>
+                            <page string="Contract Rules"></page>
+                            <page string="I Protected Local"></page>
+                            <page string="I Protected Dev"></page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+    <!--financial group lightning tree view        -->
+        <record id="financial_group_lightningt_tree" model="ir.ui.view">
+            <field name="name">Financial Group</field>
+            <field name="model">model_financial_group</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="company_classification" />
+                    <field name="profile" />
+                    <field name="active" />
+                </tree>
+            </field>
+        </record>
+
+    <!--financial group lightning action        -->
+        <record id="lightning_financial_group_action" model="ir.actions.act_window">
+        <field name="name">Financial Group</field>
+        <field name="res_model">model_financial_group</field>
+        <field name="view_mode">form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('financial_group_lightningt_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('financial_group_lightning_form')})]"/>
+    </record>
     </data>
 </odoo>

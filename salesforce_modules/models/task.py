@@ -35,3 +35,4 @@ class ModelTask(models.Model):
     Email = fields.Char('Email',track_visibility='onchange')
 
     attachment_ids = fields.One2many('ir.attachment', 'task_id', string='Task IDS')
+

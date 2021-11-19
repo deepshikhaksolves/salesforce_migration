@@ -16,5 +16,6 @@ class NetworkProvider(models.Model):
     ordering__c = fields.Float(string="ordering", digits=(18, 0),track_visibility='onchange')
     OwnerId = fields.Many2one('res.users', string='Owner',track_visibility='onchange')
     product2__c = fields.Many2one('product.template', string='Plano',track_visibility='onchange')
-    account__c = fields.Many2one('account.account', string='provider',track_visibility='onchange')
+    account__c = fields.Many2one('account.account', string='Provider',track_visibility='onchange')
     RecordTypeId = fields.Integer('Record Type',track_visibility='onchange')
+

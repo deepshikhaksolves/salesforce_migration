@@ -21,4 +21,5 @@ class ChannelSegmentation(models.Model):
     name = fields.Char('Channel Segmentation',size=80,track_visibility='onchange')
     Status__c = fields.Selection([('Active','Active'),('Inactive','Inactive')],'Status',track_visibility='onchange')
 
+    contracts_ids = fields.One2many('hr.contract','channel_segmentation', string="Contracts_ids" )
     opportunity_ids = fields.One2many('crm.lead','account_id', string='Opportunity IDS')
