@@ -5216,7 +5216,7 @@
                                     <field name="loss_reason"/>
                                 </group>
                                 <group>
-                                    <field name="stage_name"/>
+                                    <!-- <field name="stage_name"/> -->
                                     <field name="mailing_origin"/>
                                     <field name="Market_Reserve_ID" />
                                     <field name="motive_of_gain"/>
@@ -5571,7 +5571,7 @@
                                     <field name="loss_reason"/>
                                 </group>
                                 <group>
-                                    <field name="stage_name"/>
+                                    <!-- <field name="stage_name"/> -->
                                     <field name="mailing_origin"/>
                                     <field name="Market_Reserve_ID"/>
                                     <field name="motive_of_gain"/>
@@ -5901,7 +5901,7 @@
                                     <field name="loss_reason"/>
                                 </group>
                                 <group>
-                                    <field name="stage_name"/>
+                                    <!-- <field name="stage_name"/> -->
                                     <field name="mailing_origin"/>
                                     <field name="Market_Reserve_ID"/>
                                     <field name="motive_of_gain"/>
@@ -6292,7 +6292,7 @@
                                     <field name="loss_reason"/>
                                 </group>
                                 <group>
-                                    <field name="stage_name"/>
+                                    <!-- <field name="stage_name"/> -->
                                     <field name="mailing_origin"/>
                                     <field name="Market_Reserve_ID"/>
                                     <field name="motive_of_gain"/>
@@ -6645,7 +6645,7 @@
                                     <field name="loss_reason"/>
                                 </group>
                                 <group>
-                                    <field name="stage_name"/>
+                                    <!-- <field name="stage_name"/> -->
                                     <field name="mailing_origin"/>
                                     <field name="Market_Reserve_ID"/>
                                     <field name="motive_of_gain"/>
@@ -7013,7 +7013,7 @@
                                     <field name="loss_reason"/>
                                 </group>
                                 <group>
-                                    <field name="stage_name"/>
+                                    <!-- <field name="stage_name"/> -->
                                     <field name="mailing_origin"/>
                                     <field name="Market_Reserve_ID"/>
                                     <field name="motive_of_gain"/>
@@ -7730,7 +7730,7 @@
                                     <field name="loss_reason"/>
                                 </group>
                                 <group>
-                                    <field name="stage_name"/>
+                                    <!-- <field name="stage_name"/> -->
                                     <field name="mailing_origin"/>
                                     <field name="Market_Reserve_ID"/>
                                     <field name="motive_of_gain"/>
@@ -8041,6 +8041,11 @@
                                     <field name="market_reserve"/>
                                     <field name="loss_reason"/>
                                 </group>
+                                <group>
+                                    <field name="mailing_origin"/>
+                                    <field name="Market_Reserve_ID"/>
+                                    <field name="motive_of_gain"/>
+                                </group>
                             </group>
                         </page>
                     </notebook>
@@ -8118,8 +8123,8 @@
                                     </group>
                                     
                                     <group>
-                                        <field name="contract_carrier"/>
-                                        <field name="partnership"/>
+                                        <!-- <field name="contract_carrier"/>
+                                        <field name="partnership"/> -->
                                         <field name="probability"/>
                                         <field name="channel_id"/>
                                         <field name="contract_origin"/>
@@ -8225,6 +8230,11 @@
                                         <field name="contract_id"/>
                                         <field name="market_reserve"/>
                                         <field name="loss_reason"/>
+                                    </group>
+                                    <group>
+                                        <field name="mailing_origin"/>
+                                        <field name="Market_Reserve_ID"/>
+                                        <field name="motive_of_gain"/>
                                     </group>
                                 </group>
                             </page>
@@ -8453,6 +8463,11 @@
                                     <field name="contract_id"/>
                                     <field name="market_reserve"/>
                                     <field name="loss_reason"/>
+                                </group>
+                                <group>
+                                    <field name="mailing_origin"/>
+                                    <field name="Market_Reserve_ID"/>
+                                    <field name="motive_of_gain"/>
                                 </group>
                             </group>
                         </page>
@@ -8785,6 +8800,11 @@
                                     <field name="market_reserve"/>
                                     <field name="loss_reason"/>
                                 </group>
+                                <group>
+                                    <field name="mailing_origin"/>
+                                    <field name="Market_Reserve_ID"/>
+                                    <field name="motive_of_gain"/>
+                                </group>
                             </group>
                         </page>
 
@@ -9092,7 +9112,7 @@
                                     <field name="loss_reason"/>
                                 </group>
                                 <group>
-                                    <field name="stage_name"/>
+                                    <!-- <field name="stage_name"/> -->
                                     <field name="mailing_origin"/>
                                     <field name="Market_Reserve_ID" />
                                     <field name="motive_of_gain"/>
@@ -9413,7 +9433,7 @@
                                     <field name="loss_reason"/>
                                 </group>
                                 <group>
-                                    <field name="stage_name"/>
+                                    <!-- <field name="stage_name"/> -->
                                     <field name="mailing_origin"/>
                                     <field name="Market_Reserve_ID" />
                                     <field name="motive_of_gain"/>
@@ -9534,6 +9554,7 @@
                                 </group>
                             </group>
                         </page>
+                        <page string="Market Place"></page>
 
                     </notebook>
                     </sheet>
@@ -9754,7 +9775,7 @@
                                     <field name="loss_reason"/>
                                 </group>
                                 <group>
-                                    <field name="stage_name"/>
+                                    <!-- <field name="stage_name"/> -->
                                     <field name="mailing_origin"/>
                                     <field name="Market_Reserve_ID"/>
                                     <field name="motive_of_gain"/>

@@ -13,5 +13,5 @@ class OperatorDocument(models.Model):
     # LastModifiedById already in odoo
     name = fields.Char(string="Carrier's Document Name")
 
-    operator_checklist_ids = fields.One2many('model_operator_checklist', 'operator_document_id', string='Operator Document Id')
+    operator_checklist_ids = fields.One2many('model_operator_checklist', 'operator_document_id', string='Operator Document')
 
