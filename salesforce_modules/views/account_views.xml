@@ -1588,18 +1588,12 @@
             <field name="arch" type="xml">
                 <form string="Administrator Layout From View">
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="CNPJ__c"/>
-                                <field name="Company_Origin__c"/>
-                                <field name="OwnerId"/>
-                                <field name="RecordTypeId" string="Account Record Type"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
                                     <group>
+                                        <field name="code"/>
+                                        <field name="user_type_id"/>
                                         <field name="CNPJ__c"/>
                                         <field name="Social_Reason__c"/>
                                         <field name="name"/>
@@ -1624,10 +1618,8 @@
                                 <group>
                                     <field name="address_ids"/>
                                     <field name="product_family_ids"/>
-                                    <field name="bank_account_ids"/>
-                                </group>
-                                <group string='Contacts'>
-                                    <field name="partner_ids">
+                                    <field name="bank_account_ids" string="Bank Accounts"/>
+                                    <field name="partner_ids" string="Contacts">
                                         <tree>
                                             <field name="name"/>
                                             <field name="title"/>
@@ -1635,13 +1627,8 @@
                                             <field name="phone"/>
                                         </tree>
                                     </field>
-                                </group>
-
-                                <group string='Benefits'>
-                                    <field name="benificiaty_ids" />
-                                </group>
-                                <group string='Product Family'>
-                                    <field name="benificiaty_ids" />
+                                    <field name="benificiaty_ids" string="Benefits"/>
+                                    <field name="contract_ids" string="Contracts"/>
                                 </group>
                             </page>
                         </notebook>
@@ -1666,11 +1653,12 @@
 
         <!-- Administrator Layout action window -->
         <record id="administrator_layout_action" model="ir.actions.act_window">
-            <field name="name">Administrator person Layout</field>
+            <field name="name">Account</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">account.account</field>
-            <field name="view_mode">form</field>
-            <field name="view_ids" eval="[(5, 0, 0),
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('account_administrator_layout_tree')}),
                 (0, 0, {'view_mode': 'form', 'view_id': ref('account_administrator_layout_form')})]"/>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
@@ -1688,19 +1676,13 @@
             <field name="arch" type="xml">
                 <form string="Legal Entry Customer Layout From View">
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="CNPJ__c"/>
-                                <field name="Industry"/>
-                                <field name="Company_Origin__c"/>
-                                <field name="OwnerId"/>
-                                <field name="RecordTypeId" string="Account Record Type"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="Details">
                                 <group>
                                     <group>
+                                        <field name="name"/>
+                                        <field name="code"/>
+                                        <field name="user_type_id"/>
                                         <field name="CNPJ__c"/>
                                         <field name="Social_Reason__c"/>
                                         <field name="CNAE__c"/>
@@ -1744,14 +1726,42 @@
                             </page>
                             <page string="Related">
                                 <group>
+                                    <field name="address_ids"/>
+                                    <field name="partner_ids" string="Contacts">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="title"/>
+                                            <field name="email"/>
+                                            <field name="phone"/>
+                                        </tree>
+                                    </field>
+                                    <field name="partner_ids" string="Related Contacts">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="title"/>
+                                            <field name="email"/>
+                                            <field name="phone"/>
+                                        </tree>
+                                    </field>
                                     <field name="opportunity_ids"/>
                                     <field name="benefit_politic_ids"/>
                                     <field name="contract_partner_ids"/>
                                     <field name="bank_account_ids"/>
-
+                                    <field name="market_reserve_ids"/>
+                                    <field name="opportunity_ids" string="Opportunities">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="lead_source"/>
+                                            <field name="write_date" string="Last Modified Date"/>
+                                            <field name="stage_name"/>
+                                            <field name="amount"/>
+                                            <field name="close_date"/>
+                                        </tree>
+                                    </field>
+                                    <field name="contract_ids" string="Contracts"/>
                                 </group>
                             </page>
-                            <page string="Market PLace">
+                            <page string="Market Place">
 
                             </page>
                         </notebook>

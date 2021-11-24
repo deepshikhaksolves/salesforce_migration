@@ -260,7 +260,7 @@ class HrContract(models.Model):
     contract_elegibility_ids = fields.One2many('contract_eligibility', 'contract_id', string='Contract Elegibilities')
     contract_financial_ids = fields.One2many('financial_contract', 'contract_id', string='Contract Financial Data')
     checklist_ids = fields.One2many('model_checklist_c', 'Contract_id', string='Checklist')
-
+    geographic_scope_id = fields.Many2one('model_geographic_scope', string="Geographic Scope")
 
 
 

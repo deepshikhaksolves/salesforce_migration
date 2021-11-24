@@ -320,3 +320,5 @@ class Account(models.Model):
     contract_partner_ids = fields.One2many('contract.partner', 'partner_id', string='Partner')
     partner_id = fields.Many2one('res.partner', string='partner Name')
     carrier_id =  fields.Many2one('model_carrier_type_c')
+    contract_ids = fields.One2many('hr.contract', 'Account_id', string='Contracts')
+    market_reserve_ids = fields.One2many('model_market_reserve__c', 'Account__c', string='Market Reserve')

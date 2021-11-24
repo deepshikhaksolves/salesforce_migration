@@ -7,45 +7,51 @@
             <field name="model">model_geographic_scope</field>
             <field name="arch" type="xml">
                 <form string="Geographic Scope Layout">
-                    <sheet>
-                        <group>
-                            <group>
-                                <field name="Name" />
-                                <field name="Abbreviation__c" />
-                                <field name="create_uid" />
-                                <field name="create_date"/>
-                            </group>
-                            <group>
-                                <field name="Geographic_Scope_ID__c"/>
-                                <field name="Geographic_Scope_tnk__c"/>
-                                <field name="write_uid" string='Last Modified By'/>
-                                <field name="write_date" string='Last Modified On'/>
-                            </group>
-                        </group>
-                    </sheet>
                     <notebook>
-                        <page string="Products">
-                            <field name="product_ids">
-                                <tree>
-                                    <field name="name"/>
-                                    <field name="ProductCode"/>
-                                    <field name="Description"/>
-                                </tree>
-                            </field>
+                        <page string="Details">
+                            <group>
+                                <group>
+                                    <field name="Name" />
+                                    <field name="Abbreviation__c" />
+                                    <field name="create_uid" />
+                                    <field name="create_date"/>
+                                </group>
+                                <group>
+                                    <field name="Geographic_Scope_ID__c"/>
+                                    <field name="Geographic_Scope_tnk__c"/>
+                                    <field name="write_uid" string='Last Modified By'/>
+                                    <field name="write_date" string='Last Modified On'/>
+                                </group>
+                            </group>
                         </page>
-                        <page string="Cities">
-                            <field name="city_ids">
-                                <tree>
-                                    <field name="Name" string="City"/>
-                                </tree>
-                            </field>
-                        </page>
-                        <page string="State">
-                            <field name="state_ids">
-                                <tree>
-                                    <field name="name" string='State'/>
-                                </tree>
-                            </field>
+                        <page string="Related">
+                            <group string="Products">
+                                <field name="product_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="ProductCode"/>
+                                        <field name="Description"/>
+                                    </tree>
+                                </field>
+                            </group>
+                            <group string="Cities">
+                                <field name="city_ids">
+                                    <tree>
+                                        <field name="Name" string="City"/>
+                                    </tree>
+                                </field>
+                            </group>
+                            <group string="State">
+                                <field name="state_ids">
+                                    <tree>
+                                        <field name="name" string='State'/>
+                                    </tree>
+                                </field>
+                            </group>
+
+                            <group string="Contracts">
+                                <field name="contract_ids"/>
+                            </group>
                         </page>
                     </notebook>
                     <div class="oe_chatter">
