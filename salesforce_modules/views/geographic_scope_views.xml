@@ -7,53 +7,55 @@
             <field name="model">model_geographic_scope</field>
             <field name="arch" type="xml">
                 <form string="Geographic Scope Layout">
-                    <notebook>
-                        <page string="Details">
-                            <group>
+                    <sheet>
+                        <notebook>
+                            <page string="Details">
                                 <group>
-                                    <field name="Name" />
-                                    <field name="Abbreviation_c" />
-                                    <field name="create_uid" />
-                                    <field name="create_date"/>
+                                    <group>
+                                        <field name="Name" />
+                                        <field name="Abbreviation_c" />
+                                        <field name="create_uid" />
+                                        <field name="create_date"/>
+                                    </group>
+                                    <group>
+                                        <field name="Geographic_Scope_ID_c"/>
+                                        <field name="Geographic_Scope_tnk_c"/>
+                                        <field name="write_uid" string='Last Modified By'/>
+                                        <field name="write_date" string='Last Modified On'/>
+                                    </group>
                                 </group>
-                                <group>
-                                    <field name="Geographic_Scope_ID_c"/>
-                                    <field name="Geographic_Scope_tnk_c"/>
-                                    <field name="write_uid" string='Last Modified By'/>
-                                    <field name="write_date" string='Last Modified On'/>
+                            </page>
+                            <page string="Related">
+                                <group string="Products">
+                                    <field name="product_ids">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="ProductCode"/>
+                                            <field name="Description"/>
+                                        </tree>
+                                    </field>
                                 </group>
-                            </group>
-                        </page>
-                        <page string="Related">
-                            <group string="Products">
-                                <field name="product_ids">
-                                    <tree>
-                                        <field name="name"/>
-                                        <field name="ProductCode"/>
-                                        <field name="Description"/>
-                                    </tree>
-                                </field>
-                            </group>
-                            <group string="Cities">
-                                <field name="city_ids">
-                                    <tree>
-                                        <field name="Name" string="City"/>
-                                    </tree>
-                                </field>
-                            </group>
-                            <group string="State">
-                                <field name="state_ids">
-                                    <tree>
-                                        <field name="name" string='State'/>
-                                    </tree>
-                                </field>
-                            </group>
+                                <group string="Cities">
+                                    <field name="city_ids">
+                                        <tree>
+                                            <field name="Name" string="City"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="State">
+                                    <field name="state_ids">
+                                        <tree>
+                                            <field name="name" string='State'/>
+                                        </tree>
+                                    </field>
+                                </group>
 
-                            <group string="Contracts">
-                                <field name="contract_ids"/>
-                            </group>
-                        </page>
-                    </notebook>
+                                <group string="Contracts">
+                                    <field name="contract_ids" string="Contracts"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers"/>
                         <field name="activity_ids" widget="mail_activity"/>

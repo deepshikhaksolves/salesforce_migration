@@ -6,6 +6,7 @@
         <!-- broker product Layout form view -->
         <record id="broker_product_form" model="ir.ui.view">
             <field name="name">Broker Product Layout</field>
+            <field eval="1" name="priority"/>
             <field name="model">product.template</field>
             <field name="arch" type="xml">
                 <form string="Broker Product Layout">
@@ -23,7 +24,7 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Standard Price">
+                            <!-- <page string="Standard Price">
                                 <group>
 
                                 </group>
@@ -32,7 +33,7 @@
                                 <group>
                                     
                                 </group>
-                            </page>
+                            </page> -->
                             <page string="Product Regions">
                                 <field name="product_region_ids">
                                     <tree>
