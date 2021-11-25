@@ -22,7 +22,7 @@
                                         <field name="Account_id"/>
                                         <field name="project_type"/>
                                         <field name="Previous_Broker"/>
-                                        <field name="date_start"/>
+                                        <field name="date_start" string="Contract Start Date"/>
                                         <field name="broker_start_date"/>
                                         <field name="contract_term"/>
                                         <field name="carrier_data_cancelation"/>
@@ -134,7 +134,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -143,7 +143,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -157,7 +157,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -169,7 +169,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -191,7 +191,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -210,14 +210,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -265,6 +258,17 @@
                                 </group>
                                 <group string="Elegibilities Contract">
                                     <field name="contract_elegibility_ids"/>
+                                </group>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -490,7 +494,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -499,7 +503,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -513,7 +517,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -525,7 +529,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -547,7 +551,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -567,14 +571,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -614,6 +611,17 @@
                                 </group>
                                 <group string="Elegibilities Contract">
                                     <field name="contract_elegibility_ids"/>
+                                </group>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -705,16 +713,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -761,31 +759,35 @@
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
                                         <field name="payment_mode"/>
+                                        <field name="taxpayer"/>
+                                        <field name="correction_index"/>
+                                        <field name="which_index"/>
                                         <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
-                                        <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="capital"/>
+                                        <field name="amount_of_wages"/>
+                                        <field name="average_rate"/>
+                                        <field name="min_Capital_Limit"/>
+                                        <field name="max_capital_limit"/>
+                                        <field name="sons_capital_limit"/>
+                                        <field name="total_capital"/>
+                                        <field name="funeral_assistance"/>
+                                        <field name="funeral_assistance_value"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
+                                        <field name="cut_off_date"/>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
                                         <field name="transfer_method_in"/>
                                         <field name="transfer_method_out"/>
                                     </group>
                                 </group>
-                                <group string="Card">
+                                <!-- <group string="Card">
                                     <group>
                                         <field name="card_type"/>
                                         <field name="Periodicity_Card"/>
@@ -795,7 +797,7 @@
                                         <field name="renewal_fee"/>
                                         <field name="replace_fee"/>
                                     </group>
-                                </group>
+                                </group> -->
                                 <group string="Implantation">
                                     <group>
                                         <field name="lifes"/>
@@ -839,7 +841,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -848,7 +850,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -862,7 +864,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -874,7 +876,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -896,7 +898,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -916,14 +918,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -952,17 +947,29 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
-                                    <field name="plan_ids"/>
-                                </group>
-                                <group string="Partnerships">
-                                    <field name="contract_partner_ids"/>
+                                <group>
+                                    <field name="price_list_ids" string="Price Tables">
+                                        <tree>
+                                            <field name="Name"/>
+                                        </tree>
+                                    </field>
                                 </group>
                                 <group string="Contributions">
                                     <field name="contribution_ids"/>
                                 </group>
                                 <group string="Elegibilities Contract">
                                     <field name="contract_elegibility_ids"/>
+                                </group>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -1053,16 +1060,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -1109,31 +1106,35 @@
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
                                         <field name="payment_mode"/>
+                                        <field name="taxpayer"/>
+                                        <field name="correction_index"/>
+                                        <field name="which_index"/>
                                         <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
-                                        <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="capital"/>
+                                        <field name="amount_of_wages"/>
+                                        <field name="average_rate"/>
+                                        <field name="min_Capital_Limit"/>
+                                        <field name="max_capital_limit"/>
+                                        <field name="sons_capital_limit"/>
+                                        <field name="total_capital"/>
+                                        <field name="funeral_assistance"/>
+                                        <field name="funeral_assistance_value"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
+                                        <field name="cut_off_date"/>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
                                         <field name="transfer_method_in"/>
                                         <field name="transfer_method_out"/>
                                     </group>
                                 </group>
-                                <group string="Card">
+                                <!-- <group string="Card">
                                     <group>
                                         <field name="card_type"/>
                                         <field name="Periodicity_Card"/>
@@ -1143,7 +1144,7 @@
                                         <field name="renewal_fee"/>
                                         <field name="replace_fee"/>
                                     </group>
-                                </group>
+                                </group> -->
                                 <group string="Implantation">
                                     <group>
                                         <field name="lifes"/>
@@ -1187,7 +1188,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -1196,7 +1197,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -1210,7 +1211,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -1222,7 +1223,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -1244,7 +1245,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -1264,14 +1265,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -1300,17 +1294,29 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
-                                    <field name="plan_ids"/>
-                                </group>
-                                <group string="Partnerships">
-                                    <field name="contract_partner_ids"/>
+                                <group>
+                                    <field name="price_list_ids" string="Price Tables">
+                                        <tree>
+                                            <field name="Name"/>
+                                        </tree>
+                                    </field>
                                 </group>
                                 <group string="Contributions">
                                     <field name="contribution_ids"/>
                                 </group>
                                 <group string="Elegibilities Contract">
                                     <field name="contract_elegibility_ids"/>
+                                </group>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -1402,16 +1408,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -1458,26 +1454,26 @@
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
                                         <field name="payment_mode"/>
+                                        <field name="claim_limit"/>
+                                        <field name="cashier_payment"/>
                                         <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
                                         <field name="moderator_variable"/>
                                         <field name="insurance_deductible"/>
                                         <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="coverage_limit_value"/>
+                                        <field name="purchase_limit"/>
+                                        <field name="purchase_limit_value"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
+                                        <field name="cut_off_date"/>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
                                         <field name="transfer_method_in"/>
                                         <field name="transfer_method_out"/>
                                     </group>
@@ -1485,12 +1481,12 @@
                                 <group string="Card">
                                     <group>
                                         <field name="card_type"/>
-                                        <field name="Periodicity_Card"/>
+                                        <field name="issuance_cost"/>
+                                        <field name="replace_fee"/>
                                     </group>
                                     <group>
-                                        <field name="issuance_cost"/>
                                         <field name="renewal_fee"/>
-                                        <field name="replace_fee"/>
+                                        <field name="Periodicity_Card"/>
                                     </group>
                                 </group>
                                 <group string="Implantation">
@@ -1536,7 +1532,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -1545,7 +1541,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -1559,7 +1555,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -1571,7 +1567,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -1593,7 +1589,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -1613,14 +1609,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -1649,9 +1638,9 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
+                                <!-- <group string="Contract Plans">
                                     <field name="plan_ids"/>
-                                </group>
+                                </group> -->
                                 <group string="Partnerships">
                                     <field name="contract_partner_ids"/>
                                 </group>
@@ -1660,6 +1649,17 @@
                                 </group>
                                 <group string="Elegibilities Contract">
                                     <field name="contract_elegibility_ids"/>
+                                </group>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -1751,16 +1751,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -1806,49 +1796,29 @@
                                         <field name="contract_type"/>
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
-                                        <field name="payment_mode"/>
-                                        <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
-                                        <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="type_of_revenue"/>
+                                        <field name="payment_mode"/>
+                                        <field name="company_classification"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
+                                        <field name="number_of_installments"/>
+                                        <field name="Value"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
+                                        <field name="payment_mode"/>
                                         <field name="transfer_method_in"/>
                                         <field name="transfer_method_out"/>
                                     </group>
                                 </group>
-                                <group string="Card">
-                                    <group>
-                                        <field name="card_type"/>
-                                        <field name="Periodicity_Card"/>
-                                    </group>
-                                    <group>
-                                        <field name="issuance_cost"/>
-                                        <field name="renewal_fee"/>
-                                        <field name="replace_fee"/>
-                                    </group>
-                                </group>
                                 <group string="Implantation">
                                     <group>
-                                        <field name="lifes"/>
-                                    </group>
-                                    <group>
                                         <field name="First_Bill"/>
-                                        <field name="deployment_talk"/>
                                     </group>
                                 </group>
                                 <group string="System Information">
@@ -1885,7 +1855,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -1894,7 +1864,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -1908,7 +1878,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -1920,7 +1890,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -1942,7 +1912,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -1962,14 +1932,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -1998,17 +1961,16 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
-                                    <field name="plan_ids"/>
-                                </group>
-                                <group string="Partnerships">
-                                    <field name="contract_partner_ids"/>
-                                </group>
-                                <group string="Contributions">
-                                    <field name="contribution_ids"/>
-                                </group>
-                                <group string="Elegibilities Contract">
-                                    <field name="contract_elegibility_ids"/>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -2099,16 +2061,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -2174,11 +2126,7 @@
                                 </group>
                                 <group string="Implantation">
                                     <group>
-                                        <field name="lifes"/>
-                                    </group>
-                                    <group>
                                         <field name="First_Bill"/>
-                                        <field name="deployment_talk"/>
                                     </group>
                                 </group>
                                 <group string="System Information">
@@ -2215,7 +2163,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -2224,7 +2172,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -2238,7 +2186,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -2250,7 +2198,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -2272,7 +2220,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -2292,14 +2240,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -2328,17 +2269,16 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
-                                    <field name="plan_ids"/>
-                                </group>
-                                <group string="Partnerships">
-                                    <field name="contract_partner_ids"/>
-                                </group>
-                                <group string="Contributions">
-                                    <field name="contribution_ids"/>
-                                </group>
-                                <group string="Elegibilities Contract">
-                                    <field name="contract_elegibility_ids"/>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -2430,16 +2370,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -2485,49 +2415,27 @@
                                         <field name="contract_type"/>
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
-                                        <field name="payment_mode"/>
-                                        <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
-                                        <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="payment_mode"/>
+                                        <field name="company_classification"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
+                                        <field name="number_of_installments"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
                                         <field name="transfer_method_in"/>
                                         <field name="transfer_method_out"/>
-                                    </group>
-                                </group>
-                                <group string="Card">
-                                    <group>
-                                        <field name="card_type"/>
-                                        <field name="Periodicity_Card"/>
-                                    </group>
-                                    <group>
-                                        <field name="issuance_cost"/>
-                                        <field name="renewal_fee"/>
-                                        <field name="replace_fee"/>
+                                        <field name="Value"/>
                                     </group>
                                 </group>
                                 <group string="Implantation">
                                     <group>
-                                        <field name="lifes"/>
-                                    </group>
-                                    <group>
                                         <field name="First_Bill"/>
-                                        <field name="deployment_talk"/>
                                     </group>
                                 </group>
                                 <group string="System Information">
@@ -2564,7 +2472,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -2573,7 +2481,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -2587,7 +2495,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -2599,7 +2507,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -2621,7 +2529,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -2641,14 +2549,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -2677,17 +2578,16 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
-                                    <field name="plan_ids"/>
-                                </group>
-                                <group string="Partnerships">
-                                    <field name="contract_partner_ids"/>
-                                </group>
-                                <group string="Contributions">
-                                    <field name="contribution_ids"/>
-                                </group>
-                                <group string="Elegibilities Contract">
-                                    <field name="contract_elegibility_ids"/>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -2779,16 +2679,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -2847,27 +2737,31 @@
                                 </group>
                                 <group string="Invoice">
                                     <group>
+                                        <field name="cut_off_date"/>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
+                                        <field name="payment_mode"/>
+                                        <field name="transfer_method_in"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
-                                        <field name="transfer_method_in"/>
+                                        <field name="rebate"/>
+                                        <field name="monthly_average_value"/>
+                                        <field name="availability_fee"/>
+                                        <field name="payment_deadline"/>
+                                        <field name="credit_start"/>
                                         <field name="transfer_method_out"/>
                                     </group>
                                 </group>
                                 <group string="Card">
                                     <group>
                                         <field name="card_type"/>
-                                        <field name="Periodicity_Card"/>
+                                        <field name="issuance_cost"/>
+                                        <field name="replace_fee"/>
                                     </group>
                                     <group>
-                                        <field name="issuance_cost"/>
                                         <field name="renewal_fee"/>
-                                        <field name="replace_fee"/>
+                                        <field name="emergencial_card_fee"/>
+                                        <field name="Periodicity_Card"/>
                                     </group>
                                 </group>
                                 <group string="Implantation">
@@ -2913,7 +2807,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -2922,7 +2816,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -2936,7 +2830,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -2948,7 +2842,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -2970,7 +2864,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -2990,14 +2884,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -3026,17 +2913,19 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
-                                    <field name="plan_ids"/>
-                                </group>
-                                <group string="Partnerships">
-                                    <field name="contract_partner_ids"/>
-                                </group>
                                 <group string="Contributions">
                                     <field name="contribution_ids"/>
                                 </group>
-                                <group string="Elegibilities Contract">
-                                    <field name="contract_elegibility_ids"/>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -3128,16 +3017,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -3182,41 +3061,40 @@
                                     <group>
                                         <field name="contract_type"/>
                                         <field name="contract_origin"/>
-                                        <field name="previous_policy"/>
-                                        <field name="payment_mode"/>
-                                        <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
                                         <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="payment_mode"/>
+                                        <field name="company_classification"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
+                                        <field name="cut_off_date"/>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
+                                        <field name="payment_mode"/>
+                                        <field name="transfer_method_in"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
-                                        <field name="transfer_method_in"/>
+                                        <field name="rebate"/>
+                                        <field name="monthly_average_value"/>
+                                        <field name="availability_fee"/>
+                                        <field name="payment_deadline"/>
+                                        <field name="credit_start"/>
                                         <field name="transfer_method_out"/>
                                     </group>
                                 </group>
                                 <group string="Card">
                                     <group>
                                         <field name="card_type"/>
-                                        <field name="Periodicity_Card"/>
+                                        <field name="issuance_cost"/>
+                                        <field name="replace_fee"/>
                                     </group>
                                     <group>
-                                        <field name="issuance_cost"/>
                                         <field name="renewal_fee"/>
-                                        <field name="replace_fee"/>
+                                        <field name="emergencial_card_fee"/>
+                                        <field name="Periodicity_Card"/>
                                     </group>
                                 </group>
                                 <group string="Implantation">
@@ -3262,7 +3140,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -3271,7 +3149,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -3285,7 +3163,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -3297,7 +3175,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -3319,7 +3197,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -3339,14 +3217,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -3375,17 +3246,19 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
-                                    <field name="plan_ids"/>
-                                </group>
-                                <group string="Partnerships">
-                                    <field name="contract_partner_ids"/>
-                                </group>
                                 <group string="Contributions">
                                     <field name="contribution_ids"/>
                                 </group>
-                                <group string="Elegibilities Contract">
-                                    <field name="contract_elegibility_ids"/>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -3477,16 +3350,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -3532,40 +3395,38 @@
                                         <field name="contract_type"/>
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
-                                        <field name="payment_mode"/>
-                                        <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
                                         <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="payment_mode"/>
+                                        <field name="company_classification"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
+                                        <field name="cut_off_date"/>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
+                                        <field name="transfer_method_in"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
-                                        <field name="transfer_method_in"/>
+                                        <field name="monthly_average_value"/>
+                                        <field name="availability_fee"/>
+                                        <field name="payment_deadline"/>
+                                        <field name="credit_start"/>
                                         <field name="transfer_method_out"/>
                                     </group>
                                 </group>
                                 <group string="Card">
                                     <group>
                                         <field name="card_type"/>
-                                        <field name="Periodicity_Card"/>
+                                        <field name="issuance_cost"/>
+                                        <field name="replace_fee"/>
                                     </group>
                                     <group>
-                                        <field name="issuance_cost"/>
                                         <field name="renewal_fee"/>
-                                        <field name="replace_fee"/>
+                                        <field name="emergencial_card_fee"/>
+                                        <field name="Periodicity_Card"/>
                                     </group>
                                 </group>
                                 <group string="Implantation">
@@ -3611,7 +3472,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -3620,7 +3481,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -3634,7 +3495,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -3646,7 +3507,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -3668,7 +3529,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -3688,14 +3549,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -3724,17 +3578,19 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
-                                    <field name="plan_ids"/>
-                                </group>
-                                <group string="Partnerships">
-                                    <field name="contract_partner_ids"/>
-                                </group>
                                 <group string="Contributions">
                                     <field name="contribution_ids"/>
                                 </group>
-                                <group string="Elegibilities Contract">
-                                    <field name="contract_elegibility_ids"/>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -3870,32 +3726,26 @@
                                         <field name="contract_type"/>
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
-                                        <field name="payment_mode"/>
-                                        <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
-                                        <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="destination"/>
+                                        <field name="payment_mode"/>
+                                        <field name="company_classification"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
+                                        <field name="number_of_installments"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
+                                        <field name="Value"/>
                                         <field name="transfer_method_in"/>
                                         <field name="transfer_method_out"/>
                                     </group>
                                 </group>
-                                <group string="Card">
+                                <!-- <group string="Card">
                                     <group>
                                         <field name="card_type"/>
                                         <field name="Periodicity_Card"/>
@@ -3905,11 +3755,8 @@
                                         <field name="renewal_fee"/>
                                         <field name="replace_fee"/>
                                     </group>
-                                </group>
+                                </group> -->
                                 <group string="Implantation">
-                                    <group>
-                                        <field name="lifes"/>
-                                    </group>
                                     <group>
                                         <field name="First_Bill"/>
                                         <field name="deployment_talk"/>
@@ -3949,7 +3796,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -3958,7 +3805,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -3972,7 +3819,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -3984,7 +3831,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -4006,7 +3853,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -4026,14 +3873,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -4062,17 +3902,16 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
-                                    <field name="plan_ids"/>
-                                </group>
-                                <group string="Partnerships">
-                                    <field name="contract_partner_ids"/>
-                                </group>
-                                <group string="Contributions">
-                                    <field name="contribution_ids"/>
-                                </group>
-                                <group string="Elegibilities Contract">
-                                    <field name="contract_elegibility_ids"/>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -4164,16 +4003,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -4220,39 +4049,27 @@
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
                                         <field name="payment_mode"/>
+                                        <field name="income_type"/>
+                                        <field name="tax_type"/>
                                         <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
+                                        <field name="grace_period"/>
                                         <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="type_of_pension"/>
+                                        <field name="pension_mode"/>
+                                        <field name="charge_rate"/>
+                                        <field name="administration_tax"/>
+                                        <field name="output_rate"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
-                                        <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
                                         <field name="transfer_method_in"/>
                                         <field name="transfer_method_out"/>
-                                    </group>
-                                </group>
-                                <group string="Card">
-                                    <group>
-                                        <field name="card_type"/>
-                                        <field name="Periodicity_Card"/>
-                                    </group>
-                                    <group>
-                                        <field name="issuance_cost"/>
-                                        <field name="renewal_fee"/>
-                                        <field name="replace_fee"/>
                                     </group>
                                 </group>
                                 <group string="Implantation">
@@ -4260,7 +4077,7 @@
                                         <field name="lifes"/>
                                     </group>
                                     <group>
-                                        <field name="First_Bill"/>
+                                        <field name="Value"/>
                                         <field name="deployment_talk"/>
                                     </group>
                                 </group>
@@ -4298,7 +4115,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -4307,7 +4124,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -4321,7 +4138,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -4333,7 +4150,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -4355,7 +4172,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -4375,14 +4192,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -4411,17 +4221,16 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
-                                    <field name="plan_ids"/>
-                                </group>
-                                <group string="Partnerships">
-                                    <field name="contract_partner_ids"/>
-                                </group>
-                                <group string="Contributions">
-                                    <field name="contribution_ids"/>
-                                </group>
-                                <group string="Elegibilities Contract">
-                                    <field name="contract_elegibility_ids"/>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -4513,16 +4322,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -4563,51 +4362,30 @@
                                     </group>
                                 </group>
                                 
-                                <group string="Contractual Rules">
+                                <group string="Contrac Rules">
                                     <group>
                                         <field name="contract_type"/>
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
-                                        <field name="payment_mode"/>
-                                        <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
-                                        <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="payment_mode"/>
+                                        <field name="company_classification"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
+                                        <field name="cut_off_date"/>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
                                         <field name="transfer_method_in"/>
                                         <field name="transfer_method_out"/>
                                     </group>
                                 </group>
-                                <group string="Card">
-                                    <group>
-                                        <field name="card_type"/>
-                                        <field name="Periodicity_Card"/>
-                                    </group>
-                                    <group>
-                                        <field name="issuance_cost"/>
-                                        <field name="renewal_fee"/>
-                                        <field name="replace_fee"/>
-                                    </group>
-                                </group>
+                                
                                 <group string="Implantation">
-                                    <group>
-                                        <field name="lifes"/>
-                                    </group>
                                     <group>
                                         <field name="First_Bill"/>
                                         <field name="deployment_talk"/>
@@ -4647,7 +4425,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -4656,7 +4434,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -4670,7 +4448,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -4682,7 +4460,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -4704,7 +4482,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -4724,14 +4502,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -4771,6 +4542,17 @@
                                 </group>
                                 <group string="Elegibilities Contract">
                                     <field name="contract_elegibility_ids"/>
+                                </group>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -4862,16 +4644,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -4917,49 +4689,32 @@
                                         <field name="contract_type"/>
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
-                                        <field name="payment_mode"/>
                                         <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
-                                        <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="payment_mode"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
-                                        <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
+                                        <field name="number_of_installments"/>
+                                        <field name="Value"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
                                         <field name="transfer_method_in"/>
                                         <field name="transfer_method_out"/>
                                     </group>
                                 </group>
-                                <group string="Card">
+                                <group string="Vehicle">
                                     <group>
-                                        <field name="card_type"/>
-                                        <field name="Periodicity_Card"/>
+                                        <field name="brand"/>
+                                        <field name="Model"/>
                                     </group>
                                     <group>
-                                        <field name="issuance_cost"/>
-                                        <field name="renewal_fee"/>
-                                        <field name="replace_fee"/>
-                                    </group>
-                                </group>
-                                <group string="Implantation">
-                                    <group>
-                                        <field name="lifes"/>
-                                    </group>
-                                    <group>
-                                        <field name="First_Bill"/>
-                                        <field name="deployment_talk"/>
+                                        <field name="renavam"/>
+                                        <field name="tag"/>
+                                        <field name="additional_driver"/>
                                     </group>
                                 </group>
                                 <group string="System Information">
@@ -4996,7 +4751,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -5005,7 +4760,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -5019,7 +4774,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -5031,7 +4786,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -5053,7 +4808,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -5073,14 +4828,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -5109,17 +4857,16 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
-                                    <field name="plan_ids"/>
-                                </group>
-                                <group string="Partnerships">
-                                    <field name="contract_partner_ids"/>
-                                </group>
-                                <group string="Contributions">
-                                    <field name="contribution_ids"/>
-                                </group>
-                                <group string="Elegibilities Contract">
-                                    <field name="contract_elegibility_ids"/>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -5211,16 +4958,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -5266,40 +5003,39 @@
                                         <field name="contract_type"/>
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
-                                        <field name="payment_mode"/>
-                                        <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
                                         <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="payment_mode"/>
+                                        <field name="company_classification"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
+                                        <field name="cut_off_date"/>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
+                                        <field name="payment_mode"/>
+                                        <field name="transfer_method_in"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
-                                        <field name="transfer_method_in"/>
+                                        <field name="monthly_average_value"/>
+                                        <field name="availability_fee"/>
+                                        <field name="payment_deadline"/>
+                                        <field name="credit_start"/>
                                         <field name="transfer_method_out"/>
                                     </group>
                                 </group>
                                 <group string="Card">
                                     <group>
                                         <field name="card_type"/>
-                                        <field name="Periodicity_Card"/>
+                                        <field name="issuance_cost"/>
+                                        <field name="replace_fee"/>
                                     </group>
                                     <group>
-                                        <field name="issuance_cost"/>
                                         <field name="renewal_fee"/>
-                                        <field name="replace_fee"/>
+                                        <field name="emergencial_card_fee"/>
+                                        <field name="Periodicity_Card"/>
                                     </group>
                                 </group>
                                 <group string="Implantation">
@@ -5345,7 +5081,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -5354,7 +5090,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -5368,7 +5104,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -5380,7 +5116,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -5402,7 +5138,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -5422,14 +5158,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -5458,17 +5187,19 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
-                                    <field name="plan_ids"/>
-                                </group>
-                                <group string="Partnerships">
-                                    <field name="contract_partner_ids"/>
-                                </group>
                                 <group string="Contributions">
                                     <field name="contribution_ids"/>
                                 </group>
-                                <group string="Elegibilities Contract">
-                                    <field name="contract_elegibility_ids"/>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -5559,16 +5290,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -5614,46 +5335,27 @@
                                         <field name="contract_type"/>
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
-                                        <field name="payment_mode"/>
-                                        <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
-                                        <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="places"/>
+                                        <field name="payment_mode"/>
+                                        <field name="company_classification"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
+                                        <field name="number_of_installments"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
+                                        <field name="Value"/>
                                         <field name="transfer_method_in"/>
                                         <field name="transfer_method_out"/>
                                     </group>
                                 </group>
-                                <group string="Card">
-                                    <group>
-                                        <field name="card_type"/>
-                                        <field name="Periodicity_Card"/>
-                                    </group>
-                                    <group>
-                                        <field name="issuance_cost"/>
-                                        <field name="renewal_fee"/>
-                                        <field name="replace_fee"/>
-                                    </group>
-                                </group>
+                                
                                 <group string="Implantation">
-                                    <group>
-                                        <field name="lifes"/>
-                                    </group>
                                     <group>
                                         <field name="First_Bill"/>
                                         <field name="deployment_talk"/>
@@ -5693,7 +5395,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -5702,7 +5404,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -5716,7 +5418,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -5728,7 +5430,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -5750,7 +5452,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -5770,14 +5472,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -5806,17 +5501,16 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
-                                    <field name="plan_ids"/>
-                                </group>
-                                <group string="Partnerships">
-                                    <field name="contract_partner_ids"/>
-                                </group>
-                                <group string="Contributions">
-                                    <field name="contribution_ids"/>
-                                </group>
-                                <group string="Elegibilities Contract">
-                                    <field name="contract_elegibility_ids"/>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -5907,16 +5601,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -5962,32 +5646,26 @@
                                         <field name="contract_type"/>
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
-                                        <field name="payment_mode"/>
                                         <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
-                                        <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="provider" string="Provider"/>
+                                        <field name="payment_mode"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
+                                        <field name="number_of_installments"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
+                                        <field name="Value"/>
                                         <field name="transfer_method_in"/>
                                         <field name="transfer_method_out"/>
                                     </group>
                                 </group>
-                                <group string="Card">
+                                <!-- <group string="Card">
                                     <group>
                                         <field name="card_type"/>
                                         <field name="Periodicity_Card"/>
@@ -5997,7 +5675,7 @@
                                         <field name="renewal_fee"/>
                                         <field name="replace_fee"/>
                                     </group>
-                                </group>
+                                </group> -->
                                 <group string="Implantation">
                                     <group>
                                         <field name="lifes"/>
@@ -6041,7 +5719,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -6050,7 +5728,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -6064,7 +5742,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -6076,7 +5754,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -6098,7 +5776,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -6118,14 +5796,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -6154,9 +5825,9 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
+                                <!-- <group string="Contract Plans">
                                     <field name="plan_ids"/>
-                                </group>
+                                </group> -->
                                 <group string="Partnerships">
                                     <field name="contract_partner_ids"/>
                                 </group>
@@ -6165,6 +5836,17 @@
                                 </group>
                                 <group string="Elegibilities Contract">
                                     <field name="contract_elegibility_ids"/>
+                                </group>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -6256,16 +5938,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -6311,32 +5983,26 @@
                                         <field name="contract_type"/>
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
-                                        <field name="payment_mode"/>
                                         <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
-                                        <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="provider" string="Provider"/>
+                                        <field name="payment_mode"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
+                                        <field name="number_of_installments"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
+                                        <field name="Value"/>
                                         <field name="transfer_method_in"/>
                                         <field name="transfer_method_out"/>
                                     </group>
                                 </group>
-                                <group string="Card">
+                                <!-- <group string="Card">
                                     <group>
                                         <field name="card_type"/>
                                         <field name="Periodicity_Card"/>
@@ -6346,11 +6012,11 @@
                                         <field name="renewal_fee"/>
                                         <field name="replace_fee"/>
                                     </group>
-                                </group>
+                                </group> -->
                                 <group string="Implantation">
-                                    <group>
+                                    <!-- <group>
                                         <field name="lifes"/>
-                                    </group>
+                                    </group> -->
                                     <group>
                                         <field name="First_Bill"/>
                                         <field name="deployment_talk"/>
@@ -6390,7 +6056,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -6399,7 +6065,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -6413,7 +6079,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -6425,7 +6091,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -6447,7 +6113,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -6467,14 +6133,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -6503,9 +6162,9 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
+                                <!-- <group string="Contract Plans">
                                     <field name="plan_ids"/>
-                                </group>
+                                </group> -->
                                 <group string="Partnerships">
                                     <field name="contract_partner_ids"/>
                                 </group>
@@ -6514,6 +6173,17 @@
                                 </group>
                                 <group string="Elegibilities Contract">
                                     <field name="contract_elegibility_ids"/>
+                                </group>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">
@@ -6605,16 +6275,6 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="policy"/>
-                                <field name="benefits"/>
-                                <field name="carrier_2"/>
-                                <field name="date_start"/>
-                                <field name="has_partner"/>
-                                <field name="Owner_id"/>
-                            </group>
-                        </group> -->
                         <notebook>
                             <page string="General Data">
                                 <group string="Contract Information">
@@ -6660,49 +6320,30 @@
                                         <field name="contract_type"/>
                                         <field name="contract_origin"/>
                                         <field name="previous_policy"/>
-                                        <field name="payment_mode"/>
-                                        <field name="company_classification"/>
                                     </group>
                                     <group>
-                                        <field name="claim_limit"/>
-                                        <field name="financial_index"/>
-                                        <field name="moderator_variable"/>
-                                        <field name="insurance_deductible"/>
-                                        <field name="taxpayer" string="Taxpayer"/>
+                                        <field name="type_of_revenue"/>
+                                        <field name="payment_mode"/>
+                                        <field name="company_classification"/>
                                     </group>
                                 </group>
                                 <group string="Invoice">
                                     <group>
                                         <field name="Date_of_Issue_Invoice"/>
-                                        <field name="date_of_issue_copay"/>
                                         <field name="due_date_invoice"/>
-                                        <field name="due_date_copay"/>
+                                        <field name="number_of_installments"/>
+                                        <field name="Value"/>
                                     </group>
                                     <group>
-                                        <field name="cut_off_date"/>
-                                        <field name="recruiter_code"/>
+                                        <field name="payment_mode"/>
                                         <field name="transfer_method_in"/>
                                         <field name="transfer_method_out"/>
                                     </group>
                                 </group>
-                                <group string="Card">
-                                    <group>
-                                        <field name="card_type"/>
-                                        <field name="Periodicity_Card"/>
-                                    </group>
-                                    <group>
-                                        <field name="issuance_cost"/>
-                                        <field name="renewal_fee"/>
-                                        <field name="replace_fee"/>
-                                    </group>
-                                </group>
+                                
                                 <group string="Implantation">
                                     <group>
-                                        <field name="lifes"/>
-                                    </group>
-                                    <group>
                                         <field name="First_Bill"/>
-                                        <field name="deployment_talk"/>
                                     </group>
                                 </group>
                                 <group string="System Information">
@@ -6739,7 +6380,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <field name="City"/>
-                                            <field name="State__id"/>
+                                            <field name="State_id"/>
                                             <field name="Address_Type"/>
                                         </tree>
                                     </field>
@@ -6748,7 +6389,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Email"/>
                                             <field name="Phone"/>
                                             <field name="Department"/>
@@ -6762,7 +6403,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -6774,7 +6415,7 @@
                                     <field name="contact_ids">
                                         <tree>
                                             <field name="Name" string='Contact Name'/>
-                                            <field name="Title__c"/>
+                                            <field name="Title_c"/>
                                             <field name="Phone"/>
                                             <field name="Email"/>
                                             <field name="AccountId"/>
@@ -6796,7 +6437,7 @@
                                         <tree>
                                             <field name="Name"/>
                                             <!-- <field name="Record Id"/> Not found -->
-                                            <field name="id__c"/>
+                                            <field name="id_c"/>
                                             <field name="RecordTypeId"/>
                                         </tree>
                                     </field>
@@ -6816,14 +6457,7 @@
                                     </field>
                                 </group>
                                 <group string="Services">
-                                    <field name="service_ids">
-                                        <tree>
-                                            <field name="id"/>
-                                            <field name="Name"/>
-                                            <field name="accountable"/>
-                                            <field name="Client_Profile"/>
-                                        </tree>
-                                    </field>
+                                    <field name="service_ids"/>
                                 </group>
 
                                 <group string="Readjustment">
@@ -6852,17 +6486,16 @@
                                 </group>
                             </page>
                             <page string="Plan Data">
-                                <group string="Contract Plans">
-                                    <field name="plan_ids"/>
-                                </group>
-                                <group string="Partnerships">
-                                    <field name="contract_partner_ids"/>
-                                </group>
-                                <group string="Contributions">
-                                    <field name="contribution_ids"/>
-                                </group>
-                                <group string="Elegibilities Contract">
-                                    <field name="contract_elegibility_ids"/>
+                                <group string='Special Conditions'>
+                                    <field name="contract_coverage_ids">
+                                        <tree>
+                                            <field name="id"/>
+                                            <field name="coverage"/>
+                                            <field name="additive_start"/>
+                                            <field name="additive_end"/>
+                                            <field name="condition"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <!-- <page string="Eligibility">

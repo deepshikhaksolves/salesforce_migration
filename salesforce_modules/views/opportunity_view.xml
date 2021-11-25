@@ -3603,7 +3603,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -3711,7 +3711,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -3908,14 +3908,6 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="close_date"/>
-                                <field name="probability"/>
-                                <field name="owner_id"/>
-                                <field name="reserve"/>
-                            </group>
-                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Details">
@@ -3951,7 +3943,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -4056,7 +4048,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -4084,26 +4076,22 @@
                         </page>
 
                         <page string="Closure">
-                            <group string='Opportunity Team'>
-                                <group>
-                                    <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" >
-                                            <field name="id"/>
-                                            <field name="team_role"/>
-                                        </tree>
-                                    </field>
-                                </group>
+                            <group>
+                                <field name="opportunity_team_lines" string='Opportunity Team'>
+                                    <tree string="Opportunity Team" >
+                                        <field name="id"/>
+                                        <field name="team_role"/>
+                                    </tree>
+                                </field>
                             </group>
 
-                            <group string='Partners'>
-                                <group>
-                                    <field name="contact_partner_lines">
-                                        <tree string="Contract Partner" >
-                                            <field name="partner_id"/>
-                                            <field name="role"/>
-                                        </tree>
-                                    </field>
-                                </group>
+                            <group>
+                                <field name="contact_partner_lines" string='Partners'>
+                                    <tree string="Contract Partner" >
+                                        <field name="partner_id"/>
+                                        <field name="role"/>
+                                    </tree>
+                                </field>
                             </group>
                             <group string='Contract Data'>
                                 <group>
@@ -4344,7 +4332,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -4452,7 +4440,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -4723,7 +4711,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -4817,7 +4805,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -5097,7 +5085,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -5192,7 +5180,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -5548,7 +5536,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -5878,7 +5866,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -6078,14 +6066,6 @@
                         <field name="stage_name" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <!-- <group>
-                            <group>
-                                <field name="close_date"/>
-                                <field name="probability"/>
-                                <field name="owner_id"/>
-                                <field name="reserve"/>
-                            </group>
-                        </group> -->
                     <notebook>
                         <page string='Details'>
                             <group string="Opportunity Details">
@@ -6230,46 +6210,37 @@
                             </group>
                         </page> -->
 
-                        <page string="Related To Opportunity">
+                        <page string="Related">
                             <group string='Contacts For Parent Account'>
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
                                 </field>
-                            </group>
-                            <group string='Contact Roles'>
-                                <field name="contact_role_lines">
+                                <field name="contact_role_lines" string='Contact Roles'>
                                     <tree string="Contact Roles" >
                                         <field name="is_primary"/>
                                         <field name="role"/>
                                     </tree>
                                 </field>
-                            </group>
-                            <group string='Opportunity Team'>
-                                <group>
-                                    <field name="opportunity_team_lines">
-                                        <tree string="Opportunity Team" >
-                                            <field name="id"/>
-                                            <field name="team_role"/>
-                                        </tree>
-                                    </field>
-                                </group>
-                            </group>
-
-                            <group string='Partners'>
-                                <field name="contact_role_lines">
-                                    <tree string="Contact Roles" >
+                                <field name="opportunity_team_lines">
+                                    <tree string="Opportunity Team">
+                                        <field name="id"/>
+                                        <field name="team_role"/>
+                                    </tree>
+                                </field>
+                            
+                                <field name="contact_role_lines" string="Partners">
+                                    <tree string="Partners" >
                                         <field name="role"/>
                                         <field name="is_primary"/>
                                     </tree>
                                 </field>
-                            </group>
-                            <group string="Quotes">
-                                <field name="quote_lines">
+                            
+                                <field name="quote_lines" string="Quotes">
                                     <tree string="Quotes" >
                                         <field name="QuoteNumber"/>
                                         <field name="Name" stye="width:100px;"/>
@@ -6279,9 +6250,7 @@
                                         <field name="create_date" string='Creation Date'/>
                                     </tree>
                                 </field>
-                            </group>
-                            <group string='Market Reserve'>
-                                <field name="market_reserve_ids"/>
+                                <field name="market_reserve_ids" string='Market Reserve'/>
                             </group>
 
                             <group string='Restricted Data'>
@@ -6539,7 +6508,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -6622,7 +6591,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -6990,7 +6959,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -7270,7 +7239,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -7364,7 +7333,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -7702,12 +7671,12 @@
                             </group>
                         </page>
 
-                        <page string="Related To Opportunity">
+                        <page string="Related">
                             <group string='Contacts For Parent Account'>
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -7738,7 +7707,7 @@
                             </group>
                         </page>
 
-                        <page string="Closure">
+                        <!-- <page string="Closure">
 
                             <group string='Opportunity Team'>
                                 <field name="opportunity_team_lines">
@@ -7849,7 +7818,7 @@
                                     <field name="amount"/>
                                 </group>
                             </group>
-                        </page>
+                        </page> -->
                         <page string='Market Place'></page>
 
                     </notebook>
@@ -8442,7 +8411,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -8696,7 +8665,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -8778,7 +8747,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -9337,7 +9306,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -9655,7 +9624,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>
@@ -9752,7 +9721,7 @@
                                 <field name="contact_role_ids">
                                     <tree>
                                         <field name="Name" string='Contact Name'/>
-                                        <field name="Title__c"/>
+                                        <field name="Title_c"/>
                                         <field name="Email"/>
                                         <field name="Phone"/>
                                     </tree>

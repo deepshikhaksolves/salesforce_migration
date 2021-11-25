@@ -13,4 +13,4 @@ class City_C(models.Model):
     Name = fields.Char(string='City',size=80)
     City_Code = fields.Char(string='City code',size=7)
     State_id = fields.Many2one('res.country.state',string='State')
-    region_city_ids = fields.One2many('model_region_city', 'city__c', string='Region City')
+    region_city_ids = fields.One2many('model_region_city', 'city_c', string='Region City')

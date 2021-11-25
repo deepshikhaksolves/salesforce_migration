@@ -134,7 +134,7 @@ class HrContract(models.Model):
     # LastModifiedById created by default
     purchase_limit = fields.Selection([
         ('fixed_value', 'Fixed value'), ('percentage_of_salary', 'Percentage of salary')
-    ], string='Purchase_Limit')
+    ], string='Purchase Limit')
     claim_limit = fields.Float(string='Technical Limit')
     # main_partner_not clear
     brand = fields.Char(string='mark')
@@ -247,10 +247,10 @@ class HrContract(models.Model):
     address_ids = fields.One2many('model_address', 'Contract_id', string='Address')
     contact_ids = fields.One2many('res.partner', 'contract_id', string='Contacts')
     contract_team_ids = fields.One2many('contract_team', 'contract_id', string='Contract Teams')
-    user_company_contract_permissions_ids = fields.One2many('user_company_contract_permissions__c', 'contract__c', string='Contract Teams')
+    user_company_contract_permissions_ids = fields.One2many('user_company_contract_permissions__c', 'contract_c', string='Corporate User Agreement Permissions')
 
     contract_ids = fields.One2many('hr.contract', 'parent_contract', string='Sub Contract')
-    service_ids = fields.One2many('model_service_c', 'contract_id', string='Service')
+    service_ids = fields.One2many('contract.service', 'Contracts', string='Service')
     sensus_management_ids = fields.One2many('model_sensus_management_document_c', 'Contract_id', string='Sensus Management Documents')
     readjustment_ids = fields.One2many('contract.readjust', 'Contracts', string='Readjustment')
     cost_center_ids = fields.One2many('model_cost_center', 'contract_id', string='Cost Center')
@@ -261,7 +261,8 @@ class HrContract(models.Model):
     contract_financial_ids = fields.One2many('financial_contract', 'contract_id', string='Contract Financial Data')
     checklist_ids = fields.One2many('model_checklist_c', 'Contract_id', string='Checklist')
     geographic_scope_id = fields.Many2one('model_geographic_scope', string="Geographic Scope")
-
+    contract_coverage_ids = fields.One2many('contract.coverage', 'contracts', string='Contract coverage')
+    price_list_ids = fields.One2many('model_price_list', 'contract_c', string='Price List')
 
 
 

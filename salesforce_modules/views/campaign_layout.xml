@@ -16,8 +16,8 @@
                                         <field name="IsActive"/>
                                         <field name="ParentId"/>
                                         <field name="Type"/>
-                                        <field name="Report_Used__c"/>
-                                        <field name="Released_to_Work__c"/>
+                                        <field name="Report_Used_c"/>
+                                        <field name="Released_to_Work_c"/>
                                         <field name="Description"/>
                                     </group>
                                     <group>
@@ -107,7 +107,7 @@
                     <field name="Name" />
                     <field name="IsActive"/>
                     <field name="Type"/>
-                    <field name="Released_to_Work__c"/>
+                    <field name="Released_to_Work_c"/>
                     <field name="OwnerId"/>
                 </tree>
             </field>

@@ -10,13 +10,13 @@
                     <sheet>
                         <group string="Information">
                             <group>
-                                <field name="Field__c" />
-                                <field name="SortOrder__c"/>
+                                <field name="Field_c" />
+                                <field name="SortOrder_c"/>
                             </group>
                             <group>
                                 <field name="Name"/>
                                 <field name="OwnerId"/>
-                                <field name="Campaign__c"/>
+                                <field name="Campaign_c"/>
                             </group>
                         </group>
                     </sheet>
@@ -35,11 +35,11 @@
             <field name="model">lead_sort_colums_in_capaign</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="Field__c" />
-                    <field name="SortOrder__c"/>
+                    <field name="Field_c" />
+                    <field name="SortOrder_c"/>
                     <field name="Name"/>
                     <field name="OwnerId"/>
-                    <field name="Campaign__c"/>
+                    <field name="Campaign_c"/>
                 </tree>
             </field>
         </record>

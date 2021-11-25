@@ -13,8 +13,8 @@
                                 <field name="name" string="Benefit Carrier Revenue Name"/>
                                 <field name="code"/>
                                 <field name="user_type_id"/>
-                                <field name="Prefix__c" />
-                                <field name="Income_Type__c"/>
+                                <field name="Prefix_c" />
+                                <field name="Income_Type_c"/>
                                 <field name="create_uid" />
                             </group>
                             <group>
@@ -39,8 +39,8 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name" />
-                    <field name="Prefix__c"/>
-                    <field name="Income_Type__c"/>
+                    <field name="Prefix_c"/>
+                    <field name="Income_Type_c"/>
                     <field name="OwnerId"/>
                     <field name="create_uid" />
                     <field name="write_uid"/>

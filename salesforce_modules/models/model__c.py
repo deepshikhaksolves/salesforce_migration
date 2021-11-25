@@ -8,7 +8,7 @@ class ModelObject(models.Model):
 
     # CreatedById  already in odoo
     # LastModifiedById already in odoo
-    Brand__c = fields.Many2one('model_brand_c', string='Mark',track_visibility='onchange')
+    Brand_c = fields.Many2one('model_brand_c', string='Mark',track_visibility='onchange')
     name     = fields.Char('Model')
     OwnerId = fields.Many2one('res.users', string='Owner',track_visibility='onchange')
     fleet_ids = fields.One2many('model_car_fleet_c', 'Model_id', string='Fleet',track_visibility='onchange')

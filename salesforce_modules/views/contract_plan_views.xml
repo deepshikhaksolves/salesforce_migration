@@ -33,11 +33,11 @@
                                 <field name="product_price_ids">
                                     <tree>
                                         <field name="Name"/>
-                                        <field name="Price_Table__c"/>
-                                        <field name="age_range__c"/>
-                                        <field name="holder_value_copay__c"/>
+                                        <field name="Price_Table_c"/>
+                                        <field name="age_range_c"/>
+                                        <field name="holder_value_copay_c"/>
                                         <!-- Value to the Holder field not available -->
-                                        <field name="others_value_copay__c"/>
+                                        <field name="others_value_copay_c"/>
                                     </tree>
                                 </field>
                             </page>
@@ -109,11 +109,11 @@
                                 <field name="product_price_ids">
                                     <tree>
                                         <field name="Name"/>
-                                        <field name="Price_Table__c"/>
-                                        <field name="age_range__c"/>
-                                        <field name="holder_value_copay__c"/>
+                                        <field name="Price_Table_c"/>
+                                        <field name="age_range_c"/>
+                                        <field name="holder_value_copay_c"/>
                                         <!-- Value to the Holder field not available -->
-                                        <field name="others_value_copay__c"/>
+                                        <field name="others_value_copay_c"/>
                                     </tree>
                                 </field>
                             </page>

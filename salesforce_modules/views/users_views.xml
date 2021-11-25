@@ -13,8 +13,8 @@
                             <group>
                                 <field name="name"/>
                                 <field name="ManagerId"/>
-                                <field name="customer__c"/>
-                                <field name="heads__c"/>
+                                <field name="customer_c"/>
+                                <field name="heads_c"/>
                             </group>
                             <group>
                                 <field name="Title"/>
@@ -45,7 +45,7 @@
                         </group>
                         <group string="Background">
                             <field name="about_me"/>
-                            <field name="reservations_to_vencer__c"/>
+                            <field name="reservations_to_vencer_c"/>
                         </group>
                     </sheet>
                     <div class="oe_chatter">

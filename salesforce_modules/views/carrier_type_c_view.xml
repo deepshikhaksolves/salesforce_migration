@@ -86,8 +86,8 @@
                                 <group string="Operators">
                                     <field name="account_ids">
                                         <tree>
-                                            <field name="carrier_type__c"/>
-                                            <field name="benefits__c"/>
+                                            <field name="carrier_type_c"/>
+                                            <field name="benefits_c"/>
                                             <field name="phone"/>
                                         </tree>
                                     </field>

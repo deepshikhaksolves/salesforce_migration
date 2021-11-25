@@ -91,7 +91,7 @@
                                 <tree>
                                     <field name="name"/>
                                     <!-- <field name=""/> -->
-                                    <field name="role__c"/>
+                                    <field name="role_c"/>
                                     <field name="PersonMobilePhone"/>
                                 </tree>
                             </field>
@@ -189,7 +189,7 @@
                                 <tree>
                                     <field name="name"/>
                                     <!-- <field name=""/> -->
-                                    <field name="role__c"/>
+                                    <field name="role_c"/>
                                     <field name="PersonMobilePhone"/>
                                 </tree>
                             </field>
@@ -305,8 +305,8 @@
                             </group>
                             <group string="Corporate Information">
                                 <group>
-                                    <field name="Title__c"/>
-                                    <field name="Title__c"/>
+                                    <field name="Title_c"/>
+                                    <field name="Title_c"/>
                                     <field name="title_description"/>
                                     <field name="Level"/>
                                     <field name="ReportsToId"/>
@@ -372,8 +372,8 @@
                                 <field name="account_ids">
                                     <tree>
                                         <field name="name"/>
-                                        <field name="allow_direct_mail__pc"/>
-                                        <field name="role__c"/>
+                                        <field name="allow_direct_mail_pc"/>
+                                        <field name="role_c"/>
                                         <field name="PersonMobilePhone"/>
                                     </tree>
                                 </field>

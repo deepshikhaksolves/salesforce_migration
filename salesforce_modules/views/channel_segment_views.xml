@@ -10,19 +10,19 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="Parent_Channel__c"/>
-                                <field name="Manager__c" />
-                                <field name="Add_Approvers__c"/>
-                                <field name="Status__c"/>
-                                <field name="Cost_Center__c"/>
+                                <field name="Parent_Channel_c"/>
+                                <field name="Manager_c" />
+                                <field name="Add_Approvers_c"/>
+                                <field name="Status_c"/>
+                                <field name="Cost_Center_c"/>
                                 <field name="create_uid"/>
                                 <field name="OwnerId"/>
                             </group>
                             <group>
                                 <field name="name" required='1'/>
-                                <field name="Paid__c"/>
-                                <field name="Internal_Channel__c"/>
-                                <field name="Allows_Multiple_Reservations__c"/>
+                                <field name="Paid_c"/>
+                                <field name="Internal_Channel_c"/>
+                                <field name="Allows_Multiple_Reservations_c"/>
                                 <field name="write_uid" string='Last Modified By'/>
                             </group>
                         </group>
@@ -53,10 +53,10 @@
             <field name="model">channel_segmentation</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="Parent_Channel__c"/>
-                    <field name="Manager__c" />
-                    <field name="Add_Approvers__c"/>
-                    <field name="Status__c"/>
+                    <field name="Parent_Channel_c"/>
+                    <field name="Manager_c" />
+                    <field name="Add_Approvers_c"/>
+                    <field name="Status_c"/>
                     <field name="name"/>
                     <field name="create_uid"/>
                 </tree>
@@ -90,25 +90,25 @@
                             <page string="Details">
                                 <group>
                                     <group>
-                                        <field name="Parent_Channel__c"/>
-                                        <field name="Manager__c"/>
-                                        <field name="Add_Approvers__c"/>
-                                        <field name="Status__c"/>
-                                        <field name="Cost_Center__c"/>
+                                        <field name="Parent_Channel_c"/>
+                                        <field name="Manager_c"/>
+                                        <field name="Add_Approvers_c"/>
+                                        <field name="Status_c"/>
+                                        <field name="Cost_Center_c"/>
                                         <field name="create_uid"/>
                                         <field name="OwnerId"/>
                                     </group>
                                     <group>
                                         <field name="name"/>
-                                        <field name="Paid__c"/>
-                                        <field name="Internal_Channel__c"/>
-                                        <field name="Allows_Multiple_Reservations__c"/>
+                                        <field name="Paid_c"/>
+                                        <field name="Internal_Channel_c"/>
+                                        <field name="Allows_Multiple_Reservations_c"/>
                                         <field name="write_uid" string='Last Modified By'/>
                                     </group>
                                 </group>
                                 <group>
                                     <group string="Channel Segmentation Details">
-                                        <field name="code__c"/>
+                                        <field name="code_c"/>
                                     </group>
                                     <group></group>
                                 </group>
@@ -133,7 +133,7 @@
                                     </field>
                                 </group>
                                 <group string="Channel Segments">
-                                    <field name="Parent_Channel__c"/>
+                                    <field name="Parent_Channel_c"/>
                                 </group>
                                 <group string="Leads">
                                     <field name="opportunity_ids">
@@ -161,10 +161,10 @@
             <field name="model">channel_segmentation</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="Parent_Channel__c"/>
-                    <field name="Manager__c" />
-                    <field name="Add_Approvers__c"/>
-                    <field name="Status__c"/>
+                    <field name="Parent_Channel_c"/>
+                    <field name="Manager_c" />
+                    <field name="Add_Approvers_c"/>
+                    <field name="Status_c"/>
                     <field name="name"/>
                     <field name="create_uid"/>
                 </tree>
