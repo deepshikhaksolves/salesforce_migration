@@ -556,7 +556,7 @@
                                         </group>
                                     </group>
                             </page>
-                            <!-- <page string="Benefits Policy">
+                            <page string="Benefits Policy">
                                 <field name="benifit_ids" widget="one2many">
                                     <tree>
                                         <field name="Name" string="Benefit Policy"/>
@@ -568,7 +568,7 @@
                                         <field name="Offer"/>
                                     </tree>
                                 </field>
-                            </page> -->
+                            </page>
                             <page string="Market Place"></page>
                             <!-- <page string="Related"></page>
                             <page string="Opportunities/Contracts"></page> -->
