@@ -7,14 +7,6 @@
         <!-- Menu For Lead -->
             <menuitem name="Lead" id="lead_parent_action_menu" parent='salesforce_menu_root' sequence='1'/>
 
-                <!-- <menuitem name="Lead Layout" id="broker_lead_layout_menu" parent='lead_parent_action_menu' action="lead_layout_action" sequence="1" />
-
-                <menuitem name="Broker Lead Layout PF" id="broker_lead_layout_pf_menu" parent='lead_parent_action_menu' action="broker_lead_layout_pf_action" sequence="2" />
-
-                <menuitem name="Broker Lead Layout PJ" id="broker_lead_layout_pj_menu" parent='lead_parent_action_menu' action="broker_lead_layout_pj_action" sequence="3" />
-
-                <menuitem name="Small Lead Layout" id="small_lead_layout_menu" parent='lead_parent_action_menu' action="small_lead_layout_action" sequence="4" /> -->
-
                 <menuitem name="Record Type Layout" id="record_lead_parent_action_menu" parent='lead_parent_action_menu'/>
 
                 <menuitem name="Physical Person" id="physical_person_lead_layout_menu" parent='record_lead_parent_action_menu' action="lead_physical_person_layout_action" sequence="1" />
@@ -25,17 +17,11 @@
         <!-- Menu For Task -->
             <menuitem name="Task" id="task_parent_action_menu" parent='salesforce_menu_root' sequence='2'/>
 
-<!--                <menuitem name="Broker Task Layout" id="broker_task_layout_menu" parent='task_parent_action_menu' action="broker_task_layout_action" sequence="1" />-->
-
-<!--                <menuitem name="Deployment Talk" id="deployment_talk_menu" parent='task_parent_action_menu' action="deployement_talk_layout_action" sequence="2" />-->
-
-<!--                <menuitem name="Task Layout" id="task_layout_menu" parent='task_parent_action_menu' action="task_layout_action" sequence="3" />-->
                 <menuitem name="Deployment Task" id="task_lightning_menu" parent='task_parent_action_menu' action="task_lightning_action" />
 
         <!-- Menu For Geographic Scope -->
             <menuitem name="Geographic Scope" id="geographic_scope_parent_action_menu" parent='salesforce_menu_root' action='geographic_scope_layout_action' sequence='3'/>
-                <!-- <menuitem name="Geographic Scope" id="geo_scope_layout_menu" parent='geographic_scope_parent_action_menu' action="geographic_scope_layout_action" sequence="1" /> -->
-
+            
         <!-- Menu for revenue -->
             <menuitem name="Revenue" id="revenue_parent_action_menu" parent='salesforce_menu_root' sequence='4'/>
                 <menuitem name="Recipe Type Layout" id="revenue_layout_menu" parent='revenue_parent_action_menu' action="recipe_type_layout_action" sequence="1" />
@@ -55,18 +41,6 @@
 
         <!-- Menu for account -->
             <menuitem name="Account" id="account_parent_action_menu" parent='salesforce_menu_root' sequence='6'/>
-                <!-- <menuitem name="Master" id="old_account_layout_menu" parent='account_parent_action_menu' action="account_layout_old_action" sequence="1" />
-                <menuitem name="Administrator" id="administrator_account_layout_menu" parent='account_parent_action_menu' action="administrator_account_layout_action" sequence="2" />
-                <menuitem name="Legal Entity Customer" id="legal_entity_customer_layout_menu" parent='account_parent_action_menu' action="customer_legal_entity_layout_action" sequence="3" />
-                <menuitem name="Hospital" id="hospital_layout_menu" parent='account_parent_action_menu' action="hospital_layout_action" sequence="4" />
-
-                <menuitem name="Extras" id="extra_menu" parent='account_parent_action_menu' sequence="5" />
-                    <menuitem name="Account Layout" id="extra_account_layout_menu" parent='extra_menu' action="account_layout_action" sequence="1" />
-                    <menuitem name="Broker Legal Entity Layout" id="broker_legal_entity_layout_menu" parent='extra_menu' action="broker_legal_entity_layout_action" sequence="2" />
-                    <menuitem name="Carrier Account Layout" id="career_account_layout_menu" parent='extra_menu' action="carrer_account_layout_action" sequence="3" />
-                    <menuitem name="Laboratory Layout" id="laboratory_layout_menu" parent='extra_menu' action="laboratory_layout_action" sequence="4" />
-                    <menuitem name="Partner Layout" id="partner_layout_menu" parent='extra_menu' action="partner_layout_action" sequence="5"/>
-                    <menuitem name="Physical Person Layout" id="physical_person_layout_menu" parent='extra_menu' action="physical_person_layout_action" sequence="6"/> -->
 
                 <menuitem name="Account RecordType" id="account_recordtype_menu" parent='account_parent_action_menu'/>
                     <menuitem name="Administrator" id="recordtype_administrator_account_layout_menu" parent='account_recordtype_menu' action="administrator_layout_action" sequence="1"/>
@@ -74,11 +48,6 @@
                     <menuitem name="Laboratory" id="recordtype_laboratory_layout_menu" parent='account_recordtype_menu' action="account_laboratory_layout_action" sequence="3" />
                     <menuitem name="Operator" id="recordtype_operator_layout_menu" parent='account_recordtype_menu' action="account_operator_layout_action" sequence="4" />
                     <menuitem name="Partner" id="recordtype_partner_layout_menu" parent='account_recordtype_menu' action="account_partner_layout_action" sequence="5" />
-
-
-
-
-
 
         <!-- Menu for User -->
             <menuitem name="User" id="user_parent_action_menu" parent='salesforce_menu_root' sequence='7'/>
@@ -93,7 +62,7 @@
                 <menuitem name="Lead Sort Columns Campaign Layout" id="lead_sort_columns_campaign_page_layout_menu" parent='lead_sort_columns_campaign_action_menu' action="lead_sort_columns_campaign_action" sequence="1" />
 
         <!-- Menu for Model -->
-<!--            <menuitem name="Model" id="model_action_menu" parent='salesforce_menu_root' action="model_action" sequence='10'/>-->
+
             <menuitem name="Model" id="model_lightning_action_menu" parent='salesforce_menu_root' action="model_lightning_action" sequence='10'/>
 
         <!-- Menu for Pathology -->
@@ -103,7 +72,7 @@
             <menuitem name="Region" id="Region_menu" parent='salesforce_menu_root' action="region_layout_action" sequence='12'/>
 
         <!-- Menu for Accredited Network -->
-            <!-- <menuitem name="Accredited Network" id="accredited_network_menu" parent='salesforce_menu_root' action="accredited_network_layout_action" sequence='13'/> -->
+            
             <menuitem name="Accredited Network" id="accredited_network_lightning_menu" parent='salesforce_menu_root' action="accredited_network_lightning_layout_action" sequence='13'/>
 
         <!-- Menu for Quote Line Item -->
@@ -119,7 +88,7 @@
             <menuitem name="Product Layout" id="product_layout_menu" parent='product_parent_action_menu' action="product_layout_action" sequence='3'/>
 
         <!-- Menu for Product Family -->
-<!--            <menuitem name="Product Family Layout" id="product_family_menu" parent='salesforce_menu_root' action="product_family_action" sequence='17'/>-->
+
             <menuitem name="Product Family" id="lightning_product_family_menu" parent='salesforce_menu_root' action="product_family_lightning_action" sequence='17'/>
 
         <!-- Menu for Product Price -->
@@ -130,14 +99,14 @@
             <menuitem name="Average Product Cost Contract" id="average_product_cost_contract_menu" parent='product_price_parent_action_menu' action="average_product_cost_contract_action" sequence='4'/>
 
         <!-- Network Provider -->
-<!--            <menuitem name="Network Provider" id="network_provider_menu" parent='salesforce_menu_root' action="network_provider_layout_action" sequence='20'/>-->
+
             <menuitem name="Network Provider" id="lightning_network_provider_menu" parent='salesforce_menu_root' action="network_provider_lightning_action" sequence='20'/>
 
         <!-- Operator Checklist -->
             <menuitem name="Operator Checklist" id="operator_checklist_menu" parent='salesforce_menu_root' action="operator_checklist_layout_action" sequence='21'/>
 
         <!-- Price List -->
-<!--            <menuitem name="Price List" id="price_list_menu" parent='salesforce_menu_root' action="price_list_action" sequence='22'/>-->
+
             <menuitem name="Price List" id="lightning_price_list_menu" parent='salesforce_menu_root' action="price_list_lightning_action" sequence='22'/>
 
         <!-- Menu for Contract Product Medicine -->
@@ -176,22 +145,7 @@
 
         <!--Menu for Opportunity-->
         <menuitem name="Opportunity" id="opportunity_parent_action_menu" parent='salesforce_menu_root' sequence='34'/>
-            <!-- <menuitem name="Personal Accident Broker" id="opportunity_pab_menu" parent='opportunity_parent_action_menu' action="opportunity_pab_action" sequence="1" />
-            <menuitem name="Accident Broker" id="opportunity_ab_menu" parent='opportunity_parent_action_menu' action="opportunity_ab_action" sequence="2" />
-            <menuitem name="Broker Checkup Vaccine" id="opportunity_bcv_menu" parent='opportunity_parent_action_menu' action="opportunity_bcv_action" sequence="3" />
-            <menuitem name="Broker Consulting" id="opportunity_bc_menu" parent='opportunity_parent_action_menu' action="opportunity_bc_action" sequence="4" />
-            <menuitem name="Broker Fee" id="opportunity_bf_menu" parent='opportunity_parent_action_menu' action="opportunity_bf_action" sequence="5" />
-            <menuitem name="Broker Fleet" id="opportunity_broker_frota_menu" parent='opportunity_parent_action_menu' action="opportunity_broker_frota_action" sequence="6" />
-            <menuitem name="Broker Medicamento" id="opportunity_bm_menu" parent='opportunity_parent_action_menu' action="opportunity_bm_action" sequence="7" />
-            <menuitem name="Broker Occupational Health" id="opportunity_boh_menu" parent='opportunity_parent_action_menu' action="opportunity_boh_action" sequence="8" />
-            <menuitem name="Broker PAT" id="opportunity_bp_menu" parent='opportunity_parent_action_menu' action="opportunity_bp_action" sequence="9" />
-            <menuitem name="Broker Previdência" id="opportunity_previdência_menu" parent='opportunity_parent_action_menu' action="opportunity_previdência_action" sequence="10" />
-            <menuitem name="Broker Saúde e Odonto" id="opportunity_so_menu" parent='opportunity_parent_action_menu' action="opportunity_so_action" sequence="11" />
-            <menuitem name="Broker Saúde e Odonto PF" id="opportunity_spf_menu" parent='opportunity_parent_action_menu' action="opportunity_spf_action" sequence="12" />
-            <menuitem name="Broker Transporte" id="opportunity_bt_menu" parent='opportunity_parent_action_menu' action="opportunity_bt_action" sequence="13" />
-            <menuitem name="Broker Viagem" id="opportunity_bv_menu" parent='opportunity_parent_action_menu' action="opportunity_bv_action" sequence="14" />
-            <menuitem name="Broker Vida" id="opportunity_b_vida_menu" parent='opportunity_parent_action_menu' action="opportunity_b_vida_action" sequence="15" />
-            <menuitem name="Opportunity Layout" id="opportunity_layout_menu" parent='opportunity_parent_action_menu' action="opportunity_layout_action" sequence="16" /> -->
+            
             <menuitem name="Record Type" id="record_type_opportunity_layout_menu" parent='opportunity_parent_action_menu' sequence="17" />
                 <menuitem name="Health PJ Layout" id="record_type_health_pj_layout_menu" parent='record_type_opportunity_layout_menu' action="health_pj_layout_action" sequence="1" />
                 <menuitem name="Dental Layout" id="record_type_dental_layout_menu" parent='record_type_opportunity_layout_menu' action="dental_layout_action" sequence="2" />\
@@ -241,7 +195,6 @@
 
         <!--Menu for Periodicity-->
         <menuitem name="Periodicity Layout" id="periodicity_parent_action_menu" parent='salesforce_menu_root' sequence='41'/>
-<!--            <menuitem name="Periodicity Layout" id="periodicity_menu" parent='periodicity_parent_action_menu' action="periodicity_action" sequence="1" />-->
             <menuitem name="Periodicity" id="lightning_periodicity_menu" parent='periodicity_parent_action_menu' action="periodicity_lightning_action" sequence="1" />
 
         <!--Menu for Contract Partner-->
@@ -269,7 +222,7 @@
             <menuitem name="Request Layout Subject Service Template" id="request_config_menu" parent='salesforce_menu_root' action="request_config_action" sequence='48'/>
 
         <!-- Menu For Channel Segmentation-->
-<!--            <menuitem name="Channel Segmentation" id="channel_segmentation_menu" parent='salesforce_menu_root' action="channel_segmentation_layout_action" sequence='49'/>-->
+
             <menuitem name="Channel Segmentation" id="lightning_channel_segmentation_menu" parent='salesforce_menu_root' action="channel_segmentation_lightning_action" sequence='49'/>
 
 
@@ -281,16 +234,8 @@
             <menuitem name="Broker Competition" id="broker_competition_menu" parent='salesforce_menu_root' action="quote_broker_competition_layout_action" sequence='52'/>
         <!--Quote Broker Quote  -->
             <menuitem name="Broker Quote" id="broker_quote_menu" parent='salesforce_menu_root' action="quote_broker_quote_layout_action" sequence='53'/>
-        <!--Quote Broker Binding  -->
-            <!-- <menuitem name="Broker Bidding" id="broker_binding_menu" parent='salesforce_menu_root' action="quote_broker_binding_layout_action" sequence='54'/> -->
-        <!--Quote Project Binding  -->
-            <!-- <menuitem name="Broker Project" id="broker_project_menu" parent='salesforce_menu_root' action="quote_broker_project_layout_action" sequence='55'/> -->
-        <!--Quote Technical Praposal Binding  -->
+        
             <menuitem name="Broker Technical Praposal" id="broker_praposal_menu" parent='salesforce_menu_root' action="quote_broker_technical_praposal_layout_action" sequence='56'/>
-        <!--Quote Rede Quote  -->
-            <!-- <menuitem name="Broker Rede" id="broker_rede_menu" parent='salesforce_menu_root' action="quote_broker_rede_layout_action" sequence='57'/> -->
-        <!--Quote  -->
-            <!-- <menuitem name="Quote Layout" id="quote_layout_menu" parent='salesforce_menu_root' action="quote_layout_action" sequence='58'/> -->
 
         <!--Quote Layout -->
             <menuitem name="Quote Layout" id="quote_layout_parent_menu" parent='salesforce_menu_root'/>
@@ -333,7 +278,7 @@
 
 
         <!-- portal Access -->
-        <!-- <menuitem name="Portal Access" id="portal_access_action_menu" parent='salesforce_menu_root' action="portal_access_action" sequence='69'/> -->
+        
             <menuitem name="Portal Access" id="portal_access_lightning_action_menu" parent='salesforce_menu_root' action="portal_access_lightning_action" sequence='69'/>
 
 
@@ -341,21 +286,21 @@
             <menuitem name="Contract Team Layout" id="contract_team_menu" parent='salesforce_menu_root' action="contract_team_action" sequence='70'/>
 
         <!-- Menu For Financial Group -->
-<!--            <menuitem name="Financial Group Layout" id="financial_group_menu" parent='salesforce_menu_root' action="financial_group_layout_action" sequence='71'/>-->
-            <menuitem name="Financial Group" id="lightning_financial_group_menu" parent='salesforce_menu_root' action="lightning_financial_group_action" sequence='71'/>
+
+            <menuitem name="Financial Group" id="lightning_financial_group_layout_menu" parent='salesforce_menu_root' action="lightning_financial_group_layout_action"/>
 
         <!-- Menu For Cost Center -->
             <menuitem name="Cost Center Layout" id="cost_center_menu" parent='salesforce_menu_root' action="cost_center_action" sequence='72'/>
 
         <!-- Menu For Country -->
-<!--            <menuitem name="Country Layout" id="country_menu" parent='salesforce_menu_root' action="country_action" sequence='73'/>-->
+
             <menuitem name="Country" id="country_lightning_menu" parent='salesforce_menu_root' action="country_lightning_action" sequence='73'/>
 
         <!-- Menu For Attachment -->
             <menuitem name="Attachment Layout" id="attachment_menu" parent='salesforce_menu_root' action="attachment_layout_action" sequence='74'/>
 
         <!-- Menu For Document Operator -->
-            <!-- <menuitem name="Operator Document" id="operator_document_menu" parent='salesforce_menu_root' action="operator_document_layout_action" sequence='75'/> -->
+            
             <menuitem name="Operator Document" id="operator_document_lightning_menu" parent='salesforce_menu_root' action="operator_document_lightning_layout_action" sequence='75'/>
 
         <!-- Menu For Eligibility -->
@@ -426,15 +371,7 @@
             <menuitem name="Financial Group Master User Layout" id="financial_group_master_user_menu" parent='salesforce_menu_root' action="financial_group_master_user_action" sequence='98'/>
         <!--Menu for Case-->
         <menuitem name="Case" id="case_parent_action_menu" parent='salesforce_menu_root' sequence='99'/>
-            <!-- <menuitem name="Case - Risk Management" id="case_risk_management_menu" parent='case_parent_action_menu' action="case_risk_management_action" />
-            <menuitem name="Case - Layout" id="case_layout_menu" parent='case_parent_action_menu' action="case_layout_action" />
-            <menuitem name="Help Desk Layout" id="help_desk_layout_menu" parent='case_parent_action_menu' action="help_desk_layout_action" />
-            <menuitem name="Help Desk Layout Agent" id="help_desk_layout_agent_menu" parent='case_parent_action_menu' action="help_desk_layout_agent_action" />
-            <menuitem name="New Contract Process Layout" id="new_contract_process_layout_menu" parent='case_parent_action_menu' action="new_contract_process_layout_action" />
-            <menuitem name="Readjustment Layout" id="readjustment_layout_menu" parent='case_parent_action_menu' action="readjustment_layout_action" /> -->
-
-            <!-- <menuitem name="Case Email Layout" id="caseemail_lightning_layout_menu" parent='case_parent_action_menu' action="case_email_lightning_layout_action" sequence='1'/> -->
-            <!-- <menuitem name="Readjustment Layout" id="readjustment_layout_menu" parent='case_parent_action_menu' action="readjustment_layout_action" /> -->
+            
             <menuitem name="Record Type Case" id="recordtype_case_parent_action_menu" parent="case_parent_action_menu"/>
                 <menuitem name="Case Email Layout" id="caseemail_lightning_layout_menu" parent='recordtype_case_parent_action_menu' action="case_email_lightning_layout_action" sequence='1'/>
                 <menuitem name="General Case" id="recordtype_general_case" parent="recordtype_case_parent_action_menu" action="case_recordtype_general_case_layout_action"/>
@@ -501,8 +438,7 @@
             <menuitem name="Brand" id="brand_menu" parent='salesforce_menu_root' action="brand_layout_action" sequence='127'/>
         <!--Benefit Policy Layout Menu-->
             <menuitem name="Benefit Policy" id="benefit_policy_parent_menu" parent='salesforce_menu_root' sequence='128'/>
-
-            <!-- <menuitem name="Benefit Policy" id="benefit_menu" parent='benefit_policy_parent_menu' action="benefit_policy_layout_action" sequence='128'/> -->
+            
         <!--Benefit Policy Health type        -->
             <menuitem name="Benefit Policy Health" id="health_benefit_policy_menu" parent='benefit_policy_parent_menu' action="benefit_politic_health_action"/>
         <!--Benefit Policy Dental type        -->
@@ -527,8 +463,6 @@
             <menuitem name="Benefit Policy Check-up" id="benefit_policy_checkup_menu" parent='benefit_policy_parent_menu' action="benefit_politic_checkup_action"/>
 
             <menuitem name="Benefit Policy Vaccine" id="benefit_policy_vaccine_menu" parent='benefit_policy_parent_menu' action="benefit_politic_vaccine_action"/>
-
-
 
         <!--Policy Auto Layout Menu-->
             <menuitem name="Policy Auto" id="politica_auto_menu" parent='salesforce_menu_root' action="policy_layout_action" sequence='129'/>
@@ -580,22 +514,12 @@
         <!-- Contract Access -->
         <menuitem name="Contract" id="contract_action_menu" parent='salesforce_menu_root' sequence='146'/>
 
-        <!-- <menuitem name="Contract Contributory" id="contract_contributory_access_menu" parent='contract_action_menu' action="condition_action"/>
-        <menuitem name="Contract Copayment" id="contract_copayment_access_menu" parent='contract_action_menu' action="contract_copayment_action"/>
-        <menuitem name="Contract Coverage" id="contract_coverage_access_menu" parent='contract_action_menu' action="contract_coverage_action"/>
-        <menuitem name="Contract Line Items" id="contract_line_item_access_menu" parent='contract_action_menu' action="contract_line_item_action"/>
-        <menuitem name="Contract Readjust" id="contract_readjust_access_menu" parent='contract_action_menu' action="contract_readjust_action"/>
-        <menuitem name="Contract Service" id="contract_service_access_menu" parent='contract_action_menu' action="contract_service_action"/> -->
-
         <!-- Extra Menus -->
             <menuitem name="Extras" id="extra_parent_menu" parent='salesforce_menu_root' sequence='199'/>
                 <menuitem name="NINE" id="cnae_layout_menu" parent='extra_parent_menu' action="cnae_action" sequence="1" />
         <!-- Menu for Contact -->
         <menuitem name="Contact" id="contact_parent_action_menu" parent='salesforce_menu_root'/>
-
-<!--                <menuitem name="Contact" id="res_partner_layout_menu" parent='contact_parent_action_menu' action="salres_partner_action"/>-->
-<!--                <menuitem name="Contact Old" id="res_partner_old_layout_menu" parent='contact_parent_action_menu' action="salres_partner_old_action"/>-->
-                    <menuitem name="Contact" id="lightning_res_partner_layout_menu" parent='contact_parent_action_menu' action="lightning_res_partner_action"/>-->
+                <menuitem name="Contact" id="lightning_res_partner_layout_menu" parent='contact_parent_action_menu' action="lightning_res_partner_action"/>
         <!-- Record Type Contract -->
         <menuitem name="RecordType Contract" id="recordtype_contract_action_menu" parent='contract_action_menu'/>
                <menuitem name="Contract Health" id="contract_health_action_menu" parent="recordtype_contract_action_menu" action="contract_recordtype_health_layout_action"/>

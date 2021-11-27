@@ -41,8 +41,8 @@ class ProductTemplate(models.Model):
     upgrade_c = fields.Boolean('Upgrade',track_visibility='onchange')
 
     geo_scope_id = fields.Many2one('model_geographic_scope', string='Geographic Scope ID',track_visibility='onchange')
-    product_region_ids = fields.One2many('product.region', 'product_id', string='Product Region IDS')
-    product_network_ids = fields.One2many('product.network', 'product_id', string='Product Network IDS')
+    product_region_ids = fields.One2many('product.region', 'product_id', string='Product Regions')
+    product_network_ids = fields.One2many('product.network', 'product_id', string='Product Networks')
     network_provider_ids = fields.One2many('model_network_provider', 'product2_c', string='Network Provider IDS')
     product_price_ids = fields.One2many('product_price', 'Product_c', string='Product Price IDS')
     attachment_ids = fields.One2many('ir.attachment', 'product_id', string='Attachment IDS')

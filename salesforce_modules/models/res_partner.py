@@ -107,3 +107,4 @@ class ResPartner(models.Model):
     attachment_ids = fields.Many2many('ir.attachment', 'partner_id', string='Attachment IDS')
     case_ids = fields.One2many('model_case', 'partner_id', string='Case IDS')
     contract_id = fields.Many2one('hr.contract', string='Contract')
+    opportunity_id = fields.Many2one('crm.lead', string='Opportunity')
