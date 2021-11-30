@@ -7,7 +7,7 @@ class FinancialGroup(models.Model):
     _description = "Salesforce Financial Group"
     _rec_name = 'name'
 
-    active = fields.Boolean('Active',track_visibility='onchange')
+    active = fields.Boolean('Active',track_visibility='onchange', default=True)
     approval_connection = fields.Selection(
         [('Active Beneficiary', 'Active Beneficiary'), ('Company Email', 'Company Email'), ('Manual', 'Manual')],
         'Approval Connection',track_visibility='onchange')
